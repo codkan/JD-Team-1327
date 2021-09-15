@@ -12,13 +12,13 @@ This is a cross platform mobile application created with React Native and Expo. 
      Next, if you have Windows, download Android Studio from [here](https://docs.expo.io/workflow/android-studio-emulator/). And configure an Android Emulator. 
      If you are on Mac, download Visual Studio Code from [here](https://code.visualstudio.com/download) and configure an iPhone Emulator via xCode.  
 #DOWNLOAD                  
-  https://github.com/ckantor8/JD-Team-1327.git
-#DEPENDENCIES
-  Navigate to the app directory. `cd ./JD-Team-1327`
-  Now install dependencies. `sudo npm install`
-#BUILD
+  https://github.com/ckantor8/JD-Team-1327.git  
+#DEPENDENCIES  
+  Navigate to the app directory. `cd ./JD-Team-1327`  
+  Now install dependencies. `sudo npm install`  
+#BUILD  
   Follow this tutorial on how to set up Expo [here](https://docs.expo.io/workflow/android-studio-emulator/)                
-#RUNNING APPLICATION
+#RUNNING APPLICATION  
 - To start a general server and get QR code use `npm start`
 - To run a web application use `npm run web` or `expo start --web`
 - To run an iOS application use `npm run ios` or `expo start --ios`
