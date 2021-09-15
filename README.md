@@ -1,10 +1,9 @@
-# Team-BeDot: ChildSafe Application
-JIE 0346 Spring 2021
+## Team-BeDot: ChildSafe Application
+Fall 2021 SLS Team 1327
 
-Team members: Samuel Thomas, Justin Deal, Jayla Joy, Sora Bang, Elina Ebby
+Team members: Cody Kantor, Aayush Dixit, Erin Falejczyk, Will Wynne, and Akash Vemulapalli
 
 This is a cross platform mobile application created with React Native and Expo. The goal of this app is to help new parents learn critical child safety measures and best practices. 
-
 
 ## Install Guide
 #PRE-REQUISITES
@@ -24,6 +23,3 @@ This is a cross platform mobile application created with React Native and Expo. 
 - To run a web application use `npm run web` or `expo start --web`
 - To run an iOS application use `npm run ios` or `expo start --ios`
 - To run an Android application use `npm run android` or `expo start --android`
-
-
-ZenHub: https://app.zenhub.com/workspaces/team-bedot-600aeedff66604000e200919/board?repos=312147578 
