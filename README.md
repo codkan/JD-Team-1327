@@ -1,4 +1,4 @@
-# Team-BeDot: ChildSafe Application
+# Team 1327: ChildSafe Application
 Fall 2021 SLS Team 1327
 
 Team members: Cody Kantor, Erin Falejczyk, Aayush Dixit, Will Wynne, and Akash Vemulapalli
