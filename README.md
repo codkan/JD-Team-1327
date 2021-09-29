@@ -1,7 +1,7 @@
 # Team 1327: ChildSafe Application
 Fall 2021 SLS Team 1327
 
-Team members: Cody Kantor, Akash Vemulapalli, Aayush Dixit, Erin Falejczyk
+Team members: Cody Kantor, Akash Vemulapalli, Aayush Dixit, Erin Falejczyk, Will Wynne
 
 This is a cross platform mobile application created with React Native and Expo. The goal of this app is to help new parents learn critical child safety measures and best practices. 
 
