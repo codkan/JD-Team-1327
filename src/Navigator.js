@@ -9,7 +9,6 @@ import { createStackNavigator } from "react-navigation-stack";
 import Landing from "./screens/Landing"
 import Info from "./screens/Info";
 import Review from "./screens/Review";
-import Game from "./screens/Game";
 import Sources from "./screens/Sources";
 import Settings1 from "./screens/Settings1";
 
@@ -65,6 +64,7 @@ const screens = {
           headerShown: false,
           animationEnabled: false,
         },
+    },
     LevelSelect: {
     screen: LevelSelect,
     navigationOptions: {
