@@ -6,6 +6,13 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
+import Landing from "./screens/Landing"
+import Info from "./screens/Info";
+import Review from "./screens/Review";
+import Game from "./screens/Game";
+import Sources from "./screens/Sources";
+import Settings1 from "./screens/Settings1";
+
 import Home from "./screens/Home";
 import LevelSelect from "./screens/LevelSelect";
 import Badges from "./screens/Badges";
@@ -17,62 +24,96 @@ import LevelTwo from "./screens/Level2";
 import LevelThree from "./screens/Level3";
 
 const screens = {
-  Home: {
-    screen: Home,
-    navigationOptions: {
-      headerShown: false,
-      animationEnabled: false,
+    Landing: {
+      screen: Landing,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
     },
-  },
-  LevelSelect: {
+    Info: {
+      screen: Info,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Review: {
+      screen: Review,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Home: {
+        screen: Home,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Sources: {
+      screen: About,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Settings1: {
+        screen: Settings1,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    LevelSelect: {
     screen: LevelSelect,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
     },
-  },
-  Badges: {
+    },
+    Badges: {
     screen: Badges,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
     },
-  },
-  Settings: {
+    },
+    Settings: {
     screen: Settings,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
     },
-  },
-  About: {
+    },
+    About: {
     screen: About,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
     },
-  },
-  LevelOne: {
+    },
+    LevelOne: {
     screen: LevelOne,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
     },
-  },
-  LevelTwo: {
+    },
+    LevelTwo: {
     screen: LevelTwo,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
     },
-  },
-  LevelThree: {
+    },
+    LevelThree: {
     screen: LevelThree,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
     },
-  },
+    },
 };
 
 const NavStack = createStackNavigator(screens);
