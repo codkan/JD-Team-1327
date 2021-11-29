@@ -1,3 +1,6 @@
 .DS_STORE
 .expo
 node_modules
+.idea
+.gradle
+gradle
