@@ -8,7 +8,7 @@ import MenuButton from "../components/MenuButton";
 import { get } from "../Db";
 import Background from "../assets/landing.png";
 import { Audio } from "expo-av";
-
+import Navbar from "../components/NavBar";
 
 export default function Home({ navigation }) {
   const handleInfoNav = () => {
@@ -56,7 +56,9 @@ export default function Home({ navigation }) {
             txtColor={"black"}
           ></MenuButton>
         </View>
+        <Navbar navigation={navigation}/>
       </ImageBackground>
+      
     );
  }
 
