@@ -6,7 +6,7 @@ export default function MainButton({ text, onPress, txtColor }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text style={styles.buttonText, {color: txtColor}}>{text}</Text>
+        <Text style={styles.buttonText}>{text}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: "Roboto",
     fontStyle: "normal",
-    fontSize: 100,
+    fontSize: 32,
+    color: "black",
     textAlign: "center",
     justifyContent: "center",
   },
