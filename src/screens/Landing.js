@@ -4,7 +4,7 @@
 
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button } from "react-native";
-import MenuButton from "../components/MenuButton";
+import MainButton from "../components/MainButton";
 import { get } from "../Db";
 import Background from "../assets/landing.png";
 import { Audio } from "expo-av";
@@ -30,31 +30,31 @@ export default function Home({ navigation }) {
     return (
       <ImageBackground source={Background} style={styles.image}>
         <View style={styles.buttonContainer}>
-          <MenuButton
+          <MainButton
             text="Info"
             onPress={handleInfoNav}
             txtColor={"black"}
-          ></MenuButton>
-          <MenuButton
+          ></MainButton>
+          <MainButton
             text="Review"
             onPress={handleReviewNav}
             txtColor={"black"}
-          ></MenuButton>
-          <MenuButton
+          ></MainButton>
+          <MainButton
             text="Game"
             onPress={handleGameNav}
             txtColor={"black"}
-          ></MenuButton>
-          <MenuButton
+          ></MainButton>
+          <MainButton
             text="Sources"
             onPress={handleSourcesNav}
             txtColor={"black"}
-          ></MenuButton>
-          <MenuButton
+          ></MainButton>
+          <MainButton
             text="Settings"
             onPress={handleSettings1Nav}
             txtColor={"black"}
-          ></MenuButton>
+          ></MainButton>
         </View>
       </ImageBackground>
     );
@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flex: 1,
-    top: 55,
+    top: 90,
+    alignItems: "center",
     justifyContent: "center",
     marginTop: 90,
   },
@@ -76,3 +77,5 @@ const styles = StyleSheet.create({
     color: "black",
   },
 });
+
+//903 x 1654
