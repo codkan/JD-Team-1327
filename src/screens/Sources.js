@@ -1,7 +1,10 @@
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import MenuButton from "../components/MenuButton";
-import Background from "../assets/aboutScreen.png";
+import Background from "../assets/SourcesBackground.png";
+import MainButton from "../components/MainButton";
+import Constants from "../Constants";
+import Navbar from "../components/NavBar";
 
 export default function About({ navigation }) {
   //NAV CALLBACK
@@ -11,14 +14,68 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
+      <View style = {styles.buttons} > 
+        <Text style={styles.titleText}> Sources </Text>
+          <MainButton
+            text="Source 1"
+            txtColor={"black"}
+          ></MainButton>
+
+          <MainButton
+            text="Source 2"
+            txtColor={"black"}
+          ></MainButton>
+
+          <MainButton
+            text="Source 3"
+            txtColor={"black"}
+          ></MainButton>
+
+          <MainButton
+            text="Source 4"
+            txtColor={"black"}
+          ></MainButton>
+
+          <MainButton
+            text="Source 5"
+            txtColor={"black"}
+          ></MainButton>
+
+          
+        <MenuButton text="BACK" txtColor={"black"} onPress={goHome}></MenuButton>
+        </View>   
+        <Navbar navigation={navigation}/>
     </ImageBackground>
+  
   );
 }
+
 
 const styles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
-  }
+  },
+
+  buttons: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  titleText: {
+    fontSize: 36,
+    fontWeight: "bold",
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  /* rectangle: {
+    width: Constants.MAX_WIDTH,
+    height: Constants.MAX_HEIGHT * 0.1,
+    color: "black"
+  }, */
+
+
 });

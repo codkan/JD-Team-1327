@@ -57,7 +57,7 @@ const screens = {
         },
     },
     Sources: {
-      screen: About,
+      screen: Sources,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
