@@ -14,7 +14,7 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}> Review</Text>
+    <Text style={styles.modalText}> Table of Contents</Text>
     <View style={styles.buttonContainer}>
     <MainButton
       text="Falls"

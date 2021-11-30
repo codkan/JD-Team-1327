@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     elevation: 7.5,
   },
   buttonText: {
-    fontFamily: "Roboto",
     fontStyle: "normal",
     fontSize: 32,
     color: "black",

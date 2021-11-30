@@ -21,7 +21,7 @@ export default function About({ navigation }) {
       txtColor={"black"}
     ></MainButton>
     <MainButton
-      text="Burning"
+      text="Burns"
       txtColor={"black"}
     ></MainButton>
     <MainButton
