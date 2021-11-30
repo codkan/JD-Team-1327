@@ -13,11 +13,12 @@ export default function About({ navigation }) {
     navigation.pop();
   };
 
+  const handleSettings1Nav = () => {
+    navigation.navigate("Settings1");
+  };
+
   const handleSettings2Nav = () => {
     navigation.navigate("Settings2");
-  };
-  const handleSettings3Nav = () => {
-    navigation.navigate("Settings3");
   };
 
   const [selectedValue, setSelectedValue] = useState("java");
@@ -34,7 +35,15 @@ export default function About({ navigation }) {
     ></MainButton>
     <MainButton
       text="Sound Settings"
-      onPress={handleSettings3Nav}
+      onPress={handleSettings1Nav}
+      txtColor={"black"}
+    ></MainButton>
+    <MainButton
+      text="Mute Sound"
+      txtColor={"black"}
+    ></MainButton>
+    <MainButton
+      text="Increase Volume"
       txtColor={"black"}
     ></MainButton>
     </View>
@@ -71,7 +80,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 90,
-    marginTop: 20,
   },
   button: {
     color: "black",

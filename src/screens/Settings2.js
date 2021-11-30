@@ -13,8 +13,8 @@ export default function About({ navigation }) {
     navigation.pop();
   };
 
-  const handleSettings2Nav = () => {
-    navigation.navigate("Settings2");
+  const handleSettings1Nav = () => {
+    navigation.navigate("Settings1");
   };
   const handleSettings3Nav = () => {
     navigation.navigate("Settings3");
@@ -29,7 +29,15 @@ export default function About({ navigation }) {
     <View style={styles.buttonContainer}>
     <MainButton
       text="Accessibility Settings"
-      onPress={handleSettings2Nav}
+      onPress={handleSettings1Nav}
+      txtColor={"black"}
+    ></MainButton>
+    <MainButton
+      text="Invert Color"
+      txtColor={"black"}
+    ></MainButton>
+    <MainButton
+      text="Font Size"
       txtColor={"black"}
     ></MainButton>
     <MainButton
@@ -71,7 +79,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     marginTop: 90,
-    marginTop: 20,
   },
   button: {
     color: "black",
