@@ -11,12 +11,17 @@ import Info from "./screens/Info";
 import Review from "./screens/Review";
 import Sources from "./screens/Sources";
 import Settings1 from "./screens/Settings1";
+import Settings2 from "./screens/Settings2";
+import Settings3 from "./screens/Settings3";
+
 
 import Home from "./screens/Home";
 import LevelSelect from "./screens/LevelSelect";
 import Badges from "./screens/Badges";
 import About from "./screens/About";
 import Settings from "./screens/Settings";
+
+
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -60,6 +65,20 @@ const screens = {
     },
     Settings1: {
         screen: Settings1,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Settings2: {
+        screen: Settings2,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Settings3: {
+        screen: Settings3,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
