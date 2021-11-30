@@ -43,8 +43,10 @@ export default function About({ navigation }) {
 
           
         <MenuButton text="BACK" txtColor={"black"} onPress={goHome}></MenuButton>
-        </View>   
-        <Navbar navigation={navigation}/>
+        </View>
+      <View style = {styles.pushdown} >
+      <Navbar navigation={navigation}/>
+      </View>
     </ImageBackground>
   
   );
@@ -70,6 +72,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  pushdown: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 
   /* rectangle: {
     width: Constants.MAX_WIDTH,
