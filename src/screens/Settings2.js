@@ -74,11 +74,11 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   buttonContainer: {
-    flex: 1,
-    top: 90,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 90,
+      flex: 1,
+      top: -80,
+      alignItems: "center",
+      justifyContent: "center",
+      marginTop: 30,
   },
   button: {
     color: "black",

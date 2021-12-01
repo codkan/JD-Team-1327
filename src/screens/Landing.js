@@ -3,7 +3,7 @@
  */
 
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Image } from "react-native";
 import MainButton from "../components/MainButton";
 import { get } from "../Db";
 import Background from "../assets/landing.png";
