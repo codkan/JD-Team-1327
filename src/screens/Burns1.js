@@ -92,7 +92,10 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: '100%',
         bottom: 0,
+        left: 0,
+        right: 0,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: "#C4C4C4",
     },
 });
