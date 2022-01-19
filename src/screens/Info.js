@@ -6,10 +6,25 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 
-export default function About({ navigation }) {
+export default function Info({ navigation }) {
   //NAV CALLBACK
   const goHome = () => {
     navigation.pop();
+  };
+  const handleFallsNav = () => {
+    navigation.navigate("Falls1");
+  };
+  const handleBurnsNav = () => {
+    navigation.navigate("Burns1");
+  };
+  const handlePoisoningNav = () => {
+    navigation.navigate("Poisoning1");
+  };
+  const handleDrowningNav = () => {
+    navigation.navigate("Drowning1");
+  };
+  const handleTrafficNav = () => {
+    navigation.navigate("Traffic1");
   };
 
   return (
@@ -19,22 +34,27 @@ export default function About({ navigation }) {
     <MainButton
       text="Falls"
       txtColor={"black"}
+      onPress={handleFallsNav}
     ></MainButton>
     <MainButton
       text="Burns"
       txtColor={"black"}
+      onPress={handleBurnsNav}
     ></MainButton>
     <MainButton
       text="Poisoning"
       txtColor={"black"}
+      onPress={handlePoisoningNav}
     ></MainButton>
     <MainButton
       text="Drowning"
       txtColor={"black"}
+      onPress={handleDrowningNav}
     ></MainButton>
     <MainButton
       text="Road Traffic"
       txtColor={"black"}
+      onPress={handleTrafficNav}
     ></MainButton>
     <MainButton
       text="Bookmarks"
