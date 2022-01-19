@@ -82,12 +82,15 @@ const styles = StyleSheet.create({
   },
 
   pushdown: {
-    position: 'absolute',
-    width: '100%',
-    bottom: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
+      position: 'absolute',
+      width: '100%',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: "#C4C4C4",
+   },
 
   /* rectangle: {
     width: Constants.MAX_WIDTH,
