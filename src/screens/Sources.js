@@ -12,6 +12,10 @@ export default function About({ navigation }) {
     navigation.pop();
   };
 
+  const handleGoToPoisoningSource = () => {
+    navigation.navigate("PoisoningSources");
+  };
+
   return (
     <ImageBackground source={Background} style={styles.image}>
       <Text style={styles.modalText}> Sources </Text>
@@ -27,8 +31,9 @@ export default function About({ navigation }) {
           ></MainButton>
 
           <MainButton
-            text="Source 3"
+            text="Poisoning Sources"
             txtColor={"black"}
+            onPress={handleGoToPoisoningSource}
           ></MainButton>
 
           <MainButton
