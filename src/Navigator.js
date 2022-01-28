@@ -22,6 +22,9 @@ import About from "./screens/About";
 import Settings from "./screens/Settings";
 
 import Falls1 from "./screens/Falls1";
+import Falls2 from "./screens/Falls2";
+import Falls3 from "./screens/Falls3";
+
 import Burns1 from "./screens/Burns1";
 import Poisoning1 from "./screens/Poisoning1";
 import Drowning1 from "./screens/Drowning1";
@@ -41,13 +44,6 @@ const screens = {
     },
     Info: {
       screen: Info,
-      navigationOptions: {
-        headerShown: false,
-        animationEnabled: false,
-      },
-    },
-    Falls1: {
-      screen: Falls1,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
@@ -118,6 +114,27 @@ const screens = {
     },
     Settings3: {
         screen: Settings3,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Falls1: {
+        screen: Falls1,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Falls2: {
+        screen: Falls2,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Falls3: {
+        screen: Falls3,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,

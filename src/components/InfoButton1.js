@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
+    marginLeft: 20,
   },
   buttonText: {
     fontStyle: "normal",
