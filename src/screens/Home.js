@@ -67,8 +67,8 @@ export default function Home({ navigation }) {
   const handleAboutNav = () => {
     navigation.navigate("About");
   };
-  const handleSettingNav = () => {
-    navigation.navigate("Settings", { sound: sound });
+  const handleBackNav = () => {
+    navigation.navigate("Landing", { sound: sound });
   };
 
   return (
@@ -94,11 +94,11 @@ export default function Home({ navigation }) {
           onPress={handleAboutNav}
           txtColor={"black"}
         ></MenuButton>
-        {/* <MenuButton */}
-          {/* text="SETTINGS" */}
-          {/* onPress={handleSettingNav} */}
-          {/* txtColor={"black"} */}
-        {/* ></MenuButton> */}
+        <MenuButton
+          text="BACK"
+          onPress={handleBackNav}
+          txtColor={"black"}
+        ></MenuButton>
       </View>
     </ImageBackground>
   );

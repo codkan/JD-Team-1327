@@ -33,16 +33,16 @@ export default function About({ navigation }) {
       txtColor={"black"}
     ></MainButton>
     <MainButton
+          text="Sound Settings"
+          onPress={handleSettings3Nav}
+          txtColor={"black"}
+    ></MainButton>
+    <MainButton
       text="Invert Color"
       txtColor={"black"}
     ></MainButton>
     <MainButton
       text="Font Size"
-      txtColor={"black"}
-    ></MainButton>
-    <MainButton
-      text="Sound Settings"
-      onPress={handleSettings3Nav}
       txtColor={"black"}
     ></MainButton>
     </View>
@@ -74,11 +74,11 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   buttonContainer: {
-    flex: 1,
-    top: 90,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 90,
+      flex: 1,
+      top: -80,
+      alignItems: "center",
+      justifyContent: "center",
+      marginTop: 30,
   },
   button: {
     color: "black",

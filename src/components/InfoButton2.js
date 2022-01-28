@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { color } from "react-native-reanimated";
 
-export default function MainButton({ text, onPress, txtColor }) {
+export default function InfoButton2({ text, onPress, txtColor }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
@@ -11,20 +11,23 @@ export default function MainButton({ text, onPress, txtColor }) {
     </TouchableOpacity>
   );
 }
-MainButton.defaultProps = {
+InfoButton2.defaultProps = {
   color: "black"
 }
 const styles = StyleSheet.create({
   button: {
     height: 50,
-    width: 345,
-    borderRadius: 10,
-    paddingVertical: 7,
+    width: 50,
+    borderRadius: 100,
+    //paddingVertical: 7,
     //paddingHorizontal: 10,
-    marginVertical: 10,
+    //marginVertical: 10,
     backgroundColor: "rgba(196,196,196,1)",
-    alignItems: "center",
-    justifyContent: "center",
+    //alignItems: "left",
+    //justifyContent: "top",
+    position: "absolute",
+    bottom: 0,
+    right: 0,
     shadowColor: 'black',
     shadowOpacity: 0.25,
     shadowRadius: 4,

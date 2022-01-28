@@ -14,8 +14,8 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-      <View style = {styles.buttons} > 
-        <Text style={styles.titleText}> Sources </Text>
+      <Text style={styles.modalText}> Sources </Text>
+      <View style = {styles.buttonContainer}>
           <MainButton
             text="Source 1"
             txtColor={"black"}
@@ -41,10 +41,15 @@ export default function About({ navigation }) {
             txtColor={"black"}
           ></MainButton>
 
-          
-        <MenuButton text="BACK" txtColor={"black"} onPress={goHome}></MenuButton>
-        </View>   
-        <Navbar navigation={navigation}/>
+          <MainButton
+            text="Source 6"
+            txtColor={"black"}
+          ></MainButton>
+
+        </View>
+      <View style = {styles.pushdown} >
+      <Navbar navigation={navigation}/>
+      </View>
     </ImageBackground>
   
   );
@@ -58,18 +63,34 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 
-  buttons: {
-    alignItems: "center",
-    justifyContent: "center",
+  buttonContainer: {
+      flex: 1,
+      top: -80,
+      alignItems: "center",
+      justifyContent: "center",
+      marginTop: 30,
   },
 
-  titleText: {
-    fontSize: 36,
-    fontWeight: "bold",
-    textAlign: "center",
-    alignItems: "center",
-    justifyContent: "center",
+  modalText: {
+      // margin: 100,
+      height: 70,
+      fontSize: 40,
+      marginTop: 100,
+      marginBottom: 15,
+      fontWeight: "bold",
+      textAlign: "center",
   },
+
+  pushdown: {
+      position: 'absolute',
+      width: '100%',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: "#C4C4C4",
+   },
 
   /* rectangle: {
     width: Constants.MAX_WIDTH,

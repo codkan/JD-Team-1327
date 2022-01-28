@@ -21,7 +21,11 @@ import Badges from "./screens/Badges";
 import About from "./screens/About";
 import Settings from "./screens/Settings";
 
-
+import Falls1 from "./screens/Falls1";
+import Burns1 from "./screens/Burns1";
+import Poisoning1 from "./screens/Poisoning1";
+import Drowning1 from "./screens/Drowning1";
+import Traffic1 from "./screens/Traffic1";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -37,6 +41,41 @@ const screens = {
     },
     Info: {
       screen: Info,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Falls1: {
+      screen: Falls1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Burns1: {
+      screen: Burns1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Poisoning1: {
+      screen: Poisoning1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Drowning1: {
+      screen: Drowning1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Traffic1: {
+      screen: Traffic1,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,

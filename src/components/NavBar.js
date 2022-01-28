@@ -1,11 +1,6 @@
 import React from "react";
-import { View, StyleSheet, Button, Image, ImageBackground } from "react-native";
+import { View, StyleSheet, Button, Image, ImageBackground, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-import Home from "../assets/home-fill.png";
-import Source from "../assets/links-line.png"
-import Settings from "../assets/settings-3-fill(1).png"
-import Toc from "../assets/file-text-fill.png"
-import Tts from "../assets/volume-up-line.png"
 
 
 export default function Navbar({ navigation }){
@@ -18,40 +13,38 @@ export default function Navbar({ navigation }){
   const handleSettings1Nav = () => {
     navigation.navigate("Settings1");
   };
+  const handleReviewNav = () => {
+        navigation.navigate("Review");
+    };
   const handleSourcesNav = () => {
     navigation.navigate("Sources");
   };
 
   return (
       <View style={styles.navBar}>
-        <ImageBackground source={Toc} style={styles.toc}>
-        <Button
-          title="   "
-          onPress={handleInfoNav}
-          txtColor={"black"}
-        ></Button></ImageBackground>
-        
-        <ImageBackground source={Source} style={styles.icon}>
-        <Button
-          title="Sources"
-          onPress={handleSourcesNav}
-          txtColor={"black"}
-        ></Button></ImageBackground>
-        <ImageBackground source={Home} style={styles.icon}>
-        <Button
-          title="Home"
-          onPress={handleHomeNav}
-          txtColor={"black"}
-        ></Button></ImageBackground>
-        <ImageBackground source={Settings} style={styles.icon}>
-        <Button
-          title="Settings"
-          onPress={handleSettings1Nav}
-          txtColor={"black"}
-        ></Button></ImageBackground>
+
+        <TouchableOpacity onPress={handleSourcesNav} style={styles.icons}>
+            <Image source={require("../assets/links-line.png")} style={styles.icon}></Image>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={handleInfoNav} style={styles.icons}>
+            <Image source={require("../assets/file-text-fill.png")} style={styles.icon}></Image>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={handleHomeNav} style={styles.icons}>
+            <Image source={require("../assets/home-fill.png")} style={styles.icon}></Image>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={handleReviewNav} style={styles.icons}>
+            <Image source={require("../assets/rev.png")} style={styles.icon}></Image>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={handleSettings1Nav} style={styles.icons}>
+            <Image source={require("../assets/settings-3-fill(1).png")} style={styles.icon}></Image>
+        </TouchableOpacity>
+
       </View>
   );
-
 }
 
 const styles = StyleSheet.create({
@@ -59,34 +52,21 @@ const styles = StyleSheet.create({
       display: "flex",
       flexDirection: "row",
       justifyContent: "center",
-      alignItems: "center"
-    
-      
+      alignItems: "center",
+      backgroundColor: "#C4C4C4",
     },
-    icon: {
-        width: 30,
-        height: 30,
-        paddingHorizontal: 10,
+    icons: {
+        width: 45,
+        height: 45,
+        paddingHorizontal: 35,
+        justifyContent: "center",
+        alignItems: "center",
       },
-    home: {
-        width: 30,
-        height: 30,
+    icon: {
+        width: 45,
+        height: 45,
+        justifyContent: "center",
+        alignItems: "center",
     },
-    settings: {
-        width: 30,
-        height: 30,
-    },
-    tts: {
-        width: 30,
-        height: 30,
-    },
-    source: {
-        width: 30,
-        height: 30,
-    },
-    toc: {
-        width: 30,
-        height: 30,
-    }
 
   });
