@@ -8,7 +8,7 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 
-export default function Falls1({ navigation }) {
+export default function Falls3({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();

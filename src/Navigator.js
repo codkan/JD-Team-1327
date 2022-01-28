@@ -49,6 +49,27 @@ const screens = {
         animationEnabled: false,
       },
     },
+    Falls1: {
+        screen: Falls1,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Falls2: {
+        screen: Falls2,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Falls3: {
+        screen: Falls3,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
     Burns1: {
       screen: Burns1,
       navigationOptions: {
@@ -114,27 +135,6 @@ const screens = {
     },
     Settings3: {
         screen: Settings3,
-        navigationOptions: {
-          headerShown: false,
-          animationEnabled: false,
-        },
-    },
-    Falls1: {
-        screen: Falls1,
-        navigationOptions: {
-          headerShown: false,
-          animationEnabled: false,
-        },
-    },
-    Falls2: {
-        screen: Falls2,
-        navigationOptions: {
-          headerShown: false,
-          animationEnabled: false,
-        },
-    },
-    Falls3: {
-        screen: Falls3,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,

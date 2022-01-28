@@ -8,7 +8,7 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 
-export default function Falls1({ navigation }) {
+export default function Falls2({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -48,7 +48,7 @@ export default function Falls1({ navigation }) {
     seriously injured — call 911 and let trained medical personnel move the child with proper precautions.
     </Text>
 
-    <Text style={styles.page}> Page 1 of 3</Text>
+    <Text style={styles.page}> Page 2 of 3</Text>
 
     <InfoButton2
         text=">"

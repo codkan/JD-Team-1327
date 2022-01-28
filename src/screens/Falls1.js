@@ -41,12 +41,12 @@ export default function Falls1({ navigation }) {
      of nonfatal injuries to infants under one being attributed to falls [2]
     </Text>
 
-    <Text style={styles.page}> Page 1 of 3</Text>
+    <Text style={styles.page}> Page 1 of 3 </Text>
 
     <InfoButton2
         text=">"
         txtColor={"black"}
-        onPress={handleFalls2Nav}
+        onPress={handleInfoNav}
     ></InfoButton2>
 
     <View style = {styles.pushdown}>
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     page: {
         fontSize: 18,
         textAlign: "center",
-        marginTop: 50,
+        marginTop: 15,
         fontStyle: "italic",
     },
     pushdown: {

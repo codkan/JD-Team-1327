@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     //alignItems: "left",
     //justifyContent: "top",
     position: "absolute",
-    bottom: 0,
+    //bottom: 0,
     right: 0,
     shadowColor: 'black',
     shadowOpacity: 0.25,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
     marginRight: 20,
-    marginBottom: 15,
+    marginTop: 20,
   },
   buttonText: {
     fontStyle: "normal",
