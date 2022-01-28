@@ -16,6 +16,9 @@ export default function Falls1({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
+    const handleFalls2Nav = () => {
+        navigation.navigate("Falls2");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -27,26 +30,23 @@ export default function Falls1({ navigation }) {
     ></InfoButton1>
 
     <Text style={styles.title}> Falls </Text>
-    <Text style={styles.subtitle}> Stairs</Text>
+    <Text style={styles.subtitle}> Introduction </Text>
 
     <Text style={styles.content}>
-    {'\t'} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. {'\n'} {'\n'}
-    {'\t'} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    {'\t'} Falls are the leading cause of hospitalized injury in the U.S. for children ages 0 to 14.
+     In 2012, nearly 34,000 children ages 0 to 14 were hospitalized for unintentional falls [1].
+     According to the CDC, falls are the leading cause of Traumatic Brain Injury (TBI) for children
+     ages 0 to 4. {'\n'} {'\n'}
+    {'\t'} Falls were the leading cause of non-fatal injury for all children under 15 with over 50%
+     of nonfatal injuries to infants under one being attributed to falls [2]
     </Text>
 
-    <Text style={styles.page}> Page 1 of 3</Text>
+    <Text style={styles.page}> Page 1 of 3 </Text>
 
     <InfoButton2
         text=">"
         txtColor={"black"}
+        onPress={handleInfoNav}
     ></InfoButton2>
 
     <View style = {styles.pushdown}>
@@ -81,11 +81,13 @@ const styles = StyleSheet.create({
     content: {
         fontSize: 16,
         marginBottom: 20,
+        marginLeft: 15,
+        marginRight: 15,
     },
     page: {
         fontSize: 18,
         textAlign: "center",
-        marginTop: 50,
+        marginTop: 15,
         fontStyle: "italic",
     },
     pushdown: {

@@ -113,6 +113,8 @@ const styles = StyleSheet.create({
     content: {
         fontSize: 16,
         marginBottom: 20,
+        marginLeft: 15,
+        marginRight: 15,
     },
     page: {
         fontSize: 18,
