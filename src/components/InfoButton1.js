@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
     marginLeft: 20,
+    marginTop: 20,
   },
   buttonText: {
     fontStyle: "normal",
