@@ -16,6 +16,10 @@ export default function About({ navigation }) {
     navigation.navigate("PoisoningSources");
   };
 
+  const handleGoToBurnSource = () => {
+    navigation.navigate("BurningSources");
+  };
+
   const handleGoToFallSource = () => {
       navigation.navigate("FallSources");
     };
@@ -31,8 +35,9 @@ export default function About({ navigation }) {
           ></MainButton>
 
           <MainButton
-            text="Source 2"
+            text="Burning Sources"
             txtColor={"black"}
+            onPress={handleGoToBurnSource}
           ></MainButton>
 
           <MainButton

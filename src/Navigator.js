@@ -29,6 +29,8 @@ import Traffic from "./screens/Traffic";
 
 import FallSources from "./screens/FallSources";
 import PoisoningSources from "./screens/PoisoningSources";
+import BurningSources from "./screens/BurnSources";
+
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -177,6 +179,13 @@ const screens = {
     },
     PoisoningSources: {
     screen: PoisoningSources,
+    navigationOptions: {
+      headerShown: false,
+      animationEnabled: false,
+      },
+    },
+    BurningSources: {
+    screen: BurningSources,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
