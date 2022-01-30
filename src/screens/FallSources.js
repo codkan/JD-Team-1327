@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
 import MainButton from "../components/MainButton";
 import InfoButton1 from "../components/InfoButton1";
 import InfoButton2 from "../components/InfoButton2";
@@ -16,31 +16,68 @@ export default function Falls1({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const backToFalls = () => {
+    const goToFalls = () => {
         navigation.navigate("Falls");
+    }
+    const backToSources = () => {
+        navigation.navigate("Sources");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.title}> Sources: </Text>
-    <Text style={styles.content}> {'\n'}
-    [1] https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children
-    [2] https://www.stanfordchildrens.org/en/topic/default?id=falls--injury-statistics-and-incidence-rates-90-P02974
-    [3] https://www.cdc.gov/safechild/images/cdc-childhoodinjury.pdf
-    [4] https://www.safekids.org/tip/falls-prevention-tips
-    [5] https://www.safekids.org/tv
-    [6] https://www.safekids.org/playgroundsafety
+    <Text style={styles.title}> Fall Sources: </Text>
+    <Text> {'\n'} </Text>
+
+<View style={styles.container}>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Stanford Children Accident Statistics </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=falls--injury-statistics-and-incidence-rates-90-P02974')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] Stanford Children Incidence Rates </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/safechild/images/cdc-childhoodinjury.pdf')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/tip/falls-prevention-tips')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [4] SafeKids Fall Prevention Tips </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/tv')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [5] SafeKids - Tip-Overs </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/playgroundsafety')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [6] SafeKids - Playground Safety </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
 
     <MainButton
-          text="Back to Falls"
-          onPress={backToFalls}
+          text="Go to Falls"
+          onPress={goToFalls}
           txtColor={"black"}
     ></MainButton>
 
-
-
-    </Text>
-
+    <MainButton
+          text="Back to Sources"
+          onPress={backToSources}
+          txtColor={"black"}
+    ></MainButton>
+    </View>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -80,6 +117,9 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginTop: 50,
         fontStyle: "italic",
+    },
+    container: {
+        alignItems: "center",
     },
     pushdown: {
         position: 'absolute',

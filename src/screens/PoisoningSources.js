@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
 import MainButton from "../components/MainButton";
 import InfoButton1 from "../components/InfoButton1";
 import InfoButton2 from "../components/InfoButton2";
@@ -16,28 +16,50 @@ export default function Falls1({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const backToPoisonings = () => {
+    const goToPoisonings = () => {
         navigation.navigate("Poisonings");
+    }
+    const backToSources = () => {
+        navigation.navigate("Sources");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.title}> Sources: </Text>
-    <Text style={styles.content}> {'\n'}
-    [1] https://www.poison.org/poison-statistics-national {'\n'}{'\n'}
-    [2] https://injuryprevention.bmj.com/content/injuryprev/23/2/93.full.pdf {'\n'}{'\n'}
-    [3] https://www.cdc.gov/homeandrecreationalsafety/poisoning/preventiontips.htm {'\n'}{'\n'} {'\n'}{'\n'}
-    
+    <Text style={styles.title}> Poisoning Sources: </Text>
+    <Text> {'\n'} </Text>
+
+<View style={styles.container}>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.poison.org/poison-statistics-national')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] National Poison Statistics </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://injuryprevention.bmj.com/content/injuryprev/23/2/93.full.pdf')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] BMJ Injury Prevention </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/homeandrecreationalsafety/poisoning/preventiontips.html')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
     <MainButton
-          text="Back to Poisonings"
-          onPress={backToPoisonings}
+          text="Go to Poisonings"
+          onPress={goToPoisonings}
           txtColor={"black"}
-    ></MainButton> 
-    
-    
-    
-    </Text>
-    
+    ></MainButton>
+
+    <MainButton
+          text="Back to Sources"
+          onPress={backToSources}
+          txtColor={"black"}
+    ></MainButton>
+    </View>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -77,6 +99,9 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginTop: 50,
         fontStyle: "italic",
+    },
+    container: {
+        alignItems: "center",
     },
     pushdown: {
         position: 'absolute',

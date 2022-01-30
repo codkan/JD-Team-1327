@@ -16,6 +16,9 @@ export default function About({ navigation }) {
   const handleSettings1Nav = () => {
     navigation.navigate("Settings1");
   };
+  const handleSettings2Nav = () => {
+    navigation.navigate("Settings2");
+  };
   const handleSettings3Nav = () => {
     navigation.navigate("Settings3");
   };
@@ -29,7 +32,7 @@ export default function About({ navigation }) {
     <View style={styles.buttonContainer}>
     <MainButton
       text="Accessibility Settings"
-      onPress={handleSettings1Nav}
+      onPress={handleSettings2Nav}
       txtColor={"black"}
     ></MainButton>
     <MainButton
