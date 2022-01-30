@@ -48,6 +48,24 @@ export default function Falls1({ navigation }) {
 
     <Text> {'\n'} </Text>
 
+    <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/safety-poisoning.html')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> Kids Health Poisoning Safety </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.healthychildren.org/English/safety-prevention/all-around/Pages/Poison-Prevention.aspx')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> Healthy Children Poison Prevention </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://poisonhelp.hrsa.gov/what-you-can-do/prevention-tips')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> Poison Help Prevention Tips </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
     <MainButton
           text="Go to Poisonings"
           onPress={goToPoisonings}

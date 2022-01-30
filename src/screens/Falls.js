@@ -17,8 +17,8 @@ export default function Falls({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const handleFalls2Nav = () => {
-        navigation.navigate("Falls2");
+    const handleFallSourcesNav = () => {
+        navigation.navigate("FallSources");
     };
 
     return (
@@ -30,7 +30,7 @@ export default function Falls({ navigation }) {
         onPress={handleInfoNav}
     ></InfoButton1>
 
-    <ScrollView style = {styles.ScrollView}>
+    <ScrollView>
 
     <Text style={styles.title}> Falls </Text>
 
@@ -117,7 +117,7 @@ export default function Falls({ navigation }) {
     <InfoButton2
         text="Sources"
         txtColor={"black"}
-        onPress={handleInfoNav}
+        onPress={handleFallSourcesNav}
     ></InfoButton2>
 
     <View style = {styles.pushdown}>

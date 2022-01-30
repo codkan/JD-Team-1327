@@ -18,6 +18,9 @@ export default function Drownings({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
+    const handleDrowningSourcesNav = () => {
+        navigation.navigate("DrowningSources");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -28,7 +31,7 @@ export default function Drownings({ navigation }) {
         onPress={handleInfoNav}
     ></InfoButton1>
 
-    <ScrollView style = {styles.ScrollView}>
+    <ScrollView>
 
     <Text style={styles.title}> Drownings </Text>
     <Text style={styles.subtitle}> Why are drownings important? </Text>
@@ -103,18 +106,16 @@ Home Pool Tips:  {'\n'}
 - Construct proper 4 sided fencing around your home pool. This should include self-closing and self-latching gates. {'\n'}
 - Do not leave toys in the pool area that may entice your kid to enter the area unsupervised. {'\n'}
 - Teach your child to never swim alone, only with adult supervision. {'\n'}
-- Consider buying and installing a pool alarm.
+- Consider buying and installing a pool alarm. {'\n'}
 
 </Text>
-
+    </ScrollView>
 
     <InfoButton2
-        text=">"    
+        text="Sources"
         txtColor={"black"}
+        onPress={handleDrowningSourcesNav}
     ></InfoButton2>
-
-    <Text style={styles.content}> {'\n'} </Text>
-    </ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
