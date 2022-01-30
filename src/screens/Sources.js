@@ -27,6 +27,11 @@ export default function About({ navigation }) {
   const handleGoToDrowningSource = () => {
     navigation.navigate("DrowningSources");
   };
+
+  const handleGoToTrafficSource = () => {
+    navigation.navigate("TrafficSources");
+  };
+
   return (
     <ImageBackground source={Background} style={styles.image}>
       <Text style={styles.modalText}> Sources </Text>
@@ -56,12 +61,13 @@ export default function About({ navigation }) {
           ></MainButton>
 
           <MainButton
-            text="Source 5"
+            text="Traffic Sources"
             txtColor={"black"}
+            onPress={handleGoToTrafficSource}
           ></MainButton>
 
           <MainButton
-            text="Source 6"
+            text="Post-Partum Care"
             txtColor={"black"}
           ></MainButton>
 

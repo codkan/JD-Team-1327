@@ -44,8 +44,6 @@ export default function Traffic({ navigation }) {
         tips for parents on how to be good car safety role models, and things to avoid. {'\n'}
     </Text>
 
-    <Text style={styles.content}> {'\n'} </Text>
-
     <Text style={styles.subtitle}> Types of Car Seats </Text>
 
     <Text style={styles.bullet}>1. Rear-facing carseats</Text>
@@ -83,8 +81,6 @@ export default function Traffic({ navigation }) {
         - Never allow anyone to share seat belts. All passengers must have their own car safety seats or seat belts {'\n'}
     </Text>
 
-    <Text style={styles.content}> {'\n'} </Text>
-
     <Text style={styles.subtitle}> Must-Dos while traveling </Text>
 
     <Text style={styles.bullet}>1. Be a good role model </Text>
@@ -112,8 +108,6 @@ export default function Traffic({ navigation }) {
         <Text style={styles.subbullet}>- Cleaning but not disinfecting is usually permitted. That's 
         because disinfectant products may decrease the protection provided by the seat and harness {'\n'}
     </Text>
-
-    <Text style={styles.content}> {'\n'} </Text>
 
     <Text style={styles.subtitle}> Things to avoid when shopping for carseats </Text>
         <Text style={styles.content}>
