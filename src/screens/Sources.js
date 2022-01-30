@@ -16,13 +16,18 @@ export default function About({ navigation }) {
     navigation.navigate("PoisoningSources");
   };
 
+  const handleGoToFallSource = () => {
+      navigation.navigate("FallSources");
+    };
+
   return (
     <ImageBackground source={Background} style={styles.image}>
       <Text style={styles.modalText}> Sources </Text>
       <View style = {styles.buttonContainer}>
           <MainButton
-            text="Source 1"
+            text="Falls Sources"
             txtColor={"black"}
+            onPress={handleGoToFallSource}
           ></MainButton>
 
           <MainButton

@@ -10,7 +10,7 @@ import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
 
 
-export default function Falls1({ navigation }) {
+export default function Drownings({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -52,7 +52,7 @@ export default function Falls1({ navigation }) {
 
     <Text style={styles.subtitle}> 5 steps to prevent drownings </Text>
 
-    <Text style={styles.bullet}>1. Never leave an infant alone in the tub, even just for a few seconds</Text>
+<Text style={styles.bullet}>1. Never leave an infant alone in the tub, even just for a few seconds</Text>
     <Text style={styles.subbullet}>-The most likely place for infants to drown is right at home, in the tub. 
     Infants may not be able to lift their heads above water, even if there is only a few inches of water.{'\n'}
     - Toddlers may stand up and then slip and fall, landing facedown. {'\n'}
@@ -113,7 +113,7 @@ Home Pool Tips:  {'\n'}
         txtColor={"black"}
     ></InfoButton2>
 
-    <Text style={styles.content}> {'\n'}  {'\n'} </Text>
+    <Text style={styles.content}> {'\n'} </Text>
     </ScrollView>
 
     <View style = {styles.pushdown}>

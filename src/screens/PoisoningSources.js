@@ -16,8 +16,8 @@ export default function Falls1({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const backToPoison = () => {
-        navigation.navigate("Poisoning1");
+    const backToPoisonings = () => {
+        navigation.navigate("Poisonings");
     }
 
     return (
@@ -29,8 +29,8 @@ export default function Falls1({ navigation }) {
     [3] https://www.cdc.gov/homeandrecreationalsafety/poisoning/preventiontips.htm {'\n'}{'\n'} {'\n'}{'\n'}
     
     <MainButton
-          text="Back to Poisoning"
-          onPress={backToPoison}
+          text="Back to Poisonings"
+          onPress={backToPoisonings}
           txtColor={"black"}
     ></MainButton> 
     

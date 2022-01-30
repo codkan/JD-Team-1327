@@ -8,16 +8,13 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 
-export default function Falls2({ navigation }) {
+export default function Burns({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
     };
-    const handleFalls1Nav = () => {
-        navigation.navigate("Falls1");
-    };
-    const handleFalls3Nav = () => {
-        navigation.navigate("Falls3");
+    const handleInfoNav = () => {
+        navigation.navigate("Info");
     };
 
     return (
@@ -26,34 +23,30 @@ export default function Falls2({ navigation }) {
     <InfoButton1
         text="<"
         txtColor={"black"}
-        onPress={handleFalls1Nav}
+        onPress={handleInfoNav}
     ></InfoButton1>
 
-    <Text style={styles.title}> Falls </Text>
-    <Text style={styles.subtitle}> Windows </Text>
+    <Text style={styles.title}> Burns </Text>
+    <Text style={styles.subtitle}> Stoves </Text>
 
     <Text style={styles.content}>
-    {'\t'} Screens are meant to keep bugs out, not children in. Properly install window guards to
-    prevent unintentional window falls. For windows above the first floor, include an emergency
-    release device in case of fire. {'\n'} {'\n'}
-    {'\t'} Install window stops so that windows open no more than four inches yet adults and older
-    children can easily open in case of emergency. Include this in your family’s fire escape plan
-    and practice it regularly. {'\n'} {'\n'}
-    {'\t'} Keep windows locked and closed when they are not being used. Keep in mind that as kids
-    grow, they may have enough strength, dexterity and curiosity to open them. If you have
-    windows that can open from both top and bottom, make a habit of opening just the top to prevent
-    accidental falls. {'\n'} {'\n'}
-    {'\t'} For your crawlers and climbers, move chairs, cribs and other furniture away from windows t
-    o help prevent window falls. If a fall does ever occur, never move a child who appears to be
-    seriously injured — call 911 and let trained medical personnel move the child with proper precautions.
+    {'\t'} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. {'\n'} {'\n'}
+    {'\t'} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </Text>
 
-    <Text style={styles.page}> Page 2 of 3</Text>
+    <Text style={styles.page}> Page 1 of 3</Text>
 
     <InfoButton2
         text=">"
         txtColor={"black"}
-        onPress={handleFalls3Nav}
     ></InfoButton2>
 
     <View style = {styles.pushdown}>

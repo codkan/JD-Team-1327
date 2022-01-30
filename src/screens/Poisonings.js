@@ -9,7 +9,7 @@ import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
 
-export default function Falls1({ navigation }) {
+export default function Poisonings({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();

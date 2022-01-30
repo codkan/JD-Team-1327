@@ -16,21 +16,24 @@ export default function Falls1({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const backToPoison = () => {
-        navigation.navigate("Poisoning1");
+    const backToFalls = () => {
+        navigation.navigate("Falls");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.title}> Sources: </Text>
     <Text style={styles.content}> {'\n'}
-    [1] https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children {'\n'}{'\n'}
-    [2] https://www.cdc.gov/safechild/images/cdc-childhoodinjury.pdf {'\n'}{'\n'}
-    [3] https://www.safekids.org/tip/falls-prevention-tips {'\n'}{'\n'} {'\n'}{'\n'}
+    [1] https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children
+    [2] https://www.stanfordchildrens.org/en/topic/default?id=falls--injury-statistics-and-incidence-rates-90-P02974
+    [3] https://www.cdc.gov/safechild/images/cdc-childhoodinjury.pdf
+    [4] https://www.safekids.org/tip/falls-prevention-tips
+    [5] https://www.safekids.org/tv
+    [6] https://www.safekids.org/playgroundsafety
 
     <MainButton
-          text="Back to Poisoning"
-          onPress={backToPoison}
+          text="Back to Falls"
+          onPress={backToFalls}
           txtColor={"black"}
     ></MainButton>
 
