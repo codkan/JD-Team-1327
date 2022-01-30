@@ -16,8 +16,8 @@ export default function CarSafety({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const goToPoisonings = () => {
-        navigation.navigate("Burns");
+    const goToTraffic = () => {
+        navigation.navigate("Traffic");
     }
     const backToSources = () => {
         navigation.navigate("Sources");
@@ -37,8 +37,8 @@ export default function CarSafety({ navigation }) {
     <Text> {'\n'} </Text>
 
     <MainButton
-          text="Go to Burns"
-          onPress={goToPoisonings}
+          text="Go to Traffic"
+          onPress={goToTraffic}
           txtColor={"black"}
     ></MainButton>
 

@@ -10,7 +10,7 @@ import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
 
 
-export default function CarSafety({ navigation }) {
+export default function Traffic({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -18,8 +18,8 @@ export default function CarSafety({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const handleCarSafetySourcesNav = () => {
-        navigation.navigate("CarSafetySources");
+    const handleTrafficSourcesNav = () => {
+        navigation.navigate("TrafficSources");
     };
 
     return (
@@ -37,8 +37,8 @@ export default function CarSafety({ navigation }) {
     <Text style={styles.subtitle}> Why is Car Safety So Important? </Text>
 
     <Text style={styles.content}>
-        {'\t'} Driving a car can already be a scary task for some people; you're manuevering a thousand-pound 
-        hunk of metal and responsible for the lives of drivers and passengers around you. Now you're adding the 
+        {'\t'} Driving a car can already be a scary task for some people; you are manuevering a thousand-pound
+        hunk of metal and responsible for the lives of drivers and passengers around you. Now you are adding the
         life of your child. Car safety, however, is there to ensure that you and your child stay as safe as possible 
         and hopefully give for a less daunting experience. The following tips outline basic car seat rules, 
         tips for parents on how to be good car safety role models, and things to avoid. {'\n'}
@@ -46,7 +46,7 @@ export default function CarSafety({ navigation }) {
 
     <Text style={styles.content}> {'\n'} </Text>
 
-    <Text style={styles.subtitle}> Types of Car Seats [1]</Text>
+    <Text style={styles.subtitle}> Types of Car Seats </Text>
 
     <Text style={styles.bullet}>1. Rear-facing carseats</Text>
         <Text style={styles.subbullet}>- Used for infants and toddlers {'\n'}
@@ -54,9 +54,9 @@ export default function CarSafety({ navigation }) {
         - Most convertible rear-facing seats are built to allow children to ride rear-facing for 2 years or more {'\n'}
         - Usually comes with a base that stays in the car in place. The seat clicks into and out of the base for easy installation {'\n'}
         - Has a carrying handle for easy child-carry
-        - Ensure that the harness is snug and the chest clip is placed at the center of the chest, even with your child's armpits {'\n'}
+        - Ensure that the harness is snug and the chest clip is placed at the center of the chest, even with the armpits {'\n'}
         - Never place a rear-facing carseat in the front seat where a passenger airbag is activated {'\n'}
-        - Make sure the seat is angled correctly so that your child's head and neck are supported and not able to flop around {'\n'}
+        - Make sure the seat is angled correctly so that the head and neck are supported and not able to flop around {'\n'}
         - Should only be used for travel; never use for sleeping, feeding, etc outside of the vehicle {'\n'}
     </Text>
 
@@ -72,7 +72,7 @@ export default function CarSafety({ navigation }) {
     <Text style={styles.bullet}>3. Booster seat </Text>
         <Text style={styles.subbullet}>- Used for school-aged children {'\n'}
         - Children within this category should use a booster seat with the seat belt until the seat belt fits properly without the need of the booster seat {'\n'}
-        - Vehicle seat belts usually fit properly without a booster seat when the child has reached 4'9" and is between the ages of 8 to 12 {'\n'}
+        - Vehicle seat belts usually fit properly without a booster seat when the child has reached 4ft 9in and is between the ages of 8 to 12 {'\n'}
         - All children under the age of 13 should ride in the back seat regardless of height or weight {'\n'}
     </Text>
 
@@ -85,7 +85,7 @@ export default function CarSafety({ navigation }) {
 
     <Text style={styles.content}> {'\n'} </Text>
 
-    <Text style={styles.subtitle}> Must-Dos while traveling [1] </Text>
+    <Text style={styles.subtitle}> Must-Dos while traveling </Text>
 
     <Text style={styles.bullet}>1. Be a good role model </Text>
         <Text style={styles.subbullet}>- Make sure you always wear your seat belt. This will 
@@ -102,7 +102,7 @@ export default function CarSafety({ navigation }) {
     vehicle when it is not in use </Text>
         <Text style={styles.subbullet}>- A child can die of heatstroke because temperatures can reach 
         deadly levels in minutes {'\n'}
-        - A child can be strangled by power windows, retracting seat belts, sunroots, or accessories {'\n'}
+        - A child can be strangled by power windows, retracting seat belts, sunroofs, or accessories {'\n'}
         - A child can knock the vehicle into gear, setting it into motion {'\n'}
         - A child can be backed over when the vehicle backs up {'\n'}
         - A child can be trapped in the trunk of the vehicle {'\n'}
@@ -115,13 +115,13 @@ export default function CarSafety({ navigation }) {
 
     <Text style={styles.content}> {'\n'} </Text>
 
-    <Text style={styles.subtitle}> Things to avoid when shopping for carseats [1] </Text>
+    <Text style={styles.subtitle}> Things to avoid when shopping for carseats </Text>
         <Text style={styles.content}>
         {'\t'} Never use a carseat that is too old. The manufacturer will make a note of how long the 
         carseat can be used and when it was made. If a carseat has any visible cracks on it, it is unuseable 
         and can cause more harm than good to your child. Carseats should also be replaced after any moderate or severe crash. 
         Even minor crashes can cause unseen damage to the carseat and may need replacing. Carseats can also be recalled; 
-        make sure that you hold on to the manufacturer's label for the carseat so that you know the age of the seat and if 
+        make sure that you hold on to the manufacturer label for the carseat so that you know the age of the seat and if
         it has been recalled. If in doubt, you can call the manufacturer or contact the National Highway Traffic Safety 
         Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website. {'\n'}
     </Text>
@@ -134,6 +134,7 @@ export default function CarSafety({ navigation }) {
     <InfoButton2
         text=">"
         txtColor={"black"}
+        onPress={handleTrafficSourcesNav}
     ></InfoButton2>
 
     <View style = {styles.pushdown}>
