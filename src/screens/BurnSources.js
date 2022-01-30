@@ -26,7 +26,6 @@ export default function Falls1({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.title}> Burnings Sources: </Text>
-    <Text> {'\n'} </Text>
 
 <View style={styles.container}>
 
@@ -47,8 +46,6 @@ export default function Falls1({ navigation }) {
     </TouchableOpacity>
 
     <Text style={styles.title}> Further Readings </Text>
-    <Text> {'\n'} </Text>
-
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.uofmhealth.org/health-library/ue5140')}>
          <Text style={{textDecorationLine:'underline', color:'blue'}}> Child Safety: Preventing Burns </Text>
