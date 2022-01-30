@@ -54,7 +54,7 @@ export default function Falls({ navigation }) {
 
 <Text style={styles.subtitle}> 5 Steps to Prevent Falls </Text>
 
-<Text style={styles.bullet}>1. Be mindful with infants, even when secured</Text> //Better title?
+<Text style={styles.bullet}>1. Be mindful with infants, even when secured</Text>
     <Text style={styles.subbullet}>- Whenever high chairs, infant carriers, car-seats, swings, or strollers are in use,
     always keep infants and young children strapped in and secure. {'\n'}
     - Even when your child is secured in a carrier, NEVER place it on top of a counter, table, or other
