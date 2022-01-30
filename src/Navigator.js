@@ -31,6 +31,7 @@ import FallSources from "./screens/FallSources";
 import PoisoningSources from "./screens/PoisoningSources";
 import BurningSources from "./screens/BurnSources";
 import TrafficSources from "./screens/TrafficSources";
+import DrowningSources from "./screens/DrowningsSources";
 
 
 import LevelOne from "./screens/Level1";
@@ -206,6 +207,13 @@ const screens = {
           animationEnabled: false,
         },
     },
+    DrowningSources: {
+      screen: DrowningSources,
+      navigationOptions: {
+            headerShown: false,
+            animationEnabled: false,
+          },
+      },
 };
 
 const NavStack = createStackNavigator(screens);
