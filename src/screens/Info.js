@@ -12,19 +12,19 @@ export default function Info({ navigation }) {
     navigation.pop();
   };
   const handleFallsNav = () => {
-    navigation.navigate("Falls1");
+    navigation.navigate("Falls");
   };
   const handleBurnsNav = () => {
-    navigation.navigate("Burns1");
+    navigation.navigate("Burns");
   };
-  const handlePoisoningNav = () => {
-    navigation.navigate("Poisoning1");
+  const handlePoisoningsNav = () => {
+    navigation.navigate("Poisonings");
   };
-  const handleDrowningNav = () => {
-    navigation.navigate("Drowning1");
+  const handleDrowningsNav = () => {
+    navigation.navigate("Drownings");
   };
   const handleTrafficNav = () => {
-    navigation.navigate("Traffic1");
+    navigation.navigate("Traffic");
   };
 
   return (
@@ -42,14 +42,14 @@ export default function Info({ navigation }) {
       onPress={handleBurnsNav}
     ></MainButton>
     <MainButton
-      text="Poisoning"
+      text="Poisonings"
       txtColor={"black"}
-      onPress={handlePoisoningNav}
+      onPress={handlePoisoningsNav}
     ></MainButton>
     <MainButton
-      text="Drowning"
+      text="Drownings"
       txtColor={"black"}
-      onPress={handleDrowningNav}
+      onPress={handleDrowningsNav}
     ></MainButton>
     <MainButton
       text="Road Traffic"

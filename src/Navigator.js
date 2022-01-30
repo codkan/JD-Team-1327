@@ -21,12 +21,16 @@ import Badges from "./screens/Badges";
 import About from "./screens/About";
 import Settings from "./screens/Settings";
 
-import Falls1 from "./screens/Falls1";
-import Burns1 from "./screens/Burns1";
-import Poisoning1 from "./screens/Poisoning1";
-import Drowning1 from "./screens/Drowning1";
-import Traffic1 from "./screens/Traffic1";
+import Falls from "./screens/Falls";
+import Burns from "./screens/Burns";
+import Poisonings from "./screens/Poisonings";
+import Drownings from "./screens/Drownings";
+import Traffic from "./screens/Traffic";
+
+import FallSources from "./screens/FallSources";
 import PoisoningSources from "./screens/PoisoningSources";
+import BurningSources from "./screens/BurnSources";
+
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -47,36 +51,36 @@ const screens = {
         animationEnabled: false,
       },
     },
-    Falls1: {
-      screen: Falls1,
+    Falls: {
+        screen: Falls,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    Burns: {
+      screen: Burns,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
       },
     },
-    Burns1: {
-      screen: Burns1,
+    Poisonings: {
+      screen: Poisonings,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
       },
     },
-    Poisoning1: {
-      screen: Poisoning1,
+    Drownings: {
+      screen: Drownings,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
       },
     },
-    Drowning1: {
-      screen: Drowning1,
-      navigationOptions: {
-        headerShown: false,
-        animationEnabled: false,
-      },
-    },
-    Traffic1: {
-      screen: Traffic1,
+    Traffic: {
+      screen: Traffic,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
@@ -178,7 +182,21 @@ const screens = {
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
+      },
     },
+    BurningSources: {
+    screen: BurningSources,
+    navigationOptions: {
+      headerShown: false,
+      animationEnabled: false,
+      },
+    },
+    FallSources: {
+    screen: FallSources,
+    navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
     },
 };
 

@@ -16,8 +16,8 @@ export default function Falls1({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const goToPoisonings = () => {
-        navigation.navigate("Poisonings");
+    const goToFalls = () => {
+        navigation.navigate("Falls");
     }
     const backToSources = () => {
         navigation.navigate("Sources");
@@ -25,50 +25,50 @@ export default function Falls1({ navigation }) {
 
     return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.title}> Poisoning Sources: </Text>
+    <Text style={styles.title}> Fall Sources: </Text>
     <Text> {'\n'} </Text>
 
 <View style={styles.container}>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.poison.org/poison-statistics-national')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] National Poison Statistics </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Stanford Children Accident Statistics </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://injuryprevention.bmj.com/content/injuryprev/23/2/93.full.pdf')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] BMJ Injury Prevention </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=falls--injury-statistics-and-incidence-rates-90-P02974')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] Stanford Children Incidence Rates </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/homeandrecreationalsafety/poisoning/preventiontips.html')}>
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/safechild/images/cdc-childhoodinjury.pdf')}>
          <Text style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/safety-poisoning.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Kids Health Poisoning Safety </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/tip/falls-prevention-tips')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [4] SafeKids Fall Prevention Tips </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.healthychildren.org/English/safety-prevention/all-around/Pages/Poison-Prevention.aspx')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Healthy Children Poison Prevention </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/tv')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [5] SafeKids - Tip-Overs </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://poisonhelp.hrsa.gov/what-you-can-do/prevention-tips')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Poison Help Prevention Tips </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/playgroundsafety')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [6] SafeKids - Playground Safety </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
     <MainButton
-          text="Go to Poisonings"
-          onPress={goToPoisonings}
+          text="Go to Falls"
+          onPress={goToFalls}
           txtColor={"black"}
     ></MainButton>
 

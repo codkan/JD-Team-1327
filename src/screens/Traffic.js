@@ -26,8 +26,8 @@ export default function Falls1({ navigation }) {
         onPress={handleInfoNav}
     ></InfoButton1>
 
-    <Text style={styles.title}> Drownings </Text>
-    <Text style={styles.subtitle}> Pools </Text>
+    <Text style={styles.title}> Traffic </Text>
+    <Text style={styles.subtitle}> Carseats </Text>
 
     <Text style={styles.content}>
     {'\t'} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -81,6 +81,8 @@ const styles = StyleSheet.create({
     content: {
         fontSize: 16,
         marginBottom: 20,
+        marginLeft: 15,
+        marginRight: 15,
     },
     page: {
         fontSize: 18,

@@ -17,7 +17,7 @@ export default function Falls1({ navigation }) {
         navigation.navigate("Info");
     };
     const goToPoisonings = () => {
-        navigation.navigate("Poisonings");
+        navigation.navigate("Burns");
     }
     const backToSources = () => {
         navigation.navigate("Sources");
@@ -25,49 +25,64 @@ export default function Falls1({ navigation }) {
 
     return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.title}> Poisoning Sources: </Text>
+    <Text style={styles.title}> Burnings Sources: </Text>
     <Text> {'\n'} </Text>
 
 <View style={styles.container}>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.poison.org/poison-statistics-national')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] National Poison Statistics </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.childrenssafetynetwork.org/child-safety-topics/fire-burn-safety')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Fire & Burn Safety </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://injuryprevention.bmj.com/content/injuryprev/23/2/93.full.pdf')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] BMJ Injury Prevention </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://ameriburn.org/wp-content/uploads/2018/12/nbaw2019_statsdataresources_120618-1.pdf')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] Scald Statistics and Data </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/homeandrecreationalsafety/poisoning/preventiontips.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=burns-overview-90-P01737')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [3] Overview of Burns </Text>
+    </TouchableOpacity>
+
+    <Text style={styles.title}> Further Readings </Text>
+    <Text> {'\n'} </Text>
+
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.uofmhealth.org/health-library/ue5140')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> Child Safety: Preventing Burns </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/safety-poisoning.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Kids Health Poisoning Safety </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/safety-burns.html')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> Household Safety: Preventing Burns, Shocks, and Fires </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.healthychildren.org/English/safety-prevention/all-around/Pages/Poison-Prevention.aspx')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Healthy Children Poison Prevention </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://raisingchildren.net.au/newborns/safety/burns-scalds-fire/burns-prevention')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> Burns prevention in your home </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://poisonhelp.hrsa.gov/what-you-can-do/prevention-tips')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Poison Help Prevention Tips </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=preventing-burn-injuries-90-P01750')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> Preventing Burn Injuries </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/in-depth/child-safety/art-20044027')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> Burn safety: Protect your child from burns </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
     <MainButton
-          text="Go to Poisonings"
+          text="Go to Burns"
           onPress={goToPoisonings}
           txtColor={"black"}
     ></MainButton>
