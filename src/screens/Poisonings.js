@@ -36,28 +36,27 @@ export default function Poisonings({ navigation }) {
 
     <Text style={styles.subtitle}> Statistics </Text>
         <Text style={styles.content}>
-        {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below,
-        with over 250,000 of these being for children aged 2 and under [1]. Children 6 and under are disproportionately at risk for poisonings,
-        as statistics from Poison Control show that the next age group with the most cases were adults between 20 and 29 with over 71,000 cases,
-        almost 5 times less than the children. Specifically, 85% of all cases were caused by poison being ingested through the mouth, and the main culprits for these cases
-        among small children were cosmetics and cleaning substances.
+        {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below, 
+            with over 250,000 of these being for children aged 2 and under. Children 6 and under are disproportionately at risk for poisonings, 
+            as statistics from Poison Control show. Most cases (85%) are caused ingesting substances, such as cosmetics and cleaning substances.
         </Text>
 
     <Text style={styles.subtitle}> Practices </Text>
         <Text style={styles.content}>
         {'\t'} Findings show that doing seemingly small things, such as ensuring that medicines are stored out of reach or putting them away immediately after use,
-        could reduce the amount of poisonings per year between 11% and 20% [2]. Overall, the majority of practices to prevent poisonings come down to caretakers having more
+        could reduce the amount of poisonings per year between 11% and 20%. Overall, the majority of practices to prevent poisonings come down to caretakers having more
         awareness and being more attentive since poisonings due to other sources are very low. Some examples of common practices that could help prevent a child from mistakenly
-        poisoning themselves include [3]:
+        poisoning themselves include:
         {'\n'}
         {'\n'}
         - Keep medicines in their original containers {'\n'}
-        -  Memorize the poison help number (1-800-222-1222){'\n'}
+        - Memorize the poison help number (1-800-222-1222){'\n'}
         - Keep medicines and other dangerous substances at a height above child eye level {'\n'}
         - Put away all potential hazardous materials right after use to ensure a child does not have time to take themselves {'\n'}
         - Secure child safety locks on things such as medicines {'\n'}
         - Ensure that you have functioning carbon monoxide and smoke detectors {'\n'}
         - Make sure all natural gas based appliances are functioning correctly {'\n'}
+        - Check your home for lead paint that can chip off {'\n'}
         </Text>
 
     <Text> {'\n'} </Text>
