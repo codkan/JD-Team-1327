@@ -24,6 +24,9 @@ export default function About({ navigation }) {
       navigation.navigate("FallSources");
     };
 
+  const handleGoToDrowningSource = () => {
+    navigation.navigate("DrowningSources");
+  };
   return (
     <ImageBackground source={Background} style={styles.image}>
       <Text style={styles.modalText}> Sources </Text>
@@ -47,8 +50,9 @@ export default function About({ navigation }) {
           ></MainButton>
 
           <MainButton
-            text="Source 4"
+            text="Drowning Sources"
             txtColor={"black"}
+            onPress={handleGoToDrowningSource}
           ></MainButton>
 
           <MainButton
