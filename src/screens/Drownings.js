@@ -109,13 +109,14 @@ Home Pool Tips:  {'\n'}
 - Consider buying and installing a pool alarm. {'\n'}
 
 </Text>
-    </ScrollView>
 
-    <InfoButton2
-        text="Sources"
-        txtColor={"black"}
-        onPress={handleDrowningSourcesNav}
-    ></InfoButton2>
+<InfoButton2
+    text="[]"
+    txtColor={"black"}
+    onPress={handleDrowningSourcesNav}
+></InfoButton2>
+
+    </ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>

@@ -58,16 +58,16 @@ export default function Poisonings({ navigation }) {
         - Make sure all natural gas based appliances are functioning correctly {'\n'}
         - Check your home for lead paint that can chip off {'\n'}
         </Text>
-
-    <Text> {'\n'} </Text>
-
-    </ScrollView>
-
-    <InfoButton2
-        text="Sources"
+    
+        <InfoButton2
+        text="[]"
         txtColor={"black"}
         onPress={handlePoisoningSourcesNav}
     ></InfoButton2>
+
+        
+    </ScrollView>
+
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     },
     content: {
         fontSize: 16,
-        marginBottom: 20,
+        marginBottom: 15,
         marginLeft: 15,
         marginRight: 15,
     },

@@ -18,8 +18,8 @@ export default function Burns({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const handleFallSourcesNav = () => {
-        navigation.navigate("BurnSources");
+    const handleBurnSourcesNav = () => {
+        navigation.navigate("BurningSources");
     };
 
     return (
@@ -105,15 +105,14 @@ export default function Burns({ navigation }) {
         If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4]. {'\n'}
     </Text>
 
-    <Text style={styles.content}> {'\n'} </Text>
+    <InfoButton2
+        text="[]"
+        txtColor={"black"}
+        onPress={handleBurnSourcesNav}
+    ></InfoButton2>
 
     </ScrollView>
 
-
-    <InfoButton2
-        text=">"
-        txtColor={"black"}
-    ></InfoButton2>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>

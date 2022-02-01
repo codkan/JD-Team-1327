@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
     //paddingHorizontal: 10,
     //marginVertical: 10,
     backgroundColor: "rgba(196,196,196,1)",
-    //alignItems: "left",
-    //justifyContent: "top",
-    position: "absolute",
+    //alignItems: "right",
+    //justifyContent: "right",
+    //position: "relative",
     //bottom: 0,
     right: 0,
     shadowColor: 'black',
@@ -34,7 +34,10 @@ const styles = StyleSheet.create({
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
     marginRight: 20,
-    //marginBottom: 20,
+    marginLeft: 80,
+    marginBottom: 50,
+    alignSelf: "flex-end"
+
   },
   buttonText: {
     fontStyle: "normal",

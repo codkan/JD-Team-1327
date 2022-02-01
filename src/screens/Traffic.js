@@ -120,16 +120,13 @@ export default function Traffic({ navigation }) {
         Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website. {'\n'}
     </Text>
 
-    <Text style={styles.content}> {'\n'} </Text>
-
-    </ScrollView>
-
-
     <InfoButton2
-        text=">"
+        text="[]"
         txtColor={"black"}
         onPress={handleTrafficSourcesNav}
     ></InfoButton2>
+
+    </ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>

@@ -110,15 +110,13 @@ export default function Falls({ navigation }) {
 
 </Text>
 
-<Text style={styles.content}> {'\n'} </Text>
-
-    </ScrollView>
-
-    <InfoButton2
-        text="Sources"
+<InfoButton2
+        text="[]"
         txtColor={"black"}
         onPress={handleFallSourcesNav}
     ></InfoButton2>
+
+    </ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
