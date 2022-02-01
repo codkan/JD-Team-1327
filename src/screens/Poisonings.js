@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
+import BackButton from "../components/BackButton";
+import SourcesButton from "../components/SourcesButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
@@ -24,11 +24,11 @@ export default function Poisonings({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <InfoButton1
+    <BackButton
         text="<"
         txtColor={"black"}
         onPress={handleInfoNav}
-    ></InfoButton1>
+    ></BackButton>
     
     <ScrollView>
 
@@ -59,11 +59,11 @@ export default function Poisonings({ navigation }) {
         - Check your home for lead paint that can chip off {'\n'}
         </Text>
     
-        <InfoButton2
+        <SourcesButton
         text="[]"
         txtColor={"black"}
         onPress={handlePoisoningSourcesNav}
-    ></InfoButton2>
+    ></SourcesButton>
 
         
     </ScrollView>

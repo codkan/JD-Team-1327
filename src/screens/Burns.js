@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
+import BackButton from "../components/BackButton";
+import SourcesButton from "../components/SourcesButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
@@ -25,11 +25,11 @@ export default function Burns({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <InfoButton1
+    <BackButton
         text="<"
         txtColor={"black"}
         onPress={handleInfoNav}
-    ></InfoButton1>
+    ></BackButton>
 
     <ScrollView>
 
@@ -105,11 +105,11 @@ export default function Burns({ navigation }) {
         If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4]. {'\n'}
     </Text>
 
-    <InfoButton2
+    <SourcesButton
         text="[]"
         txtColor={"black"}
         onPress={handleBurnSourcesNav}
-    ></InfoButton2>
+    ></SourcesButton>
 
     </ScrollView>
 
