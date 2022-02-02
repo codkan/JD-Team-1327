@@ -23,7 +23,7 @@ export default function Falls1({ navigation }) {
 
     return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.title}> Burnings Sources: </Text>
+    <Text style={styles.title}> Drownings Sources: </Text>
 
 <View style={styles.container}>
 

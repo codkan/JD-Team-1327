@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
+import BackButton from "../components/BackButton";
+import SourcesButton from "../components/SourcesButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
@@ -25,11 +25,11 @@ export default function ParentalHealth({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <InfoButton1
+    <BackButton
         text="<"
         txtColor={"black"}
         onPress={handleInfoNav}
-    ></InfoButton1>
+    ></BackButton>
 
     <ScrollView>
 
@@ -44,8 +44,6 @@ export default function ParentalHealth({ navigation }) {
         childbirth. Postpartum depression isn't a character flaw or a weakness. Sometimes it's simply a complication of giving birth. 
         If you have postpartum depression, prompt treatment can help you manage your symptoms and help you bond with your baby. [2] {'\n'}
     </Text>
-
-    <Text style={styles.content}> {'\n'} </Text>
 
     <Text style={styles.subtitle}> Symptoms for Either Parent</Text>
 
@@ -91,8 +89,6 @@ export default function ParentalHealth({ navigation }) {
         relationships and child development as postpartum depression in mothers can. {'\n'}
     </Text>
 
-    <Text style={styles.content}> {'\n'} </Text>
-
     <Text style={styles.subtitle}> Long-Term Effects of Untreated Postpartum Depression [2] </Text>
 
     <Text style={styles.bullet}>1. For Mothers </Text>
@@ -113,15 +109,14 @@ export default function ParentalHealth({ navigation }) {
         language development. {'\n'}
     </Text>
 
-    <Text style={styles.content}> {'\n'} </Text>
+    <SourcesButton
+        text="[]"
+        txtColor={"black"}
+        onPress={handleParentalHealthSourcesNav}
+    ></SourcesButton>
 
     </ScrollView>
 
-
-    <InfoButton2
-        text=">"
-        txtColor={"black"}
-    ></InfoButton2>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>

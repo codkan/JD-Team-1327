@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
@@ -16,8 +14,8 @@ export default function ParentalHealth({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const goToPoisonings = () => {
-        navigation.navigate("Burns");
+    const goToParentalHealth = () => {
+        navigation.navigate("ParentalHealth");
     }
     const backToSources = () => {
         navigation.navigate("Sources");
@@ -43,8 +41,8 @@ export default function ParentalHealth({ navigation }) {
     <Text> {'\n'} </Text>
 
     <MainButton
-          text="Go to Burns"
-          onPress={goToPoisonings}
+          text="Go to Parental Health"
+          onPress={goToParentalHealth}
           txtColor={"black"}
     ></MainButton>
 

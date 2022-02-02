@@ -26,6 +26,9 @@ export default function Info({ navigation }) {
   const handleTrafficNav = () => {
     navigation.navigate("Traffic");
   };
+  const handleParentalHealthNav = () => {
+    navigation.navigate("ParentalHealth");
+  };
 
   return (
     <ImageBackground source={Background} style={styles.image}>
@@ -57,8 +60,9 @@ export default function Info({ navigation }) {
       onPress={handleTrafficNav}
     ></MainButton>
     <MainButton
-      text="Bookmarks"
+      text="Parental Health"
       txtColor={"black"}
+      onPress={handleParentalHealthNav}
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>
