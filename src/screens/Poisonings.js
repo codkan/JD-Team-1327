@@ -49,14 +49,14 @@ export default function Poisonings({ navigation }) {
         poisoning themselves include:
         {'\n'}
         {'\n'}
-        - Keep medicines in their original containers {'\n'}
-        - Memorize the poison help number (1-800-222-1222){'\n'}
-        - Keep medicines and other dangerous substances at a height above child eye level {'\n'}
-        - Put away all potential hazardous materials right after use to ensure a child does not have time to take themselves {'\n'}
-        - Secure child safety locks on things such as medicines {'\n'}
-        - Ensure that you have functioning carbon monoxide and smoke detectors {'\n'}
-        - Make sure all natural gas based appliances are functioning correctly {'\n'}
-        - Check your home for lead paint that can chip off
+        <Text style={styles.subbullet}>  1. Keep medicines in their original containers {'\n'} </Text>  
+        <Text style={styles.subbullet}> 2. Memorize the poison help number (1-800-222-1222) {'\n'} </Text>        
+        <Text style={styles.subbullet}> 3. Keep medicines and other dangerous substances at a height above child eye level {'\n'} </Text>
+        <Text style={styles.subbullet}> 4. Put away all potential hazardous materials right after use to ensure a child does not have time to take themselves {'\n'} </Text>
+        <Text style={styles.subbullet}> 5. Secure child safety locks on things such as medicines {'\n'} </Text>
+        <Text style={styles.subbullet}> 6. Ensure that you have functioning carbon monoxide and smoke detectors {'\n'} </Text>
+        <Text style={styles.subbullet}> 7. Make sure all natural gas based appliances are functioning correctly {'\n'} </Text>
+        <Text style={styles.subbullet}> 8. Check your home for lead paint that can chip off {'\n'} </Text>
         </Text>
     
         <SourcesButton
@@ -122,5 +122,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: "#C4C4C4",
+    },
+    bullet: {
+        fontSize: 20,
+        fontWeight: "bold",
+        marginLeft: 5,
+        marginRight: 5
+    },
+    subbullet: {
+        fontSize: 16,
+        marginLeft: 30,
+        marginRight: 10,
     },
 });
