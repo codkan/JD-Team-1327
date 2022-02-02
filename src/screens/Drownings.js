@@ -106,7 +106,7 @@ Home Pool Tips:  {'\n'}
 - Construct proper 4 sided fencing around your home pool. This should include self-closing and self-latching gates. {'\n'}
 - Do not leave toys in the pool area that may entice your kid to enter the area unsupervised. {'\n'}
 - Teach your child to never swim alone, only with adult supervision. {'\n'}
-- Consider buying and installing a pool alarm. {'\n'}
+- Consider buying and installing a pool alarm.
 
 </Text>
 

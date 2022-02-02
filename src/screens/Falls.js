@@ -106,7 +106,7 @@ export default function Falls({ navigation }) {
       clothing items that may pose strangulation hazards or worsen impacts {'\n'}
     - Teach and guide children to avoid any pushing, shoving, or crowding {'\n'}
     - If possible, seek out playgrounds with softer, shock-absorbing surfaces like rubber, turf, mulch,
-      wood chips, pea gravel, etc. rather than asphalt, concrete, or dirt. [6] {'\n'}
+      wood chips, pea gravel, etc. rather than asphalt, concrete, or dirt. [6]
 
 </Text>
 

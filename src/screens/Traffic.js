@@ -117,7 +117,7 @@ export default function Traffic({ navigation }) {
         Even minor crashes can cause unseen damage to the carseat and may need replacing. Carseats can also be recalled; 
         make sure that you hold on to the manufacturer label for the carseat so that you know the age of the seat and if
         it has been recalled. If in doubt, you can call the manufacturer or contact the National Highway Traffic Safety 
-        Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website. {'\n'}
+        Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website.
     </Text>
 
     <SourcesButton

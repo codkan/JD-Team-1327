@@ -56,7 +56,7 @@ export default function Poisonings({ navigation }) {
         - Secure child safety locks on things such as medicines {'\n'}
         - Ensure that you have functioning carbon monoxide and smoke detectors {'\n'}
         - Make sure all natural gas based appliances are functioning correctly {'\n'}
-        - Check your home for lead paint that can chip off {'\n'}
+        - Check your home for lead paint that can chip off
         </Text>
     
         <SourcesButton

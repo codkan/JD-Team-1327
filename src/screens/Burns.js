@@ -102,7 +102,7 @@ export default function Burns({ navigation }) {
         Protect the burned area by wrapping it with gauze or cloth while not breaking any blisters. 
         Don’t immediately apply any ointments, oils, or sprays. 
         If you fear the injury is severe enough or covers a large area, call emergency medical services. 
-        If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4]. {'\n'}
+        If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4].
     </Text>
 
     <SourcesButton
