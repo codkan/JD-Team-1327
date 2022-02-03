@@ -121,8 +121,6 @@ export default function Traffic({ navigation }) {
     </Text>
 
     <SourcesButton
-        text="[]"
-        txtColor={"black"}
         onPress={handleTrafficSourcesNav}
     ></SourcesButton>
 
