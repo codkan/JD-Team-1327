@@ -24,7 +24,6 @@ export default function Falls1({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.title}> Fall Sources: </Text>
-    <Text> {'\n'} </Text>
 
 <View style={styles.container}>
 
@@ -60,6 +59,12 @@ export default function Falls1({ navigation }) {
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/playgroundsafety')}>
          <Text style={{textDecorationLine:'underline', color:'blue'}}> [6] SafeKids - Playground Safety </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/products-strollers.html')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [7] KidsHealth - Stroller Safety </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
