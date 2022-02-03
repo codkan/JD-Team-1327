@@ -32,31 +32,57 @@ export default function Poisonings({ navigation }) {
     
     <ScrollView>
 
-    <Text style={styles.title}> Poisonings </Text>
+    <Text style={styles.title}> Poisonings  </Text>
 
-    <Text style={styles.subtitle}> Statistics </Text>
+    <Text style={styles.subtitle}> How common is it? </Text>
         <Text style={styles.content}>
-        {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below, 
-            with over 250,000 of these being for children aged 2 and under. Children 6 and under are disproportionately at risk for poisonings, 
-            as statistics from Poison Control show. Most cases (85%) are caused ingesting substances, such as cosmetics and cleaning substances.
+        {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below,
+         with over 250,000 of these being for children aged 2 and under
+         . Children 6 and under are disproportionately at risk for poisonings, as statistics from Poison Control show that 
+         the next age group with the most cases were adults between 20 and 29 with over 71,000 cases, almost 5 times less than the children. 
+         Specifically, 85% of all cases were caused by poison being ingested through the mouth, and the main culprits for these cases among 
+         small children were cosmetics and cleaning substances. {'\n'}
         </Text>
+        
 
-    <Text style={styles.subtitle}> Practices </Text>
+    <Text style={styles.subtitle}> How can we prevent it? </Text>
         <Text style={styles.content}>
-        {'\t'} Findings show that doing seemingly small things, such as ensuring that medicines are stored out of reach or putting them away immediately after use,
-        could reduce the amount of poisonings per year between 11% and 20%. Overall, the majority of practices to prevent poisonings come down to caretakers having more
-        awareness and being more attentive since poisonings due to other sources are very low. Some examples of common practices that could help prevent a child from mistakenly
-        poisoning themselves include:
+        {'\t'} Findings show that doing seemingly small things, such as ensuring that medicines are stored out 
+        of reach or putting them away immediately after use, could reduce the amount of poisonings per year between 11% and 20%.
+         Overall, the majority of practices to prevent poisonings come down to caretakers having more awareness and being more 
+         attentive since poisonings due to other sources are very low. Here are some tips to prevent the most common forms of child poisoning: 
         {'\n'}
         {'\n'}
-        <Text style={styles.subbullet}>  1. Keep medicines in their original containers {'\n'} </Text>  
-        <Text style={styles.subbullet}> 2. Memorize the poison help number (1-800-222-1222) {'\n'} </Text>        
-        <Text style={styles.subbullet}> 3. Keep medicines and other dangerous substances at a height above child eye level {'\n'} </Text>
-        <Text style={styles.subbullet}> 4. Put away all potential hazardous materials right after use to ensure a child does not have time to take themselves {'\n'} </Text>
-        <Text style={styles.subbullet}> 5. Secure child safety locks on things such as medicines {'\n'} </Text>
-        <Text style={styles.subbullet}> 6. Ensure that you have functioning carbon monoxide and smoke detectors {'\n'} </Text>
-        <Text style={styles.subbullet}> 7. Make sure all natural gas based appliances are functioning correctly {'\n'} </Text>
-        <Text style={styles.subbullet}> 8. Check your home for lead paint that can chip off {'\n'} </Text>
+        <Text style={styles.bullet}>  1. Be cognizant of where you leave all medicine and pill bottles {'\n'} </Text>          {'\n'}
+            <Text style={styles.subbullet}> - Keep medicines in their original containers. People can often lose track medicine if they switch the container 
+            it is in which can lead to the accidental ingestion of medicine. {'\n'} </Text> 
+            <Text style={styles.subbullet}> - Keep medicines and other dangerous substances at a height above a child's eye level. 
+            Children will often grab anything that appeals to them, so keeping potentially harmful substances out of their range of view 
+            will prevent them from attempting to consume them. {'\n'} </Text>
+            <Text style={styles.subbullet}> - Secure child safety locks on things such as medicines. 
+            In the case that a child is able to grab a bottle of medicine, the child safety lock will prevent them 
+            from accessing the pills inside.{'\n'} </Text> {'\n'} 
+        <Text style={styles.bullet}> 2. Be aware of potentially dangerous materials being left around children {'\n'} </Text>    {'\n'}  
+            <Text style={styles.subbullet}> - Put away all potential hazardous materials right after use to ensure a 
+            child doesn't have time to take themselves. A large portion of poisonings occur due to parents or caretakers 
+            being careless and unaware of the dangerous things left around their children. Being more careful about putting 
+            things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items. {'\n'} </Text>  {'\n'}
+        <Text style={styles.bullet}> 3. Ensure that you are familiar with all potential dangers both inside and outside the home {'\n'} </Text> {'\n'}  
+            <Text style={styles.subbullet}> - Make sure all natural gas based appliances are functioning correctly. 
+            As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the 
+            chance of poisonings for both children and adults. {'\n'} </Text>
+            <Text style={styles.subbullet}> - Ensure that you have functioning carbon monoxide and smoke detectors. 
+            These are critical because both of these can detect hazards that occur silently. {'\n'} </Text>
+            <Text style={styles.subbullet}> - Memorize the poison help number (1-800-222-1222). This 24/7 line can connect you to an 
+            expert in the case that you suspect a child has been poisoned. {'\n'} </Text>
+            <Text style={styles.subbullet}> - Familiarize yourself with the plants in and outside of your home, especially if 
+            you live near plants that produce bright or noticeable berries that could be poisonous. Children will be attracted to 
+            plants that look appealing, such as holly and juniper berries. Canvas the outside of your home or ask a professional to 
+            make sure that you are familiar with all the plant species in the vicinity of your home. Remove or relocate any poisonous plants 
+            to ensure your child does not consume its berries. {'\n'} </Text>
+            <Text style={styles.subbullet}>- Check your home for lead paint that can chip off. Lead poisoning can be difficult to detect, 
+            and so either get an expert of check yourself to see if your home contains this kind of paint. Lead paint and dust is more 
+            common among older buildings, so be sure to check if your home fits this criteria.	 {'\n'} </Text>
         </Text>
     
         <SourcesButton
