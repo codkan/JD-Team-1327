@@ -6,7 +6,7 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 
-export default function CarSafety({ navigation }) {
+export default function ParentalHealth({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -14,8 +14,8 @@ export default function CarSafety({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const goToTraffic = () => {
-        navigation.navigate("Traffic");
+    const goToParentalHealth = () => {
+        navigation.navigate("ParentalHealth");
     }
     const backToSources = () => {
         navigation.navigate("Sources");
@@ -23,20 +23,26 @@ export default function CarSafety({ navigation }) {
 
     return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.title}> Car Safety Sources: </Text>
+    <Text style={styles.title}> Parental Health Sources: </Text>
     <Text> {'\n'} </Text>
 
 <View style={styles.container}>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.healthychildren.org/English/safety-prevention/on-the-go/Pages/Car-Safety-Seats-Information-for-Families.aspx')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Car Safety </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/ppd.html')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Parental Health </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.mayoclinic.org/diseases-conditions/postpartum-depression/symptoms-causes/syc-20376617')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] Parental Health </Text>
     </TouchableOpacity>
 
     <Text> {'\n'} </Text>
 
     <MainButton
-          text="Go to Car Safety"
-          onPress={goToTraffic}
+          text="Go to Parental Health"
+          onPress={goToParentalHealth}
           txtColor={"black"}
     ></MainButton>
 

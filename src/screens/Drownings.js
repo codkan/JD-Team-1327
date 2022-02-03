@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
+import BackButton from "../components/BackButton";
+import SourcesButton from "../components/SourcesButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
@@ -25,11 +25,11 @@ export default function Drownings({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <InfoButton1
+    <BackButton
         text="<"
         txtColor={"black"}
         onPress={handleInfoNav}
-    ></InfoButton1>
+    ></BackButton>
 
     <ScrollView>
 
@@ -106,16 +106,15 @@ Home Pool Tips:  {'\n'}
 - Construct proper 4 sided fencing around your home pool. This should include self-closing and self-latching gates. {'\n'}
 - Do not leave toys in the pool area that may entice your kid to enter the area unsupervised. {'\n'}
 - Teach your child to never swim alone, only with adult supervision. {'\n'}
-- Consider buying and installing a pool alarm. {'\n'}
+- Consider buying and installing a pool alarm.
 
 </Text>
-    </ScrollView>
 
-    <InfoButton2
-        text="Sources"
-        txtColor={"black"}
-        onPress={handleDrowningSourcesNav}
-    ></InfoButton2>
+<SourcesButton
+    onPress={handleDrowningSourcesNav}
+></SourcesButton>
+
+    </ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>

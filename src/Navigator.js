@@ -26,12 +26,14 @@ import Burns from "./screens/Burns";
 import Poisonings from "./screens/Poisonings";
 import Drownings from "./screens/Drownings";
 import Traffic from "./screens/Traffic";
+import ParentalHealth from "./screens/ParentalHealth";
 
 import FallSources from "./screens/FallSources";
 import PoisoningSources from "./screens/PoisoningSources";
 import BurningSources from "./screens/BurnSources";
 import TrafficSources from "./screens/TrafficSources";
 import DrowningSources from "./screens/DrowningsSources";
+import ParentalHealthSources from "./screens/ParentalHealthSources";
 
 
 import LevelOne from "./screens/Level1";
@@ -83,6 +85,13 @@ const screens = {
     },
     Traffic: {
       screen: Traffic,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParentalHealth: {
+      screen: ParentalHealth,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
@@ -214,6 +223,13 @@ const screens = {
             animationEnabled: false,
           },
       },
+    ParentalHealthSources: {
+      screen: ParentalHealthSources,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
 };
 
 const NavStack = createStackNavigator(screens);

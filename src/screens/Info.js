@@ -26,6 +26,9 @@ export default function Info({ navigation }) {
   const handleTrafficNav = () => {
     navigation.navigate("Traffic");
   };
+  const handleParentalHealthNav = () => {
+    navigation.navigate("ParentalHealth");
+  };
 
   return (
     <ImageBackground source={Background} style={styles.image}>
@@ -52,13 +55,14 @@ export default function Info({ navigation }) {
       onPress={handleDrowningsNav}
     ></MainButton>
     <MainButton
-      text="Road Traffic"
+      text="Car Safety"
       txtColor={"black"}
       onPress={handleTrafficNav}
     ></MainButton>
     <MainButton
-      text="Bookmarks"
+      text="Parental Health"
       txtColor={"black"}
+      onPress={handleParentalHealthNav}
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>
@@ -76,8 +80,8 @@ const styles = StyleSheet.create({
     // margin: 100,
     height: 70,
     fontSize: 40,
-    marginTop: 100,
-    marginBottom: 15,
+    marginTop: 60,
+    marginBottom: 25,
     fontWeight: "bold",
     textAlign: "center",
   },

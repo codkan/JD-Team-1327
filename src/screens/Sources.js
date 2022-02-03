@@ -32,6 +32,10 @@ export default function About({ navigation }) {
     navigation.navigate("TrafficSources");
   };
 
+  const handleGoToParentalHealthSource = () => {
+      navigation.navigate("ParentalHealthSources");
+    };
+
   return (
     <ImageBackground source={Background} style={styles.image}>
       <Text style={styles.modalText}> Sources </Text>
@@ -61,14 +65,15 @@ export default function About({ navigation }) {
           ></MainButton>
 
           <MainButton
-            text="Traffic Sources"
+            text="Car Safety Sources"
             txtColor={"black"}
             onPress={handleGoToTrafficSource}
           ></MainButton>
 
           <MainButton
-            text="Post-Partum Care"
+            text="Parent Health Sources"
             txtColor={"black"}
+            onPress={handleGoToParentalHealthSource}
           ></MainButton>
 
         </View>

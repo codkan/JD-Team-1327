@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
+import BackButton from "../components/BackButton";
+import SourcesButton from "../components/SourcesButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
@@ -25,11 +25,11 @@ export default function Traffic({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <InfoButton1
+    <BackButton
         text="<"
         txtColor={"black"}
         onPress={handleInfoNav}
-    ></InfoButton1>
+    ></BackButton>
 
     <ScrollView>
 
@@ -117,19 +117,14 @@ export default function Traffic({ navigation }) {
         Even minor crashes can cause unseen damage to the carseat and may need replacing. Carseats can also be recalled; 
         make sure that you hold on to the manufacturer label for the carseat so that you know the age of the seat and if
         it has been recalled. If in doubt, you can call the manufacturer or contact the National Highway Traffic Safety 
-        Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website. {'\n'}
+        Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website.
     </Text>
 
-    <Text style={styles.content}> {'\n'} </Text>
+    <SourcesButton
+        onPress={handleTrafficSourcesNav}
+    ></SourcesButton>
 
     </ScrollView>
-
-
-    <InfoButton2
-        text=">"
-        txtColor={"black"}
-        onPress={handleTrafficSourcesNav}
-    ></InfoButton2>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
