@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View, Image } from "react-native";
 import { color } from "react-native-reanimated";
 
 export default function SourcesButton({ text, onPress, txtColor }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text style={styles.buttonText}>{text}</Text>
+        <Image source={require("../assets/links-line.png")} style={styles.icon}></Image>
       </View>
     </TouchableOpacity>
   );
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
     //paddingHorizontal: 10,
     //marginVertical: 10,
     backgroundColor: "rgba(196,196,196,1)",
-    //alignItems: "right",
-    //justifyContent: "right",
+    alignItems: "center",
+    justifyContent: "center",
     //position: "relative",
     //bottom: 0,
     right: 0,

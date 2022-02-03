@@ -111,8 +111,6 @@ export default function Falls({ navigation }) {
 </Text>
 
 <SourcesButton
-        text="[]"
-        txtColor={"black"}
         onPress={handleFallSourcesNav}
     ></SourcesButton>
 

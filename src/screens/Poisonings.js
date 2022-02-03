@@ -60,8 +60,7 @@ export default function Poisonings({ navigation }) {
         </Text>
     
         <SourcesButton
-        text="[]"
-        txtColor={"black"}
+
         onPress={handlePoisoningSourcesNav}
     ></SourcesButton>
 

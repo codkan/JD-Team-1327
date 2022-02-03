@@ -106,8 +106,6 @@ export default function Burns({ navigation }) {
     </Text>
 
     <SourcesButton
-        text="[]"
-        txtColor={"black"}
         onPress={handleBurnSourcesNav}
     ></SourcesButton>
 

@@ -111,8 +111,6 @@ Home Pool Tips:  {'\n'}
 </Text>
 
 <SourcesButton
-    text="[]"
-    txtColor={"black"}
     onPress={handleDrowningSourcesNav}
 ></SourcesButton>
 
