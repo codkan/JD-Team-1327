@@ -35,10 +35,11 @@ import TrafficSources from "./screens/TrafficSources";
 import DrowningSources from "./screens/DrowningsSources";
 import ParentalHealthSources from "./screens/ParentalHealthSources";
 
-
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
 import LevelThree from "./screens/Level3";
+
+import Multimedia from "./screens/Multimedia";
 
 const screens = {
     Landing: {
@@ -50,6 +51,13 @@ const screens = {
     },
     Info: {
       screen: Info,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    Multimedia: {
+      screen: Multimedia,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,

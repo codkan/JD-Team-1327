@@ -26,6 +26,9 @@ export default function Home({ navigation }) {
   const handleSourcesNav = () => {
     navigation.navigate("Sources");
   };
+  const handleMultimediaNav = () => {
+      navigation.navigate("Multimedia");
+    };
 
     return (
       <ImageBackground source={Background} style={styles.image}>
@@ -34,6 +37,11 @@ export default function Home({ navigation }) {
             text="Info"
             onPress={handleInfoNav}
             txtColor={"black"}
+          ></MainButton>
+          <MainButton
+              text="Multimedia"
+              onPress={handleMultimediaNav}
+              txtColor={"black"}
           ></MainButton>
           <MainButton
             text="Review"
