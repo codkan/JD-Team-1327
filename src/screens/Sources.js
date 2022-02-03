@@ -65,13 +65,13 @@ export default function About({ navigation }) {
           ></MainButton>
 
           <MainButton
-            text="Traffic Sources"
+            text="Car Safety Sources"
             txtColor={"black"}
             onPress={handleGoToTrafficSource}
           ></MainButton>
 
           <MainButton
-            text="Parental Health Sources"
+            text="Parent Health Sources"
             txtColor={"black"}
             onPress={handleGoToParentalHealthSource}
           ></MainButton>

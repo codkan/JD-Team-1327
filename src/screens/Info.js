@@ -55,7 +55,7 @@ export default function Info({ navigation }) {
       onPress={handleDrowningsNav}
     ></MainButton>
     <MainButton
-      text="Road Traffic"
+      text="Car Safety"
       txtColor={"black"}
       onPress={handleTrafficNav}
     ></MainButton>

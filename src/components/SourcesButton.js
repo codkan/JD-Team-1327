@@ -6,7 +6,7 @@ export default function SourcesButton({ text, onPress, txtColor }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Image source={require("../assets/links-line.png")} style={styles.icon}></Image>
+        <Image source={require("../assets/links-line-alt.png")} style={styles.icon}></Image>
       </View>
     </TouchableOpacity>
   );

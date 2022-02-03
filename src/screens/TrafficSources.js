@@ -35,7 +35,7 @@ export default function CarSafety({ navigation }) {
     <Text> {'\n'} </Text>
 
     <MainButton
-          text="Go to Traffic"
+          text="Go to Car Safety"
           onPress={goToTraffic}
           txtColor={"black"}
     ></MainButton>
