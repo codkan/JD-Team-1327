@@ -40,6 +40,7 @@ import LevelTwo from "./screens/Level2";
 import LevelThree from "./screens/Level3";
 
 import Multimedia from "./screens/Multimedia";
+import Disclaim from "./screens/Disclaim.js";
 
 const screens = {
     Landing: {
@@ -170,6 +171,13 @@ const screens = {
     },
     About: {
     screen: About,
+    navigationOptions: {
+      headerShown: false,
+      animationEnabled: false,
+    },
+    },
+    Disclaim: {
+    screen: Disclaim,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,

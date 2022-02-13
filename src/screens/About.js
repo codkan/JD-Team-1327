@@ -15,7 +15,7 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-      {/* <Text style={styles.modalText, {marginTop: 100}}> Welcome to Child Safe!</Text> */}
+      {/* <Text style={styles.modalText, {marginTop: 100}}> Welcome to Child Safe: The Video Game!</Text> */}
       {/* <Text style={styles.modalText}> Team: Sora Bang, Justin Deal, Jayla Demaine, Elina Ebby, Sam Thomas, David Okao</Text> */}
       <View style={styles.contain}>
       <Text style={styles.modalText}> Team Client: Dr. Ann McClellan</Text>
