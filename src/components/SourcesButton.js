@@ -35,9 +35,8 @@ const styles = StyleSheet.create({
     elevation: 7.5,
     marginRight: 20,
     marginLeft: 80,
-    marginBottom: 50,
+    marginBottom: 70,
     alignSelf: "flex-end"
-
   },
   buttonText: {
     fontStyle: "normal",

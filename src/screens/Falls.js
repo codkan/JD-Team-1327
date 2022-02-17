@@ -149,7 +149,7 @@ waist-level (or a bit lower) handlebars, and resist tipping backward when pressi
 
 <Image style={styles.roundpic} source={stroller1}/>
 
-<SourcesButton
+    <SourcesButton
         onPress={handleFallSourcesNav}
     ></SourcesButton>
 
