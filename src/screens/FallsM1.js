@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
 import {WebView} from "react-native-webview";
-import MainButton from "../components/MainButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
-import fallsources from "../assets/fall-sources.png";
+import tv from "../assets/fallsM/tv_infographic.jpg";
 
-export default function FallSources({ navigation }) {
+export default function FallsM1({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -19,33 +19,44 @@ export default function FallSources({ navigation }) {
     const goToFalls = () => {
         navigation.navigate("Falls");
     }
-    const backToSources = () => {
-        navigation.navigate("Sources");
+    const backToMedia = () => {
+        navigation.navigate("Multimedia");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <Text style={styles.title}> Fall Sources: </Text>
+    <Text style={styles.title}> TV Tip-Overs </Text>
 
 <View style={styles.container}>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children')}>
-         <Text style={styles.link}> [1] Stanford Children Accident Statistics </Text>
+    <Image style={styles.img} source={tv}/>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://youtu.be/XyCHsr9NKqY')}>
+         <Text style={styles.link}> Video on the Danger of TV Tip-Overs </Text>
     </TouchableOpacity>
 
-    <MainButton
+    <View style={styles.buttons}>
+
+    <MediaButton
+          text="Back to Media"
+          onPress={backToMedia}
+          txtColor={"black"}
+    ></MediaButton>
+
+    <MediaButton
           text="Go to Falls"
           onPress={goToFalls}
           txtColor={"black"}
-    ></MainButton>
+    ></MediaButton>
 
-    <MainButton
-          text="Back to Sources"
-          onPress={backToSources}
+    <MediaButton
+          text="Next Page"
+          onPress={backToMedia}
           txtColor={"black"}
-    ></MainButton>
+    ></MediaButton>
     </View>
+</View>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -61,18 +72,16 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    srcimg: {
-        height: 100,
-        width: 100,
-        position: "absolute",
-        top: 5,
-        right: 0,
+    img: {
+        height: 500,
+        width: 445,
     },
     title: {
         // margin: 100,
         //height: 70,
         fontSize: 40,
-        marginBottom: 15,
+        marginBottom: 10,
+        marginTop: -50,
         fontWeight: "bold",
         textAlign: "center",
         textDecorationLine: "underline"
@@ -96,9 +105,17 @@ const styles = StyleSheet.create({
     container: {
         alignItems: "center",
     },
+    buttons: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 20,
+    },
     link: {
         textDecorationLine:'underline',
-        color:'blue'
+        color:'blue',
+        margin: 10,
     },
     pushdown: {
         position: 'absolute',

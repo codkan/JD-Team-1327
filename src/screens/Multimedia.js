@@ -11,8 +11,8 @@ export default function Multimedia({ navigation }) {
   const goHome = () => {
     navigation.pop();
   };
-  const handleFallsMNav = () => {
-    navigation.navigate("FallsM");
+  const handleFallsM1Nav = () => {
+    navigation.navigate("FallsM1");
   };
   const handleBurnsNav = () => {
     navigation.navigate("Burns");
@@ -37,7 +37,7 @@ export default function Multimedia({ navigation }) {
     <MainButton
       text="Falls"
       txtColor={"black"}
-      onPress={handleFallsMNav}
+      onPress={handleFallsM1Nav}
     ></MainButton>
     <MainButton
       text="Burns"
