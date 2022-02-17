@@ -35,10 +35,14 @@ import TrafficSources from "./screens/TrafficSources";
 import DrowningSources from "./screens/DrowningsSources";
 import ParentalHealthSources from "./screens/ParentalHealthSources";
 
+import FallsM from "./screens/FallsM";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
 import LevelThree from "./screens/Level3";
+
+import Multimedia from "./screens/Multimedia";
+import Disclaim from "./screens/Disclaim.js";
 
 const screens = {
     Landing: {
@@ -55,8 +59,22 @@ const screens = {
         animationEnabled: false,
       },
     },
+    Multimedia: {
+      screen: Multimedia,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
     Falls: {
         screen: Falls,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    FallsM: {
+        screen: FallsM,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
@@ -162,6 +180,13 @@ const screens = {
     },
     About: {
     screen: About,
+    navigationOptions: {
+      headerShown: false,
+      animationEnabled: false,
+    },
+    },
+    Disclaim: {
+    screen: Disclaim,
     navigationOptions: {
       headerShown: false,
       animationEnabled: false,
