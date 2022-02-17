@@ -132,7 +132,7 @@ export default function Falls({ navigation }) {
      use tightly rolled baby blankets instead of a pillow or large blanket. Lastly, fold and unfold strollers
      away from children to avoid pinching any fingers.</Text>
 
-    <Image style={styles.roundpic} source={stroller1}/>
+    <Image style={styles.roundpic} source={stroller2}/>
 
 <Text style={styles.content}>
 Stroller Purchasing Tips: {'\n'}
@@ -144,7 +144,7 @@ Stroller Purchasing Tips: {'\n'}
 waist-level (or a bit lower) handlebars, and resist tipping backward when pressing the handles [7]
 </Text>
 
-<Image style={styles.roundpic} source={stroller2}/>
+<Image style={styles.roundpic} source={stroller1}/>
 
 <SourcesButton
         onPress={handleFallSourcesNav}
