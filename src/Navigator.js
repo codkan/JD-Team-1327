@@ -36,6 +36,7 @@ import DrowningSources from "./screens/DrowningsSources";
 import ParentalHealthSources from "./screens/ParentalHealthSources";
 
 import FallsM1 from "./screens/FallsM1";
+import DrowningMM from "./screens/DrowningMM"
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -80,6 +81,13 @@ const screens = {
           animationEnabled: false,
         },
     },
+    DrowningMM: {
+      screen: DrowningMM,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+  },
     Burns: {
       screen: Burns,
       navigationOptions: {
