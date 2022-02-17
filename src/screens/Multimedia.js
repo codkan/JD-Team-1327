@@ -21,7 +21,7 @@ export default function Multimedia({ navigation }) {
     navigation.navigate("Poisonings");
   };
   const handleDrowningsNav = () => {
-    navigation.navigate("Drownings");
+    navigation.navigate("DrowningMM");
   };
   const handleTrafficNav = () => {
     navigation.navigate("Traffic");
