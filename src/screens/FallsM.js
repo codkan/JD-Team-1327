@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
+import {WebView} from "react-native-webview";
 import MainButton from "../components/MainButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
@@ -25,53 +26,13 @@ export default function FallSources({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <Image style={styles.srcimg} source={fallsources}/>
-
     <Text style={styles.title}> Fall Sources: </Text>
 
 <View style={styles.container}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Stanford Children Accident Statistics </Text>
+         <Text style={styles.link}> [1] Stanford Children Accident Statistics </Text>
     </TouchableOpacity>
-
-    <Text> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=falls--injury-statistics-and-incidence-rates-90-P02974')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] Stanford Children Incidence Rates </Text>
-    </TouchableOpacity>
-
-    <Text> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/safechild/images/cdc-childhoodinjury.pdf')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
-    </TouchableOpacity>
-
-    <Text> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/tip/falls-prevention-tips')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [4] SafeKids Fall Prevention Tips </Text>
-    </TouchableOpacity>
-
-    <Text> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/tv')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [5] SafeKids - Tip-Overs </Text>
-    </TouchableOpacity>
-
-    <Text> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/playgroundsafety')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [6] SafeKids - Playground Safety </Text>
-    </TouchableOpacity>
-
-    <Text> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/products-strollers.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [7] KidsHealth - Stroller Safety </Text>
-    </TouchableOpacity>
-
-    <Text> {'\n'} </Text>
 
     <MainButton
           text="Go to Falls"
@@ -134,6 +95,10 @@ const styles = StyleSheet.create({
     },
     container: {
         alignItems: "center",
+    },
+    link: {
+        textDecorationLine:'underline',
+        color:'blue'
     },
     pushdown: {
         position: 'absolute',
