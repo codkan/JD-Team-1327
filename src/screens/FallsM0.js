@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
+import BackButton from "../components/BackButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
-import tv from "../assets/fallsM/tv_infographic.jpg";
+import win from "../assets/fallsM/window_infographic.jpg";
 
-export default function FallsM1({ navigation }) {
+export default function FallsM0({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -19,21 +20,27 @@ export default function FallsM1({ navigation }) {
     const goToFalls = () => {
         navigation.navigate("Falls");
     }
-    const FallsM2Nav = () => {
-        navigation.navigate("FallsM2");
+    const FallsM1Nav = () => {
+        navigation.navigate("FallsM1");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
+    <Button style={styles.back}
+        text="<"
+        txtColor={"black"}
+        onPress={navigation.pop}
+    ></Button>
+
     <Text style={styles.title}> TV Tip-Overs </Text>
 
 <View style={styles.container}>
 
-    <Image style={styles.img} source={tv}/>
+    <Image style={styles.img} source={win}/>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://youtu.be/XyCHsr9NKqY')}>
-         <Text style={styles.link}> Video on the Danger of TV Tip-Overs </Text>
+    <TouchableOpacity onPress={() => Linking.openURL('https://youtu.be/i8oifZ7HXaA')}>
+         <Text style={styles.link}> Video on the Window Safety </Text>
     </TouchableOpacity>
 
     <View style={styles.buttons}>
@@ -52,7 +59,7 @@ export default function FallsM1({ navigation }) {
 
     <MediaButton
           text="Next Page"
-          onPress={FallsM2Nav}
+          onPress={FallsM1Nav}
           txtColor={"black"}
     ></MediaButton>
     </View>
@@ -72,9 +79,23 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
+    back: {
+        height: 50,
+        width: 50,
+        borderRadius: 100,
+        backgroundColor: "rgba(196,196,196,1)",
+
+        shadowColor: 'black',
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        shadowOffset : { width: 0, height: 4},
+        elevation: 7.5,
+        position: "absolute",
+
+    },
     img: {
         height: 500,
-        width: 445,
+        width: 395,
     },
     title: {
         // margin: 100,

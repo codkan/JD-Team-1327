@@ -8,7 +8,7 @@ import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import tv from "../assets/fallsM/tv_infographic.jpg";
 
-export default function FallsM1({ navigation }) {
+export default function FallsM2({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
