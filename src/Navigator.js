@@ -35,6 +35,8 @@ import TrafficSources from "./screens/TrafficSources";
 import DrowningSources from "./screens/DrowningsSources";
 import ParentalHealthSources from "./screens/ParentalHealthSources";
 
+import FallsM from "./screens/FallsM";
+
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
 import LevelThree from "./screens/Level3";
@@ -66,6 +68,13 @@ const screens = {
     },
     Falls: {
         screen: Falls,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    FallsM: {
+        screen: FallsM,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,

@@ -15,6 +15,7 @@ import tv from "../assets/TV.png";
 import end from "../assets/end.png";
 import stroller1 from "../assets/stroller1.png";
 import stroller2 from "../assets/stroller2.png";
+import falls from "../assets/falls.png";
 
 
 export default function Falls({ navigation }) {
@@ -39,6 +40,8 @@ export default function Falls({ navigation }) {
     ></BackButton>
 
     <ScrollView>
+
+    <Image style={styles.headimg} source={falls}/>
 
     <Text style={styles.title}> Falls </Text>
 
@@ -178,6 +181,11 @@ const styles = StyleSheet.create({
         height: 45,
         marginBottom: 20,
     },
+    headimg: {
+        height: 100,
+        width: 100,
+        position: "absolute",
+    },
     title: {
         // margin: 100,
         //height: 70,
@@ -207,7 +215,7 @@ const styles = StyleSheet.create({
     },
     subbullet: {
         fontSize: 16,
-        marginLeft: 30,
+        marginLeft: 20,
         marginRight: 10,
     },
     page: {
