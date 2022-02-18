@@ -18,16 +18,16 @@ export default function Multimedia({ navigation }) {
     navigation.navigate("Burns");
   };
   const handlePoisoningsNav = () => {
-    navigation.navigate("Poisonings");
+    navigation.navigate("PoisoningsMM");
   };
   const handleDrowningsNav = () => {
-    navigation.navigate("Drownings");
+    navigation.navigate("DrowningMM");
   };
-  const handleTrafficNav = () => {
-    navigation.navigate("Traffic");
+  const handleCarSafetyMMNav = () => {
+    navigation.navigate("CarSafetyMM");
   };
-  const handleParentalHealthNav = () => {
-    navigation.navigate("ParentalHealth");
+  const handleParentalHealthMMNav = () => {
+    navigation.navigate("ParentalHealthMM");
   };
 
   return (
@@ -57,12 +57,12 @@ export default function Multimedia({ navigation }) {
     <MainButton
       text="Car Safety"
       txtColor={"black"}
-      onPress={handleTrafficNav}
+      onPress={handleCarSafetyMMNav}
     ></MainButton>
     <MainButton
       text="Parental Health"
       txtColor={"black"}
-      onPress={handleParentalHealthNav}
+      onPress={handleParentalHealthMMNav}
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>
