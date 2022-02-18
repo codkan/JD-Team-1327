@@ -8,6 +8,8 @@ import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import PoisoningsStats1 from "../assets/PoisoningsMM/PoisoningsStats1.png";
 import PoisoningsMM2 from "../assets/PoisoningsMM/PoisoningMM2.jpg"
+import PMM3 from "../assets/PoisoningsMM/PMM3.png"
+import PMM4 from "../assets/PoisoningsMM/PMM4.jpg"
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function PoisoningsMM({ navigation }) {
@@ -28,15 +30,25 @@ export default function PoisoningsMM({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <Text style={styles.title}> Poisonings </Text>
 
-    <View style={styles.container}>
+
+
+  
     <ScrollView>
-
+    <View style={styles.container}>
+        <Text>
+        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}
+        </Text>
+    <Text style={styles.title}> Poisonings </Text>
     <Image style={styles.img} source={PoisoningsMM2}/>
-
-
-    </ScrollView>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    <Image style={styles.img} source={PMM3}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    <Image style={styles.img} source={PMM4}/>
     <View style={styles.buttons}>
 
     <MediaButton
@@ -50,15 +62,16 @@ export default function PoisoningsMM({ navigation }) {
           onPress={goToPoisonings}
           txtColor={"black"}
     ></MediaButton>
-
-    <MediaButton
-          text="Next Page"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
-    
+        <Text>
+        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}      
+        </Text>
     </View>
-</View>
+    </View>
+    </ScrollView>
+
+ 
+
+
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -109,9 +122,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     buttons: {
+        justifyContent: "center",
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
         alignItems: "center",
         marginTop: 20,
     },
