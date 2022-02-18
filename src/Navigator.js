@@ -37,14 +37,11 @@ import ParentalHealthSources from "./screens/ParentalHealthSources";
 
 import FallsM0 from "./screens/FallsM0";
 import FallsM1 from "./screens/FallsM1";
-<<<<<<< HEAD
 import FallsM2 from "./screens/FallsM2";
-=======
 import DrowningMM from "./screens/DrowningMM";
 import CarSafetyMM from "./screens/CarSafetyMM";
 import ParentalHealthMM from "./screens/ParentalHealthMM";
 import PoisoningsMM from "./screens/PoisoningsMM";
->>>>>>> master
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";

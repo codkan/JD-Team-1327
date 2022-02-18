@@ -17,7 +17,7 @@ export default function ParentalHealthMM({ navigation }) {
         navigation.navigate("Info");
     };
     const goToParentalHealth = () => {
-        navigation.navigate("Parental Health");
+        navigation.navigate("ParentalHealth");
     }
     const backToMedia = () => {
         navigation.navigate("Multimedia");
@@ -41,7 +41,7 @@ export default function ParentalHealthMM({ navigation }) {
     ></MediaButton>
 
     <MediaButton
-          text="Go to Parental Health"
+          text="Parental Health"
           onPress={goToParentalHealth}
           txtColor={"black"}
     ></MediaButton>

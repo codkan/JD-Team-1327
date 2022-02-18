@@ -30,10 +30,6 @@ export default function PoisoningsMM({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-
-
-
-  
     <ScrollView>
     <View style={styles.container}>
         <Text>
@@ -58,20 +54,14 @@ export default function PoisoningsMM({ navigation }) {
     ></MediaButton>
 
     <MediaButton
-          text="Go to Poisonings"
+          text="Go to Poison"
           onPress={goToPoisonings}
           txtColor={"black"}
     ></MediaButton>
-        <Text>
-        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}      
-        </Text>
+
     </View>
     </View>
     </ScrollView>
-
- 
-
-
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -127,6 +117,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         marginTop: 20,
+        marginBottom: 75,
     },
     link: {
         textDecorationLine:'underline',

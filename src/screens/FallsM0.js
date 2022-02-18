@@ -27,12 +27,6 @@ export default function FallsM0({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <Button style={styles.back}
-        text="<"
-        txtColor={"black"}
-        onPress={navigation.pop}
-    ></Button>
-
     <Text style={styles.title}> TV Tip-Overs </Text>
 
 <View style={styles.container}>
