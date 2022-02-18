@@ -17,7 +17,7 @@ export default function CarSafetyMM({ navigation }) {
         navigation.navigate("Info");
     };
     const goToCarSafety = () => {
-        navigation.navigate("Car Safety");
+        navigation.navigate("Traffic");
     }
     const backToMedia = () => {
         navigation.navigate("Multimedia");

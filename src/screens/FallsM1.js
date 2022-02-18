@@ -13,14 +13,14 @@ export default function FallsM1({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
-    };
+    const backToMedia = () => {
+        navigation.navigate("Multimedia");
+    }
     const goToFalls = () => {
         navigation.navigate("Falls");
     }
-    const backToMedia = () => {
-        navigation.navigate("Multimedia");
+    const FallsM2Nav = () => {
+        navigation.navigate("FallsM2");
     }
 
     return (
@@ -52,7 +52,7 @@ export default function FallsM1({ navigation }) {
 
     <MediaButton
           text="Next Page"
-          onPress={backToMedia}
+          onPress={FallsM2Nav}
           txtColor={"black"}
     ></MediaButton>
     </View>

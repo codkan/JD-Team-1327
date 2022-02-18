@@ -2,35 +2,40 @@ import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
+import BackButton from "../components/BackButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
-import ppd from "../assets/parentalHealthMM/ppd1.jpg";
+import win from "../assets/fallsM/window_infographic.jpg";
 
-export default function ParentalHealthMM({ navigation }) {
+export default function FallsM0({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
-    };
-    const goToParentalHealth = () => {
-        navigation.navigate("ParentalHealth");
-    }
     const backToMedia = () => {
         navigation.navigate("Multimedia");
+    }
+    const goToFalls = () => {
+        navigation.navigate("Falls");
+    }
+    const FallsM1Nav = () => {
+        navigation.navigate("FallsM1");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <Text style={styles.title}> Parental Health </Text>
+    <Text style={styles.title}> TV Tip-Overs </Text>
 
 <View style={styles.container}>
 
-    <Image style={styles.img} source={ppd}/>
+    <Image style={styles.img} source={win}/>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://youtu.be/i8oifZ7HXaA')}>
+         <Text style={styles.link}> Video on the Window Safety </Text>
+    </TouchableOpacity>
 
     <View style={styles.buttons}>
 
@@ -41,14 +46,14 @@ export default function ParentalHealthMM({ navigation }) {
     ></MediaButton>
 
     <MediaButton
-          text="Parental Health"
-          onPress={goToParentalHealth}
+          text="Go to Falls"
+          onPress={goToFalls}
           txtColor={"black"}
     ></MediaButton>
 
     <MediaButton
           text="Next Page"
-          onPress={backToMedia}
+          onPress={FallsM1Nav}
           txtColor={"black"}
     ></MediaButton>
     </View>
@@ -65,17 +70,33 @@ export default function ParentalHealthMM({ navigation }) {
 const styles = StyleSheet.create({
     image: {
         flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center",
+    },
+    back: {
+        height: 50,
+        width: 50,
+        borderRadius: 100,
+        backgroundColor: "rgba(196,196,196,1)",
+
+        shadowColor: 'black',
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        shadowOffset : { width: 0, height: 4},
+        elevation: 7.5,
+        position: "absolute",
+
     },
     img: {
-        height: 520,
-        width: 335,
+        height: 500,
+        width: 395,
     },
     title: {
         // margin: 100,
         //height: 70,
         fontSize: 40,
         marginBottom: 10,
-        marginTop: 0,
+        marginTop: -50,
         fontWeight: "bold",
         textAlign: "center",
         textDecorationLine: "underline"

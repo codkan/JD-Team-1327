@@ -6,31 +6,35 @@ import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
-import ppd from "../assets/parentalHealthMM/ppd1.jpg";
+import tv from "../assets/fallsM/tv_infographic.jpg";
 
-export default function ParentalHealthMM({ navigation }) {
+export default function FallsM2({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
-    };
-    const goToParentalHealth = () => {
-        navigation.navigate("ParentalHealth");
-    }
     const backToMedia = () => {
         navigation.navigate("Multimedia");
+    }
+    const goToFalls = () => {
+        navigation.navigate("Falls");
+    }
+    const FallsM2Nav = () => {
+        navigation.navigate("FallsM2");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <Text style={styles.title}> Parental Health </Text>
+    <Text style={styles.title}> TV Tip-Overs </Text>
 
 <View style={styles.container}>
 
-    <Image style={styles.img} source={ppd}/>
+    <Image style={styles.img} source={tv}/>
+
+    <TouchableOpacity onPress={() => Linking.openURL('https://youtu.be/XyCHsr9NKqY')}>
+         <Text style={styles.link}> Video on the Danger of TV Tip-Overs </Text>
+    </TouchableOpacity>
 
     <View style={styles.buttons}>
 
@@ -41,14 +45,14 @@ export default function ParentalHealthMM({ navigation }) {
     ></MediaButton>
 
     <MediaButton
-          text="Parental Health"
-          onPress={goToParentalHealth}
+          text="Go to Falls"
+          onPress={goToFalls}
           txtColor={"black"}
     ></MediaButton>
 
     <MediaButton
           text="Next Page"
-          onPress={backToMedia}
+          onPress={FallsM2Nav}
           txtColor={"black"}
     ></MediaButton>
     </View>
@@ -65,17 +69,19 @@ export default function ParentalHealthMM({ navigation }) {
 const styles = StyleSheet.create({
     image: {
         flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center",
     },
     img: {
-        height: 520,
-        width: 335,
+        height: 500,
+        width: 445,
     },
     title: {
         // margin: 100,
         //height: 70,
         fontSize: 40,
         marginBottom: 10,
-        marginTop: 0,
+        marginTop: -50,
         fontWeight: "bold",
         textAlign: "center",
         textDecorationLine: "underline"
