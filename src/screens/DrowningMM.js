@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
-import MainButton from "../components/MainButton";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
+import {WebView} from "react-native-webview";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
+import silent from "../assets/Drowning_Infographic.png";
+import { ScrollView } from "react-native";
 
-export default function Falls1({ navigation }) {
+export default function DrowningMM({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -17,45 +20,53 @@ export default function Falls1({ navigation }) {
     const goToDrowning = () => {
         navigation.navigate("Drownings");
     }
-    const backToSources = () => {
-        navigation.navigate("Sources");
+    const backToMedia = () => {
+        navigation.navigate("Multimedia");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.title}> Drownings Sources: </Text>
+
+    <ScrollView>
+
+    <Text style={styles.title}> Drowning Is Silent </Text>
 
 <View style={styles.container}>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/drowning/facts/index.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] CDC Drownings Page </Text>
+    <Image style={styles.img} source={silent}/>
+
+    <TouchableOpacity onPress={() => Linking.openURL('http://spotthedrowningchild.com/')}>
+         <Text style={styles.link}> Spot the Drowning Child, see just how hard it can be to see a drowning child </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <View style={styles.buttons}>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/sites/default/files/water-safety-infographic-long-version.pdf')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] SafeKids Drowning Safety</Text>
-    </TouchableOpacity>
+    <MediaButton
+          text="Back to Media"
+          onPress={backToMedia}
+          txtColor={"black"}
+    ></MediaButton>
 
-    <Text> {'\n'} </Text>
-
-    
-    <MainButton
+    <MediaButton
           text="Go to Drowning"
           onPress={goToDrowning}
           txtColor={"black"}
-    ></MainButton>
+    ></MediaButton>
 
-    <MainButton
-          text="Back to Sources"
-          onPress={backToSources}
+    <MediaButton
+          text="Next Page"
+          onPress={backToMedia}
           txtColor={"black"}
-    ></MainButton>
+    ></MediaButton>
     </View>
+</View>
+
+</ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
     </View>
+    
 
     </ImageBackground>
     );
@@ -67,11 +78,16 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
+    img: {
+        height: 500,
+        width: 320,
+    },
     title: {
         // margin: 100,
         //height: 70,
         fontSize: 40,
-        marginBottom: 15,
+        marginBottom: 10,
+        marginTop: 10,
         fontWeight: "bold",
         textAlign: "center",
         textDecorationLine: "underline"
@@ -94,6 +110,19 @@ const styles = StyleSheet.create({
     },
     container: {
         alignItems: "center",
+    },
+    buttons: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 20,
+        marginBottom: 50
+    },
+    link: {
+        textDecorationLine:'underline',
+        color:'blue',
+        margin: 10,
     },
     pushdown: {
         position: 'absolute',

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
+import BackButton from "../components/BackButton";
+import SourcesButton from "../components/SourcesButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
@@ -18,18 +18,18 @@ export default function Burns({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const handleFallSourcesNav = () => {
-        navigation.navigate("BurnSources");
+    const handleBurnSourcesNav = () => {
+        navigation.navigate("BurningSources");
     };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <InfoButton1
+    <BackButton
         text="<"
         txtColor={"black"}
         onPress={handleInfoNav}
-    ></InfoButton1>
+    ></BackButton>
 
     <ScrollView>
 
@@ -102,18 +102,15 @@ export default function Burns({ navigation }) {
         Protect the burned area by wrapping it with gauze or cloth while not breaking any blisters. 
         Don’t immediately apply any ointments, oils, or sprays. 
         If you fear the injury is severe enough or covers a large area, call emergency medical services. 
-        If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4]. {'\n'}
+        If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4].
     </Text>
 
-    <Text style={styles.content}> {'\n'} </Text>
+    <SourcesButton
+        onPress={handleBurnSourcesNav}
+    ></SourcesButton>
 
     </ScrollView>
 
-
-    <InfoButton2
-        text=">"
-        txtColor={"black"}
-    ></InfoButton2>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>

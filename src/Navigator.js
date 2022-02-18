@@ -26,17 +26,24 @@ import Burns from "./screens/Burns";
 import Poisonings from "./screens/Poisonings";
 import Drownings from "./screens/Drownings";
 import Traffic from "./screens/Traffic";
+import ParentalHealth from "./screens/ParentalHealth";
 
 import FallSources from "./screens/FallSources";
 import PoisoningSources from "./screens/PoisoningSources";
 import BurningSources from "./screens/BurnSources";
 import TrafficSources from "./screens/TrafficSources";
 import DrowningSources from "./screens/DrowningsSources";
+import ParentalHealthSources from "./screens/ParentalHealthSources";
 
+import FallsM1 from "./screens/FallsM1";
+import DrowningMM from "./screens/DrowningMM"
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
 import LevelThree from "./screens/Level3";
+
+import Multimedia from "./screens/Multimedia";
+import Disclaim from "./screens/Disclaim.js";
 
 const screens = {
     Landing: {
@@ -53,6 +60,13 @@ const screens = {
         animationEnabled: false,
       },
     },
+    Multimedia: {
+      screen: Multimedia,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
     Falls: {
         screen: Falls,
         navigationOptions: {
@@ -60,6 +74,20 @@ const screens = {
           animationEnabled: false,
         },
     },
+    FallsM1: {
+        screen: FallsM1,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    DrowningMM: {
+      screen: DrowningMM,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+  },
     Burns: {
       screen: Burns,
       navigationOptions: {
@@ -83,6 +111,13 @@ const screens = {
     },
     Traffic: {
       screen: Traffic,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParentalHealth: {
+      screen: ParentalHealth,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
@@ -158,6 +193,13 @@ const screens = {
       animationEnabled: false,
     },
     },
+    Disclaim: {
+    screen: Disclaim,
+    navigationOptions: {
+      headerShown: false,
+      animationEnabled: false,
+    },
+    },
     LevelOne: {
     screen: LevelOne,
     navigationOptions: {
@@ -214,6 +256,13 @@ const screens = {
             animationEnabled: false,
           },
       },
+    ParentalHealthSources: {
+      screen: ParentalHealthSources,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
 };
 
 const NavStack = createStackNavigator(screens);

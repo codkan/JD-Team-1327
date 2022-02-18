@@ -3,12 +3,15 @@
  */
 
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Image } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Image, TouchableOpacity } from "react-native";
 import MainButton from "../components/MainButton";
+import BackButton from "../components/BackButton";
+
 import { get } from "../Db";
 import Background from "../assets/landing.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
+import disclaim from "../assets/info.png";
 
 export default function Home({ navigation }) {
   const handleInfoNav = () => {
@@ -26,14 +29,30 @@ export default function Home({ navigation }) {
   const handleSourcesNav = () => {
     navigation.navigate("Sources");
   };
+  const handleMultimediaNav = () => {
+      navigation.navigate("Multimedia");
+  };
+  const handleDisclaimNav = () => {
+    navigation.navigate("Disclaim");
+  };
 
     return (
       <ImageBackground source={Background} style={styles.image}>
+
+        <TouchableOpacity onPress={handleDisclaimNav}>
+            <Image source={disclaim} style={styles.button}></Image>
+        </TouchableOpacity>
+
         <View style={styles.buttonContainer}>
           <MainButton
-            text="Info"
+            text="Information"
             onPress={handleInfoNav}
             txtColor={"black"}
+          ></MainButton>
+          <MainButton
+              text="Multimedia"
+              onPress={handleMultimediaNav}
+              txtColor={"black"}
           ></MainButton>
           <MainButton
             text="Review"
@@ -70,14 +89,29 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flex: 1,
-    top: 90,
+    top: 70,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 90,
   },
-  button: {
-    color: "black",
-  },
+    button: {
+      height: 50,
+      width: 50,
+      borderRadius: 100,
+      //paddingVertical: 7,
+      //paddingHorizontal: 10,
+      //marginVertical: 10,
+      backgroundColor: "rgba(196,196,196,1)",
+      //alignItems: "left",
+      //justifyContent: "top",
+      shadowColor: 'black',
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      shadowOffset : { width: 0, height: 4},
+      //elevation: 7.5,
+      marginLeft: 20,
+      marginTop: 20,
+    },
 });
 
 //903 x 1654

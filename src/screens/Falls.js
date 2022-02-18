@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
+import BackButton from "../components/BackButton";
+import SourcesButton from "../components/SourcesButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
+import secure from "../assets/secure.png";
+import stairs from "../assets/stairs.png";
+import window from "../assets/window.png";
+import tv from "../assets/TV.png";
+import end from "../assets/end.png";
+import stroller1 from "../assets/stroller1.png";
+import stroller2 from "../assets/stroller2.png";
+import falls from "../assets/falls.png";
+
 
 export default function Falls({ navigation }) {
     //NAV CALLBACK
@@ -24,13 +33,15 @@ export default function Falls({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <InfoButton1
+    <BackButton
         text="<"
         txtColor={"black"}
         onPress={handleInfoNav}
-    ></InfoButton1>
+    ></BackButton>
 
     <ScrollView>
+
+    <Image style={styles.headimg} source={falls}/>
 
     <Text style={styles.title}> Falls </Text>
 
@@ -55,6 +66,7 @@ export default function Falls({ navigation }) {
 <Text style={styles.subtitle}> 5 Steps to Prevent Falls </Text>
 
 <Text style={styles.bullet}>1. Be mindful with infants, even when secured</Text>
+    <Image style={styles.roundpic} source={secure}/>
     <Text style={styles.subbullet}>- Whenever high chairs, infant carriers, car-seats, swings, or strollers are in use,
     always keep infants and young children strapped in and secure. {'\n'}
     - Even when your child is secured in a carrier, NEVER place it on top of a counter, table, or other
@@ -68,6 +80,7 @@ export default function Falls({ navigation }) {
 </Text>
 
 <Text style={styles.bullet}>2. Prevent dangerous falls for crawlers at home</Text>
+    <Image style={styles.roundpic} source={stairs}/>
     <Text style={styles.subbullet}>- Stairs are one of the most dangerous places for young children, so use
     safety gates approved for both the tops & bottoms of stairs and, if possible, attach them to the wall. {'\n'}
     - Even with safety gates, infants and toddlers should always be closely supervised on or near stairs.{'\n'}
@@ -78,6 +91,7 @@ export default function Falls({ navigation }) {
 </Text>
 
 <Text style={styles.bullet}>3. Close, lock, and guard windows from toddlers</Text>
+    <Image style={styles.roundpic} source={window}/>
     <Text style={styles.subbullet}>- Keep younger children and climbable furniture away from windows. {'\n'}
     - If your windows open from the top and bottom, open only the top to prevent falls. Though be
       mindful that children may grow strong enough to open the bottom {'\n'}
@@ -88,6 +102,7 @@ export default function Falls({ navigation }) {
 </Text>
 
 <Text style={styles.bullet}>4. Baby-proof furniture & protect climbers from tip-overs</Text>
+    <Image style={styles.roundpic} source={tv}/>
     <Text style={styles.subbullet}>- Do not let young children climb on any furniture where they could
     fall from any height or the furniture could possibly be tipped over, especially near windows.{'\n'}
     - Rearrange household items so that heavy items are lower and children are not tempted to climb or
@@ -107,18 +122,38 @@ export default function Falls({ navigation }) {
     - Teach and guide children to avoid any pushing, shoving, or crowding {'\n'}
     - If possible, seek out playgrounds with softer, shock-absorbing surfaces like rubber, turf, mulch,
       wood chips, pea gravel, etc. rather than asphalt, concrete, or dirt. [6] {'\n'}
-
 </Text>
 
-<Text style={styles.content}> {'\n'} </Text>
+<Image style={styles.longpic} source={end}/>
+
+<Text style={styles.subtitle}> Stroller Safety </Text>
+    <Text style={styles.content}> {'\t'} Just like you need to stay mindful when children are secured
+     in carriers, you also need to remain aware when your child is in a stroller. You should always use
+     the safety harnesses and even then, always use the brakes when not in motion and NEVER leave your
+     child alone in a stroller. To avoid trapping their head or wrapping up their neck, close all openings
+     and never hang bags on the handles (this could tip the stroller). If your child has too much room,
+     use tightly rolled baby blankets instead of a pillow or large blanket. Lastly, fold and unfold strollers
+     away from children to avoid pinching any fingers.</Text>
+
+    <Image style={styles.roundpic} source={stroller2}/>
+
+<Text style={styles.content}>
+Stroller Purchasing Tips: {'\n'}
+- Make sure the stroller is designed for the height, weight, and age of your child (infants need to lie almost flat) {'\n'}
+- Check for reliable and, ideally, 5-point safety harnesses / restraining belts (shoulders, waist, between the legs) {'\n'}
+- Look for dual brakes that use wheel mechanism rather than pressure on the tire and, most importantly, are easy to use {'\n'}
+- Avoid parts that can pinch fingers or trap the head of a child {'\n'}
+- A safe and stable stroller should have a wide wheel base, a seat low in the frame, small leg openings,
+waist-level (or a bit lower) handlebars, and resist tipping backward when pressing the handles [7]
+</Text>
+
+<Image style={styles.roundpic} source={stroller1}/>
+
+    <SourcesButton
+        onPress={handleFallSourcesNav}
+    ></SourcesButton>
 
     </ScrollView>
-
-    <InfoButton2
-        text="Sources"
-        txtColor={"black"}
-        onPress={handleFallSourcesNav}
-    ></InfoButton2>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -133,6 +168,23 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    roundpic: {
+        height: 150,
+        width: 150,
+        marginLeft: 175,
+        marginTop: -20,
+    },
+    longpic:{
+        width: null,
+        resizeMode: "contain",
+        height: 45,
+        marginBottom: 20,
+    },
+    headimg: {
+        height: 100,
+        width: 100,
+        position: "absolute",
     },
     title: {
         // margin: 100,
@@ -163,7 +215,7 @@ const styles = StyleSheet.create({
     },
     subbullet: {
         fontSize: 16,
-        marginLeft: 30,
+        marginLeft: 20,
         marginRight: 10,
     },
     page: {

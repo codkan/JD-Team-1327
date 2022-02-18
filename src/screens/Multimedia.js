@@ -6,13 +6,13 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 
-export default function Info({ navigation }) {
+export default function Multimedia({ navigation }) {
   //NAV CALLBACK
   const goHome = () => {
     navigation.pop();
   };
-  const handleFallsNav = () => {
-    navigation.navigate("Falls");
+  const handleFallsM1Nav = () => {
+    navigation.navigate("FallsM1");
   };
   const handleBurnsNav = () => {
     navigation.navigate("Burns");
@@ -21,7 +21,7 @@ export default function Info({ navigation }) {
     navigation.navigate("Poisonings");
   };
   const handleDrowningsNav = () => {
-    navigation.navigate("Drownings");
+    navigation.navigate("DrowningMM");
   };
   const handleTrafficNav = () => {
     navigation.navigate("Traffic");
@@ -32,12 +32,12 @@ export default function Info({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}> Table of Contents</Text>
+    <Text style={styles.modalText}> Multimedia Contents</Text>
     <View style={styles.buttonContainer}>
     <MainButton
       text="Falls"
       txtColor={"black"}
-      onPress={handleFallsNav}
+      onPress={handleFallsM1Nav}
     ></MainButton>
     <MainButton
       text="Burns"

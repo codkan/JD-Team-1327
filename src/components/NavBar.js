@@ -24,23 +24,23 @@ export default function Navbar({ navigation }){
       <View style={styles.navBar}>
 
         <TouchableOpacity onPress={handleSourcesNav} style={styles.icons}>
-            <Image source={require("../assets/links-line.png")} style={styles.icon}></Image>
+            <Image source={require("../assets/nav/links.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={handleInfoNav} style={styles.icons}>
-            <Image source={require("../assets/file-text-fill.png")} style={styles.icon}></Image>
+            <Image source={require("../assets/nav/modules.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={handleHomeNav} style={styles.icons}>
-            <Image source={require("../assets/home-fill.png")} style={styles.icon}></Image>
+            <Image source={require("../assets/nav/home-fill.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={handleReviewNav} style={styles.icons}>
-            <Image source={require("../assets/rev.png")} style={styles.icon}></Image>
+            <Image source={require("../assets/nav/rev.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={handleSettings1Nav} style={styles.icons}>
-            <Image source={require("../assets/settings-3-fill(1).png")} style={styles.icon}></Image>
+            <Image source={require("../assets/nav/settings.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
       </View>
@@ -56,9 +56,9 @@ const styles = StyleSheet.create({
       backgroundColor: "#C4C4C4",
     },
     icons: {
-        width: 45,
-        height: 45,
-        paddingHorizontal: 35,
+        width: 50,
+        height: 50,
+        paddingHorizontal: 40,
         justifyContent: "center",
         alignItems: "center",
       },

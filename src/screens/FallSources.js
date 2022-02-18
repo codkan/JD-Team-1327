@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image } from "react-native";
 import MainButton from "../components/MainButton";
-import InfoButton1 from "../components/InfoButton1";
-import InfoButton2 from "../components/InfoButton2";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
+import fallsources from "../assets/fall-sources.png";
 
-export default function Falls1({ navigation }) {
+export default function FallSources({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -25,8 +24,10 @@ export default function Falls1({ navigation }) {
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+
+    <Image style={styles.srcimg} source={fallsources}/>
+
     <Text style={styles.title}> Fall Sources: </Text>
-    <Text> {'\n'} </Text>
 
 <View style={styles.container}>
 
@@ -66,6 +67,12 @@ export default function Falls1({ navigation }) {
 
     <Text> {'\n'} </Text>
 
+    <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/products-strollers.html')}>
+         <Text style={{textDecorationLine:'underline', color:'blue'}}> [7] KidsHealth - Stroller Safety </Text>
+    </TouchableOpacity>
+
+    <Text> {'\n'} </Text>
+
     <MainButton
           text="Go to Falls"
           onPress={goToFalls}
@@ -92,6 +99,13 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    srcimg: {
+        height: 100,
+        width: 100,
+        position: "absolute",
+        top: 5,
+        right: 0,
     },
     title: {
         // margin: 100,
