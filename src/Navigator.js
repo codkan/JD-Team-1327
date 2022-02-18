@@ -35,7 +35,10 @@ import TrafficSources from "./screens/TrafficSources";
 import DrowningSources from "./screens/DrowningsSources";
 import ParentalHealthSources from "./screens/ParentalHealthSources";
 
-import FallsM from "./screens/FallsM";
+import FallsM1 from "./screens/FallsM1";
+import DrowningMM from "./screens/DrowningMM"
+import CarSafetyMM from "./screens/CarSafetyMM"
+import ParentalHealthMM from "./screens/ParentalHealthMM"
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -73,8 +76,29 @@ const screens = {
           animationEnabled: false,
         },
     },
-    FallsM: {
-        screen: FallsM,
+    FallsM1: {
+        screen: FallsM1,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    DrowningMM: {
+      screen: DrowningMM,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    CarSafetyMM: {
+        screen: CarSafetyMM,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    ParentalHealthMM: {
+        screen: ParentalHealthMM,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,

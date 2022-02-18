@@ -11,8 +11,8 @@ export default function Multimedia({ navigation }) {
   const goHome = () => {
     navigation.pop();
   };
-  const handleFallsMNav = () => {
-    navigation.navigate("FallsM");
+  const handleFallsM1Nav = () => {
+    navigation.navigate("FallsM1");
   };
   const handleBurnsNav = () => {
     navigation.navigate("Burns");
@@ -21,13 +21,13 @@ export default function Multimedia({ navigation }) {
     navigation.navigate("Poisonings");
   };
   const handleDrowningsNav = () => {
-    navigation.navigate("Drownings");
+    navigation.navigate("DrowningMM");
   };
-  const handleTrafficNav = () => {
-    navigation.navigate("Traffic");
+  const handleCarSafetyMMNav = () => {
+    navigation.navigate("CarSafetyMM");
   };
-  const handleParentalHealthNav = () => {
-    navigation.navigate("ParentalHealth");
+  const handleParentalHealthMMNav = () => {
+    navigation.navigate("ParentalHealthMM");
   };
 
   return (
@@ -37,7 +37,7 @@ export default function Multimedia({ navigation }) {
     <MainButton
       text="Falls"
       txtColor={"black"}
-      onPress={handleFallsMNav}
+      onPress={handleFallsM1Nav}
     ></MainButton>
     <MainButton
       text="Burns"
@@ -57,12 +57,12 @@ export default function Multimedia({ navigation }) {
     <MainButton
       text="Car Safety"
       txtColor={"black"}
-      onPress={handleTrafficNav}
+      onPress={handleCarSafetyMMNav}
     ></MainButton>
     <MainButton
       text="Parental Health"
       txtColor={"black"}
-      onPress={handleParentalHealthNav}
+      onPress={handleParentalHealthMMNav}
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>
