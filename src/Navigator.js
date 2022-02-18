@@ -36,9 +36,10 @@ import DrowningSources from "./screens/DrowningsSources";
 import ParentalHealthSources from "./screens/ParentalHealthSources";
 
 import FallsM1 from "./screens/FallsM1";
-import DrowningMM from "./screens/DrowningMM"
-import CarSafetyMM from "./screens/CarSafetyMM"
-import ParentalHealthMM from "./screens/ParentalHealthMM"
+import DrowningMM from "./screens/DrowningMM";
+import CarSafetyMM from "./screens/CarSafetyMM";
+import ParentalHealthMM from "./screens/ParentalHealthMM";
+import PoisoningsMM from "./screens/PoisoningsMM";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -274,6 +275,14 @@ const screens = {
       },
     ParentalHealthSources: {
       screen: ParentalHealthSources,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+
+    PoisoningsMM: {
+      screen: PoisoningsMM,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
