@@ -37,6 +37,8 @@ import ParentalHealthSources from "./screens/ParentalHealthSources";
 
 import FallsM1 from "./screens/FallsM1";
 import DrowningMM from "./screens/DrowningMM"
+import CarSafetyMM from "./screens/CarSafetyMM"
+import ParentalHealthMM from "./screens/ParentalHealthMM"
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -87,7 +89,21 @@ const screens = {
         headerShown: false,
         animationEnabled: false,
       },
-  },
+    },
+    CarSafetyMM: {
+        screen: CarSafetyMM,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    ParentalHealthMM: {
+        screen: ParentalHealthMM,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
     Burns: {
       screen: Burns,
       navigationOptions: {
