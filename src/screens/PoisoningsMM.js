@@ -9,7 +9,7 @@ import Navbar from "../components/NavBar";
 import PoisoningsStats1 from "../assets/PoisoningsMM/PoisoningsStats1.png";
 import PoisoningsMM2 from "../assets/PoisoningsMM/PoisoningMM2.jpg"
 import PMM3 from "../assets/PoisoningsMM/PMM3.png"
-import PMM4 from "../assets/PoisoningsMM/PMM4.jpg"
+import PMM4 from "../assets/PoisoningsMM/PMM5.jpg"
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function PoisoningsMM({ navigation }) {
@@ -48,7 +48,7 @@ export default function PoisoningsMM({ navigation }) {
     <Text>
         {'\n'}{'\n'}{'\n'}
         </Text>
-    <Image style={styles.img} source={PMM4}/>
+    <Image style={styles.newimg} source={PMM4}/>
     <View style={styles.buttons}>
 
     <MediaButton
@@ -63,7 +63,7 @@ export default function PoisoningsMM({ navigation }) {
           txtColor={"black"}
     ></MediaButton>
         <Text>
-        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}      
+            {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}      
         </Text>
     </View>
     </View>
@@ -89,6 +89,10 @@ const styles = StyleSheet.create({
     },
     img: {
         height: 500,
+        width: 350,
+    },
+    newimg: {
+        height: 700,
         width: 350,
     },
 
@@ -122,11 +126,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     buttons: {
+        width: 100,
         justifyContent: "center",
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
         marginTop: 20,
+
     },
     link: {
         textDecorationLine:'underline',
