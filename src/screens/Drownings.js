@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "react-native";
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
@@ -9,6 +9,7 @@ import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
 import CollapsibleBox from "../components/CollapsibleBox";
+import Pool from "../assets/Pool.png"
 
 
 export default function Drownings({ navigation }) {
@@ -33,11 +34,12 @@ export default function Drownings({ navigation }) {
     ></BackButton>
 
     <ScrollView>
-
-    <Text style={styles.title}> Drownings </Text>
-    <Text style={styles.subtitle}> Why are drownings important? </Text>
-
+    <View style={styles.titleBox}>
+        <Text style={styles.title}> Drownings </Text>
+        <Image style={styles.titleImage} source={Pool}/>
+    </View>
     
+    <Text style={styles.subtitle}> Why are drownings important? </Text>
 
     <Text style={styles.content}>
     {'\t'} Almost 800 children in the United States drown each year [2], making it the leading cause 
@@ -131,8 +133,11 @@ Home Pool Tips:  {'\n'}
 const styles = StyleSheet.create({
     image: {
         flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
+    },
+    titleImage: {
+        height: 70,
+        width: 70,
+
     },
     title: {
         // margin: 100,
@@ -141,7 +146,14 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         fontWeight: "bold",
         textAlign: "center",
-        textDecorationLine: "underline"
+        textDecorationLine: "underline",
+        flex: 9
+    },
+    titleBox: {
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "flex-start",
+        paddingRight: 20
     },
     subtitle: {
         fontSize: 24,
