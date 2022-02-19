@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import Collapsible from "react-native-collapsible";
 import { Entypo } from '@expo/vector-icons'; 
 
-export default class Collapsible extends Component{
+export default class CollapsibleBox extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -30,8 +30,10 @@ export default class Collapsible extends Component{
     return (
         <View>
             <TouchableOpacity onPress={this.toggleExpanded}>
-                <View style={styles.header}>
-                    <Text style={this.props.headerstyle}>{this.props.header}</Text>
+                <View style={styles.mainbox}>
+                    <View style={styles.headerbox}>
+                        <Text style={this.props.headerstyle}>{this.props.header}</Text>
+                        </View>
                     {this.renderArrow()}
                 </View>
 
@@ -47,10 +49,16 @@ export default class Collapsible extends Component{
 }
 
   const styles = StyleSheet.create({
-    header: {
+    mainbox: {
         display: "flex",
         flexDirection: "row"
         
+    },
+    headerbox: {
+        flex: 6
+    },
+    arrow: {
+        flex: 1
     },
     content: {
         
