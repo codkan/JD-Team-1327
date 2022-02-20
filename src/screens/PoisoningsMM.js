@@ -11,6 +11,8 @@ import PoisoningsMM2 from "../assets/PoisoningsMM/PoisoningMM2.jpg"
 import PMM3 from "../assets/PoisoningsMM/PMM3.png"
 import PMM4 from "../assets/PoisoningsMM/PMM5.jpg"
 import { ScrollView } from "react-native-gesture-handler";
+import YouTube from "react-youtube";
+import { Video } from 'expo';
 
 export default function PoisoningsMM({ navigation }) {
     //NAV CALLBACK
@@ -31,6 +33,10 @@ export default function PoisoningsMM({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
 
     <ScrollView>
+
+
+
+
     <View style={styles.container}>
         <Text>
         {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}
@@ -61,6 +67,7 @@ export default function PoisoningsMM({ navigation }) {
 
     </View>
     </View>
+
     </ScrollView>
 
     <View style = {styles.pushdown}>
@@ -139,4 +146,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: "#C4C4C4",
     },
+    backgroundVideo: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+      },
 });

@@ -11,6 +11,7 @@ import { ScrollView } from "react-native";
 import berries from "../assets/PoisoningsMM/berries.png";
 import house from "../assets/PoisoningsMM/house.png";
 import pills from "../assets/PoisoningsMM/Pill.png";
+import CollapsibleBox from "../components/CollapsibleBox";
 
 export default function Poisonings({ navigation }) {
     //NAV CALLBACK
@@ -59,9 +60,8 @@ export default function Poisonings({ navigation }) {
         {'\n'}
         {'\n'}
 
-    
-        <Text style={styles.bullet}>  1. Be cognizant of where you leave all medicine and pill bottles {'\n'} </Text>          {'\n'}  
-            <Image style={styles.pillImg} source={pills}/> {'\n'} 
+        <CollapsibleBox header="1. Be cognizant of where you leave all medicine and pill bottles" headerstyle={styles.bullet}>
+            <Image style={styles.pillImg} source={pills}/> 
             <Text style={styles.subbullet}> - Keep medicines in their original containers. People can often lose track medicine if they switch the container 
             it is in which can lead to the accidental ingestion of medicine. {'\n'} </Text> 
             <Text style={styles.subbullet}> - Keep medicines and other dangerous substances at a height above a child's eye level. 
@@ -69,15 +69,19 @@ export default function Poisonings({ navigation }) {
             will prevent them from attempting to consume them. {'\n'} </Text>
             <Text style={styles.subbullet}> - Secure child safety locks on things such as medicines. 
             In the case that a child is able to grab a bottle of medicine, the child safety lock will prevent them 
-            from accessing the pills inside.{'\n'} </Text> {'\n'} 
-        <Text style={styles.bullet}> 2. Be aware of potentially dangerous materials being left around children {'\n'} </Text>    {'\n'}  
-            <Image style={styles.houseImg} source={house}/> {'\n'} 
+            from accessing the pills inside.{'\n'} </Text> 
+         </CollapsibleBox>
+        
+         <CollapsibleBox header="2. Be aware of potentially dangerous materials being left around children" headerstyle={styles.bullet}>
+            <Image style={styles.houseImg} source={house}/>
             <Text style={styles.subbullet}> - Put away all potential hazardous materials right after use to ensure a 
             child doesn't have time to take themselves. A large portion of poisonings occur due to parents or caretakers 
             being careless and unaware of the dangerous things left around their children. Being more careful about putting 
-            things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items. {'\n'} </Text>  {'\n'}
-        <Text style={styles.bullet}> 3. Ensure that you are familiar with all potential dangers both inside and outside the home {'\n'} </Text> {'\n'}  
-            <Image style={styles.berriesImg} source={berries}/> {'\n'} 
+            things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items. </Text>
+        </CollapsibleBox>
+        
+        <CollapsibleBox header="3. Ensure that you are familiar with all potential dangers both inside and outside the home " headerstyle={styles.bullet}> 
+            <Image style={styles.berriesImg} source={berries}/>
             <Text style={styles.subbullet}> - Make sure all natural gas based appliances are functioning correctly. 
             As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the 
             chance of poisonings for both children and adults. {'\n'} </Text>
@@ -93,8 +97,9 @@ export default function Poisonings({ navigation }) {
             <Text style={styles.subbullet}>- Check your home for lead paint that can chip off. Lead poisoning can be difficult to detect, 
             and so either get an expert of check yourself to see if your home contains this kind of paint. Lead paint and dust is more 
             common among older buildings, so be sure to check if your home fits this criteria.	 {'\n'} </Text>
+         </CollapsibleBox>
         </Text>
-    
+        
         <SourcesButton
 
         onPress={handlePoisoningSourcesNav}
