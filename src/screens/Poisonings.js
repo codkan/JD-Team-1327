@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image } from "react-native";
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
@@ -8,6 +8,9 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
+import berries from "../assets/PoisoningsMM/berries.png";
+import house from "../assets/PoisoningsMM/house.png";
+import pills from "../assets/PoisoningsMM/Pill.png";
 
 export default function Poisonings({ navigation }) {
     //NAV CALLBACK
@@ -34,6 +37,8 @@ export default function Poisonings({ navigation }) {
 
     <Text style={styles.title}> Poisonings  </Text>
 
+
+
     <Text style={styles.subtitle}> How common is it? </Text>
         <Text style={styles.content}>
         {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below,
@@ -53,7 +58,10 @@ export default function Poisonings({ navigation }) {
          attentive since poisonings due to other sources are very low. Here are some tips to prevent the most common forms of child poisoning: 
         {'\n'}
         {'\n'}
-        <Text style={styles.bullet}>  1. Be cognizant of where you leave all medicine and pill bottles {'\n'} </Text>          {'\n'}
+
+    
+        <Text style={styles.bullet}>  1. Be cognizant of where you leave all medicine and pill bottles {'\n'} </Text>          {'\n'}  
+            <Image style={styles.pillImg} source={pills}/> {'\n'} 
             <Text style={styles.subbullet}> - Keep medicines in their original containers. People can often lose track medicine if they switch the container 
             it is in which can lead to the accidental ingestion of medicine. {'\n'} </Text> 
             <Text style={styles.subbullet}> - Keep medicines and other dangerous substances at a height above a child's eye level. 
@@ -63,11 +71,13 @@ export default function Poisonings({ navigation }) {
             In the case that a child is able to grab a bottle of medicine, the child safety lock will prevent them 
             from accessing the pills inside.{'\n'} </Text> {'\n'} 
         <Text style={styles.bullet}> 2. Be aware of potentially dangerous materials being left around children {'\n'} </Text>    {'\n'}  
+            <Image style={styles.houseImg} source={house}/> {'\n'} 
             <Text style={styles.subbullet}> - Put away all potential hazardous materials right after use to ensure a 
             child doesn't have time to take themselves. A large portion of poisonings occur due to parents or caretakers 
             being careless and unaware of the dangerous things left around their children. Being more careful about putting 
             things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items. {'\n'} </Text>  {'\n'}
         <Text style={styles.bullet}> 3. Ensure that you are familiar with all potential dangers both inside and outside the home {'\n'} </Text> {'\n'}  
+            <Image style={styles.berriesImg} source={berries}/> {'\n'} 
             <Text style={styles.subbullet}> - Make sure all natural gas based appliances are functioning correctly. 
             As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the 
             chance of poisonings for both children and adults. {'\n'} </Text>
@@ -103,6 +113,20 @@ export default function Poisonings({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    pillImg: {
+        height: 150,
+        width:130,
+    },
+
+    houseImg: {
+        height: 150,
+        width: 200,
+    },
+
+    berriesImg: {
+        height: 150,
+        width: 250,
+    },
     image: {
         flex: 1,
         resizeMode: "cover",
