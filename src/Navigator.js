@@ -42,6 +42,8 @@ import DrowningMM from "./screens/DrowningMM";
 import CarSafetyMM from "./screens/CarSafetyMM";
 import ParentalHealthMM from "./screens/ParentalHealthMM";
 import PoisoningsMM from "./screens/PoisoningsMM";
+import BurnsMM from "./screens/BurnsMM";
+
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -300,6 +302,13 @@ const screens = {
 
     PoisoningsMM: {
       screen: PoisoningsMM,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    BurnsMM: {
+      screen: BurnsMM,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,

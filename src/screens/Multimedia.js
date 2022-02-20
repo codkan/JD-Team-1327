@@ -15,7 +15,7 @@ export default function Multimedia({ navigation }) {
     navigation.navigate("FallsM0");
   };
   const handleBurnsNav = () => {
-    navigation.navigate("FallsM0");
+    navigation.navigate("BurnsMM");
   };
   const handlePoisoningsNav = () => {
     navigation.navigate("PoisoningsMM");

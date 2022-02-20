@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image, Linking } from "react-native";
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
@@ -8,6 +8,14 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
+import babyIMG from "../assets/BurnsMM/baby.jpeg";
+import scaldIMG from "../assets/BurnsMM/scald.jpeg";
+import panIMG from "../assets/BurnsMM/pan.png";
+import smokeIMG from "../assets/BurnsMM/smoke.png";
+import outletIMG from "../assets/BurnsMM/outlet.png";
+
+import CollapsibleBox from "../components/CollapsibleBox";
+
 
 
 export default function Burns({ navigation }) {
@@ -57,41 +65,63 @@ export default function Burns({ navigation }) {
 
     <Text style={styles.subtitle}> How to prevent burn injuries? </Text>
 
-    <Text style={styles.bullet}>1. Always test the water temperature before washing your child</Text>
+
+    <Text>
+    <CollapsibleBox header="1. Always test the water temperature before washing your child" headerstyle={styles.bullet}>
+        <Image style={styles.scaldImg} source={scaldIMG}/> 
+
         <Text style={styles.subbullet}>- Lower the thermostat on your water heater below 120°F or install anti-scalding devices {'\n'}
         - Switch on the cold water first and turn it off last to avoid having your children exposed to only hot water {'\n'}
         - Turn your child away from the faucet during baths to prevent them from accidentally turning on the hot water {'\n'}
+        </Text>
+    </CollapsibleBox>
     </Text>
 
-    <Text style={styles.bullet}>2. Make sure electrical outlets have child safety covers and keep a close eye on your child when they are playing with electronics </Text>
+
+    <CollapsibleBox header="2. Make sure electrical outlets have child safety covers and keep a close eye on your child when they are playing with electronics" headerstyle={styles.bullet}>
+        <Image style={styles.outletImg} source={outletIMG}/> 
+
         <Text style={styles.subbullet}>- Ensure there isn’t any exposed wiring and hide all extra wires to avoid your child chewing on cords {'\n'}
         - Replace batteries and check for any unusual defects in electronic toys {'\n'}
         - Keep bedside lamps and lightbulbs out of reach {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>3. Always know where your child is when cooking or handling hot food and liquids</Text>
+
+    <CollapsibleBox header="3. Always know where your child is when cooking or handling hot food and liquids" headerstyle={styles.bullet}>
+
         <Text style={styles.subbullet}>- Keep toys out of the kitchen {'\n'}
         - Never hold your baby while handling drinks like coffee or tea because of the injury risk {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>4. Turn pot handles away from the front of the stove and use the back burners of the stove first. </Text>
+    <CollapsibleBox header="4. Turn pot handles away from the front of the stove and use the back burners of the stove first." headerstyle={styles.bullet}>
+        <Image style={styles.panImg} source={panIMG}/> 
         <Text style={styles.subbullet}>- Avoid tablecloths or large placemats. If a child pulls on one, hot drinks or food can fall. {'\n'}
         - Test food temperatures, especially when heated by the microwave, before feeding your child. {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>5. Have smoke detectors spread throughout your home and remember to replace the batteries often </Text>
+
+    <CollapsibleBox header="5. Have smoke detectors spread throughout your home and remember to replace the batteries often" headerstyle={styles.bullet}>
+        <Image style={styles.smokeImg} source={smokeIMG}/> 
         <Text style={styles.subbullet}>- Keep a fire extinguisher handy in case of emergencies {'\n'}
         - Never leave rooms with candles, fireplaces, or active stoves unattended {'\n'}
         - Put potentially dangerous devices like irons or lighters in out-of-reach places {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>6. Make sure to apply sunscreen to your child and to reapply it if they’re playing in the water</Text>
+    <CollapsibleBox header="6. Make sure to apply sunscreen to your child and to reapply it if they’re playing in the water" headerstyle={styles.bullet}>
+
         <Text style={styles.subbullet}>- Don’t store your childs stroller or safety seat in direct view of the hot sun {'\n'}
         - Check metal playground equipment before letting your child play on it {'\n'}
         - Encourage your child to wear shoes since it will prevent them from walking barefoot on hot asphalt {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
     <Text style={styles.bullet}>7. Most importantly, always supervise your child around any open flame </Text>
+
+    <Image style={styles.babyImg} source={babyIMG}/> 
 
     <Text style={styles.content}> {'\n'} </Text>
 
@@ -121,6 +151,57 @@ export default function Burns({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    panImg: {
+        height: 150,
+        width:300,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    scaldImg: {
+        height: 150,
+        width: 200,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    babyImg: {
+        paddingLeft: 30,
+        height: 150,
+        width: 300,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    smokeImg: {
+        height: 150,
+        width:250,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    outletImg: {
+        height: 150,
+        width: 200,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
     image: {
         flex: 1,
         resizeMode: "cover",
