@@ -65,8 +65,6 @@ export default function Burns({ navigation }) {
 
     <Text style={styles.subtitle}> How to prevent burn injuries? </Text>
 
-
-    <Text>
     <CollapsibleBox header="1. Always test the water temperature before washing your child" headerstyle={styles.bullet}>
         <Image style={styles.scaldImg} source={scaldIMG}/> 
 
@@ -75,7 +73,6 @@ export default function Burns({ navigation }) {
         - Turn your child away from the faucet during baths to prevent them from accidentally turning on the hot water {'\n'}
         </Text>
     </CollapsibleBox>
-    </Text>
 
 
     <CollapsibleBox header="2. Make sure electrical outlets have child safety covers and keep a close eye on your child when they are playing with electronics" headerstyle={styles.bullet}>
