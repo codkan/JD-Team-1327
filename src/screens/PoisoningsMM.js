@@ -27,6 +27,9 @@ export default function PoisoningsMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
+    const goToDrowning = () => {
+        navigation.navigate("DrowningMM");
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -71,6 +74,12 @@ export default function PoisoningsMM({ navigation }) {
     <MediaButton
           text="Go to Poison"
           onPress={goToPoisonings}
+          txtColor={"black"}
+    ></MediaButton>
+
+    <MediaButton
+          text="Next Topic"
+          onPress={goToDrowning}
           txtColor={"black"}
     ></MediaButton>
 

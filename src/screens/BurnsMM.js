@@ -27,6 +27,9 @@ export default function BurnsMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
+    const goToPoison = () => {
+        navigation.navigate("PoisoningsMM");
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -77,6 +80,12 @@ export default function BurnsMM({ navigation }) {
     <MediaButton
           text="Go to Burns"
           onPress={goToBurns}
+          txtColor={"black"}
+    ></MediaButton>
+
+    <MediaButton
+          text="Next Topic"
+          onPress={goToPoison}
           txtColor={"black"}
     ></MediaButton>
 

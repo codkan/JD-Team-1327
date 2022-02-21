@@ -23,6 +23,9 @@ export default function FallsM0({ navigation }) {
     const goToFalls = () => {
         navigation.navigate("Falls");
     }
+    const goToBurns = () => {
+        navigation.navigate("BurnsMM");
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -61,6 +64,13 @@ export default function FallsM0({ navigation }) {
           onPress={goToFalls}
           txtColor={"black"}
     ></MediaButton>
+
+    <MediaButton
+          text="Next Topic"
+          onPress={goToBurns}
+          txtColor={"black"}
+    ></MediaButton>
+
     </View>
 </ScrollView>
 

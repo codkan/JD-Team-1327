@@ -23,6 +23,9 @@ export default function DrowningMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
+    const goToParents = () => {
+        navigation.navigate("ParentalHealthMM");
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -50,6 +53,12 @@ export default function DrowningMM({ navigation }) {
     <MediaButton
           text="Go to Drowning"
           onPress={goToDrowning}
+          txtColor={"black"}
+    ></MediaButton>
+
+    <MediaButton
+          text="Next Topic"
+          onPress={goToParents}
           txtColor={"black"}
     ></MediaButton>
 
