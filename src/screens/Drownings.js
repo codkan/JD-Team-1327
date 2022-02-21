@@ -9,7 +9,8 @@ import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
 import CollapsibleBox from "../components/CollapsibleBox";
-import Pool from "../assets/Pool.png"
+import Pool from "../assets/Pool.png";
+import MMButton from "../components/MMButton";
 
 
 export default function Drownings({ navigation }) {
@@ -22,6 +23,9 @@ export default function Drownings({ navigation }) {
     };
     const handleDrowningSourcesNav = () => {
         navigation.navigate("DrowningSources");
+    };
+    const handleDrowningMMNav = () => {
+        navigation.navigate("DrowningMM");
     };
 
     return (
@@ -116,9 +120,15 @@ Home Pool Tips:  {'\n'}
 
 </Text>
 
+<View style={styles.btns}>
+<MMButton
+    onPress={handleDrowningMMNav}
+></MMButton>
+
 <SourcesButton
     onPress={handleDrowningSourcesNav}
 ></SourcesButton>
+</View>
 
     </ScrollView>
 
@@ -133,6 +143,10 @@ Home Pool Tips:  {'\n'}
 const styles = StyleSheet.create({
     image: {
         flex: 1,
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     titleImage: {
         height: 70,

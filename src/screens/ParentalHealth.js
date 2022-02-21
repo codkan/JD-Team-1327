@@ -11,6 +11,7 @@ import { ScrollView } from "react-native";
 import ppd2 from "../assets/parentalHealthMM/ppd2.png";
 import ppd3 from "../assets/parentalHealthMM/ppd3.png";
 import CollapsibleBox from "../components/CollapsibleBox";
+import MMButton from "../components/MMButton";
 
 
 export default function ParentalHealth({ navigation }) {
@@ -23,6 +24,9 @@ export default function ParentalHealth({ navigation }) {
     };
     const handleParentalHealthSourcesNav = () => {
         navigation.navigate("ParentalHealthSources");
+    };
+    const handleParentsMMNav = () => {
+        navigation.navigate("ParentalHealthMM");
     };
 
     return (
@@ -130,11 +134,16 @@ export default function ParentalHealth({ navigation }) {
         </Text>
     </CollapsibleBox>
 
+    <View style={styles.btns}>
+    <MMButton
+        onPress={handleParentsMMNav}
+    ></MMButton>
+
     <SourcesButton
-        text="[]"
         txtColor={"black"}
         onPress={handleParentalHealthSourcesNav}
     ></SourcesButton>
+    </View>
 
     </ScrollView>
 
@@ -151,6 +160,10 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     headimg: {
         height: 150,

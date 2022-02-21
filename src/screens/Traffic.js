@@ -12,6 +12,7 @@ import car from "../assets/carSafetyMM/car.png";
 import carSeat from "../assets/carSafetyMM/carSeat.png";
 import belt from "../assets/carSafetyMM/belt.png";
 import CollapsibleBox from "../components/CollapsibleBox";
+import MMButton from "../components/MMButton";
 
 
 export default function Traffic({ navigation }) {
@@ -24,6 +25,9 @@ export default function Traffic({ navigation }) {
     };
     const handleTrafficSourcesNav = () => {
         navigation.navigate("TrafficSources");
+    };
+    const handleCarsMMNav = () => {
+        navigation.navigate("CarSafetyMM");
     };
 
     return (
@@ -138,9 +142,15 @@ export default function Traffic({ navigation }) {
         Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website.
     </Text>
 
+    <View style={styles.btns}>
+    <MMButton
+        onPress={handleCarsMMNav}
+    ></MMButton>
+
     <SourcesButton
         onPress={handleTrafficSourcesNav}
     ></SourcesButton>
+    </View>
 
     </ScrollView>
 
@@ -157,6 +167,10 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     headimg: {
         height: 150,

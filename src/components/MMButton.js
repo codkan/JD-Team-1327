@@ -2,16 +2,16 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, Text, View, Image } from "react-native";
 import { color } from "react-native-reanimated";
 
-export default function SourcesButton({ text, onPress, txtColor }) {
+export default function MMButton({ text, onPress, txtColor }) {
   return (
     <View style={styles.button}>
       <TouchableOpacity onPress={onPress}>
-        <Image source={require("../assets/links-line-alt.png")} style={styles.icon}></Image>
+        <Image source={require("../assets/media.png")} style={styles.icon}></Image>
       </TouchableOpacity>
     </View>
   );
 }
-SourcesButton.defaultProps = {
+MMButton.defaultProps = {
   color: "black"
 }
 const styles = StyleSheet.create({
@@ -25,17 +25,17 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(196,196,196,1)",
     alignItems: "center",
     justifyContent: "center",
-    //position: "relative",
+    //position: "absolute",
     //bottom: 0,
-    //right: 0,
+    //left: -60,
     shadowColor: 'black',
     shadowOpacity: 0.25,
     shadowRadius: 4,
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
-    //marginRight: 20,
-    marginLeft: 175,
-    //marginBottom: 70,
+    marginLeft: 20,
+    marginRight: 80,
+    marginBottom: 70,
     //alignSelf: "flex-end"
   },
   buttonText: {
@@ -45,4 +45,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     justifyContent: "center",
   },
+  icon: {
+    height: 33,
+    width: 36,
+  }
 });

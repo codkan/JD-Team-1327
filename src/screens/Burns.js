@@ -13,6 +13,7 @@ import scaldIMG from "../assets/BurnsMM/scald.jpeg";
 import panIMG from "../assets/BurnsMM/pan.png";
 import smokeIMG from "../assets/BurnsMM/smoke.png";
 import outletIMG from "../assets/BurnsMM/outlet.png";
+import MMButton from "../components/MMButton";
 
 import CollapsibleBox from "../components/CollapsibleBox";
 
@@ -28,6 +29,9 @@ export default function Burns({ navigation }) {
     };
     const handleBurnSourcesNav = () => {
         navigation.navigate("BurningSources");
+    };
+    const handleBurnsMMNav = () => {
+        navigation.navigate("BurnsMM");
     };
 
     return (
@@ -132,9 +136,17 @@ export default function Burns({ navigation }) {
         If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4].
     </Text>
 
+    <View style={styles.btns}>
+
+    <MMButton
+        onPress={handleBurnsMMNav}
+    ></MMButton>
+
     <SourcesButton
         onPress={handleBurnSourcesNav}
     ></SourcesButton>
+
+    </View>
 
     </ScrollView>
 
@@ -157,6 +169,10 @@ const styles = StyleSheet.create({
         display: 'flex',
         marginLeft: 'auto',
         marginRight: 'auto',
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     scaldImg: {
         height: 150,

@@ -12,6 +12,7 @@ import berries from "../assets/PoisoningsMM/berries.png";
 import house from "../assets/PoisoningsMM/house.png";
 import pills from "../assets/PoisoningsMM/Pill.png";
 import CollapsibleBox from "../components/CollapsibleBox";
+import MMButton from "../components/MMButton";
 
 export default function Poisonings({ navigation }) {
     //NAV CALLBACK
@@ -23,6 +24,9 @@ export default function Poisonings({ navigation }) {
     };
     const handlePoisoningSourcesNav = () => {
         navigation.navigate("PoisoningSources");
+    };
+    const handlePoisoningMMNav = () => {
+        navigation.navigate("PoisoningsMM");
     };
 
     return (
@@ -100,10 +104,16 @@ export default function Poisonings({ navigation }) {
             common among older buildings, so be sure to check if your home fits this criteria. {'\n'}
             </Text>
          </CollapsibleBox>
+
+        <View style={styles.btns}>
+        <MMButton
+            onPress={handlePoisoningMMNav}
+        ></MMButton>
         
         <SourcesButton
             onPress={handlePoisoningSourcesNav}
         ></SourcesButton>
+        </View>
 
         
     </ScrollView>
@@ -122,7 +132,10 @@ const styles = StyleSheet.create({
         height: 150,
         width:130,
     },
-
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+    },
     houseImg: {
         height: 150,
         width: 200,

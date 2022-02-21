@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MMButton from "../components/MMButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
@@ -29,6 +30,9 @@ export default function Falls({ navigation }) {
     };
     const handleFallSourcesNav = () => {
         navigation.navigate("FallSources");
+    };
+    const handleFallsMMNav = () => {
+        navigation.navigate("FallsMM");
     };
 
     return (
@@ -155,9 +159,17 @@ waist-level (or a bit lower) handlebars, and resist tipping backward when pressi
 
 <Image style={styles.roundpic} source={stroller1}/>
 
+    <View style={styles.btns}>
+
+    <MMButton
+        onPress={handleFallsMMNav}
+    ></MMButton>
+
     <SourcesButton
         onPress={handleFallSourcesNav}
     ></SourcesButton>
+
+    </View>
 
     </ScrollView>
 
@@ -174,6 +186,10 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     roundpic: {
         height: 150,
