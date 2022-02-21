@@ -16,6 +16,7 @@ import end from "../assets/end.png";
 import stroller1 from "../assets/stroller1.png";
 import stroller2 from "../assets/stroller2.png";
 import falls from "../assets/falls.png";
+import CollapsibleBox from "../components/CollapsibleBox";
 
 
 export default function Falls({ navigation }) {
@@ -65,7 +66,7 @@ export default function Falls({ navigation }) {
 
 <Text style={styles.subtitle}> 5 Steps to Prevent Falls </Text>
 
-<Text style={styles.bullet}>1. Be mindful with infants, even when secured</Text>
+<CollapsibleBox header="1. Be mindful with infants, even when secured" headerstyle={styles.bullet}>
     <Image style={styles.roundpic} source={secure}/>
     <Text style={styles.subbullet}>- Whenever high chairs, infant carriers, car-seats, swings, or strollers are in use,
     always keep infants and young children strapped in and secure. {'\n'}
@@ -77,9 +78,10 @@ export default function Falls({ navigation }) {
       carts without them {'\n'}
     - Even if you are using a cart with an attached carrier, never leaver your child alone in the cart or
       allow them to ride in, under, or on the cart basket. [4] {'\n'}
-</Text>
+    </Text>
+</CollapsibleBox>
 
-<Text style={styles.bullet}>2. Prevent dangerous falls for crawlers at home</Text>
+<CollapsibleBox header="2. Prevent dangerous falls for crawlers at home" headerstyle={styles.bullet}>
     <Image style={styles.roundpic} source={stairs}/>
     <Text style={styles.subbullet}>- Stairs are one of the most dangerous places for young children, so use
     safety gates approved for both the tops & bottoms of stairs and, if possible, attach them to the wall. {'\n'}
@@ -88,9 +90,10 @@ export default function Falls({ navigation }) {
       free from clutter and use ant-slip rugs for hardwood or tile. {'\n'}
     - Especially consider anti-slip mats and decals in the bathtub and shower to prevent dangerous falls {'\n'}
     - Always supervise young children on high porches, decks, or balconies and avoid them if at all possible. [4] {'\n'}
-</Text>
+    </Text>
+</CollapsibleBox>
 
-<Text style={styles.bullet}>3. Close, lock, and guard windows from toddlers</Text>
+<CollapsibleBox header="3. Close, lock, and guard windows from toddlers" headerstyle={styles.bullet}>
     <Image style={styles.roundpic} source={window}/>
     <Text style={styles.subbullet}>- Keep younger children and climbable furniture away from windows. {'\n'}
     - If your windows open from the top and bottom, open only the top to prevent falls. Though be
@@ -99,9 +102,10 @@ export default function Falls({ navigation }) {
     - Normal screens are not meant ror protection, so install proper window guards that you can easily open
       in the event of an emergency. {'\n'}
     - For extra protection, install window stops that prevent them from opening more than a few inches. [4] {'\n'}
-</Text>
+    </Text>
+</CollapsibleBox>
 
-<Text style={styles.bullet}>4. Baby-proof furniture & protect climbers from tip-overs</Text>
+<CollapsibleBox header="4. Baby-proof furniture & protect climbers from tip-overs" headerstyle={styles.bullet}>
     <Image style={styles.roundpic} source={tv}/>
     <Text style={styles.subbullet}>- Do not let young children climb on any furniture where they could
     fall from any height or the furniture could possibly be tipped over, especially near windows.{'\n'}
@@ -111,9 +115,10 @@ export default function Falls({ navigation }) {
       and install stops on dresser drawers to prevent them from being pulled out. {'\n'}
     - Larger, older TVs should be placed on stable, low, secured furniture while flat-screen TVs
       should be mounted higher on the wall [5] {'\n'}
-</Text>
+    </Text>
+</CollapsibleBox>
 
-<Text style={styles.bullet}>5. Pay close attention at the playground with young children </Text>
+<CollapsibleBox header="5. Pay close attention at the playground with young children" headerstyle={styles.bullet}>
     <Text style={styles.subbullet}>- Falls are the most common and the most severe playground injuries {'\n'}
     - Nearly half of playground injuries are due to improper supervision, so always avoid distraction and
       actively supervise children rather than letting them loose {'\n'}
@@ -122,7 +127,8 @@ export default function Falls({ navigation }) {
     - Teach and guide children to avoid any pushing, shoving, or crowding {'\n'}
     - If possible, seek out playgrounds with softer, shock-absorbing surfaces like rubber, turf, mulch,
       wood chips, pea gravel, etc. rather than asphalt, concrete, or dirt. [6] {'\n'}
-</Text>
+    </Text>
+</CollapsibleBox>
 
 <Image style={styles.longpic} source={end}/>
 
@@ -173,7 +179,8 @@ const styles = StyleSheet.create({
         height: 150,
         width: 150,
         marginLeft: 175,
-        marginTop: -20,
+        marginTop: 0,
+        marginBottom: 5,
     },
     longpic:{
         width: null,
