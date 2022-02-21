@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
+import BackButton from "../components/BackButton";
 import { get } from "../Db";
 import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
+import win from "../assets/fallsM/window_infographic.jpg";
 import tv from "../assets/fallsM/tv_infographic.jpg";
+import { ScrollView } from "react-native-gesture-handler";
+import VideoPlayer from "../components/VideoPlayer";
 
-export default function FallsM2({ navigation }) {
+export default function FallsM0({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -19,25 +23,33 @@ export default function FallsM2({ navigation }) {
     const goToFalls = () => {
         navigation.navigate("Falls");
     }
-    const FallsM2Nav = () => {
-        navigation.navigate("FallsM2");
-    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <Text style={styles.title}> TV Tip-Overs </Text>
+    <ScrollView>
 
 <View style={styles.container}>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+    </Text>
 
+    <Text style={styles.title}> Falls </Text>
+    <Image style={styles.img} source={win}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+    </Text>
+</View>
+    <VideoPlayer videoID = "i8oifZ7HXaA"/>
+<View style={styles.container}>
     <Image style={styles.img} source={tv}/>
-
-    <TouchableOpacity onPress={() => Linking.openURL('https://youtu.be/XyCHsr9NKqY')}>
-         <Text style={styles.link}> Video on the Danger of TV Tip-Overs </Text>
-    </TouchableOpacity>
+    <Text>
+            {'\n'}{'\n'}{'\n'}
+    </Text>
+</View>
+    <VideoPlayer videoID = "XyCHsr9NKqY"/>
 
     <View style={styles.buttons}>
-
     <MediaButton
           text="Back to Media"
           onPress={backToMedia}
@@ -49,18 +61,13 @@ export default function FallsM2({ navigation }) {
           onPress={goToFalls}
           txtColor={"black"}
     ></MediaButton>
-
-    <MediaButton
-          text="Next Page"
-          onPress={FallsM2Nav}
-          txtColor={"black"}
-    ></MediaButton>
     </View>
-</View>
+</ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
     </View>
+
 
     </ImageBackground>
     );
@@ -72,9 +79,23 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
+    back: {
+        height: 50,
+        width: 50,
+        borderRadius: 100,
+        backgroundColor: "rgba(196,196,196,1)",
+
+        shadowColor: 'black',
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        shadowOffset : { width: 0, height: 4},
+        elevation: 7.5,
+        position: "absolute",
+
+    },
     img: {
         height: 500,
-        width: 445,
+        width: 395,
     },
     title: {
         // margin: 100,
@@ -110,7 +131,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 20,
+        marginBottom: 70,
     },
     link: {
         textDecorationLine:'underline',
