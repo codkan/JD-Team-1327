@@ -45,12 +45,6 @@ export default function ParentalHealthMM({ navigation }) {
           onPress={goToParentalHealth}
           txtColor={"black"}
     ></MediaButton>
-
-    <MediaButton
-          text="Next Page"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
     </View>
 </View>
 

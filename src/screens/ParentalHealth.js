@@ -10,6 +10,7 @@ import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
 import ppd2 from "../assets/parentalHealthMM/ppd2.png";
 import ppd3 from "../assets/parentalHealthMM/ppd3.png";
+import CollapsibleBox from "../components/CollapsibleBox";
 
 
 export default function ParentalHealth({ navigation }) {
@@ -51,7 +52,8 @@ export default function ParentalHealth({ navigation }) {
 
     <Text style={styles.subtitle}> Symptoms for Either Parent</Text>
 
-    <Text style={styles.bullet}>1. Signs and Symptoms of Baby Blues for Either Parent [2]</Text>
+    <CollapsibleBox header="1. Signs and Symptoms of Baby Blues for Either Parent [2]"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Mood swings {'\n'}
         - Anxiety {'\n'}
         - Sadness {'\n'}
@@ -61,9 +63,11 @@ export default function ParentalHealth({ navigation }) {
         - Reduced concentration {'\n'}
         - Appetite problems {'\n'}
         - Trouble sleeping {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>2. Signs and Symptoms of Postpartum Depression for Mothers [1] </Text>
+    <CollapsibleBox header="2. Signs and Symptoms of Postpartum Depression for Mothers [1]"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Feeling sad, hopeless, or overwhelmed {'\n'}
         - Feeling worried, scared, angry, or panicked {'\n'}
         - Feelings of guilt or inadequacy {'\n'}
@@ -77,43 +81,54 @@ export default function ParentalHealth({ navigation }) {
         - Withdrawal from activities you usually find enjoyable {'\n'}
         - Fear that you're not a good mother [2] {'\n'}
         - Recurrent thoughts of death or suicide {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>3. Additional Signs and Symptoms of Postpartum Psychosis for Mothers [1] </Text>
+    <CollapsibleBox header="3. Additional Signs and Symptoms of Postpartum Psychosis for Mothers [1]"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Thoughs of hurting the baby or yourself {'\n'}
         - Hearing voices, seeing things that are not there, or feeling paranoid (very worried, suspicious, or mistrustful) {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>4. Postpartum Depression for Fathers [2] </Text>
+    <CollapsibleBox header="4. Postpartum Depression for Fathers [2]"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>New fathers can experience postpartum depression, too. They may feel sad or fatigued, 
         be overwhelmed, experience anxiety, or have changes in their usual eating and sleeping patterns, the same symptoms 
         moths with postpartum depression experience. {'\n'}
         Fathers who are young, have a history of depression, experience relationship problems, or are struggling financially 
         are most at risk of postpartum depression. Paternal postpartum depression can have the same negative effect on partner 
         relationships and child development as postpartum depression in mothers can. {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
     <Image style={styles.headimg} source={ppd3}/>
 
     <Text style={styles.subtitle}> Long-Term Effects of Untreated Postpartum Depression [2] </Text>
 
-    <Text style={styles.bullet}>1. For Mothers </Text>
+    <CollapsibleBox header="1. For Mothers"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>Untreated postpartum depression can last for months or longer, sometimes becoming 
         a chronic depressive disorder. Even when treated, postpartum depression increases a woman's risk of future episodes 
         of major depression. {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>2. For Fathers </Text>
+    <CollapsibleBox header="2. For Fathers"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>Postpartum depression can have a ripple effect, causing emotional strain for everyone 
         close to a new baby. When a new mother is depressed, the risk of depression in the baby's father may also increase. 
         New dads are already at increased risk of depression, whether or not their partner is affected. {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>3. For Children </Text>
+    <CollapsibleBox header="3. For Children"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>Children of mothers who have untreated postpartum depression are more likely to have 
         emotional and behavioral problems, such as sleeping and eating difficulties, excessive crying, and delays in 
         language development. {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
     <SourcesButton
         text="[]"

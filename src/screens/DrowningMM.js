@@ -53,11 +53,6 @@ export default function DrowningMM({ navigation }) {
           txtColor={"black"}
     ></MediaButton>
 
-    <MediaButton
-          text="Next Page"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
     </View>
 </View>
 
