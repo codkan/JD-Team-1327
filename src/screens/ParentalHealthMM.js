@@ -22,9 +22,7 @@ export default function ParentalHealthMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
-    const goToCars = () => {
-        navigation.navigate("CarSafetyMM");
-    }
+
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -46,12 +44,6 @@ export default function ParentalHealthMM({ navigation }) {
     <MediaButton
           text="Parental Health"
           onPress={goToParentalHealth}
-          txtColor={"black"}
-    ></MediaButton>
-
-    <MediaButton
-          text="Next Topic"
-          onPress={goToCars}
           txtColor={"black"}
     ></MediaButton>
 

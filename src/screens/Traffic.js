@@ -20,8 +20,8 @@ export default function Traffic({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Drownings");
     };
     const handleTrafficSourcesNav = () => {
         navigation.navigate("TrafficSources");
@@ -29,15 +29,25 @@ export default function Traffic({ navigation }) {
     const handleCarsMMNav = () => {
         navigation.navigate("CarSafetyMM");
     };
+    const handleNextNav = () => {
+        navigation.navigate("ParentalHealth");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
 

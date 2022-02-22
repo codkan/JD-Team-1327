@@ -22,6 +22,9 @@ export default function CarSafetyMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
+    const goToParents = () => {
+        navigation.navigate("ParentalHealthMM");
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -43,6 +46,12 @@ export default function CarSafetyMM({ navigation }) {
     <MediaButton
           text="Go to Car Safety"
           onPress={goToCarSafety}
+          txtColor={"black"}
+    ></MediaButton>
+
+    <MediaButton
+          text="Next Topic"
+          onPress={goToParents}
           txtColor={"black"}
     ></MediaButton>
     </View>

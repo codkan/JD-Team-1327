@@ -24,8 +24,8 @@ export default function Burns({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Falls");
     };
     const handleBurnSourcesNav = () => {
         navigation.navigate("BurningSources");
@@ -33,15 +33,25 @@ export default function Burns({ navigation }) {
     const handleBurnsMMNav = () => {
         navigation.navigate("BurnsMM");
     };
+    const handleNextNav = () => {
+        navigation.navigate("Poisonings");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
 

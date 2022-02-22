@@ -18,8 +18,8 @@ export default function Drownings({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Poisonings");
     };
     const handleDrowningSourcesNav = () => {
         navigation.navigate("DrowningSources");
@@ -27,15 +27,25 @@ export default function Drownings({ navigation }) {
     const handleDrowningMMNav = () => {
         navigation.navigate("DrowningMM");
     };
+    const handleNextNav = () => {
+        navigation.navigate("Traffic");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
     <View style={styles.titleBox}>

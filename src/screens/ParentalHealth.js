@@ -19,8 +19,8 @@ export default function ParentalHealth({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Traffic");
     };
     const handleParentalHealthSourcesNav = () => {
         navigation.navigate("ParentalHealthSources");
@@ -35,7 +35,7 @@ export default function ParentalHealth({ navigation }) {
     <BackButton
         text="<"
         txtColor={"black"}
-        onPress={handleInfoNav}
+        onPress={handleLastNav}
     ></BackButton>
 
     <ScrollView>

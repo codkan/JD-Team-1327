@@ -19,8 +19,8 @@ export default function Poisonings({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Burns");
     };
     const handlePoisoningSourcesNav = () => {
         navigation.navigate("PoisoningSources");
@@ -28,15 +28,25 @@ export default function Poisonings({ navigation }) {
     const handlePoisoningMMNav = () => {
         navigation.navigate("PoisoningsMM");
     };
+    const handleNextNav = () => {
+        navigation.navigate("Drownings");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
     
     <ScrollView>
 
@@ -131,6 +141,7 @@ const styles = StyleSheet.create({
     pillImg: {
         height: 150,
         width:130,
+        margin: 25,
     },
     btns: {
         display: "flex",
@@ -139,11 +150,12 @@ const styles = StyleSheet.create({
     houseImg: {
         height: 150,
         width: 200,
+        margin: 25,
     },
-
     berriesImg: {
         height: 150,
         width: 250,
+        margin: 25,
     },
     image: {
         flex: 1,

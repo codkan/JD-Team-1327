@@ -34,15 +34,25 @@ export default function Falls({ navigation }) {
     const handleFallsMMNav = () => {
         navigation.navigate("FallsMM");
     };
+    const handleNextNav = () => {
+        navigation.navigate("Burns");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleInfoNav}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
 
