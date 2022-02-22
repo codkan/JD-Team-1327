@@ -12,6 +12,7 @@ import BMM3 from "../assets/BurnsMM/bmm3.jpeg"
 import BMM4 from "../assets/BurnsMM/bmm4.png"
 import { ScrollView } from "react-native-gesture-handler";
 import VideoPlayer from "../components/VideoPlayer";
+import BackButton from "../components/BackButton";
 
 export default function BurnsMM({ navigation }) {
     //NAV CALLBACK
@@ -27,21 +28,35 @@ export default function BurnsMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
-    const goToPoison = () => {
+    const handleLastNav = () => {
+        navigation.navigate("FallsMM");
+    }
+    const handleNextNav = () => {
         navigation.navigate("PoisoningsMM");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
     
     <ScrollView> 
 
     <View style={styles.container}>
         <Text>
-        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}
+        {'\n'}{'\n'}{'\n'}
         </Text>
-
-
     <Text style={styles.title}> Burns </Text>
     <Image style={styles.newimg1} source={BMM1}/>
     <Text>
@@ -83,12 +98,6 @@ export default function BurnsMM({ navigation }) {
           txtColor={"black"}
     ></MediaButton>
 
-    <MediaButton
-          text="Next Topic"
-          onPress={goToPoison}
-          txtColor={"black"}
-    ></MediaButton>
-
     </View>
     </View>
 
@@ -107,6 +116,10 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     img: {
         height: 500,

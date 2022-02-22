@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform, ScrollView } from "react-native";
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
@@ -7,6 +7,7 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import play from "../assets/carSafetyMM/playSafe.jpg";
+import BackButton from "../components/BackButton";
 
 export default function CarSafetyMM({ navigation }) {
     //NAV CALLBACK
@@ -22,12 +23,30 @@ export default function CarSafetyMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
-    const goToParents = () => {
+    const handleLastNav = () => {
+        navigation.navigate("DrowningMM");
+    }
+    const handleNextNav = () => {
         navigation.navigate("ParentalHealthMM");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
+
+    <ScrollView>
 
     <Text style={styles.title}> Car Safety </Text>
 
@@ -49,13 +68,9 @@ export default function CarSafetyMM({ navigation }) {
           txtColor={"black"}
     ></MediaButton>
 
-    <MediaButton
-          text="Next Topic"
-          onPress={goToParents}
-          txtColor={"black"}
-    ></MediaButton>
     </View>
 </View>
+</ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -72,6 +87,10 @@ const styles = StyleSheet.create({
     img: {
         height: 500,
         width: 375,
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     title: {
         // margin: 100,

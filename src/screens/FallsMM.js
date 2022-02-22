@@ -23,12 +23,25 @@ export default function FallsM0({ navigation }) {
     const goToFalls = () => {
         navigation.navigate("Falls");
     }
-    const goToBurns = () => {
+    const handleNextNav = () => {
         navigation.navigate("BurnsMM");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={backToMedia}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
 
@@ -65,12 +78,6 @@ export default function FallsM0({ navigation }) {
           txtColor={"black"}
     ></MediaButton>
 
-    <MediaButton
-          text="Next Topic"
-          onPress={goToBurns}
-          txtColor={"black"}
-    ></MediaButton>
-
     </View>
 </ScrollView>
 
@@ -88,6 +95,10 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     back: {
         height: 50,
@@ -141,7 +152,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: 70,
+        marginBottom: 75,
     },
     link: {
         textDecorationLine:'underline',

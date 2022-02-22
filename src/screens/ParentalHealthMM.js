@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform, ScrollView } from "react-native";
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
@@ -7,6 +7,7 @@ import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import ppd from "../assets/parentalHealthMM/ppd1.jpg";
+import BackButton from "../components/BackButton";
 
 export default function ParentalHealthMM({ navigation }) {
     //NAV CALLBACK
@@ -22,10 +23,20 @@ export default function ParentalHealthMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
-
+    const handleLastNav = () => {
+        navigation.navigate("CarSafetyMM");
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+
+    <BackButton
+        text="<"
+        txtColor={"black"}
+        onPress={handleLastNav}
+    ></BackButton>
+
+    <ScrollView>
 
     <Text style={styles.title}> Parental Health </Text>
 
@@ -49,6 +60,7 @@ export default function ParentalHealthMM({ navigation }) {
 
     </View>
 </View>
+</ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -65,6 +77,10 @@ const styles = StyleSheet.create({
     img: {
         height: 520,
         width: 335,
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     title: {
         // margin: 100,

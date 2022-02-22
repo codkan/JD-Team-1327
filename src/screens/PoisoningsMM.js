@@ -12,6 +12,7 @@ import PMM3 from "../assets/PoisoningsMM/PMM3.png"
 import PMM4 from "../assets/PoisoningsMM/PMM5.jpg"
 import { ScrollView } from "react-native-gesture-handler";
 import VideoPlayer from "../components/VideoPlayer";
+import BackButton from "../components/BackButton";
 
 export default function PoisoningsMM({ navigation }) {
     //NAV CALLBACK
@@ -27,18 +28,34 @@ export default function PoisoningsMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
-    const goToDrowning = () => {
+    const handleLastNav = () => {
+        navigation.navigate("BurnsMM");
+    }
+    const handleNextNav = () => {
         navigation.navigate("DrowningMM");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
-    
+
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
+
     <ScrollView> 
 
     <View style={styles.container}>
         <Text>
-        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}
+        {'\n'}{'\n'}{'\n'}
         </Text>
 
 
@@ -77,12 +94,6 @@ export default function PoisoningsMM({ navigation }) {
           txtColor={"black"}
     ></MediaButton>
 
-    <MediaButton
-          text="Next Topic"
-          onPress={goToDrowning}
-          txtColor={"black"}
-    ></MediaButton>
-
     </View>
     </View>
 
@@ -101,6 +112,10 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
     },
     img: {
         height: 500,
