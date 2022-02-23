@@ -4,7 +4,7 @@ import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
 import { get } from "../Db";
-import Background from "../assets/info_background.png";
+import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";

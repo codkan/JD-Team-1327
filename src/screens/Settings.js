@@ -5,7 +5,7 @@
 import React from "react";
 import { ImageBackground, StyleSheet, Text } from "react-native";
 import MenuButton from "../components/MenuButton";
-import Background from "../assets/settingsScreen.png";
+import Background from "../assets/bg.png";
 
 export default function Settings({ navigation}) {
   const [soundOn, setSoundOn] = React.useState(true);

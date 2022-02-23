@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
 import MainButton from "../components/MainButton";
 import { get } from "../Db";
-import Background from "../assets/info_background.png";
+import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 
