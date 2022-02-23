@@ -4,7 +4,7 @@ import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import BackButton from "../components/BackButton";
 import { get } from "../Db";
-import Background from "../assets/info_background.png";
+import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import win from "../assets/fallsM/window_infographic.jpg";

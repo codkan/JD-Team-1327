@@ -1,7 +1,7 @@
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import MenuButton from "../components/MenuButton";
-import Background from "../assets/SourcesBackground.png";
+import Background from "../assets/bg.png";
 import MainButton from "../components/MainButton";
 import Constants from "../Constants";
 import Navbar from "../components/NavBar";
