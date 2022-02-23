@@ -35,8 +35,15 @@ import TrafficSources from "./screens/TrafficSources";
 import DrowningSources from "./screens/DrowningsSources";
 import ParentalHealthSources from "./screens/ParentalHealthSources";
 
+import FallsM0 from "./screens/FallsM0";
 import FallsM1 from "./screens/FallsM1";
-import DrowningMM from "./screens/DrowningMM"
+import FallsM2 from "./screens/FallsM2";
+import DrowningMM from "./screens/DrowningMM";
+import CarSafetyMM from "./screens/CarSafetyMM";
+import ParentalHealthMM from "./screens/ParentalHealthMM";
+import PoisoningsMM from "./screens/PoisoningsMM";
+import BurnsMM from "./screens/BurnsMM";
+
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -44,6 +51,7 @@ import LevelThree from "./screens/Level3";
 
 import Multimedia from "./screens/Multimedia";
 import Disclaim from "./screens/Disclaim.js";
+
 
 const screens = {
     Landing: {
@@ -74,8 +82,22 @@ const screens = {
           animationEnabled: false,
         },
     },
+    FallsM0: {
+        screen: FallsM0,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
     FallsM1: {
         screen: FallsM1,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    FallsM2: {
+        screen: FallsM2,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
@@ -87,7 +109,21 @@ const screens = {
         headerShown: false,
         animationEnabled: false,
       },
-  },
+    },
+    CarSafetyMM: {
+        screen: CarSafetyMM,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    ParentalHealthMM: {
+        screen: ParentalHealthMM,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
     Burns: {
       screen: Burns,
       navigationOptions: {
@@ -258,6 +294,21 @@ const screens = {
       },
     ParentalHealthSources: {
       screen: ParentalHealthSources,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+
+    PoisoningsMM: {
+      screen: PoisoningsMM,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    BurnsMM: {
+      screen: BurnsMM,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,

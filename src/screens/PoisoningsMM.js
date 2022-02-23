@@ -3,39 +3,63 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
-import Background from "../assets/bg.png";
+import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
-import tv from "../assets/fallsM/tv_infographic.jpg";
+import PoisoningsStats1 from "../assets/PoisoningsMM/PoisoningsStats1.png";
+import PoisoningsMM2 from "../assets/PoisoningsMM/PoisoningMM2.jpg"
+import PMM3 from "../assets/PoisoningsMM/PMM3.png"
+import PMM4 from "../assets/PoisoningsMM/PMM5.jpg"
+import { ScrollView } from "react-native-gesture-handler";
+import VideoPlayer from "../components/VideoPlayer";
 
-export default function FallsM1({ navigation }) {
+export default function PoisoningsMM({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
     };
+    const handleInfoNav = () => {
+        navigation.navigate("Info");
+    };
+    const goToPoisonings = () => {
+        navigation.navigate("Poisonings");
+    }
     const backToMedia = () => {
         navigation.navigate("Multimedia");
-    }
-    const goToFalls = () => {
-        navigation.navigate("Falls");
-    }
-    const FallsM2Nav = () => {
-        navigation.navigate("FallsM2");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+    
+    <ScrollView> 
 
-    <Text style={styles.title}> TV Tip-Overs </Text>
+    <View style={styles.container}>
+        <Text>
+        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}
+        </Text>
 
-<View style={styles.container}>
 
-    <Image style={styles.img} source={tv}/>
+    <Text style={styles.title}> Poisonings </Text>
+    <Image style={styles.img} source={PoisoningsMM2}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    <Image style={styles.img} source={PMM3}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    <Image style={styles.newimg} source={PMM4}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    </View>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://youtu.be/XyCHsr9NKqY')}>
-         <Text style={styles.link}> Video on the Danger of TV Tip-Overs </Text>
-    </TouchableOpacity>
-
+    <VideoPlayer videoID = "JQob-pwLZJ8"/>
+    <VideoPlayer videoID = "Hu1NEWaOISo"/>
+    <VideoPlayer videoID = "7Et7lrqVy04"/>
+    
+    
+    <View style={styles.container}>
     <View style={styles.buttons}>
 
     <MediaButton
@@ -45,18 +69,15 @@ export default function FallsM1({ navigation }) {
     ></MediaButton>
 
     <MediaButton
-          text="Go to Falls"
-          onPress={goToFalls}
+          text="Go to Poison"
+          onPress={goToPoisonings}
           txtColor={"black"}
     ></MediaButton>
 
-    <MediaButton
-          text="Next Page"
-          onPress={FallsM2Nav}
-          txtColor={"black"}
-    ></MediaButton>
     </View>
-</View>
+    </View>
+
+    </ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -74,8 +95,13 @@ const styles = StyleSheet.create({
     },
     img: {
         height: 500,
-        width: 445,
+        width: 350,
     },
+    newimg: {
+        height: 700,
+        width: 350,
+    },
+
     title: {
         // margin: 100,
         //height: 70,
@@ -106,11 +132,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     buttons: {
+        width: 100,
+        justifyContent: "center",
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
         alignItems: "center",
         marginTop: 20,
+        marginBottom: 75,
     },
     link: {
         textDecorationLine:'underline',
@@ -127,4 +155,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: "#C4C4C4",
     },
+    backgroundVideo: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+      },
 });

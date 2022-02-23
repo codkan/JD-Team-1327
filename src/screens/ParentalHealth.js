@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "react-native";
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
@@ -8,6 +8,8 @@ import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
+import ppd2 from "../assets/parentalHealthMM/ppd2.png";
+import ppd3 from "../assets/parentalHealthMM/ppd3.png";
 
 
 export default function ParentalHealth({ navigation }) {
@@ -32,6 +34,8 @@ export default function ParentalHealth({ navigation }) {
     ></BackButton>
 
     <ScrollView>
+
+    <Image style={styles.headimg} source={ppd2}/>
 
     <Text style={styles.title}> Parental Health </Text>
     <Text style={styles.subtitle}> Baby Blues or Postpartum Depression? </Text>
@@ -89,6 +93,8 @@ export default function ParentalHealth({ navigation }) {
         relationships and child development as postpartum depression in mothers can. {'\n'}
     </Text>
 
+    <Image style={styles.headimg} source={ppd3}/>
+
     <Text style={styles.subtitle}> Long-Term Effects of Untreated Postpartum Depression [2] </Text>
 
     <Text style={styles.bullet}>1. For Mothers </Text>
@@ -129,8 +135,12 @@ export default function ParentalHealth({ navigation }) {
 const styles = StyleSheet.create({
     image: {
         flex: 1,
-        resizeMode: "cover",
         justifyContent: "center",
+    },
+    headimg: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
     },
     title: {
         // margin: 100,
@@ -139,13 +149,15 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         fontWeight: "bold",
         textAlign: "center",
-        textDecorationLine: "underline"
+        textDecorationLine: "underline",
+        position: "relative",
     },
     subtitle: {
         fontSize: 24,
         marginBottom: 20,
         textAlign: "center",
         fontWeight: "bold",
+        position: "relative",
     },
     content: {
         fontSize: 16,

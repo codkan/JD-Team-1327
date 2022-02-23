@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "react-native";
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
@@ -8,6 +8,9 @@ import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
+import car from "../assets/carSafetyMM/car.png";
+import carSeat from "../assets/carSafetyMM/carSeat.png";
+import belt from "../assets/carSafetyMM/belt.png";
 
 
 export default function Traffic({ navigation }) {
@@ -33,6 +36,8 @@ export default function Traffic({ navigation }) {
 
     <ScrollView>
 
+    <Image style={styles.headimg} source={car}/>
+
     <Text style={styles.title}> Car Safety </Text>
     <Text style={styles.subtitle}> Why is Car Safety So Important? </Text>
 
@@ -45,6 +50,8 @@ export default function Traffic({ navigation }) {
     </Text>
 
     <Text style={styles.subtitle}> Types of Car Seats </Text>
+
+    <Image style={styles.headimg} source={carSeat}/>
 
     <Text style={styles.bullet}>1. Rear-facing carseats</Text>
         <Text style={styles.subbullet}>- Used for infants and toddlers {'\n'}
@@ -81,6 +88,8 @@ export default function Traffic({ navigation }) {
         - Never allow anyone to share seat belts. All passengers must have their own car safety seats or seat belts {'\n'}
     </Text>
 
+
+    <Image style={styles.headimg} source={belt}/>
     <Text style={styles.subtitle}> Must-Dos while traveling </Text>
 
     <Text style={styles.bullet}>1. Be a good role model </Text>
@@ -139,6 +148,11 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    headimg: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
     },
     title: {
         // margin: 100,

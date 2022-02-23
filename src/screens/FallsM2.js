@@ -3,12 +3,12 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
-import Background from "../assets/bg.png";
+import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import tv from "../assets/fallsM/tv_infographic.jpg";
 
-export default function FallsM1({ navigation }) {
+export default function FallsM2({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();

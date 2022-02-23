@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image } from "react-native";
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
@@ -8,6 +8,10 @@ import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
+import berries from "../assets/PoisoningsMM/berries.png";
+import house from "../assets/PoisoningsMM/house.png";
+import pills from "../assets/PoisoningsMM/Pill.png";
+import CollapsibleBox from "../components/CollapsibleBox";
 
 export default function Poisonings({ navigation }) {
     //NAV CALLBACK
@@ -34,6 +38,8 @@ export default function Poisonings({ navigation }) {
 
     <Text style={styles.title}> Poisonings  </Text>
 
+
+
     <Text style={styles.subtitle}> How common is it? </Text>
         <Text style={styles.content}>
         {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below,
@@ -53,42 +59,51 @@ export default function Poisonings({ navigation }) {
          attentive since poisonings due to other sources are very low. Here are some tips to prevent the most common forms of child poisoning: 
         {'\n'}
         {'\n'}
-        <Text style={styles.bullet}>  1. Be cognizant of where you leave all medicine and pill bottles {'\n'} </Text>          {'\n'}
+        </Text>
+
+        <CollapsibleBox header="1. Be cognizant of where you leave all medicine and pill bottles" headerstyle={styles.bullet}>
+            <Image style={styles.pillImg} source={pills}/> 
             <Text style={styles.subbullet}> - Keep medicines in their original containers. People can often lose track medicine if they switch the container 
-            it is in which can lead to the accidental ingestion of medicine. {'\n'} </Text> 
-            <Text style={styles.subbullet}> - Keep medicines and other dangerous substances at a height above a child's eye level. 
+            it is in which can lead to the accidental ingestion of medicine. {'\n'}
+            - Keep medicines and other dangerous substances at a height above eye level for children.
             Children will often grab anything that appeals to them, so keeping potentially harmful substances out of their range of view 
-            will prevent them from attempting to consume them. {'\n'} </Text>
-            <Text style={styles.subbullet}> - Secure child safety locks on things such as medicines. 
-            In the case that a child is able to grab a bottle of medicine, the child safety lock will prevent them 
-            from accessing the pills inside.{'\n'} </Text> {'\n'} 
-        <Text style={styles.bullet}> 2. Be aware of potentially dangerous materials being left around children {'\n'} </Text>    {'\n'}  
+            will prevent them from attempting to consume them. {'\n'}
+            - Secure child safety locks on things such as medicines. In the case that a child is able
+            to grab a bottle of medicine, the child safety lock will prevent them from accessing the pills inside.{'\n'}
+            </Text>
+         </CollapsibleBox>
+        
+         <CollapsibleBox header="2. Be aware of potentially dangerous materials being left around children" headerstyle={styles.bullet}>
+            <Image style={styles.houseImg} source={house}/>
             <Text style={styles.subbullet}> - Put away all potential hazardous materials right after use to ensure a 
-            child doesn't have time to take themselves. A large portion of poisonings occur due to parents or caretakers 
+            child does not have time to take themselves. A large portion of poisonings occur due to parents or caretakers
             being careless and unaware of the dangerous things left around their children. Being more careful about putting 
-            things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items. {'\n'} </Text>  {'\n'}
-        <Text style={styles.bullet}> 3. Ensure that you are familiar with all potential dangers both inside and outside the home {'\n'} </Text> {'\n'}  
+            things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items. </Text>
+        </CollapsibleBox>
+        
+        <CollapsibleBox header="3. Ensure that you are familiar with all potential dangers both inside and outside the home " headerstyle={styles.bullet}> 
+            <Image style={styles.berriesImg} source={berries}/>
             <Text style={styles.subbullet}> - Make sure all natural gas based appliances are functioning correctly. 
             As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the 
-            chance of poisonings for both children and adults. {'\n'} </Text>
-            <Text style={styles.subbullet}> - Ensure that you have functioning carbon monoxide and smoke detectors. 
-            These are critical because both of these can detect hazards that occur silently. {'\n'} </Text>
-            <Text style={styles.subbullet}> - Memorize the poison help number (1-800-222-1222). This 24/7 line can connect you to an 
-            expert in the case that you suspect a child has been poisoned. {'\n'} </Text>
-            <Text style={styles.subbullet}> - Familiarize yourself with the plants in and outside of your home, especially if 
+            chance of poisonings for both children and adults. {'\n'}
+            - Ensure that you have functioning carbon monoxide and smoke detectors.
+            These are critical because both of these can detect hazards that occur silently. {'\n'}
+            - Memorize the poison help number (1-800-222-1222). This 24/7 line can connect you to an
+            expert in the case that you suspect a child has been poisoned. {'\n'}
+            - Familiarize yourself with the plants in and outside of your home, especially if
             you live near plants that produce bright or noticeable berries that could be poisonous. Children will be attracted to 
             plants that look appealing, such as holly and juniper berries. Canvas the outside of your home or ask a professional to 
             make sure that you are familiar with all the plant species in the vicinity of your home. Remove or relocate any poisonous plants 
-            to ensure your child does not consume its berries. {'\n'} </Text>
-            <Text style={styles.subbullet}>- Check your home for lead paint that can chip off. Lead poisoning can be difficult to detect, 
+            to ensure your child does not consume its berries. {'\n'}
+            - Check your home for lead paint that can chip off. Lead poisoning can be difficult to detect,
             and so either get an expert of check yourself to see if your home contains this kind of paint. Lead paint and dust is more 
-            common among older buildings, so be sure to check if your home fits this criteria.	 {'\n'} </Text>
-        </Text>
-    
+            common among older buildings, so be sure to check if your home fits this criteria. {'\n'}
+            </Text>
+         </CollapsibleBox>
+        
         <SourcesButton
-
-        onPress={handlePoisoningSourcesNav}
-    ></SourcesButton>
+            onPress={handlePoisoningSourcesNav}
+        ></SourcesButton>
 
         
     </ScrollView>
@@ -103,6 +118,20 @@ export default function Poisonings({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    pillImg: {
+        height: 150,
+        width:130,
+    },
+
+    houseImg: {
+        height: 150,
+        width: 200,
+    },
+
+    berriesImg: {
+        height: 150,
+        width: 250,
+    },
     image: {
         flex: 1,
         resizeMode: "cover",

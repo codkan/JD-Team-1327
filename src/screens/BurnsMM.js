@@ -3,39 +3,69 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
-import Background from "../assets/bg.png";
+import Background from "../assets/info_background.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
-import tv from "../assets/fallsM/tv_infographic.jpg";
+import BMM1 from "../assets/BurnsMM/bmm1.jpeg";
+import BMM2 from "../assets/BurnsMM/bmm2.png"
+import BMM3 from "../assets/BurnsMM/bmm3.jpeg"
+import BMM4 from "../assets/BurnsMM/bmm4.png"
+import { ScrollView } from "react-native-gesture-handler";
+import VideoPlayer from "../components/VideoPlayer";
 
-export default function FallsM1({ navigation }) {
+export default function BurnsMM({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
     };
+    const handleInfoNav = () => {
+        navigation.navigate("Info");
+    };
+    const goToBurns = () => {
+        navigation.navigate("Burns");
+    }
     const backToMedia = () => {
         navigation.navigate("Multimedia");
-    }
-    const goToFalls = () => {
-        navigation.navigate("Falls");
-    }
-    const FallsM2Nav = () => {
-        navigation.navigate("FallsM2");
     }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+    
+    <ScrollView> 
 
-    <Text style={styles.title}> TV Tip-Overs </Text>
+    <View style={styles.container}>
+        <Text>
+        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}
+        </Text>
 
-<View style={styles.container}>
 
-    <Image style={styles.img} source={tv}/>
+    <Text style={styles.title}> Burns </Text>
+    <Image style={styles.newimg1} source={BMM1}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    <Image style={styles.newimg2} source={BMM2}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    <Image style={styles.newimg3} source={BMM3}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    <Image style={styles.newimg4} source={BMM4}/>
+    <Text>
+        {'\n'}{'\n'}{'\n'}
+        </Text>
+    </View>
 
-    <TouchableOpacity onPress={() => Linking.openURL('https://youtu.be/XyCHsr9NKqY')}>
-         <Text style={styles.link}> Video on the Danger of TV Tip-Overs </Text>
-    </TouchableOpacity>
 
+
+    <VideoPlayer videoID = "IZP_9VIgcnw"/>
+    <VideoPlayer videoID = "ZNWjfe-84Ig"/>
+    <VideoPlayer videoID = "gMalF0GMLEM"/>
+    
+    
+    <View style={styles.container}>
     <View style={styles.buttons}>
 
     <MediaButton
@@ -45,18 +75,15 @@ export default function FallsM1({ navigation }) {
     ></MediaButton>
 
     <MediaButton
-          text="Go to Falls"
-          onPress={goToFalls}
+          text="Go to Burns"
+          onPress={goToBurns}
           txtColor={"black"}
     ></MediaButton>
 
-    <MediaButton
-          text="Next Page"
-          onPress={FallsM2Nav}
-          txtColor={"black"}
-    ></MediaButton>
     </View>
-</View>
+    </View>
+
+    </ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -74,8 +101,25 @@ const styles = StyleSheet.create({
     },
     img: {
         height: 500,
-        width: 445,
+        width: 350,
     },
+    newimg1: {
+        height: 525,
+        width: 350,
+    },
+    newimg2: {
+        height: 1300,
+        width: 350,
+    },
+    newimg3: {
+        height: 450,
+        width: 350,
+    },
+    newimg4: {
+        height: 800,
+        width: 350,
+    },
+
     title: {
         // margin: 100,
         //height: 70,
@@ -106,11 +150,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     buttons: {
+        width: 100,
+        justifyContent: "center",
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
         alignItems: "center",
         marginTop: 20,
+        marginBottom: 75,
     },
     link: {
         textDecorationLine:'underline',
@@ -127,4 +173,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: "#C4C4C4",
     },
+    backgroundVideo: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+      },
 });
