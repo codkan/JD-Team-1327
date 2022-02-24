@@ -3,11 +3,12 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
-import Background from "../assets/info_background.png";
+import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import ppd from "../assets/parentalHealthMM/ppd1.jpg";
 import BackButton from "../components/BackButton";
+import MainButton from "../components/MainButton";
 
 export default function ParentalHealthMM({ navigation }) {
     //NAV CALLBACK
@@ -30,11 +31,19 @@ export default function ParentalHealthMM({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
+    <View style={styles.btns}>
     <BackButton
         text="<"
         txtColor={"black"}
         onPress={handleLastNav}
     ></BackButton>
+
+    <MediaButton
+          text="Back to Media"
+          onPress={backToMedia}
+          txtColor={"black"}
+    ></MediaButton>
+    </View>
 
     <ScrollView>
 
@@ -46,17 +55,11 @@ export default function ParentalHealthMM({ navigation }) {
 
     <View style={styles.buttons}>
 
-    <MediaButton
-          text="Back to Media"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
-
-    <MediaButton
-          text="Parental Health"
+    <MainButton
+          text="Go to Parental Health"
           onPress={goToParentalHealth}
           txtColor={"black"}
-    ></MediaButton>
+    ></MainButton>
 
     </View>
 </View>
@@ -81,6 +84,8 @@ const styles = StyleSheet.create({
     btns: {
         display: "flex",
         flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     title: {
         // margin: 100,
@@ -116,7 +121,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 20,
+        marginTop: 5,
+        marginBottom: 15,
     },
     link: {
         textDecorationLine:'underline',

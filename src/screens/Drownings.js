@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -30,6 +31,9 @@ export default function Drownings({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("Traffic");
     };
+    const backToInfo = () => {
+        navigation.navigate("Info");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -40,6 +44,11 @@ export default function Drownings({ navigation }) {
             txtColor={"black"}
             onPress={handleLastNav}
         ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -130,7 +139,7 @@ Home Pool Tips:  {'\n'}
 
 </Text>
 
-<View style={styles.btns}>
+<View style={styles.buttons}>
 <MMButton
     onPress={handleDrowningMMNav}
 ></MMButton>
@@ -155,6 +164,12 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
         display: "flex",
         flexDirection: "row",
     },

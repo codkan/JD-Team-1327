@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import BackButton from "../components/BackButton";
+import MainButton from "../components/MainButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -31,11 +32,11 @@ export default function FallsM0({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
 
     <View style={styles.btns}>
-        <BackButton
-            text="<"
-            txtColor={"black"}
-            onPress={backToMedia}
-        ></BackButton>
+        <MediaButton
+              text="Back to Media"
+              onPress={backToMedia}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -66,17 +67,12 @@ export default function FallsM0({ navigation }) {
     <VideoPlayer videoID = "XyCHsr9NKqY"/>
 
     <View style={styles.buttons}>
-    <MediaButton
-          text="Back to Media"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
 
-    <MediaButton
+    <MainButton
           text="Go to Falls"
           onPress={goToFalls}
           txtColor={"black"}
-    ></MediaButton>
+    ></MainButton>
 
     </View>
 </ScrollView>
@@ -99,6 +95,8 @@ const styles = StyleSheet.create({
     btns: {
         display: "flex",
         flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     back: {
         height: 50,
@@ -152,6 +150,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        marginTop: -20,
         marginBottom: 75,
     },
     link: {

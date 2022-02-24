@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -32,6 +33,9 @@ export default function Traffic({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("ParentalHealth");
     };
+    const backToInfo = () => {
+        navigation.navigate("Info");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -42,6 +46,11 @@ export default function Traffic({ navigation }) {
             txtColor={"black"}
             onPress={handleLastNav}
         ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -152,7 +161,7 @@ export default function Traffic({ navigation }) {
         Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website.
     </Text>
 
-    <View style={styles.btns}>
+    <View style={styles.buttons}>
     <MMButton
         onPress={handleCarsMMNav}
     ></MMButton>
@@ -179,6 +188,12 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
         display: "flex",
         flexDirection: "row",
     },

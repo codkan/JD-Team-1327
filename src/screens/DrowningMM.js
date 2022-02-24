@@ -9,6 +9,7 @@ import Navbar from "../components/NavBar";
 import silent from "../assets/Drowning_Infographic.png";
 import { ScrollView } from "react-native";
 import BackButton from "../components/BackButton";
+import MainButton from "../components/MainButton";
 
 export default function DrowningMM({ navigation }) {
     //NAV CALLBACK
@@ -40,6 +41,11 @@ export default function DrowningMM({ navigation }) {
             txtColor={"black"}
             onPress={handleLastNav}
         ></BackButton>
+        <MediaButton
+              text="Back to Media"
+              onPress={backToMedia}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -61,17 +67,11 @@ export default function DrowningMM({ navigation }) {
 
     <View style={styles.buttons}>
 
-    <MediaButton
-          text="Back to Media"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
-
-    <MediaButton
+    <MainButton
           text="Go to Drowning"
           onPress={goToDrowning}
           txtColor={"black"}
-    ></MediaButton>
+    ></MainButton>
 
     </View>
 </View>
@@ -100,6 +100,8 @@ const styles = StyleSheet.create({
     btns: {
         display: "flex",
         flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     title: {
         // margin: 100,

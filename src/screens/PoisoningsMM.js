@@ -3,7 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
-import Background from "../assets/info_background.png";
+import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import PoisoningsStats1 from "../assets/PoisoningsMM/PoisoningsStats1.png";
@@ -13,6 +13,7 @@ import PMM4 from "../assets/PoisoningsMM/PMM5.jpg"
 import { ScrollView } from "react-native-gesture-handler";
 import VideoPlayer from "../components/VideoPlayer";
 import BackButton from "../components/BackButton";
+import MainButton from "../components/MainButton";
 
 export default function PoisoningsMM({ navigation }) {
     //NAV CALLBACK
@@ -44,6 +45,11 @@ export default function PoisoningsMM({ navigation }) {
             txtColor={"black"}
             onPress={handleLastNav}
         ></BackButton>
+        <MediaButton
+              text="Back to Media"
+              onPress={backToMedia}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -77,24 +83,15 @@ export default function PoisoningsMM({ navigation }) {
     <VideoPlayer videoID = "JQob-pwLZJ8"/>
     <VideoPlayer videoID = "Hu1NEWaOISo"/>
     <VideoPlayer videoID = "7Et7lrqVy04"/>
-    
-    
-    <View style={styles.container}>
+
     <View style={styles.buttons}>
 
-    <MediaButton
-          text="Back to Media"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
-
-    <MediaButton
+    <MainButton
           text="Go to Poison"
           onPress={goToPoisonings}
           txtColor={"black"}
-    ></MediaButton>
+    ></MainButton>
 
-    </View>
     </View>
 
     </ScrollView>
@@ -116,6 +113,8 @@ const styles = StyleSheet.create({
     btns: {
         display: "flex",
         flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     img: {
         height: 500,
@@ -156,12 +155,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     buttons: {
-        width: 100,
-        justifyContent: "center",
         display: "flex",
         flexDirection: "row",
+        justifyContent: "center",
         alignItems: "center",
-        marginTop: 20,
+        marginTop: -20,
         marginBottom: 75,
     },
     link: {

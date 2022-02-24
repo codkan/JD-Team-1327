@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image, Linking
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -36,6 +37,9 @@ export default function Burns({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("Poisonings");
     };
+    const backToInfo = () => {
+        navigation.navigate("Info");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -46,6 +50,11 @@ export default function Burns({ navigation }) {
             txtColor={"black"}
             onPress={handleLastNav}
         ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -146,7 +155,7 @@ export default function Burns({ navigation }) {
         If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4].
     </Text>
 
-    <View style={styles.btns}>
+    <View style={styles.buttons}>
 
     <MMButton
         onPress={handleBurnsMMNav}
@@ -181,6 +190,12 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
     },
     btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
         display: "flex",
         flexDirection: "row",
     },

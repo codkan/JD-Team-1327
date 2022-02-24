@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -31,6 +32,9 @@ export default function Poisonings({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("Drownings");
     };
+    const backToInfo = () => {
+        navigation.navigate("Info");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -41,6 +45,11 @@ export default function Poisonings({ navigation }) {
             txtColor={"black"}
             onPress={handleLastNav}
         ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -115,7 +124,7 @@ export default function Poisonings({ navigation }) {
             </Text>
          </CollapsibleBox>
 
-        <View style={styles.btns}>
+        <View style={styles.buttons}>
         <MMButton
             onPress={handlePoisoningMMNav}
         ></MMButton>
@@ -144,6 +153,12 @@ const styles = StyleSheet.create({
         margin: 25,
     },
     btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
         display: "flex",
         flexDirection: "row",
     },

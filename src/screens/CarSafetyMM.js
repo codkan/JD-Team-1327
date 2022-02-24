@@ -3,11 +3,12 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
-import Background from "../assets/info_background.png";
+import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import play from "../assets/carSafetyMM/playSafe.jpg";
 import BackButton from "../components/BackButton";
+import MainButton from "../components/MainButton";
 
 export default function CarSafetyMM({ navigation }) {
     //NAV CALLBACK
@@ -39,6 +40,11 @@ export default function CarSafetyMM({ navigation }) {
             txtColor={"black"}
             onPress={handleLastNav}
         ></BackButton>
+        <MediaButton
+              text="Back to Media"
+              onPress={backToMedia}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -56,17 +62,11 @@ export default function CarSafetyMM({ navigation }) {
 
     <View style={styles.buttons}>
 
-    <MediaButton
-          text="Back to Media"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
-
-    <MediaButton
+    <MainButton
           text="Go to Car Safety"
           onPress={goToCarSafety}
           txtColor={"black"}
-    ></MediaButton>
+    ></MainButton>
 
     </View>
 </View>
@@ -91,6 +91,8 @@ const styles = StyleSheet.create({
     btns: {
         display: "flex",
         flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     title: {
         // margin: 100,

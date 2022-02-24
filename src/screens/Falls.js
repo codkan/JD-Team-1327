@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import MMButton from "../components/MMButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
@@ -25,9 +26,6 @@ export default function Falls({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
-    };
     const handleFallSourcesNav = () => {
         navigation.navigate("FallSources");
     };
@@ -37,16 +35,19 @@ export default function Falls({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("Burns");
     };
+    const backToInfo = () => {
+        navigation.navigate("Info");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
     <View style={styles.btns}>
-        <BackButton
-            text="<"
-            txtColor={"black"}
-            onPress={handleInfoNav}
-        ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
         <BackButton
             text=">"
             txtColor={"black"}
@@ -169,7 +170,7 @@ waist-level (or a bit lower) handlebars, and resist tipping backward when pressi
 
 <Image style={styles.roundpic} source={stroller1}/>
 
-    <View style={styles.btns}>
+    <View style={styles.buttons}>
 
     <MMButton
         onPress={handleFallsMMNav}
@@ -198,6 +199,12 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
         display: "flex",
         flexDirection: "row",
     },
