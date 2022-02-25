@@ -1,5 +1,6 @@
 node_modules
 .expo/
-ios/.expo/
+.expo/*
+ios/.expo/*
 jdApp1/
 .idea/
