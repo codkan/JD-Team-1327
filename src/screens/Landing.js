@@ -12,6 +12,12 @@ import Background from "../assets/landing.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import disclaim from "../assets/info.png";
+import info from "../assets/landingCrayons/info.png";
+import videos from "../assets/landingCrayons/videos.png";
+import review from "../assets/landingCrayons/review.png";
+import game from "../assets/landingCrayons/game.png";
+import sources from "../assets/landingCrayons/sources.png";
+import aboutUs from "../assets/landingCrayons/aboutUs.png";
 
 export default function Home({ navigation }) {
   const handleInfoNav = () => {
@@ -44,36 +50,24 @@ export default function Home({ navigation }) {
         </TouchableOpacity>
 
         <View style={styles.buttonContainer}>
-          <MainButton
-            text="Information"
-            onPress={handleInfoNav}
-            txtColor={"black"}
-          ></MainButton>
-          <MainButton
-              text="Multimedia"
-              onPress={handleMultimediaNav}
-              txtColor={"black"}
-          ></MainButton>
-          <MainButton
-            text="Review"
-            onPress={handleReviewNav}
-            txtColor={"black"}
-          ></MainButton>
-          <MainButton
-            text="Game"
-            onPress={handleGameNav}
-            txtColor={"black"}
-          ></MainButton>
-          <MainButton
-            text="Sources"
-            onPress={handleSourcesNav}
-            txtColor={"black"}
-          ></MainButton>
-          <MainButton
-            text="Settings"
-            onPress={handleSettings1Nav}
-            txtColor={"black"}
-          ></MainButton>
+        <TouchableOpacity onPress={handleInfoNav}>
+            <Image source={info} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleMultimediaNav}>
+            <Image source={videos} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleReviewNav}>
+            <Image source={review} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleGameNav}>
+            <Image source={game} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleSourcesNav}>
+            <Image source={sources} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleSettings1Nav}>
+            <Image source={aboutUs} style={styles.crayon}></Image>
+        </TouchableOpacity>
         </View>
         <Navbar navigation={navigation}/>
       </ImageBackground>
@@ -86,6 +80,13 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
+  },
+  crayon: {
+    height:50,
+    width:355,
+    marginBottom: 10,
+    //resizeMode: "cover",
+    //justifyContent: "center",
   },
   buttonContainer: {
     flex: 1,
