@@ -3,13 +3,15 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import { ScrollView } from "react-native";
 import CollapsibleBox from "../components/CollapsibleBox";
-import Pool from "../assets/Pool.png"
+import Pool from "../assets/Pool.png";
+import MMButton from "../components/MMButton";
 
 
 export default function Drownings({ navigation }) {
@@ -17,21 +19,42 @@ export default function Drownings({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Poisonings");
     };
     const handleDrowningSourcesNav = () => {
         navigation.navigate("DrowningSources");
+    };
+    const handleDrowningMMNav = () => {
+        navigation.navigate("DrowningMM");
+    };
+    const handleNextNav = () => {
+        navigation.navigate("Traffic");
+    };
+    const backToInfo = () => {
+        navigation.navigate("Info");
     };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
     <View style={styles.titleBox}>
@@ -116,9 +139,15 @@ Home Pool Tips:  {'\n'}
 
 </Text>
 
+<View style={styles.buttons}>
+<MMButton
+    onPress={handleDrowningMMNav}
+></MMButton>
+
 <SourcesButton
     onPress={handleDrowningSourcesNav}
 ></SourcesButton>
+</View>
 
     </ScrollView>
 
@@ -133,6 +162,16 @@ Home Pool Tips:  {'\n'}
 const styles = StyleSheet.create({
     image: {
         flex: 1,
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
+        display: "flex",
+        flexDirection: "row",
     },
     titleImage: {
         height: 70,

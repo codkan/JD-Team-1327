@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 7,
     paddingHorizontal: 10,
-    marginHorizontal: 15,
+    //marginHorizontal: 40,
     backgroundColor: "rgba(196,196,196,1)",
     alignItems: "center",
     justifyContent: "center",
@@ -30,6 +30,9 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
+    marginTop: 10,
+    marginBottom: 10,
+    //marginHorizontal: 76,
   },
   buttonText: {
     fontStyle: "normal",

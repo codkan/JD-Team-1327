@@ -3,7 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import {WebView} from "react-native-webview";
 import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
-import Background from "../assets/info_background.png";
+import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import BMM1 from "../assets/BurnsMM/bmm1.jpeg";
@@ -12,6 +12,8 @@ import BMM3 from "../assets/BurnsMM/bmm3.jpeg"
 import BMM4 from "../assets/BurnsMM/bmm4.png"
 import { ScrollView } from "react-native-gesture-handler";
 import VideoPlayer from "../components/VideoPlayer";
+import BackButton from "../components/BackButton";
+import MainButton from "../components/MainButton";
 
 export default function BurnsMM({ navigation }) {
     //NAV CALLBACK
@@ -27,18 +29,40 @@ export default function BurnsMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
+    const handleLastNav = () => {
+        navigation.navigate("FallsMM");
+    }
+    const handleNextNav = () => {
+        navigation.navigate("PoisoningsMM");
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <MediaButton
+              text="Back to Media"
+              onPress={backToMedia}
+              txtColor={"black"}
+        ></MediaButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
     
     <ScrollView> 
 
     <View style={styles.container}>
         <Text>
-        {'\n'}{'\n'}{'\n'}        {'\n'}{'\n'}{'\n'}
+        {'\n'}{'\n'}{'\n'}
         </Text>
-
-
     <Text style={styles.title}> Burns </Text>
     <Image style={styles.newimg1} source={BMM1}/>
     <Text>
@@ -63,25 +87,16 @@ export default function BurnsMM({ navigation }) {
     <VideoPlayer videoID = "IZP_9VIgcnw"/>
     <VideoPlayer videoID = "ZNWjfe-84Ig"/>
     <VideoPlayer videoID = "gMalF0GMLEM"/>
-    
-    
-    <View style={styles.container}>
+
     <View style={styles.buttons}>
 
-    <MediaButton
-          text="Back to Media"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
-
-    <MediaButton
+    <MainButton
           text="Go to Burns"
           onPress={goToBurns}
           txtColor={"black"}
-    ></MediaButton>
+    ></MainButton>
+    </View>
 
-    </View>
-    </View>
 
     </ScrollView>
 
@@ -98,6 +113,12 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     img: {
         height: 500,
@@ -150,12 +171,11 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     buttons: {
-        width: 100,
-        justifyContent: "center",
         display: "flex",
         flexDirection: "row",
+        justifyContent: "center",
         alignItems: "center",
-        marginTop: 20,
+        marginTop: -20,
         marginBottom: 75,
     },
     link: {

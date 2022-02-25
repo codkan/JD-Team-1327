@@ -8,6 +8,8 @@ import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 import silent from "../assets/Drowning_Infographic.png";
 import { ScrollView } from "react-native";
+import BackButton from "../components/BackButton";
+import MainButton from "../components/MainButton";
 
 export default function DrowningMM({ navigation }) {
     //NAV CALLBACK
@@ -23,9 +25,33 @@ export default function DrowningMM({ navigation }) {
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
+    const handleLastNav = () => {
+        navigation.navigate("PoisoningsMM");
+    }
+    const handleNextNav = () => {
+        navigation.navigate("CarSafetyMM");
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <MediaButton
+              text="Back to Media"
+              onPress={backToMedia}
+              txtColor={"black"}
+        ></MediaButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
 
@@ -36,28 +62,17 @@ export default function DrowningMM({ navigation }) {
     <Image style={styles.img} source={silent}/>
 
     <TouchableOpacity onPress={() => Linking.openURL('http://spotthedrowningchild.com/')}>
-         <Text style={styles.link}> Spot the Drowning Child, see just how hard it can be to see a drowning child </Text>
+         <Text style={styles.link}> See just how hard it can be to see a drowning child </Text>
     </TouchableOpacity>
 
     <View style={styles.buttons}>
 
-    <MediaButton
-          text="Back to Media"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
-
-    <MediaButton
+    <MainButton
           text="Go to Drowning"
           onPress={goToDrowning}
           txtColor={"black"}
-    ></MediaButton>
+    ></MainButton>
 
-    <MediaButton
-          text="Next Page"
-          onPress={backToMedia}
-          txtColor={"black"}
-    ></MediaButton>
     </View>
 </View>
 
@@ -81,6 +96,12 @@ const styles = StyleSheet.create({
     img: {
         height: 500,
         width: 320,
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     title: {
         // margin: 100,
@@ -116,8 +137,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 20,
-        marginBottom: 50
+        marginTop: 10,
+        marginBottom: 60,
     },
     link: {
         textDecorationLine:'underline',

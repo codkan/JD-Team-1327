@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image, Linking
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -13,6 +14,7 @@ import scaldIMG from "../assets/BurnsMM/scald.jpeg";
 import panIMG from "../assets/BurnsMM/pan.png";
 import smokeIMG from "../assets/BurnsMM/smoke.png";
 import outletIMG from "../assets/BurnsMM/outlet.png";
+import MMButton from "../components/MMButton";
 
 import CollapsibleBox from "../components/CollapsibleBox";
 
@@ -23,21 +25,42 @@ export default function Burns({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Falls");
     };
     const handleBurnSourcesNav = () => {
         navigation.navigate("BurningSources");
+    };
+    const handleBurnsMMNav = () => {
+        navigation.navigate("BurnsMM");
+    };
+    const handleNextNav = () => {
+        navigation.navigate("Poisonings");
+    };
+    const backToInfo = () => {
+        navigation.navigate("Info");
     };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
 
@@ -132,9 +155,17 @@ export default function Burns({ navigation }) {
         If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4].
     </Text>
 
+    <View style={styles.buttons}>
+
+    <MMButton
+        onPress={handleBurnsMMNav}
+    ></MMButton>
+
     <SourcesButton
         onPress={handleBurnSourcesNav}
     ></SourcesButton>
+
+    </View>
 
     </ScrollView>
 
@@ -157,6 +188,16 @@ const styles = StyleSheet.create({
         display: 'flex',
         marginLeft: 'auto',
         marginRight: 'auto',
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
+        display: "flex",
+        flexDirection: "row",
     },
     scaldImg: {
         height: 150,

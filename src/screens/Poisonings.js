@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpaci
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -12,27 +13,49 @@ import berries from "../assets/PoisoningsMM/berries.png";
 import house from "../assets/PoisoningsMM/house.png";
 import pills from "../assets/PoisoningsMM/Pill.png";
 import CollapsibleBox from "../components/CollapsibleBox";
+import MMButton from "../components/MMButton";
 
 export default function Poisonings({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Burns");
     };
     const handlePoisoningSourcesNav = () => {
         navigation.navigate("PoisoningSources");
+    };
+    const handlePoisoningMMNav = () => {
+        navigation.navigate("PoisoningsMM");
+    };
+    const handleNextNav = () => {
+        navigation.navigate("Drownings");
+    };
+    const backToInfo = () => {
+        navigation.navigate("Info");
     };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
     
     <ScrollView>
 
@@ -100,10 +123,16 @@ export default function Poisonings({ navigation }) {
             common among older buildings, so be sure to check if your home fits this criteria. {'\n'}
             </Text>
          </CollapsibleBox>
+
+        <View style={styles.buttons}>
+        <MMButton
+            onPress={handlePoisoningMMNav}
+        ></MMButton>
         
         <SourcesButton
             onPress={handlePoisoningSourcesNav}
         ></SourcesButton>
+        </View>
 
         
     </ScrollView>
@@ -121,16 +150,27 @@ const styles = StyleSheet.create({
     pillImg: {
         height: 150,
         width:130,
+        margin: 25,
     },
-
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
+        display: "flex",
+        flexDirection: "row",
+    },
     houseImg: {
         height: 150,
         width: 200,
+        margin: 25,
     },
-
     berriesImg: {
         height: 150,
         width: 250,
+        margin: 25,
     },
     image: {
         flex: 1,

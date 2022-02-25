@@ -3,6 +3,7 @@ import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "
 import MainButton from "../components/MainButton";
 import BackButton from "../components/BackButton";
 import SourcesButton from "../components/SourcesButton";
+import MediaButton from "../components/MediaButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -11,6 +12,8 @@ import { ScrollView } from "react-native";
 import car from "../assets/carSafetyMM/car.png";
 import carSeat from "../assets/carSafetyMM/carSeat.png";
 import belt from "../assets/carSafetyMM/belt.png";
+import CollapsibleBox from "../components/CollapsibleBox";
+import MMButton from "../components/MMButton";
 
 
 export default function Traffic({ navigation }) {
@@ -18,21 +21,42 @@ export default function Traffic({ navigation }) {
     const goHome = () => {
         navigation.pop();
     };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
+    const handleLastNav = () => {
+        navigation.navigate("Drownings");
     };
     const handleTrafficSourcesNav = () => {
         navigation.navigate("TrafficSources");
+    };
+    const handleCarsMMNav = () => {
+        navigation.navigate("CarSafetyMM");
+    };
+    const handleNextNav = () => {
+        navigation.navigate("ParentalHealth");
+    };
+    const backToInfo = () => {
+        navigation.navigate("Info");
     };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <BackButton
-        text="<"
-        txtColor={"black"}
-        onPress={handleInfoNav}
-    ></BackButton>
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <MediaButton
+              text="Back to Info"
+              onPress={backToInfo}
+              txtColor={"black"}
+        ></MediaButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
 
     <ScrollView>
 
@@ -53,7 +77,7 @@ export default function Traffic({ navigation }) {
 
     <Image style={styles.headimg} source={carSeat}/>
 
-    <Text style={styles.bullet}>1. Rear-facing carseats</Text>
+    <CollapsibleBox header="1. Rear-facing carseats" headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Used for infants and toddlers {'\n'}
         - All infants and toddlers should ride in these until they reach the highest weight or height limit of the seat {'\n'}
         - Most convertible rear-facing seats are built to allow children to ride rear-facing for 2 years or more {'\n'}
@@ -63,60 +87,68 @@ export default function Traffic({ navigation }) {
         - Never place a rear-facing carseat in the front seat where a passenger airbag is activated {'\n'}
         - Make sure the seat is angled correctly so that the head and neck are supported and not able to flop around {'\n'}
         - Should only be used for travel; never use for sleeping, feeding, etc outside of the vehicle {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>2. Forward-facing carseats </Text>
+    <CollapsibleBox header="2. Forward-facing carseats" headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Used for toddlers and preschoolers. This is the next seat up from a rear-facing carseat {'\n'}
         - Should always be worn with the attached harness for proper effectiveness {'\n'}
         - Many forward-facing carseats can accommodate children up to 65 pounds or more {'\n'}
         - All toddlers and preschoolers should ride in a forward-facing carseat until they outgrow the weight or height limit of the seat {'\n'}
         - Does not come with a carrying handle. These seats are intended to stay in the car at all times {'\n'}
         - Should only be used for travel; never use for sleeping, feeding, etc outside of the vehicle {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>3. Booster seat </Text>
+    <CollapsibleBox header="3. Booster seat" headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Used for school-aged children {'\n'}
         - Children within this category should use a booster seat with the seat belt until the seat belt fits properly without the need of the booster seat {'\n'}
         - Vehicle seat belts usually fit properly without a booster seat when the child has reached 4ft 9in and is between the ages of 8 to 12 {'\n'}
         - All children under the age of 13 should ride in the back seat regardless of height or weight {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>4. Seat belts </Text>
+    <CollapsibleBox header="4. Seat belts" headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Once a seat belt fits properly without the use of a booster seat, children should wear both the lap and shoulder belt at all times {'\n'}
         - Fits correctly when the should belt lies across the middle of the chest and shoulder, not the neck or throat {'\n'}
         - Fits correctly when the lap belt is low and snug across the upper thighs, not the belly {'\n'}
         - Never allow anyone to share seat belts. All passengers must have their own car safety seats or seat belts {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
 
     <Image style={styles.headimg} source={belt}/>
     <Text style={styles.subtitle}> Must-Dos while traveling </Text>
 
-    <Text style={styles.bullet}>1. Be a good role model </Text>
+    <CollapsibleBox header="1. Be a good role model" headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Make sure you always wear your seat belt. This will 
         help your child form a lifelong habit of buckling up. {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>2. Make sure that everyone who transports your child uses the 
-    correct car safety seat or seat belt on every trip, every time </Text>
+    <CollapsibleBox header="2. Make sure that everyone who transports your child uses the correct car safety seat or seat belt on every trip, every time"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Being consistent with car safety seat use is good parenting, 
         reduces fussing and complaints, and is safest for your child {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>3. Never leave your child alone in or around cars, and lock your 
-    vehicle when it is not in use </Text>
+    <CollapsibleBox header="3. Never leave your child alone in or around cars, and lock your vehicle when it is not in use"
+    headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- A child can die of heatstroke because temperatures can reach 
         deadly levels in minutes {'\n'}
         - A child can be strangled by power windows, retracting seat belts, sunroofs, or accessories {'\n'}
         - A child can knock the vehicle into gear, setting it into motion {'\n'}
         - A child can be backed over when the vehicle backs up {'\n'}
         - A child can be trapped in the trunk of the vehicle {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
-    <Text style={styles.bullet}>4. Follow manufacturer directions for cleaning car seats </Text>
+    <CollapsibleBox header="4. Follow manufacturer directions for cleaning car seats" headerstyle={styles.bullet}>
         <Text style={styles.subbullet}>- Cleaning but not disinfecting is usually permitted. That's 
         because disinfectant products may decrease the protection provided by the seat and harness {'\n'}
-    </Text>
+        </Text>
+    </CollapsibleBox>
 
     <Text style={styles.subtitle}> Things to avoid when shopping for carseats </Text>
         <Text style={styles.content}>
@@ -129,9 +161,15 @@ export default function Traffic({ navigation }) {
         Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website.
     </Text>
 
+    <View style={styles.buttons}>
+    <MMButton
+        onPress={handleCarsMMNav}
+    ></MMButton>
+
     <SourcesButton
         onPress={handleTrafficSourcesNav}
     ></SourcesButton>
+    </View>
 
     </ScrollView>
 
@@ -148,6 +186,16 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
+    },
+    buttons: {
+        display: "flex",
+        flexDirection: "row",
     },
     headimg: {
         height: 150,
