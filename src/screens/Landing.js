@@ -17,7 +17,7 @@ import videos from "../assets/landingCrayons/videos.png";
 import review from "../assets/landingCrayons/review.png";
 import game from "../assets/landingCrayons/game.png";
 import sources from "../assets/landingCrayons/sources.png";
-import aboutUs from "../assets/landingCrayons/aboutUs.png";
+import settings from "../assets/landingCrayons/settings.png";
 
 export default function Home({ navigation }) {
   const handleInfoNav = () => {
@@ -66,7 +66,7 @@ export default function Home({ navigation }) {
             <Image source={sources} style={styles.crayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleSettings1Nav}>
-            <Image source={aboutUs} style={styles.crayon}></Image>
+            <Image source={settings} style={styles.crayon}></Image>
         </TouchableOpacity>
         </View>
         <Navbar navigation={navigation}/>
