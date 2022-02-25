@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   crayon: {
     height:50,
     width:355,
-    marginBottom: 10,
+    marginTop: 20,
     //resizeMode: "cover",
     //justifyContent: "center",
   },
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     top: 70,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 90,
+    marginTop: 70,
   },
     button: {
       height: 50,
