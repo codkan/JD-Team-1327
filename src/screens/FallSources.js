@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, ScrollView } from "react-native";
 import MainButton from "../components/MainButton";
+import MediaButton from "../components/MediaButton";
+import BackButton from "../components/BackButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
-import fallsources from "../assets/fall-sources.png";
 
 export default function FallSources({ navigation }) {
     //NAV CALLBACK
@@ -17,19 +18,35 @@ export default function FallSources({ navigation }) {
     };
     const goToFalls = () => {
         navigation.navigate("Falls");
-    }
+    };
     const backToSources = () => {
         navigation.navigate("Sources");
-    }
+    };
+    const handleNextNav = () => {
+        navigation.navigate("BurningSources");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <Image style={styles.srcimg} source={fallsources}/>
+    <View style={styles.btns}>
+        <MediaButton
+              text="Back to Sources"
+              onPress={backToSources}
+              txtColor={"black"}
+        ></MediaButton>
+        <BackButton
+            text=">"
+            txtColor={"black"}
+            onPress={handleNextNav}
+        ></BackButton>
+    </View>
+
+<ScrollView>
 
     <Text style={styles.title}> Fall Sources: </Text>
 
-<View style={styles.container}>
+    <View style={styles.container}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children')}>
          <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Stanford Children Accident Statistics </Text>
@@ -78,13 +95,8 @@ export default function FallSources({ navigation }) {
           onPress={goToFalls}
           txtColor={"black"}
     ></MainButton>
-
-    <MainButton
-          text="Back to Sources"
-          onPress={backToSources}
-          txtColor={"black"}
-    ></MainButton>
     </View>
+</ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -100,12 +112,11 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    srcimg: {
-        height: 100,
-        width: 100,
-        position: "absolute",
-        top: 5,
-        right: 0,
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     title: {
         // margin: 100,
