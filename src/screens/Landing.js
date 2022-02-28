@@ -14,10 +14,10 @@ import Navbar from "../components/NavBar";
 import disclaim from "../assets/info.png";
 import info from "../assets/landingCrayons/info.png";
 import videos from "../assets/landingCrayons/videos.png";
-import review from "../assets/landingCrayons/review.png";
+import review from "../assets/landingCrayons/review1.png";
 import game from "../assets/landingCrayons/game.png";
 import sources from "../assets/landingCrayons/sources.png";
-import aboutUs from "../assets/landingCrayons/aboutUs.png";
+import aboutUs from "../assets/landingCrayons/aboutUs1.png";
 
 export default function Home({ navigation }) {
   const handleInfoNav = () => {
