@@ -11,6 +11,9 @@ export default function About({ navigation }) {
   const goHome = () => {
     navigation.pop();
   };
+  const reviewFalls = () => {
+    navigation.navigate("FallsR");
+  };
 
   return (
     <ImageBackground source={Background} style={styles.image}>
@@ -19,6 +22,7 @@ export default function About({ navigation }) {
     <MainButton
       text="Falls"
       txtColor={"black"}
+      onPress={reviewFalls}
     ></MainButton>
     <MainButton
       text="Burns"
@@ -33,11 +37,11 @@ export default function About({ navigation }) {
       txtColor={"black"}
     ></MainButton>
     <MainButton
-      text="Road Traffic"
+      text="Car Safety"
       txtColor={"black"}
     ></MainButton>
     <MainButton
-      text="Badges"
+      text="Parental Health"
       txtColor={"black"}
     ></MainButton>
     </View>

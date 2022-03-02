@@ -17,7 +17,7 @@ import videos from "../assets/landingCrayons/videos.png";
 import review from "../assets/landingCrayons/review1.png";
 import game from "../assets/landingCrayons/game.png";
 import sources from "../assets/landingCrayons/sources.png";
-import aboutUs from "../assets/landingCrayons/aboutUs1.png";
+import settings from "../assets/landingCrayons/settings.png";
 
 export default function Home({ navigation }) {
   const handleInfoNav = () => {
@@ -66,7 +66,7 @@ export default function Home({ navigation }) {
             <Image source={sources} style={styles.crayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleSettings1Nav}>
-            <Image source={aboutUs} style={styles.crayon}></Image>
+            <Image source={settings} style={styles.crayon}></Image>
         </TouchableOpacity>
         </View>
         <Navbar navigation={navigation}/>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   crayon: {
     height:50,
     width:355,
-    marginBottom: 10,
+    marginTop: 20,
     //resizeMode: "cover",
     //justifyContent: "center",
   },
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     top: 70,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 90,
+    marginTop: 70,
   },
     button: {
       height: 50,

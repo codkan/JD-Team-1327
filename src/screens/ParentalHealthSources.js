@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking } from "react-native";
+import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, ScrollView } from "react-native";
 import MainButton from "../components/MainButton";
+import MediaButton from "../components/MediaButton";
+import BackButton from "../components/BackButton";
 import { get } from "../Db";
 import Background from "../assets/bg.png";
 import { Audio } from "expo-av";
@@ -20,9 +22,28 @@ export default function ParentalHealth({ navigation }) {
     const backToSources = () => {
         navigation.navigate("Sources");
     }
+    const handleLastNav = () => {
+        navigation.navigate("DrowningSources");
+    };
 
     return (
     <ImageBackground source={Background} style={styles.image}>
+
+    <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={handleLastNav}
+        ></BackButton>
+        <MediaButton
+              text="Back to Sources"
+              onPress={backToSources}
+              txtColor={"black"}
+        ></MediaButton>
+    </View>
+
+<ScrollView>
+
     <Text style={styles.title}> Parental Health Sources: </Text>
     <Text> {'\n'} </Text>
 
@@ -45,13 +66,8 @@ export default function ParentalHealth({ navigation }) {
           onPress={goToParentalHealth}
           txtColor={"black"}
     ></MainButton>
-
-    <MainButton
-          text="Back to Sources"
-          onPress={backToSources}
-          txtColor={"black"}
-    ></MainButton>
     </View>
+</ScrollView>
 
     <View style = {styles.pushdown}>
     <Navbar navigation={navigation}/>
@@ -66,6 +82,12 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+    btns: {
+        display: "flex",
+        flexDirection: "row",
+        marginHorizontal: 20,
+        justifyContent: "space-between",
     },
     title: {
         // margin: 100,

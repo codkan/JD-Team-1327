@@ -150,7 +150,8 @@ const styles = StyleSheet.create({
     pillImg: {
         height: 150,
         width:130,
-        margin: 25,
+        alignSelf: "center",
+        marginTop: 20,
     },
     btns: {
         display: "flex",
@@ -165,12 +166,14 @@ const styles = StyleSheet.create({
     houseImg: {
         height: 150,
         width: 200,
-        margin: 25,
+        alignSelf: "center",
+        margin: 20,
     },
     berriesImg: {
         height: 150,
         width: 250,
-        margin: 25,
+        alignSelf: "center",
+        marginBottom: 20,
     },
     image: {
         flex: 1,
