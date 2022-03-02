@@ -4,7 +4,7 @@ import { color } from "react-native-reanimated";
 
 export default function QuizButton({ text, onPress, title }) {
 
-    const [buttonColor, setButtonColor] = useState('"rgba(196,196,196,1)"');
+    const [buttonColor, setButtonColor] = useState('white');
 
     const changeButtonColor = () => {
       if (title === "correct") {
@@ -25,7 +25,7 @@ export default function QuizButton({ text, onPress, title }) {
 
 const styles = StyleSheet.create({
   button: {
-    height: 60,
+    height: 70,
     width: 345,
     borderRadius: 10,
     paddingTop: 5,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
-    marginVertical: 20,
+    marginVertical: 10,
   },
   buttonText: {
     fontStyle: "normal",

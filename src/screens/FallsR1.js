@@ -15,6 +15,9 @@ export default function FallsR({ navigation }) {
   const goHome = () => {
     navigation.pop();
   };
+  const lastQ = () => {
+    navigation.navigate("FallsR");
+  };
   const backToReview = () => {
     navigation.navigate("Review");
   };
@@ -29,6 +32,11 @@ export default function FallsR({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
 
     <View style={styles.btns}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={lastQ}
+        ></BackButton>
         <MediaButton
               text="Back to Review"
               onPress={backToReview}
@@ -41,23 +49,23 @@ export default function FallsR({ navigation }) {
         ></BackButton>
     </View>
 
-    <Text style={styles.title}> Question 1 </Text>
+    <Text style={styles.title}> Question 2 </Text>
     <Text> {'\n'} </Text>
-    <Text style={styles.subtitle}> Where are infants most likely to fall? </Text>
+    <Text style={styles.subtitle}> Where can you place a child when secured in a carrier? </Text>
 
     <View style={styles.buttonContainer}>
     <QuizButton
+      text="Counter"
+    ></QuizButton>
+    <QuizButton
+      text="Table"
+    ></QuizButton>
+    <QuizButton
+      text="Furniture"
+    ></QuizButton>
+    <QuizButton
       title="correct"
-      text="Furniture / Stairs"
-    ></QuizButton>
-    <QuizButton
-      text="Windows"
-    ></QuizButton>
-    <QuizButton
-      text="Playground"
-    ></QuizButton>
-    <QuizButton
-      text="Stroller"
+      text="Floor"
     ></QuizButton>
     </View>
 

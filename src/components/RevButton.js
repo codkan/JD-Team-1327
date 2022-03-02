@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { color } from "react-native-reanimated";
 
-export default function MainButton({ text, onPress }) {
+export default function RevButton({ text, onPress }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
@@ -11,9 +11,7 @@ export default function MainButton({ text, onPress }) {
     </TouchableOpacity>
   );
 }
-MainButton.defaultProps = {
-  color: "black"
-}
+
 const styles = StyleSheet.create({
   button: {
     height: 50,
