@@ -3,6 +3,7 @@ import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
+import { CoreStyle } from "../components/CoreStyle";
 
 export default function About({ navigation }) {
   //NAV CALLBACK
@@ -75,7 +76,7 @@ export default function About({ navigation }) {
           ></MainButton>
 
         </View>
-      <View style = {styles.pushdown} >
+      <View style = {CoreStyle.pushdown} >
       <Navbar navigation={navigation}/>
       </View>
     </ImageBackground>
@@ -108,17 +109,6 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       textAlign: "center",
   },
-
-  pushdown: {
-      position: 'absolute',
-      width: '100%',
-      bottom: 0,
-      left: 0,
-      right: 0,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: "#C4C4C4",
-   },
 
   /* rectangle: {
     width: Constants.MAX_WIDTH,

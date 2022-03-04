@@ -6,6 +6,7 @@ import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
+import { CoreStyle } from "../components/CoreStyle";
 
 export default function FallsR({ navigation }) {
   //NAV CALLBACK
@@ -25,7 +26,7 @@ export default function FallsR({ navigation }) {
   return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <View style={styles.btns}>
+    <View style={CoreStyle.topnavbuttons}>
         <MediaButton
               text="Back to Review"
               onPress={backToReview}
@@ -38,9 +39,9 @@ export default function FallsR({ navigation }) {
         ></BackButton>
     </View>
 
-    <Text style={styles.title}> Question 1 </Text>
+    <Text style={CoreStyle.title}> Question 1 </Text>
     <Text> {'\n'} </Text>
-    <Text style={styles.subtitle}> Where are infants most likely to fall? </Text>
+    <Text style={CoreStyle.subtitle}> Where are infants most likely to fall? </Text>
 
     <View style={styles.buttonContainer}>
     <QuizButton
@@ -65,7 +66,7 @@ export default function FallsR({ navigation }) {
     ></MainButton>
     </View>
 
-    <View style = {styles.pushdown}>
+    <View style = {CoreStyle.pushdown}>
     <Navbar navigation={navigation}/>
     </View>
 
@@ -79,27 +80,6 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
-    btns: {
-        display: "flex",
-        flexDirection: "row",
-        marginHorizontal: 20,
-        justifyContent: "space-between",
-    },
-  title: {
-    // margin: 100,
-    //height: 70,
-    fontSize: 40,
-    marginTop: 0,
-    //marginBottom: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-    textDecorationLine: "underline"
-  },
-  subtitle: {
-    fontSize: 24,
-    textAlign: "center",
-    fontWeight: "bold",
-  },
   container: {
     flex: 1,
     flexDirection: "row",
@@ -112,14 +92,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 75,
   },
-   pushdown: {
-    position: 'absolute',
-    width: '100%',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: "#C4C4C4",
-   },
 });

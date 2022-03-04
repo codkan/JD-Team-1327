@@ -5,6 +5,7 @@ import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
+import { CoreStyle } from "../components/CoreStyle";
 
 export default function Falls1({ navigation }) {
     //NAV CALLBACK
@@ -30,7 +31,7 @@ export default function Falls1({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <View style={styles.btns}>
+    <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
             txtColor={"black"}
@@ -50,7 +51,7 @@ export default function Falls1({ navigation }) {
 
 <ScrollView>
 
-    <Text style={styles.title}> Drownings Sources: </Text>
+    <Text style={CoreStyle.title}> Drownings Sources: </Text>
 
 <View style={styles.container}>
 
@@ -76,7 +77,7 @@ export default function Falls1({ navigation }) {
     </View>
 </ScrollView>
 
-    <View style = {styles.pushdown}>
+    <View style = {CoreStyle.pushdown}>
     <Navbar navigation={navigation}/>
     </View>
 
@@ -90,31 +91,10 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    btns: {
-        display: "flex",
-        flexDirection: "row",
-        marginHorizontal: 20,
-        justifyContent: "space-between",
-    },
-    title: {
-        // margin: 100,
-        //height: 70,
-        fontSize: 40,
-        marginBottom: 15,
-        fontWeight: "bold",
-        textAlign: "center",
-        textDecorationLine: "underline"
-    },
-    subtitle: {
-        fontSize: 24,
-        marginBottom: 20,
-        textAlign: "center",
-        fontWeight: "bold",
-    },
-    content: {
-        fontSize: 16,
-        marginBottom: 20,
-    },
+    
+    
+    
+    
     page: {
         fontSize: 18,
         textAlign: "center",
@@ -124,14 +104,5 @@ const styles = StyleSheet.create({
     container: {
         alignItems: "center",
     },
-    pushdown: {
-        position: 'absolute',
-        width: '100%',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: "#C4C4C4",
-    },
+    
 });

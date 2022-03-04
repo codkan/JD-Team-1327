@@ -6,6 +6,7 @@ import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
+import { CoreStyle } from "../components/CoreStyle";
 
 export default function ParentalHealthMM({ navigation }) {
     //NAV CALLBACK
@@ -28,7 +29,7 @@ export default function ParentalHealthMM({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <View style={styles.btns}>
+    <View style={CoreStyle.topnavbuttons}>
     <BackButton
         text="<"
         txtColor={"black"}
@@ -44,7 +45,7 @@ export default function ParentalHealthMM({ navigation }) {
 
     <ScrollView>
 
-    <Text style={styles.title}> Parental Health </Text>
+    <Text style={CoreStyle.title}> Parental Health </Text>
 
 <View style={styles.container}>
 
@@ -62,7 +63,7 @@ export default function ParentalHealthMM({ navigation }) {
 </View>
 </ScrollView>
 
-    <View style = {styles.pushdown}>
+    <View style = {CoreStyle.pushdown}>
     <Navbar navigation={navigation}/>
     </View>
 
@@ -78,32 +79,10 @@ const styles = StyleSheet.create({
         height: 520,
         width: 335,
     },
-    btns: {
-        display: "flex",
-        flexDirection: "row",
-        marginHorizontal: 20,
-        justifyContent: "space-between",
-    },
-    title: {
-        // margin: 100,
-        //height: 70,
-        fontSize: 40,
-        marginBottom: 10,
-        marginTop: 0,
-        fontWeight: "bold",
-        textAlign: "center",
-        textDecorationLine: "underline"
-    },
-    subtitle: {
-        fontSize: 24,
-        marginBottom: 20,
-        textAlign: "center",
-        fontWeight: "bold",
-    },
-    content: {
-        fontSize: 16,
-        marginBottom: 20,
-    },
+    
+    
+    
+    
     page: {
         fontSize: 18,
         textAlign: "center",
@@ -126,14 +105,5 @@ const styles = StyleSheet.create({
         color:'blue',
         margin: 10,
     },
-    pushdown: {
-        position: 'absolute',
-        width: '100%',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: "#C4C4C4",
-    },
+    
 });
