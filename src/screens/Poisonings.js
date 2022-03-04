@@ -10,6 +10,7 @@ import MediaButton from "../components/MediaButton";
 import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
+import { CoreStyle } from "../components/CoreStyle";
 
 export default function Poisonings({ navigation }) {
     //NAV CALLBACK
@@ -35,7 +36,7 @@ export default function Poisonings({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <View style={styles.btns}>
+    <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
             txtColor={"black"}
@@ -55,12 +56,12 @@ export default function Poisonings({ navigation }) {
     
     <ScrollView>
 
-    <Text style={styles.title}> Poisonings  </Text>
+    <Text style={CoreStyle.title}> Poisonings  </Text>
 
 
 
-    <Text style={styles.subtitle}> How common is it? </Text>
-        <Text style={styles.content}>
+    <Text style={CoreStyle.subtitle}> How common is it? </Text>
+        <Text style={CoreStyle.content}>
         {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below,
          with over 250,000 of these being for children aged 2 and under
          . Children 6 and under are disproportionately at risk for poisonings, as statistics from Poison Control show that 
@@ -70,8 +71,8 @@ export default function Poisonings({ navigation }) {
         </Text>
         
 
-    <Text style={styles.subtitle}> How can we prevent it? </Text>
-        <Text style={styles.content}>
+    <Text style={CoreStyle.subtitle}> How can we prevent it? </Text>
+        <Text style={CoreStyle.content}>
         {'\t'} Findings show that doing seemingly small things, such as ensuring that medicines are stored out 
         of reach or putting them away immediately after use, could reduce the amount of poisonings per year between 11% and 20%.
          Overall, the majority of practices to prevent poisonings come down to caretakers having more awareness and being more 
@@ -80,9 +81,9 @@ export default function Poisonings({ navigation }) {
         {'\n'}
         </Text>
 
-        <CollapsibleBox header="1. Be cognizant of where you leave all medicine and pill bottles" headerstyle={styles.bullet}>
+        <CollapsibleBox header="1. Be cognizant of where you leave all medicine and pill bottles" headerstyle={CoreStyle.bullet}>
             <Image style={styles.pillImg} source={pills}/> 
-            <Text style={styles.subbullet}> - Keep medicines in their original containers. People can often lose track medicine if they switch the container 
+            <Text style={CoreStyle.subbullet}> - Keep medicines in their original containers. People can often lose track medicine if they switch the container 
             it is in which can lead to the accidental ingestion of medicine. {'\n'}
             - Keep medicines and other dangerous substances at a height above eye level for children.
             Children will often grab anything that appeals to them, so keeping potentially harmful substances out of their range of view 
@@ -92,17 +93,17 @@ export default function Poisonings({ navigation }) {
             </Text>
          </CollapsibleBox>
         
-         <CollapsibleBox header="2. Be aware of potentially dangerous materials being left around children" headerstyle={styles.bullet}>
+         <CollapsibleBox header="2. Be aware of potentially dangerous materials being left around children" headerstyle={CoreStyle.bullet}>
             <Image style={styles.houseImg} source={house}/>
-            <Text style={styles.subbullet}> - Put away all potential hazardous materials right after use to ensure a 
+            <Text style={CoreStyle.subbullet}> - Put away all potential hazardous materials right after use to ensure a 
             child does not have time to take themselves. A large portion of poisonings occur due to parents or caretakers
             being careless and unaware of the dangerous things left around their children. Being more careful about putting 
             things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items. </Text>
         </CollapsibleBox>
         
-        <CollapsibleBox header="3. Ensure that you are familiar with all potential dangers both inside and outside the home " headerstyle={styles.bullet}> 
+        <CollapsibleBox header="3. Ensure that you are familiar with all potential dangers both inside and outside the home " headerstyle={CoreStyle.bullet}> 
             <Image style={styles.berriesImg} source={berries}/>
-            <Text style={styles.subbullet}> - Make sure all natural gas based appliances are functioning correctly. 
+            <Text style={CoreStyle.subbullet}> - Make sure all natural gas based appliances are functioning correctly. 
             As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the 
             chance of poisonings for both children and adults. {'\n'}
             - Ensure that you have functioning carbon monoxide and smoke detectors.
@@ -134,7 +135,7 @@ export default function Poisonings({ navigation }) {
     </ScrollView>
 
 
-    <View style = {styles.pushdown}>
+    <View style = {CoreStyle.pushdown}>
     <Navbar navigation={navigation}/>
     </View>
 
@@ -149,12 +150,7 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         marginTop: 20,
     },
-    btns: {
-        display: "flex",
-        flexDirection: "row",
-        marginHorizontal: 20,
-        justifyContent: "space-between",
-    },
+    
     buttons: {
         display: "flex",
         flexDirection: "row",
@@ -175,22 +171,7 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
-    },
-    title: {
-        // margin: 100,
-        //height: 70,
-        fontSize: 40,
-        marginBottom: 15,
-        fontWeight: "bold",
-        textAlign: "center",
-        textDecorationLine: "underline"
-    },
-    subtitle: {
-        fontSize: 24,
-        marginBottom: 20,
-        textAlign: "center",
-        fontWeight: "bold",
-    },
+    }, 
     content: {
         fontSize: 16,
         marginBottom: 15,
@@ -205,26 +186,5 @@ const styles = StyleSheet.create({
     },
     container: {
         alignItems: "center",
-    },
-    pushdown: {
-        position: 'absolute',
-        width: '100%',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: "#C4C4C4",
-    },
-    bullet: {
-        fontSize: 20,
-        fontWeight: "bold",
-        marginLeft: 5,
-        marginRight: 5
-    },
-    subbullet: {
-        fontSize: 16,
-        marginLeft: 30,
-        marginRight: 10,
-    },
+    },    
 });

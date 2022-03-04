@@ -10,6 +10,7 @@ import MediaButton from "../components/MediaButton";
 import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
+import { CoreStyle } from "../components/CoreStyle";
 
 
 export default function Traffic({ navigation }) {
@@ -36,7 +37,7 @@ export default function Traffic({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <View style={styles.btns}>
+    <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
             txtColor={"black"}
@@ -58,10 +59,10 @@ export default function Traffic({ navigation }) {
 
     <Image style={styles.headimg} source={car}/>
 
-    <Text style={styles.title}> Car Safety </Text>
-    <Text style={styles.subtitle}> Why is Car Safety So Important? </Text>
+    <Text style={CoreStyle.title}> Car Safety </Text>
+    <Text style={CoreStyle.subtitle}> Why is Car Safety So Important? </Text>
 
-    <Text style={styles.content}>
+    <Text style={CoreStyle.content}>
         {'\t'} Driving a car can already be a scary task for some people; you are manuevering a thousand-pound
         hunk of metal and responsible for the lives of drivers and passengers around you. Now you are adding the
         life of your child. Car safety, however, is there to ensure that you and your child stay as safe as possible 
@@ -69,12 +70,12 @@ export default function Traffic({ navigation }) {
         tips for parents on how to be good car safety role models, and things to avoid. {'\n'}
     </Text>
 
-    <Text style={styles.subtitle}> Types of Car Seats </Text>
+    <Text style={CoreStyle.subtitle}> Types of Car Seats </Text>
 
     <Image style={styles.headimg} source={carSeat}/>
 
-    <CollapsibleBox header="1. Rear-facing carseats" headerstyle={styles.bullet}>
-        <Text style={styles.subbullet}>- Used for infants and toddlers {'\n'}
+    <CollapsibleBox header="1. Rear-facing carseats" headerstyle={CoreStyle.bullet}>
+        <Text style={CoreStyle.subbullet}>- Used for infants and toddlers {'\n'}
         - All infants and toddlers should ride in these until they reach the highest weight or height limit of the seat {'\n'}
         - Most convertible rear-facing seats are built to allow children to ride rear-facing for 2 years or more {'\n'}
         - Usually comes with a base that stays in the car in place. The seat clicks into and out of the base for easy installation {'\n'}
@@ -86,8 +87,8 @@ export default function Traffic({ navigation }) {
         </Text>
     </CollapsibleBox>
 
-    <CollapsibleBox header="2. Forward-facing carseats" headerstyle={styles.bullet}>
-        <Text style={styles.subbullet}>- Used for toddlers and preschoolers. This is the next seat up from a rear-facing carseat {'\n'}
+    <CollapsibleBox header="2. Forward-facing carseats" headerstyle={CoreStyle.bullet}>
+        <Text style={CoreStyle.subbullet}>- Used for toddlers and preschoolers. This is the next seat up from a rear-facing carseat {'\n'}
         - Should always be worn with the attached harness for proper effectiveness {'\n'}
         - Many forward-facing carseats can accommodate children up to 65 pounds or more {'\n'}
         - All toddlers and preschoolers should ride in a forward-facing carseat until they outgrow the weight or height limit of the seat {'\n'}
@@ -96,16 +97,16 @@ export default function Traffic({ navigation }) {
         </Text>
     </CollapsibleBox>
 
-    <CollapsibleBox header="3. Booster seat" headerstyle={styles.bullet}>
-        <Text style={styles.subbullet}>- Used for school-aged children {'\n'}
+    <CollapsibleBox header="3. Booster seat" headerstyle={CoreStyle.bullet}>
+        <Text style={CoreStyle.subbullet}>- Used for school-aged children {'\n'}
         - Children within this category should use a booster seat with the seat belt until the seat belt fits properly without the need of the booster seat {'\n'}
         - Vehicle seat belts usually fit properly without a booster seat when the child has reached 4ft 9in and is between the ages of 8 to 12 {'\n'}
         - All children under the age of 13 should ride in the back seat regardless of height or weight {'\n'}
         </Text>
     </CollapsibleBox>
 
-    <CollapsibleBox header="4. Seat belts" headerstyle={styles.bullet}>
-        <Text style={styles.subbullet}>- Once a seat belt fits properly without the use of a booster seat, children should wear both the lap and shoulder belt at all times {'\n'}
+    <CollapsibleBox header="4. Seat belts" headerstyle={CoreStyle.bullet}>
+        <Text style={CoreStyle.subbullet}>- Once a seat belt fits properly without the use of a booster seat, children should wear both the lap and shoulder belt at all times {'\n'}
         - Fits correctly when the should belt lies across the middle of the chest and shoulder, not the neck or throat {'\n'}
         - Fits correctly when the lap belt is low and snug across the upper thighs, not the belly {'\n'}
         - Never allow anyone to share seat belts. All passengers must have their own car safety seats or seat belts {'\n'}
@@ -114,24 +115,24 @@ export default function Traffic({ navigation }) {
 
 
     <Image style={styles.headimg} source={belt}/>
-    <Text style={styles.subtitle}> Must-Dos while traveling </Text>
+    <Text style={CoreStyle.subtitle}> Must-Dos while traveling </Text>
 
-    <CollapsibleBox header="1. Be a good role model" headerstyle={styles.bullet}>
-        <Text style={styles.subbullet}>- Make sure you always wear your seat belt. This will 
+    <CollapsibleBox header="1. Be a good role model" headerstyle={CoreStyle.bullet}>
+        <Text style={CoreStyle.subbullet}>- Make sure you always wear your seat belt. This will 
         help your child form a lifelong habit of buckling up. {'\n'}
         </Text>
     </CollapsibleBox>
 
     <CollapsibleBox header="2. Make sure that everyone who transports your child uses the correct car safety seat or seat belt on every trip, every time"
-    headerstyle={styles.bullet}>
-        <Text style={styles.subbullet}>- Being consistent with car safety seat use is good parenting, 
+    headerstyle={CoreStyle.bullet}>
+        <Text style={CoreStyle.subbullet}>- Being consistent with car safety seat use is good parenting, 
         reduces fussing and complaints, and is safest for your child {'\n'}
         </Text>
     </CollapsibleBox>
 
     <CollapsibleBox header="3. Never leave your child alone in or around cars, and lock your vehicle when it is not in use"
-    headerstyle={styles.bullet}>
-        <Text style={styles.subbullet}>- A child can die of heatstroke because temperatures can reach 
+    headerstyle={CoreStyle.bullet}>
+        <Text style={CoreStyle.subbullet}>- A child can die of heatstroke because temperatures can reach 
         deadly levels in minutes {'\n'}
         - A child can be strangled by power windows, retracting seat belts, sunroofs, or accessories {'\n'}
         - A child can knock the vehicle into gear, setting it into motion {'\n'}
@@ -140,14 +141,14 @@ export default function Traffic({ navigation }) {
         </Text>
     </CollapsibleBox>
 
-    <CollapsibleBox header="4. Follow manufacturer directions for cleaning car seats" headerstyle={styles.bullet}>
-        <Text style={styles.subbullet}>- Cleaning but not disinfecting is usually permitted. That's 
+    <CollapsibleBox header="4. Follow manufacturer directions for cleaning car seats" headerstyle={CoreStyle.bullet}>
+        <Text style={CoreStyle.subbullet}>- Cleaning but not disinfecting is usually permitted. That's 
         because disinfectant products may decrease the protection provided by the seat and harness {'\n'}
         </Text>
     </CollapsibleBox>
 
-    <Text style={styles.subtitle}> Things to avoid when shopping for carseats </Text>
-        <Text style={styles.content}>
+    <Text style={CoreStyle.subtitle}> Things to avoid when shopping for carseats </Text>
+        <Text style={CoreStyle.content}>
         {'\t'} Never use a carseat that is too old. The manufacturer will make a note of how long the 
         carseat can be used and when it was made. If a carseat has any visible cracks on it, it is unuseable 
         and can cause more harm than good to your child. Carseats should also be replaced after any moderate or severe crash. 
@@ -169,7 +170,7 @@ export default function Traffic({ navigation }) {
 
     </ScrollView>
 
-    <View style = {styles.pushdown}>
+    <View style = {CoreStyle.pushdown}>
     <Navbar navigation={navigation}/>
     </View>
 
@@ -183,12 +184,7 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    btns: {
-        display: "flex",
-        flexDirection: "row",
-        marginHorizontal: 20,
-        justifyContent: "space-between",
-    },
+    
     buttons: {
         display: "flex",
         flexDirection: "row",
@@ -198,52 +194,16 @@ const styles = StyleSheet.create({
         width: 150,
         alignSelf: "center",
     },
-    title: {
-        // margin: 100,
-        //height: 70,
-        fontSize: 40,
-        marginBottom: 15,
-        fontWeight: "bold",
-        textAlign: "center",
-        textDecorationLine: "underline"
-    },
-    subtitle: {
-        fontSize: 24,
-        marginBottom: 20,
-        textAlign: "center",
-        fontWeight: "bold",
-    },
-    content: {
-        fontSize: 16,
-        marginBottom: 20,
-        marginLeft: 15,
-        marginRight: 15,
-    },
-    bullet: {
-        fontSize: 20,
-        fontWeight: "bold",
-        marginLeft: 5,
-        marginRight: 5
-    },
-    subbullet: {
-        fontSize: 16,
-        marginLeft: 30,
-        marginRight: 10,
-    },
+    
+    
+    
+    
+    
     page: {
         fontSize: 18,
         textAlign: "center",
         marginTop: 50,
         fontStyle: "italic",
     },
-    pushdown: {
-        position: 'absolute',
-        width: '100%',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: "#C4C4C4",
-    },
+    
 });

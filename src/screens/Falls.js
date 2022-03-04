@@ -15,6 +15,7 @@ import MediaButton from "../components/MediaButton";
 import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
+import { CoreStyle } from "../components/CoreStyle";
 
 
 export default function Falls({ navigation }) {
@@ -38,7 +39,7 @@ export default function Falls({ navigation }) {
     return (
     <ImageBackground source={Background} style={styles.image}>
 
-    <View style={styles.btns}>
+    <View style={CoreStyle.topnavbuttons}>
         <MediaButton
               text="Back to Info"
               onPress={backToInfo}
@@ -55,10 +56,10 @@ export default function Falls({ navigation }) {
 
     <Image style={styles.headimg} source={falls}/>
 
-    <Text style={styles.title}> Falls </Text>
+    <Text style={CoreStyle.title}> Falls </Text>
 
-    <Text style={styles.subtitle}> Why are falls important? </Text>
-        <Text style={styles.content}>
+    <Text style={CoreStyle.subtitle}> Why are falls important? </Text>
+        <Text style={CoreStyle.content}>
         {'\t'} Falls are the leading cause of hospitalized injury in the U.S. for children ages 0 to 14. [1]
          In fact, over 2 million children ages 14 and under are estimated to receive treatment for fall injuries annually. [2]
          Though these injuries are even more prevalent and severe for younger age groups. According
@@ -66,8 +67,8 @@ export default function Falls({ navigation }) {
          ages 0 to 4 with over 50% of total nonfatal injuries to infants under one being attributed to falls. [3] {'\n'}
     </Text>
 
-    <Text style={styles.subtitle}> When and where do falls occur? </Text>
-        <Text style={styles.content}>
+    <Text style={CoreStyle.subtitle}> When and where do falls occur? </Text>
+        <Text style={CoreStyle.content}>
         {'\t'} The different circumstances for falls vary largely between infants and older toddlers
         considering their differing mobility. Infants are most likely to fall from furniture/toys and
         stairs while they are unable to walk, while toddlers and older children are more likely to fall
@@ -75,11 +76,11 @@ export default function Falls({ navigation }) {
         </Text>
 
 
-<Text style={styles.subtitle}> 5 Steps to Prevent Falls </Text>
+<Text style={CoreStyle.subtitle}> 5 Steps to Prevent Falls </Text>
 
-<CollapsibleBox header="1. Be mindful with infants, even when secured" headerstyle={styles.bullet}>
+<CollapsibleBox header="1. Be mindful with infants, even when secured" headerstyle={CoreStyle.bullet}>
     <Image style={styles.roundpic} source={secure}/>
-    <Text style={styles.subbullet}>- Whenever high chairs, infant carriers, car-seats, swings, or strollers are in use,
+    <Text style={CoreStyle.subbullet}>- Whenever high chairs, infant carriers, car-seats, swings, or strollers are in use,
     always keep infants and young children strapped in and secure. {'\n'}
     - Even when your child is secured in a carrier, NEVER place it on top of a counter, table, or other
       furniture. Place it on the floor so that the child cannot rock itself off or be pulled/pushed by other siblings. {'\n'}
@@ -92,9 +93,9 @@ export default function Falls({ navigation }) {
     </Text>
 </CollapsibleBox>
 
-<CollapsibleBox header="2. Prevent dangerous falls for crawlers at home" headerstyle={styles.bullet}>
+<CollapsibleBox header="2. Prevent dangerous falls for crawlers at home" headerstyle={CoreStyle.bullet}>
     <Image style={styles.roundpic} source={stairs}/>
-    <Text style={styles.subbullet}>- Stairs are one of the most dangerous places for young children, so use
+    <Text style={CoreStyle.subbullet}>- Stairs are one of the most dangerous places for young children, so use
     safety gates approved for both the tops & bottoms of stairs and, if possible, attach them to the wall. {'\n'}
     - Even with safety gates, infants and toddlers should always be closely supervised on or near stairs.{'\n'}
     - Children can easily fall elsewhere around the house, keep hallways, as well as stairs, well-lit and
@@ -104,9 +105,9 @@ export default function Falls({ navigation }) {
     </Text>
 </CollapsibleBox>
 
-<CollapsibleBox header="3. Close, lock, and guard windows from toddlers" headerstyle={styles.bullet}>
+<CollapsibleBox header="3. Close, lock, and guard windows from toddlers" headerstyle={CoreStyle.bullet}>
     <Image style={styles.roundpic} source={window}/>
-    <Text style={styles.subbullet}>- Keep younger children and climbable furniture away from windows. {'\n'}
+    <Text style={CoreStyle.subbullet}>- Keep younger children and climbable furniture away from windows. {'\n'}
     - If your windows open from the top and bottom, open only the top to prevent falls. Though be
       mindful that children may grow strong enough to open the bottom {'\n'}
     - When not in use, never forget to not only close but LOCK windows. {'\n'}
@@ -116,9 +117,9 @@ export default function Falls({ navigation }) {
     </Text>
 </CollapsibleBox>
 
-<CollapsibleBox header="4. Baby-proof furniture & protect climbers from tip-overs" headerstyle={styles.bullet}>
+<CollapsibleBox header="4. Baby-proof furniture & protect climbers from tip-overs" headerstyle={CoreStyle.bullet}>
     <Image style={styles.roundpic} source={tv}/>
-    <Text style={styles.subbullet}>- Do not let young children climb on any furniture where they could
+    <Text style={CoreStyle.subbullet}>- Do not let young children climb on any furniture where they could
     fall from any height or the furniture could possibly be tipped over, especially near windows.{'\n'}
     - Rearrange household items so that heavy items are lower and children are not tempted to climb or
     reach higher objects. {'\n'}
@@ -129,8 +130,8 @@ export default function Falls({ navigation }) {
     </Text>
 </CollapsibleBox>
 
-<CollapsibleBox header="5. Pay close attention at the playground with young children" headerstyle={styles.bullet}>
-    <Text style={styles.subbullet}>- Falls are the most common and the most severe playground injuries {'\n'}
+<CollapsibleBox header="5. Pay close attention at the playground with young children" headerstyle={CoreStyle.bullet}>
+    <Text style={CoreStyle.subbullet}>- Falls are the most common and the most severe playground injuries {'\n'}
     - Nearly half of playground injuries are due to improper supervision, so always avoid distraction and
       actively supervise children rather than letting them loose {'\n'}
     - Always dress appropriately for the playground by avoiding necklaces, purses, drawstrings, or hard
@@ -143,8 +144,8 @@ export default function Falls({ navigation }) {
 
 <Image style={styles.longpic} source={end}/>
 
-<Text style={styles.subtitle}> Stroller Safety </Text>
-    <Text style={styles.content}> {'\t'} Just like you need to stay mindful when children are secured
+<Text style={CoreStyle.subtitle}> Stroller Safety </Text>
+    <Text style={CoreStyle.content}> {'\t'} Just like you need to stay mindful when children are secured
      in carriers, you also need to remain aware when your child is in a stroller. You should always use
      the safety harnesses and even then, always use the brakes when not in motion and NEVER leave your
      child alone in a stroller. To avoid trapping their head or wrapping up their neck, close all openings
@@ -154,7 +155,7 @@ export default function Falls({ navigation }) {
 
     <Image style={styles.roundpic} source={stroller2}/>
 
-<Text style={styles.content}>
+<Text style={CoreStyle.content}>
 Stroller Purchasing Tips: {'\n'}
 - Make sure the stroller is designed for the height, weight, and age of your child (infants need to lie almost flat) {'\n'}
 - Check for reliable and, ideally, 5-point safety harnesses / restraining belts (shoulders, waist, between the legs) {'\n'}
@@ -180,7 +181,7 @@ waist-level (or a bit lower) handlebars, and resist tipping backward when pressi
 
     </ScrollView>
 
-    <View style = {styles.pushdown}>
+    <View style = {CoreStyle.pushdown}>
     <Navbar navigation={navigation}/>
     </View>
 
@@ -194,12 +195,7 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    btns: {
-        display: "flex",
-        flexDirection: "row",
-        marginHorizontal: 20,
-        justifyContent: "space-between",
-    },
+    
     buttons: {
         display: "flex",
         flexDirection: "row",
@@ -223,52 +219,10 @@ const styles = StyleSheet.create({
         width: 100,
         position: "absolute",
     },
-    title: {
-        // margin: 100,
-        //height: 70,
-        fontSize: 40,
-        marginBottom: 15,
-        fontWeight: "bold",
-        textAlign: "center",
-        textDecorationLine: "underline"
-    },
-    subtitle: {
-        fontSize: 24,
-        marginBottom: 20,
-        textAlign: "center",
-        fontWeight: "bold",
-    },
-    content: {
-        fontSize: 16,
-        marginBottom: 20,
-        marginLeft: 15,
-        marginRight: 15,
-    },
-    bullet: {
-        fontSize: 20,
-        fontWeight: "bold",
-        marginLeft: 5,
-        marginRight: 5
-    },
-    subbullet: {
-        fontSize: 16,
-        marginLeft: 20,
-        marginRight: 10,
-    },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 15,
-        fontStyle: "italic",
-    },
-    pushdown: {
-        position: 'absolute',
-        width: '100%',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: "#C4C4C4",
-    },
+    
+    
+    
+    
+    
+    
 });
