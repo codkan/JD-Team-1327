@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
-import MainButton from "../components/MainButton";
-import { get } from "../Db";
+import React from "react";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
-import { Audio } from "expo-av";
+import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
 
 export default function About({ navigation }) {

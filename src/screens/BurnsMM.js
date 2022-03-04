@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
-import {WebView} from "react-native-webview";
-import MediaButton from "../components/MediaButton";
-import { get } from "../Db";
-import Background from "../assets/bg.png";
-import { Audio } from "expo-av";
-import Navbar from "../components/NavBar";
-import BMM1 from "../assets/BurnsMM/bmm1.jpeg";
-import BMM2 from "../assets/BurnsMM/bmm2.png"
-import BMM3 from "../assets/BurnsMM/bmm3.jpeg"
-import BMM4 from "../assets/BurnsMM/bmm4.png"
+import React from "react";
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import VideoPlayer from "../components/VideoPlayer";
+import Background from "../assets/bg.png";
+import BMM1 from "../assets/BurnsMM/bmm1.jpeg";
+import BMM2 from "../assets/BurnsMM/bmm2.png";
+import BMM3 from "../assets/BurnsMM/bmm3.jpeg";
+import BMM4 from "../assets/BurnsMM/bmm4.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
+import MediaButton from "../components/MediaButton";
+import Navbar from "../components/NavBar";
+import VideoPlayer from "../components/VideoPlayer";
 
 export default function BurnsMM({ navigation }) {
     //NAV CALLBACK

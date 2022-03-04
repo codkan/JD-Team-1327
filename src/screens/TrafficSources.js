@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, ScrollView } from "react-native";
+import React from "react";
+import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import Background from "../assets/bg.png";
+import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
-import BackButton from "../components/BackButton";
-import { get } from "../Db";
-import Background from "../assets/bg.png";
-import { Audio } from "expo-av";
 import Navbar from "../components/NavBar";
 
 export default function CarSafety({ navigation }) {

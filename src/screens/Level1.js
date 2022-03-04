@@ -5,17 +5,17 @@
  */
 
 import React, { Component } from "react";
-import { Linking, StyleSheet, View, Modal, Text, ImageBackground } from "react-native";
+import { ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
-import Entities from "../entities/Level1Entities";
-import Dispatches from "../systems/Level1Dispatches";
-import NoteButton from "../components/NoteButton";
+import background from "../assets/living-room/level-1-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
 import MenuButton from "../components/MenuButton";
+import NoteButton from "../components/NoteButton";
 import SpeakButton from "../components/SpeakButton";
+import { get, insert } from "../Db";
+import Entities from "../entities/Level1Entities";
+import Dispatches from "../systems/Level1Dispatches";
 import Movement from "../systems/Movement";
-import { insert, get } from "../Db";
-import background from "../assets/living-room/level-1-floor.png";
 
 export default class LevelOne extends Component {
   constructor(props) {

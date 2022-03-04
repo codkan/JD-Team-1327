@@ -1,24 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image } from "react-native";
-import MainButton from "../components/MainButton";
-import BackButton from "../components/BackButton";
-import SourcesButton from "../components/SourcesButton";
-import MediaButton from "../components/MediaButton";
-import MMButton from "../components/MMButton";
-import { get } from "../Db";
+import React from "react";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
-import { Audio } from "expo-av";
-import Navbar from "../components/NavBar";
-import { ScrollView } from "react-native";
+import end from "../assets/end.png";
+import falls from "../assets/falls.png";
 import secure from "../assets/secure.png";
 import stairs from "../assets/stairs.png";
-import window from "../assets/window.png";
-import tv from "../assets/TV.png";
-import end from "../assets/end.png";
 import stroller1 from "../assets/stroller1.png";
 import stroller2 from "../assets/stroller2.png";
-import falls from "../assets/falls.png";
+import tv from "../assets/TV.png";
+import window from "../assets/window.png";
+import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
+import MediaButton from "../components/MediaButton";
+import MMButton from "../components/MMButton";
+import Navbar from "../components/NavBar";
+import SourcesButton from "../components/SourcesButton";
 
 
 export default function Falls({ navigation }) {

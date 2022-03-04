@@ -3,18 +3,14 @@
  */
 import React from "react";
 import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  Image,
-  TouchableOpacity,
-  ImageBackground,
+    FlatList,
+    Image, ImageBackground, StyleSheet,
+    Text, TouchableOpacity, View
 } from "react-native";
 import Background from "../assets/badgeScreen.png";
-import Constants from "../Constants";
 import MenuButton from "../components/MenuButton";
-import { get } from "../Db"
+import Constants from "../Constants";
+import { get } from "../Db";
 
 function Item({ item }) {
   return (

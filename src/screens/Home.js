@@ -2,12 +2,12 @@
  * Home Screen
  */
 
+import { Audio } from "expo-av";
 import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button } from "react-native";
+import { ImageBackground, StyleSheet, View } from "react-native";
+import Background from "../assets/homescreen.png";
 import MenuButton from "../components/MenuButton";
 import { get } from "../Db";
-import Background from "../assets/homescreen.png";
-import { Audio } from "expo-av";
 
 export default function Home({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });

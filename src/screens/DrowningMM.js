@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
-import {WebView} from "react-native-webview";
-import MediaButton from "../components/MediaButton";
-import { get } from "../Db";
+import React from "react";
+import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Background from "../assets/bg.png";
-import { Audio } from "expo-av";
-import Navbar from "../components/NavBar";
 import silent from "../assets/Drowning_Infographic.png";
-import { ScrollView } from "react-native";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
+import MediaButton from "../components/MediaButton";
+import Navbar from "../components/NavBar";
 
 export default function DrowningMM({ navigation }) {
     //NAV CALLBACK

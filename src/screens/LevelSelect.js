@@ -4,9 +4,9 @@
 
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
-import MenuButton from "../components/MenuButton";
 import Background from "../assets/levelSelect.png";
-import { get, insert } from "../Db";
+import MenuButton from "../components/MenuButton";
+import { get } from "../Db";
 
 export default function LevelSelect({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });

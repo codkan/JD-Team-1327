@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker } from "react-native";
-import MainButton from "../components/MainButton";
-import QuizButton from "../components/QuizButton";
-import MediaButton from "../components/MediaButton";
-import RevButton from "../components/RevButton";
-import BackButton from "../components/BackButton";
-import { get } from "../Db";
+import React from "react";
+import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
-import { Audio } from "expo-av";
+import BackButton from "../components/BackButton";
+import MainButton from "../components/MainButton";
+import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
+import QuizButton from "../components/QuizButton";
 
 export default function FallsR({ navigation }) {
   //NAV CALLBACK

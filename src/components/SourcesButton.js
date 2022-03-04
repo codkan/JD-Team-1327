@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View, Image } from "react-native";
-import { color } from "react-native-reanimated";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 export default function SourcesButton({ text, onPress, txtColor }) {
   return (

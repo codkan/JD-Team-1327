@@ -2,22 +2,18 @@
  * Landing Screen
  */
 
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Image, TouchableOpacity } from "react-native";
-import MainButton from "../components/MainButton";
-import BackButton from "../components/BackButton";
-
-import { get } from "../Db";
-import Background from "../assets/landing.png";
-import { Audio } from "expo-av";
-import Navbar from "../components/NavBar";
+import React from "react";
+import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native";
 import disclaim from "../assets/info.png";
-import info from "../assets/landingCrayons/info.png";
-import videos from "../assets/landingCrayons/videos.png";
-import review from "../assets/landingCrayons/review1.png";
+import Background from "../assets/landing.png";
 import game from "../assets/landingCrayons/game.png";
-import sources from "../assets/landingCrayons/sources.png";
+import info from "../assets/landingCrayons/info.png";
+import review from "../assets/landingCrayons/review1.png";
 import settings from "../assets/landingCrayons/settings.png";
+import sources from "../assets/landingCrayons/sources.png";
+import videos from "../assets/landingCrayons/videos.png";
+import Navbar from "../components/NavBar";
+
 
 export default function Home({ navigation }) {
   const handleInfoNav = () => {

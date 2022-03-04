@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, TouchableOpacity, Linking, Image, Platform } from "react-native";
-import {WebView} from "react-native-webview";
-import MediaButton from "../components/MediaButton";
+import React from "react";
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import Background from "../assets/bg.png";
+import tv from "../assets/fallsM/tv_infographic.jpg";
+import win from "../assets/fallsM/window_infographic.jpg";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
-import { get } from "../Db";
-import Background from "../assets/bg.png";
-import { Audio } from "expo-av";
+import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
-import win from "../assets/fallsM/window_infographic.jpg";
-import tv from "../assets/fallsM/tv_infographic.jpg";
-import { ScrollView } from "react-native-gesture-handler";
 import VideoPlayer from "../components/VideoPlayer";
 
 export default function FallsM0({ navigation }) {

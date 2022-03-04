@@ -5,18 +5,18 @@
  */
 
 import React, { Component } from "react";
-import { Linking, StyleSheet, View, Modal, Text, ImageBackground } from "react-native";
+import { ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
-import Movement from "../systems/Movement";
-import Entities from "../entities/Level3Entities";
-import Dispatches from "../systems/Level3Dispatches";
-import NoteButton from "../components/NoteButton";
+import background from "../assets/yard/level-3-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
-import SpeakButton from "../components/SpeakButton";
 import MenuButton from "../components/MenuButton";
+import NoteButton from "../components/NoteButton";
+import SpeakButton from "../components/SpeakButton";
+import { get, insert } from "../Db";
+import Entities from "../entities/Level3Entities";
 import DogMove from "../systems/DogMove";
-import { insert, get } from "../Db";
-import background from "../assets/yard/level-3-floor.png"
+import Dispatches from "../systems/Level3Dispatches";
+import Movement from "../systems/Movement";
 
 export default class LevelThree extends Component {
   constructor(props) {

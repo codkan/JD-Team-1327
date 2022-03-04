@@ -1,6 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Button, Image, ImageBackground, TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native';
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 
 export default function Navbar({ navigation }){

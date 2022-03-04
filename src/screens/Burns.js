@@ -1,22 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { View, ImageBackground, StyleSheet, Button, Text, Picker, Image, Linking } from "react-native";
-import MainButton from "../components/MainButton";
-import BackButton from "../components/BackButton";
-import SourcesButton from "../components/SourcesButton";
-import MediaButton from "../components/MediaButton";
-import { get } from "../Db";
+import React from "react";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
-import { Audio } from "expo-av";
-import Navbar from "../components/NavBar";
-import { ScrollView } from "react-native";
 import babyIMG from "../assets/BurnsMM/baby.jpeg";
-import scaldIMG from "../assets/BurnsMM/scald.jpeg";
-import panIMG from "../assets/BurnsMM/pan.png";
-import smokeIMG from "../assets/BurnsMM/smoke.png";
 import outletIMG from "../assets/BurnsMM/outlet.png";
-import MMButton from "../components/MMButton";
-
+import panIMG from "../assets/BurnsMM/pan.png";
+import scaldIMG from "../assets/BurnsMM/scald.jpeg";
+import smokeIMG from "../assets/BurnsMM/smoke.png";
+import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
+import MediaButton from "../components/MediaButton";
+import MMButton from "../components/MMButton";
+import Navbar from "../components/NavBar";
+import SourcesButton from "../components/SourcesButton";
+
 
 
 
