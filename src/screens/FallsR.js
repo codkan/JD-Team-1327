@@ -39,9 +39,9 @@ export default function FallsR({ navigation }) {
         ></BackButton>
     </View>
 
-    <Text style={CoreStyle.title}> Question 1 </Text>
+    <Text style={styles.title}> Question 1 </Text>
     <Text> {'\n'} </Text>
-    <Text style={CoreStyle.subtitle}> Where are infants most likely to fall? </Text>
+    <Text style={styles.subtitle}> Where are infants most likely to fall? </Text>
 
     <View style={styles.buttonContainer}>
     <QuizButton
@@ -78,6 +78,27 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "cover",
+    justifyContent: "center",
+  },
+  title: {
+    // margin: 100,
+    //height: 70,
+    fontSize: 40,
+    marginTop: 0,
+    //marginBottom: 15,
+    fontWeight: "bold",
+    textAlign: "center",
+    textDecorationLine: "underline"
+  },
+  subtitle: {
+    fontSize: 24,
+    textAlign: "center",
+    fontWeight: "bold",
+  },
+  container: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
     justifyContent: "center",
   },
   container: {
