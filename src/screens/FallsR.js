@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { ImageBackground, StyleSheet, Text, View, Button } from "react-native";
 import Background from "../assets/bg.png";
 import BackButton from "../components/BackButton";
+import NextButton from "../components/NextButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
@@ -18,7 +19,8 @@ export default class FallsR extends Component{
             a1: "Furniture / Stairs",
             a2: "Windows",
             a3: "Playground",
-            a4: "Stroller"
+            a4: "Stroller",
+            buttonColor: "white"
         };
     };
 
@@ -30,8 +32,14 @@ export default class FallsR extends Component{
             a1: "Floor",
             a2: "Table",
             a3: "Furniture",
-            a4: "Counter"
+            a4: "Counter",
+            buttonColor: "white"
         });
+        this.correct.setState({buttonColor: "white"});
+        this.inc1.setState({buttonColor: "white"});
+        this.inc2.setState({buttonColor: "white"});
+        this.inc3.setState({buttonColor: "white"});
+        //this.render();
     };
 
   render(){
@@ -44,6 +52,10 @@ export default class FallsR extends Component{
               onPress={() => this.props.navigation.navigate("Review")}
               txtColor={"black"}
         ></MediaButton>
+        <BackButton onPress={this.reRender}
+              text=">"
+              txtColor={"black"}
+        ></BackButton>
     </View>
 
     <Text style={styles.title}> {this.state.qNum} </Text>
@@ -51,18 +63,34 @@ export default class FallsR extends Component{
     <Text style={styles.subtitle}> {this.state.Q} </Text>
 
     <View style={styles.buttonContainer}>
-    <QuizButton reRender={this.reRender}
+    <QuizButton
+      id="correct"
       title="correct"
       text={this.state.a1}
+      backgroundColor={"white"}
+      buttonColor={"white"}
+      ref = {ref => this.correct = ref}
     ></QuizButton>
     <QuizButton
+      id="inc1"
       text={this.state.a2}
+      backgroundColor={"white"}
+      buttonColor={"white"}
+      ref = {ref => this.inc1 = ref}
     ></QuizButton>
     <QuizButton
+      id="inc2"
       text={this.state.a3}
+      backgroundColor={"white"}
+      buttonColor={"white"}
+      ref = {ref => this.inc2 = ref}
     ></QuizButton>
     <QuizButton
+      id="inc3"
       text={this.state.a4}
+      backgroundColor={"white"}
+      buttonColor={"white"}
+      ref = {ref => this.inc3 = ref}
     ></QuizButton>
     </View>
 

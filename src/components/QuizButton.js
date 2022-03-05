@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, PureComponent} from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { color } from "react-native-reanimated";
 import {Audio} from "expo-av";
@@ -6,24 +6,34 @@ import ConfettiCannon from "react-native-confetti-cannon";
 import FallsR from "../screens/FallsR.js"
 
 
-export default function QuizButton({ text, onPress, title, reRender }) {
-    let explosion;
+export default class QuizButton extends PureComponent{
+    explosion;
+    constructor(){
+        super();
+        this.state = {
+            buttonColor: "white",
+        };
+        this.setState({
+            buttonColor: "white",
+        });
+    };
 
-    const [buttonColor, setButtonColor] = useState('white');
-
-    const changeButtonColor = () => {
-      if (title === "correct") {
-        setButtonColor("green");
-        explosion.start();
-        celebrate();
-        setTimeout(() => {2000});
+    changeButtonColor = () => {
+      if (this.props.title === "correct") {
+        this.setState({
+            buttonColor: "green"
+        });
+        this.explosion && this.explosion.start();
+        this.celebrate();
       } else {
-        setButtonColor("red");
-        noCelebrate();
+        this.setState({
+            buttonColor: "red"
+        });
+        this.noCelebrate();
       }
     };
 
-  async function celebrate() {
+  celebrate = async () => {
     console.log('Loading Sound');
     const { sound } = await Audio.Sound.createAsync(
        require('../assets/cheer.mp3')
@@ -32,7 +42,7 @@ export default function QuizButton({ text, onPress, title, reRender }) {
     await sound.playAsync();
   }
 
-  async function noCelebrate() {
+  noCelebrate = async () => {
       console.log('Loading Sound');
       const { sound } = await Audio.Sound.createAsync(
          require('../assets/wrong.mp3')
@@ -41,21 +51,29 @@ export default function QuizButton({ text, onPress, title, reRender }) {
       await sound.playAsync();
     }
 
+    render(){
     return (
-        <TouchableOpacity text={text} onPress={changeButtonColor, reRender}>
-          <View style={styles.button} backgroundColor={buttonColor}>
-            <Text style={styles.buttonText}>{text}</Text>
+        <TouchableOpacity onPress={this.changeButtonColor}>
+          <View style={styles.button} backgroundColor={this.state.buttonColor}>
+            <Text style={styles.buttonText}>{this.props.text}</Text>
           </View>
           <ConfettiCannon
                 count={100}
                 origin={{x: -40, y: -125}}
                 autoStart={false}
-                ref={ref => explosion = ref}
+                ref={ref => (this.explosion = ref)}
                 fadeOut={true}
           />
         </TouchableOpacity>
 
     );
+    }
+}
+
+QuizButton.defaultProps = {
+  color: "white",
+  buttonColor: "white",
+  backgroundColor: "white"
 }
 
 const styles = StyleSheet.create({
