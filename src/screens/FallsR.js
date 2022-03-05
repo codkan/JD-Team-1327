@@ -1,5 +1,5 @@
-import React from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import React, {Component} from "react";
+import { ImageBackground, StyleSheet, Text, View, Button } from "react-native";
 import Background from "../assets/bg.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
@@ -8,70 +8,78 @@ import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 
-export default function FallsR({ navigation }) {
-  //NAV CALLBACK
-  const goHome = () => {
-    navigation.pop();
-  };
-  const backToReview = () => {
-    navigation.navigate("Review");
-  };
-  const nextQ = () => {
-    navigation.navigate("FallsR1");
-  };
-  const goToInfo = () => {
-    navigation.navigate("Falls");
-  };
+export default class FallsR extends Component{
+    constructor(){
+        super();
 
+        this.state = {
+            qNum: "Question 1",
+            Q: "Where are infants most likely to fall?",
+            a1: "Furniture / Stairs",
+            a2: "Windows",
+            a3: "Playground",
+            a4: "Stroller"
+        };
+    };
+
+    reRender = () => {
+        console.log("reRender reached");
+        this.setState({
+            qNum: "Question 2",
+            Q: "Where can you place a child when secured in a carrier?",
+            a1: "Floor",
+            a2: "Table",
+            a3: "Furniture",
+            a4: "Counter"
+        });
+    };
+
+  render(){
   return (
     <ImageBackground source={Background} style={styles.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <MediaButton
               text="Back to Review"
-              onPress={backToReview}
+              onPress={() => this.props.navigation.navigate("Review")}
               txtColor={"black"}
         ></MediaButton>
-        <BackButton
-            text=">"
-            txtColor={"black"}
-            onPress={nextQ}
-        ></BackButton>
     </View>
 
-    <Text style={styles.title}> Question 1 </Text>
+    <Text style={styles.title}> {this.state.qNum} </Text>
     <Text> {'\n'} </Text>
-    <Text style={styles.subtitle}> Where are infants most likely to fall? </Text>
+    <Text style={styles.subtitle}> {this.state.Q} </Text>
 
     <View style={styles.buttonContainer}>
-    <QuizButton
+    <QuizButton reRender={this.reRender}
       title="correct"
-      text="Furniture / Stairs"
+      text={this.state.a1}
     ></QuizButton>
     <QuizButton
-      text="Windows"
+      text={this.state.a2}
     ></QuizButton>
     <QuizButton
-      text="Playground"
+      text={this.state.a3}
     ></QuizButton>
     <QuizButton
-      text="Stroller"
+      text={this.state.a4}
     ></QuizButton>
     </View>
 
     <View style={styles.container}>
     <MainButton
         text="Go to Falls"
-        onPress={goToInfo}
+        onPress={() => this.props.navigation.navigate("Falls")}
     ></MainButton>
     </View>
 
     <View style = {CoreStyle.pushdown}>
-    <Navbar navigation={navigation}/>
+    <Navbar navigation={this.props.navigation}/>
     </View>
 
     </ImageBackground>
   );
+  }
 }
 
 const styles = StyleSheet.create({

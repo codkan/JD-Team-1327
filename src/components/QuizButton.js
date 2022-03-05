@@ -3,9 +3,10 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { color } from "react-native-reanimated";
 import {Audio} from "expo-av";
 import ConfettiCannon from "react-native-confetti-cannon";
+import FallsR from "../screens/FallsR.js"
 
 
-export default function QuizButton({ text, onPress, title }) {
+export default function QuizButton({ text, onPress, title, reRender }) {
     let explosion;
 
     const [buttonColor, setButtonColor] = useState('white');
@@ -15,6 +16,7 @@ export default function QuizButton({ text, onPress, title }) {
         setButtonColor("green");
         explosion.start();
         celebrate();
+        setTimeout(() => {2000});
       } else {
         setButtonColor("red");
         noCelebrate();
@@ -40,7 +42,7 @@ export default function QuizButton({ text, onPress, title }) {
     }
 
     return (
-        <TouchableOpacity text={text} onPress={changeButtonColor}>
+        <TouchableOpacity text={text} onPress={changeButtonColor, reRender}>
           <View style={styles.button} backgroundColor={buttonColor}>
             <Text style={styles.buttonText}>{text}</Text>
           </View>
