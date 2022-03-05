@@ -9,7 +9,6 @@ export default function QuizButton({ text, onPress, title }) {
     let explosion;
 
     const [buttonColor, setButtonColor] = useState('white');
-    const [shoot, setShoot] = useState(false);
 
     const changeButtonColor = () => {
       if (title === "correct") {
@@ -18,6 +17,7 @@ export default function QuizButton({ text, onPress, title }) {
         celebrate();
       } else {
         setButtonColor("red");
+        noCelebrate();
       }
     };
 
@@ -28,8 +28,16 @@ export default function QuizButton({ text, onPress, title }) {
     );
     console.log('Playing Sound');
     await sound.playAsync();
-    setShoot(true);
   }
+
+  async function noCelebrate() {
+      console.log('Loading Sound');
+      const { sound } = await Audio.Sound.createAsync(
+         require('../assets/wrong.mp3')
+      );
+      console.log('Playing Sound');
+      await sound.playAsync();
+    }
 
     return (
         <TouchableOpacity text={text} onPress={changeButtonColor}>
@@ -38,9 +46,10 @@ export default function QuizButton({ text, onPress, title }) {
           </View>
           <ConfettiCannon
                 count={100}
-                origin={{x: -40, y: 0}}
+                origin={{x: -40, y: -125}}
                 autoStart={false}
                 ref={ref => explosion = ref}
+                fadeOut={true}
           />
         </TouchableOpacity>
 
