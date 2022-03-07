@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Background from "../assets/bg.png";
 import BackButton from "../components/BackButton";
@@ -7,23 +7,17 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 
-export default function FallW({ navigation }) {
-    //NAV CALLBACK
-    const goHome = () => {
-        navigation.pop();
-    };
-    const handleInfoNav = () => {
-        navigation.navigate("Info");
-    };
+export default function FallW({navigation}){
+
     const goToFalls = () => {
         navigation.navigate("Falls");
     };
     const backToReview = () => {
         navigation.navigate("Review");
     };
-    const handleNextNav = () => {
-        navigation.navigate("BurningSources");
-    };
+
+    const score = navigation.getParam('score');
+    const total = navigation.getParam('total');
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -45,11 +39,11 @@ export default function FallW({ navigation }) {
 
     <View style={styles.container}>
     <Text> {'\n'}{'\n'}{'\n'}{'\n'}{'\n'} </Text>
-    <Text style={CoreStyle.title}> Fall Quiz Completed! </Text>
+    <Text style={CoreStyle.title}> Fall Quiz Completed </Text>
     <Text> {'\n'} </Text>
     <Text style={CoreStyle.subtitle}> Congratulations! </Text>
     <Text> {'\n'} </Text>
-    <Text style={CoreStyle.subtitle}> You answered _ out of __ questions correctly </Text>
+    <Text style={CoreStyle.subtitle}> You answered {score} out of {total} questions correctly </Text>
     </View>
 
 </ScrollView>

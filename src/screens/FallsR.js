@@ -9,6 +9,7 @@ import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 
 global.count = 0;
+global.score = 0;
 global.Qs = [
     {Q: {
         q: "Where are infants most likely to fall?",
@@ -39,7 +40,6 @@ export default class FallsR extends Component{
         global.count = 0;
         global.Qs = global.Qs.sort(() => Math.random() - 0.5);
         question = global.Qs[global.count].Q;
-        console.log(global.count);
         this.state = {
             prevState: {
                 qNum: "Question " + (global.count+1),
@@ -60,10 +60,14 @@ export default class FallsR extends Component{
 
     reRender = () => {
         //console.log("reRender reached");
+        console.log(this.correct.state.buttonColor);
+        if (this.correct.state.buttonColor == "green") {
+            global.score = global.score + 1;
+            console.log(global.score);
+        }
         if (global.count < global.Qs.length-1) {
             global.count++;
             question = global.Qs[global.count].Q;
-            console.log(global.count);
             this.setState({
                 prevState: {
                     qNum: this.state.qNum,
@@ -81,11 +85,15 @@ export default class FallsR extends Component{
                 a4: question.a4,
             });
             this.correct.setState({buttonColor: "white"});
+            this.inc0.setState({buttonColor: "white"});
             this.inc1.setState({buttonColor: "white"});
             this.inc2.setState({buttonColor: "white"});
-            this.inc3.setState({buttonColor: "white"});
         } else {
-            this.props.navigation.navigate("FallW");
+            console.log(global.score);
+            this.props.navigation.navigate("FallW", {
+                score: global.score,
+                total: global.Qs.length,
+            });
         }
     };
 
@@ -93,7 +101,6 @@ export default class FallsR extends Component{
         //console.log("deRender reached");
         global.count--;
         question = global.Qs[global.count].Q;
-        console.log(global.count);
         if (global.count > 0) {
             this.setState({
                 prevState: {
@@ -164,7 +171,7 @@ export default class FallsR extends Component{
     <QuizButton
       id="inc0"
       text={this.state.a1}
-      ref = {ref => this.correct = ref}
+      ref = {ref => this.inc0 = ref}
     ></QuizButton>
     <QuizButton
       id="inc1"
@@ -180,7 +187,7 @@ export default class FallsR extends Component{
       id="correct"
       title="correct"
       text={this.state.a4}
-      ref = {ref => this.inc3 = ref}
+      ref = {ref => this.correct = ref}
     ></QuizButton>
     </View>
 
