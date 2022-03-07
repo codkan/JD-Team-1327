@@ -13,9 +13,6 @@ export default class QuizButton extends PureComponent{
         this.state = {
             buttonColor: "white",
         };
-        this.setState({
-            buttonColor: "white",
-        });
     };
 
     changeButtonColor = () => {
@@ -70,12 +67,6 @@ export default class QuizButton extends PureComponent{
     }
 }
 
-QuizButton.defaultProps = {
-  color: "white",
-  buttonColor: "white",
-  backgroundColor: "white"
-}
-
 const styles = StyleSheet.create({
   button: {
     height: 70,
@@ -83,7 +74,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingTop: 5,
     //paddingHorizontal: 10,
-    backgroundColor: "rgba(196,196,196,1)",
+    //backgroundColor: "rgba(196,196,196,1)",
     alignItems: "center",
     justifyContent: "center",
     shadowColor: 'black',
