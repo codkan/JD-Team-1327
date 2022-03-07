@@ -60,29 +60,33 @@ export default class FallsR extends Component{
 
     reRender = () => {
         //console.log("reRender reached");
-        global.count++;
-        question = global.Qs[global.count].Q;
-        console.log(global.count);
-        this.setState({
-            prevState: {
-                qNum: this.state.qNum,
-                Q: this.state.Q,
-                a1: this.state.a1,
-                a2: this.state.a2,
-                a3: this.state.a3,
-                a4: this.state.a4,
-            },
-            qNum: "Question " + (global.count+1),
-            Q: question.q,
-            a1: question.a1,
-            a2: question.a2,
-            a3: question.a3,
-            a4: question.a4,
-        });
-        this.correct.setState({buttonColor: "white"});
-        this.inc1.setState({buttonColor: "white"});
-        this.inc2.setState({buttonColor: "white"});
-        this.inc3.setState({buttonColor: "white"});
+        if (global.count < global.Qs.length-1) {
+            global.count++;
+            question = global.Qs[global.count].Q;
+            console.log(global.count);
+            this.setState({
+                prevState: {
+                    qNum: this.state.qNum,
+                    Q: this.state.Q,
+                    a1: this.state.a1,
+                    a2: this.state.a2,
+                    a3: this.state.a3,
+                    a4: this.state.a4,
+                },
+                qNum: "Question " + (global.count+1),
+                Q: question.q,
+                a1: question.a1,
+                a2: question.a2,
+                a3: question.a3,
+                a4: question.a4,
+            });
+            this.correct.setState({buttonColor: "white"});
+            this.inc1.setState({buttonColor: "white"});
+            this.inc2.setState({buttonColor: "white"});
+            this.inc3.setState({buttonColor: "white"});
+        } else {
+            this.props.navigation.navigate("Review");
+        }
     };
 
     deRender = () => {
