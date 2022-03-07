@@ -85,7 +85,7 @@ export default class FallsR extends Component{
             this.inc2.setState({buttonColor: "white"});
             this.inc3.setState({buttonColor: "white"});
         } else {
-            this.props.navigation.navigate("Review");
+            this.props.navigation.navigate("FallW");
         }
     };
 
