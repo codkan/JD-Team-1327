@@ -13,25 +13,31 @@ global.score = 0;
 global.Qs = [
     {Q: {
         q: "Where are infants most likely to fall?",
-        a1: "Stroller",
-        a2: "Windows",
-        a3: "Playground",
-        a4: "Furniture / Stairs",
+        answers: [
+            {a: "Stroller", id:"inc0"},
+            {a: "Windows", id:"inc1"},
+            {a: "Playground", id:"inc2"},
+            {a: "Furniture / Stairs", id:"correct"},
+        ],
     }},
     {Q: {
         q: "Where can you place a child when secured in a carrier?",
-        a1: "Counter",
-        a2: "Table",
-        a3: "Furniture",
-        a4: "Floor",
+        answers: [
+            {a: "Counter", id:"inc0"},
+            {a: "Table", id:"inc1"},
+            {a: "Furniture", id:"inc2"},
+            {a: "Floor", id:"correct"},
+        ],
     }},
     {Q: {
         q: "Where should safety gates be placed on stairs?",
-        a1: "Top",
-        a2: "Bottom",
-        a3: "Neither",
-        a4: "Both",
-    }}
+        answers: [
+            {a: "Top", id:"inc0"},
+            {a: "Bottom", id:"inc1"},
+            {a: "Neither", id:"inc2"},
+            {a: "Both", id:"correct"},
+        ],
+    }},
 ];
 
 export default class FallsR extends Component{
@@ -39,22 +45,26 @@ export default class FallsR extends Component{
         super();
         global.count = 0;
         global.Qs = global.Qs.sort(() => Math.random() - 0.5);
-        question = global.Qs[global.count].Q;
+        var question = global.Qs[global.count].Q;
         this.state = {
             prevState: {
                 qNum: "Question " + (global.count+1),
                 Q: question.q,
-                a1: question.a1,
-                a2: question.a2,
-                a3: question.a3,
-                a4: question.a4,
+                answers: [
+                    {a: question.answers[0].a, id: question.answers[0].id },
+                    {a: question.answers[1].a, id: question.answers[1].id },
+                    {a: question.answers[2].a, id: question.answers[2].id },
+                    {a: question.answers[3].a, id: question.answers[3].id },
+                ],
             },
             qNum: "Question " + (global.count+1),
             Q: question.q,
-            a1: question.a1,
-            a2: question.a2,
-            a3: question.a3,
-            a4: question.a4,
+            answers: [
+                {a: question.answers[0].a, id: question.answers[0].id },
+                {a: question.answers[1].a, id: question.answers[1].id },
+                {a: question.answers[2].a, id: question.answers[2].id },
+                {a: question.answers[3].a, id: question.answers[3].id },
+            ],
         };
     };
 
@@ -65,22 +75,26 @@ export default class FallsR extends Component{
         }
         if (global.count < global.Qs.length-1) {
             global.count++;
-            question = global.Qs[global.count].Q;
+            var question = global.Qs[global.count].Q;
             this.setState({
                 prevState: {
                     qNum: this.state.qNum,
                     Q: this.state.Q,
-                    a1: this.state.a1,
-                    a2: this.state.a2,
-                    a3: this.state.a3,
-                    a4: this.state.a4,
+                    answers: [
+                        {a: this.state.answers[0].a, id: this.state.answers[0].id },
+                        {a: this.state.answers[1].a, id: this.state.answers[1].id },
+                        {a: this.state.answers[2].a, id: this.state.answers[2].id },
+                        {a: this.state.answers[3].a, id: this.state.answers[3].id },
+                    ],
                 },
                 qNum: "Question " + (global.count+1),
                 Q: question.q,
-                a1: question.a1,
-                a2: question.a2,
-                a3: question.a3,
-                a4: question.a4,
+                answers: [
+                    {a: question.answers[0].a, id: question.answers[0].id },
+                    {a: question.answers[1].a, id: question.answers[1].id },
+                    {a: question.answers[2].a, id: question.answers[2].id },
+                    {a: question.answers[3].a, id: question.answers[3].id },
+                ],
             });
             this.correct.setState({buttonColor: "white"});
             this.inc0.setState({buttonColor: "white"});
@@ -99,50 +113,61 @@ export default class FallsR extends Component{
         //console.log("deRender reached");
         global.score--;
         global.count--;
-        question = global.Qs[global.count].Q;
+        var question = global.Qs[global.count].Q;
         if (global.count > 0) {
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
                      Q: global.Qs[global.count-1].Q.q,
-                     a1: global.Qs[global.count-1].Q.q,
-                     a2: global.Qs[global.count-1].Q.q,
-                     a3: global.Qs[global.count-1].Q.q,
-                     a4: global.Qs[global.count-1].Q.q,
+                     answers: [
+                         {a: global.Qs[global.count-1].Q.answers[0].a, id: global.Qs[global.count-1].Q.answers[0].id},
+                         {a: global.Qs[global.count-1].Q.answers[1].a, id: global.Qs[global.count-1].Q.answers[1].id},
+                         {a: global.Qs[global.count-1].Q.answers[2].a, id: global.Qs[global.count-1].Q.answers[2].id},
+                         {a: global.Qs[global.count-1].Q.answers[3].a, id: global.Qs[global.count-1].Q.answers[3].id},
+                     ],
                  },
                 qNum: "Question " + (global.count+1),
                 Q: question.q,
-                a1: question.a1,
-                a2: question.a2,
-                a3: question.a3,
-                a4: question.a4,
+                answers: [
+                    {a: question.answers[0].a, id: question.answers[0].id },
+                    {a: question.answers[1].a, id: question.answers[1].id },
+                    {a: question.answers[2].a, id: question.answers[2].id },
+                    {a: question.answers[3].a, id: question.answers[3].id },
+                ],
             });
         } else {
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
                      Q: global.Qs[0].Q.q,
-                     a1: global.Qs[0].Q.q,
-                     a2: global.Qs[0].Q.q,
-                     a3: global.Qs[0].Q.q,
-                     a4: global.Qs[0].Q.q,
+                     answers: [
+                         {a: global.Qs[0].Q.answers[0].a, id: global.Qs[0].Q.answers[0].id},
+                         {a: global.Qs[0].Q.answers[1].a, id: global.Qs[0].Q.answers[1].id},
+                         {a: global.Qs[0].Q.answers[2].a, id: global.Qs[0].Q.answers[2].id},
+                         {a: global.Qs[0].Q.answers[3].a, id: global.Qs[0].Q.answers[3].id},
+                     ],
                  },
                 qNum: "Question " + (global.count+1),
                 Q: question.q,
-                a1: question.a1,
-                a2: question.a2,
-                a3: question.a3,
-                a4: question.a4,
+                answers: [
+                    {a: question.answers[0].a, id: question.answers[0].id },
+                    {a: question.answers[1].a, id: question.answers[1].id },
+                    {a: question.answers[2].a, id: question.answers[2].id },
+                    {a: question.answers[3].a, id: question.answers[3].id },
+                ],
             });
         }
       //Do we want to reset the buttons on going back? Or find a way to preserve answers?
       this.correct.setState({buttonColor: "white"});
+        this.inc0.setState({buttonColor: "white"});
         this.inc1.setState({buttonColor: "white"});
         this.inc2.setState({buttonColor: "white"});
-        this.inc3.setState({buttonColor: "white"});
     }
 
   render(){
+      
+      var randomQs =  this.state.answers.sort(() => Math.random() - 0.5);
+      
       return (
         <ImageBackground source={Background} style={styles.image}>
 
@@ -168,24 +193,23 @@ export default class FallsR extends Component{
 
         <View style={styles.buttonContainer}>
         <QuizButton
-          id="inc0"
-          text={this.state.a1}
+          id={randomQs[0].id}
+          text={randomQs[0].a}
           ref = {ref => this.inc0 = ref}
         ></QuizButton>
         <QuizButton
-          id="inc1"
-          text={this.state.a2}
+          id={randomQs[1].id}
+          text={randomQs[1].a}
           ref = {ref => this.inc1 = ref}
         ></QuizButton>
         <QuizButton
-          id="inc2"
-          text={this.state.a3}
+          id={randomQs[2].id}
+          text={randomQs[2].a}
           ref = {ref => this.inc2 = ref}
         ></QuizButton>
         <QuizButton
-          id="correct"
-          title="correct"
-          text={this.state.a4}
+          id={randomQs[3].id}
+          text={randomQs[3].a}
           ref = {ref => this.correct = ref}
         ></QuizButton>
         </View>
