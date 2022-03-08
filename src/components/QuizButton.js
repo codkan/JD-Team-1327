@@ -16,7 +16,7 @@ export default class QuizButton extends PureComponent{
     };
 
     changeButtonColor = () => {
-      if (this.props.title === "correct") {
+      if (this.props.id === "correct") {
         this.setState({
             buttonColor: "green"
         });
