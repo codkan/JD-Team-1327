@@ -86,14 +86,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   logo: {
-    height: 150,
+    height: "35%",
+
     resizeMode: "contain",
-    justifyContent: "center",
   },
   crayon: {
     height:50,
     width:355,
-    marginTop: 15,
+    marginTop: 10,
     //resizeMode: "cover",
     //justifyContent: "center",
   },
