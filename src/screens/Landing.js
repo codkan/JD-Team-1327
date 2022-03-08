@@ -5,7 +5,8 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native";
 import disclaim from "../assets/info.png";
-import Background from "../assets/landing.png";
+import Background from "../assets/bg.png";
+import logo from "../assets/landinglogo.png"
 import game from "../assets/landingCrayons/game.png";
 import info from "../assets/landingCrayons/info.png";
 import review from "../assets/landingCrayons/review1.png";
@@ -41,11 +42,18 @@ export default function Home({ navigation }) {
     return (
       <ImageBackground source={Background} style={styles.image}>
 
+        
+
         <TouchableOpacity onPress={handleDisclaimNav}>
             <Image source={disclaim} style={styles.button}></Image>
         </TouchableOpacity>
 
+
         <View style={styles.buttonContainer}>
+        
+        <Image source={logo} style={styles.logo}></Image>
+
+
         <TouchableOpacity onPress={handleInfoNav}>
             <Image source={info} style={styles.crayon}></Image>
         </TouchableOpacity>
@@ -77,19 +85,23 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
+  logo: {
+    height: 150,
+    resizeMode: "contain",
+    justifyContent: "center",
+  },
   crayon: {
     height:50,
     width:355,
-    marginTop: 20,
+    marginTop: 15,
     //resizeMode: "cover",
     //justifyContent: "center",
   },
   buttonContainer: {
     flex: 1,
-    top: 70,
+    top: 0,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 70,
   },
     button: {
       height: 50,
