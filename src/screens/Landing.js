@@ -5,7 +5,8 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native";
 import disclaim from "../assets/info.png";
-import Background from "../assets/landing.png";
+import Background from "../assets/bg.png";
+import logo from "../assets/landinglogo.png"
 import game from "../assets/landingCrayons/game.png";
 import info from "../assets/landingCrayons/info.png";
 import review from "../assets/landingCrayons/review1.png";
@@ -41,11 +42,18 @@ export default function Home({ navigation }) {
     return (
       <ImageBackground source={Background} style={styles.image}>
 
+        
+
         <TouchableOpacity onPress={handleDisclaimNav}>
             <Image source={disclaim} style={styles.button}></Image>
         </TouchableOpacity>
 
+
         <View style={styles.buttonContainer}>
+        
+        <Image source={logo} style={styles.logo}></Image>
+
+
         <TouchableOpacity onPress={handleInfoNav}>
             <Image source={info} style={styles.crayon}></Image>
         </TouchableOpacity>
@@ -77,38 +85,42 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
+  logo: {
+    height: "35%",
+
+    resizeMode: "contain",
+  },
   crayon: {
     height:50,
     width:355,
-    marginTop: 20,
+    marginTop: 10,
     //resizeMode: "cover",
     //justifyContent: "center",
   },
   buttonContainer: {
     flex: 1,
-    top: 70,
+    top: 0,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 70,
   },
-    button: {
-      height: 50,
-      width: 50,
-      borderRadius: 100,
-      //paddingVertical: 7,
-      //paddingHorizontal: 10,
-      //marginVertical: 10,
-      backgroundColor: "rgba(196,196,196,1)",
-      //alignItems: "left",
-      //justifyContent: "top",
-      shadowColor: 'black',
-      shadowOpacity: 0.25,
-      shadowRadius: 4,
-      shadowOffset : { width: 0, height: 4},
-      //elevation: 7.5,
-      marginLeft: 20,
-      marginTop: 20,
-    },
+  button: {
+    height: 50,
+    width: 50,
+    borderRadius: 100,
+    //paddingVertical: 7,
+    //paddingHorizontal: 10,
+    //marginVertical: 10,
+    backgroundColor: "rgba(196,196,196,1)",
+    //alignItems: "left",
+    //justifyContent: "top",
+    shadowColor: 'black',
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    shadowOffset : { width: 0, height: 4},
+    //elevation: 7.5,
+    marginLeft: 20,
+    marginTop: 20,
+  },
 });
 
 //903 x 1654
