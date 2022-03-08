@@ -87,20 +87,19 @@ const styles = StyleSheet.create({
   },
   logo: {
     height: "35%",
-    resizeMode: "contain",
-    left: 30
 
+    resizeMode: "contain",
   },
   crayon: {
     height:50,
     width:355,
-    marginTop: 15,
+    marginTop: 10,
     //resizeMode: "cover",
     //justifyContent: "center",
   },
   buttonContainer: {
     flex: 1,
-    top: -10,
+    top: 0,
     alignItems: "center",
     justifyContent: "center",
   },
@@ -119,10 +118,8 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset : { width: 0, height: 4},
     //elevation: 7.5,
-    marginLeft: 10,
-    marginTop: 10,
-    position: "absolute",
-    
+    marginLeft: 20,
+    marginTop: 20,
   },
 });
 
