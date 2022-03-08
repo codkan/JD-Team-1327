@@ -87,40 +87,43 @@ const styles = StyleSheet.create({
   },
   logo: {
     height: "35%",
-
     resizeMode: "contain",
+    left: 30
+
   },
   crayon: {
     height:50,
     width:355,
-    marginTop: 10,
+    marginTop: 15,
     //resizeMode: "cover",
     //justifyContent: "center",
   },
   buttonContainer: {
     flex: 1,
-    top: 0,
+    top: -10,
     alignItems: "center",
     justifyContent: "center",
   },
-    button: {
-      height: 50,
-      width: 50,
-      borderRadius: 100,
-      //paddingVertical: 7,
-      //paddingHorizontal: 10,
-      //marginVertical: 10,
-      backgroundColor: "rgba(196,196,196,1)",
-      //alignItems: "left",
-      //justifyContent: "top",
-      shadowColor: 'black',
-      shadowOpacity: 0.25,
-      shadowRadius: 4,
-      shadowOffset : { width: 0, height: 4},
-      //elevation: 7.5,
-      marginLeft: 20,
-      marginTop: 20,
-    },
+  button: {
+    height: 50,
+    width: 50,
+    borderRadius: 100,
+    //paddingVertical: 7,
+    //paddingHorizontal: 10,
+    //marginVertical: 10,
+    backgroundColor: "rgba(196,196,196,1)",
+    //alignItems: "left",
+    //justifyContent: "top",
+    shadowColor: 'black',
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    shadowOffset : { width: 0, height: 4},
+    //elevation: 7.5,
+    marginLeft: 10,
+    marginTop: 10,
+    position: "absolute",
+    
+  },
 });
 
 //903 x 1654
