@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { ImageBackground, StyleSheet, Text, View, Button } from "react-native";
+import { ImageBackground, StyleSheet, Text, View, Button, ButtonGroup } from "react-native";
 import Background from "../assets/bg.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
@@ -60,10 +60,8 @@ export default class FallsR extends Component{
 
     reRender = () => {
         //console.log("reRender reached");
-        console.log(this.correct.state.buttonColor);
         if (this.correct.state.buttonColor == "green") {
-            global.score = global.score + 1;
-            console.log(global.score);
+            global.score--;
         }
         if (global.count < global.Qs.length-1) {
             global.count++;
@@ -99,6 +97,7 @@ export default class FallsR extends Component{
 
     deRender = () => {
         //console.log("deRender reached");
+        global.score--;
         global.count--;
         question = global.Qs[global.count].Q;
         if (global.count > 0) {
@@ -144,66 +143,75 @@ export default class FallsR extends Component{
     }
 
   render(){
-  return (
-    <ImageBackground source={Background} style={styles.image}>
 
-    <View style={CoreStyle.topnavbuttons}>
-        <BackButton onPress={this.deRender}
-              text="<"
-              txtColor={"black"}
-        ></BackButton>
-        <MediaButton
-              text="Back to Review"
-              onPress={() => this.props.navigation.navigate("Review")}
-              txtColor={"black"}
-        ></MediaButton>
-        <BackButton onPress={this.reRender}
-              text=">"
-              txtColor={"black"}
-        ></BackButton>
-    </View>
+    var buttons = [];
+    const b1 = () => <QuizButton
+                       id="inc0"
+                       text={this.state.a1}
+                       ref = {ref => this.inc0 = ref}
+                     ></QuizButton>
+    const b2 = () => <QuizButton
+                       id="inc1"
+                       text={this.state.a2}
+                       ref = {ref => this.inc1 = ref}
+                     ></QuizButton>
+    const b3 = () => <QuizButton
+                       id="inc2"
+                       text={this.state.a3}
+                       ref = {ref => this.inc2 = ref}
+                     ></QuizButton>
+    const b4 = () => <QuizButton
+                       id="correct"
+                       title="correct"
+                       text={this.state.a4}
+                       ref = {ref => this.correct = ref}
+                     ></QuizButton>
+    buttons.push(b1);
+    buttons.push(b2);
+    buttons.push(b3);
+    buttons.push(b4);
+    buttons = buttons.sort(() => Math.random() - 0.5);
 
-    <Text style={styles.title}> {this.state.qNum} </Text>
-    <Text> {'\n'} </Text>
-    <Text style={styles.subtitle}> {this.state.Q} </Text>
+      return (
+        <ImageBackground source={Background} style={styles.image}>
 
-    <View style={styles.buttonContainer}>
-    <QuizButton
-      id="inc0"
-      text={this.state.a1}
-      ref = {ref => this.inc0 = ref}
-    ></QuizButton>
-    <QuizButton
-      id="inc1"
-      text={this.state.a2}
-      ref = {ref => this.inc1 = ref}
-    ></QuizButton>
-    <QuizButton
-      id="inc2"
-      text={this.state.a3}
-      ref = {ref => this.inc2 = ref}
-    ></QuizButton>
-    <QuizButton
-      id="correct"
-      title="correct"
-      text={this.state.a4}
-      ref = {ref => this.correct = ref}
-    ></QuizButton>
-    </View>
+        <View style={CoreStyle.topnavbuttons}>
+            <BackButton onPress={this.deRender}
+                  text="<"
+                  txtColor={"black"}
+            ></BackButton>
+            <MediaButton
+                  text="Back to Review"
+                  onPress={() => this.props.navigation.navigate("Review")}
+                  txtColor={"black"}
+            ></MediaButton>
+            <BackButton onPress={this.reRender}
+                  text=">"
+                  txtColor={"black"}
+            ></BackButton>
+        </View>
 
-    <View style={styles.container}>
-    <MainButton
-        text="Go to Falls"
-        onPress={() => this.props.navigation.navigate("Falls")}
-    ></MainButton>
-    </View>
+        <Text style={styles.title}> {this.state.qNum} </Text>
+        <Text> {'\n'} </Text>
+        <Text style={styles.subtitle}> {this.state.Q} </Text>
 
-    <View style = {CoreStyle.pushdown}>
-    <Navbar navigation={this.props.navigation}/>
-    </View>
+        <ButtonGroup
+            buttons={buttons}
+/>
 
-    </ImageBackground>
-  );
+        <View style={styles.container}>
+        <MainButton
+            text="Go to Falls"
+            onPress={() => this.props.navigation.navigate("Falls")}
+        ></MainButton>
+        </View>
+
+        <View style = {CoreStyle.pushdown}>
+        <Navbar navigation={this.props.navigation}/>
+        </View>
+
+        </ImageBackground>
+      );
   }
 }
 
