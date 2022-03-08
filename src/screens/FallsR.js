@@ -143,35 +143,6 @@ export default class FallsR extends Component{
     }
 
   render(){
-
-    var buttons = [];
-    const b1 = () => <QuizButton
-                       id="inc0"
-                       text={this.state.a1}
-                       ref = {ref => this.inc0 = ref}
-                     ></QuizButton>
-    const b2 = () => <QuizButton
-                       id="inc1"
-                       text={this.state.a2}
-                       ref = {ref => this.inc1 = ref}
-                     ></QuizButton>
-    const b3 = () => <QuizButton
-                       id="inc2"
-                       text={this.state.a3}
-                       ref = {ref => this.inc2 = ref}
-                     ></QuizButton>
-    const b4 = () => <QuizButton
-                       id="correct"
-                       title="correct"
-                       text={this.state.a4}
-                       ref = {ref => this.correct = ref}
-                     ></QuizButton>
-    buttons.push(b1);
-    buttons.push(b2);
-    buttons.push(b3);
-    buttons.push(b4);
-    buttons = buttons.sort(() => Math.random() - 0.5);
-
       return (
         <ImageBackground source={Background} style={styles.image}>
 
@@ -195,9 +166,29 @@ export default class FallsR extends Component{
         <Text> {'\n'} </Text>
         <Text style={styles.subtitle}> {this.state.Q} </Text>
 
-        <ButtonGroup
-            buttons={buttons}
-/>
+        <View style={styles.buttonContainer}>
+        <QuizButton
+          id="inc0"
+          text={this.state.a1}
+          ref = {ref => this.inc0 = ref}
+        ></QuizButton>
+        <QuizButton
+          id="inc1"
+          text={this.state.a2}
+          ref = {ref => this.inc1 = ref}
+        ></QuizButton>
+        <QuizButton
+          id="inc2"
+          text={this.state.a3}
+          ref = {ref => this.inc2 = ref}
+        ></QuizButton>
+        <QuizButton
+          id="correct"
+          title="correct"
+          text={this.state.a4}
+          ref = {ref => this.correct = ref}
+        ></QuizButton>
+        </View>
 
         <View style={styles.container}>
         <MainButton
