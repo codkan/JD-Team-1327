@@ -46,6 +46,7 @@ import FallsR from "./screens/FallsR";
 import FallW from "./screens/FallW";
 
 import PoisonR from "./screens/PoisonR";
+import PoisonW from "./screens/PoisonW";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -142,6 +143,13 @@ const screens = {
     },
     PoisonR: {
       screen: PoisonR,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    PoisonW: {
+      screen: PoisonW,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
