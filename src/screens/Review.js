@@ -15,6 +15,9 @@ export default function About({ navigation }) {
   const reviewPoison = () => {
     navigation.navigate("PoisonR");
   };
+  const reviewDrowning = () => {
+    navigation.navigate("DrowningR");
+  };
 
   return (
     <ImageBackground source={Background} style={styles.image}>
@@ -37,6 +40,7 @@ export default function About({ navigation }) {
     <MainButton
       text="Drowning"
       txtColor={"black"}
+      onPress={reviewDrowning}
     ></MainButton>
     <MainButton
       text="Car Safety"
@@ -92,5 +96,3 @@ const styles = StyleSheet.create({
     color: "black",
   },
 });
-
-
