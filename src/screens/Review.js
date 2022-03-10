@@ -12,6 +12,9 @@ export default function About({ navigation }) {
   const reviewFalls = () => {
     navigation.navigate("FallsR");
   };
+  const reviewPoison = () => {
+    navigation.navigate("PoisonR");
+  };
 
   return (
     <ImageBackground source={Background} style={styles.image}>
@@ -29,6 +32,7 @@ export default function About({ navigation }) {
     <MainButton
       text="Poisoning"
       txtColor={"black"}
+      onPress={reviewPoison}
     ></MainButton>
     <MainButton
       text="Drowning"
