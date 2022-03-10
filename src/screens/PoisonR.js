@@ -103,7 +103,7 @@ export default class PoisonR extends Component{
             this.inc2.setState({buttonColor: "white"});
         } else {
             console.log(poisonScore);
-            this.props.navigation.navigate("FallW", {
+            this.props.navigation.navigate("PoisonW", {
                 poisonScore: poisonScore,
                 total: poisonQs.length,
             });
@@ -219,8 +219,8 @@ export default class PoisonR extends Component{
 
         <View style={styles.container}>
         <MainButton
-            text="Go to Falls"
-            onPress={() => this.props.navigation.navigate("Falls")}
+            text="Go to Poisonings"
+            onPress={() => this.props.navigation.navigate("Poisonings")}
         ></MainButton>
         </View>
 
