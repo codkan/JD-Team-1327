@@ -54,11 +54,6 @@ import ParRev2 from "./screens/ParRev2";
 import ParRev3 from "./screens/ParRev3";
 import ParRev4 from "./screens/ParRev4";
 import ParRev5 from "./screens/ParRev5";
-import DrowningR from "./screens/DrowningReview";
-import FallW from "./screens/FallW";
-
-import PoisonR from "./screens/PoisonR";
-import PoisonW from "./screens/PoisonW";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -111,8 +106,8 @@ const screens = {
           animationEnabled: false,
         },
     },
-    FallW: {
-        screen: FallW,
+    FallsR1: {
+        screen: FallsR1,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
@@ -125,13 +120,6 @@ const screens = {
         animationEnabled: false,
       },
     },
-    DrowningR: {
-      screen: DrowningR,
-      navigationOptions: {
-        headerShown: false,
-        animationEnabled: false,
-      },
-    },
     CarSafetyMM: {
         screen: CarSafetyMM,
         navigationOptions: {
@@ -139,12 +127,82 @@ const screens = {
           animationEnabled: false,
         },
     },
+    RoadRev1: {
+      screen: RoadRev1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    RoadRev2: {
+      screen: RoadRev2,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    RoadRev3: {
+      screen: RoadRev3,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    RoadRev4: {
+      screen: RoadRev4,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    RoadRev5: {
+      screen: RoadRev5,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
     ParentalHealthMM: {
         screen: ParentalHealthMM,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
         },
+    },
+    ParRev1: {
+      screen: ParRev1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParRev2: {
+      screen: ParRev2,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParRev3: {
+      screen: ParRev3,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParRev4: {
+      screen: ParRev4,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParRev5: {
+      screen: ParRev5,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
     },
     Burns: {
       screen: Burns,
@@ -155,20 +213,6 @@ const screens = {
     },
     Poisonings: {
       screen: Poisonings,
-      navigationOptions: {
-        headerShown: false,
-        animationEnabled: false,
-      },
-    },
-    PoisonR: {
-      screen: PoisonR,
-      navigationOptions: {
-        headerShown: false,
-        animationEnabled: false,
-      },
-    },
-    PoisonW: {
-      screen: PoisonW,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
@@ -355,3 +399,4 @@ const screens = {
 const NavStack = createStackNavigator(screens);
 
 export default createAppContainer(NavStack);
+
