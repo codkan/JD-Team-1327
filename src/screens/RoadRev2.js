@@ -22,7 +22,7 @@ export default function RoadRev2({ navigation }) {
     navigation.navigate("RoadRev3");
   };
   const goToInfo = () => {
-    navigation.navigate("CarSafety");
+    navigation.navigate("Traffic");
   };
 
   return (
