@@ -43,6 +43,7 @@ import PoisoningsMM from "./screens/PoisoningsMM";
 import BurnsMM from "./screens/BurnsMM";
 
 import FallsR from "./screens/FallsR";
+import DrowningR from "./screens/DrowningReview";
 import FallW from "./screens/FallW";
 
 import LevelOne from "./screens/Level1";
@@ -105,6 +106,13 @@ const screens = {
     },
     DrowningMM: {
       screen: DrowningMM,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    DrowningR: {
+      screen: DrowningR,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
