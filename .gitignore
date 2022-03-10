@@ -6,3 +6,4 @@ node_modules
 ios/.expo/*
 jdApp1/
 .idea/
+**/.DS_Store
