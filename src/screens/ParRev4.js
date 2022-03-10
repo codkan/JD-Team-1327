@@ -41,7 +41,7 @@ export default function ParRev4({ navigation }) {
         ></BackButton>
     </View>
 
-    <Text style={styles.title}> Question 1 </Text>
+    <Text style={styles.title}> Question 4 </Text>
     <Text> {'\n'} </Text>
     <Text style={styles.subtitle}> Which is untrue about postpartum depression? </Text>
 

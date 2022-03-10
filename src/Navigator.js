@@ -44,6 +44,16 @@ import BurnsMM from "./screens/BurnsMM";
 
 import FallsR from "./screens/FallsR";
 import FallsR1 from "./screens/FallsR1";
+import RoadRev1 from "./screens/RoadRev1";
+import RoadRev2 from "./screens/RoadRev2";
+import RoadRev3 from "./screens/RoadRev3";
+import RoadRev4 from "./screens/RoadRev4";
+import RoadRev5 from "./screens/RoadRev5";
+import ParRev1 from "./screens/ParRev1";
+import ParRev2 from "./screens/ParRev2";
+import ParRev3 from "./screens/ParRev3";
+import ParRev4 from "./screens/ParRev4";
+import ParRev5 from "./screens/ParRev5";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -117,12 +127,82 @@ const screens = {
           animationEnabled: false,
         },
     },
+    RoadRev1: {
+      screen: RoadRev1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    RoadRev2: {
+      screen: RoadRev2,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    RoadRev3: {
+      screen: RoadRev3,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    RoadRev4: {
+      screen: RoadRev4,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    RoadRev5: {
+      screen: RoadRev5,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
     ParentalHealthMM: {
         screen: ParentalHealthMM,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
         },
+    },
+    ParRev1: {
+      screen: ParRev1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParRev2: {
+      screen: ParRev2,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParRev3: {
+      screen: ParRev3,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParRev4: {
+      screen: ParRev4,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParRev5: {
+      screen: ParRev5,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
     },
     Burns: {
       screen: Burns,
