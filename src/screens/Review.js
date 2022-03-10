@@ -12,6 +12,9 @@ export default function About({ navigation }) {
   const reviewFalls = () => {
     navigation.navigate("FallsR");
   };
+  const reviewPoison = () => {
+    navigation.navigate("PoisonR");
+  };
   const reviewDrowning = () => {
     navigation.navigate("DrowningR");
   };
@@ -32,6 +35,7 @@ export default function About({ navigation }) {
     <MainButton
       text="Poisoning"
       txtColor={"black"}
+      onPress={reviewPoison}
     ></MainButton>
     <MainButton
       text="Drowning"
@@ -92,5 +96,3 @@ const styles = StyleSheet.create({
     color: "black",
   },
 });
-
-

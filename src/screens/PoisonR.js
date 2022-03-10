@@ -8,48 +8,48 @@ import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 
-var fallCount = 0;
-var fallScore = 0;
-var FallQs = [
+var poisonCount = 0;
+var poisonScore = 0;
+var poisonQs = [
     {Q: {
-        q: "Where are infants most likely to fall?",
+        q: "PoisonQ #1",
         answers: [
-            {a: "Stroller", id:"inc0"},
-            {a: "Windows", id:"inc1"},
-            {a: "Playground", id:"inc2"},
-            {a: "Furniture / Stairs", id:"correct"},
+            {a: "p1-1", id:"inc0"},
+            {a: "p1-2", id:"inc1"},
+            {a: "p1-3", id:"inc2"},
+            {a: "p1-4", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where can you place a child when secured in a carrier?",
+        q: "PoisonQ #2",
         answers: [
-            {a: "Counter", id:"inc0"},
-            {a: "Table", id:"inc1"},
-            {a: "Furniture", id:"inc2"},
-            {a: "Floor", id:"correct"},
+            {a: "p2-1", id:"inc0"},
+            {a: "p2-2", id:"inc1"},
+            {a: "p2-3", id:"inc2"},
+            {a: "p2-4", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where should safety gates be placed on stairs?",
+        q: "PoisonQ #3",
         answers: [
-            {a: "Top", id:"inc0"},
-            {a: "Bottom", id:"inc1"},
-            {a: "Neither", id:"inc2"},
-            {a: "Both", id:"correct"},
+            {a: "p3-1", id:"inc0"},
+            {a: "p3-2", id:"inc1"},
+            {a: "p3-3", id:"inc2"},
+            {a: "p3-4", id:"correct"},
         ],
     }},
 ];
 
-export default class FallsR extends Component{
+export default class PoisonR extends Component{
     constructor(){
         super();
-        fallCount = 0;
-        fallScore = 0;
-        FallQs = FallQs.sort(() => Math.random() - 0.5);
-        var question = FallQs[fallCount].Q;
+        poisonCount = 0;
+        poisonScore = 0;
+        poisonQs = poisonQs.sort(() => Math.random() - 0.5);
+        var question = poisonQs[poisonCount].Q;
         this.state = {
             prevState: {
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (poisonCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -58,7 +58,7 @@ export default class FallsR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             },
-            qNum: "Question " + (fallCount+1),
+            qNum: "Question " + (poisonCount+1),
             Q: question.q,
             answers: [
                 {a: question.answers[0].a, id: question.answers[0].id },
@@ -72,11 +72,11 @@ export default class FallsR extends Component{
     reRender = () => {
         //console.log("reRender reached");
         if (this.correct.state.buttonColor == "green") {
-            fallScore++;
+            poisonScore++;
         }
-        if (fallCount < FallQs.length-1) {
-            fallCount++;
-            var question = FallQs[fallCount].Q;
+        if (poisonCount < poisonQs.length-1) {
+            poisonCount++;
+            var question = poisonQs[poisonCount].Q;
             this.setState({
                 prevState: {
                     qNum: this.state.qNum,
@@ -88,7 +88,7 @@ export default class FallsR extends Component{
                         {a: this.state.answers[3].a, id: this.state.answers[3].id },
                     ],
                 },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (poisonCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -102,34 +102,34 @@ export default class FallsR extends Component{
             this.inc1.setState({buttonColor: "white"});
             this.inc2.setState({buttonColor: "white"});
         } else {
-            console.log(fallScore);
-            this.props.navigation.navigate("FallW", {
-                fallScore: fallScore,
-                total: FallQs.length,
+            console.log(poisonScore);
+            this.props.navigation.navigate("PoisonW", {
+                poisonScore: poisonScore,
+                total: poisonQs.length,
             });
         }
     };
 
     deRender = () => {
         //console.log("deRender reached");
-        fallCount--;
-        var question = FallQs[fallCount].Q;
-        if (fallScore > 0) {
-            fallScore--;
+        poisonCount--;
+        var question = poisonQs[poisonCount].Q;
+        if (poisonScore > 0) {
+            poisonScore--;
         }
-        if (fallCount > 0) {
+        if (poisonCount > 0) {
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: FallQs[fallCount-1].Q.q,
+                     Q: poisonQs[poisonCount-1].Q.q,
                      answers: [
-                         {a: FallQs[fallCount-1].Q.answers[0].a, id: FallQs[fallCount-1].Q.answers[0].id},
-                         {a: FallQs[fallCount-1].Q.answers[1].a, id: FallQs[fallCount-1].Q.answers[1].id},
-                         {a: FallQs[fallCount-1].Q.answers[2].a, id: FallQs[fallCount-1].Q.answers[2].id},
-                         {a: FallQs[fallCount-1].Q.answers[3].a, id: FallQs[fallCount-1].Q.answers[3].id},
+                         {a: poisonQs[poisonCount-1].Q.answers[0].a, id: poisonQs[poisonCount-1].Q.answers[0].id},
+                         {a: poisonQs[poisonCount-1].Q.answers[1].a, id: poisonQs[poisonCount-1].Q.answers[1].id},
+                         {a: poisonQs[poisonCount-1].Q.answers[2].a, id: poisonQs[poisonCount-1].Q.answers[2].id},
+                         {a: poisonQs[poisonCount-1].Q.answers[3].a, id: poisonQs[poisonCount-1].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (poisonCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -142,15 +142,15 @@ export default class FallsR extends Component{
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: FallQs[0].Q.q,
+                     Q: poisonQs[0].Q.q,
                      answers: [
-                         {a: FallQs[0].Q.answers[0].a, id: FallQs[0].Q.answers[0].id},
-                         {a: FallQs[0].Q.answers[1].a, id: FallQs[0].Q.answers[1].id},
-                         {a: FallQs[0].Q.answers[2].a, id: FallQs[0].Q.answers[2].id},
-                         {a: FallQs[0].Q.answers[3].a, id: FallQs[0].Q.answers[3].id},
+                         {a: poisonQs[0].Q.answers[0].a, id: poisonQs[0].Q.answers[0].id},
+                         {a: poisonQs[0].Q.answers[1].a, id: poisonQs[0].Q.answers[1].id},
+                         {a: poisonQs[0].Q.answers[2].a, id: poisonQs[0].Q.answers[2].id},
+                         {a: poisonQs[0].Q.answers[3].a, id: poisonQs[0].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (poisonCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -168,9 +168,9 @@ export default class FallsR extends Component{
     }
 
   render(){
-      
-      var randomFallQs =  this.state.answers.sort(() => Math.random() - 0.5);
-      
+
+      var randompoisonQs =  this.state.answers.sort(() => Math.random() - 0.5);
+
       return (
         <ImageBackground source={Background} style={styles.image}>
 
@@ -196,31 +196,31 @@ export default class FallsR extends Component{
 
         <View style={styles.buttonContainer}>
         <QuizButton
-          id={randomFallQs[0].id}
-          text={randomFallQs[0].a}
+          id={randompoisonQs[0].id}
+          text={randompoisonQs[0].a}
           ref = {ref => this.inc0 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[1].id}
-          text={randomFallQs[1].a}
+          id={randompoisonQs[1].id}
+          text={randompoisonQs[1].a}
           ref = {ref => this.inc1 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[2].id}
-          text={randomFallQs[2].a}
+          id={randompoisonQs[2].id}
+          text={randompoisonQs[2].a}
           ref = {ref => this.inc2 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[3].id}
-          text={randomFallQs[3].a}
+          id={randompoisonQs[3].id}
+          text={randompoisonQs[3].a}
           ref = {ref => this.correct = ref}
         ></QuizButton>
         </View>
 
         <View style={styles.container}>
         <MainButton
-            text="Go to Falls"
-            onPress={() => this.props.navigation.navigate("Falls")}
+            text="Go to Poisonings"
+            onPress={() => this.props.navigation.navigate("Poisonings")}
         ></MainButton>
         </View>
 
