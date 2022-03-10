@@ -19,6 +19,14 @@ export default function About({ navigation }) {
     navigation.navigate("DrowningR");
   };
 
+  const reviewCarSafety = () => {
+    navigation.navigate("RoadRev1");
+  }
+
+  const reviewParentalHealth = () => {
+    navigation.navigate("ParRev1");
+  }
+
   return (
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.modalText}> Review</Text>
@@ -45,10 +53,12 @@ export default function About({ navigation }) {
     <MainButton
       text="Car Safety"
       txtColor={"black"}
+      onPress={reviewCarSafety}
     ></MainButton>
     <MainButton
       text="Parental Health"
       txtColor={"black"}
+      onPress={reviewParentalHealth}
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>

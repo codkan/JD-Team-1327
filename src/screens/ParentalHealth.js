@@ -54,7 +54,7 @@ export default function ParentalHealth({ navigation }) {
 
     <Text style={CoreStyle.content}>
         {'\t'} In the first few weeks of caring for a newborn, most new moms feel anxious, sad, frustrated, tired, and overwhelmed.
-        Sometimes known as the "baby blues," these feelings get bettwe within a few weeks. But for some women, they are very strong 
+        Sometimes known as the "baby blues," these feelings get better within a few weeks. But for some women, they are very strong 
         or don't get better. Postpartum depression is when these feelings don't go away after about 2 weeks or make it hard for a 
         woman to take care of her baby. [1] Rarely, an extreme mood disorder called postpartum psychosis also may develop after 
         childbirth. Postpartum depression isn't a character flaw or a weakness. Sometimes it's simply a complication of giving birth. 
