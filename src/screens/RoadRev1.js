@@ -122,8 +122,8 @@ export default class CarRev1 extends Component{
         } else {
             console.log(carScore);
             this.props.navigation.navigate("CarW", {
-                carScore: carScore,
-                total: Cars.length,
+                score: carScore,
+                total: CarQs.length,
             });
         }
     };
@@ -238,7 +238,7 @@ export default class CarRev1 extends Component{
         <View style={styles.container}>
         <MainButton
             text="Go to Car Safety"
-            onPress={() => this.props.navigation.navigate("CarSafety")}
+            onPress={() => this.props.navigation.navigate("Traffic")}
         ></MainButton>
         </View>
 

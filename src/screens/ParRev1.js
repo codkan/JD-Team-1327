@@ -122,7 +122,7 @@ export default class ParRev1 extends Component{
         } else {
             console.log(parScore);
             this.props.navigation.navigate("ParW", {
-                parScore: parScore,
+                score: parScore,
                 total: ParQs.length,
             });
         }
