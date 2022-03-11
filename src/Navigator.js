@@ -52,6 +52,8 @@ import PoisonW from "./screens/PoisonW";
 
 import RoadRev1 from "./screens/RoadRev1";
 import ParRev1 from "./screens/ParRev1";
+import CarW from "./screens/CarW";
+import ParW from "./screens/ParW";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -160,6 +162,13 @@ const screens = {
         animationEnabled: false,
       },
     },
+    CarW: {
+      screen: CarW,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
     ParentalHealthMM: {
         screen: ParentalHealthMM,
         navigationOptions: {
@@ -169,6 +178,13 @@ const screens = {
     },
     ParRev1: {
       screen: ParRev1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParW: {
+      screen: ParW,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,
