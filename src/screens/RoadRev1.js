@@ -8,66 +8,66 @@ import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 
-var fallCount = 0;
-var fallScore = 0;
-var FallQs = [
+var carCount = 0;
+var carScore = 0;
+var CarQs = [
     {Q: {
-        q: "Where are infants most likely to fall?",
+        q: "Where should a rear-facing carseat be installed?",
         answers: [
-            {a: "Stroller", id:"inc0"},
-            {a: "Windows", id:"inc1"},
-            {a: "Playground", id:"inc2"},
-            {a: "Furniture / Stairs", id:"correct"},
+            {a: "No carseat needed", id:"inc0"},
+            {a: "Passenger seat", id:"inc1"},
+            {a: "Roof of the car", id:"inc2"},
+            {a: "Secured in the backseat", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where can you place a child when secured in a carrier?",
+        q: "Is a seatbelt required if your child is in a booster seat?",
         answers: [
-            {a: "Counter", id:"inc0"},
-            {a: "Table", id:"inc1"},
-            {a: "Furniture", id:"inc2"},
-            {a: "Floor", id:"correct"},
+            {a: "A seatbelt is optional", id:"inc0"},
+            {a: "Only a lap belt is required", id:"inc1"},
+            {a: "Children don't belong in booster seats", id:"inc2"},
+            {a: "A seatbelt is always required", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where should safety gates be placed on stairs?",
+        q: "What parts of the seatbelt should be worn at all times?",
         answers: [
-            {a: "Top", id:"inc0"},
-            {a: "Bottom", id:"inc1"},
+            {a: "Lap only", id:"inc0"},
+            {a: "Chest/shoulder only", id:"inc1"},
             {a: "Neither", id:"inc2"},
-            {a: "Both", id:"correct"},
+            {a: "Lap and Chest/Shoulder", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where should TVs be placed?",
+        q: "What should you not do when kids are in the car?",
         answers: [
-            {a: "Low Stands", id:"inc0"},
-            {a: "High-standing Furniture", id:"inc1"},
-            {a: "Wall-Mounted", id:"inc2"},
-            {a: "Low stands if older, mounted if newer", id:"correct"},
+            {a: "Be a good role model", id:"inc0"},
+            {a: "Be consistent", id:"inc1"},
+            {a: "Secure children with seatbelt", id:"inc2"},
+            {a: "Leave your child alone", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Which of these do you NOT want in a stroller?",
+        q: "Should a broken car seat be used?",
         answers: [
-            {a: "Wide Wheel-base", id:"inc0"},
-            {a: "Low Seat", id:"inc1"},
-            {a: "Waist-Level Handlebars", id:"inc2"},
-            {a: "Large Leg Openings", id:"correct"},
+            {a: "Only if it was in a minor car crash", id:"inc0"},
+            {a: "If it has no more than two cracks", id:"inc1"},
+            {a: "Only if there are no visible cracks", id:"inc2"},
+            {a: "Never", id:"correct"},
         ],
     }},
 ];
 
-export default class FallsR extends Component{
+export default class CarRev1 extends Component{
     constructor(){
         super();
-        fallCount = 0;
-        fallScore = 0;
-        FallQs = FallQs.sort(() => Math.random() - 0.5);
-        var question = FallQs[fallCount].Q;
+        carCount = 0;
+        carScore = 0;
+        CarQs = CarQs.sort(() => Math.random() - 0.5);
+        var question = CarQs[carCount].Q;
         this.state = {
             prevState: {
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (carCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -76,7 +76,7 @@ export default class FallsR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             },
-            qNum: "Question " + (fallCount+1),
+            qNum: "Question " + (carCount+1),
             Q: question.q,
             answers: [
                 {a: question.answers[0].a, id: question.answers[0].id },
@@ -90,11 +90,11 @@ export default class FallsR extends Component{
     reRender = () => {
         //console.log("reRender reached");
         if (this.correct.state.buttonColor == "green") {
-            fallScore++;
+            carScore++;
         }
-        if (fallCount < FallQs.length-1) {
-            fallCount++;
-            var question = FallQs[fallCount].Q;
+        if (carCount < CarQs.length-1) {
+            carCount++;
+            var question = CarQs[carCount].Q;
             this.setState({
                 prevState: {
                     qNum: this.state.qNum,
@@ -106,7 +106,7 @@ export default class FallsR extends Component{
                         {a: this.state.answers[3].a, id: this.state.answers[3].id },
                     ],
                 },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (carCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -120,34 +120,34 @@ export default class FallsR extends Component{
             this.inc1.setState({buttonColor: "white"});
             this.inc2.setState({buttonColor: "white"});
         } else {
-            console.log(fallCount);
-            this.props.navigation.navigate("FallW", {
-                score: fallScore,
-                total: FallQs.length,
+            console.log(carScore);
+            this.props.navigation.navigate("CarW", {
+                carScore: carScore,
+                total: Cars.length,
             });
         }
     };
 
     deRender = () => {
         //console.log("deRender reached");
-        fallCount--;
-        var question = FallQs[fallCount].Q;
-        if (fallScore > 0) {
-            fallScore--;
+        carCount--;
+        var question = CarQs[carCount].Q;
+        if (carScore > 0) {
+            carScore--;
         }
-        if (fallCount > 0) {
+        if (carCount > 0) {
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: FallQs[fallCount-1].Q.q,
+                     Q: CarQs[carCount-1].Q.q,
                      answers: [
-                         {a: FallQs[fallCount-1].Q.answers[0].a, id: FallQs[fallCount-1].Q.answers[0].id},
-                         {a: FallQs[fallCount-1].Q.answers[1].a, id: FallQs[fallCount-1].Q.answers[1].id},
-                         {a: FallQs[fallCount-1].Q.answers[2].a, id: FallQs[fallCount-1].Q.answers[2].id},
-                         {a: FallQs[fallCount-1].Q.answers[3].a, id: FallQs[fallCount-1].Q.answers[3].id},
+                         {a: CarQs[carCount-1].Q.answers[0].a, id: CarQs[carCount-1].Q.answers[0].id},
+                         {a: CarQs[carCount-1].Q.answers[1].a, id: CarQs[carCount-1].Q.answers[1].id},
+                         {a: CarQs[carCount-1].Q.answers[2].a, id: CarQs[carCount-1].Q.answers[2].id},
+                         {a: CarQs[carCount-1].Q.answers[3].a, id: CarQs[carCount-1].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (carCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -160,15 +160,15 @@ export default class FallsR extends Component{
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: FallQs[0].Q.q,
+                     Q: CarQs[0].Q.q,
                      answers: [
-                         {a: FallQs[0].Q.answers[0].a, id: FallQs[0].Q.answers[0].id},
-                         {a: FallQs[0].Q.answers[1].a, id: FallQs[0].Q.answers[1].id},
-                         {a: FallQs[0].Q.answers[2].a, id: FallQs[0].Q.answers[2].id},
-                         {a: FallQs[0].Q.answers[3].a, id: FallQs[0].Q.answers[3].id},
+                         {a: CarQs[0].Q.answers[0].a, id: CarQs[0].Q.answers[0].id},
+                         {a: CarQs[0].Q.answers[1].a, id: CarQs[0].Q.answers[1].id},
+                         {a: CarQs[0].Q.answers[2].a, id: CarQs[0].Q.answers[2].id},
+                         {a: CarQs[0].Q.answers[3].a, id: CarQs[0].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (carCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -187,7 +187,7 @@ export default class FallsR extends Component{
 
   render(){
       
-      var randomFallQs =  this.state.answers.sort(() => Math.random() - 0.5);
+      var randomCarQs =  this.state.answers.sort(() => Math.random() - 0.5);
       
       return (
         <ImageBackground source={Background} style={styles.image}>
@@ -214,31 +214,31 @@ export default class FallsR extends Component{
 
         <View style={styles.buttonContainer}>
         <QuizButton
-          id={randomFallQs[0].id}
-          text={randomFallQs[0].a}
+          id={randomCarQs[0].id}
+          text={randomCarQs[0].a}
           ref = {ref => this.inc0 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[1].id}
-          text={randomFallQs[1].a}
+          id={randomCarQs[1].id}
+          text={randomCarQs[1].a}
           ref = {ref => this.inc1 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[2].id}
-          text={randomFallQs[2].a}
+          id={randomCarQs[2].id}
+          text={randomCarQs[2].a}
           ref = {ref => this.inc2 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[3].id}
-          text={randomFallQs[3].a}
+          id={randomCarQs[3].id}
+          text={randomCarQs[3].a}
           ref = {ref => this.correct = ref}
         ></QuizButton>
         </View>
 
         <View style={styles.container}>
         <MainButton
-            text="Go to Falls"
-            onPress={() => this.props.navigation.navigate("Falls")}
+            text="Go to Car Safety"
+            onPress={() => this.props.navigation.navigate("CarSafety")}
         ></MainButton>
         </View>
 

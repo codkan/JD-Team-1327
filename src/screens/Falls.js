@@ -111,7 +111,7 @@ export default function Falls({ navigation }) {
     - If your windows open from the top and bottom, open only the top to prevent falls. Though be
       mindful that children may grow strong enough to open the bottom {'\n'}
     - When not in use, never forget to not only close but LOCK windows. {'\n'}
-    - Normal screens are not meant ror protection, so install proper window guards that you can easily open
+    - Normal screens are not meant for protection, so install proper window guards that you can easily open
       in the event of an emergency. {'\n'}
     - For extra protection, install window stops that prevent them from opening more than a few inches. [4] {'\n'}
     </Text>

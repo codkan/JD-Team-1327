@@ -8,66 +8,66 @@ import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 
-var fallCount = 0;
-var fallScore = 0;
-var FallQs = [
+var parCount = 0;
+var parScore = 0;
+var ParQs = [
     {Q: {
-        q: "Where are infants most likely to fall?",
+        q: "Which is not a symptom of postpartum depression?",
         answers: [
-            {a: "Stroller", id:"inc0"},
-            {a: "Windows", id:"inc1"},
-            {a: "Playground", id:"inc2"},
-            {a: "Furniture / Stairs", id:"correct"},
+            {a: "Trouble concentrating", id:"inc0"},
+            {a: "Withdrawal", id:"inc1"},
+            {a: "Excessive crying", id:"inc2"},
+            {a: "Feeling calm", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where can you place a child when secured in a carrier?",
+        q: "What is a long-term effect of untreated postpartum depression?",
         answers: [
-            {a: "Counter", id:"inc0"},
-            {a: "Table", id:"inc1"},
-            {a: "Furniture", id:"inc2"},
-            {a: "Floor", id:"correct"},
+            {a: "Advanced child language development", id:"inc0"},
+            {a: "Emotional maturity", id:"inc1"},
+            {a: "Well-behaved children", id:"inc2"},
+            {a: "Chronic depression", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where should safety gates be placed on stairs?",
+        q: "Which is not a side effect of children with a parent with postpartum depression?",
         answers: [
-            {a: "Top", id:"inc0"},
-            {a: "Bottom", id:"inc1"},
-            {a: "Neither", id:"inc2"},
-            {a: "Both", id:"correct"},
+            {a: "Behavioral problems", id:"inc0"},
+            {a: "Too much or too little sleep", id:"inc1"},
+            {a: "Language development", id:"inc2"},
+            {a: "Eating well", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where should TVs be placed?",
+        q: "Which is untrue about postpartum depression?",
         answers: [
-            {a: "Low Stands", id:"inc0"},
-            {a: "High-standing Furniture", id:"inc1"},
-            {a: "Wall-Mounted", id:"inc2"},
-            {a: "Low stands if older, mounted if newer", id:"correct"},
+            {a: "It is treatable", id:"inc0"},
+            {a: "A complication of birth", id:"inc1"},
+            {a: "May not be chronic", id:"inc2"},
+            {a: "It is a character flaw", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Which of these do you NOT want in a stroller?",
+        q: "Can men have postpartum depression?",
         answers: [
-            {a: "Wide Wheel-base", id:"inc0"},
-            {a: "Low Seat", id:"inc1"},
-            {a: "Waist-Level Handlebars", id:"inc2"},
-            {a: "Large Leg Openings", id:"correct"},
+            {a: "No, they don't carry the baby", id:"inc0"},
+            {a: "Only if they are prone to depression", id:"inc1"},
+            {a: "Only mild cases", id:"inc2"},
+            {a: "Yes", id:"correct"},
         ],
     }},
 ];
 
-export default class FallsR extends Component{
+export default class ParRev1 extends Component{
     constructor(){
         super();
-        fallCount = 0;
-        fallScore = 0;
-        FallQs = FallQs.sort(() => Math.random() - 0.5);
-        var question = FallQs[fallCount].Q;
+        parCount = 0;
+        parScore = 0;
+        ParQs = ParQs.sort(() => Math.random() - 0.5);
+        var question = ParQs[parCount].Q;
         this.state = {
             prevState: {
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (parCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -76,7 +76,7 @@ export default class FallsR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             },
-            qNum: "Question " + (fallCount+1),
+            qNum: "Question " + (parCount+1),
             Q: question.q,
             answers: [
                 {a: question.answers[0].a, id: question.answers[0].id },
@@ -90,11 +90,11 @@ export default class FallsR extends Component{
     reRender = () => {
         //console.log("reRender reached");
         if (this.correct.state.buttonColor == "green") {
-            fallScore++;
+            parScore++;
         }
-        if (fallCount < FallQs.length-1) {
-            fallCount++;
-            var question = FallQs[fallCount].Q;
+        if (parCount < ParQs.length-1) {
+            parCount++;
+            var question = ParQs[parCount].Q;
             this.setState({
                 prevState: {
                     qNum: this.state.qNum,
@@ -106,7 +106,7 @@ export default class FallsR extends Component{
                         {a: this.state.answers[3].a, id: this.state.answers[3].id },
                     ],
                 },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (parCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -120,34 +120,34 @@ export default class FallsR extends Component{
             this.inc1.setState({buttonColor: "white"});
             this.inc2.setState({buttonColor: "white"});
         } else {
-            console.log(fallCount);
-            this.props.navigation.navigate("FallW", {
-                score: fallScore,
-                total: FallQs.length,
+            console.log(parScore);
+            this.props.navigation.navigate("ParW", {
+                parScore: parScore,
+                total: ParQs.length,
             });
         }
     };
 
     deRender = () => {
         //console.log("deRender reached");
-        fallCount--;
-        var question = FallQs[fallCount].Q;
-        if (fallScore > 0) {
-            fallScore--;
+        parCount--;
+        var question = ParQs[parCount].Q;
+        if (parScore > 0) {
+            parScore--;
         }
-        if (fallCount > 0) {
+        if (parCount > 0) {
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: FallQs[fallCount-1].Q.q,
+                     Q: ParQs[parCount-1].Q.q,
                      answers: [
-                         {a: FallQs[fallCount-1].Q.answers[0].a, id: FallQs[fallCount-1].Q.answers[0].id},
-                         {a: FallQs[fallCount-1].Q.answers[1].a, id: FallQs[fallCount-1].Q.answers[1].id},
-                         {a: FallQs[fallCount-1].Q.answers[2].a, id: FallQs[fallCount-1].Q.answers[2].id},
-                         {a: FallQs[fallCount-1].Q.answers[3].a, id: FallQs[fallCount-1].Q.answers[3].id},
+                         {a: ParQs[parCount-1].Q.answers[0].a, id: ParQs[parCount-1].Q.answers[0].id},
+                         {a: ParQs[parCount-1].Q.answers[1].a, id: ParQs[parCount-1].Q.answers[1].id},
+                         {a: ParQs[parCount-1].Q.answers[2].a, id: ParQs[parCount-1].Q.answers[2].id},
+                         {a: ParQs[parCount-1].Q.answers[3].a, id: ParQs[parCount-1].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (parCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -160,15 +160,15 @@ export default class FallsR extends Component{
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: FallQs[0].Q.q,
+                     Q: ParQs[0].Q.q,
                      answers: [
-                         {a: FallQs[0].Q.answers[0].a, id: FallQs[0].Q.answers[0].id},
-                         {a: FallQs[0].Q.answers[1].a, id: FallQs[0].Q.answers[1].id},
-                         {a: FallQs[0].Q.answers[2].a, id: FallQs[0].Q.answers[2].id},
-                         {a: FallQs[0].Q.answers[3].a, id: FallQs[0].Q.answers[3].id},
+                         {a: ParQs[0].Q.answers[0].a, id: ParQs[0].Q.answers[0].id},
+                         {a: ParQs[0].Q.answers[1].a, id: ParQs[0].Q.answers[1].id},
+                         {a: ParQs[0].Q.answers[2].a, id: ParQs[0].Q.answers[2].id},
+                         {a: ParQs[0].Q.answers[3].a, id: ParQs[0].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (parCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -187,7 +187,7 @@ export default class FallsR extends Component{
 
   render(){
       
-      var randomFallQs =  this.state.answers.sort(() => Math.random() - 0.5);
+      var randomParQs =  this.state.answers.sort(() => Math.random() - 0.5);
       
       return (
         <ImageBackground source={Background} style={styles.image}>
@@ -214,31 +214,31 @@ export default class FallsR extends Component{
 
         <View style={styles.buttonContainer}>
         <QuizButton
-          id={randomFallQs[0].id}
-          text={randomFallQs[0].a}
+          id={randomParQs[0].id}
+          text={randomParQs[0].a}
           ref = {ref => this.inc0 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[1].id}
-          text={randomFallQs[1].a}
+          id={randomParQs[1].id}
+          text={randomParQs[1].a}
           ref = {ref => this.inc1 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[2].id}
-          text={randomFallQs[2].a}
+          id={randomParQs[2].id}
+          text={randomParQs[2].a}
           ref = {ref => this.inc2 = ref}
         ></QuizButton>
         <QuizButton
-          id={randomFallQs[3].id}
-          text={randomFallQs[3].a}
+          id={randomParQs[3].id}
+          text={randomParQs[3].a}
           ref = {ref => this.correct = ref}
         ></QuizButton>
         </View>
 
         <View style={styles.container}>
         <MainButton
-            text="Go to Falls"
-            onPress={() => this.props.navigation.navigate("Falls")}
+            text="Go to Parental Health"
+            onPress={() => this.props.navigation.navigate("ParentalHealth")}
         ></MainButton>
         </View>
 

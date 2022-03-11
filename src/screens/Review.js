@@ -12,6 +12,20 @@ export default function About({ navigation }) {
   const reviewFalls = () => {
     navigation.navigate("FallsR");
   };
+  const reviewPoison = () => {
+    navigation.navigate("PoisonR");
+  };
+  const reviewDrowning = () => {
+    navigation.navigate("DrowningReview");
+  };
+
+  const reviewCarSafety = () => {
+    navigation.navigate("RoadRev1");
+  }
+
+  const reviewParentalHealth = () => {
+    navigation.navigate("ParRev1");
+  }
 
   return (
     <ImageBackground source={Background} style={styles.image}>
@@ -29,18 +43,22 @@ export default function About({ navigation }) {
     <MainButton
       text="Poisoning"
       txtColor={"black"}
+      onPress={reviewPoison}
     ></MainButton>
     <MainButton
       text="Drowning"
       txtColor={"black"}
+      onPress={reviewDrowning}
     ></MainButton>
     <MainButton
       text="Car Safety"
       txtColor={"black"}
+      onPress={reviewCarSafety}
     ></MainButton>
     <MainButton
       text="Parental Health"
       txtColor={"black"}
+      onPress={reviewParentalHealth}
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>
@@ -88,5 +106,3 @@ const styles = StyleSheet.create({
     color: "black",
   },
 });
-
-

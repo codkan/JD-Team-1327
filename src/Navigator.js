@@ -14,7 +14,6 @@ import Settings1 from "./screens/Settings1";
 import Settings2 from "./screens/Settings2";
 import Settings3 from "./screens/Settings3";
 
-
 import Home from "./screens/Home";
 import LevelSelect from "./screens/LevelSelect";
 import Badges from "./screens/Badges";
@@ -44,6 +43,17 @@ import BurnsMM from "./screens/BurnsMM";
 
 import FallsR from "./screens/FallsR";
 import FallW from "./screens/FallW";
+
+import DrowningReview from "./screens/DrowningReview";
+import DrownW from "./screens/DrownW";
+
+import PoisonR from "./screens/PoisonR";
+import PoisonW from "./screens/PoisonW";
+
+import RoadRev1 from "./screens/RoadRev1";
+import ParRev1 from "./screens/ParRev1";
+import CarW from "./screens/CarW";
+import ParW from "./screens/ParW";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -103,6 +113,34 @@ const screens = {
           animationEnabled: false,
         },
     },
+    PoisonR: {
+        screen: PoisonR,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    PoisonW: {
+        screen: PoisonW,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    DrowningReview: {
+        screen: DrowningReview,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    DrownW: {
+        screen: DrownW,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
     DrowningMM: {
       screen: DrowningMM,
       navigationOptions: {
@@ -117,12 +155,40 @@ const screens = {
           animationEnabled: false,
         },
     },
+    RoadRev1: {
+      screen: RoadRev1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    CarW: {
+      screen: CarW,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
     ParentalHealthMM: {
         screen: ParentalHealthMM,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
         },
+    },
+    ParRev1: {
+      screen: ParRev1,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
+    },
+    ParW: {
+      screen: ParW,
+      navigationOptions: {
+        headerShown: false,
+        animationEnabled: false,
+      },
     },
     Burns: {
       screen: Burns,
@@ -319,3 +385,4 @@ const screens = {
 const NavStack = createStackNavigator(screens);
 
 export default createAppContainer(NavStack);
+

@@ -8,66 +8,66 @@ import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 
-var fallCount = 0;
-var fallScore = 0;
-var FallQs = [
+var drownCount = 0;
+var drownScore = 0;
+var DrownQs = [
     {Q: {
-        q: "Where are infants most likely to fall?",
+        q: "What percentage of nonfatal drownings require hospitalization?",
         answers: [
-            {a: "Stroller", id:"inc0"},
-            {a: "Windows", id:"inc1"},
-            {a: "Playground", id:"inc2"},
-            {a: "Furniture / Stairs", id:"correct"},
+            {a: "10%", id:"inc0"},
+            {a: "75%", id:"inc1"},
+            {a: "60%", id:"inc2"},
+            {a: "40%", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where can you place a child when secured in a carrier?",
+        q: "What is the most common place for children under 1 to drown?",
         answers: [
-            {a: "Counter", id:"inc0"},
-            {a: "Table", id:"inc1"},
-            {a: "Furniture", id:"inc2"},
-            {a: "Floor", id:"correct"},
+            {a: "Natural bodies of water", id:"inc0"},
+            {a: "Swimming pools", id:"inc1"},
+            {a: "Really big puddles", id:"inc2"},
+            {a: "Bathtub", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where should safety gates be placed on stairs?",
+        q: "What is the most common place for older children to drown?",
         answers: [
-            {a: "Top", id:"inc0"},
-            {a: "Bottom", id:"inc1"},
-            {a: "Neither", id:"inc2"},
-            {a: "Both", id:"correct"},
+            {a: "Home pools", id:"inc0"},
+            {a: "Bathtub", id:"inc1"},
+            {a: "Public pools", id:"inc2"},
+            {a: "Natural bodies of water", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where should TVs be placed?",
+        q: "Where can infants be left unattended?",
         answers: [
-            {a: "Low Stands", id:"inc0"},
-            {a: "High-standing Furniture", id:"inc1"},
-            {a: "Wall-Mounted", id:"inc2"},
-            {a: "Low stands if older, mounted if newer", id:"correct"},
+            {a: "Home pools", id:"inc0"},
+            {a: "Bathtub", id:"inc1"},
+            {a: "Public pools", id:"inc2"},
+            {a: "No body of water", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Which of these do you NOT want in a stroller?",
+        q: "Which of these is NOT one of the 5 water survival skills?",
         answers: [
-            {a: "Wide Wheel-base", id:"inc0"},
-            {a: "Low Seat", id:"inc1"},
-            {a: "Waist-Level Handlebars", id:"inc2"},
-            {a: "Large Leg Openings", id:"correct"},
+            {a: "Surface after jumping", id:"inc0"},
+            {a: "Tread water for 1 minute", id:"inc1"},
+            {a: "Exit pool without ladder", id:"inc2"},
+            {a: "Swim 60 yards", id:"correct"},
         ],
     }},
 ];
 
-export default class FallsR extends Component{
+export default class DrowningR extends Component{
     constructor(){
         super();
-        fallCount = 0;
-        fallScore = 0;
-        FallQs = FallQs.sort(() => Math.random() - 0.5);
-        var question = FallQs[fallCount].Q;
+        drownCount = 0;
+        drownScore = 0;
+        DrownQs = DrownQs.sort(() => Math.random() - 0.5);
+        var question = DrownQs[drownCount].Q;
         this.state = {
             prevState: {
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (drownCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -76,7 +76,7 @@ export default class FallsR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             },
-            qNum: "Question " + (fallCount+1),
+            qNum: "Question " + (drownCount+1),
             Q: question.q,
             answers: [
                 {a: question.answers[0].a, id: question.answers[0].id },
@@ -90,11 +90,11 @@ export default class FallsR extends Component{
     reRender = () => {
         //console.log("reRender reached");
         if (this.correct.state.buttonColor == "green") {
-            fallScore++;
+            drownScore++;
         }
-        if (fallCount < FallQs.length-1) {
-            fallCount++;
-            var question = FallQs[fallCount].Q;
+        if (drownCount < DrownQs.length-1) {
+            drownCount++;
+            var question = DrownQs[drownCount].Q;
             this.setState({
                 prevState: {
                     qNum: this.state.qNum,
@@ -106,7 +106,7 @@ export default class FallsR extends Component{
                         {a: this.state.answers[3].a, id: this.state.answers[3].id },
                     ],
                 },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (drownCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -120,34 +120,34 @@ export default class FallsR extends Component{
             this.inc1.setState({buttonColor: "white"});
             this.inc2.setState({buttonColor: "white"});
         } else {
-            console.log(fallCount);
-            this.props.navigation.navigate("FallW", {
-                score: fallScore,
-                total: FallQs.length,
+            console.log(drownScore);
+            this.props.navigation.navigate("DrownW", {
+                score: drownScore,
+                total: DrownQs.length,
             });
         }
     };
 
     deRender = () => {
         //console.log("deRender reached");
-        fallCount--;
-        var question = FallQs[fallCount].Q;
-        if (fallScore > 0) {
-            fallScore--;
+        drownCount--;
+        var question = DrownQs[drownCount].Q;
+        if (drownScore > 0) {
+            drownScore--;
         }
-        if (fallCount > 0) {
+        if (drownCount > 0) {
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: FallQs[fallCount-1].Q.q,
+                     Q: DrownQs[drownCount-1].Q.q,
                      answers: [
-                         {a: FallQs[fallCount-1].Q.answers[0].a, id: FallQs[fallCount-1].Q.answers[0].id},
-                         {a: FallQs[fallCount-1].Q.answers[1].a, id: FallQs[fallCount-1].Q.answers[1].id},
-                         {a: FallQs[fallCount-1].Q.answers[2].a, id: FallQs[fallCount-1].Q.answers[2].id},
-                         {a: FallQs[fallCount-1].Q.answers[3].a, id: FallQs[fallCount-1].Q.answers[3].id},
+                         {a: DrownQs[drownCount-1].Q.answers[0].a, id: DrownQs[drownCount-1].Q.answers[0].id},
+                         {a: DrownQs[drownCount-1].Q.answers[1].a, id: DrownQs[drownCount-1].Q.answers[1].id},
+                         {a: DrownQs[drownCount-1].Q.answers[2].a, id: DrownQs[drownCount-1].Q.answers[2].id},
+                         {a: DrownQs[drownCount-1].Q.answers[3].a, id: DrownQs[drownCount-1].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (drownCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -160,15 +160,15 @@ export default class FallsR extends Component{
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: FallQs[0].Q.q,
+                     Q: DrownQs[0].Q.q,
                      answers: [
-                         {a: FallQs[0].Q.answers[0].a, id: FallQs[0].Q.answers[0].id},
-                         {a: FallQs[0].Q.answers[1].a, id: FallQs[0].Q.answers[1].id},
-                         {a: FallQs[0].Q.answers[2].a, id: FallQs[0].Q.answers[2].id},
-                         {a: FallQs[0].Q.answers[3].a, id: FallQs[0].Q.answers[3].id},
+                         {a: DrownQs[0].Q.answers[0].a, id: DrownQs[0].Q.answers[0].id},
+                         {a: DrownQs[0].Q.answers[1].a, id: DrownQs[0].Q.answers[1].id},
+                         {a: DrownQs[0].Q.answers[2].a, id: DrownQs[0].Q.answers[2].id},
+                         {a: DrownQs[0].Q.answers[3].a, id: DrownQs[0].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (fallCount+1),
+                qNum: "Question " + (drownCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -237,8 +237,8 @@ export default class FallsR extends Component{
 
         <View style={styles.container}>
         <MainButton
-            text="Go to Falls"
-            onPress={() => this.props.navigation.navigate("Falls")}
+            text="Go to Drowning"
+            onPress={() => this.props.navigation.navigate("Drownings")}
         ></MainButton>
         </View>
 
