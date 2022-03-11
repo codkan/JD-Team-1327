@@ -16,7 +16,7 @@ export default function About({ navigation }) {
     navigation.navigate("PoisonR");
   };
   const reviewDrowning = () => {
-    navigation.navigate("DrowningR");
+    navigation.navigate("DrowningReview");
   };
 
   const reviewCarSafety = () => {

@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     height: 70,
     width: 345,
     borderRadius: 10,
-    paddingTop: 5,
+    paddingTop: 0,
     //paddingHorizontal: 10,
     //backgroundColor: "rgba(196,196,196,1)",
     alignItems: "center",

@@ -14,7 +14,6 @@ import Settings1 from "./screens/Settings1";
 import Settings2 from "./screens/Settings2";
 import Settings3 from "./screens/Settings3";
 
-
 import Home from "./screens/Home";
 import LevelSelect from "./screens/LevelSelect";
 import Badges from "./screens/Badges";
@@ -43,7 +42,14 @@ import PoisoningsMM from "./screens/PoisoningsMM";
 import BurnsMM from "./screens/BurnsMM";
 
 import FallsR from "./screens/FallsR";
-import FallsR1 from "./screens/FallsR1";
+import FallW from "./screens/FallW";
+
+import DrowningReview from "./screens/DrowningReview";
+import DrownW from "./screens/DrownW";
+
+import PoisonR from "./screens/PoisonR";
+import PoisonW from "./screens/PoisonW";
+
 import RoadRev1 from "./screens/RoadRev1";
 import RoadRev2 from "./screens/RoadRev2";
 import RoadRev3 from "./screens/RoadRev3";
@@ -106,8 +112,36 @@ const screens = {
           animationEnabled: false,
         },
     },
-    FallsR1: {
-        screen: FallsR1,
+    FallW: {
+        screen: FallW,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    PoisonR: {
+        screen: PoisonR,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    PoisonW: {
+        screen: PoisonW,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    DrowningReview: {
+        screen: DrowningReview,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    DrownW: {
+        screen: DrownW,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,

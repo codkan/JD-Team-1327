@@ -38,6 +38,24 @@ var FallQs = [
             {a: "Both", id:"correct"},
         ],
     }},
+    {Q: {
+        q: "Where should TVs be placed?",
+        answers: [
+            {a: "Low Stands", id:"inc0"},
+            {a: "High-standing Furniture", id:"inc1"},
+            {a: "Wall-Mounted", id:"inc2"},
+            {a: "Low stands if older, mounted if newer", id:"correct"},
+        ],
+    }},
+    {Q: {
+        q: "Which of these do you NOT want in a stroller?",
+        answers: [
+            {a: "Wide Wheel-base", id:"inc0"},
+            {a: "Low Seat", id:"inc1"},
+            {a: "Waist-Level Handlebars", id:"inc2"},
+            {a: "Large Leg Openings", id:"correct"},
+        ],
+    }},
 ];
 
 export default class FallsR extends Component{
@@ -102,9 +120,9 @@ export default class FallsR extends Component{
             this.inc1.setState({buttonColor: "white"});
             this.inc2.setState({buttonColor: "white"});
         } else {
-            console.log(fallScore);
+            console.log(fallCount);
             this.props.navigation.navigate("FallW", {
-                fallScore: fallScore,
+                score: fallScore,
                 total: FallQs.length,
             });
         }

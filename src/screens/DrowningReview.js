@@ -38,6 +38,24 @@ var DrownQs = [
             {a: "Natural bodies of water", id:"correct"},
         ],
     }},
+    {Q: {
+        q: "Where can infants be left unattended?",
+        answers: [
+            {a: "Home pools", id:"inc0"},
+            {a: "Bathtub", id:"inc1"},
+            {a: "Public pools", id:"inc2"},
+            {a: "No body of water", id:"correct"},
+        ],
+    }},
+    {Q: {
+        q: "Which of these is NOT one of the 5 water survival skills?",
+        answers: [
+            {a: "Surface after jumping", id:"inc0"},
+            {a: "Tread water for 1 minute", id:"inc1"},
+            {a: "Exit pool without ladder", id:"inc2"},
+            {a: "Swim 60 yards", id:"correct"},
+        ],
+    }},
 ];
 
 export default class DrowningR extends Component{
@@ -103,8 +121,8 @@ export default class DrowningR extends Component{
             this.inc2.setState({buttonColor: "white"});
         } else {
             console.log(drownScore);
-            this.props.navigation.navigate("FallW", {
-                fallScore: drownScore,
+            this.props.navigation.navigate("DrownW", {
+                score: drownScore,
                 total: DrownQs.length,
             });
         }
