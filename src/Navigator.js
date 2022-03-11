@@ -50,6 +50,9 @@ import DrownW from "./screens/DrownW";
 import PoisonR from "./screens/PoisonR";
 import PoisonW from "./screens/PoisonW";
 
+import BurnR from "./screens/BurnsR";
+import BurnW from "./screens/BurnsW";
+
 import RoadRev1 from "./screens/RoadRev1";
 import ParRev1 from "./screens/ParRev1";
 import CarW from "./screens/CarW";
@@ -122,6 +125,20 @@ const screens = {
     },
     PoisonW: {
         screen: PoisonW,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    BurnR: {
+        screen: BurnR,
+        navigationOptions: {
+          headerShown: false,
+          animationEnabled: false,
+        },
+    },
+    BurnW: {
+        screen: BurnW,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
