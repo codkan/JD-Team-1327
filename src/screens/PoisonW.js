@@ -29,7 +29,7 @@ export default function PoisonW({navigation}){
               txtColor={"black"}
         ></MediaButton>
         <MediaButton
-            text="Go to Poisonings"
+            text="Go to Poisons"
             txtColor={"black"}
             onPress={goToPoisonings}
         ></MediaButton>

@@ -29,7 +29,7 @@ export default function ParW({navigation}){
               txtColor={"black"}
         ></MediaButton>
         <MediaButton
-            text="Go to Parental Health"
+            text="Parental Health"
             txtColor={"black"}
             onPress={goToParentalHealth}
         ></MediaButton>

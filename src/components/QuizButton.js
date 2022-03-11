@@ -3,7 +3,6 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { color } from "react-native-reanimated";
 import {Audio} from "expo-av";
 import ConfettiCannon from "react-native-confetti-cannon";
-import FallsR from "../screens/FallsR.js"
 
 
 export default class QuizButton extends PureComponent{
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontStyle: "normal",
-    fontSize: 32,
+    fontSize: 24,
     color: "black",
     textAlign: "center",
     justifyContent: "center",

@@ -29,7 +29,7 @@ export default function DrownW({navigation}){
               txtColor={"black"}
         ></MediaButton>
         <MediaButton
-            text="Go to Drownings"
+            text="Go to Drowning"
             txtColor={"black"}
             onPress={goToDrowning}
         ></MediaButton>

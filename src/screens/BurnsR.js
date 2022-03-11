@@ -34,7 +34,7 @@ var burnQs = [
         answers: [
             {a: "When microwaving food", id:"inc0"},
             {a: "When bathing your child", id:"inc1"},
-            {a: "When your child plays on metal playground equipment", id:"inc2"},
+            {a: "Playing on metal playground equipment", id:"inc2"},
             {a: "Under all these situations", id:"correct"},
         ],
     }},
@@ -43,7 +43,7 @@ var burnQs = [
         q: "What's the first thing you should do if your child gets a burn injury?",
         answers: [
             {a: "Apply ointment", id:"inc0"},
-            {a: "Break blisters to prevent an infection", id:"inc1"},
+            {a: "Pop blisters to prevent infection", id:"inc1"},
             {a: "Wrap it in a bandage or gauze", id:"inc2"},
             {a: "Cool the area with cold water", id:"correct"},
         ],
@@ -52,10 +52,10 @@ var burnQs = [
     {Q: {
         q: "Which one of these accurately describes a third-degree burn?",
         answers: [
-            {a: "A burn larger than 4 inches in length", id:"inc0"},
-            {a: "A burn on a particularly sensitive or critical part of the body", id:"inc1"},
-            {a: "A burn only on the outer later of skin", id:"inc2"},
-            {a: "A burn going through all skin layers", id:"correct"},
+            {a: "Larger than 4 inches in length", id:"inc0"},
+            {a: "Particularly sensitive/critical body part", id:"inc1"},
+            {a: "On the outer later of skin", id:"inc2"},
+            {a: "Going through all skin layers", id:"correct"},
         ],
     }},
 ];
