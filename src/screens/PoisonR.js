@@ -12,30 +12,50 @@ var poisonCount = 0;
 var poisonScore = 0;
 var poisonQs = [
     {Q: {
-        q: "PoisonQ #1",
+        q: "What is the Poison Control Help number?",
         answers: [
-            {a: "p1-1", id:"inc0"},
-            {a: "p1-2", id:"inc1"},
-            {a: "p1-3", id:"inc2"},
-            {a: "p1-4", id:"correct"},
+            {a: "911", id:"inc0"},
+            {a: "1-234-567-8901", id:"inc1"},
+            {a: "451-234-9991", id:"inc2"},
+            {a: "1-800-222-1222", id:"correct"},
         ],
     }},
     {Q: {
-        q: "PoisonQ #2",
+        q: "Where is poison most commonly ingested?",
         answers: [
-            {a: "p2-1", id:"inc0"},
-            {a: "p2-2", id:"inc1"},
-            {a: "p2-3", id:"inc2"},
-            {a: "p2-4", id:"correct"},
+            {a: "Eyes", id:"inc0"},
+            {a: "Ears", id:"inc1"},
+            {a: "Nose/Inhalation", id:"inc2"},
+            {a: "Mouth", id:"correct"},
         ],
     }},
     {Q: {
-        q: "PoisonQ #3",
+        q: "Which age group is statisically most at risk of poisoning?",
         answers: [
-            {a: "p3-1", id:"inc0"},
-            {a: "p3-2", id:"inc1"},
-            {a: "p3-3", id:"inc2"},
-            {a: "p3-4", id:"correct"},
+            {a: "13-19", id:"inc0"},
+            {a: "20-29", id:"inc1"},
+            {a: "7-12", id:"inc2"},
+            {a: "6 and under", id:"correct"},
+        ],
+    }},
+
+    {Q: {
+        q: "Which of the following are a common cause of child poisoning?",
+        answers: [
+            {a: "Dirt", id:"inc0"},
+            {a: "Expired food", id:"inc1"},
+            {a: "Plastic", id:"inc2"},
+            {a: "Cosmetics", id:"correct"},
+        ],
+    }},
+
+    {Q: {
+        q: "Which of the following are risks for children when they are outside of the house?",
+        answers: [
+            {a: "Unknown plants", id:"inc0"},
+            {a: "Lead paint", id:"inc1"},
+            {a: "Brightly colored berries", id:"inc2"},
+            {a: "All of these", id:"correct"},
         ],
     }},
 ];

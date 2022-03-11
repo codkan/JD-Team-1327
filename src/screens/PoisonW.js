@@ -16,7 +16,7 @@ export default function PoisonW({navigation}){
         navigation.navigate("Review");
     };
 
-    const score = navigation.getParam('score');
+    const score = navigation.getParam('poisonScore');
     const total = navigation.getParam('total');
 
     return (
