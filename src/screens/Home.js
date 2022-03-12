@@ -22,7 +22,7 @@ export default function Home({ navigation }) {
       staysActiveInBackground: true,
       playThroughEarpieceAndroid: true,
     });
-    console.log("Loading Sound");
+    //console.log("Loading Sound");
     const { sound } = await Audio.Sound.createAsync(
       require("../assets/gameMusic.mp3"),
       {
@@ -30,8 +30,8 @@ export default function Home({ navigation }) {
       }
     );
     setSound(sound);
-
-    console.log("Playing Sound");
+    await sound.loadAsync();
+    //console.log("Playing Sound");
     await sound.playAsync();
   }
   useEffect(() => {
@@ -49,7 +49,7 @@ export default function Home({ navigation }) {
   }, []);
   //Nav Callbacks
   const handlePlayNow = () => {
-    sound.unloadAsync();
+    sound.pauseAsync();
     if (unlocked["lvl3"] != null) {
       navigation.navigate("LevelThree");
     } else if (unlocked["lvl2"] != null) {
@@ -68,7 +68,9 @@ export default function Home({ navigation }) {
     navigation.navigate("About");
   };
   const handleBackNav = () => {
-    navigation.navigate("Landing", { sound: sound });
+    sound.stopAsync();
+    sound.unloadAsync();
+    navigation.navigate("Landing");
   };
 
   return (

@@ -30,21 +30,25 @@ export default class QuizButton extends PureComponent{
     };
 
   celebrate = async () => {
-    console.log('Loading Sound');
+    //console.log('Loading Sound');
     const { sound } = await Audio.Sound.createAsync(
        require('../assets/cheer.mp3')
     );
-    console.log('Playing Sound');
+    //console.log('Playing Sound');
+    await sound.loadAsync();
     await sound.playAsync();
+    await sound.unloadAsync();
   }
 
   noCelebrate = async () => {
-      console.log('Loading Sound');
+      //console.log('Loading Sound');
       const { sound } = await Audio.Sound.createAsync(
          require('../assets/wrong.mp3')
       );
-      console.log('Playing Sound');
+      //console.log('Playing Sound');
+      await sound.loadAsync();
       await sound.playAsync();
+      await sound.unloadAsync();
     }
 
     render(){
