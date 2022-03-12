@@ -22,17 +22,14 @@ export default function Home({ navigation }) {
       staysActiveInBackground: true,
       playThroughEarpieceAndroid: true,
     });
-    //console.log("Loading Sound");
-    const { sound } = await Audio.Sound.createAsync(
-      require("../assets/gameMusic.mp3"),
-      {
-        shouldPlay: true,
-      }
-    );
-    setSound(sound);
-    await sound.loadAsync();
-    //console.log("Playing Sound");
-    await sound.playAsync();
+    try {
+        const sound = new Audio.Sound();
+        setSound(sound);
+        await sound.loadAsync(require("../assets/gameMusic.mp3"));
+        await sound.playAsync();
+    } catch (e) {
+        //should be fine
+    }
   }
   useEffect(() => {
     async function unlockedLevels() {
@@ -41,7 +38,7 @@ export default function Home({ navigation }) {
 
       setLvls({ lvl2: lvl2, lvl3: lvl3 });
     }
-    console.log(sound)
+    //console.log(sound)
     if (sound == undefined) {
       playSound();
     }
