@@ -42,21 +42,12 @@ import PoisoningsMM from "./screens/PoisoningsMM";
 import BurnsMM from "./screens/BurnsMM";
 
 import FallsR from "./screens/FallsR";
-import FallW from "./screens/FallW";
-
 import DrowningReview from "./screens/DrowningReview";
-import DrownW from "./screens/DrownW";
-
 import PoisonR from "./screens/PoisonR";
-import PoisonW from "./screens/PoisonW";
-
 import BurnR from "./screens/BurnsR";
-import BurnW from "./screens/BurnsW";
-
 import RoadRev1 from "./screens/RoadRev1";
 import ParRev1 from "./screens/ParRev1";
-import CarW from "./screens/CarW";
-import ParW from "./screens/ParW";
+import Win from "./screens/Win";
 
 import LevelOne from "./screens/Level1";
 import LevelTwo from "./screens/Level2";
@@ -109,8 +100,8 @@ const screens = {
           animationEnabled: false,
         },
     },
-    FallW: {
-        screen: FallW,
+    Win: {
+        screen: Win,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
@@ -123,13 +114,6 @@ const screens = {
           animationEnabled: false,
         },
     },
-    PoisonW: {
-        screen: PoisonW,
-        navigationOptions: {
-          headerShown: false,
-          animationEnabled: false,
-        },
-    },
     BurnR: {
         screen: BurnR,
         navigationOptions: {
@@ -137,22 +121,8 @@ const screens = {
           animationEnabled: false,
         },
     },
-    BurnW: {
-        screen: BurnW,
-        navigationOptions: {
-          headerShown: false,
-          animationEnabled: false,
-        },
-    },
     DrowningReview: {
         screen: DrowningReview,
-        navigationOptions: {
-          headerShown: false,
-          animationEnabled: false,
-        },
-    },
-    DrownW: {
-        screen: DrownW,
         navigationOptions: {
           headerShown: false,
           animationEnabled: false,
@@ -179,13 +149,6 @@ const screens = {
         animationEnabled: false,
       },
     },
-    CarW: {
-      screen: CarW,
-      navigationOptions: {
-        headerShown: false,
-        animationEnabled: false,
-      },
-    },
     ParentalHealthMM: {
         screen: ParentalHealthMM,
         navigationOptions: {
@@ -195,13 +158,6 @@ const screens = {
     },
     ParRev1: {
       screen: ParRev1,
-      navigationOptions: {
-        headerShown: false,
-        animationEnabled: false,
-      },
-    },
-    ParW: {
-      screen: ParW,
       navigationOptions: {
         headerShown: false,
         animationEnabled: false,

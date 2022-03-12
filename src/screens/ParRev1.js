@@ -125,9 +125,10 @@ export default class ParRev1 extends Component{
             this.b4.setState({buttonColor: "white"});
         } else {
             console.log(parScore);
-            this.props.navigation.navigate("ParW", {
+            this.props.navigation.navigate("Win", {
                 score: parScore,
                 total: ParQs.length,
+                text: "Parents",
             });
         }
     };

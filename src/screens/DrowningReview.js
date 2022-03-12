@@ -125,9 +125,10 @@ export default class DrowningR extends Component{
             this.b4.setState({buttonColor: "white"});
         } else {
             console.log(drownScore);
-            this.props.navigation.navigate("DrownW", {
+            this.props.navigation.navigate("Win", {
                 score: drownScore,
                 total: DrownQs.length,
+                text: "Drowning",
             });
         }
     };

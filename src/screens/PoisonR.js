@@ -127,9 +127,10 @@ export default class PoisonR extends Component{
             this.b4.setState({buttonColor: "white"});
         } else {
             console.log(poisonScore);
-            this.props.navigation.navigate("PoisonW", {
+            this.props.navigation.navigate("Win", {
                 poisonScore: poisonScore,
                 total: poisonQs.length,
+                text: "Poisoning",
             });
         }
     };

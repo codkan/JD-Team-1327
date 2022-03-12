@@ -125,9 +125,10 @@ export default class CarRev1 extends Component{
             this.b4.setState({buttonColor: "white"});
         } else {
             console.log(carScore);
-            this.props.navigation.navigate("CarW", {
+            this.props.navigation.navigate("Win", {
                 score: carScore,
                 total: CarQs.length,
+                text: "Car Safety",
             });
         }
     };

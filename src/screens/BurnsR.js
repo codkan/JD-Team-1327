@@ -127,9 +127,10 @@ export default class BurnR extends Component{
             this.b4.setState({buttonColor: "white"});
         } else {
             console.log(burnScore);
-            this.props.navigation.navigate("BurnW", {
+            this.props.navigation.navigate("Win", {
                 burnScore: burnScore,
                 total: burnQs.length,
+                text: "Burns",
             });
         }
     };

@@ -89,10 +89,8 @@ export default class FallsR extends Component{
     };
 
     reRender = () => {
-        //console.log("reRender reached");
         if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
             fallScore++;
-            console.log(fallScore);
             lastC = true;
         } else {
             lastC = false;
@@ -126,20 +124,19 @@ export default class FallsR extends Component{
             this.b4.setState({buttonColor: "white"});
         } else {
             console.log(fallCount);
-            this.props.navigation.navigate("FallW", {
+            this.props.navigation.navigate("Win", {
                 score: fallScore,
                 total: FallQs.length,
+                text: "Falls",
             });
         }
     };
 
     deRender = () => {
-        //console.log("deRender reached");
         fallCount--;
         var question = FallQs[fallCount].Q;
         if (fallScore > 0 && lastC == true) {
             fallScore--;
-            console.log(fallScore);
         }
         if (fallCount > 0) {
             this.setState({
