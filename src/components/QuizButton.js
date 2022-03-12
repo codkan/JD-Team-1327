@@ -11,19 +11,22 @@ export default class QuizButton extends PureComponent{
         super();
         this.state = {
             buttonColor: "white",
+            pressed: false,
         };
     };
 
     changeButtonColor = () => {
       if (this.props.id === "correct") {
         this.setState({
-            buttonColor: "green"
+            buttonColor: "green",
+            pressed: true,
         });
         this.explosion && this.explosion.start();
         this.celebrate();
       } else {
         this.setState({
-            buttonColor: "red"
+            buttonColor: "red",
+            pressed: true,
         });
         this.noCelebrate();
       }

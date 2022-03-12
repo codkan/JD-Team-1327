@@ -10,6 +10,7 @@ import { CoreStyle } from "../components/CoreStyle";
 
 var fallCount = 0;
 var fallScore = 0;
+var lastC = false;
 var FallQs = [
     {Q: {
         q: "Where are infants most likely to fall?",
@@ -89,8 +90,12 @@ export default class FallsR extends Component{
 
     reRender = () => {
         //console.log("reRender reached");
-        if (this.correct.state.buttonColor == "green") {
+        if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
             fallScore++;
+            console.log(fallScore);
+            lastC = true;
+        } else {
+            lastC = false;
         }
         if (fallCount < FallQs.length-1) {
             fallCount++;
@@ -115,10 +120,10 @@ export default class FallsR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             });
-            this.correct.setState({buttonColor: "white"});
-            this.inc0.setState({buttonColor: "white"});
-            this.inc1.setState({buttonColor: "white"});
-            this.inc2.setState({buttonColor: "white"});
+            this.b1.setState({buttonColor: "white"});
+            this.b2.setState({buttonColor: "white"});
+            this.b3.setState({buttonColor: "white"});
+            this.b4.setState({buttonColor: "white"});
         } else {
             console.log(fallCount);
             this.props.navigation.navigate("FallW", {
@@ -132,8 +137,9 @@ export default class FallsR extends Component{
         //console.log("deRender reached");
         fallCount--;
         var question = FallQs[fallCount].Q;
-        if (fallScore > 0) {
+        if (fallScore > 0 && lastC == true) {
             fallScore--;
+            console.log(fallScore);
         }
         if (fallCount > 0) {
             this.setState({
@@ -179,10 +185,10 @@ export default class FallsR extends Component{
             });
         }
       //Do we want to reset the buttons on going back? Or find a way to preserve answers?
-      this.correct.setState({buttonColor: "white"});
-        this.inc0.setState({buttonColor: "white"});
-        this.inc1.setState({buttonColor: "white"});
-        this.inc2.setState({buttonColor: "white"});
+        this.b1.setState({buttonColor: "white"});
+        this.b2.setState({buttonColor: "white"});
+        this.b3.setState({buttonColor: "white"});
+        this.b4.setState({buttonColor: "white"});
     }
 
   render(){
@@ -216,22 +222,22 @@ export default class FallsR extends Component{
         <QuizButton
           id={randomFallQs[0].id}
           text={randomFallQs[0].a}
-          ref = {ref => this.inc0 = ref}
+          ref = {ref => this.b1 = ref}
         ></QuizButton>
         <QuizButton
           id={randomFallQs[1].id}
           text={randomFallQs[1].a}
-          ref = {ref => this.inc1 = ref}
+          ref = {ref => this.b2 = ref}
         ></QuizButton>
         <QuizButton
           id={randomFallQs[2].id}
           text={randomFallQs[2].a}
-          ref = {ref => this.inc2 = ref}
+          ref = {ref => this.b3 = ref}
         ></QuizButton>
         <QuizButton
           id={randomFallQs[3].id}
           text={randomFallQs[3].a}
-          ref = {ref => this.correct = ref}
+          ref = {ref => this.b4 = ref}
         ></QuizButton>
         </View>
 

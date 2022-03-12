@@ -10,6 +10,7 @@ import { CoreStyle } from "../components/CoreStyle";
 
 var poisonCount = 0;
 var poisonScore = 0;
+var lastC = false;
 var poisonQs = [
     {Q: {
         q: "What is the Poison Control Help number?",
@@ -91,8 +92,11 @@ export default class PoisonR extends Component{
 
     reRender = () => {
         //console.log("reRender reached");
-        if (this.correct.state.buttonColor == "green") {
+        if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
             poisonScore++;
+            lastC = true;
+        } else {
+            lastC = false;
         }
         if (poisonCount < poisonQs.length-1) {
             poisonCount++;
@@ -117,10 +121,10 @@ export default class PoisonR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             });
-            this.correct.setState({buttonColor: "white"});
-            this.inc0.setState({buttonColor: "white"});
-            this.inc1.setState({buttonColor: "white"});
-            this.inc2.setState({buttonColor: "white"});
+            this.b1.setState({buttonColor: "white"});
+            this.b2.setState({buttonColor: "white"});
+            this.b3.setState({buttonColor: "white"});
+            this.b4.setState({buttonColor: "white"});
         } else {
             console.log(poisonScore);
             this.props.navigation.navigate("PoisonW", {
@@ -134,7 +138,7 @@ export default class PoisonR extends Component{
         //console.log("deRender reached");
         poisonCount--;
         var question = poisonQs[poisonCount].Q;
-        if (poisonScore > 0) {
+        if (poisonScore > 0 && lastC == true) {
             poisonScore--;
         }
         if (poisonCount > 0) {
@@ -181,10 +185,10 @@ export default class PoisonR extends Component{
             });
         }
       //Do we want to reset the buttons on going back? Or find a way to preserve answers?
-      this.correct.setState({buttonColor: "white"});
-        this.inc0.setState({buttonColor: "white"});
-        this.inc1.setState({buttonColor: "white"});
-        this.inc2.setState({buttonColor: "white"});
+        this.b1.setState({buttonColor: "white"});
+        this.b2.setState({buttonColor: "white"});
+        this.b3.setState({buttonColor: "white"});
+        this.b4.setState({buttonColor: "white"});
     }
 
   render(){
@@ -218,22 +222,22 @@ export default class PoisonR extends Component{
         <QuizButton
           id={randompoisonQs[0].id}
           text={randompoisonQs[0].a}
-          ref = {ref => this.inc0 = ref}
+          ref = {ref => this.b1 = ref}
         ></QuizButton>
         <QuizButton
           id={randompoisonQs[1].id}
           text={randompoisonQs[1].a}
-          ref = {ref => this.inc1 = ref}
+          ref = {ref => this.b2 = ref}
         ></QuizButton>
         <QuizButton
           id={randompoisonQs[2].id}
           text={randompoisonQs[2].a}
-          ref = {ref => this.inc2 = ref}
+          ref = {ref => this.b3 = ref}
         ></QuizButton>
         <QuizButton
           id={randompoisonQs[3].id}
           text={randompoisonQs[3].a}
-          ref = {ref => this.correct = ref}
+          ref = {ref => this.b4 = ref}
         ></QuizButton>
         </View>
 

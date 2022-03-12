@@ -10,6 +10,7 @@ import { CoreStyle } from "../components/CoreStyle";
 
 var carCount = 0;
 var carScore = 0;
+var lastC = false;
 var CarQs = [
     {Q: {
         q: "Where should a rear-facing carseat be installed?",
@@ -89,8 +90,11 @@ export default class CarRev1 extends Component{
 
     reRender = () => {
         //console.log("reRender reached");
-        if (this.correct.state.buttonColor == "green") {
+        if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
             carScore++;
+            lastC = true;
+        } else {
+            lastC = false;
         }
         if (carCount < CarQs.length-1) {
             carCount++;
@@ -115,10 +119,10 @@ export default class CarRev1 extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             });
-            this.correct.setState({buttonColor: "white"});
-            this.inc0.setState({buttonColor: "white"});
-            this.inc1.setState({buttonColor: "white"});
-            this.inc2.setState({buttonColor: "white"});
+            this.b1.setState({buttonColor: "white"});
+            this.b2.setState({buttonColor: "white"});
+            this.b3.setState({buttonColor: "white"});
+            this.b4.setState({buttonColor: "white"});
         } else {
             console.log(carScore);
             this.props.navigation.navigate("CarW", {
@@ -132,7 +136,7 @@ export default class CarRev1 extends Component{
         //console.log("deRender reached");
         carCount--;
         var question = CarQs[carCount].Q;
-        if (carScore > 0) {
+        if (carScore > 0 && lastC == true) {
             carScore--;
         }
         if (carCount > 0) {
@@ -179,10 +183,10 @@ export default class CarRev1 extends Component{
             });
         }
       //Do we want to reset the buttons on going back? Or find a way to preserve answers?
-      this.correct.setState({buttonColor: "white"});
-        this.inc0.setState({buttonColor: "white"});
-        this.inc1.setState({buttonColor: "white"});
-        this.inc2.setState({buttonColor: "white"});
+        this.b1.setState({buttonColor: "white"});
+        this.b2.setState({buttonColor: "white"});
+        this.b3.setState({buttonColor: "white"});
+        this.b4.setState({buttonColor: "white"});
     }
 
   render(){
@@ -216,22 +220,22 @@ export default class CarRev1 extends Component{
         <QuizButton
           id={randomCarQs[0].id}
           text={randomCarQs[0].a}
-          ref = {ref => this.inc0 = ref}
+          ref = {ref => this.b1 = ref}
         ></QuizButton>
         <QuizButton
           id={randomCarQs[1].id}
           text={randomCarQs[1].a}
-          ref = {ref => this.inc1 = ref}
+          ref = {ref => this.b2 = ref}
         ></QuizButton>
         <QuizButton
           id={randomCarQs[2].id}
           text={randomCarQs[2].a}
-          ref = {ref => this.inc2 = ref}
+          ref = {ref => this.b3 = ref}
         ></QuizButton>
         <QuizButton
           id={randomCarQs[3].id}
           text={randomCarQs[3].a}
-          ref = {ref => this.correct = ref}
+          ref = {ref => this.b4 = ref}
         ></QuizButton>
         </View>
 
