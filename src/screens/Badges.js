@@ -11,8 +11,11 @@ import Background from "../assets/badgeScreen.png";
 import MenuButton from "../components/MenuButton";
 import Constants from "../Constants";
 import { get } from "../Db";
+import * as ScreenOrientation from 'expo-screen-orientation'
+
 
 function Item({ item }) {
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   return (
     <View style={styles.listItem}>
       <Image
@@ -147,6 +150,7 @@ export default class Badges extends React.Component {
   render() {
     return (
       <ImageBackground source={Background} style={styles.image}>
+      <MenuButton txtColor="black" text="GO BACK" onPress={this.handleReturnToHome}></MenuButton>
         <View style={styles.contentArea}>
           <FlatList
             style={{ flex: 1 }}
@@ -155,7 +159,6 @@ export default class Badges extends React.Component {
             keyExtractor={(item) => item.ID}
           />
         </View>
-        <MenuButton txtColor="black" text="GO BACK" onPress={this.handleReturnToHome}></MenuButton>
       </ImageBackground>
     );
   }
@@ -186,6 +189,6 @@ const styles = StyleSheet.create({
   },
   contentArea: {
     backgroundColor: "transparent",
-    height: (Constants.MAX_HEIGHT * 7) / 10,
+    height: (Constants.MAX_HEIGHT * 4) / 10,
   },
 });

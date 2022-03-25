@@ -8,10 +8,13 @@ import { ImageBackground, StyleSheet, View } from "react-native";
 import Background from "../assets/homescreen.png";
 import MenuButton from "../components/MenuButton";
 import { get } from "../Db";
+import * as ScreenOrientation from 'expo-screen-orientation'
+
 
 export default function Home({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });
   const [sound, setSound] = React.useState();
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   async function playSound() {
     Audio.setAudioModeAsync({
       allowsRecordingIOS: false,
@@ -46,6 +49,7 @@ export default function Home({ navigation }) {
   }, []);
   //Nav Callbacks
   const handlePlayNow = () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     sound.pauseAsync();
     if (unlocked["lvl3"] != null) {
       navigation.navigate("LevelThree");
@@ -56,15 +60,20 @@ export default function Home({ navigation }) {
     }
   };
   const handleLevelSelect = () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("LevelSelect", { sound: sound });
   };
   const handleBadgeNav = () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("Badges");
   };
   const handleAboutNav = () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("About");
   };
   const handleBackNav = () => {
+    ScreenOrientation.unlockAsync();
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
     sound.stopAsync();
     sound.unloadAsync();
     navigation.navigate("Landing");
