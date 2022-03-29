@@ -7,8 +7,11 @@ import { ImageBackground, StyleSheet, View } from "react-native";
 import Background from "../assets/levelSelect.png";
 import MenuButton from "../components/MenuButton";
 import { get } from "../Db";
+import * as ScreenOrientation from 'expo-screen-orientation'
+
 
 export default function LevelSelect({ navigation }) {
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });
   useEffect(() => {
     async function unlockedLevels() {

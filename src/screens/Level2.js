@@ -16,6 +16,8 @@ import { get, insert } from "../Db";
 import Entities from "../entities/Level2Entities";
 import Dispatches from "../systems/Level2Dispatches";
 import Movement from "../systems/Movement";
+import * as ScreenOrientation from 'expo-screen-orientation'
+
 export default class LevelTwo extends Component {
   constructor(props) {
     super(props);
@@ -148,6 +150,7 @@ export default class LevelTwo extends Component {
   };
 
   render() {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     const { modalVisible } = this.state;
     return (
       <ImageBackground source={background} style={styles.image}>

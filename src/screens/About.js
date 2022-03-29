@@ -6,8 +6,11 @@ import React from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/aboutScreen.png";
 import MenuButton from "../components/MenuButton";
+import * as ScreenOrientation from 'expo-screen-orientation'
+
 
 export default function About({ navigation }) {
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   //NAV CALLBACK
   const goHome = () => {
     navigation.pop();
