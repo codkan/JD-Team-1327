@@ -5,8 +5,7 @@
 
  import { createAppContainer } from "react-navigation";
  import { createStackNavigator } from "react-navigation-stack";
- import { NavigationContainer } from "@react-navigation/native";
- import React from "react"
+
  
  import Landing from "./screens/Landing"
  import Info from "./screens/Info";
@@ -76,98 +75,84 @@
        screen: Multimedia,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Falls: {
          screen: Falls,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      FallsMM: {
          screen: FallsMM,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      FallsR: {
          screen: FallsR,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      Win: {
          screen: Win,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      PoisonR: {
          screen: PoisonR,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      BurnR: {
          screen: BurnR,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      DrowningReview: {
          screen: DrowningReview,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      DrowningMM: {
        screen: DrowningMM,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      CarSafetyMM: {
          screen: CarSafetyMM,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      RoadRev1: {
        screen: RoadRev1,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      ParentalHealthMM: {
          screen: ParentalHealthMM,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      ParRev1: {
        screen: ParRev1,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Burns: {
        screen: Burns,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Poisonings: {
@@ -180,161 +165,138 @@
        screen: Drownings,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Traffic: {
        screen: Traffic,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      ParentalHealth: {
        screen: ParentalHealth,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Review: {
        screen: Review,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Home: {
          screen: Home,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      Sources: {
        screen: Sources,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Settings1: {
          screen: Settings1,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      Settings2: {
          screen: Settings2,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      Settings3: {
          screen: Settings3,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      LevelSelect: {
      screen: LevelSelect,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
      },
      },
      Badges: {
      screen: Badges,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
      },
      },
      Settings: {
      screen: Settings,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
      },
      },
      About: {
      screen: About,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
      },
      },
      Disclaim: {
      screen: Disclaim,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
      },
      },
      LevelOne: {
      screen: LevelOne,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
      },
      },
      LevelTwo: {
      screen: LevelTwo,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
      },
      },
      LevelThree: {
      screen: LevelThree,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
      },
      },
      PoisoningSources: {
      screen: PoisoningSources,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
        },
      },
      BurningSources: {
      screen: BurningSources,
      navigationOptions: {
        headerShown: false,
-       animationEnabled: false,
        },
      },
      FallSources: {
      screen: FallSources,
      navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      TrafficSources: {
      screen: TrafficSources,
      navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      DrowningSources: {
        screen: DrowningSources,
        navigationOptions: {
              headerShown: false,
-             animationEnabled: false,
            },
        },
      ParentalHealthSources: {
        screen: ParentalHealthSources,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
  
@@ -342,14 +304,12 @@
        screen: PoisoningsMM,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      BurnsMM: {
        screen: BurnsMM,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
  };
