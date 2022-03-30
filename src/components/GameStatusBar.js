@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { View, Modal, Button, Text, StyleSheet } from "react-native";
-import Constants from "../Constants";
 import Timer from "./Timer";
 import MenuButton from "./MenuButton";
+import { Dimensions } from "react-native";
+
+
+let MAX_WIDTH = Dimensions.get("screen").width;
+let MAX_HEIGHT = Dimensions.get("screen").height;
 
 export default class GameStatusBar extends Component {
   constructor(props) {
@@ -60,8 +64,8 @@ export default class GameStatusBar extends Component {
     this.props.timeToLevel(time);
   };
   render() {
-    const width = Constants.MAX_WIDTH;
-    const height = Constants.MAX_HEIGHT * 0.08;
+    const width = MAX_WIDTH;
+    const height = MAX_HEIGHT * 0.08;
     const x = 0;
     const y = 0;
 

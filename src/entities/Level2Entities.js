@@ -1,6 +1,5 @@
 import Matter from "matter-js";
 import Wall from "../components/Wall";
-import Constants from "../Constants";
 import Circle from "../components/Circle";
 import Player from "../components/renderers/Player";
 import Npc from "../components/renderers/Npc";
@@ -14,144 +13,147 @@ import Counter4 from "../components/renderers/Counter4";
 import Stove from "../components/renderers/Stove";
 import Sink from "../components/renderers/Sink";
 import Corner from "../components/renderers/Corner";
+import { Dimensions } from "react-native";
 
 const Entities = () => {
   let engine = Matter.Engine.create({ enableSleeping: false });
   let world = engine.world;
   world.gravity.y = 0;
+  let MAX_WIDTH = Dimensions.get("screen").width;
+  let MAX_HEIGHT = Dimensions.get("screen").height;
 
   let player = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH / 8,
-    Constants.MAX_HEIGHT / 2,
+    MAX_WIDTH / 8,
+    MAX_HEIGHT / 2,
     30,
     70,
   );
 
   let npc = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.5,
-    Constants.MAX_HEIGHT * 0.66,
+    MAX_WIDTH * 0.5,
+    MAX_HEIGHT * 0.66,
     30,
     70,
     { isStatic: true }
   );
 
   let diningTable = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH / 7,
-    Constants.MAX_HEIGHT / 3,
+    MAX_WIDTH / 7,
+    MAX_HEIGHT / 3,
     150,
     150,
     { isStatic: true }
   );
 
   let counter1 = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.625,
-    Constants.MAX_HEIGHT * 0.27,
+    MAX_WIDTH * 0.625,
+    MAX_HEIGHT * 0.27,
     55,
     75,
     { isStatic: true }
   );
 
   let counter2 = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.82,
-    Constants.MAX_HEIGHT * 0.27,
+    MAX_WIDTH * 0.82,
+    MAX_HEIGHT * 0.27,
     55,
     75,
     { isStatic: true }
   );
 
   let counter3 = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.69,
-    Constants.MAX_HEIGHT * 0.27,
+    MAX_WIDTH * 0.69,
+    MAX_HEIGHT * 0.27,
     55,
     75,
     { isStatic: true }
   );
 
   let counter4 = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.9,
-    Constants.MAX_HEIGHT * 0.45,
+    MAX_WIDTH * 0.9,
+    MAX_HEIGHT * 0.45,
     55,
     75,
     { isStatic: true }
   );
 
   let counter5 = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.9,
-    Constants.MAX_HEIGHT * 0.71,
+    MAX_WIDTH * 0.9,
+    MAX_HEIGHT * 0.71,
     55,
     75,
     { isStatic: true }
   );
 
   let corner = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.9-10,
-    Constants.MAX_HEIGHT * 0.27,
+    MAX_WIDTH * 0.9-10,
+    MAX_HEIGHT * 0.27,
     55,
     75,
     { isStatic: true }
   );
 
   let stove = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.9,
-    Constants.MAX_HEIGHT * 0.58,
+    MAX_WIDTH * 0.9,
+    MAX_HEIGHT * 0.58,
     55,
     75,
     { isStatic: true }
   );
 
   let sink = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.755,
-    Constants.MAX_HEIGHT * 0.27,
+    MAX_WIDTH * 0.755,
+    MAX_HEIGHT * 0.27,
     55,
     75,
     { isStatic: true }
   );
   // let chairOne = Matter.Bodies.circle(
-  //   (x = Constants.MAX_WIDTH / 4.5),
-  //   (y = Constants.MAX_HEIGHT / 3.3),
+  //   (x = MAX_WIDTH / 4.5),
+  //   (y = MAX_HEIGHT / 3.3),
   //   (radius = 20),
   //   { isStatic: true }
   // );
 
   // let chairTwo = Matter.Bodies.circle(
-  //   (x = Constants.MAX_WIDTH * 0.04),
-  //   (y = Constants.MAX_HEIGHT / 3.3),
+  //   (x = MAX_WIDTH * 0.04),
+  //   (y = MAX_HEIGHT / 3.3),
   //   (radius = 20),
   //   { isStatic: true }
   // );
 
   // let knife = Matter.Bodies.rectangle(
-  //   Constants.MAX_WIDTH / 2.5,
-  //   Constants.MAX_HEIGHT / 6,
+  //   MAX_WIDTH / 2.5,
+  //   MAX_HEIGHT / 6,
   //   45,
   //   45,
   //   { isStatic: true }
   // );
 
   let island = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.65,
-    Constants.MAX_HEIGHT * 0.66,
+    MAX_WIDTH * 0.65,
+    MAX_HEIGHT * 0.66,
     100,
     70,
     { isStatic: true }
   );
   let refrigerator = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.55,
-    Constants.MAX_HEIGHT * 0.25,
+    MAX_WIDTH * 0.55,
+    MAX_HEIGHT * 0.25,
     30,
     75,
     { isStatic: true }
   );
   let topCabinet = Matter.Bodies.rectangle(
-    Constants.MAX_WIDTH * 0.9,
-    Constants.MAX_HEIGHT * 0.15,
+    MAX_WIDTH * 0.9,
+    MAX_HEIGHT * 0.15,
     650,
     52,
     { isStatic: true }
   );
   // let rightCabinet = Matter.Bodies.rectangle(
-  //   Constants.MAX_WIDTH * 0.84,
-  //   Constants.MAX_HEIGHT * 0.25,
+  //   MAX_WIDTH * 0.84,
+  //   MAX_HEIGHT * 0.25,
   //   52,
   //   300,
   //   { isStatic: true }
@@ -160,28 +162,28 @@ const Entities = () => {
   let top_wall = Matter.Bodies.rectangle(
     (x = 0),
     (y = 0),
-    (width = Constants.MAX_WIDTH * 2),
-    (height = Constants.MAX_HEIGHT / 6),
+    (width = MAX_WIDTH * 2),
+    (height = MAX_HEIGHT / 6),
     { isStatic: true }
   );
   let left_wall = Matter.Bodies.rectangle(
     (x = 0),
     (y = 0),
     (width = 10),
-    (height = Constants.MAX_HEIGHT * 2),
+    (height = MAX_HEIGHT * 2),
     { isStatic: true }
   );
   let right_wall = Matter.Bodies.rectangle(
-    (x = Constants.MAX_WIDTH),
+    (x = MAX_WIDTH),
     (y = 0),
     (width = 10),
-    (height = Constants.MAX_HEIGHT * 2),
+    (height = MAX_HEIGHT * 2),
     { isStatic: true }
   );
   let bottom_wall = Matter.Bodies.rectangle(
-    (x = Constants.MAX_WIDTH / 2),
-    (y = Constants.MAX_HEIGHT),
-    (width = Constants.MAX_WIDTH),
+    (x = MAX_WIDTH / 2),
+    (y = MAX_HEIGHT),
+    (width = MAX_WIDTH),
     (height = 10),
     { isStatic: true }
   );
@@ -318,25 +320,25 @@ const Entities = () => {
     // },
     top_wall: {
       body: top_wall,
-      size: [Constants.MAX_WIDTH * 2, Constants.MAX_HEIGHT / 6],
+      size: [MAX_WIDTH * 2, MAX_HEIGHT / 6],
       color: "black",
       renderer: Wall,
     },
     left_wall: {
       body: left_wall,
-      size: [10, Constants.MAX_HEIGHT * 2],
+      size: [10, MAX_HEIGHT * 2],
       color: "black",
       renderer: Wall,
     },
     right_wall: {
       body: right_wall,
-      size: [10, Constants.MAX_HEIGHT * 2],
+      size: [10, MAX_HEIGHT * 2],
       color: "black",
       renderer: Wall,
     },
     bottom_wall: {
       body: bottom_wall,
-      size: [Constants.MAX_WIDTH, 10],
+      size: [MAX_WIDTH, 10],
       color: "black",
       renderer: Wall,
     },

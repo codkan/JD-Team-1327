@@ -7,12 +7,14 @@ import {
     Image, ImageBackground, StyleSheet,
     Text, TouchableOpacity, View
 } from "react-native";
+import { Dimensions } from "react-native";
 import Background from "../assets/badgeScreen.png";
 import MenuButton from "../components/MenuButton";
-import Constants from "../Constants";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation'
 
+let MAX_WIDTH = Dimensions.get("screen").width;
+let MAX_HEIGHT = Dimensions.get("screen").height;
 
 function Item({ item }) {
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
@@ -24,7 +26,7 @@ function Item({ item }) {
       />
       <View style={{ alignItems: "center", flex: 1 }}>
         <Text style={{ fontWeight: "bold", color: "black", fontSize: 22 }}>{item.name}</Text>
-        <Text style={{color: "black", paddingTop: Constants.MAX_HEIGHT*.02, fontSize:20}}>{item.position}</Text>
+        <Text style={{color: "black", paddingTop: MAX_HEIGHT*.02, fontSize:20}}>{item.position}</Text>
       </View>
       <TouchableOpacity
         style={{
@@ -184,11 +186,11 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center",
-    paddingHorizontal: Constants.MAX_HEIGHT * 0.1,
-    paddingTop: Constants.MAX_HEIGHT * 0.24,
+    paddingHorizontal: MAX_HEIGHT * 0.1,
+    paddingTop: MAX_HEIGHT * 0.24,
   },
   contentArea: {
     backgroundColor: "transparent",
-    height: (Constants.MAX_HEIGHT * 4) / 10,
+    height: (MAX_HEIGHT * 4) / 10,
   },
 });
