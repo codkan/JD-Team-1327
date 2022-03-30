@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     backgroundColor: "transparent",
     alignItems: "center",
+    marginVertical: -3,
   },
   buttonText: {
     fontWeight: "bold",

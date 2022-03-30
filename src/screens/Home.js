@@ -120,9 +120,8 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flex: 1,
-    top: 55,
+    top: 120,
     justifyContent: "center",
-    marginTop: 90,
   },
   button: {
     color: "black",

@@ -15,21 +15,22 @@ export default function Disclaim({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-
+      <View style={styles.container}>
       <Text style={styles.modalText}> Welcome to Child Safe! {'\n'}
       Team Client: Dr. Ann McClellan {'\n'}
-      Team: Cody Kantor, Aayush Dixit, William Wynne, Erin Falejczyk, and Akash Vemulapalli
+      Team: Cody Kantor, Aayush Dixit, William Wynne, {'\n'} Erin Falejczyk, and Akash Vemulapalli
       </Text>
 
-      <Text style={styles.disclaimer}>{'\t'}This application was originally developed in 2022 for Dr. Ann McClellan
+      <Text style={styles.disclaimer}>{'\t'}This application was developed in 2022 for Dr. Ann McClellan
       by a team of five students studying Computer Science at the Georgia Institute of Technology.
-      We have worked incredibly hard on this application and we all hope that the valuable information presented
+      Initially, it was built around the standalone game created by the original team, Team BeDot.
+      But we have worked incredibly hard on expanding this application and we all hope that the valuable information presented
       can help new parents and other caregivers prevent some of the unnecessary injuries and deaths caused by child accidents. {'\n'}
       </Text>
 
       <View style={styles.contain}>
       <Text style={styles.disclaimer}>Disclaimer: </Text>
-      <Text style={styles.disclaimer}>This product is for educational and informational purposes only
+      <Text style={styles.disclaimer}>This product and the game therein is for educational and informational purposes only
       and is solely designed as a helpful tool for users to think about child safety and the devastating
       consequences of childhood injuries. {'\n'}</Text>
       <Text style={styles.disclaimer}>It is not intended to be a substitute for professional healthcare
@@ -41,7 +42,7 @@ export default function Disclaim({ navigation }) {
       application is provided in good faith and reflects current childcare practices as expressed by
       experts in the field. {'\n'}</Text>
       </View>
-
+      </View>
       <MenuButton text="GO BACK" txtColor={"black"} onPress={goHome}></MenuButton>
 
     </ImageBackground>
@@ -57,6 +58,11 @@ const styles = StyleSheet.create({
   contain: {
     marginHorizontal: 25,
     //marginTop: 160,
+  },
+  container: {
+    marginTop: 50,
+    marginBottom: 25,
+    marginHorizontal: 10,
   },
   modalText: {
     marginTop: 150,
