@@ -8,69 +8,69 @@ import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 
-var poisonCount = 0;
-var poisonScore = 0;
+var burnCount = 0;
+var burnScore = 0;
 var lastC = false;
-var poisonQs = [
+var burnQs = [
     {Q: {
-        q: "What is the Poison Control Help number?",
+        q: "What type of burn injury is the most common?",
         answers: [
-            {a: "911", id:"inc0"},
-            {a: "1-234-567-8901", id:"inc1"},
-            {a: "451-234-9991", id:"inc2"},
-            {a: "1-800-222-1222", id:"correct"},
+            {a: "Stove injuries", id:"inc0"},
+            {a: "Friction burns", id:"inc1"},
+            {a: "Electrical burns", id:"inc2"},
+            {a: "Scalds", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where is poison most commonly ingested?",
+        q: "What should be the maximum temperature for your water heater?",
         answers: [
-            {a: "Eyes", id:"inc0"},
-            {a: "Ears", id:"inc1"},
-            {a: "Nose/Inhalation", id:"inc2"},
-            {a: "Mouth", id:"correct"},
+            {a: "100 degrees Farenheit", id:"inc0"},
+            {a: "140 degrees Farenheit", id:"inc1"},
+            {a: "130 degrees Farenheit", id:"inc2"},
+            {a: "120 degrees Farenheit", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Which age group is statisically most at risk of poisoning?",
+        q: "Under which circumstance should you test temperatures before your child?",
         answers: [
-            {a: "13-19", id:"inc0"},
-            {a: "20-29", id:"inc1"},
-            {a: "7-12", id:"inc2"},
-            {a: "6 and under", id:"correct"},
-        ],
-    }},
-
-    {Q: {
-        q: "Which of the following are a common cause of child poisoning?",
-        answers: [
-            {a: "Dirt", id:"inc0"},
-            {a: "Expired food", id:"inc1"},
-            {a: "Plastic", id:"inc2"},
-            {a: "Cosmetics", id:"correct"},
+            {a: "When microwaving food", id:"inc0"},
+            {a: "When bathing your child", id:"inc1"},
+            {a: "Playing on metal playground equipment", id:"inc2"},
+            {a: "Under all these situations", id:"correct"},
         ],
     }},
 
     {Q: {
-        q: "Which of the following are risks for children when they are outside of the house?",
+        q: "What's the first thing you should do if your child gets a burn injury?",
         answers: [
-            {a: "Unknown plants", id:"inc0"},
-            {a: "Lead paint", id:"inc1"},
-            {a: "Brightly colored berries", id:"inc2"},
-            {a: "All of these", id:"correct"},
+            {a: "Apply ointment", id:"inc0"},
+            {a: "Pop blisters to prevent infection", id:"inc1"},
+            {a: "Wrap it in a bandage or gauze", id:"inc2"},
+            {a: "Cool the area with cold water", id:"correct"},
+        ],
+    }},
+
+    {Q: {
+        q: "Which one of these accurately describes a third-degree burn?",
+        answers: [
+            {a: "Larger than 4 inches in length", id:"inc0"},
+            {a: "Particularly sensitive/critical body part", id:"inc1"},
+            {a: "On the outer later of skin", id:"inc2"},
+            {a: "Going through all skin layers", id:"correct"},
         ],
     }},
 ];
 
-export default class PoisonR extends Component{
+export default class BurnR extends Component{
     constructor(){
         super();
-        poisonCount = 0;
-        poisonScore = 0;
-        poisonQs = poisonQs.sort(() => Math.random() - 0.5);
-        var question = poisonQs[poisonCount].Q;
+        burnCount = 0;
+        burnScore = 0;
+        burnQs = burnQs.sort(() => Math.random() - 0.5);
+        var question = burnQs[burnCount].Q;
         this.state = {
             prevState: {
-                qNum: "Question " + (poisonCount+1),
+                qNum: "Question " + (burnCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -79,7 +79,7 @@ export default class PoisonR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             },
-            qNum: "Question " + (poisonCount+1),
+            qNum: "Question " + (burnCount+1),
             Q: question.q,
             answers: [
                 {a: question.answers[0].a, id: question.answers[0].id },
@@ -93,14 +93,14 @@ export default class PoisonR extends Component{
     reRender = () => {
         //console.log("reRender reached");
         if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
-            poisonScore++;
+            burnScore++;
             lastC = true;
         } else {
             lastC = false;
         }
-        if (poisonCount < poisonQs.length-1) {
-            poisonCount++;
-            var question = poisonQs[poisonCount].Q;
+        if (burnCount < burnQs.length-1) {
+            burnCount++;
+            var question = burnQs[burnCount].Q;
             this.setState({
                 prevState: {
                     qNum: this.state.qNum,
@@ -112,7 +112,7 @@ export default class PoisonR extends Component{
                         {a: this.state.answers[3].a, id: this.state.answers[3].id },
                     ],
                 },
-                qNum: "Question " + (poisonCount+1),
+                qNum: "Question " + (burnCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -126,35 +126,35 @@ export default class PoisonR extends Component{
             this.b3.setState({buttonColor: "white"});
             this.b4.setState({buttonColor: "white"});
         } else {
-            console.log(poisonScore);
+            console.log(burnScore);
             this.props.navigation.navigate("Win", {
-                poisonScore: poisonScore,
-                total: poisonQs.length,
-                text: "Poisoning",
+                burnScore: burnScore,
+                total: burnQs.length,
+                text: "Burns",
             });
         }
     };
 
     deRender = () => {
         //console.log("deRender reached");
-        poisonCount--;
-        var question = poisonQs[poisonCount].Q;
-        if (poisonScore > 0 && lastC == true) {
-            poisonScore--;
+        burnCount--;
+        var question = burnQs[burnCount].Q;
+        if (burnScore > 0  && lastC == true) {
+            burnScore--;
         }
-        if (poisonCount > 0) {
+        if (burnCount > 0) {
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: poisonQs[poisonCount-1].Q.q,
+                     Q: burnQs[burnCount-1].Q.q,
                      answers: [
-                         {a: poisonQs[poisonCount-1].Q.answers[0].a, id: poisonQs[poisonCount-1].Q.answers[0].id},
-                         {a: poisonQs[poisonCount-1].Q.answers[1].a, id: poisonQs[poisonCount-1].Q.answers[1].id},
-                         {a: poisonQs[poisonCount-1].Q.answers[2].a, id: poisonQs[poisonCount-1].Q.answers[2].id},
-                         {a: poisonQs[poisonCount-1].Q.answers[3].a, id: poisonQs[poisonCount-1].Q.answers[3].id},
+                         {a: burnQs[burnCount-1].Q.answers[0].a, id: burnQs[burnCount-1].Q.answers[0].id},
+                         {a: burnQs[burnCount-1].Q.answers[1].a, id: burnQs[burnCount-1].Q.answers[1].id},
+                         {a: burnQs[burnCount-1].Q.answers[2].a, id: burnQs[burnCount-1].Q.answers[2].id},
+                         {a: burnQs[burnCount-1].Q.answers[3].a, id: burnQs[burnCount-1].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (poisonCount+1),
+                qNum: "Question " + (burnCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -167,15 +167,15 @@ export default class PoisonR extends Component{
             this.setState({
                 prevState: {
                      qNum: this.state.prevState.qNum,
-                     Q: poisonQs[0].Q.q,
+                     Q: burnQs[0].Q.q,
                      answers: [
-                         {a: poisonQs[0].Q.answers[0].a, id: poisonQs[0].Q.answers[0].id},
-                         {a: poisonQs[0].Q.answers[1].a, id: poisonQs[0].Q.answers[1].id},
-                         {a: poisonQs[0].Q.answers[2].a, id: poisonQs[0].Q.answers[2].id},
-                         {a: poisonQs[0].Q.answers[3].a, id: poisonQs[0].Q.answers[3].id},
+                         {a: burnQs[0].Q.answers[0].a, id: burnQs[0].Q.answers[0].id},
+                         {a: burnQs[0].Q.answers[1].a, id: burnQs[0].Q.answers[1].id},
+                         {a: burnQs[0].Q.answers[2].a, id: burnQs[0].Q.answers[2].id},
+                         {a: burnQs[0].Q.answers[3].a, id: burnQs[0].Q.answers[3].id},
                      ],
                  },
-                qNum: "Question " + (poisonCount+1),
+                qNum: "Question " + (burnCount+1),
                 Q: question.q,
                 answers: [
                     {a: question.answers[0].a, id: question.answers[0].id },
@@ -194,7 +194,7 @@ export default class PoisonR extends Component{
 
   render(){
 
-      var randompoisonQs =  this.state.answers.sort(() => Math.random() - 0.5);
+      var randomburnQs =  this.state.answers.sort(() => Math.random() - 0.5);
 
       return (
         <ImageBackground source={Background} style={styles.image}>
@@ -221,31 +221,31 @@ export default class PoisonR extends Component{
 
         <View style={styles.buttonContainer}>
         <QuizButton
-          id={randompoisonQs[0].id}
-          text={randompoisonQs[0].a}
+          id={randomburnQs[0].id}
+          text={randomburnQs[0].a}
           ref = {ref => this.b1 = ref}
         ></QuizButton>
         <QuizButton
-          id={randompoisonQs[1].id}
-          text={randompoisonQs[1].a}
+          id={randomburnQs[1].id}
+          text={randomburnQs[1].a}
           ref = {ref => this.b2 = ref}
         ></QuizButton>
         <QuizButton
-          id={randompoisonQs[2].id}
-          text={randompoisonQs[2].a}
+          id={randomburnQs[2].id}
+          text={randomburnQs[2].a}
           ref = {ref => this.b3 = ref}
         ></QuizButton>
         <QuizButton
-          id={randompoisonQs[3].id}
-          text={randompoisonQs[3].a}
+          id={randomburnQs[3].id}
+          text={randomburnQs[3].a}
           ref = {ref => this.b4 = ref}
         ></QuizButton>
         </View>
 
         <View style={styles.container}>
         <MainButton
-            text="Go to Poisonings"
-            onPress={() => this.props.navigation.navigate("Poisonings")}
+            text="Go to Burns"
+            onPress={() => this.props.navigation.navigate("Burns")}
         ></MainButton>
         </View>
 

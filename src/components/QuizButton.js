@@ -3,7 +3,6 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { color } from "react-native-reanimated";
 import {Audio} from "expo-av";
 import ConfettiCannon from "react-native-confetti-cannon";
-import FallsR from "../screens/FallsR.js"
 
 
 export default class QuizButton extends PureComponent{
@@ -12,41 +11,48 @@ export default class QuizButton extends PureComponent{
         super();
         this.state = {
             buttonColor: "white",
+            pressed: false,
         };
     };
 
     changeButtonColor = () => {
       if (this.props.id === "correct") {
         this.setState({
-            buttonColor: "green"
+            buttonColor: "green",
+            pressed: true,
         });
         this.explosion && this.explosion.start();
         this.celebrate();
       } else {
         this.setState({
-            buttonColor: "red"
+            buttonColor: "red",
+            pressed: true,
         });
         this.noCelebrate();
       }
     };
 
   celebrate = async () => {
-    console.log('Loading Sound');
-    const { sound } = await Audio.Sound.createAsync(
-       require('../assets/cheer.mp3')
-    );
-    console.log('Playing Sound');
-    await sound.playAsync();
+    try {
+        const { sound } = await Audio.Sound.createAsync(
+           require('../assets/cheer.mp3')
+        );
+        await sound.playAsync();
+    } catch (e) {
+        //should be fine
+    }
   }
 
   noCelebrate = async () => {
-      console.log('Loading Sound');
-      const { sound } = await Audio.Sound.createAsync(
-         require('../assets/wrong.mp3')
-      );
-      console.log('Playing Sound');
-      await sound.playAsync();
+    try {
+        const { sound } = await Audio.Sound.createAsync(
+           require('../assets/wrong.mp3')
+        );
+        await sound.playAsync();
+    } catch (e) {
+        //Should be fine
     }
+  }
 
     render(){
     return (
@@ -86,7 +92,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontStyle: "normal",
-    fontSize: 32,
+    fontSize: 24,
     color: "black",
     textAlign: "center",
     justifyContent: "center",

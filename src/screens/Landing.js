@@ -3,6 +3,7 @@
  */
 
 import React from "react";
+import {useState} from 'react'
 import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native";
 import disclaim from "../assets/info.png";
 import Background from "../assets/bg.png";
@@ -14,9 +15,15 @@ import settings from "../assets/landingCrayons/settings.png";
 import sources from "../assets/landingCrayons/sources.png";
 import videos from "../assets/landingCrayons/videos.png";
 import Navbar from "../components/NavBar";
+import * as ScreenOrientation from 'expo-screen-orientation'
+
 
 
 export default function Home({ navigation }) {
+
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
+
+
   const handleInfoNav = () => {
     navigation.navigate("Info");
   };
@@ -24,6 +31,8 @@ export default function Home({ navigation }) {
     navigation.navigate("Review");
   };
   const handleGameNav = () => {
+    ScreenOrientation.unlockAsync();
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("Home");
   };
   const handleSettings1Nav = () => {
