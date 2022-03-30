@@ -67,7 +67,7 @@ const Entities = () => {
   // );
   let chair = Matter.Bodies.rectangle(
     (x = MAX_WIDTH * 0.85),
-    (y = MAX_HEIGHT / 2 + 40),
+    (y = MAX_HEIGHT / 2 + 35),
     (width = 30),
     (height = 30),
     { isStatic: true }
@@ -81,7 +81,7 @@ const Entities = () => {
   );
 
   let bookshelf = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH * 0.92),
+    (x = MAX_WIDTH * 0.88),
     (y = MAX_HEIGHT * 0.35),
     (width = 30),
     (height = 60),
@@ -89,7 +89,7 @@ const Entities = () => {
   );
 
   let lamp = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH * 0.92),
+    (x = MAX_WIDTH * 0.88),
     (y = MAX_HEIGHT * 0.2),
     (width = 20),
     (height = 40),

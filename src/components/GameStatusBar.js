@@ -5,8 +5,8 @@ import MenuButton from "./MenuButton";
 import { Dimensions } from "react-native";
 
 
-let MAX_WIDTH = Dimensions.get("screen").width;
-let MAX_HEIGHT = Dimensions.get("screen").height;
+let MAX_WIDTH = Dimensions.get("screen").height;
+let MAX_HEIGHT = Dimensions.get("screen").width;
 
 export default class GameStatusBar extends Component {
   constructor(props) {
