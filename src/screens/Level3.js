@@ -295,7 +295,7 @@ export default class LevelThree extends Component {
                   deaths in 2019, and a record 53 deaths in 2018.
                 </Text>
                 <Text style={styles.modalText}>
-                  The majority of hot car deaths – 54% -- happen because someone
+                  The majority of hot car deaths – 54% - happen because someone
                   forgets a child in a car. Nearly 75% of children who are
                   forgotten and die are under 2 years old.
                 </Text>

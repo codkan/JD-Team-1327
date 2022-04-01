@@ -347,20 +347,16 @@ export default class LevelOne extends Component {
                 <View style={styles.modalView}>
                   <Text style={styles.modalTitle}>Outlets:</Text>
                   <Text style={styles.modalText}>
-                    Outlet Covers are great solutions to prevent accidental
+                    Outlet covers are great solutions to prevent accidental
                     electrocutions. Nearly one-third of accidents occur when a
                     child inserts common household items into receptacles, 70
                     percent of them occurring when adults are present.  Items
                     that children insert into outlets can be found anywhere, and
-                    include:
+                    commonly include: hairpins, keys, plugs, paper clips, staples, tools,
+                    jewelry, belt buckles, nail files, and knives.
                   </Text>
                   <Text style={styles.modalText}>
-                    Hairpins, Keys, Plugs, Paper clips and staples, Tools,
-                    Jewelry, Belt buckles, Nail files, Knives
-                  </Text>
-                  <Text style={styles.modalText}>And more</Text>
-                  <Text style={styles.modalText}>
-                    Approximately 100 kids die each year by electrocution, 2 and
+                    Approximately 100 kids die each year by electrocution, and
                     many others are seriously hurt.
                   </Text>
                   <Text style={styles.modalText}>

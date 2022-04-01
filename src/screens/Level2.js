@@ -265,10 +265,7 @@ export default class LevelTwo extends Component {
                 Cooking is the leading cause of home fires in the United States. 
                 </Text>
                 <Text style={styles.modalText}>
-                Fires can start from: 
-                </Text>
-                <Text style={styles.modalText}>
-                Unsupervised food on a stove, in a microwave, or in an oven. Grease spills. A dish towel too close to the burner. A coffee pot accidentally left on.  
+               Some common ways in which fires start in the kitchen include unsupervised food on a stove, in a microwave, or in an oven, grease spills, a dish towel too close to the burner, or a coffee pot accidentally left on. 
                 </Text>
                 <Text style={styles.modalText}>
                 Tips for using the stove: 
@@ -315,11 +312,9 @@ export default class LevelTwo extends Component {
                 Every day, over 300 children in the U.S. ages 0 to 19 are treated in an emergency department, and two children die, as a result of being poisoned. 
                 </Text>
                 <Text style={styles.modalText}>
-                Items in home: 
+                Common item causes in the home include: household cleaners, cosmetics, plastics left out, and medicine bottles left open.
                 </Text>
-                <Text style={styles.modalText}>
-                Household cleaners, Medicines 
-                </Text>
+
                 <Text style={styles.modalText}>
                 Prevention Tips: 
                 </Text>
