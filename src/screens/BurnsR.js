@@ -15,23 +15,23 @@ var burnQs = [
     {Q: {
         q: "What type of burn injury is the most common?",
         answers: [
-            {a: "Stove injuries", id:"inc0"},
-            {a: "Friction burns", id:"inc1"},
-            {a: "Electrical burns", id:"inc2"},
-            {a: "Scalds", id:"correct"},
+            {a: "Open flame on stoves", id:"inc0"},
+            {a: "Friction burns from treadmills", id:"inc1"},
+            {a: "Electrical burns from an outlet", id:"inc2"},
+            {a: "Scalds from hot liquids", id:"correct"},
         ],
     }},
     {Q: {
-        q: "What should be the maximum temperature for your water heater?",
+        q: "What method does not work to help protect your child from scalds?",
         answers: [
-            {a: "100 degrees Farenheit", id:"inc0"},
-            {a: "140 degrees Farenheit", id:"inc1"},
-            {a: "130 degrees Farenheit", id:"inc2"},
-            {a: "120 degrees Farenheit", id:"correct"},
+            {a: "Turning on the cold water first", id:"inc0"},
+            {a: "Setting the water heater to 120 degrees Farenheit or below", id:"inc1"},
+            {a: "Installing anti scald devices", id:"inc2"},
+            {a: "Wearing clothes during baths", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Under which circumstance should you test temperatures before your child?",
+        q: "Under which circumstance should you test temperatures?",
         answers: [
             {a: "When microwaving food", id:"inc0"},
             {a: "When bathing your child", id:"inc1"},
@@ -51,12 +51,12 @@ var burnQs = [
     }},
 
     {Q: {
-        q: "Which one of these accurately describes a third-degree burn?",
+        q: "What is the best way to prevent a burn injury?",
         answers: [
-            {a: "Larger than 4 inches in length", id:"inc0"},
-            {a: "Particularly sensitive/critical body part", id:"inc1"},
-            {a: "On the outer later of skin", id:"inc2"},
-            {a: "Going through all skin layers", id:"correct"},
+            {a: "Replace smoke detector batteries", id:"inc0"},
+            {a: "Wear shoes when walking on asphalt", id:"inc1"},
+            {a: "Apply sunscreen often", id:"inc2"},
+            {a: "Always supervise your child around a flame", id:"correct"},
         ],
     }},
 ];
