@@ -48,6 +48,7 @@ export default function LevelSelect({ navigation }) {
   if (unlocked["lvl3"] != null) {
     return (
       <ImageBackground source={Background} style={styles.image}>
+        <View style={{marginTop: 75}}>
         <MenuButton
           text="LIVING ROOM"
           onPress={launchLevelOne}
@@ -68,6 +69,7 @@ export default function LevelSelect({ navigation }) {
           onPress={goHome}
           txtColor={"black"}
         ></MenuButton>
+        </View>
       </ImageBackground>
     );
   } else if (unlocked["lvl2"] != null) {
@@ -95,6 +97,7 @@ export default function LevelSelect({ navigation }) {
   } else {
     return (
       <ImageBackground source={Background} style={styles.image}>
+      <View style={{marginTop: 75}}>
         <MenuButton
           text="LIVING ROOM"
           onPress={launchLevelOne}
@@ -105,6 +108,7 @@ export default function LevelSelect({ navigation }) {
           onPress={goHome}
           txtColor={"black"}
         ></MenuButton>
+      </View>
       </ImageBackground>
     );
   }

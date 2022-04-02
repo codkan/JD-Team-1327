@@ -3,7 +3,7 @@
  */
 import React from "react";
 import {
-    FlatList,
+    FlatList,  ScrollView,
     Image, ImageBackground, StyleSheet,
     Text, TouchableOpacity, View
 } from "react-native";
@@ -153,14 +153,14 @@ export default class Badges extends React.Component {
     return (
       <ImageBackground source={Background} style={styles.image}>
       <MenuButton txtColor="black" text="GO BACK" onPress={this.handleReturnToHome}></MenuButton>
-        <View style={styles.contentArea}>
+        <ScrollView style={styles.contentArea}>
           <FlatList
             style={{ flex: 1 }}
             data={this.state.data}
             renderItem={({ item }) => <Item item={item} />}
             keyExtractor={(item) => item.ID}
           />
-        </View>
+        </ScrollView>
       </ImageBackground>
     );
   }
