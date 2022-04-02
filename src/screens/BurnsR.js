@@ -128,7 +128,7 @@ export default class BurnR extends Component{
         } else {
             console.log(burnScore);
             this.props.navigation.navigate("Win", {
-                burnScore: burnScore,
+                score: burnScore,
                 total: burnQs.length,
                 text: "Burns",
             });

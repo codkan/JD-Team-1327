@@ -128,7 +128,7 @@ export default class PoisonR extends Component{
         } else {
             console.log(poisonScore);
             this.props.navigation.navigate("Win", {
-                poisonScore: poisonScore,
+                score: poisonScore,
                 total: poisonQs.length,
                 text: "Poisoning",
             });

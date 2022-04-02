@@ -13,16 +13,16 @@ var fallScore = 0;
 var lastC = false;
 var FallQs = [
     {Q: {
-        q: "Where are infants most likely to fall?",
+        q: "Infants most likely to fall....",
         answers: [
-            {a: "Stroller", id:"inc0"},
-            {a: "Windows", id:"inc1"},
-            {a: "Playground", id:"inc2"},
-            {a: "Furniture / Stairs", id:"correct"},
+            {a: "Out of a Stroller", id:"inc0"},
+            {a: "Through Windows", id:"inc1"},
+            {a: "On the Playground", id:"inc2"},
+            {a: "From Furniture / Down Stairs", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where can you place a child when secured in a carrier?",
+        q: "On what surface can you place a child when secured in a carrier?",
         answers: [
             {a: "Counter", id:"inc0"},
             {a: "Table", id:"inc1"},
@@ -40,7 +40,7 @@ var FallQs = [
         ],
     }},
     {Q: {
-        q: "Where should TVs be placed?",
+        q: "How should TVs be placed?",
         answers: [
             {a: "Low Stands", id:"inc0"},
             {a: "High-standing Furniture", id:"inc1"},

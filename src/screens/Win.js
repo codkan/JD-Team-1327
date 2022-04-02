@@ -41,7 +41,7 @@ export default function Win({navigation}){
 <ScrollView>
 
     <View style={styles.container}>
-    <Text> {'\n'}{'\n'}{'\n'}{'\n'}{'\n'} </Text>
+    <Text> {'\n'} </Text>
     <Text style={styles.title}> {txt} Quiz Completed </Text>
     <Text> {'\n'} </Text>
     <Text style={styles.subtitle}> Congratulations! </Text>
