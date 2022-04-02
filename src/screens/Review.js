@@ -18,11 +18,7 @@ export default function About({ navigation }) {
   const reviewFalls = () => {
     navigation.navigate("FallsR");
   };
-<<<<<<< Updated upstream
   const reviewBurn = () => {
-=======
-  const reviewBurns = () => {
->>>>>>> Stashed changes
     navigation.navigate("BurnR");
   };
   const reviewPoison = () => {
@@ -44,7 +40,6 @@ export default function About({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.modalText}> Review</Text>
     <View style={styles.buttonContainer}>
-<<<<<<< Updated upstream
     <MainButton
       text="Falls"
       txtColor={"black"}
@@ -78,30 +73,6 @@ export default function About({ navigation }) {
     </View>
     <Navbar navigation={navigation}/>
     </ImageBackground>
-=======
-
-<TouchableOpacity onPress={reviewFalls}>
-<Image source={falls} style={styles.crayon}></Image>
-</TouchableOpacity>
-<TouchableOpacity onPress={reviewBurns}>
-<Image source={burns} style={styles.crayon}></Image>
-</TouchableOpacity>
-<TouchableOpacity onPress={reviewPoison}>
-<Image source={poisonings} style={styles.crayon}></Image>
-</TouchableOpacity>
-<TouchableOpacity onPress={reviewDrowning}>
-<Image source={drownings} style={styles.crayon}></Image>
-</TouchableOpacity>
-<TouchableOpacity onPress={reviewCarSafety}>
-<Image source={carSafety} style={styles.crayon}></Image>
-</TouchableOpacity>
-<TouchableOpacity onPress={reviewParentalHealth}>
-<Image source={parentHealth} style={styles.crayon}></Image>
-</TouchableOpacity>
-</View>
-<Navbar navigation={navigation}/>
-</ImageBackground>
->>>>>>> Stashed changes
   );
 }
 
