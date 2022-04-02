@@ -1,9 +1,15 @@
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Image, TouchableOpacity, ImageBackground, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
+import falls from "../assets/sourcesCrayons/falls.png";
+import burns from "../assets/sourcesCrayons/burns.png";
+import poisonings from "../assets/sourcesCrayons/poisonings.png";
+import drownings from "../assets/sourcesCrayons/drownings.png";
+import carSafety from "../assets/sourcesCrayons/carSafety.png";
+import parentHealth from "../assets/sourcesCrayons/parentHealth.png";
 
 export default function About({ navigation }) {
   //NAV CALLBACK
@@ -37,50 +43,30 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-      <Text style={styles.modalText}> Sources </Text>
-      <View style = {styles.buttonContainer}>
-          <MainButton
-            text="Falls Sources"
-            txtColor={"black"}
-            onPress={handleGoToFallSource}
-          ></MainButton>
+    <Text style={styles.modalText}> Sources </Text>
+    <View style = {styles.buttonContainer}>
 
-          <MainButton
-            text="Burning Sources"
-            txtColor={"black"}
-            onPress={handleGoToBurnSource}
-          ></MainButton>
-
-          <MainButton
-            text="Poisoning Sources"
-            txtColor={"black"}
-            onPress={handleGoToPoisoningSource}
-          ></MainButton>
-
-          <MainButton
-            text="Drowning Sources"
-            txtColor={"black"}
-            onPress={handleGoToDrowningSource}
-          ></MainButton>
-
-          <MainButton
-            text="Car Safety Sources"
-            txtColor={"black"}
-            onPress={handleGoToTrafficSource}
-          ></MainButton>
-
-          <MainButton
-            text="Parent Health Sources"
-            txtColor={"black"}
-            onPress={handleGoToParentalHealthSource}
-          ></MainButton>
-
-        </View>
-      <View style = {CoreStyle.pushdown} >
-      <Navbar navigation={navigation}/>
-      </View>
-    </ImageBackground>
-  
+<TouchableOpacity onPress={handleGoToFallSource}>
+<Image source={falls} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={handleGoToBurnSource}>
+<Image source={burns} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={handleGoToPoisoningSource}>
+<Image source={poisonings} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={handleGoToDrowningSource}>
+<Image source={drownings} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={handleGoToTrafficSource}>
+<Image source={carSafety} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={handleGoToParentalHealthSource}>
+<Image source={parentHealth} style={styles.crayon}></Image>
+</TouchableOpacity>
+</View>
+<Navbar navigation={navigation}/>
+</ImageBackground>  
   );
 }
 
@@ -91,7 +77,11 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
-
+  crayon: {
+    height:50,
+    width:355,
+    marginTop: 25,
+  },
   buttonContainer: {
       flex: 1,
       top: -80,

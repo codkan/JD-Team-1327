@@ -1,8 +1,14 @@
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Image, TouchableOpacity, ImageBackground, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
+import falls from "../assets/reviewCrayons/falls.png";
+import burns from "../assets/reviewCrayons/burns.png";
+import poisonings from "../assets/reviewCrayons/poisonings.png";
+import drownings from "../assets/reviewCrayons/drownings.png";
+import carSafety from "../assets/reviewCrayons/carSafety.png";
+import parentHealth from "../assets/reviewCrayons/parentHealth.png";
 
 export default function About({ navigation }) {
   //NAV CALLBACK
@@ -12,7 +18,11 @@ export default function About({ navigation }) {
   const reviewFalls = () => {
     navigation.navigate("FallsR");
   };
+<<<<<<< Updated upstream
   const reviewBurn = () => {
+=======
+  const reviewBurns = () => {
+>>>>>>> Stashed changes
     navigation.navigate("BurnR");
   };
   const reviewPoison = () => {
@@ -34,6 +44,7 @@ export default function About({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.modalText}> Review</Text>
     <View style={styles.buttonContainer}>
+<<<<<<< Updated upstream
     <MainButton
       text="Falls"
       txtColor={"black"}
@@ -67,6 +78,30 @@ export default function About({ navigation }) {
     </View>
     <Navbar navigation={navigation}/>
     </ImageBackground>
+=======
+
+<TouchableOpacity onPress={reviewFalls}>
+<Image source={falls} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={reviewBurns}>
+<Image source={burns} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={reviewPoison}>
+<Image source={poisonings} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={reviewDrowning}>
+<Image source={drownings} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={reviewCarSafety}>
+<Image source={carSafety} style={styles.crayon}></Image>
+</TouchableOpacity>
+<TouchableOpacity onPress={reviewParentalHealth}>
+<Image source={parentHealth} style={styles.crayon}></Image>
+</TouchableOpacity>
+</View>
+<Navbar navigation={navigation}/>
+</ImageBackground>
+>>>>>>> Stashed changes
   );
 }
 
@@ -91,6 +126,11 @@ const styles = StyleSheet.create({
     marginTop: 150,
     marginBottom: 15,
     alignItems: "center"
+  },
+  crayon: {
+    height:50,
+    width:355,
+    marginTop: 25,
   },
   buttonContainer: {
     flex: 1,
