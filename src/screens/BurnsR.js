@@ -15,7 +15,7 @@ var burnQs = [
     {Q: {
         q: "What type of burn injury is the most common?",
         answers: [
-            {a: "Open flame on stove", id:"inc0"},
+            {a: "Open flame on stoves", id:"inc0"},
             {a: "Friction burns from treadmills", id:"inc1"},
             {a: "Electrical burns from an outlet", id:"inc2"},
             {a: "Scalds from hot liquids", id:"correct"},
