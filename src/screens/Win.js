@@ -7,6 +7,7 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 import WordArt from "react-wordart";
+import win from "../assets/winScreen.png";
 
 export default function Win({navigation}){
 
@@ -38,7 +39,8 @@ export default function Win({navigation}){
     </View>
 
 <ScrollView>
-
+    <Image style={styles.headimg} source={win}/>
+    
     <View style={styles.container}>
     <Text> {'\n'}{'\n'}{'\n'}{'\n'}{'\n'} </Text>
     <Text style={CoreStyle.title}> {txt} Quiz Completed </Text>
@@ -73,5 +75,10 @@ const styles = StyleSheet.create({
     container: {
         alignItems: "center",
         marginHorizontal: 20,
+    },
+    headimg: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
     },
 });
