@@ -12,6 +12,9 @@ export default function About({ navigation }) {
   const reviewFalls = () => {
     navigation.navigate("FallsR");
   };
+  const reviewBurn = () => {
+    navigation.navigate("BurnR");
+  };
   const reviewPoison = () => {
     navigation.navigate("PoisonR");
   };
@@ -39,6 +42,7 @@ export default function About({ navigation }) {
     <MainButton
       text="Burns"
       txtColor={"black"}
+      onPress={reviewBurn}
     ></MainButton>
     <MainButton
       text="Poisoning"

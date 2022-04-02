@@ -17,6 +17,8 @@ import Entities from "../entities/Level3Entities";
 import DogMove from "../systems/DogMove";
 import Dispatches from "../systems/Level3Dispatches";
 import Movement from "../systems/Movement";
+import * as ScreenOrientation from 'expo-screen-orientation'
+
 
 export default class LevelThree extends Component {
   constructor(props) {
@@ -151,6 +153,7 @@ export default class LevelThree extends Component {
   };
 
   render() {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     const { modalVisible } = this.state;
     return (
       <ImageBackground source={background} style={styles.image}>

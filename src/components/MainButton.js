@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 345,
     borderRadius: 10,
-    paddingVertical: 7,
+    paddingVertical: 5,
     //paddingHorizontal: 10,
     marginVertical: 10,
     backgroundColor: "rgba(196,196,196,1)",
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontStyle: "normal",
-    fontSize: 32,
+    fontSize: 30,
     color: "black",
     textAlign: "center",
     justifyContent: "center",

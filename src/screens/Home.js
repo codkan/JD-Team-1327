@@ -8,10 +8,13 @@ import { ImageBackground, StyleSheet, View } from "react-native";
 import Background from "../assets/homescreen.png";
 import MenuButton from "../components/MenuButton";
 import { get } from "../Db";
+import * as ScreenOrientation from 'expo-screen-orientation'
+
 
 export default function Home({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });
   const [sound, setSound] = React.useState();
+  ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   async function playSound() {
     Audio.setAudioModeAsync({
       allowsRecordingIOS: false,
@@ -22,17 +25,14 @@ export default function Home({ navigation }) {
       staysActiveInBackground: true,
       playThroughEarpieceAndroid: true,
     });
-    console.log("Loading Sound");
-    const { sound } = await Audio.Sound.createAsync(
-      require("../assets/gameMusic.mp3"),
-      {
-        shouldPlay: true,
-      }
-    );
-    setSound(sound);
-
-    console.log("Playing Sound");
-    await sound.playAsync();
+    try {
+        const sound = new Audio.Sound();
+        setSound(sound);
+        await sound.loadAsync(require("../assets/gameMusic.mp3"));
+        await sound.playAsync();
+    } catch (e) {
+        //should be fine
+    }
   }
   useEffect(() => {
     async function unlockedLevels() {
@@ -41,7 +41,7 @@ export default function Home({ navigation }) {
 
       setLvls({ lvl2: lvl2, lvl3: lvl3 });
     }
-    console.log(sound)
+    //console.log(sound)
     if (sound == undefined) {
       playSound();
     }
@@ -49,7 +49,8 @@ export default function Home({ navigation }) {
   }, []);
   //Nav Callbacks
   const handlePlayNow = () => {
-    sound.unloadAsync();
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
+    sound.pauseAsync();
     if (unlocked["lvl3"] != null) {
       navigation.navigate("LevelThree");
     } else if (unlocked["lvl2"] != null) {
@@ -59,16 +60,23 @@ export default function Home({ navigation }) {
     }
   };
   const handleLevelSelect = () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("LevelSelect", { sound: sound });
   };
   const handleBadgeNav = () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("Badges");
   };
   const handleAboutNav = () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("About");
   };
   const handleBackNav = () => {
-    navigation.navigate("Landing", { sound: sound });
+    ScreenOrientation.unlockAsync();
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
+    sound.stopAsync();
+    sound.unloadAsync();
+    navigation.navigate("Landing");
   };
 
   return (

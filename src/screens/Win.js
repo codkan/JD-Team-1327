@@ -6,11 +6,12 @@ import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
+import WordArt from "react-wordart";
 
-export default function DrownW({navigation}){
+export default function Win({navigation}){
 
-    const goToDrowning = () => {
-        navigation.navigate("Drownings");
+    const goToFalls = () => {
+        navigation.navigate("Falls");
     };
     const backToReview = () => {
         navigation.navigate("Review");
@@ -18,6 +19,7 @@ export default function DrownW({navigation}){
 
     const score = navigation.getParam('score');
     const total = navigation.getParam('total');
+    const txt = navigation.getParam('text');
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -29,9 +31,9 @@ export default function DrownW({navigation}){
               txtColor={"black"}
         ></MediaButton>
         <MediaButton
-            text="Go to Drownings"
+            text="Go to Falls"
             txtColor={"black"}
-            onPress={goToDrowning}
+            onPress={goToFalls}
         ></MediaButton>
     </View>
 
@@ -39,7 +41,7 @@ export default function DrownW({navigation}){
 
     <View style={styles.container}>
     <Text> {'\n'}{'\n'}{'\n'}{'\n'}{'\n'} </Text>
-    <Text style={CoreStyle.title}> Drowning Quiz Completed </Text>
+    <Text style={CoreStyle.title}> {txt} Quiz Completed </Text>
     <Text> {'\n'} </Text>
     <Text style={CoreStyle.subtitle}> Congratulations! </Text>
     <Text> {'\n'} </Text>

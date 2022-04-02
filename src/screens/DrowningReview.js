@@ -10,6 +10,7 @@ import { CoreStyle } from "../components/CoreStyle";
 
 var drownCount = 0;
 var drownScore = 0;
+var lastC = false;
 var DrownQs = [
     {Q: {
         q: "What percentage of nonfatal drownings require hospitalization?",
@@ -89,8 +90,11 @@ export default class DrowningR extends Component{
 
     reRender = () => {
         //console.log("reRender reached");
-        if (this.correct.state.buttonColor == "green") {
+        if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
             drownScore++;
+            lastC = true;
+        } else {
+            lastC = false;
         }
         if (drownCount < DrownQs.length-1) {
             drownCount++;
@@ -115,15 +119,16 @@ export default class DrowningR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             });
-            this.correct.setState({buttonColor: "white"});
-            this.inc0.setState({buttonColor: "white"});
-            this.inc1.setState({buttonColor: "white"});
-            this.inc2.setState({buttonColor: "white"});
+            this.b1.setState({buttonColor: "white"});
+            this.b2.setState({buttonColor: "white"});
+            this.b3.setState({buttonColor: "white"});
+            this.b4.setState({buttonColor: "white"});
         } else {
             console.log(drownScore);
-            this.props.navigation.navigate("DrownW", {
+            this.props.navigation.navigate("Win", {
                 score: drownScore,
                 total: DrownQs.length,
+                text: "Drowning",
             });
         }
     };
@@ -132,7 +137,7 @@ export default class DrowningR extends Component{
         //console.log("deRender reached");
         drownCount--;
         var question = DrownQs[drownCount].Q;
-        if (drownScore > 0) {
+        if (drownScore > 0  && lastC == true) {
             drownScore--;
         }
         if (drownCount > 0) {
@@ -179,10 +184,10 @@ export default class DrowningR extends Component{
             });
         }
       //Do we want to reset the buttons on going back? Or find a way to preserve answers?
-      this.correct.setState({buttonColor: "white"});
-        this.inc0.setState({buttonColor: "white"});
-        this.inc1.setState({buttonColor: "white"});
-        this.inc2.setState({buttonColor: "white"});
+        this.b1.setState({buttonColor: "white"});
+        this.b2.setState({buttonColor: "white"});
+        this.b3.setState({buttonColor: "white"});
+        this.b4.setState({buttonColor: "white"});
     }
 
   render(){
@@ -216,22 +221,22 @@ export default class DrowningR extends Component{
         <QuizButton
           id={randomFallQs[0].id}
           text={randomFallQs[0].a}
-          ref = {ref => this.inc0 = ref}
+          ref = {ref => this.b1 = ref}
         ></QuizButton>
         <QuizButton
           id={randomFallQs[1].id}
           text={randomFallQs[1].a}
-          ref = {ref => this.inc1 = ref}
+          ref = {ref => this.b2 = ref}
         ></QuizButton>
         <QuizButton
           id={randomFallQs[2].id}
           text={randomFallQs[2].a}
-          ref = {ref => this.inc2 = ref}
+          ref = {ref => this.b3 = ref}
         ></QuizButton>
         <QuizButton
           id={randomFallQs[3].id}
           text={randomFallQs[3].a}
-          ref = {ref => this.correct = ref}
+          ref = {ref => this.b4 = ref}
         ></QuizButton>
         </View>
 
