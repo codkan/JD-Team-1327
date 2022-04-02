@@ -40,36 +40,24 @@ export default function About({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.modalText}> Review</Text>
     <View style={styles.buttonContainer}>
-    <MainButton
-      text="Falls"
-      txtColor={"black"}
-      onPress={reviewFalls}
-    ></MainButton>
-    <MainButton
-      text="Burns"
-      txtColor={"black"}
-      onPress={reviewBurn}
-    ></MainButton>
-    <MainButton
-      text="Poisoning"
-      txtColor={"black"}
-      onPress={reviewPoison}
-    ></MainButton>
-    <MainButton
-      text="Drowning"
-      txtColor={"black"}
-      onPress={reviewDrowning}
-    ></MainButton>
-    <MainButton
-      text="Car Safety"
-      txtColor={"black"}
-      onPress={reviewCarSafety}
-    ></MainButton>
-    <MainButton
-      text="Parental Health"
-      txtColor={"black"}
-      onPress={reviewParentalHealth}
-    ></MainButton>
+        <TouchableOpacity onPress={reviewFalls}>
+        <Image source={falls} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={reviewBurn}>
+        <Image source={burns} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={reviewPoison}>
+        <Image source={poisonings} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={reviewDrowning}>
+        <Image source={drownings} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={reviewCarSafety}>
+        <Image source={carSafety} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={reviewParentalHealth}>
+        <Image source={parentHealth} style={styles.crayon}></Image>
+        </TouchableOpacity>
     </View>
     <Navbar navigation={navigation}/>
     </ImageBackground>
