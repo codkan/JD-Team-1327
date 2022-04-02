@@ -1,8 +1,14 @@
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Background from "../assets/bg.png";
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
+import falls from "../assets/infoCrayons/falls.png";
+import burns from "../assets/infoCrayons/burns.png";
+import poisonings from "../assets/infoCrayons/poisonings.png";
+import drownings from "../assets/infoCrayons/drownings.png";
+import carSafety from "../assets/infoCrayons/carSafety.png";
+import parentHealth from "../assets/infoCrayons/parentHealth.png";
 
 export default function Info({ navigation }) {
   //NAV CALLBACK
@@ -32,39 +38,30 @@ export default function Info({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.modalText}> Table of Contents</Text>
     <View style={styles.buttonContainer}>
-    <MainButton
-      text="Falls"
-      txtColor={"black"}
-      onPress={handleFallsNav}
-    ></MainButton>
-    <MainButton
-      text="Burns"
-      txtColor={"black"}
-      onPress={handleBurnsNav}
-    ></MainButton>
-    <MainButton
-      text="Poisonings"
-      txtColor={"black"}
-      onPress={handlePoisoningsNav}
-    ></MainButton>
-    <MainButton
-      text="Drownings"
-      txtColor={"black"}
-      onPress={handleDrowningsNav}
-    ></MainButton>
-    <MainButton
-      text="Car Safety"
-      txtColor={"black"}
-      onPress={handleTrafficNav}
-    ></MainButton>
-    <MainButton
-      text="Parental Health"
-      txtColor={"black"}
-      onPress={handleParentalHealthNav}
-    ></MainButton>
+
+
+
+    <TouchableOpacity onPress={handleFallsNav}>
+        <Image source={falls} style={styles.crayon}></Image>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={handleBurnsNav}>
+        <Image source={burns} style={styles.crayon}></Image>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={handlePoisoningsNav}>
+        <Image source={poisonings} style={styles.crayon}></Image>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={handleDrowningsNav}>
+        <Image source={drownings} style={styles.crayon}></Image>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={handleTrafficNav}>
+        <Image source={carSafety} style={styles.crayon}></Image>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={handleParentalHealthNav}>
+        <Image source={parentHealth} style={styles.crayon}></Image>
+    </TouchableOpacity>
     </View>
     <Navbar navigation={navigation}/>
-    </ImageBackground>
+  </ImageBackground>
   );
 }
 
@@ -89,6 +86,11 @@ const styles = StyleSheet.create({
     marginTop: 150,
     marginBottom: 15,
     alignItems: "center"
+  },
+  crayon: {
+    height:50,
+    width:355,
+    marginTop: 25,
   },
   buttonContainer: {
     flex: 1,
