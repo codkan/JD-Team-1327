@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from "react";
-import { ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import background from "../assets/yard/level-3-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
@@ -17,7 +17,11 @@ import Entities from "../entities/Level3Entities";
 import DogMove from "../systems/DogMove";
 import Dispatches from "../systems/Level3Dispatches";
 import Movement from "../systems/Movement";
-import * as ScreenOrientation from 'expo-screen-orientation'
+import * as ScreenOrientation from 'expo-screen-orientation';
+import car from "../assets/gameNotePics/car.png";
+import pool from "../assets/gameNotePics/pool.png";
+
+
 
 
 export default class LevelThree extends Component {
@@ -303,6 +307,7 @@ export default class LevelThree extends Component {
                   Source:
                   https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths
                 </Text>
+                <Image style={styles.carimg} source={car}/>
                 <Text style={styles.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
@@ -351,6 +356,7 @@ export default class LevelThree extends Component {
                   temporary pools, should be completely surrounded by a fence on
                   all 4 sides.
                 </Text>
+                <Image style={styles.poolimg} source={pool}/>
                 <Text style={styles.modalText} onPress={() => { Linking.openURL('https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx'); }}>
                   Source:
                   https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx
@@ -438,11 +444,22 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     fontWeight: "normal",
     textAlign: "center",
+    color: "purple",
+    fontFamily: 'Marker Felt',
+    fontSize: 11,
   },
   modalTitle: {
     marginBottom: 15,
     fontWeight: "bold",
     textAlign: "center",
+  },
+  poolimg: {
+    height: 100,
+    width: 170,
+  },
+  carimg: {
+    height: 120,
+    width: 210,
   },
   NoteButton: {},
 });

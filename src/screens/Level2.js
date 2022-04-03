@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from "react";
-import { ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
+import {Image, ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import background from "../assets/kitchen/level-2-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
@@ -16,7 +16,11 @@ import { get, insert } from "../Db";
 import Entities from "../entities/Level2Entities";
 import Dispatches from "../systems/Level2Dispatches";
 import Movement from "../systems/Movement";
-import * as ScreenOrientation from 'expo-screen-orientation'
+import * as ScreenOrientation from 'expo-screen-orientation';
+import pan from "../assets/gameNotePics/pan.png";
+import poison from "../assets/gameNotePics/poison.png";
+
+
 
 export default class LevelTwo extends Component {
   constructor(props) {
@@ -282,6 +286,7 @@ export default class LevelTwo extends Component {
                 <Text style={styles.modalText} onPress={() => { Linking.openURL('https://kidshealth.org/en/parents/fire.html'); }}>
                 Source: https://kidshealth.org/en/parents/fire.html 
                 </Text>
+                <Image style={styles.panimg} source={pan}/>
                 <Text style={styles.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
@@ -314,16 +319,13 @@ export default class LevelTwo extends Component {
                 <Text style={styles.modalText}>
                 Common item causes in the home include: household cleaners, cosmetics, plastics left out, and medicine bottles left open.
                 </Text>
-
                 <Text style={styles.modalText}>
-                Prevention Tips: 
-                </Text>
-                <Text style={styles.modalText}>
-                Lock them up and keep them away. Keep medicines and other potentially toxic products, such as cleaners and detergents, in their original packaging where children cannot see or get to them. Read the label. Throw away if not needed. 
+                Prevention Tips: Lock them up and keep them away. Keep medicines and other potentially toxic products, such as cleaners and detergents, in their original packaging where children cannot see or get to them. Read the label. Throw away if not needed. 
                 </Text>
                 <Text style={styles.modalText} onPress={() => { Linking.openURL('https://www.cdc.gov/safechild/poisoning/index.html'); }}>
                 Source: https://www.cdc.gov/safechild/poisoning/index.html  
                 </Text>
+                <Image style={styles.poisonimg} source={poison}/>
                 <Text style={styles.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
@@ -407,11 +409,21 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     fontWeight: "normal",
     textAlign: "center",
+    color: "purple",
+    fontFamily: 'Marker Felt'
   },
   modalTitle: {
     marginBottom: 15,
     fontWeight: "bold",
     textAlign: "center",
+  },
+  panimg: {
+    height: 70,
+    width: 250,
+  },
+  poisonimg: {
+    height: 100,
+    width: 50,
   },
   NoteButton: {},
 });

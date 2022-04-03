@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from "react";
-import { ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
+import {Image, ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
 import background from "../assets/living-room/level-1-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
@@ -16,7 +16,10 @@ import { get, insert } from "../Db";
 import Entities from "../entities/Level1Entities";
 import Dispatches from "../systems/Level1Dispatches";
 import Movement from "../systems/Movement";
-import * as ScreenOrientation from 'expo-screen-orientation'
+import * as ScreenOrientation from 'expo-screen-orientation';
+import train from "../assets/gameNotePics/train.png";
+import outlet from "../assets/gameNotePics/outlet.png";
+
 
 
 export default class LevelOne extends Component {
@@ -171,6 +174,7 @@ export default class LevelOne extends Component {
       this.handleLevelComplete();
     }
   };
+
   
   render() {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
@@ -293,6 +297,7 @@ export default class LevelOne extends Component {
                    <Text style={styles.modalText} onPress={() => { Linking.openURL('https://kidshealth.org/en/parents/products-toys.html') }}>
                     Source: https://kidshealth.org/en/parents/products-toys.html
                   </Text> 
+                  <Image style={styles.img} source={train}/>
                   <Text style={styles.textStyle}>Hide Modal</Text>
                   <MenuButton
                     text="OK"
@@ -366,6 +371,7 @@ export default class LevelOne extends Component {
                     children whose skin is thin and offers little resistance to
                     electric flow or heat.
                   </Text>
+                  <Image style={styles.img} source={outlet}/>
                   <Text style={styles.modalText} onPress={() => { Linking.openURL('https://mrelectric.com/child-proof-outlets'); }}>
                     Source: https://mrelectric.com/child-proof-outlets
                   </Text>
@@ -456,11 +462,17 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     fontWeight: "normal",
     textAlign: "center",
+    color: "purple",
+    fontFamily: 'Marker Felt'
   },
   modalTitle: {
     marginBottom: 15,
     fontWeight: "bold",
     textAlign: "center",
   },
+  img: {
+    height: 70,
+    width: 70,
+},
   NoteButton: {},
 });
