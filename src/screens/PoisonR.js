@@ -13,47 +13,47 @@ var poisonScore = 0;
 var lastC = false;
 var poisonQs = [
     {Q: {
-        q: "What is the Poison Control Help number?",
+        q: "Which of the following would be a useful place to store important emergency numbers, including the poison help number?",
         answers: [
-            {a: "911", id:"inc0"},
-            {a: "1-234-567-8901", id:"inc1"},
-            {a: "451-234-9991", id:"inc2"},
-            {a: "1-800-222-1222", id:"correct"},
+            {a: "On a notepad hidden in a desk", id:"inc0"},
+            {a: "On the front door and window", id:"inc1"},
+            {a: "On your fridge or table", id:"inc2"},
+            {a: "In your phone or on a diaper bag", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Where is poison most commonly ingested?",
+        q: "Which of the following steps should you NOT take if a child has ingested laundry pods?",
         answers: [
-            {a: "Eyes", id:"inc0"},
-            {a: "Ears", id:"inc1"},
-            {a: "Nose/Inhalation", id:"inc2"},
-            {a: "Mouth", id:"correct"},
+            {a: "Call poison control for guidance", id:"inc0"},
+            {a: "Immediately remove the pod from the child's mouth", id:"inc1"},
+            {a: "Wash the child's face and hands and rinse out their mouth", id:"inc2"},
+            {a: "Give the child water", id:"correct"},
         ],
     }},
     {Q: {
-        q: "Which age group is statisically most at risk of poisoning?",
+        q: "Which of the following is NOT a good way to prevent accidental poisoning?",
         answers: [
-            {a: "13-19", id:"inc0"},
-            {a: "20-29", id:"inc1"},
-            {a: "7-12", id:"inc2"},
-            {a: "6 and under", id:"correct"},
+            {a: "Ensure all medicine containers are locked", id:"inc0"},
+            {a: "Make sure carbon monoxide and smoke detectors are working", id:"inc1"},
+            {a: "Put away cosmetics after use outside the reach of children", id:"inc2"},
+            {a: "Leaving medicine open but in a high place so kids can't reach it", id:"correct"},
         ],
     }},
 
     {Q: {
         q: "Which of the following are a common cause of child poisoning?",
         answers: [
-            {a: "Dirt", id:"inc0"},
-            {a: "Expired food", id:"inc1"},
-            {a: "Plastic", id:"inc2"},
-            {a: "Cosmetics", id:"correct"},
+            {a: "Dirt and dog poop", id:"inc0"},
+            {a: "Expired food and mold", id:"inc1"},
+            {a: "Plastic and trash", id:"inc2"},
+            {a: "Cosmetics and medicine", id:"correct"},
         ],
     }},
 
     {Q: {
-        q: "Which of the following are risks for children when they are outside of the house?",
+        q: "Which of the following are risks for children?",
         answers: [
-            {a: "Unknown plants", id:"inc0"},
+            {a: "Many common houseplants", id:"inc0"},
             {a: "Lead paint", id:"inc1"},
             {a: "Brightly colored berries", id:"inc2"},
             {a: "All of these", id:"correct"},
