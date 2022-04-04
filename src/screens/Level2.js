@@ -266,18 +266,12 @@ export default class LevelTwo extends Component {
                 Fires & Burns 
                 </Text>
                 <Text style={styles.modalText}>
-                Cooking is the leading cause of home fires in the United States. 
-                </Text>
-                <Text style={styles.modalText}>
+                Cooking is the leading cause of home fires in the United States.
                Some common ways in which fires start in the kitchen include unsupervised food on a stove, in a microwave, or in an oven, grease spills, a dish towel too close to the burner, or a coffee pot accidentally left on. 
                 </Text>
                 <Text style={styles.modalText}>
-                Tips for using the stove: 
-                </Text>
-                <Text style={styles.modalText}>
-                Do not leave kids unsupervised. 
-                </Text>
-                <Text style={styles.modalText}>
+                Tips for using the stove:
+                Do not leave kids unsupervised.
                 Turn all pot handles, so they cannot be knocked over. 
                 </Text>
                 <Text style={styles.modalText}>
@@ -314,9 +308,7 @@ export default class LevelTwo extends Component {
                 Poisons 
                 </Text>
                 <Text style={styles.modalText}>
-                Every day, over 300 children in the U.S. ages 0 to 19 are treated in an emergency department, and two children die, as a result of being poisoned. 
-                </Text>
-                <Text style={styles.modalText}>
+                Every day, over 300 children in the U.S. ages 0 to 19 are treated in an emergency department, and two children die, as a result of being poisoned.
                 Common item causes in the home include: household cleaners, cosmetics, plastics left out, and medicine bottles left open.
                 </Text>
                 <Text style={styles.modalText}>
@@ -410,7 +402,6 @@ const styles = StyleSheet.create({
     fontWeight: "normal",
     textAlign: "center",
     color: "purple",
-    fontFamily: 'Marker Felt'
   },
   modalTitle: {
     marginBottom: 15,

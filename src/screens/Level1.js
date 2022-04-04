@@ -463,7 +463,6 @@ const styles = StyleSheet.create({
     fontWeight: "normal",
     textAlign: "center",
     color: "purple",
-    fontFamily: 'Marker Felt'
   },
   modalTitle: {
     marginBottom: 15,
