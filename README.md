@@ -47,7 +47,7 @@ If everything is done properly, scanning the QR code after running the applicati
 
 Instead of building the application from scratch, it's also possible to view the application using the following QR code. This only works for android devices due to limitations from the iOS platform. If you are using an android device, then download the Expo Go application and scan the following QR code.
 
-[QR Code](https://github.com/ckantor8/JD-Team-1327/blob/master/QR%20code.png)
+![QR Code](https://github.com/ckantor8/JD-Team-1327/blob/master/QR%20code.png)
 
 
 
