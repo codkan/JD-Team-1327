@@ -1,3 +1,7 @@
+/*
+ * Written by Team 1327 - Cody, Akash, Erin, Aayush, Will
+ */
+
 import * as SecureStore from 'expo-secure-store';
 
 async function insert(key, value) {

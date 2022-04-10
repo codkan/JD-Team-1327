@@ -1,3 +1,7 @@
+/*
+ * Written by Team 1327 - Cody, Akash, Erin, Aayush, Will
+ */
+
 /**
  * This file is responsible for the app's stack navigation
  *  To Add a screen component to the app, add it to the screens variable

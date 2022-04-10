@@ -1,3 +1,7 @@
+/*
+ * Written by Team 1327 - Cody, Akash, Erin, Aayush, Will
+ */
+
 import React from "react";
 import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { color } from "react-native-reanimated";
