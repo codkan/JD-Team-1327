@@ -25,4 +25,4 @@ This is a cross platform mobile application created with React Native and Expo. 
 - To run a web application use `npm run web` or `expo start --web`
 - To run an iOS application use `npm run ios` or `expo start --ios`
 - To run an Android application use `npm run android` or `expo start --android`
-After getting things running using expo, scanning the QR code while in the Expo app makes it possible to run the application on an actual phone instead of an emulator.
+- After getting things running using expo, scanning the QR code while in the Expo app makes it possible to run the application on an actual phone instead of an emulator.
