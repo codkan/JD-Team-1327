@@ -19,6 +19,7 @@ This is a cross platform mobile application created with React Native and Expo. 
   Now install dependencies. `sudo npm install`  
 ## BUILD  
   Follow this tutorial on how to set up Expo [here](https://docs.expo.io/workflow/android-studio-emulator/)
+  
   XCode may be required on iOS applications to get the iPhone emulator running properly. Follow this tutorial to get things running using an iOS emulator [here](https://docs.expo.dev/workflow/ios-simulator/)
 ## RUNNING APPLICATION  
 - To start a general server and get QR code use `npm start`
