@@ -6,7 +6,7 @@ Team members: Cody Kantor, Akash Vemulapalli, Aayush Dixit, Erin Falejczyk, Will
 This is a cross platform mobile application created with React Native and Expo. The goal of this app is to help new parents learn critical child safety measures and best practices. 
 
 ## Install Guide
-#PRE-REQUISITES  
+# PRE-REQUISITES  
      First, you need to make sure that Node.js is installed on your machine. You can install Node.js from [here](https://nodejs.org/en/download/).
      Next, you need to make sure that Git is installed on your machine. You can install Git from [here](https://git-scm.com/downloads).
      Next, if you have Windows, download Android Studio from [here](https://docs.expo.io/workflow/android-studio-emulator/). And configure an Android Emulator. 
