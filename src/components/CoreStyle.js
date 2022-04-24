@@ -51,6 +51,7 @@ export const CoreStyle = StyleSheet.create({
     topnavbuttons: { 
         display: "flex",
         flexDirection: "row",
+        marginTop: 30,
         marginHorizontal: 20,
         justifyContent: "space-between",
     },

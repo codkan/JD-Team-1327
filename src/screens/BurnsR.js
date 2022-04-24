@@ -185,7 +185,6 @@ export default class BurnR extends Component{
                 ],
             });
         }
-      //Do we want to reset the buttons on going back? Or find a way to preserve answers?
         this.b1.setState({buttonColor: "white"});
         this.b2.setState({buttonColor: "white"});
         this.b3.setState({buttonColor: "white"});

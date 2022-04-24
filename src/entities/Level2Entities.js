@@ -108,27 +108,6 @@ const Entities = () => {
     75,
     { isStatic: true }
   );
-  // let chairOne = Matter.Bodies.circle(
-  //   (x = MAX_WIDTH / 4.5),
-  //   (y = MAX_HEIGHT / 3.3),
-  //   (radius = 20),
-  //   { isStatic: true }
-  // );
-
-  // let chairTwo = Matter.Bodies.circle(
-  //   (x = MAX_WIDTH * 0.04),
-  //   (y = MAX_HEIGHT / 3.3),
-  //   (radius = 20),
-  //   { isStatic: true }
-  // );
-
-  // let knife = Matter.Bodies.rectangle(
-  //   MAX_WIDTH / 2.5,
-  //   MAX_HEIGHT / 6,
-  //   45,
-  //   45,
-  //   { isStatic: true }
-  // );
 
   let island = Matter.Bodies.rectangle(
     MAX_WIDTH * 0.65,
@@ -151,14 +130,6 @@ const Entities = () => {
     52,
     { isStatic: true }
   );
-  // let rightCabinet = Matter.Bodies.rectangle(
-  //   MAX_WIDTH * 0.84,
-  //   MAX_HEIGHT * 0.25,
-  //   52,
-  //   300,
-  //   { isStatic: true }
-  // );
-
   let top_wall = Matter.Bodies.rectangle(
     (x = 0),
     (y = 0),
@@ -196,9 +167,6 @@ const Entities = () => {
     right_wall,
     bottom_wall,
     diningTable,
-    // chairOne,
-    // chairTwo,
-   //knife,
     refrigerator,
     counter1,
     counter2,
@@ -210,42 +178,20 @@ const Entities = () => {
     sink,
     topCabinet,
     corner,
-    // rightCabinet,
   ]);
 
   return {
     physics: { engine: engine, world: world },
     player: { body: player, size: [120, 120],
-      //backgroundColor:"#DBD7D2",
       renderer: Player },
     npc: { body: npc, size: [120, 120], 
-      //backgroundColor: "#DBD7D2",
       renderer: Npc },
     
     diningTable: {
       body: diningTable,
       size: [150, 150],
-      // color: "black",
       renderer: DiningTable,
     },
-    // chairOne: {
-    //   body: chairOne,
-    //   color: "black",
-    //   radius: 20,
-    //   renderer: Circle,
-    // },
-    // chairTwo: {
-    //   body: chairTwo,
-    //   color: "black",
-    //   radius: 20,
-    //   renderer: Circle,
-    // },
-    // knife: {
-    //   body: knife,
-    //   size: [25, 25],
-    //   color: "black",
-    //   renderer: Wall,
-    // },
     island: {
       body: island,
       size: [140, 140],
@@ -306,18 +252,6 @@ const Entities = () => {
       color: "black",
       renderer: Stove,
     },
-    // topCabinet: {
-    //   body: topCabinet,
-    //   size: [650, 52],
-    //   color: "black",
-    //   renderer: Wall,
-    // },
-    // rightCabinet: {
-    //   body: rightCabinet,
-    //   size: [52, 300],
-    //   color: "black",
-    //   renderer: Wall,
-    // },
     top_wall: {
       body: top_wall,
       size: [MAX_WIDTH * 2, MAX_HEIGHT / 6],

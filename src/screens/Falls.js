@@ -203,7 +203,6 @@ const styles = StyleSheet.create({
     roundpic: {
         height: 150,
         width: 150,
-        //marginLeft: 175,
         marginTop: 5,
         alignSelf: "center",
         marginBottom: 5,
@@ -219,10 +218,4 @@ const styles = StyleSheet.create({
         width: 100,
         position: "absolute",
     },
-    
-    
-    
-    
-    
-    
 });

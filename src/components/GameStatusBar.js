@@ -109,9 +109,6 @@ export default class GameStatusBar extends Component {
             transparent={true}
             visible={this.state.pauseModalVisible}
             supportedOrientations={['landscape']}
-            // onRequestClose={() => {
-            //   this.setModalVisible(!modalVisible);
-            // }}
           >
             <View style={styles.centeredView}>
               <View style={styles.modalView}>

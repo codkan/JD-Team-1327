@@ -12,7 +12,6 @@ export default class Timer extends Component {
     };
   }
 
-  //careful. May cause memory leaks
   // starts and stops the timer when needed
   handleTimer = () => {
     if (this.props.final == true && this.state.isOn == true) {

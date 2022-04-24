@@ -18,15 +18,9 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 100,
-    //paddingVertical: 7,
-    //paddingHorizontal: 10,
-    //marginVertical: 10,
     backgroundColor: "rgba(196,196,196,1)",
     alignItems: "center",
     justifyContent: "center",
-    //position: "absolute",
-    //bottom: 0,
-    //left: -60,
     shadowColor: 'black',
     shadowOpacity: 0.25,
     shadowRadius: 4,
@@ -35,7 +29,6 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 80,
     marginBottom: 70,
-    //alignSelf: "flex-end"
   },
   buttonText: {
     fontStyle: "normal",

@@ -58,13 +58,6 @@ const Entities = () => {
     40,
     { isStatic: true }
   );
-  // let desk = Matter.Bodies.rectangle(
-  //   MAX_WIDTH * 0.5,
-  //   MAX_HEIGHT * 0.95,
-  //   75,
-  //   80,
-  //   { isStatic: true }
-  // );
   let chair = Matter.Bodies.rectangle(
     (x = MAX_WIDTH * 0.85),
     (y = MAX_HEIGHT / 2 + 35),
@@ -184,7 +177,6 @@ const Entities = () => {
     npc: { 
       body: npc, 
       size: [90, 90], 
-      //backgroundColor: "#E6D2BA", 
       renderer: Npc 
     },
     plant: {
@@ -205,12 +197,6 @@ const Entities = () => {
       color: "black",
       renderer: Fireplace,
     },
-    // desk: {
-    //   body: desk,
-    //   size: [75, 80],
-    //   color: "black",
-    //   renderer: Wall,
-    // },
 
 
 
@@ -261,7 +247,6 @@ const Entities = () => {
     player: { 
       body: player, 
       size: [90, 90], 
-      //backgroundColor: "#E6D2BA", 
       renderer: Player 
     },
     tv: {

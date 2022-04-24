@@ -131,5 +131,3 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 });
-
-//903 x 1654

@@ -15,15 +15,17 @@ export default function Falls1({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
-    const goToPoisonings = () => {
+    const goToBurns = () => {
         navigation.navigate("Burns");
     };
     const backToSources = () => {
         navigation.navigate("Sources");
     };
+    //Navigates to previous module
     const handleLastNav = () => {
         navigation.navigate("FallSources");
     };
+    //Navigate to next module
     const handleNextNav = () => {
         navigation.navigate("PoisoningSources");
     };
@@ -106,7 +108,7 @@ export default function Falls1({ navigation }) {
 
     <MainButton
           text="Go to Burns"
-          onPress={goToPoisonings}
+          onPress={goToBurns}
           txtColor={"black"}
     ></MainButton>
 

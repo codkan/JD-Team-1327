@@ -16,15 +16,18 @@ export default function CarSafetyMM({ navigation }) {
     const handleInfoNav = () => {
         navigation.navigate("Info");
     };
+    //Traffic is same as car safety
     const goToCarSafety = () => {
         navigation.navigate("Traffic");
     }
     const backToMedia = () => {
         navigation.navigate("Multimedia");
     }
+    //Naviage to previous page
     const handleLastNav = () => {
         navigation.navigate("DrowningMM");
     }
+    //Naviage to next page
     const handleNextNav = () => {
         navigation.navigate("ParentalHealthMM");
     }

@@ -41,7 +41,6 @@ export default function Home({ navigation }) {
 
       setLvls({ lvl2: lvl2, lvl3: lvl3 });
     }
-    //console.log(sound)
     if (sound == undefined) {
       playSound();
     }

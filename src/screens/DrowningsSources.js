@@ -91,10 +91,6 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    
-    
-    
-    
     page: {
         fontSize: 18,
         textAlign: "center",
@@ -104,5 +100,4 @@ const styles = StyleSheet.create({
     container: {
         alignItems: "center",
     },
-    
 });

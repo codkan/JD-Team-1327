@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   modalText: {
-    // margin: 100,
     height: 70,
     fontSize: 40,
     marginTop: 150,

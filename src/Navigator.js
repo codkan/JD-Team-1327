@@ -219,74 +219,74 @@
          },
      },
      LevelSelect: {
-     screen: LevelSelect,
-     navigationOptions: {
-       headerShown: false,
-     },
+       screen: LevelSelect,
+       navigationOptions: {
+         headerShown: false,
+       },
      },
      Badges: {
-     screen: Badges,
-     navigationOptions: {
-       headerShown: false,
-     },
+       screen: Badges,
+       navigationOptions: {
+         headerShown: false,
+       },
      },
      Settings: {
-     screen: Settings,
-     navigationOptions: {
-       headerShown: false,
-     },
+       screen: Settings,
+       navigationOptions: {
+         headerShown: false,
+       },
      },
      About: {
-     screen: About,
-     navigationOptions: {
-       headerShown: false,
-     },
+       screen: About,
+       navigationOptions: {
+         headerShown: false,
+       },
      },
      Disclaim: {
-     screen: Disclaim,
-     navigationOptions: {
-       headerShown: false,
-     },
+       screen: Disclaim,
+       navigationOptions: {
+         headerShown: false,
+       },
      },
      LevelOne: {
-     screen: LevelOne,
-     navigationOptions: {
-       headerShown: false,
-     },
+       screen: LevelOne,
+       navigationOptions: {
+         headerShown: false,
+       },
      },
      LevelTwo: {
-     screen: LevelTwo,
-     navigationOptions: {
-       headerShown: false,
-     },
+       screen: LevelTwo,
+       navigationOptions: {
+         headerShown: false,
+       },
      },
      LevelThree: {
-     screen: LevelThree,
-     navigationOptions: {
-       headerShown: false,
-     },
+       screen: LevelThree,
+       navigationOptions: {
+         headerShown: false,
+       },
      },
      PoisoningSources: {
-     screen: PoisoningSources,
-     navigationOptions: {
-       headerShown: false,
+       screen: PoisoningSources,
+       navigationOptions: {
+         headerShown: false,
        },
      },
      BurningSources: {
-     screen: BurningSources,
-     navigationOptions: {
-       headerShown: false,
+       screen: BurningSources,
+       navigationOptions: {
+         headerShown: false,
        },
      },
      FallSources: {
-     screen: FallSources,
-     navigationOptions: {
+       screen: FallSources,
+       navigationOptions: {
            headerShown: false,
          },
      },
      TrafficSources: {
-     screen: TrafficSources,
-     navigationOptions: {
+       screen: TrafficSources,
+       navigationOptions: {
            headerShown: false,
          },
      },
