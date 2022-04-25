@@ -5,7 +5,9 @@ Team members: Cody Kantor, Akash Vemulapalli, Aayush Dixit, Erin Falejczyk, Will
 
 This is a cross platform mobile application created with React Native and Expo. The goal of this app is to help new parents learn critical child safety measures and best practices. 
 
-# Install Guide
+To install the application, there are two approaches. One is to download the code from the GitHub and install Expo in order to test the code on a computer using an emulator. This approach makes sense for any developer or anyone planning to make changes to the application. The other approach is meant for users of the application who simply have to scan a QR code to view the application on their phones.
+
+# Build Guide
 ## PRE-REQUISITES  
    First, you need to make sure that Node.js is installed on your machine. You can install Node.js from [here](https://nodejs.org/en/download/).
    Next, you need to make sure that Git is installed on your machine. You can install Git from [here](https://git-scm.com/downloads).
@@ -43,11 +45,11 @@ Ensure you have the Expo Go app downloaded on your phone or nothing will happen 
 
 If everything is done properly, scanning the QR code after running the application should let you run it on your phone.
 
-## Alternative Approach
+# Install Guide
 
-Instead of building the application from scratch, it's also possible to view the application using the following QR code. This only works for android devices due to limitations from the iOS platform. If you are using an android device, then download the Expo Go application and scan the following QR code.
+Instead of building the application from scratch, it's also possible to view the application using the following QR code. This is meant for users who want to download and view the application. If you are using an android device, then download the Expo Go application and scan the following QR code. This also works for iOS. On an Apple phone, please download the Expo Go application and then scan the following QR Code
 
-![QR Code](https://github.com/ckantor8/JD-Team-1327/blob/master/QR%20code.png)
+![QR Code](https://github.com/ckantor8/JD-Team-1327/blob/master/QR_20code.png)
 
 
 
