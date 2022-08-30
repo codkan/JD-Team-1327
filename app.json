@@ -2,6 +2,7 @@
   "expo": {
     "name": "childSafety",
     "slug": "childSafety",
+    "owner": "childsafe_org",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon.png",
