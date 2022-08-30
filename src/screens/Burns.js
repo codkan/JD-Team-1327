@@ -13,9 +13,7 @@ import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
-
-
-
+import bhdr from "../assets/burn_hdr.png";
 
 export default function Burns({ navigation }) {
     //NAV CALLBACK
@@ -61,7 +59,10 @@ export default function Burns({ navigation }) {
 
     <ScrollView>
 
+    <Image style={styles.headimg} source={bhdr}/>
+
     <Text style={CoreStyle.title}> Burns </Text>
+
     <Text style={CoreStyle.subtitle}> Why are Burn Injuries Important? </Text>
 
     <Text style={CoreStyle.content}>
@@ -237,10 +238,9 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    
-    
-    
-    
-    
-    
+    headimg: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
+    },
 });

@@ -214,8 +214,8 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     headimg: {
-        height: 100,
-        width: 100,
-        position: "absolute",
+        height: 150,
+        width: 150,
+        alignSelf: "center",
     },
 });

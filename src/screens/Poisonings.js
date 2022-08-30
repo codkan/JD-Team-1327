@@ -11,6 +11,7 @@ import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
+import poison_hdr from "../assets/poison_hdr.png";
 
 export default function Poisonings({ navigation }) {
     //NAV CALLBACK
@@ -56,9 +57,9 @@ export default function Poisonings({ navigation }) {
     
     <ScrollView>
 
+    <Image style={styles.headimg} source={poison_hdr}/>
+
     <Text style={CoreStyle.title}> Poisonings  </Text>
-
-
 
     <Text style={CoreStyle.subtitle}> How common is it? </Text>
         <Text style={CoreStyle.content}>
@@ -186,5 +187,10 @@ const styles = StyleSheet.create({
     },
     container: {
         alignItems: "center",
-    },    
+    },
+    headimg: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
+    },
 });

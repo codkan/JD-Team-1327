@@ -53,10 +53,10 @@ export default function Drownings({ navigation }) {
     </View>
 
     <ScrollView>
-    <View style={styles.titleBox}>
-        <Text style={CoreStyle.title}> Drownings </Text>
-        <Image style={styles.titleImage} source={Pool}/>
-    </View>
+
+    <Image style={styles.headimg} source={Pool}/>
+
+    <Text style={CoreStyle.title}> Drownings </Text>
     
     <Text style={CoreStyle.subtitle}> Why are drownings important? </Text>
 
@@ -167,7 +167,6 @@ const styles = StyleSheet.create({
         height: 65,
         width: 65,
         flex: 1
-
     },
     titleBox: {
         display: "flex",
@@ -175,6 +174,9 @@ const styles = StyleSheet.create({
         alignItems: "flex-start",
         paddingRight: 20
     },
-    
-    
+    headimg: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
+    },
 });
