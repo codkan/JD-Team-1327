@@ -9,6 +9,11 @@ import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
+import bath from "../assets/bath.png";
+import float from "../assets/float.png";
+import cpr from "../assets/cpr.png";
+import alone from "../assets/alone.png";
+import teach from "../assets/teach.png";
 
 export default function Drownings({ navigation }) {
     //NAV CALLBACK
@@ -81,6 +86,7 @@ export default function Drownings({ navigation }) {
 
 <CollapsibleBox header="1. Never leave an infant alone in the tub, even just for a few seconds" 
     headerstyle={CoreStyle.bullet}>
+    <Image style={styles.bathpic} source={bath}/>
     <Text style={CoreStyle.subbullet}>-The most likely place for infants to drown is right at home, in the tub. 
     Infants may not be able to lift their heads above water, even if there is only a few inches of water.{'\n'}
     - Toddlers may stand up and then slip and fall, landing facedown. {'\n'}
@@ -89,6 +95,7 @@ export default function Drownings({ navigation }) {
 
 <CollapsibleBox header="2. Young children should ALWAYS wear flotation devices around water" 
     headerstyle={CoreStyle.bullet}>
+    <Image style={styles.floatpic} source={float}/>
     <Text style={CoreStyle.subbullet}>-Despite parents’ best efforts, they may still get distracted briefly. 
     A floatation device may avert disaster.{'\n'}
     -If a child falls into muddy, natural water they may be extremely hard to find under the surface 
@@ -97,6 +104,7 @@ export default function Drownings({ navigation }) {
 
 <CollapsibleBox header="3. Get CPR Certified" 
     headerstyle={CoreStyle.bullet}>
+    <Image style={styles.cprpic} source={cpr}/>
     <Text style={CoreStyle.subbullet}>-CPR can turn fatal drownings into nonfatal drownings. {'\n'}
     -It is a very good idea for anyone who is caring for a small child to be CPR certified.{'\n'}
     -More information about learning CPR and getting certified is provided by the Red Cross:
@@ -105,12 +113,14 @@ export default function Drownings({ navigation }) {
 
 
 <CollapsibleBox header="4. Never let your child swim alone or unsupervised" headerstyle={CoreStyle.bullet}>
+    <Image style={styles.alonepic} source={alone}/>
     <Text style={CoreStyle.subbullet}>-Always keep a close eye on your child when they are in or near water. {'\n'}
     -This includes pools with lifeguards, a lifeguard does not replace your responsibility to supervise your child{'\n'}
     </Text>
 </CollapsibleBox>
 
 <CollapsibleBox header="5. Teach your child to swim" headerstyle={CoreStyle.bullet}>
+<Image style={styles.teachpic} source={teach}/>
 <Text style={CoreStyle.subbullet}>- Swimming lessons can greatly reduce your child’s risk but do not replace 
     the need to follow the other advice listed. Children who know how to swim can and do still drown. {'\n'}
     -Another important step can be to teach your child the 5 water survival skills according to SafeKids:{'\n'}
@@ -178,5 +188,40 @@ const styles = StyleSheet.create({
         height: 150,
         width: 150,
         alignSelf: "center",
+    },
+    bathpic: {
+        height: 200,
+        width: 200,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    floatpic: {
+        height: 150,
+        width: 300,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    cprpic: {
+        height: 185,
+        width: 205,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    alonepic: {
+        height: 150,
+        width: 250,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    teachpic: {
+        height: 155,
+        width: 230,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
     },
 });
