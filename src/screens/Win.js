@@ -6,7 +6,6 @@ import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
-import WordArt from "react-wordart";
 import basket from "../assets/gift_basket.png";
 
 export default function Win({navigation}){
