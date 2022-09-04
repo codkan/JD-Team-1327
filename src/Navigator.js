@@ -90,6 +90,7 @@
          screen: FallsMM,
          navigationOptions: {
            headerShown: false,
+           animationEnabled: false,
          },
      },
      FallsR: {
@@ -168,6 +169,7 @@
        screen: Drownings,
        navigationOptions: {
          headerShown: false,
+         animationEnabled: false,
        },
      },
      Traffic: {
@@ -307,12 +309,14 @@
        screen: PoisoningsMM,
        navigationOptions: {
          headerShown: false,
+         animationEnabled: false,
        },
      },
      BurnsMM: {
        screen: BurnsMM,
        navigationOptions: {
          headerShown: false,
+         animationEnabled: false,
        },
      },
  };

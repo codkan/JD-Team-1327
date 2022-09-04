@@ -10,7 +10,6 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
-import ReactPlayer from 'react-player';
 
 export default function FallsM0({ navigation }) {
     //NAV CALLBACK
@@ -53,8 +52,7 @@ export default function FallsM0({ navigation }) {
     </Text>
 </View>
 
-    <ReactPlayer url='https://www.youtube.com/watch?v=i8oifZ7HXaA'/>
-    //<VideoPlayer videoID = "i8oifZ7HXaA"/>
+    <VideoPlayer videoID = "i8oifZ7HXaA"/>
 
 <View style={styles.container}>
     <Image style={styles.img} source={tv}/>
@@ -63,8 +61,7 @@ export default function FallsM0({ navigation }) {
     </Text>
 </View>
 
-    <ReactPlayer url='https://www.youtube.com/watch?v=XyCHsr9NKqY'/>
-    //<VideoPlayer videoID = "XyCHsr9NKqY"/>
+    <VideoPlayer videoID = "XyCHsr9NKqY"/>
 
     <View style={styles.buttons}>
 

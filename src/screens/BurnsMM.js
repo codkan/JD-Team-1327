@@ -77,8 +77,6 @@ export default function BurnsMM({ navigation }) {
         </Text>
     </View>
 
-
-
     <VideoPlayer videoID = "IZP_9VIgcnw"/>
     <VideoPlayer videoID = "ZNWjfe-84Ig"/>
     <VideoPlayer videoID = "gMalF0GMLEM"/>

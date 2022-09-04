@@ -138,11 +138,7 @@ export default function Drownings({ navigation }) {
      of your own child is so important. Videos like the one below make clear how difficult it can be to spot someone drowning. {'\n'}
     </Text>
 
-    <WebView
-        style={{flex:1}}
-        javaScriptEnabled={true}
-        source={{uri: 'https://www.youtube.com/embed/JYQ9AwsTkAw?rel=0&autoplay=0&showinfo=0&controls=0'}}
-    />
+    <VideoPlayer videoID = "JYQ9AwsTkAw"/>
 
 <Text style={CoreStyle.content}>
 Home Pool Tips:  {'\n'}

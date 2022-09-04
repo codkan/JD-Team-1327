@@ -10,6 +10,7 @@ export default class VideoPlayer extends Component {
               videoId={this.props.videoID}
               height={300}
               play={false}
+              webViewStyle={{opacity: 0.99}}
             />
           </View>
         );
