@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     },
     headimg: {
         height: 150,
-        width: 150,
+        width: 65,
         alignSelf: "center",
     },
 });

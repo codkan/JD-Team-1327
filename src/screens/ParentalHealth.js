@@ -3,6 +3,8 @@ import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "reac
 import Background from "../assets/bg.png";
 import ppd2 from "../assets/parentalHealthMM/ppd2.png";
 import ppd3 from "../assets/parentalHealthMM/ppd3.png";
+import ppd4 from "../assets/parentalHealthMM/ppd4.png";
+import ppd5 from "../assets/parentalHealthMM/ppd5.png";
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -58,8 +60,10 @@ export default function ParentalHealth({ navigation }) {
         or don't get better. Postpartum depression is when these feelings don't go away after about 2 weeks or make it hard for a 
         woman to take care of her baby. [1] Rarely, an extreme mood disorder called postpartum psychosis also may develop after 
         childbirth. Postpartum depression isn't a character flaw or a weakness. Sometimes it's simply a complication of giving birth. 
-        If you have postpartum depression, prompt treatment can help you manage your symptoms and help you bond with your baby. [2] {'\n'}
+        If you have postpartum depression, prompt treatment can help you manage your symptoms and help you bond with your baby. [2]
     </Text>
+
+    <Image style={styles.headimg} source={ppd4}/>
 
     <Text style={CoreStyle.subtitle}> Symptoms for Either Parent</Text>
 
@@ -141,6 +145,8 @@ export default function ParentalHealth({ navigation }) {
         </Text>
     </CollapsibleBox>
 
+    <Image style={styles.footimg} source={ppd5}/>
+
     <View style={styles.buttons}>
     <MMButton
         onPress={handleParentsMMNav}
@@ -176,6 +182,14 @@ const styles = StyleSheet.create({
         height: 150,
         width: 150,
         alignSelf: "center",
+        marginBottom: 10,
+    },
+    footimg: {
+        height: 150,
+        width: 225,
+        alignSelf: "center",
+        marginBottom: 15,
+        marginTop: 15,
     },
     page: {
         fontSize: 18,

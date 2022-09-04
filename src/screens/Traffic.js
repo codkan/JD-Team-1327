@@ -1,9 +1,7 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
-import belt from "../assets/carSafetyMM/belt.png";
 import car from "../assets/carSafetyMM/car.png";
-import carSeat from "../assets/carSafetyMM/carSeat.png";
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -12,6 +10,12 @@ import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
 
+import rearSeat from "../assets/carSafetyMM/rearSeat.png";
+import foreSeat from "../assets/carSafetyMM/foreSeat.png";
+import boostSeat from "../assets/carSafetyMM/boostSeat.png";
+import belt from "../assets/carSafetyMM/belt.png";
+import carSafety from "../assets/carSafetyMM/carSafety.png";
+import safe from "../assets/carSafetyMM/safe.png";
 
 export default function Traffic({ navigation }) {
     //NAV CALLBACK
@@ -57,7 +61,7 @@ export default function Traffic({ navigation }) {
 
     <ScrollView>
 
-    <Image style={styles.headimg} source={car}/>
+    <Image style={styles.hdrimg} source={carSafety}/>
 
     <Text style={CoreStyle.title}> Car Safety </Text>
     <Text style={CoreStyle.subtitle}> Why is Car Safety So Important? </Text>
@@ -72,9 +76,8 @@ export default function Traffic({ navigation }) {
 
     <Text style={CoreStyle.subtitle}> Types of Car Seats </Text>
 
-    <Image style={styles.headimg} source={carSeat}/>
-
     <CollapsibleBox header="1. Rear-facing carseats" headerstyle={CoreStyle.bullet}>
+        <Image style={styles.rearimg} source={rearSeat}/>
         <Text style={CoreStyle.subbullet}>- Used for infants and toddlers {'\n'}
         - All infants and toddlers should ride in these until they reach the highest weight or height limit of the seat {'\n'}
         - Most convertible rear-facing seats are built to allow children to ride rear-facing for 2 years or more {'\n'}
@@ -88,6 +91,7 @@ export default function Traffic({ navigation }) {
     </CollapsibleBox>
 
     <CollapsibleBox header="2. Forward-facing carseats" headerstyle={CoreStyle.bullet}>
+        <Image style={styles.foreimg} source={foreSeat}/>
         <Text style={CoreStyle.subbullet}>- Used for toddlers and preschoolers. This is the next seat up from a rear-facing carseat {'\n'}
         - Should always be worn with the attached harness for proper effectiveness {'\n'}
         - Many forward-facing carseats can accommodate children up to 65 pounds or more {'\n'}
@@ -98,6 +102,7 @@ export default function Traffic({ navigation }) {
     </CollapsibleBox>
 
     <CollapsibleBox header="3. Booster seat" headerstyle={CoreStyle.bullet}>
+        <Image style={styles.boostimg} source={boostSeat}/>
         <Text style={CoreStyle.subbullet}>- Used for school-aged children {'\n'}
         - Children within this category should use a booster seat with the seat belt until the seat belt fits properly without the need of the booster seat {'\n'}
         - Vehicle seat belts usually fit properly without a booster seat when the child has reached 4ft 9in and is between the ages of 8 to 12 {'\n'}
@@ -113,8 +118,8 @@ export default function Traffic({ navigation }) {
         </Text>
     </CollapsibleBox>
 
-
     <Image style={styles.headimg} source={belt}/>
+
     <Text style={CoreStyle.subtitle}> Must-Dos while traveling </Text>
 
     <CollapsibleBox header="1. Be a good role model" headerstyle={CoreStyle.bullet}>
@@ -147,6 +152,8 @@ export default function Traffic({ navigation }) {
         </Text>
     </CollapsibleBox>
 
+    <Image style={styles.foreimg} source={safe}/>
+
     <Text style={CoreStyle.subtitle}> Things to avoid when shopping for carseats </Text>
         <Text style={CoreStyle.content}>
         {'\t'} Never use a carseat that is too old. The manufacturer will make a note of how long the 
@@ -157,6 +164,8 @@ export default function Traffic({ navigation }) {
         it has been recalled. If in doubt, you can call the manufacturer or contact the National Highway Traffic Safety 
         Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website.
     </Text>
+
+    <Image style={styles.headimg} source={car}/>
 
     <View style={styles.buttons}>
     <MMButton
@@ -189,16 +198,37 @@ const styles = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
     },
+    hdrimg: {
+        height: 150,
+        width: 175,
+        alignSelf: "center",
+    },
     headimg: {
         height: 150,
         width: 150,
         alignSelf: "center",
     },
-    
-    
-    
-    
-    
+    rearimg: {
+        height: 160,
+        width: 120,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    foreimg: {
+        height: 160,
+        width: 120,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    boostimg: {
+        height: 120,
+        width: 170,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
     page: {
         fontSize: 18,
         textAlign: "center",

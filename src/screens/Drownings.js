@@ -1,5 +1,6 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
+import { WebView } from "react-native-webview";
 import Background from "../assets/bg.png";
 import Pool from "../assets/Pool.png";
 import BackButton from "../components/BackButton";
@@ -14,6 +15,7 @@ import float from "../assets/float.png";
 import cpr from "../assets/cpr.png";
 import alone from "../assets/alone.png";
 import teach from "../assets/teach.png";
+import VideoPlayer from "../components/VideoPlayer";
 
 export default function Drownings({ navigation }) {
     //NAV CALLBACK
@@ -133,9 +135,15 @@ export default function Drownings({ navigation }) {
 <Text style={CoreStyle.content}>
     {'\t'} Drowning is often silent. Drowning most often does not look like what we expect, 
     making it much harder to spot, especially in a crowded pool. This is why close supervision
-     of your own child is so important. Videos like this one [https://www.youtube.com/watch?v=JYQ9AwsTkAw]
-      make clear how difficult it can be to spot someone drowning.  {'\n'}
+     of your own child is so important. Videos like the one below make clear how difficult it can be to spot someone drowning. {'\n'}
     </Text>
+
+    <WebView
+        style={{flex:1}}
+        javaScriptEnabled={true}
+        source={{uri: 'https://www.youtube.com/embed/JYQ9AwsTkAw?rel=0&autoplay=0&showinfo=0&controls=0'}}
+    />
+
 <Text style={CoreStyle.content}>
 Home Pool Tips:  {'\n'}
 - Construct proper 4 sided fencing around your home pool. This should include self-closing and self-latching gates. {'\n'}
