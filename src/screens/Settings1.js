@@ -5,7 +5,7 @@ import Background from "../assets/bg.png";
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
 
-export default function About({ navigation }) {
+export default function Settings1({ navigation }) {
   //NAV CALLBACK
   const goHome = () => {
     navigation.pop();

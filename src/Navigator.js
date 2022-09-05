@@ -59,9 +59,15 @@
  
  import Multimedia from "./screens/Multimedia";
  import Disclaim from "./screens/Disclaim.js";
- 
+ import Search from "./screens/Search.js";
  
  const screens = {
+      Search: {
+        screen: Search,
+        navigationOptions: {
+          headerShown: false,
+        },
+      },
      Landing: {
        screen: Landing,
        navigationOptions: {

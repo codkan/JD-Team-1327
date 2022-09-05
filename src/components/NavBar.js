@@ -9,8 +9,8 @@ export default function Navbar({ navigation }){
   const handleHomeNav = () => {
     navigation.navigate("Landing");
   };
-  const handleSettings1Nav = () => {
-    navigation.navigate("Settings1");
+  const handleSearchNav = () => {
+    navigation.navigate("Search");
   };
   const handleReviewNav = () => {
         navigation.navigate("Review");
@@ -38,8 +38,8 @@ export default function Navbar({ navigation }){
             <Image source={require("../assets/nav/rev.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleSettings1Nav} style={styles.icons}>
-            <Image source={require("../assets/nav/settings.png")} style={styles.icon}></Image>
+        <TouchableOpacity onPress={handleSearchNav} style={styles.icons}>
+            <Image source={require("../assets/nav/search.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
       </View>
