@@ -7,59 +7,12 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
+import { Quizzes } from "../QAbank.json";
 
 var poisonCount = 0;
 var poisonScore = 0;
 var lastC = false;
-var poisonQs = [
-    {Q: {
-        q: "Which of the following would be a useful place to store important emergency numbers, including the poison help number?",
-        answers: [
-            {a: "On a notepad hidden in a desk", id:"inc0"},
-            {a: "On the front door and window", id:"inc1"},
-            {a: "On your fridge or table", id:"inc2"},
-            {a: "In your phone or on a diaper bag", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Which of the following steps should you NOT take if a child has ingested laundry pods?",
-        answers: [
-            {a: "Call poison control for guidance", id:"inc0"},
-            {a: "Immediately remove the pod from the child's mouth", id:"inc1"},
-            {a: "Wash the child's face and hands and rinse out their mouth", id:"inc2"},
-            {a: "Give the child water", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Which of the following is NOT a good way to prevent accidental poisoning?",
-        answers: [
-            {a: "Ensure all medicine containers are locked", id:"inc0"},
-            {a: "Make sure carbon monoxide and smoke detectors are working", id:"inc1"},
-            {a: "Put away cosmetics after use outside the reach of children", id:"inc2"},
-            {a: "Leaving medicine open but in a high place so kids can't reach it", id:"correct"},
-        ],
-    }},
-
-    {Q: {
-        q: "Which of the following are a common cause of child poisoning?",
-        answers: [
-            {a: "Dirt and dog poop", id:"inc0"},
-            {a: "Expired food and mold", id:"inc1"},
-            {a: "Plastic and trash", id:"inc2"},
-            {a: "Cosmetics and medicine", id:"correct"},
-        ],
-    }},
-
-    {Q: {
-        q: "Which of the following are risks for children?",
-        answers: [
-            {a: "Many common houseplants", id:"inc0"},
-            {a: "Lead paint", id:"inc1"},
-            {a: "Brightly colored berries", id:"inc2"},
-            {a: "All of these", id:"correct"},
-        ],
-    }},
-];
+var poisonQs = Quizzes.poisonQs;
 
 export default class PoisonR extends Component{
     constructor(){

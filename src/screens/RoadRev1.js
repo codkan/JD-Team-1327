@@ -7,57 +7,12 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
+import { Quizzes } from "../QAbank.json";
 
 var carCount = 0;
 var carScore = 0;
 var lastC = false;
-var CarQs = [
-    {Q: {
-        q: "Where should a rear-facing carseat be installed?",
-        answers: [
-            {a: "No carseat needed", id:"inc0"},
-            {a: "Passenger seat", id:"inc1"},
-            {a: "Roof of the car", id:"inc2"},
-            {a: "Secured in the backseat", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Is a seatbelt required if your child is in a booster seat?",
-        answers: [
-            {a: "A seatbelt is optional", id:"inc0"},
-            {a: "Only a lap belt is required", id:"inc1"},
-            {a: "Children don't belong in booster seats", id:"inc2"},
-            {a: "A seatbelt is always required", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "What parts of the seatbelt should be worn at all times?",
-        answers: [
-            {a: "Lap only", id:"inc0"},
-            {a: "Chest/shoulder only", id:"inc1"},
-            {a: "Neither", id:"inc2"},
-            {a: "Lap and Chest/Shoulder", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "What should you not do when kids are in the car?",
-        answers: [
-            {a: "Be a good role model", id:"inc0"},
-            {a: "Be consistent", id:"inc1"},
-            {a: "Secure children with seatbelt", id:"inc2"},
-            {a: "Leave your child alone", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Should a broken car seat be used?",
-        answers: [
-            {a: "Only if it was in a minor car crash", id:"inc0"},
-            {a: "If it has no more than two cracks", id:"inc1"},
-            {a: "Only if there are no visible cracks", id:"inc2"},
-            {a: "Never", id:"correct"},
-        ],
-    }},
-];
+var CarQs = Quizzes.CarQs;
 
 export default class CarRev1 extends Component{
     constructor(){

@@ -7,57 +7,12 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
+import { Quizzes } from "../QAbank.json";
 
 var parCount = 0;
 var parScore = 0;
 var lastC = false;
-var ParQs = [
-    {Q: {
-        q: "Which is not a symptom of postpartum depression?",
-        answers: [
-            {a: "Trouble concentrating", id:"inc0"},
-            {a: "Withdrawal", id:"inc1"},
-            {a: "Excessive crying", id:"inc2"},
-            {a: "Feeling calm", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "What is a long-term effect of untreated postpartum depression?",
-        answers: [
-            {a: "Advanced child language development", id:"inc0"},
-            {a: "Emotional maturity", id:"inc1"},
-            {a: "Well-behaved children", id:"inc2"},
-            {a: "Chronic depression", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Which is not a side effect of children with a parent with postpartum depression?",
-        answers: [
-            {a: "Behavioral problems", id:"inc0"},
-            {a: "Too much or too little sleep", id:"inc1"},
-            {a: "Language development", id:"inc2"},
-            {a: "Eating well", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Which is untrue about postpartum depression?",
-        answers: [
-            {a: "It is treatable", id:"inc0"},
-            {a: "A complication of birth", id:"inc1"},
-            {a: "May not be chronic", id:"inc2"},
-            {a: "It is a character flaw", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Can men have postpartum depression?",
-        answers: [
-            {a: "No, they don't carry the baby", id:"inc0"},
-            {a: "Only if they are prone to depression", id:"inc1"},
-            {a: "Only mild cases", id:"inc2"},
-            {a: "Yes", id:"correct"},
-        ],
-    }},
-];
+var ParQs = Quizzes.ParQs;
 
 export default class ParRev1 extends Component{
     constructor(){

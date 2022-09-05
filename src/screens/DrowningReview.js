@@ -7,57 +7,12 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
+import { Quizzes } from "../QAbank.json";
 
 var drownCount = 0;
 var drownScore = 0;
 var lastC = false;
-var DrownQs = [
-    {Q: {
-        q: "What percentage of nonfatal drownings require hospitalization?",
-        answers: [
-            {a: "10%", id:"inc0"},
-            {a: "75%", id:"inc1"},
-            {a: "60%", id:"inc2"},
-            {a: "40%", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "What is the most common place for children under 1 to drown?",
-        answers: [
-            {a: "Natural bodies of water", id:"inc0"},
-            {a: "Swimming pools", id:"inc1"},
-            {a: "Really big puddles", id:"inc2"},
-            {a: "Bathtub", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "What is the most common place for older children to drown?",
-        answers: [
-            {a: "Home pools", id:"inc0"},
-            {a: "Bathtub", id:"inc1"},
-            {a: "Public pools", id:"inc2"},
-            {a: "Natural bodies of water", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Where can infants be left unattended?",
-        answers: [
-            {a: "Home pools", id:"inc0"},
-            {a: "Bathtub", id:"inc1"},
-            {a: "Public pools", id:"inc2"},
-            {a: "No body of water", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Which of these is NOT one of the 5 water survival skills?",
-        answers: [
-            {a: "Surface after jumping", id:"inc0"},
-            {a: "Tread water for 1 minute", id:"inc1"},
-            {a: "Exit pool without ladder", id:"inc2"},
-            {a: "Swim 60 yards", id:"correct"},
-        ],
-    }},
-];
+var DrownQs = Quizzes.DrownQs;
 
 export default class DrowningR extends Component{
     constructor(){

@@ -233,6 +233,474 @@
           ]
         }
       }
+    ],
+    "poisonQs": [
+      {
+        "Q": {
+          "q": "Which of the following would be a useful place to store important emergency numbers, including the poison help number?",
+          "answers": [
+            {
+              "a": "On a notepad hidden in a desk",
+              "id": "inc0"
+            },
+            {
+              "a": "On the front door and window",
+              "id": "inc1"
+            },
+            {
+              "a": "On your fridge or table",
+              "id": "inc2"
+            },
+            {
+              "a": "In your phone or on a diaper bag",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Which of the following steps should you NOT take if a child has ingested laundry pods?",
+          "answers": [
+            {
+              "a": "Call poison control for guidance",
+              "id": "inc0"
+            },
+            {
+              "a": "Immediately remove the pod from the child's mouth",
+              "id": "inc1"
+            },
+            {
+              "a": "Wash the child's face and hands and rinse out their mouth",
+              "id": "inc2"
+            },
+            {
+              "a": "Give the child water",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Which of the following is NOT a good way to prevent accidental poisoning?",
+          "answers": [
+            {
+              "a": "Ensure all medicine containers are locked",
+              "id": "inc0"
+            },
+            {
+              "a": "Make sure carbon monoxide and smoke detectors are working",
+              "id": "inc1"
+            },
+            {
+              "a": "Put away cosmetics after use outside the reach of children",
+              "id": "inc2"
+            },
+            {
+              "a": "Leaving medicine open but in a high place so kids can't reach it",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Which of the following are a common cause of child poisoning?",
+          "answers": [
+            {
+              "a": "Dirt and dog poop",
+              "id": "inc0"
+            },
+            {
+              "a": "Expired food and mold",
+              "id": "inc1"
+            },
+            {
+              "a": "Plastic and trash",
+              "id": "inc2"
+            },
+            {
+              "a": "Cosmetics and medicine",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Which of the following are risks for children?",
+          "answers": [
+            {
+              "a": "Many common houseplants",
+              "id": "inc0"
+            },
+            {
+              "a": "Lead paint",
+              "id": "inc1"
+            },
+            {
+              "a": "Brightly colored berries",
+              "id": "inc2"
+            },
+            {
+              "a": "All of these",
+              "id": "correct"
+            }
+          ]
+        }
+      }
+    ],
+    "DrownQs": [
+      {
+        "Q": {
+          "q": "What percentage of nonfatal drownings require hospitalization?",
+          "answers": [
+            {
+              "a": "10%",
+              "id": "inc0"
+            },
+            {
+              "a": "75%",
+              "id": "inc1"
+            },
+            {
+              "a": "60%",
+              "id": "inc2"
+            },
+            {
+              "a": "40%",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "What is the most common place for children under 1 to drown?",
+          "answers": [
+            {
+              "a": "Natural bodies of water",
+              "id": "inc0"
+            },
+            {
+              "a": "Swimming pools",
+              "id": "inc1"
+            },
+            {
+              "a": "Really big puddles",
+              "id": "inc2"
+            },
+            {
+              "a": "Bathtub",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "What is the most common place for older children to drown?",
+          "answers": [
+            {
+              "a": "Home pools",
+              "id": "inc0"
+            },
+            {
+              "a": "Bathtub",
+              "id": "inc1"
+            },
+            {
+              "a": "Public pools",
+              "id": "inc2"
+            },
+            {
+              "a": "Natural bodies of water",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Where can infants be left unattended?",
+          "answers": [
+            {
+              "a": "Home pools",
+              "id": "inc0"
+            },
+            {
+              "a": "Bathtub",
+              "id": "inc1"
+            },
+            {
+              "a": "Public pools",
+              "id": "inc2"
+            },
+            {
+              "a": "No body of water",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Which of these is NOT one of the 5 water survival skills?",
+          "answers": [
+            {
+              "a": "Surface after jumping",
+              "id": "inc0"
+            },
+            {
+              "a": "Tread water for 1 minute",
+              "id": "inc1"
+            },
+            {
+              "a": "Exit pool without ladder",
+              "id": "inc2"
+            },
+            {
+              "a": "Swim 60 yards",
+              "id": "correct"
+            }
+          ]
+        }
+      }
+    ],
+    "CarQs": [
+      {
+        "Q": {
+          "q": "Where should a rear-facing carseat be installed?",
+          "answers": [
+            {
+              "a": "No carseat needed",
+              "id": "inc0"
+            },
+            {
+              "a": "Passenger seat",
+              "id": "inc1"
+            },
+            {
+              "a": "Roof of the car",
+              "id": "inc2"
+            },
+            {
+              "a": "Secured in the backseat",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Is a seatbelt required if your child is in a booster seat?",
+          "answers": [
+            {
+              "a": "A seatbelt is optional",
+              "id": "inc0"
+            },
+            {
+              "a": "Only a lap belt is required",
+              "id": "inc1"
+            },
+            {
+              "a": "Children don't belong in booster seats",
+              "id": "inc2"
+            },
+            {
+              "a": "A seatbelt is always required",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "What parts of the seatbelt should be worn at all times?",
+          "answers": [
+            {
+              "a": "Lap only",
+              "id": "inc0"
+            },
+            {
+              "a": "Chest/shoulder only",
+              "id": "inc1"
+            },
+            {
+              "a": "Neither",
+              "id": "inc2"
+            },
+            {
+              "a": "Lap and Chest/Shoulder",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "What should you not do when kids are in the car?",
+          "answers": [
+            {
+              "a": "Be a good role model",
+              "id": "inc0"
+            },
+            {
+              "a": "Be consistent",
+              "id": "inc1"
+            },
+            {
+              "a": "Secure children with seatbelt",
+              "id": "inc2"
+            },
+            {
+              "a": "Leave your child alone",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Should a broken car seat be used?",
+          "answers": [
+            {
+              "a": "Only if it was in a minor car crash",
+              "id": "inc0"
+            },
+            {
+              "a": "If it has no more than two cracks",
+              "id": "inc1"
+            },
+            {
+              "a": "Only if there are no visible cracks",
+              "id": "inc2"
+            },
+            {
+              "a": "Never",
+              "id": "correct"
+            }
+          ]
+        }
+      }
+    ],
+    "ParQs": [
+      {
+        "Q": {
+          "q": "Which is not a symptom of postpartum depression?",
+          "answers": [
+            {
+              "a": "Trouble concentrating",
+              "id": "inc0"
+            },
+            {
+              "a": "Withdrawal",
+              "id": "inc1"
+            },
+            {
+              "a": "Excessive crying",
+              "id": "inc2"
+            },
+            {
+              "a": "Feeling calm",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "What is a long-term effect of untreated postpartum depression?",
+          "answers": [
+            {
+              "a": "Advanced child language development",
+              "id": "inc0"
+            },
+            {
+              "a": "Emotional maturity",
+              "id": "inc1"
+            },
+            {
+              "a": "Well-behaved children",
+              "id": "inc2"
+            },
+            {
+              "a": "Chronic depression",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Which is not a side effect of children with a parent with postpartum depression?",
+          "answers": [
+            {
+              "a": "Behavioral problems",
+              "id": "inc0"
+            },
+            {
+              "a": "Too much or too little sleep",
+              "id": "inc1"
+            },
+            {
+              "a": "Language development",
+              "id": "inc2"
+            },
+            {
+              "a": "Eating well",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Which is untrue about postpartum depression?",
+          "answers": [
+            {
+              "a": "It is treatable",
+              "id": "inc0"
+            },
+            {
+              "a": "A complication of birth",
+              "id": "inc1"
+            },
+            {
+              "a": "May not be chronic",
+              "id": "inc2"
+            },
+            {
+              "a": "It is a character flaw",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Can men have postpartum depression?",
+          "answers": [
+            {
+              "a": "No, they don't carry the baby",
+              "id": "inc0"
+            },
+            {
+              "a": "Only if they are prone to depression",
+              "id": "inc1"
+            },
+            {
+              "a": "Only mild cases",
+              "id": "inc2"
+            },
+            {
+              "a": "Yes",
+              "id": "correct"
+            }
+          ]
+        }
+      }
     ]
   }
 }
