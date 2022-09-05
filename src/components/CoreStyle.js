@@ -18,7 +18,7 @@ export const CoreStyle = StyleSheet.create({
 
     // Secondary headers for subsections
     subtitle: { 
-        fontSize: 24,
+        fontSize: 26,
         marginBottom: 20,
         textAlign: "center",
         fontWeight: "bold",
@@ -26,25 +26,29 @@ export const CoreStyle = StyleSheet.create({
 
     // Small text
     content: { 
-        fontSize: 16,
+        fontSize: 18,
         marginBottom: 20,
-        marginLeft: 15,
-        marginRight: 15,
+        marginLeft: 30,
+        marginRight: 30,
+        textAlign: "justify",
+        lineHeight: 25,
     },
 
     // Good size for big bullet points, works well as header for collapsible box
     bullet: {
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: "bold",
-        marginLeft: 5,
-        marginRight: 5
+        marginLeft: 15,
+        marginRight: 15
     },
 
     //Good size for small sub-bullet points, works well as body for collapsible box
     subbullet: {
-        fontSize: 16,
-        marginLeft: 20,
-        marginRight: 10,
+        fontSize: 18,
+        marginLeft: 35,
+        marginRight: 30,
+        textAlign: "justify",
+        lineHeight: 23,
     },
 
     // box for the back buttons and source button at top of info pages (prev called btns)
