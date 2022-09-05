@@ -7,57 +7,12 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
+import { Quizzes } from "../QAbank";
 
 var fallCount = 0;
 var fallScore = 0;
 var lastC = false;
-var FallQs = [
-    {Q: {
-        q: "Infants most likely to fall....",
-        answers: [
-            {a: "Out of a Stroller", id:"inc0"},
-            {a: "Through Windows", id:"inc1"},
-            {a: "On the Playground", id:"inc2"},
-            {a: "From Furniture / Down Stairs", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "On what surface can you place a child when secured in a carrier?",
-        answers: [
-            {a: "Counter", id:"inc0"},
-            {a: "Table", id:"inc1"},
-            {a: "Furniture", id:"inc2"},
-            {a: "Floor", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Where should safety gates be placed on stairs?",
-        answers: [
-            {a: "Top", id:"inc0"},
-            {a: "Bottom", id:"inc1"},
-            {a: "Neither", id:"inc2"},
-            {a: "Both", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "How should TVs be placed?",
-        answers: [
-            {a: "Low Stands", id:"inc0"},
-            {a: "High-standing Furniture", id:"inc1"},
-            {a: "Wall-Mounted", id:"inc2"},
-            {a: "Low stands if older, mounted if newer", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Which of these do you NOT want in a stroller?",
-        answers: [
-            {a: "Wide Wheel-base", id:"inc0"},
-            {a: "Low Seat", id:"inc1"},
-            {a: "Waist-Level Handlebars", id:"inc2"},
-            {a: "Large Leg Openings", id:"correct"},
-        ],
-    }},
-];
+var FallQs = Quizzes.FallQs;
 
 export default class FallsR extends Component{
     constructor(){

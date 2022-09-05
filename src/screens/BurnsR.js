@@ -7,59 +7,12 @@ import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
+import { Quizzes } from "../QAbank.json";
 
 var burnCount = 0;
 var burnScore = 0;
 var lastC = false;
-var burnQs = [
-    {Q: {
-        q: "What type of burn injury is the most common?",
-        answers: [
-            {a: "Open flame on stoves", id:"inc0"},
-            {a: "Friction burns from treadmills", id:"inc1"},
-            {a: "Electrical burns from an outlet", id:"inc2"},
-            {a: "Scalds from hot liquids", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "What method does not work to help protect your child from scalds?",
-        answers: [
-            {a: "Turning on the cold water first", id:"inc0"},
-            {a: "Setting the water heater to 120 degrees Farenheit or below", id:"inc1"},
-            {a: "Installing anti scald devices", id:"inc2"},
-            {a: "Wearing clothes during baths", id:"correct"},
-        ],
-    }},
-    {Q: {
-        q: "Under which circumstance should you test temperatures?",
-        answers: [
-            {a: "When microwaving food", id:"inc0"},
-            {a: "When bathing your child", id:"inc1"},
-            {a: "Playing on metal playground equipment", id:"inc2"},
-            {a: "Under all these situations", id:"correct"},
-        ],
-    }},
-
-    {Q: {
-        q: "What's the first thing you should do if your child gets a burn injury?",
-        answers: [
-            {a: "Apply ointment", id:"inc0"},
-            {a: "Pop blisters to prevent infection", id:"inc1"},
-            {a: "Wrap it in a bandage or gauze", id:"inc2"},
-            {a: "Cool the area with cold water", id:"correct"},
-        ],
-    }},
-
-    {Q: {
-        q: "What is the best way to prevent a burn injury?",
-        answers: [
-            {a: "Replace smoke detector batteries", id:"inc0"},
-            {a: "Wear shoes when walking on asphalt", id:"inc1"},
-            {a: "Apply sunscreen often", id:"inc2"},
-            {a: "Always supervise your child around a flame", id:"correct"},
-        ],
-    }},
-];
+var burnQs = Quizzes.burnQs;
 
 export default class BurnR extends Component{
     constructor(){

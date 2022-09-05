@@ -1,0 +1,238 @@
+{
+  "Quizzes": {
+    "FallQs": [
+      {
+        "Q": {
+          "q": "Infants are most likely to fall....",
+          "answers": [
+            {
+              "a": "Out of a Stroller",
+              "id": "inc0"
+            },
+            {
+              "a": "Through Windows",
+              "id": "inc1"
+            },
+            {
+              "a": "On the Playground",
+              "id": "inc2"
+            },
+            {
+              "a": "From Furniture / Down Stairs",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "On what surface can you place a child when secured in a carrier?",
+          "answers": [
+            {
+              "a": "Counter",
+              "id": "inc0"
+            },
+            {
+              "a": "Table",
+              "id": "inc1"
+            },
+            {
+              "a": "Furniture",
+              "id": "inc2"
+            },
+            {
+              "a": "Floor",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Where should safety gates be placed on stairs?",
+          "answers": [
+            {
+              "a": "Top",
+              "id": "inc0"
+            },
+            {
+              "a": "Bottom",
+              "id": "inc1"
+            },
+            {
+              "a": "Neither",
+              "id": "inc2"
+            },
+            {
+              "a": "Both",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "How should TVs be placed?",
+          "answers": [
+            {
+              "a": "Low Stands",
+              "id": "inc0"
+            },
+            {
+              "a": "High-standing Furniture",
+              "id": "inc1"
+            },
+            {
+              "a": "Wall-Mounted",
+              "id": "inc2"
+            },
+            {
+              "a": "Low stands if older,mounted if newer",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Which of these do you NOT want in a stroller?",
+          "answers": [
+            {
+              "a": "Wide Wheel-base",
+              "id": "inc0"
+            },
+            {
+              "a": "Low Seat",
+              "id": "inc1"
+            },
+            {
+              "a": "Waist-Level Handlebars",
+              "id": "inc2"
+            },
+            {
+              "a": "Large Leg Openings",
+              "id": "correct"
+            }
+          ]
+        }
+      }
+    ],
+    "burnQs": [
+      {
+        "Q": {
+          "q": "What type of burn injury is the most common?",
+          "answers": [
+            {
+              "a": "Open flame on stoves",
+              "id": "inc0"
+            },
+            {
+              "a": "Friction burns from treadmills",
+              "id": "inc1"
+            },
+            {
+              "a": "Electrical burns from an outlet",
+              "id": "inc2"
+            },
+            {
+              "a": "Scalds from hot liquids",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "What method does not work to help protect your child from scalds?",
+          "answers": [
+            {
+              "a": "Turning on the cold water first",
+              "id": "inc0"
+            },
+            {
+              "a": "Setting the water heater to 120 degrees Farenheit or below",
+              "id": "inc1"
+            },
+            {
+              "a": "Installing anti scald devices",
+              "id": "inc2"
+            },
+            {
+              "a": "Wearing clothes during baths",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "Under which circumstance should you test temperatures?",
+          "answers": [
+            {
+              "a": "When microwaving food",
+              "id": "inc0"
+            },
+            {
+              "a": "When bathing your child",
+              "id": "inc1"
+            },
+            {
+              "a": "Playing on metal playground equipment",
+              "id": "inc2"
+            },
+            {
+              "a": "Under all these situations",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "What's the first thing you should do if your child gets a burn injury?",
+          "answers": [
+            {
+              "a": "Apply ointment",
+              "id": "inc0"
+            },
+            {
+              "a": "Pop blisters to prevent infection",
+              "id": "inc1"
+            },
+            {
+              "a": "Wrap it in a bandage or gauze",
+              "id": "inc2"
+            },
+            {
+              "a": "Cool the area with cold water",
+              "id": "correct"
+            }
+          ]
+        }
+      },
+      {
+        "Q": {
+          "q": "What is the best way to prevent a burn injury?",
+          "answers": [
+            {
+              "a": "Replace smoke detector batteries",
+              "id": "inc0"
+            },
+            {
+              "a": "Wear shoes when walking on asphalt",
+              "id": "inc1"
+            },
+            {
+              "a": "Apply sunscreen often",
+              "id": "inc2"
+            },
+            {
+              "a": "Always supervise your child around a flame",
+              "id": "correct"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
