@@ -20,7 +20,7 @@ import * as ScreenOrientation from 'expo-screen-orientation'
 import { CoreStyle } from "../components/CoreStyle";
 
 
-export default function Home({ navigation }) {
+export default function Landing({ navigation }) {
 
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
 

@@ -62,17 +62,17 @@
  import Search from "./screens/Search.js";
  
  const screens = {
-      Search: {
-        screen: Search,
-        navigationOptions: {
-          headerShown: false,
-        },
-      },
      Landing: {
        screen: Landing,
        navigationOptions: {
          headerShown: false,
        },
+     },
+     Search: {
+         screen: Search,
+         navigationOptions: {
+           headerShown: false,
+         },
      },
      Info: {
        screen: Info,
