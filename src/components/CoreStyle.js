@@ -60,7 +60,23 @@ export const CoreStyle = StyleSheet.create({
         justifyContent: "space-between",
     },
 
-    // 
+    //buttonContainer for housing crayon section buttons on module pages
+    buttonContainer: {
+        flex: 1,
+        top: -60,
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 30,
+    },
+
+    //crayon styling only for buttons on initial module pages
+    crayon: {
+        height: 50,
+        width: 355,
+        marginTop: 40,
+    },
+
+    // pushdown style to keep navigation bar at bottom of screen
     pushdown: {
         position: 'absolute',
         width: '100%',

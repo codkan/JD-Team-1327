@@ -9,6 +9,7 @@ import poisonings from "../assets/reviewCrayons/poisonings.png";
 import drownings from "../assets/reviewCrayons/drownings.png";
 import carSafety from "../assets/reviewCrayons/carSafety.png";
 import parentHealth from "../assets/reviewCrayons/parentHealth.png";
+import { CoreStyle } from "../components/CoreStyle.js";
 
 export default function About({ navigation }) {
   //NAV CALLBACK
@@ -38,25 +39,25 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}> Review</Text>
-    <View style={styles.buttonContainer}>
+    <Text style={styles.modalText}>Review</Text>
+    <View style={CoreStyle.buttonContainer}>
         <TouchableOpacity onPress={reviewFalls}>
-        <Image source={falls} style={styles.crayon}></Image>
+        <Image source={falls} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={reviewBurn}>
-        <Image source={burns} style={styles.crayon}></Image>
+        <Image source={burns} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={reviewPoison}>
-        <Image source={poisonings} style={styles.crayon}></Image>
+        <Image source={poisonings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={reviewDrowning}>
-        <Image source={drownings} style={styles.crayon}></Image>
+        <Image source={drownings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={reviewCarSafety}>
-        <Image source={carSafety} style={styles.crayon}></Image>
+        <Image source={carSafety} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={reviewParentalHealth}>
-        <Image source={parentHealth} style={styles.crayon}></Image>
+        <Image source={parentHealth} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
     </View>
     <Navbar navigation={navigation}/>
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     // margin: 100,
     height: 70,
     fontSize: 40,
-    marginTop: 100,
+    marginTop: 60,
     marginBottom: 15,
     fontWeight: "bold",
     textAlign: "center",
@@ -85,25 +86,6 @@ const styles = StyleSheet.create({
     marginTop: 150,
     marginBottom: 15,
     alignItems: "center"
-  },
-  crayon: {
-    height:50,
-    width:355,
-    marginTop: 25,
-  },
-  buttonContainer: {
-    flex: 1,
-    top: -80,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 30,
-  },
-  buttonContainer2: {
-    flex: 1,
-    top: 300,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 30,
   },
   button: {
     color: "black",

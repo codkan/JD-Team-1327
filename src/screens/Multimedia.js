@@ -9,6 +9,7 @@ import poisonings from "../assets/mediaCrayons/poisonings.png";
 import drownings from "../assets/mediaCrayons/drownings.png";
 import carSafety from "../assets/mediaCrayons/carSafety.png";
 import parentHealth from "../assets/mediaCrayons/parentHealth.png";
+import { CoreStyle } from "../components/CoreStyle.js";
 
 export default function Multimedia({ navigation }) {
   //NAV CALLBACK
@@ -36,26 +37,26 @@ export default function Multimedia({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}> Multimedia Contents</Text>
-    <View style={styles.buttonContainer}>
+    <Text style={styles.modalText}>Multimedia</Text>
+    <View style={CoreStyle.buttonContainer}>
 
 <TouchableOpacity onPress={handleFallsMMNav}>
-<Image source={falls} style={styles.crayon}></Image>
+<Image source={falls} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleBurnsNav}>
-<Image source={burns} style={styles.crayon}></Image>
+<Image source={burns} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handlePoisoningsNav}>
-<Image source={poisonings} style={styles.crayon}></Image>
+<Image source={poisonings} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleDrowningsNav}>
-<Image source={drownings} style={styles.crayon}></Image>
+<Image source={drownings} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleCarSafetyMMNav}>
-<Image source={carSafety} style={styles.crayon}></Image>
+<Image source={carSafety} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleParentalHealthMMNav}>
-<Image source={parentHealth} style={styles.crayon}></Image>
+<Image source={parentHealth} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 </View>
 <Navbar navigation={navigation}/>
@@ -84,25 +85,6 @@ const styles = StyleSheet.create({
     marginTop: 150,
     marginBottom: 15,
     alignItems: "center"
-  },
-  crayon: {
-    height:50,
-    width:355,
-    marginTop: 25,
-  },
-  buttonContainer: {
-    flex: 1,
-    top: -80,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 30,
-  },
-  buttonContainer2: {
-    flex: 1,
-    top: 300,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 30,
   },
   button: {
     color: "black",

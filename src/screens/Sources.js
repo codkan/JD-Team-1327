@@ -3,13 +3,13 @@ import { Image, TouchableOpacity, ImageBackground, StyleSheet, Text, View } from
 import Background from "../assets/bg.png";
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
-import { CoreStyle } from "../components/CoreStyle";
 import falls from "../assets/sourcesCrayons/falls.png";
 import burns from "../assets/sourcesCrayons/burns.png";
 import poisonings from "../assets/sourcesCrayons/poisonings.png";
 import drownings from "../assets/sourcesCrayons/drownings.png";
 import carSafety from "../assets/sourcesCrayons/carSafety.png";
 import parentHealth from "../assets/sourcesCrayons/parentHealth.png";
+import { CoreStyle } from "../components/CoreStyle.js";
 
 export default function About({ navigation }) {
   //NAV CALLBACK
@@ -43,26 +43,26 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}> Sources </Text>
-    <View style = {styles.buttonContainer}>
+    <Text style={styles.modalText}>Sources</Text>
+    <View style = {CoreStyle.buttonContainer}>
 
 <TouchableOpacity onPress={handleGoToFallSource}>
-<Image source={falls} style={styles.crayon}></Image>
+<Image source={falls} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleGoToBurnSource}>
-<Image source={burns} style={styles.crayon}></Image>
+<Image source={burns} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleGoToPoisoningSource}>
-<Image source={poisonings} style={styles.crayon}></Image>
+<Image source={poisonings} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleGoToDrowningSource}>
-<Image source={drownings} style={styles.crayon}></Image>
+<Image source={drownings} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleGoToTrafficSource}>
-<Image source={carSafety} style={styles.crayon}></Image>
+<Image source={carSafety} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 <TouchableOpacity onPress={handleGoToParentalHealthSource}>
-<Image source={parentHealth} style={styles.crayon}></Image>
+<Image source={parentHealth} style={CoreStyle.crayon}></Image>
 </TouchableOpacity>
 </View>
 <Navbar navigation={navigation}/>
@@ -77,34 +77,13 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     justifyContent: "center",
   },
-  crayon: {
-    height:50,
-    width:355,
-    marginTop: 25,
-  },
-  buttonContainer: {
-      flex: 1,
-      top: -80,
-      alignItems: "center",
-      justifyContent: "center",
-      marginTop: 30,
-  },
-
   modalText: {
       // margin: 100,
       height: 70,
       fontSize: 40,
-      marginTop: 100,
+      marginTop: 60,
       marginBottom: 15,
       fontWeight: "bold",
       textAlign: "center",
   },
-
-  /* rectangle: {
-    width: Constants.MAX_WIDTH,
-    height: Constants.MAX_HEIGHT * 0.1,
-    color: "black"
-  }, */
-
-
 });
