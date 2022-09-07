@@ -89,7 +89,7 @@ export default function Drownings({ navigation }) {
 <CollapsibleBox header="1. Never leave an infant alone in the tub, even just for a few seconds" 
     headerstyle={CoreStyle.bullet}>
     <Image style={styles.bathpic} source={bath}/>
-    <Text style={CoreStyle.subbullet}>-The most likely place for infants to drown is right at home, in the tub. 
+    <Text style={CoreStyle.subbullet}>- The most likely place for infants to drown is right at home, in the tub.
     Infants may not be able to lift their heads above water, even if there is only a few inches of water.{'\n'}
     - Toddlers may stand up and then slip and fall, landing facedown. {'\n'}
     - Children may accidentally turn on the hot water, scalding themselves. {'\n'}</Text>
@@ -98,26 +98,26 @@ export default function Drownings({ navigation }) {
 <CollapsibleBox header="2. Young children should ALWAYS wear flotation devices around water" 
     headerstyle={CoreStyle.bullet}>
     <Image style={styles.floatpic} source={float}/>
-    <Text style={CoreStyle.subbullet}>-Despite parents’ best efforts, they may still get distracted briefly. 
+    <Text style={CoreStyle.subbullet}>- Despite parents’ best efforts, they may still get distracted briefly.
     A floatation device may avert disaster.{'\n'}
-    -If a child falls into muddy, natural water they may be extremely hard to find under the surface 
+    - If a child falls into muddy, natural water they may be extremely hard to find under the surface
     without a floatation device.{'\n'}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header="3. Get CPR Certified" 
     headerstyle={CoreStyle.bullet}>
     <Image style={styles.cprpic} source={cpr}/>
-    <Text style={CoreStyle.subbullet}>-CPR can turn fatal drownings into nonfatal drownings. {'\n'}
-    -It is a very good idea for anyone who is caring for a small child to be CPR certified.{'\n'}
-    -More information about learning CPR and getting certified is provided by the Red Cross:
+    <Text style={CoreStyle.subbullet}>- CPR can turn fatal drownings into nonfatal drownings. {'\n'}
+    - It is a very good idea for anyone who is caring for a small child to be CPR certified.{'\n'}
+    - More information about learning CPR and getting certified is provided by the Red Cross:
     https://www.redcross.org/take-a-class/cpr/cpr-training.{'\n'}</Text>
 </CollapsibleBox> 
 
 
 <CollapsibleBox header="4. Never let your child swim alone or unsupervised" headerstyle={CoreStyle.bullet}>
     <Image style={styles.alonepic} source={alone}/>
-    <Text style={CoreStyle.subbullet}>-Always keep a close eye on your child when they are in or near water. {'\n'}
-    -This includes pools with lifeguards, a lifeguard does not replace your responsibility to supervise your child{'\n'}
+    <Text style={CoreStyle.subbullet}>- Always keep a close eye on your child when they are in or near water. {'\n'}
+    - This includes pools with lifeguards, a lifeguard does not replace your responsibility to supervise your child{'\n'}
     </Text>
 </CollapsibleBox>
 
@@ -125,13 +125,13 @@ export default function Drownings({ navigation }) {
 <Image style={styles.teachpic} source={teach}/>
 <Text style={CoreStyle.subbullet}>- Swimming lessons can greatly reduce your child’s risk but do not replace 
     the need to follow the other advice listed. Children who know how to swim can and do still drown. {'\n'}
-    -Another important step can be to teach your child the 5 water survival skills according to SafeKids:{'\n'}
+    - Another important step can be to teach your child the 5 water survival skills according to SafeKids:{'\n'}
     1: Jump into deep water, return to the surface. 2: Be able to float/tread water for 1 minute. 
     3: Rotate 360 degrees and locate an exit from the pool. 4: Be able to swim 25 yards (to an exit). 
     5: Exit a pool without the use of a ladder  {'\n'}</Text>
 </CollapsibleBox>
 
-<Text style={CoreStyle.subtitle}> More Info </Text>
+<Text style={CoreStyle.subtitle}> More Drowning Info </Text>
 <Text style={CoreStyle.content}>
     {'\t'} Drowning is often silent. Drowning most often does not look like what we expect, 
     making it much harder to spot, especially in a crowded pool. This is why close supervision
@@ -146,7 +146,6 @@ Home Pool Tips:  {'\n'}
 - Do not leave toys in the pool area that may entice your kid to enter the area unsupervised. {'\n'}
 - Teach your child to never swim alone, only with adult supervision. {'\n'}
 - Consider buying and installing a pool alarm.
-
 </Text>
 
 <View style={styles.buttons}>

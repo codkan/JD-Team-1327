@@ -61,7 +61,7 @@ export default function Poisonings({ navigation }) {
 
     <Text style={CoreStyle.title}> Poisonings  </Text>
 
-    <Text style={CoreStyle.subtitle}> How common is it? </Text>
+    <Text style={CoreStyle.subtitle}> How common are poisonings? </Text>
         <Text style={CoreStyle.content}>
         {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below,
          with over 250,000 of these being for children aged 2 and under
@@ -72,7 +72,7 @@ export default function Poisonings({ navigation }) {
         </Text>
         
 
-    <Text style={CoreStyle.subtitle}> How can we prevent it? </Text>
+    <Text style={CoreStyle.subtitle}> How can we prevent poisonings? </Text>
         <Text style={CoreStyle.content}>
         {'\t'} Findings show that doing seemingly small things, such as ensuring that medicines are stored out 
         of reach or putting them away immediately after use, could reduce the amount of poisonings per year between 11% and 20%.
@@ -102,7 +102,7 @@ export default function Poisonings({ navigation }) {
             things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items. </Text>
         </CollapsibleBox>
         
-        <CollapsibleBox header="3. Ensure that you are familiar with all potential dangers both inside and outside the home " headerstyle={CoreStyle.bullet}> 
+        <CollapsibleBox header="3. Ensure that you are familiar with all potential dangers both inside and outside the home" headerstyle={CoreStyle.bullet}>
             <Image style={styles.berriesImg} source={berries}/>
             <Text style={CoreStyle.subbullet}> - Make sure all natural gas based appliances are functioning correctly. 
             As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the 

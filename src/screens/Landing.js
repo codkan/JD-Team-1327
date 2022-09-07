@@ -76,11 +76,11 @@ export default function Landing({ navigation }) {
         <TouchableOpacity onPress={handleReviewNav}>
             <Image source={review} style={styles.crayon}></Image>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleGameNav}>
-            <Image source={game} style={styles.crayon}></Image>
-        </TouchableOpacity>
         <TouchableOpacity onPress={handleSourcesNav}>
             <Image source={sources} style={styles.crayon}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={handleGameNav}>
+            <Image source={game} style={styles.crayon}></Image>
         </TouchableOpacity>
         </View>
         <Navbar navigation={navigation}/>
