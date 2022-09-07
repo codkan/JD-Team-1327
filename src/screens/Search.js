@@ -63,9 +63,9 @@ export default function Search({ navigation }) {
           // Flat List Item Separator
           <View
             style={{
-              height: 0.5,
+              height: 2,
               width: '100%',
-              backgroundColor: '#C8C8C8',
+              backgroundColor: 'rgba(52, 52, 52, 0.0)',
             }}
           />
         );
@@ -89,7 +89,6 @@ export default function Search({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
 
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.container}>
         <SearchBar
           round
           searchIcon={{ size: 24 }}
@@ -98,6 +97,7 @@ export default function Search({ navigation }) {
           placeholder="Search Here..."
           value={search}
         />
+      <View style={styles.container}>
         <FlatList
           data={filteredDataSource}
           keyExtractor={(item, index) => index.toString()}
@@ -129,14 +129,20 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     container: {
-      backgroundColor: 'white',
+      width: '100%',
+      alignItems: "center",
+      alignSelf: "center",
+      cornerRadius: 25,
     },
     itemStyle: {
-      padding: 15,
+      backgroundColor: "rgba(196, 196, 196, 0.5)",
+      padding: 10,
       fontSize: 16,
       textAlign: "justify",
       lineHeight: 20,
-      marginRight: 15,
-      marginLeft: 15,
+      marginRight: 10,
+      marginLeft: 10,
+      marginTop: 10,
+      //cornerRadius: 50,
     },
 });
