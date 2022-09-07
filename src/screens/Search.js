@@ -6,6 +6,7 @@ import { CoreStyle } from "../components/CoreStyle";
 import Navbar from "../components/NavBar";
 import Background from "../assets/bg.png";
 import { Content } from "../Content";
+import Highlighter from "@sanar/react-native-highlight-text";
 
 export default function Search({ navigation }) {
     //NAV CALLBACK
@@ -48,13 +49,13 @@ export default function Search({ navigation }) {
     const ItemView = ({ item }) => {
         return (
           // Flat List Item
-          <Text style={styles.itemStyle} onPress={() => getItem(item)}>
-            {item.topic}
-            {'\n'}
-            {item.title}
-            {'\n'}
-            {item.body}
-          </Text>
+          <Highlighter
+            style={styles.itemStyle}
+            highlightStyle={{backgroundColor: "yellow"}}
+            onPress={() => getItem(item)}
+            searchWords={[search]}
+            textToHighlight={item.topic + "\n" + item.title + '\n' + item.body}
+            />
         );
     };
 
@@ -75,7 +76,7 @@ export default function Search({ navigation }) {
         // Function for click on an item
         Alert.alert(
             'Topic : ' + item.topic,
-            'Section : ' + item.title + '\nText : ' + item.body,
+            'Section : ' + item.title + '\nText :\n' + item.body,
             [
                 {text: 'BACK', style: 'destructive'},
                 {text: 'CONTINUE     ', style: 'default'},
@@ -132,7 +133,7 @@ const styles = StyleSheet.create({
       width: '100%',
       alignItems: "center",
       alignSelf: "center",
-      cornerRadius: 25,
+      marginBottom: 120,
     },
     itemStyle: {
       backgroundColor: "rgba(196, 196, 196, 0.5)",
@@ -143,6 +144,6 @@ const styles = StyleSheet.create({
       marginRight: 10,
       marginLeft: 10,
       marginTop: 10,
-      //cornerRadius: 50,
+      borderRadius: 20,
     },
 });

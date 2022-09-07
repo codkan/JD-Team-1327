@@ -119,8 +119,10 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flex: 1,
-    top: 120,
+    flexDirection: "row",
+    top: 300,
     justifyContent: "center",
+    alignSelf: "center",
   },
   button: {
     color: "black",

@@ -43,7 +43,7 @@ export default function Disclaim({ navigation }) {
       experts in the field. {'\n'}</Text>
       </View>
       </View>
-      <MenuButton text="GO BACK" txtColor={"black"} onPress={goHome}></MenuButton>
+      <MenuButton text="GO BACK" txtColor={"black"} textSize={20} onPress={goHome}></MenuButton>
 
     </ImageBackground>
   );

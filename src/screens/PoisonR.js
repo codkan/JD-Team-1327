@@ -89,7 +89,10 @@ export default class PoisonR extends Component{
     };
 
     deRender = () => {
-        //console.log("deRender reached");
+        if (poisonCount == 0) {
+            this.props.navigation.navigate("Review");
+            return;
+        }
         poisonCount--;
         var question = poisonQs[poisonCount].Q;
         if (poisonScore > 0 && lastC == true) {

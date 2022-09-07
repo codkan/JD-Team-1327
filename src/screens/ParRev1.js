@@ -89,7 +89,10 @@ export default class ParRev1 extends Component{
     };
 
     deRender = () => {
-        //console.log("deRender reached");
+        if (parCount == 0) {
+            this.props.navigation.navigate("Review");
+            return;
+        }
         parCount--;
         var question = ParQs[parCount].Q;
         if (parScore > 0 && lastC == true) {

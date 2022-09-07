@@ -89,7 +89,10 @@ export default class BurnR extends Component{
     };
 
     deRender = () => {
-        //console.log("deRender reached");
+        if (burnCount == 0) {
+            this.props.navigation.navigate("Review");
+            return;
+        }
         burnCount--;
         var question = burnQs[burnCount].Q;
         if (burnScore > 0  && lastC == true) {

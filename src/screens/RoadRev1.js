@@ -89,7 +89,10 @@ export default class CarRev1 extends Component{
     };
 
     deRender = () => {
-        //console.log("deRender reached");
+        if (carCount == 0) {
+            this.props.navigation.navigate("Review");
+            return;
+        }
         carCount--;
         var question = CarQs[carCount].Q;
         if (carScore > 0 && lastC == true) {

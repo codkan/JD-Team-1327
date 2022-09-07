@@ -89,7 +89,10 @@ export default class DrowningR extends Component{
     };
 
     deRender = () => {
-        //console.log("deRender reached");
+        if (drownCount == 0) {
+            this.props.navigation.navigate("Review");
+            return;
+        }
         drownCount--;
         var question = DrownQs[drownCount].Q;
         if (drownScore > 0  && lastC == true) {

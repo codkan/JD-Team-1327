@@ -5,7 +5,7 @@ export default function MenuButton({ text, onPress, txtColor }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text style={styles.buttonText, {color: txtColor}}>{text}</Text>
+        <Text style={styles.buttonText}>{text}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -15,16 +15,13 @@ MenuButton.defaultProps = {
 }
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 20,
-    paddingVertical: 7,
-    paddingHorizontal: 10,
     backgroundColor: "transparent",
     alignItems: "center",
-    marginVertical: -3,
+    marginHorizontal: 25,
   },
   buttonText: {
-    fontWeight: "bold",
     fontSize: 18,
     textAlign: "center",
+    color: "black",
   },
 });

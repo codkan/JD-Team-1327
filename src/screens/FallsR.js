@@ -88,6 +88,10 @@ export default class FallsR extends Component{
     };
 
     deRender = () => {
+        if (fallCount == 0) {
+            this.props.navigation.navigate("Review");
+            return;
+        }
         fallCount--;
         var question = FallQs[fallCount].Q;
         if (fallScore > 0 && lastC == true) {
