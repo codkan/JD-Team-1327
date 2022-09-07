@@ -57,9 +57,9 @@ export default function ParentalHealth({ navigation }) {
     <Text style={CoreStyle.content}>
         {'\t'} In the first few weeks of caring for a newborn, most new moms feel anxious, sad, frustrated, tired, and overwhelmed.
         Sometimes known as the "baby blues," these feelings get better within a few weeks. But for some women, they are very strong 
-        or don't get better. Postpartum depression is when these feelings don't go away after about 2 weeks or make it hard for a 
+        or do not get better. Postpartum depression is when these feelings do not go away after about 2 weeks or make it hard for a
         woman to take care of her baby. [1] Rarely, an extreme mood disorder called postpartum psychosis also may develop after 
-        childbirth. Postpartum depression isn't a character flaw or a weakness. Sometimes it's simply a complication of giving birth. 
+        childbirth. Postpartum depression is not a character flaw or a weakness. Sometimes it is simply a complication of giving birth.
         If you have postpartum depression, prompt treatment can help you manage your symptoms and help you bond with your baby. [2]
     </Text>
 
@@ -108,11 +108,13 @@ export default function ParentalHealth({ navigation }) {
 
     <CollapsibleBox header="4. Postpartum Depression for Fathers [2]"
     headerstyle={CoreStyle.bullet}>
-        <Text style={CoreStyle.subbullet}>New fathers can experience postpartum depression, too. They may feel sad or fatigued, 
+        <Text style={CoreStyle.subbullet}>
+        - New fathers can experience postpartum depression, too. They may feel sad or fatigued,
         be overwhelmed, experience anxiety, or have changes in their usual eating and sleeping patterns, the same symptoms 
-        moths with postpartum depression experience. {'\n'}
-        Fathers who are young, have a history of depression, experience relationship problems, or are struggling financially 
-        are most at risk of postpartum depression. Paternal postpartum depression can have the same negative effect on partner 
+        mothers with postpartum depression experience. {'\n'}
+        - Fathers who are young, have a history of depression, experience relationship problems, or are struggling financially
+        are most at risk of postpartum depression. {'\n'}
+        - Paternal postpartum depression can have the same negative effect on partner
         relationships and child development as postpartum depression in mothers can. {'\n'}
         </Text>
     </CollapsibleBox>
@@ -121,29 +123,16 @@ export default function ParentalHealth({ navigation }) {
 
     <Text style={CoreStyle.subtitle}> Long-Term Effects of Untreated Postpartum Depression [2] </Text>
 
-    <CollapsibleBox header="1. For Mothers"
-    headerstyle={CoreStyle.bullet}>
-        <Text style={CoreStyle.subbullet}>Untreated postpartum depression can last for months or longer, sometimes becoming 
-        a chronic depressive disorder. Even when treated, postpartum depression increases a woman's risk of future episodes 
-        of major depression. {'\n'}
-        </Text>
-    </CollapsibleBox>
-
-    <CollapsibleBox header="2. For Fathers"
-    headerstyle={CoreStyle.bullet}>
-        <Text style={CoreStyle.subbullet}>Postpartum depression can have a ripple effect, causing emotional strain for everyone 
-        close to a new baby. When a new mother is depressed, the risk of depression in the baby's father may also increase. 
-        New dads are already at increased risk of depression, whether or not their partner is affected. {'\n'}
-        </Text>
-    </CollapsibleBox>
-
-    <CollapsibleBox header="3. For Children"
-    headerstyle={CoreStyle.bullet}>
-        <Text style={CoreStyle.subbullet}>Children of mothers who have untreated postpartum depression are more likely to have 
-        emotional and behavioral problems, such as sleeping and eating difficulties, excessive crying, and delays in 
-        language development. {'\n'}
-        </Text>
-    </CollapsibleBox>
+    <Text style={CoreStyle.content}>
+    {'\t'} For mothers, untreated postpartum depression can last for months or longer, sometimes becoming
+    a chronic depressive disorder. Even when treated, postpartum depression increases a woman's risk of future episodes
+    of major depression. Postpartum depression can also have a ripple effect, causing emotional strain for everyone
+    close to a new baby. When a new mother is depressed, the risk of depression in the baby's father also increases.
+    Though new dads are already at increased risk of depression, whether or not their partner is affected.
+    Finally, children of parents who have untreated postpartum depression are more likely to have emotional and
+    behavioral problems, such as sleeping and eating difficulties, excessive crying, and delays in
+    language development.
+    </Text>
 
     <Image style={styles.footimg} source={ppd5}/>
 

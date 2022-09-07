@@ -82,7 +82,7 @@ export default function Traffic({ navigation }) {
         - All infants and toddlers should ride in these until they reach the highest weight or height limit of the seat {'\n'}
         - Most convertible rear-facing seats are built to allow children to ride rear-facing for 2 years or more {'\n'}
         - Usually comes with a base that stays in the car in place. The seat clicks into and out of the base for easy installation {'\n'}
-        - Has a carrying handle for easy child-carry
+        - Has a carrying handle for easy child-carry {'\n'}
         - Ensure that the harness is snug and the chest clip is placed at the center of the chest, even with the armpits {'\n'}
         - Never place a rear-facing carseat in the front seat where a passenger airbag is activated {'\n'}
         - Make sure the seat is angled correctly so that the head and neck are supported and not able to flop around {'\n'}
