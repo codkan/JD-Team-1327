@@ -65,7 +65,7 @@ export default class GameStatusBar extends Component {
   };
   render() {
     const width = MAX_WIDTH;
-    const height = MAX_HEIGHT * 0.08;
+    const height = MAX_HEIGHT * 0.03;
     const x = 0;
     const y = 0;
 
@@ -80,26 +80,27 @@ export default class GameStatusBar extends Component {
             justifyContent: "flex-start",
             left: x,
             top: y,
-            width: width,
-            height: height,
+            width: MAX_HEIGHT,
+            height: 40,
             backgroundColor: "#111111",
           }}
         >
-          <View style={{ marginLeft: "2%", marginRight: "5%" }}>
+          <View style={{ marginLeft: "10%", marginRight: "25%", width: "10%" , backgroundColor: "gray"}}>
             <Button
               title="II"
               color="gray"
               onPress={this.handlePauseButton}
             ></Button>
           </View>
-          <Text style={{ color: "white", justifyContent: "center" }}>
+          <Text style={{ color: "white", justifyContent: "center", fontSize: 20}}>
             Items: {this.state.inventorySize}/{this.state.inventoryCap}
           </Text>
-          <View style={{ marginLeft: "65%" }}>
+          <View style={{ marginLeft: "20%", marginRight: "10%" }}>
             <Timer
               paused={this.state.paused}
               final={this.props.levelComplete}
               timeToStatusBar={this.getTime}
+              fontSize={20}
             />
           </View>
         </View>

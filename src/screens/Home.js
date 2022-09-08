@@ -82,18 +82,8 @@ export default function Home({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
       <View style={styles.buttonContainer}>
         <MenuButton
-          text="PLAY NOW"
-          onPress={handlePlayNow}
-          txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
-          text="LEVEL SELECT"
-          onPress={handleLevelSelect}
-          txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
-          text="BADGES"
-          onPress={handleBadgeNav}
+          text="BACK"
+          onPress={handleBackNav}
           txtColor={"black"}
         ></MenuButton>
         <MenuButton
@@ -102,8 +92,18 @@ export default function Home({ navigation }) {
           txtColor={"black"}
         ></MenuButton>
         <MenuButton
-          text="BACK"
-          onPress={handleBackNav}
+          text="BADGES"
+          onPress={handleBadgeNav}
+          txtColor={"black"}
+        ></MenuButton>
+        <MenuButton
+          text="LEVEL SELECT"
+          onPress={handleLevelSelect}
+          txtColor={"black"}
+        ></MenuButton>
+        <MenuButton
+          text="PLAY NOW"
+          onPress={handlePlayNow}
           txtColor={"black"}
         ></MenuButton>
       </View>

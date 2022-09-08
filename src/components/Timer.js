@@ -80,9 +80,9 @@ export default class Timer extends Component {
   render() {
     return (
       <View style={{ flexDirection: "row" }}>
-        <Text style={{ color: "white" }}>{this.state.min}:</Text>
-        <Text style={{ color: "white" }}>{this.state.sec}:</Text>
-        <Text style={{ color: "white" }}>{this.state.msec}</Text>
+        <Text style={{ color: "white", fontSize: 20}}>
+            {this.state.min}:{this.state.sec}:{this.state.msec}
+        </Text>
       </View>
     );
   }
