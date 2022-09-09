@@ -39,7 +39,7 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}>Review</Text>
+    <Text style={styles.modalText}>Quizzes</Text>
     <View style={CoreStyle.buttonContainer}>
         <TouchableOpacity onPress={reviewFalls}>
         <Image source={falls} style={CoreStyle.crayon}></Image>
