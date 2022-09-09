@@ -57,7 +57,7 @@ export default function BurnsMM({ navigation }) {
     
     <ScrollView> 
 
-    <View style={styles.container}>
+    <View style={CoreStyle.mediaContainer}>
     <Text style={CoreStyle.title}> Burns </Text>
     <Image style={styles.newimg1} source={BMM1}/>
     <Text>
@@ -81,7 +81,7 @@ export default function BurnsMM({ navigation }) {
     <VideoPlayer videoID = "ZNWjfe-84Ig"/>
     <VideoPlayer videoID = "gMalF0GMLEM"/>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.mediaButtons}>
 
     <MainButton
           text="Go to Burns"
@@ -107,59 +107,38 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    
-    img: {
-        height: 500,
-        width: 350,
-    },
     newimg1: {
-        height: 525,
-        width: 350,
+        height: 600,
+        width: "100%",
     },
     newimg2: {
-        height: 1300,
-        width: 350,
+        height: 1500,
+        width: "100%",
     },
     newimg3: {
-        height: 450,
-        width: 350,
+        height: 550,
+        width: "100%",
     },
     newimg4: {
-        height: 800,
-        width: 350,
+        height: 900,
+        width: "100%",
     },
-
-    
-    
-    
     page: {
         fontSize: 18,
         textAlign: "center",
         marginTop: 50,
         fontStyle: "italic",
     },
-    container: {
-        alignItems: "center",
-    },
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: -20,
-        marginBottom: 75,
-    },
     link: {
         textDecorationLine:'underline',
         color:'blue',
         margin: 10,
     },
-    
     backgroundVideo: {
         position: 'absolute',
         top: 0,
         left: 0,
         bottom: 0,
         right: 0,
-      },
+    }
 });

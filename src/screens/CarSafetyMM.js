@@ -57,11 +57,11 @@ export default function CarSafetyMM({ navigation }) {
 
     <Text style={CoreStyle.title}> Car Safety </Text>
 
-<View style={styles.container}>
+<View style={CoreStyle.mediaContainer}>
 
     <Image style={styles.img} source={play}/>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.mediaButtons}>
 
     <MainButton
           text="Go to Car Safety"
@@ -87,7 +87,8 @@ const styles = StyleSheet.create({
     },
     img: {
         height: 500,
-        width: 375,
+        width: "100%",
+        marginBottom: 20,
     },
     page: {
         fontSize: 18,
@@ -95,20 +96,9 @@ const styles = StyleSheet.create({
         marginTop: 50,
         fontStyle: "italic",
     },
-    container: {
-        alignItems: "center",
-    },
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 20,
-    },
     link: {
         textDecorationLine:'underline',
         color:'blue',
         margin: 10,
-    },
-    
+    }
 });

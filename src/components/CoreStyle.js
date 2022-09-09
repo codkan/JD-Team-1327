@@ -88,4 +88,20 @@ export const CoreStyle = StyleSheet.create({
         backgroundColor: "#C4C4C4",
     },
 
-})
+    // Container for Multimedia pages
+    mediaContainer: {
+        alignItems: "center",
+        marginHorizontal: 0,
+        width: "100%",
+    },
+
+    // style for "Go to Topic" button views in Multimedia
+    mediaButtons: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: -20,
+        marginBottom: 75,
+    }
+});

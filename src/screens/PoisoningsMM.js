@@ -56,7 +56,7 @@ export default function PoisoningsMM({ navigation }) {
 
     <ScrollView> 
 
-    <View style={styles.container}>
+    <View style={CoreStyle.mediaContainer}>
     <Text style={CoreStyle.title}> Poisonings </Text>
     <Image style={styles.img} source={PoisoningsMM2}/>
     <Text>
@@ -76,7 +76,7 @@ export default function PoisoningsMM({ navigation }) {
     <VideoPlayer videoID = "Hu1NEWaOISo"/>
     <VideoPlayer videoID = "7Et7lrqVy04"/>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.mediaButtons}>
 
     <MainButton
           text="Go to Poison"
@@ -104,45 +104,29 @@ const styles = StyleSheet.create({
     },
     
     img: {
-        height: 500,
-        width: 350,
+        height: 600,
+        width: "100%",
     },
     newimg: {
-        height: 700,
-        width: 350,
+        height: 800,
+        width: "100%",
     },
-
-    
-    
-    
     page: {
         fontSize: 18,
         textAlign: "center",
         marginTop: 50,
         fontStyle: "italic",
     },
-    container: {
-        alignItems: "center",
-    },
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: -20,
-        marginBottom: 75,
-    },
     link: {
         textDecorationLine:'underline',
         color:'blue',
         margin: 10,
     },
-    
     backgroundVideo: {
         position: 'absolute',
         top: 0,
         left: 0,
         bottom: 0,
         right: 0,
-      },
+    },
 });

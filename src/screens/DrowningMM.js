@@ -52,9 +52,9 @@ export default function DrowningMM({ navigation }) {
 
     <ScrollView>
 
-    <Text style={CoreStyle.title}> Drowning Is Silent </Text>
+    <Text style={CoreStyle.title}> Drownings </Text>
 
-<View style={styles.container}>
+<View style={CoreStyle.mediaContainer}>
 
     <Image style={styles.img} source={silent}/>
 
@@ -62,7 +62,7 @@ export default function DrowningMM({ navigation }) {
          <Text style={styles.link}> See just how hard it can be to see a drowning child </Text>
     </TouchableOpacity>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.mediaButtons}>
 
     <MainButton
           text="Go to Drowning"
@@ -91,32 +91,21 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     img: {
-        height: 500,
-        width: 320,
+        height: 650,
+        width: "100%",
     },
-
-    
     page: {
         fontSize: 18,
         textAlign: "center",
         marginTop: 50,
         fontStyle: "italic",
     },
-    container: {
-        alignItems: "center",
-    },
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 10,
-        marginBottom: 60,
-    },
     link: {
         textDecorationLine:'underline',
         color:'blue',
         margin: 10,
-    },
-    
+        marginBottom: 25,
+        fontSize: 25,
+        textAlign: "center",
+    }
 });

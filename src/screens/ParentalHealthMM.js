@@ -47,11 +47,11 @@ export default function ParentalHealthMM({ navigation }) {
 
     <Text style={CoreStyle.title}> Parental Health </Text>
 
-<View style={styles.container}>
+<View style={CoreStyle.mediaContainer}>
 
     <Image style={styles.img} source={ppd}/>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.mediaButtons}>
 
     <MainButton
           text="Go to Parental Health"
@@ -76,34 +76,19 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     img: {
-        height: 520,
-        width: 335,
+        height: 625,
+        width: "100%",
+        marginBottom: 20,
     },
-    
-    
-    
-    
     page: {
         fontSize: 18,
         textAlign: "center",
         marginTop: 50,
         fontStyle: "italic",
     },
-    container: {
-        alignItems: "center",
-    },
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: 5,
-        marginBottom: 15,
-    },
     link: {
         textDecorationLine:'underline',
         color:'blue',
         margin: 10,
-    },
-    
+    }
 });

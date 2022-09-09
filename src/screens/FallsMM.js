@@ -44,7 +44,7 @@ export default function FallsM0({ navigation }) {
 
     <ScrollView>
 
-<View style={styles.container}>
+<View style={CoreStyle.mediaContainer}>
     <Text style={CoreStyle.title}> Falls </Text>
     <Image style={styles.img} source={win}/>
     <Text>
@@ -54,7 +54,7 @@ export default function FallsM0({ navigation }) {
 
     <VideoPlayer videoID = "i8oifZ7HXaA"/>
 
-<View style={styles.container}>
+<View style={CoreStyle.mediaContainer}>
     <Image style={styles.img} source={tv}/>
     <Text>
             {'\n'}{'\n'}{'\n'}
@@ -63,7 +63,7 @@ export default function FallsM0({ navigation }) {
 
     <VideoPlayer videoID = "XyCHsr9NKqY"/>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.mediaButtons}>
 
     <MainButton
           text="Go to Falls"
@@ -89,49 +89,31 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    
     back: {
         height: 50,
         width: 50,
         borderRadius: 100,
         backgroundColor: "rgba(196,196,196,1)",
-
         shadowColor: 'black',
         shadowOpacity: 0.25,
         shadowRadius: 4,
         shadowOffset : { width: 0, height: 4},
         elevation: 7.5,
         position: "absolute",
-
     },
     img: {
         height: 500,
-        width: 395,
+        width: "100%",
     },
-    
-    
-    
     page: {
         fontSize: 18,
         textAlign: "center",
         marginTop: 50,
         fontStyle: "italic",
     },
-    container: {
-        alignItems: "center",
-    },
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: -20,
-        marginBottom: 75,
-    },
     link: {
         textDecorationLine:'underline',
         color:'blue',
         margin: 10,
-    },
-    
+    }
 });
