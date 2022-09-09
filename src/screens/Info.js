@@ -37,7 +37,7 @@ export default function Info({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}>Table of Contents</Text>
+    <Text style={styles.modalText}>Pick a Topic</Text>
     <View style={CoreStyle.buttonContainer}>
 
 

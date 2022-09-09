@@ -90,6 +90,7 @@
          screen: Falls,
          navigationOptions: {
            headerShown: false,
+           animationEnabled: false,
          },
      },
      FallsMM: {
@@ -103,6 +104,7 @@
          screen: FallsR,
          navigationOptions: {
            headerShown: false,
+           animationEnabled: false,
          },
      },
      Win: {
@@ -133,12 +135,14 @@
        screen: DrowningMM,
        navigationOptions: {
          headerShown: false,
+         animationEnabled: false,
        },
      },
      CarSafetyMM: {
          screen: CarSafetyMM,
          navigationOptions: {
            headerShown: false,
+           animationEnabled: false,
          },
      },
      RoadRev1: {
@@ -151,6 +155,7 @@
          screen: ParentalHealthMM,
          navigationOptions: {
            headerShown: false,
+           animationEnabled: false,
          },
      },
      ParRev1: {
@@ -163,12 +168,14 @@
        screen: Burns,
        navigationOptions: {
          headerShown: false,
+         animationEnabled: false,
        },
      },
      Poisonings: {
        screen: Poisonings,
        navigationOptions: {
          headerShown: false,
+         animationEnabled: false,
        },
      },
      Drownings: {
@@ -182,12 +189,14 @@
        screen: Traffic,
        navigationOptions: {
          headerShown: false,
+         animationEnabled: false,
        },
      },
      ParentalHealth: {
        screen: ParentalHealth,
        navigationOptions: {
          headerShown: false,
+         animationEnabled: false,
        },
      },
      Review: {

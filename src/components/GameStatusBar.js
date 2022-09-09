@@ -80,7 +80,7 @@ export default class GameStatusBar extends Component {
             justifyContent: "flex-start",
             left: x,
             top: y,
-            width: MAX_HEIGHT,
+            width: Dimensions.get("screen").width,
             height: 40,
             backgroundColor: "#111111",
           }}
