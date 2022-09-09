@@ -24,6 +24,7 @@ export default function Home({ navigation }) {
       shouldDuckAndroid: true,
       staysActiveInBackground: true,
       playThroughEarpieceAndroid: true,
+      volume: 0.8,
     });
     try {
         const sound = new Audio.Sound();

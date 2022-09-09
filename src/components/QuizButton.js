@@ -37,6 +37,7 @@ export default class QuizButton extends PureComponent{
         const { sound } = await Audio.Sound.createAsync(
            require('../assets/cheer.mp3')
         );
+        sound.volume = 0.8;
         await sound.playAsync();
     } catch (e) {
         //should be fine
@@ -48,6 +49,7 @@ export default class QuizButton extends PureComponent{
         const { sound } = await Audio.Sound.createAsync(
            require('../assets/wrong.mp3')
         );
+        sound.volume = 0.8;
         await sound.playAsync();
     } catch (e) {
         //Should be fine
