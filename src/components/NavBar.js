@@ -52,7 +52,11 @@ const styles = StyleSheet.create({
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "#C4C4C4",
+      backgroundColor: "white",
+      borderTopColor: "lightgray",
+      borderTopWidth: 2,
+      borderTopOpacity: 0.5,
+      paddingTop: 5,
     },
     icons: {
         width: 50,

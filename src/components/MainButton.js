@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     //paddingHorizontal: 10,
     marginVertical: 10,
-    backgroundColor: "rgba(196,196,196,1)",
+    backgroundColor: "rgba(184, 215, 169, 1)",
     alignItems: "center",
     justifyContent: "center",
     shadowColor: 'black',

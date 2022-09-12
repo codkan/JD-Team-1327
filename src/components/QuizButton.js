@@ -10,7 +10,7 @@ export default class QuizButton extends PureComponent{
     constructor(){
         super();
         this.state = {
-            buttonColor: "white",
+            buttonColor: "oldlace",
             pressed: false,
         };
     };
@@ -81,8 +81,6 @@ const styles = StyleSheet.create({
     width: 345,
     borderRadius: 10,
     paddingTop: 0,
-    //paddingHorizontal: 10,
-    //backgroundColor: "rgba(196,196,196,1)",
     alignItems: "center",
     justifyContent: "center",
     shadowColor: 'black',

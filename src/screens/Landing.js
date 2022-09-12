@@ -55,7 +55,7 @@ export default function Landing({ navigation }) {
         
       <View style = {CoreStyle.topnavbuttons}>
         <TouchableOpacity onPress={handleDisclaimNav}>
-            <Image source={disclaim} style={styles.button}></Image>
+            <Image source={disclaim} style={styles.btn}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleSettings1Nav} style={styles.btn}>
             <Image source={setting} style={styles.btn}></Image>
@@ -112,16 +112,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 5,
   },
-  button: {
-    height: 50,
-    width: 50,
-    borderRadius: 100,
-    backgroundColor: "rgba(196,196,196,1)",
-  },
   btn: {
-    height: 50,
-    width: 50,
+    height: 35,
+    width: 35,
     borderRadius: 100,
-    backgroundColor: "rgba(196,196,196,1)",
+    backgroundColor: "rgba(184, 215, 169, 1)",
   },
 });

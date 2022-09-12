@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 100,
-    backgroundColor: "rgba(196,196,196,1)",
+    backgroundColor: "rgba(184, 215, 169, 1)",
     shadowColor: 'black',
     shadowOpacity: 0.25,
     shadowRadius: 4,
