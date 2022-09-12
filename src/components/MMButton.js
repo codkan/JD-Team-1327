@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
-export default function MMButton({ text, onPress, txtColor }) {
+export default function SourcesButton({ text, onPress, txtColor }) {
   return (
     <View style={styles.button}>
       <TouchableOpacity onPress={onPress}>
@@ -10,7 +10,7 @@ export default function MMButton({ text, onPress, txtColor }) {
     </View>
   );
 }
-MMButton.defaultProps = {
+SourcesButton.defaultProps = {
   color: "black"
 }
 const styles = StyleSheet.create({
@@ -26,9 +26,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
-    marginLeft: 20,
-    marginRight: 80,
-    marginBottom: 70,
+    marginLeft: 175,
   },
   buttonText: {
     fontStyle: "normal",

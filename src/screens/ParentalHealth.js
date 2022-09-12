@@ -138,14 +138,13 @@ export default function ParentalHealth({ navigation }) {
     <Image style={styles.footimg} source={ppd5}/>
 
     <View style={styles.buttons}>
-    <MMButton
-        onPress={handleParentsMMNav}
-    ></MMButton>
-
     <SourcesButton
         txtColor={"black"}
         onPress={handleParentalHealthSourcesNav}
     ></SourcesButton>
+    <MMButton
+        onPress={handleParentsMMNav}
+    ></MMButton>
     </View>
 
     </ScrollView>

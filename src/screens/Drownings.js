@@ -149,13 +149,13 @@ Home Pool Tips:  {'\n'}
 </Text>
 
 <View style={styles.buttons}>
-<MMButton
-    onPress={handleDrowningMMNav}
-></MMButton>
-
 <SourcesButton
     onPress={handleDrowningSourcesNav}
 ></SourcesButton>
+
+<MMButton
+    onPress={handleDrowningMMNav}
+></MMButton>
 </View>
 
     </ScrollView>

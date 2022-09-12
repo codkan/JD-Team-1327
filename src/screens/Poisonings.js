@@ -124,13 +124,15 @@ export default function Poisonings({ navigation }) {
             </Text>
 
         <View style={styles.buttons}>
-        <MMButton
-            onPress={handlePoisoningMMNav}
-        ></MMButton>
-        
+
         <SourcesButton
             onPress={handlePoisoningSourcesNav}
         ></SourcesButton>
+
+        <MMButton
+            onPress={handlePoisoningMMNav}
+        ></MMButton>
+
         </View>
 
         

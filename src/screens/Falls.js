@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Background from "../assets/bg.png";
 import end from "../assets/end.png";
 import falls from "../assets/falls.png";
@@ -17,9 +17,12 @@ import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
 import * as Speech from "expo-speech";
+import { Content } from "../Content";
 
+var i = 0;
 
 export default function Falls({ navigation }) {
+
     //NAV CALLBACK
     const goHome = () => {
         navigation.pop();
@@ -36,6 +39,15 @@ export default function Falls({ navigation }) {
     const backToInfo = () => {
         navigation.navigate("Info");
     };
+
+    async function speak(text) {
+        let speaking = await Speech.isSpeakingAsync();
+        if (!speaking) {
+            Speech.speak(Content[text].body, {rate: 0.5});
+        } else {
+            Speech.stop();
+        }
+    }
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -63,7 +75,11 @@ export default function Falls({ navigation }) {
 <Text style={CoreStyle.subtitle}> 5 Steps to Prevent Falls </Text>
 
 <CollapsibleBox header="1. Be mindful with infants, even when secured" headerstyle={CoreStyle.bullet}>
-    <Image style={styles.roundpic} source={secure}/>
+
+    <TouchableOpacity onPress={() => speak(0)}>
+        <Image style={styles.roundpic} source={secure}/>
+    </TouchableOpacity>
+
     <Text style={CoreStyle.subbullet}>- Whenever high chairs, infant carriers, car-seats, swings, or strollers are in use,
     always keep infants and young children strapped in and secure. {'\n'}
     - Even when your child is secured in a carrier, NEVER place it on top of a counter, table, or other
@@ -78,7 +94,11 @@ export default function Falls({ navigation }) {
 </CollapsibleBox>
 
 <CollapsibleBox header="2. Prevent dangerous falls for crawlers at home" headerstyle={CoreStyle.bullet}>
-    <Image style={styles.roundpic} source={stairs}/>
+
+    <TouchableOpacity onPress={() => speak(1)}>
+        <Image style={styles.roundpic} source={stairs}/>
+    </TouchableOpacity>
+
     <Text style={CoreStyle.subbullet}>- Stairs are one of the most dangerous places for young children, so use
     safety gates approved for both the tops & bottoms of stairs and, if possible, attach them to the wall. {'\n'}
     - Even with safety gates, infants and toddlers should always be closely supervised on or near stairs.{'\n'}
@@ -90,7 +110,11 @@ export default function Falls({ navigation }) {
 </CollapsibleBox>
 
 <CollapsibleBox header="3. Close, lock, and guard windows from toddlers" headerstyle={CoreStyle.bullet}>
-    <Image style={styles.roundpic} source={window}/>
+
+    <TouchableOpacity onPress={() => speak(2)}>
+        <Image style={styles.roundpic} source={window}/>
+    </TouchableOpacity>
+
     <Text style={CoreStyle.subbullet}>- Keep younger children and climbable furniture away from windows. {'\n'}
     - If your windows open from the top and bottom, open only the top to prevent falls. Though be
       mindful that children may grow strong enough to open the bottom {'\n'}
@@ -102,7 +126,11 @@ export default function Falls({ navigation }) {
 </CollapsibleBox>
 
 <CollapsibleBox header="4. Baby-proof furniture & protect climbers from tip-overs" headerstyle={CoreStyle.bullet}>
-    <Image style={styles.roundpic} source={tv}/>
+
+    <TouchableOpacity onPress={() => speak(3)}>
+        <Image style={styles.roundpic} source={tv}/>
+    </TouchableOpacity>
+
     <Text style={CoreStyle.subbullet}>- Do not let young children climb on any furniture where they could
     fall from any height or the furniture could possibly be tipped over, especially near windows.{'\n'}
     - Rearrange household items so that heavy items are lower and children are not tempted to climb or
@@ -146,6 +174,11 @@ export default function Falls({ navigation }) {
 <Image style={styles.longpic} source={end}/>
 
 <Text style={CoreStyle.subtitle}> Stroller Safety </Text>
+
+    <TouchableOpacity onPress={() => speak(7)}>
+         <Image style={styles.roundpic} source={stroller2}/>
+    </TouchableOpacity>
+
     <Text style={CoreStyle.content}> {'\t'} Just like you need to stay mindful when children are secured
      in carriers, you also need to remain aware when your child is in a stroller. You should always use
      the safety harnesses and even then, always use the brakes when not in motion and NEVER leave your
@@ -154,10 +187,13 @@ export default function Falls({ navigation }) {
      use tightly rolled baby blankets instead of a pillow or large blanket. Lastly, fold and unfold strollers
      away from children to avoid pinching any fingers.</Text>
 
-    <Image style={styles.roundpic} source={stroller2}/>
+<Text style={CoreStyle.subtitle}> Stroller Purchasing Tips: </Text>
+
+    <TouchableOpacity onPress={() => speak(8)}>
+         <Image style={styles.roundpic} source={stroller1}/>
+    </TouchableOpacity>
 
 <Text style={CoreStyle.content}>
-Stroller Purchasing Tips: {'\n'}
 - Make sure the stroller is designed for the height, weight, and age of your child (infants need to lie almost flat) {'\n'}
 - Check for reliable and, ideally, 5-point safety harnesses / restraining belts (shoulders, waist, between the legs) {'\n'}
 - Look for dual brakes that use wheel mechanism rather than pressure on the tire and, most importantly, are easy to use {'\n'}
@@ -166,17 +202,15 @@ Stroller Purchasing Tips: {'\n'}
 waist-level (or a bit lower) handlebars, and resist tipping backward when pressing the handles [7]
 </Text>
 
-<Image style={styles.roundpic} source={stroller1}/>
-
     <View style={styles.buttons}>
-
-    <MMButton
-        onPress={handleFallsMMNav}
-    ></MMButton>
 
     <SourcesButton
         onPress={handleFallSourcesNav}
     ></SourcesButton>
+
+    <MMButton
+        onPress={handleFallsMMNav}
+    ></MMButton>
 
     </View>
 

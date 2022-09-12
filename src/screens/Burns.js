@@ -153,13 +153,13 @@ export default function Burns({ navigation }) {
 
     <View style={styles.buttons}>
 
-    <MMButton
-        onPress={handleBurnsMMNav}
-    ></MMButton>
-
     <SourcesButton
         onPress={handleBurnSourcesNav}
     ></SourcesButton>
+
+    <MMButton
+        onPress={handleBurnsMMNav}
+    ></MMButton>
 
     </View>
 

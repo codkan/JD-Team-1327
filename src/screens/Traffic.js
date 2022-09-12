@@ -169,13 +169,15 @@ export default function Traffic({ navigation }) {
     <Image style={styles.headimg} source={car}/>
 
     <View style={styles.buttons}>
-    <MMButton
-        onPress={handleCarsMMNav}
-    ></MMButton>
 
     <SourcesButton
         onPress={handleTrafficSourcesNav}
     ></SourcesButton>
+
+    <MMButton
+        onPress={handleCarsMMNav}
+    ></MMButton>
+
     </View>
 
     </ScrollView>
