@@ -6,7 +6,7 @@ import { Audio } from "expo-av";
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
 import Background from "../assets/homescreen.png";
-import MenuButton from "../components/MenuButton";
+import HomeButton from "../components/HomeButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation'
 
@@ -24,7 +24,7 @@ export default function Home({ navigation }) {
       shouldDuckAndroid: true,
       staysActiveInBackground: true,
       playThroughEarpieceAndroid: true,
-      volume: 0.8,
+      volume: 0.5,
     });
     try {
         const sound = new Audio.Sound();
@@ -59,6 +59,13 @@ export default function Home({ navigation }) {
       navigation.navigate("LevelOne");
     }
   };
+  const handleBackNav = () => {
+    ScreenOrientation.unlockAsync();
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
+    sound.stopAsync();
+    sound.unloadAsync();
+    navigation.navigate("Landing");
+  };
   const handleLevelSelect = () => {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("LevelSelect", { sound: sound });
@@ -71,42 +78,44 @@ export default function Home({ navigation }) {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("About");
   };
-  const handleBackNav = () => {
-    ScreenOrientation.unlockAsync();
-    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
-    sound.stopAsync();
-    sound.unloadAsync();
-    navigation.navigate("Landing");
+  const handleHowToNav = () => {
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
+    navigation.navigate("HowTo");
   };
 
   return (
     <ImageBackground source={Background} style={styles.image}>
       <View style={styles.buttonContainer}>
-        <MenuButton
+        <HomeButton
           text="BACK"
           onPress={handleBackNav}
           txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
+        ></HomeButton>
+        <HomeButton
           text="ABOUT"
           onPress={handleAboutNav}
           txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
+        ></HomeButton>
+        <HomeButton
+          text="HOW-TO"
+          onPress={handleHowToNav}
+          txtColor={"black"}
+        ></HomeButton>
+        <HomeButton
           text="BADGES"
           onPress={handleBadgeNav}
           txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
-          text="LEVEL SELECT"
+        ></HomeButton>
+        <HomeButton
+          text="LEVELS"
           onPress={handleLevelSelect}
           txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
-          text="PLAY NOW"
+        ></HomeButton>
+        <HomeButton
+          text="PLAY"
           onPress={handlePlayNow}
           txtColor={"black"}
-        ></MenuButton>
+        ></HomeButton>
       </View>
     </ImageBackground>
   );

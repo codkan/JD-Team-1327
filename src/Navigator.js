@@ -60,6 +60,7 @@
  import Multimedia from "./screens/Multimedia";
  import Disclaim from "./screens/Disclaim.js";
  import Search from "./screens/Search.js";
+ import HowTo from "./screens/HowTo.js";
  
  const screens = {
      Landing: {
@@ -334,6 +335,12 @@
          animationEnabled: false,
        },
      },
+     HowTo: {
+       screen: HowTo,
+       navigationOptions: {
+             headerShown: false,
+           },
+       },
  };
  
 

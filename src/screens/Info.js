@@ -38,6 +38,7 @@ export default function Info({ navigation }) {
   return (
     <ImageBackground source={Background} style={styles.image}>
     <Text style={styles.modalText}>Pick a Topic</Text>
+    <Text style={styles.note}>[Click pictures to start and stop listening to text]</Text>
     <View style={CoreStyle.buttonContainer}>
 
 
@@ -91,6 +92,13 @@ const styles = StyleSheet.create({
   button: {
     color: "black",
   },
+  note: {
+    textAlign: "center",
+    fontWeight: "italic",
+    fontSize: 15,
+    marginTop: -40,
+    alignSelf: "center",
+  }
 });
 
 
