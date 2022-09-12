@@ -49,9 +49,66 @@ export default function ParentalHealth({ navigation }) {
 
     <ScrollView>
 
+    <Text style={CoreStyle.title}> Parental Health </Text>
+
     <Image style={styles.headimg} source={ppd2}/>
 
-    <Text style={CoreStyle.title}> Parental Health </Text>
+    <Text style={CoreStyle.subtitle}> Symptoms for Either Parent</Text>
+
+        <CollapsibleBox header="1. Signs and Symptoms of Baby Blues for Either Parent [2]"
+        headerstyle={CoreStyle.bullet}>
+            <Text style={CoreStyle.subbullet}>- Mood swings {'\n'}
+            - Anxiety {'\n'}
+            - Sadness {'\n'}
+            - Irritability {'\n'}
+            - Feeling overwhelmed {'\n'}
+            - Crying {'\n'}
+            - Reduced concentration {'\n'}
+            - Appetite problems {'\n'}
+            - Trouble sleeping {'\n'}
+            </Text>
+        </CollapsibleBox>
+
+        <CollapsibleBox header="2. Signs and Symptoms of Postpartum Depression for Mothers [1]"
+        headerstyle={CoreStyle.bullet}>
+            <Text style={CoreStyle.subbullet}>- Feeling sad, hopeless, or overwhelmed {'\n'}
+            - Feeling worried, scared, angry, or panicked {'\n'}
+            - Feelings of guilt or inadequacy {'\n'}
+            - Excessive crying {'\n'}
+            - Depressed modd or severe mood swings {'\n'}
+            - Sleeping too much or too little {'\n'}
+            - Eating too much or too little {'\n'}
+            - Trouble concentrating {'\n'}
+            - Wanting isolation from friends and family {'\n'}
+            - Not feeling attached to the baby {'\n'}
+            - Withdrawal from activities you usually find enjoyable {'\n'}
+            - Fear that you're not a good mother [2] {'\n'}
+            - Recurrent thoughts of death or suicide {'\n'}
+            </Text>
+        </CollapsibleBox>
+
+        <CollapsibleBox header="3. Additional Signs and Symptoms of Postpartum Psychosis for Mothers [1]"
+        headerstyle={CoreStyle.bullet}>
+            <Text style={CoreStyle.subbullet}>- Thoughs of hurting the baby or yourself {'\n'}
+            - Hearing voices, seeing things that are not there, or feeling paranoid (very worried, suspicious, or mistrustful) {'\n'}
+            </Text>
+        </CollapsibleBox>
+
+        <CollapsibleBox header="4. Postpartum Depression for Fathers [2]"
+        headerstyle={CoreStyle.bullet}>
+            <Text style={CoreStyle.subbullet}>
+            - New fathers can experience postpartum depression, too. They may feel sad or fatigued,
+            be overwhelmed, experience anxiety, or have changes in their usual eating and sleeping patterns, the same symptoms
+            mothers with postpartum depression experience. {'\n'}
+            - Fathers who are young, have a history of depression, experience relationship problems, or are struggling financially
+            are most at risk of postpartum depression. {'\n'}
+            - Paternal postpartum depression can have the same negative effect on partner
+            relationships and child development as postpartum depression in mothers can. {'\n'}
+            </Text>
+        </CollapsibleBox>
+
+        <Image style={styles.headimg} source={ppd3}/>
+
     <Text style={CoreStyle.subtitle}> Baby Blues or Postpartum Depression? </Text>
 
     <Text style={CoreStyle.content}>
@@ -64,62 +121,6 @@ export default function ParentalHealth({ navigation }) {
     </Text>
 
     <Image style={styles.headimg} source={ppd4}/>
-
-    <Text style={CoreStyle.subtitle}> Symptoms for Either Parent</Text>
-
-    <CollapsibleBox header="1. Signs and Symptoms of Baby Blues for Either Parent [2]"
-    headerstyle={CoreStyle.bullet}>
-        <Text style={CoreStyle.subbullet}>- Mood swings {'\n'}
-        - Anxiety {'\n'}
-        - Sadness {'\n'}
-        - Irritability {'\n'}
-        - Feeling overwhelmed {'\n'}
-        - Crying {'\n'}
-        - Reduced concentration {'\n'}
-        - Appetite problems {'\n'}
-        - Trouble sleeping {'\n'}
-        </Text>
-    </CollapsibleBox>
-
-    <CollapsibleBox header="2. Signs and Symptoms of Postpartum Depression for Mothers [1]"
-    headerstyle={CoreStyle.bullet}>
-        <Text style={CoreStyle.subbullet}>- Feeling sad, hopeless, or overwhelmed {'\n'}
-        - Feeling worried, scared, angry, or panicked {'\n'}
-        - Feelings of guilt or inadequacy {'\n'}
-        - Excessive crying {'\n'}
-        - Depressed modd or severe mood swings {'\n'}
-        - Sleeping too much or too little {'\n'}
-        - Eating too much or too little {'\n'}
-        - Trouble concentrating {'\n'}
-        - Wanting isolation from friends and family {'\n'}
-        - Not feeling attached to the baby {'\n'}
-        - Withdrawal from activities you usually find enjoyable {'\n'}
-        - Fear that you're not a good mother [2] {'\n'}
-        - Recurrent thoughts of death or suicide {'\n'}
-        </Text>
-    </CollapsibleBox>
-
-    <CollapsibleBox header="3. Additional Signs and Symptoms of Postpartum Psychosis for Mothers [1]"
-    headerstyle={CoreStyle.bullet}>
-        <Text style={CoreStyle.subbullet}>- Thoughs of hurting the baby or yourself {'\n'}
-        - Hearing voices, seeing things that are not there, or feeling paranoid (very worried, suspicious, or mistrustful) {'\n'}
-        </Text>
-    </CollapsibleBox>
-
-    <CollapsibleBox header="4. Postpartum Depression for Fathers [2]"
-    headerstyle={CoreStyle.bullet}>
-        <Text style={CoreStyle.subbullet}>
-        - New fathers can experience postpartum depression, too. They may feel sad or fatigued,
-        be overwhelmed, experience anxiety, or have changes in their usual eating and sleeping patterns, the same symptoms 
-        mothers with postpartum depression experience. {'\n'}
-        - Fathers who are young, have a history of depression, experience relationship problems, or are struggling financially
-        are most at risk of postpartum depression. {'\n'}
-        - Paternal postpartum depression can have the same negative effect on partner
-        relationships and child development as postpartum depression in mothers can. {'\n'}
-        </Text>
-    </CollapsibleBox>
-
-    <Image style={styles.headimg} source={ppd3}/>
 
     <Text style={CoreStyle.subtitle}> Long-Term Effects of Untreated Postpartum Depression [2] </Text>
 

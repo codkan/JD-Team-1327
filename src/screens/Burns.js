@@ -59,30 +59,9 @@ export default function Burns({ navigation }) {
 
     <ScrollView>
 
-    <Image style={styles.headimg} source={bhdr}/>
-
     <Text style={CoreStyle.title}> Burns </Text>
 
-    <Text style={CoreStyle.subtitle}> Why are Burn Injuries Important? </Text>
-
-    <Text style={CoreStyle.content}>
-        {'\t'} Many regular household items like outlets, food, and hot water can cause childhood burns.
-         Burn injuries can occur from flames or electrical current but the most concerning for children is scald burns from hot water [1]. 
-        About 20,000 children under the age of 4 are hospitalized for scald injuries annually [2].  
-        Studies show that nearly 75% of these burn injuries are preventable so understanding safety procedures is essential [3]. 
-        Infants and younger children are at higher risk of heat and cold injuries as well, since they produce and lose heat faster than adults [4]. 
-        Even though burns are the fifth most common cause of accidental death for children, many of the deaths are preventable [4]. 
-        Since most burn injuries happen at home, there are a lot of prevention measures that can be taken. {'\n'}
-    </Text>
-
-    <Text style={CoreStyle.subtitle}> Types of burn injuries? </Text>
-        <Text style={CoreStyle.content}>
-        {'\t'} There are a few different types of burn injuries. 
-        The most common are thermal burns which are caused when heat sources drastically raise the temperature of skin and tissue. 
-        Electrical burns due to contact with electricity are also relatively common. 
-        It’s easy to overlook, but radiation burns from prolonged exposure to the sun can also injure children. 
-        It’s also important to be cognizant of friction burns which can occur if children are playing with ropes.
-    </Text>
+    <Image style={styles.headimg} source={bhdr}/>
 
     <Text style={CoreStyle.subtitle}> How to prevent burn injuries? </Text>
 
@@ -137,11 +116,30 @@ export default function Burns({ navigation }) {
         </Text>
     </CollapsibleBox>
 
-    <Text style={CoreStyle.bullet}>7. Most importantly, always supervise your child around any open flame </Text>
+    <Text style={CoreStyle.bullet}>7. Most importantly, always supervise your child around any open flame {'\n'} </Text>
 
-    <Image style={styles.babyImg} source={babyIMG}/> 
+    <Image style={styles.babyImg} source={babyIMG}/>
 
-    <Text style={CoreStyle.content}> {'\n'} </Text>
+    <Text style={CoreStyle.subtitle}> Why are Burn Injuries Important? </Text>
+
+        <Text style={CoreStyle.content}>
+            {'\t'} Many regular household items like outlets, food, and hot water can cause childhood burns.
+             Burn injuries can occur from flames or electrical current but the most concerning for children is scald burns from hot water [1].
+            About 20,000 children under the age of 4 are hospitalized for scald injuries annually [2].
+            Studies show that nearly 75% of these burn injuries are preventable so understanding safety procedures is essential [3].
+            Infants and younger children are at higher risk of heat and cold injuries as well, since they produce and lose heat faster than adults [4].
+            Even though burns are the fifth most common cause of accidental death for children, many of the deaths are preventable [4].
+            Since most burn injuries happen at home, there are a lot of prevention measures that can be taken. {'\n'}
+        </Text>
+
+        <Text style={CoreStyle.subtitle}> Types of burn injuries? </Text>
+            <Text style={CoreStyle.content}>
+            {'\t'} There are a few different types of burn injuries.
+            The most common are thermal burns which are caused when heat sources drastically raise the temperature of skin and tissue.
+            Electrical burns due to contact with electricity are also relatively common.
+            It’s easy to overlook, but radiation burns from prolonged exposure to the sun can also injure children.
+            It’s also important to be cognizant of friction burns which can occur if children are playing with ropes. {'\n'}
+        </Text>
 
     <Text style={CoreStyle.subtitle}> What are Treatment Options? </Text>
         <Text style={CoreStyle.content}>

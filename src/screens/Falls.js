@@ -16,6 +16,7 @@ import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
+import * as Speech from "expo-speech";
 
 
 export default function Falls({ navigation }) {
@@ -54,26 +55,9 @@ export default function Falls({ navigation }) {
 
     <ScrollView>
 
-    <Image style={styles.headimg} source={falls}/>
-
     <Text style={CoreStyle.title}> Falls </Text>
 
-    <Text style={CoreStyle.subtitle}> Why are falls important? </Text>
-        <Text style={CoreStyle.content}>
-        {'\t'} Falls are the leading cause of hospitalized injury in the U.S. for children ages 0 to 14. [1]
-         In fact, over 2 million children ages 14 and under are estimated to receive treatment for fall injuries annually. [2]
-         Though these injuries are even more prevalent and severe for younger age groups. According
-         to the CDC, falls are the leading cause of Traumatic Brain Injury (TBI) for children
-         ages 0 to 4 with over 50% of total nonfatal injuries to infants under one being attributed to falls. [3] {'\n'}
-    </Text>
-
-    <Text style={CoreStyle.subtitle}> When and where do falls occur? </Text>
-        <Text style={CoreStyle.content}>
-        {'\t'} The different circumstances for falls vary largely between infants and older toddlers
-        considering their differing mobility. Infants are most likely to fall from furniture/toys and
-        stairs while they are unable to walk, while toddlers and older children are more likely to fall
-        on the playground or from windows. [2]
-        </Text>
+    <Image style={styles.headimg} source={falls}/>
 
 
 <Text style={CoreStyle.subtitle}> 5 Steps to Prevent Falls </Text>
@@ -141,6 +125,23 @@ export default function Falls({ navigation }) {
       wood chips, pea gravel, etc. rather than asphalt, concrete, or dirt. [6] {'\n'}
     </Text>
 </CollapsibleBox>
+
+    <Text style={CoreStyle.subtitle}> {'\n'} Why are falls important? </Text>
+        <Text style={CoreStyle.content}>
+        {'\t'} Falls are the leading cause of hospitalized injury in the U.S. for children ages 0 to 14. [1]
+         In fact, over 2 million children ages 14 and under are estimated to receive treatment for fall injuries annually. [2]
+         Though these injuries are even more prevalent and severe for younger age groups. According
+         to the CDC, falls are the leading cause of Traumatic Brain Injury (TBI) for children
+         ages 0 to 4 with over 50% of total nonfatal injuries to infants under one being attributed to falls. [3] {'\n'}
+    </Text>
+
+    <Text style={CoreStyle.subtitle}> When and where do falls occur? </Text>
+        <Text style={CoreStyle.content}>
+        {'\t'} The different circumstances for falls vary largely between infants and older toddlers
+        considering their differing mobility. Infants are most likely to fall from furniture/toys and
+        stairs while they are unable to walk, while toddlers and older children are more likely to fall
+        on the playground or from windows. [2]
+        </Text>
 
 <Image style={styles.longpic} source={end}/>
 

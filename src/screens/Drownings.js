@@ -61,28 +61,9 @@ export default function Drownings({ navigation }) {
 
     <ScrollView>
 
-    <Image style={styles.headimg} source={Pool}/>
-
     <Text style={CoreStyle.title}> Drownings </Text>
-    
-    <Text style={CoreStyle.subtitle}> Why are drownings important? </Text>
 
-    <Text style={CoreStyle.content}>
-    {'\t'} Almost 800 children in the United States drown each year [2], making it the leading cause 
-    of accidental death among children ages 1-4 and the second leading cause among children 1-14. 
-    [1] Even nonfatal drownings are a serious problem, with 40% of nonfatal drownings requiring 
-    further care or hospitalization, compared to just 8% baseline of nonfatal accidental injuries. 
-    [1] Nonfatal drownings may also lead to brain damage and/or long-term disability. {'\n'}
-    </Text>
-
-    <Text style={CoreStyle.subtitle}> Where do drownings occur? </Text>
-
-    <Text style={CoreStyle.content}>
-    {'\t'} Drownings can often occur right at home, especially with small children. The most common 
-    place for children 1-4 to drown is a home swimming pool. The most common place for children under
-     1 to drown in the bathtub. [1] For older children, the most common locations are natural bodies 
-     of water like lakes and rivers. [1] {'\n'}
-    </Text>
+    <Image style={styles.headimg} source={Pool}/>
 
     <Text style={CoreStyle.subtitle}> 5 steps to prevent drownings </Text>
 
@@ -130,6 +111,25 @@ export default function Drownings({ navigation }) {
     3: Rotate 360 degrees and locate an exit from the pool. 4: Be able to swim 25 yards (to an exit). 
     5: Exit a pool without the use of a ladder  {'\n'}</Text>
 </CollapsibleBox>
+
+<Text style={CoreStyle.subtitle}> {'\n'} Why are drownings important? </Text>
+
+    <Text style={CoreStyle.content}>
+    {'\t'} Almost 800 children in the United States drown each year [2], making it the leading cause
+    of accidental death among children ages 1-4 and the second leading cause among children 1-14.
+    [1] Even nonfatal drownings are a serious problem, with 40% of nonfatal drownings requiring
+    further care or hospitalization, compared to just 8% baseline of nonfatal accidental injuries.
+    [1] Nonfatal drownings may also lead to brain damage and/or long-term disability. {'\n'}
+    </Text>
+
+    <Text style={CoreStyle.subtitle}> Where do drownings occur? </Text>
+
+    <Text style={CoreStyle.content}>
+    {'\t'} Drownings can often occur right at home, especially with small children. The most common
+    place for children 1-4 to drown is a home swimming pool. The most common place for children under
+     1 to drown in the bathtub. [1] For older children, the most common locations are natural bodies
+     of water like lakes and rivers. [1] {'\n'}
+    </Text>
 
 <Text style={CoreStyle.subtitle}> More Drowning Info </Text>
 <Text style={CoreStyle.content}>

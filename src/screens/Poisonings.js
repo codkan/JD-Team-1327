@@ -57,30 +57,11 @@ export default function Poisonings({ navigation }) {
     
     <ScrollView>
 
-    <Image style={styles.headimg} source={poison_hdr}/>
-
     <Text style={CoreStyle.title}> Poisonings  </Text>
 
-    <Text style={CoreStyle.subtitle}> How common are poisonings? </Text>
-        <Text style={CoreStyle.content}>
-        {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below,
-         with over 250,000 of these being for children aged 2 and under
-         . Children 6 and under are disproportionately at risk for poisonings, as statistics from Poison Control show that 
-         the next age group with the most cases were adults between 20 and 29 with over 71,000 cases, almost 5 times less than the children. 
-         Specifically, 85% of all cases were caused by poison being ingested through the mouth, and the main culprits for these cases among 
-         small children were cosmetics and cleaning substances. {'\n'}
-        </Text>
-        
+    <Image style={styles.headimg} source={poison_hdr}/>
 
-    <Text style={CoreStyle.subtitle}> How can we prevent poisonings? </Text>
-        <Text style={CoreStyle.content}>
-        {'\t'} Findings show that doing seemingly small things, such as ensuring that medicines are stored out 
-        of reach or putting them away immediately after use, could reduce the amount of poisonings per year between 11% and 20%.
-         Overall, the majority of practices to prevent poisonings come down to caretakers having more awareness and being more 
-         attentive since poisonings due to other sources are very low. Here are some tips to prevent the most common forms of child poisoning: 
-        {'\n'}
-        {'\n'}
-        </Text>
+    <Text style={CoreStyle.subtitle}>Tips to prevent child poisoning:</Text>
 
         <CollapsibleBox header="1. Be cognizant of where you leave all medicine and pill bottles" headerstyle={CoreStyle.bullet}>
             <Image style={styles.pillImg} source={pills}/> 
@@ -121,6 +102,26 @@ export default function Poisonings({ navigation }) {
             common among older buildings, so be sure to check if your home fits this criteria. {'\n'}
             </Text>
          </CollapsibleBox>
+
+        <Text style={CoreStyle.subtitle}> {'\n'} How common are poisonings? </Text>
+            <Text style={CoreStyle.content}>
+            {'\t'} In 2020 and 2021, there have been over 385,000 cases of child poisonings for children aged 6 and below,
+             with over 250,000 of these being for children aged 2 and under
+             . Children 6 and under are disproportionately at risk for poisonings, as statistics from Poison Control show that
+             the next age group with the most cases were adults between 20 and 29 with over 71,000 cases, almost 5 times less than the children.
+             Specifically, 85% of all cases were caused by poison being ingested through the mouth, and the main culprits for these cases among
+             small children were cosmetics and cleaning substances. {'\n'}
+            </Text>
+
+
+        <Text style={CoreStyle.subtitle}> How can we prevent poisonings? </Text>
+            <Text style={CoreStyle.content}>
+            {'\t'} Findings show that doing seemingly small things, such as ensuring that medicines are stored out
+            of reach or putting them away immediately after use, could reduce the amount of poisonings per year between 11% and 20%.
+             Overall, the majority of practices to prevent poisonings come down to caretakers having more awareness and being more
+             attentive since poisonings due to other sources are very low.
+            {'\n'}
+            </Text>
 
         <View style={styles.buttons}>
         <MMButton

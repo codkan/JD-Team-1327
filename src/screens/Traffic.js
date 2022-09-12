@@ -61,18 +61,9 @@ export default function Traffic({ navigation }) {
 
     <ScrollView>
 
-    <Image style={styles.hdrimg} source={carSafety}/>
-
     <Text style={CoreStyle.title}> Car Safety </Text>
-    <Text style={CoreStyle.subtitle}> Why is Car Safety So Important? </Text>
 
-    <Text style={CoreStyle.content}>
-        {'\t'} Driving a car can already be a scary task for some people; you are manuevering a thousand-pound
-        hunk of metal and responsible for the lives of drivers and passengers around you. Now you are adding the
-        life of your child. Car safety, however, is there to ensure that you and your child stay as safe as possible 
-        and hopefully give for a less daunting experience. The following tips outline basic car seat rules, 
-        tips for parents on how to be good car safety role models, and things to avoid. {'\n'}
-    </Text>
+    <Image style={styles.hdrimg} source={carSafety}/>
 
     <Text style={CoreStyle.subtitle}> Types of Car Seats </Text>
 
@@ -120,6 +111,17 @@ export default function Traffic({ navigation }) {
 
     <Image style={styles.headimg} source={belt}/>
 
+        <Text style={CoreStyle.subtitle}> Things to avoid when shopping for carseats </Text>
+            <Text style={CoreStyle.content}>
+            {'\t'} Never use a carseat that is too old. The manufacturer will make a note of how long the
+            carseat can be used and when it was made. If a carseat has any visible cracks on it, it is unuseable
+            and can cause more harm than good to your child. Carseats should also be replaced after any moderate or severe crash.
+            Even minor crashes can cause unseen damage to the carseat and may need replacing. Carseats can also be recalled;
+            make sure that you hold on to the manufacturer label for the carseat so that you know the age of the seat and if
+            it has been recalled. If in doubt, you can call the manufacturer or contact the National Highway Traffic Safety
+            Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website.
+        </Text>
+
     <Text style={CoreStyle.subtitle}> Must-Dos while traveling </Text>
 
     <CollapsibleBox header="1. Be a good role model" headerstyle={CoreStyle.bullet}>
@@ -154,16 +156,15 @@ export default function Traffic({ navigation }) {
 
     <Image style={styles.foreimg} source={safe}/>
 
-    <Text style={CoreStyle.subtitle}> Things to avoid when shopping for carseats </Text>
+     <Text style={CoreStyle.subtitle}> Why is Car Safety So Important? </Text>
+
         <Text style={CoreStyle.content}>
-        {'\t'} Never use a carseat that is too old. The manufacturer will make a note of how long the 
-        carseat can be used and when it was made. If a carseat has any visible cracks on it, it is unuseable 
-        and can cause more harm than good to your child. Carseats should also be replaced after any moderate or severe crash. 
-        Even minor crashes can cause unseen damage to the carseat and may need replacing. Carseats can also be recalled; 
-        make sure that you hold on to the manufacturer label for the carseat so that you know the age of the seat and if
-        it has been recalled. If in doubt, you can call the manufacturer or contact the National Highway Traffic Safety 
-        Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website.
-    </Text>
+            {'\t'} Driving a car can already be a scary task for some people; you are manuevering a thousand-pound
+            hunk of metal and responsible for the lives of drivers and passengers around you. Now you are adding the
+            life of your child. Car safety, however, is there to ensure that you and your child stay as safe as possible
+            and hopefully give for a less daunting experience. The following tips outline basic car seat rules,
+            tips for parents on how to be good car safety role models, and things to avoid. {'\n'}
+        </Text>
 
     <Image style={styles.headimg} source={car}/>
 
