@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
       marginBottom: 120,
     },
     itemStyle: {
-      backgroundColor: "rgba(196, 196, 196, 0.5)",
+      backgroundColor: "rgba(211, 211, 211, 0.6)",
       padding: 10,
       fontSize: 16,
       textAlign: "justify",

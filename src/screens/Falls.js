@@ -43,7 +43,7 @@ export default function Falls({ navigation }) {
     async function speak(text) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
-            Speech.speak(Content[text].body, {rate: 0.5});
+            Speech.speak(Content[text].body, {rate: 0.85});
         } else {
             Speech.stop();
         }

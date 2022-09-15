@@ -18,7 +18,9 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 100,
-    backgroundColor: "rgba(184, 215, 169, 1)",
+    backgroundColor: "white",
+    borderColor: "lightgray",
+    borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",
     shadowColor: 'black',
@@ -36,7 +38,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   icon: {
-    height: 33,
-    width: 36,
+    height: 30,
+    width: 33,
+    marginBottom: 2,
   }
 });

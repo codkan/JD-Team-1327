@@ -5,7 +5,7 @@ export default function MainButton({ text, onPress, txtColor }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text style={styles.buttonText}>{text}</Text>
+        <Text style={styles.buttonText}>Back to Topics</Text>
       </View>
     </TouchableOpacity>
   );
@@ -18,9 +18,11 @@ const styles = StyleSheet.create({
     height: 50,
     width: 100,
     borderRadius: 10,
-    paddingVertical: 7,
+    paddingVertical: 0,
     paddingHorizontal: 10,
-    backgroundColor: "rgba(184, 215, 169, 1)",
+    backgroundColor: "white",
+    borderColor: "lightgray",
+    borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",
     shadowColor: 'black',

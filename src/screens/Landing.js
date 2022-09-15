@@ -96,13 +96,16 @@ const styles = StyleSheet.create({
   },
   logo: {
     height: "35%",
-
     resizeMode: "contain",
   },
   crayon: {
     height:50,
     width:355,
     marginTop: 25,
+    shadowColor: 'black',
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    shadowOffset : { width: 0, height: 4},
   },
   buttonContainer: {
     flex: 1,
@@ -115,6 +118,10 @@ const styles = StyleSheet.create({
     height: 35,
     width: 35,
     borderRadius: 100,
-    backgroundColor: "rgba(184, 215, 169, 1)",
+    backgroundColor: "white",
+    shadowColor: 'black',
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    shadowOffset : { width: 0, height: 4},
   },
 });
