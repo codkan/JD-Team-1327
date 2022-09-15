@@ -54,32 +54,32 @@ export default function Landing({ navigation }) {
         
       <View style = {CoreStyle.topnavbuttons}>
         <TouchableOpacity onPress={handleDisclaimNav}>
-            <Image source={disclaim} style={styles.btn}></Image>
+            <Image source={disclaim} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleSettings1Nav} style={styles.btn}>
-            <Image source={setting} style={styles.btn}></Image>
+        <TouchableOpacity onPress={handleSettings1Nav} style={CoreStyle.btn}>
+            <Image source={setting} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
       </View>
 
-        <View style={styles.buttonContainer}>
-        
-        <Image source={logo} style={styles.logo}></Image>
+        <View style={CoreStyle.buttonContainer}>
+
+        <Image source={logo} style={CoreStyle.logo}></Image>
 
 
         <TouchableOpacity onPress={handleInfoNav}>
-            <Image source={info} style={styles.crayon}></Image>
+            <Image source={info} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleMultimediaNav}>
-            <Image source={videos} style={styles.crayon}></Image>
+            <Image source={videos} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleReviewNav}>
-            <Image source={review} style={styles.crayon}></Image>
+            <Image source={review} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleSourcesNav}>
-            <Image source={sources} style={styles.crayon}></Image>
+            <Image source={sources} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleGameNav}>
-            <Image source={game} style={styles.crayon}></Image>
+            <Image source={game} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
         </View>
         <Navbar navigation={navigation}/>
@@ -87,37 +87,3 @@ export default function Landing({ navigation }) {
       
     );
  }
-
-const styles = StyleSheet.create({
-
-  logo: {
-    height: "35%",
-    resizeMode: "contain",
-  },
-  crayon: {
-    height:50,
-    width:355,
-    marginTop: 25,
-    shadowColor: 'black',
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    shadowOffset : { width: 0, height: 4},
-  },
-  buttonContainer: {
-    flex: 1,
-    top: 0,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 5,
-  },
-  btn: {
-    height: 35,
-    width: 35,
-    borderRadius: 100,
-    backgroundColor: "ivory",
-    shadowColor: 'black',
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    shadowOffset : { width: 0, height: 4},
-  },
-});

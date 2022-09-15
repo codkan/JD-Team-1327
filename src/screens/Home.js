@@ -85,7 +85,7 @@ export default function Home({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={CoreStyle.image}>
-      <View style={styles.buttonContainer}>
+      <View style={CoreStyle.homeContainer}>
         <HomeButton
           text="BACK"
           onPress={handleBackNav}
@@ -120,13 +120,3 @@ export default function Home({ navigation }) {
     </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  buttonContainer: {
-    flex: 1,
-    flexDirection: "row",
-    top: 300,
-    justifyContent: "center",
-    alignSelf: "center",
-  },
-});

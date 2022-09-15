@@ -20,7 +20,7 @@ let MAX_HEIGHT = Dimensions.get("screen").height;
 function Item({ item }) {
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   return (
-    <View style={styles.listItem}>
+    <View style={CoreStyle.listItem}>
       <Image
         source={item.photo}
         style={{ height: 100, width: 100 }}
@@ -154,7 +154,7 @@ export default class Badges extends React.Component {
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
       <MenuButton txtColor="black" text="GO BACK" onPress={this.handleReturnToHome}></MenuButton>
-        <ScrollView style={styles.contentArea}>
+        <ScrollView style={CoreStyle.contentArea}>
           <FlatList
             style={{ flex: 1 }}
             data={this.state.data}
@@ -166,32 +166,3 @@ export default class Badges extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#F7F7F7",
-    marginTop: 60,
-  },
-  listItem: {
-    margin: 10,
-    padding: 10,
-    backgroundColor: "transparent",
-    width: "80%",
-    flex: 1,
-    alignSelf: "center",
-    flexDirection: "row",
-    borderRadius: 5,
-  },
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-    paddingHorizontal: MAX_HEIGHT * 0.1,
-    paddingTop: MAX_HEIGHT * 0.24,
-  },
-  contentArea: {
-    backgroundColor: "transparent",
-    height: (MAX_HEIGHT * 4) / 10,
-  },
-});

@@ -113,12 +113,3 @@ export default function LevelSelect({ navigation }) {
     );
   }
 }
-
-const styles = StyleSheet.create({
-
-  buttonContainer: {
-    flex: 1,
-    top: 35,
-    justifyContent: "center",
-  },
-});

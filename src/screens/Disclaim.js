@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, CoreStyleheet, Text, View } from "react-native";
 import Background from "../assets/disclaimScreen.png";
 import MenuButton from "../components/MenuButton";
 import { CoreStyle } from "../components/CoreStyle.js";
@@ -22,7 +22,7 @@ export default function Disclaim({ navigation }) {
       Team: Cody Kantor, Aayush Dixit, William Wynne, {'\n'} Erin Falejczyk, and Akash Vemulapalli
       </Text>
 
-      <Text style={styles.about}>{'\t'}This application was developed in 2022 for Dr. Ann McClellan
+      <Text style={CoreStyle.about}>{'\t'}This application was developed in 2022 for Dr. Ann McClellan
       by a team of five students studying Computer Science at the Georgia Institute of Technology.
       Initially, it was built around the standalone game created by the original team, Team BeDot.
       But we have worked incredibly hard on expanding this application and we all hope that the valuable information presented

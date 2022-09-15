@@ -211,12 +211,3 @@ export default class BurnR extends Component{
       );
   }
 }
-
-const styles = StyleSheet.create({
-  buttonContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 65,
-  },
-});

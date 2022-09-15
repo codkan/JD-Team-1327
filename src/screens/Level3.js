@@ -7,7 +7,7 @@
 import React, { Component } from "react";
 import { Image, ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
-import background from "../assets/yard/level-3-floor.png";
+import Background from "../assets/yard/level-3-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
 import MenuButton from "../components/MenuButton";
 import NoteButton from "../components/NoteButton";
@@ -159,8 +159,8 @@ export default class LevelThree extends Component {
     const { modalVisible } = this.state;
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
-      <View style={styles.container}>
-        <View style={styles.centeredView}>
+      <View style={CoreStyle.gameContain}>
+        <View style={CoreStyle.centeredView}>
           <Modal
             animationType="slide"
             transparent={true}
@@ -170,15 +170,15 @@ export default class LevelThree extends Component {
               this.setModalVisible(!modalVisible);
             }}
           >
-            <View style={styles.centeredView}>
-              <View style={styles.modalView}>
-                <Text style={styles.modalText}>
+            <View style={CoreStyle.centeredView}>
+              <View style={CoreStyle.modalView}>
+                <Text style={CoreStyle.modalText}>
                   Collect All The Notes To Progress To The Next Level.
                   </Text>
-                  <Text style={styles.modalText}>
+                  <Text style={CoreStyle.modalText}>
                   Then go pet the nice doggo.
                 </Text>
-                <Text style={styles.textStyle}>Hide Modal</Text>
+                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {
@@ -189,7 +189,7 @@ export default class LevelThree extends Component {
             </View>
           </Modal>
         </View>
-        <View style={styles.centeredView}>
+        <View style={CoreStyle.centeredView}>
           <Modal
             animationType="slide"
             transparent={true}
@@ -199,9 +199,9 @@ export default class LevelThree extends Component {
               this.setModalVisible(!modalVisible);
             }}
           >
-            <View style={styles.centeredView}>
-              <View style={styles.modalView}>
-                <Text style={styles.modalText}>
+            <View style={CoreStyle.centeredView}>
+              <View style={CoreStyle.modalView}>
+                <Text style={CoreStyle.modalText}>
                   Time: {this.state.min}:{this.state.sec}:{this.state.msec}
                 </Text>
                 <MenuButton
@@ -224,7 +224,7 @@ export default class LevelThree extends Component {
           ref={(ref) => {
             this.gameEngine = ref;
           }}
-          style={styles.gameContainer}
+          style={CoreStyle.gameContainer}
           running={this.state.engineRunning}
           systems={[Movement, Dispatches, DogMove]}
           onEvent={this.onEvent}
@@ -249,9 +249,9 @@ export default class LevelThree extends Component {
             this.setModalVisible(!modalVisible);
           }}
         >
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <Text style={styles.modalText}>You Pet The Dog!</Text>
+          <View style={CoreStyle.centeredView}>
+            <View style={CoreStyle.modalView}>
+              <Text style={CoreStyle.modalText}>You Pet The Dog!</Text>
               <MenuButton
                 text="OK"
                 onPress={() => {
@@ -265,14 +265,10 @@ export default class LevelThree extends Component {
         </Modal>
         <View style={{ alignItems: "flex-end" }}>
           <NoteButton
-            style={styles.NoteButton}
-            //text={"Collect Note"}
             visible={this.state.collectNote1Visible}
             onPress={this.handleCollectNote1}
           />
           <NoteButton
-            style={styles.NoteButton}
-            //text={"Collect Note"}
             visible={this.state.collectNote2Visible}
             onPress={this.handleCollectNote2}
           />
@@ -285,10 +281,10 @@ export default class LevelThree extends Component {
               this.setModalVisible(!modalVisible);
             }}
           >
-            <View style={styles.centeredView}>
-              <View style={styles.modalView}>
-                <Text style={styles.modalTitle}>Hot Car</Text>
-                <Text style={styles.modalText}>
+            <View style={CoreStyle.centeredView}>
+              <View style={CoreStyle.modalView}>
+                <Text style={CoreStyle.modalTitle}>Hot Car</Text>
+                <Text style={CoreStyle.modalText}>
                   Children dying from heatstroke in cars, either because they
                   were left or became trapped, has increased in the recent
                   years. On April 25, the first vehicular heatstroke of 2020
@@ -296,17 +292,17 @@ export default class LevelThree extends Component {
                   vehicle without his family noticing. His death follows 52 car
                   deaths in 2019, and a record 53 deaths in 2018.
                 </Text>
-                <Text style={styles.modalText}>
+                <Text style={CoreStyle.modalText}>
                   The majority of hot car deaths – 54% - happen because someone
                   forgets a child in a car. Nearly 75% of children who are
                   forgotten and die are under 2 years old.
                 </Text>
-                <Text style={styles.modalText} onPress={() => { Linking.openURL('https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths'); }}>
+                <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths'); }}>
                   Source:
                   https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths
                 </Text>
                 <Image style={styles.carimg} source={car}/>
-                <Text style={styles.textStyle}>Hide Modal</Text>
+                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {
@@ -318,7 +314,6 @@ export default class LevelThree extends Component {
               </View>
             </View>
           </Modal>
-
           <Modal
             animationType="slide"
             transparent={true}
@@ -328,18 +323,18 @@ export default class LevelThree extends Component {
               this.setModalVisible(!modalVisible);
             }}
           >
-            <View style={styles.centeredView}>
-              <View style={styles.modalView}>
-                <Text style={styles.modalTitle}>Drowning:</Text>
-                <Text style={styles.modalText}>
+            <View style={CoreStyle.centeredView}>
+              <View style={CoreStyle.modalView}>
+                <Text style={CoreStyle.modalTitle}>Drowning:</Text>
+                <Text style={CoreStyle.modalText}>
                   Drowning is the leading cause of injury death in children 1 –
                   4.
                 </Text>
-                <Text style={styles.modalText}>
+                <Text style={CoreStyle.modalText}>
                   Young children can drown in as little as an inch or two of
                   water, and it can happen quickly and silently.
                 </Text>
-                <Text style={styles.modalText}>
+                <Text style={CoreStyle.modalText}>
                   The biggest drowning threat facing families with toddlers is
                   unexpected, unsurpervised access to water: swimming pools, hot
                   tubs and spas, bathtubs, natural bodies of water such as
@@ -347,7 +342,7 @@ export default class LevelThree extends Component {
                   drownings among children 4 and younger happen during non-swim
                   times.
                 </Text>
-                <Text style={styles.modalText}>
+                <Text style={CoreStyle.modalText}>
                   Research suggests that fencing can prevent more than half of
                   all swimming pool drownings of young children. Swimming pools,
                   including large, inflatable above-ground pools and other
@@ -355,11 +350,11 @@ export default class LevelThree extends Component {
                   all 4 sides.
                 </Text>
                 <Image style={styles.poolimg} source={pool}/>
-                <Text style={styles.modalText} onPress={() => { Linking.openURL('https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx'); }}>
+                <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx'); }}>
                   Source:
                   https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx
                 </Text>
-                <Text style={styles.textStyle}>Hide Modal</Text>
+                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {
@@ -372,8 +367,6 @@ export default class LevelThree extends Component {
             </View>
           </Modal>
           <SpeakButton
-            style={styles.NoteButton}
-            //text={"Speak"}
             visible={this.state.interactionIconVisible}
             onPress={this.handleNPCInteraction}
           />
@@ -385,67 +378,6 @@ export default class LevelThree extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "transparent",
-  },
-
-  gameContainer: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 5,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
-  },
-  buttonClose: {
-    backgroundColor: "#2196F3",
-  },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  modalText: {
-    marginBottom: 15,
-    fontWeight: "normal",
-    textAlign: "center",
-    color: "purple",
-    fontSize: 11,
-  },
-  modalTitle: {
-    marginBottom: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
   poolimg: {
     height: 100,
     width: 170,
@@ -454,5 +386,4 @@ const styles = StyleSheet.create({
     height: 120,
     width: 210,
   },
-  NoteButton: {},
 });

@@ -212,12 +212,3 @@ export default class CarRev1 extends Component{
       );
   }
 }
-
-const styles = StyleSheet.create({
-  buttonContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: 65,
-  },
-});

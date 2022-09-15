@@ -7,7 +7,7 @@
 import React, { Component } from "react";
 import {Image, ImageBackground, Linking, Modal, StyleSheet, Text, View } from "react-native";
 import { GameEngine } from "react-native-game-engine";
-import background from "../assets/living-room/level-1-floor.png";
+import Background from "../assets/living-room/level-1-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
 import MenuButton from "../components/MenuButton";
 import NoteButton from "../components/NoteButton";
@@ -173,15 +173,14 @@ export default class LevelOne extends Component {
       this.handleLevelComplete();
     }
   };
-
   
   render() {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     const { modalVisible } = this.state;
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
-        <View style={styles.container}>
-          <View style={styles.centeredView}>
+        <View style={CoreStyle.gameContain}>
+          <View style={CoreStyle.centeredView}>
             <Modal
               animationType="slide"
               transparent={true}
@@ -191,13 +190,13 @@ export default class LevelOne extends Component {
                 this.setModalVisible(!modalVisible);
               }}
             >
-              <View style={styles.centeredView}>
-                <View style={styles.modalView}>
-                  <Text style={styles.modalText}>
+              <View style={CoreStyle.centeredView}>
+                <View style={CoreStyle.modalView}>
+                  <Text style={CoreStyle.modalText}>
                   Collect All The Notes To Progress To The Next Level.</Text>
-                  <Text style={styles.modalText}>
+                  <Text style={CoreStyle.modalText}>
                     Then go the stairs to finish the level. </Text>
-                  <Text style={styles.textStyle}>Hide Modal</Text>
+                  <Text style={CoreStyle.textStyle}>Hide Modal</Text>
                   <MenuButton
                     text="OK"
                     onPress={() => {
@@ -208,7 +207,7 @@ export default class LevelOne extends Component {
               </View>
             </Modal>
           </View>
-          <View style={styles.centeredView}>
+          <View style={CoreStyle.centeredView}>
             <Modal
               animationType="slide"
               transparent={true}
@@ -218,9 +217,9 @@ export default class LevelOne extends Component {
                 this.setModalVisible(!modalVisible);
               }}
             >
-              <View style={styles.centeredView}>
-                <View style={styles.modalView}>
-                  <Text style={styles.modalText}>
+              <View style={CoreStyle.centeredView}>
+                <View style={CoreStyle.modalView}>
+                  <Text style={CoreStyle.modalText}>
                     Time: {this.state.min}:{this.state.sec}:{this.state.msec}
                   </Text>
                   <MenuButton
@@ -243,7 +242,7 @@ export default class LevelOne extends Component {
             ref={(ref) => {
               this.gameEngine = ref;
             }}
-            style={styles.gameContainer}
+            style={CoreStyle.gameContainer}
             running={this.state.engineRunning}
             systems={[Movement, Dispatches]}
             onEvent={this.onEvent}
@@ -261,14 +260,10 @@ export default class LevelOne extends Component {
           />
           <View style={{ alignItems: "flex-end" }}>
             <NoteButton
-              style={styles.NoteButton}
-              //text={"Collect Note"}
               visible={this.state.collectNote1Visible}
               onPress={this.handleCollectNote1}
             />
             <NoteButton
-              style={styles.NoteButton}
-              //text={"Collect Note"}
               visible={this.state.collectNote2Visible}
               onPress={this.handleCollectNote2}
             />
@@ -281,10 +276,10 @@ export default class LevelOne extends Component {
                 this.setModalVisible(!modalVisible);
               }}
             >
-              <View style={styles.centeredView}>
-                <View style={styles.modalView}>
-                  <Text style={styles.modalTitle}>Coins:</Text>
-                  <Text style={styles.modalText}>
+              <View style={CoreStyle.centeredView}>
+                <View style={CoreStyle.modalView}>
+                  <Text style={CoreStyle.modalTitle}>Coins:</Text>
+                  <Text style={CoreStyle.modalText}>
                     Choose a toy chest without a lid. Toys should be large
                     enough — at least 1¼" (3 centimeters) in diameter and 2¼" (6
                     centimeters) in length — so that they can't be swallowed or
@@ -293,11 +288,11 @@ export default class LevelOne extends Component {
                     diameter or less because they can become lodged in the
                     throat above the windpipe and cause trouble with breathing.
                   </Text>
-                   <Text style={styles.modalText} onPress={() => { Linking.openURL('https://kidshealth.org/en/parents/products-toys.html') }}>
+                   <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://kidshealth.org/en/parents/products-toys.html') }}>
                     Source: https://kidshealth.org/en/parents/products-toys.html
                   </Text> 
                   <Image style={styles.img} source={train}/>
-                  <Text style={styles.textStyle}>Hide Modal</Text>
+                  <Text style={CoreStyle.textStyle}>Hide Modal</Text>
                   <MenuButton
                     text="OK"
                     onPress={() => {
@@ -321,9 +316,9 @@ export default class LevelOne extends Component {
                 this.setModalVisible(!modalVisible);
               }}
             >
-              <View style={styles.centeredView}>
-                <View style={styles.modalView}>
-                  <Text style={styles.modalText}>
+              <View style={CoreStyle.centeredView}>
+                <View style={CoreStyle.modalView}>
+                  <Text style={CoreStyle.modalText}>
                     Congrats! You found your first Note. Go to the badges page
                     to track your progress!
                   </Text>
@@ -347,10 +342,10 @@ export default class LevelOne extends Component {
                 this.setModalVisible(!modalVisible);
               }}
             >
-              <View style={styles.centeredView}>
-                <View style={styles.modalView}>
-                  <Text style={styles.modalTitle}>Outlets:</Text>
-                  <Text style={styles.modalText}>
+              <View style={CoreStyle.centeredView}>
+                <View style={CoreStyle.modalView}>
+                  <Text style={CoreStyle.modalTitle}>Outlets:</Text>
+                  <Text style={CoreStyle.modalText}>
                     Outlet covers are great solutions to prevent accidental
                     electrocutions. Nearly one-third of accidents occur when a
                     child inserts common household items into receptacles, 70
@@ -359,11 +354,11 @@ export default class LevelOne extends Component {
                     commonly include: hairpins, keys, plugs, paper clips, staples, tools,
                     jewelry, belt buckles, nail files, and knives.
                   </Text>
-                  <Text style={styles.modalText}>
+                  <Text style={CoreStyle.modalText}>
                     Approximately 100 kids die each year by electrocution, and
                     many others are seriously hurt.
                   </Text>
-                  <Text style={styles.modalText}>
+                  <Text style={CoreStyle.modalText}>
                     95 percent of injuries resulting from electrical outlets
                     will involve burns. Though they range in severity, it is
                     important to understand that burns are very serious in young
@@ -371,10 +366,10 @@ export default class LevelOne extends Component {
                     electric flow or heat.
                   </Text>
                   <Image style={styles.img} source={outlet}/>
-                  <Text style={styles.modalText} onPress={() => { Linking.openURL('https://mrelectric.com/child-proof-outlets'); }}>
+                  <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://mrelectric.com/child-proof-outlets'); }}>
                     Source: https://mrelectric.com/child-proof-outlets
                   </Text>
-                  <Text style={styles.textStyle}>Hide Modal</Text>
+                  <Text style={CoreStyle.textStyle}>Hide Modal</Text>
                   <MenuButton
                     text="OK"
                     onPress={() => {
@@ -390,13 +385,10 @@ export default class LevelOne extends Component {
               </View>
             </Modal>
             <SpeakButton
-              style={styles.NoteButton}
-              //text={"Speak"}
               visible={this.state.interactionIconVisible}
               onPress={this.handleNPCInteraction}
             />
           </View>
-          {/* </ImageBackground> */}
         </View>
       </ImageBackground>
     );
@@ -404,69 +396,8 @@ export default class LevelOne extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "transparent",
-  },
-
-  gameContainer: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-  },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 5,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
-  },
-  buttonClose: {
-    backgroundColor: "#2196F3",
-  },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  modalText: {
-    marginBottom: 15,
-    fontWeight: "normal",
-    textAlign: "center",
-    color: "purple",
-  },
-  modalTitle: {
-    marginBottom: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
   img: {
     height: 70,
     width: 70,
-},
-  NoteButton: {},
+  },
 });

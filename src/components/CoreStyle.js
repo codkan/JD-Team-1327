@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
+import { Dimensions } from "react-native";
 
-// This is meant to be a core, shared syle library for styles to encourage consistency
+// This is meant to be a core, shared style library for styles to encourage consistency
 // and code reuse throughout the app.
 
 
@@ -11,6 +12,28 @@ export const CoreStyle = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
+    },
+
+    //Landing Page Styling Components
+    logo: {
+      height: "35%",
+      resizeMode: "contain",
+      marginBottom: 35,
+    },
+    landingCrayon: {
+      height:50,
+      width:355,
+      marginBottom: 30,
+    },
+    btn: {
+      height: 35,
+      width: 35,
+      borderRadius: 100,
+      backgroundColor: "ivory",
+      shadowColor: 'black',
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      shadowOffset : { width: 0, height: 4},
     },
 
     // Main header/title text for info, media pages etc.
@@ -78,20 +101,27 @@ export const CoreStyle = StyleSheet.create({
       textAlign: "center",
     },
 
+    note: {
+        textAlign: "center",
+        fontWeight: "italic",
+        fontSize: 15,
+        marginTop: -45,
+        marginBottom: 25,
+        alignSelf: "center",
+    },
+
     //buttonContainer for housing crayon section buttons on module pages
     buttonContainer: {
         flex: 1,
-        top: -60,
         alignItems: "center",
         justifyContent: "center",
-        marginTop: 30,
     },
 
     //crayon styling only for buttons on initial module pages
     crayon: {
         height: 50,
         width: 355,
-        marginTop: 40,
+        marginBottom: 50,
     },
 
     // pushdown style to keep navigation bar at bottom of screen
@@ -176,12 +206,19 @@ export const CoreStyle = StyleSheet.create({
         marginHorizontal: 10,
     },
 
-    // contain in row
+    // contain in a centered row
     row: {
         flex: 1,
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
+    },
+
+    // contain in an uncentered row aka line
+    line: {
+          flex: 1,
+          flexDirection: "row",
+          marginVertical: 10,
     },
 
     // contain and center
@@ -216,6 +253,15 @@ export const CoreStyle = StyleSheet.create({
         marginTop: 65,
     },
 
+    // container style for buttons on Game home screen
+    homeContainer: {
+        flex: 1,
+        flexDirection: "row",
+        top: 300,
+        justifyContent: "center",
+        alignSelf: "center",
+    },
+
     // invisible back button for spacing
     invisible: {
         height: 50,
@@ -232,4 +278,86 @@ export const CoreStyle = StyleSheet.create({
         marginTop: 10,
         marginBottom: 10,
       },
+
+    // GAME STYLING COMPONENTS
+
+    gameContain: {
+      flex: 1,
+      backgroundColor: "transparent",
+    },
+    gameContainer: {
+      position: "absolute",
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+    },
+    centeredView: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      marginTop: 22,
+    },
+    modalView: {
+      margin: 20,
+      backgroundColor: "white",
+      borderRadius: 5,
+      padding: 35,
+      alignItems: "center",
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      elevation: 5,
+    },
+    textStyle: {
+      color: "white",
+      fontWeight: "bold",
+      textAlign: "center",
+    },
+    gameText: {
+      marginBottom: 15,
+      fontWeight: "normal",
+      textAlign: "center",
+      color: "purple",
+      fontSize: 11,
+    },
+    modalTitle: {
+      marginBottom: 15,
+      fontWeight: "bold",
+      textAlign: "center",
+    },
+    pic: {
+      height: 50,
+      width: 50,
+      alignSelf: "center",
+    },
+    howContain: {
+      marginHorizontal: 60,
+      marginTop: 150,
+      flex: 1,
+      flexDirection: "column",
+    },
+    badgeContainer: {
+      flex: 1,
+      backgroundColor: "#F7F7F7",
+      marginTop: 60,
+    },
+    listItem: {
+      margin: 10,
+      padding: 10,
+      backgroundColor: "transparent",
+      width: "80%",
+      flex: 1,
+      alignSelf: "center",
+      flexDirection: "row",
+      borderRadius: 5,
+    },
+    contentArea: {
+      backgroundColor: "transparent",
+      height: ((Dimensions.get("screen").height) * 4) / 10,
+    },
 });

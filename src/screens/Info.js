@@ -38,7 +38,7 @@ export default function Info({ navigation }) {
   return (
     <ImageBackground source={Background} style={CoreStyle.image}>
     <Text style={CoreStyle.moduleText}>Pick a Topic</Text>
-    <Text style={styles.note}>[Click pictures to start and stop listening to text]</Text>
+    <Text style={CoreStyle.note}>[Click pictures to start and stop listening to text]</Text>
     <View style={CoreStyle.buttonContainer}>
 
 
@@ -66,15 +66,5 @@ export default function Info({ navigation }) {
   </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  note: {
-    textAlign: "center",
-    fontWeight: "italic",
-    fontSize: 15,
-    marginTop: -35,
-    alignSelf: "center",
-  }
-});
 
 
