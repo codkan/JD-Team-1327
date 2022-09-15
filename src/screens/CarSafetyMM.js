@@ -68,7 +68,7 @@ export default function CarSafetyMM({ navigation }) {
     <Text style={CoreStyle.title}> Car Safety </Text>
 
     <View style = {CoreStyle.imgview}>
-    <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+    <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
     </View>
 
     <VideoPlayer videoID = "f2GD2HTCNMI"/>

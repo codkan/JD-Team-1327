@@ -4,13 +4,14 @@ import Background from "../assets/bg.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
+import TopicButton from "../components/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 import basket from "../assets/gift_basket.png";
 
 export default function Win({navigation}){
 
-    const goToFalls = () => {
+    const goToInfo = () => {
         navigation.navigate("Info");
     };
     const backToReview = () => {
@@ -25,16 +26,16 @@ export default function Win({navigation}){
     <ImageBackground source={Background} style={styles.image}>
 
     <View style={CoreStyle.topnavbuttons}>
-        <MediaButton
-              text="Back to Review"
+        <TopicButton
+              text="Back to Quizzes"
               onPress={backToReview}
               txtColor={"black"}
-        ></MediaButton>
-        <MediaButton
-            text="Go to Info"
+        ></TopicButton>
+        <TopicButton
+            text="Go to Topics"
             txtColor={"black"}
-            onPress={goToFalls}
-        ></MediaButton>
+            onPress={goToInfo}
+        ></TopicButton>
     </View>
 
 <ScrollView>

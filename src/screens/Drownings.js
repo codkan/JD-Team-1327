@@ -131,17 +131,8 @@ export default function Drownings({ navigation }) {
      of water like lakes and rivers. [1] {'\n'}
     </Text>
 
-<Text style={CoreStyle.subtitle}> More Drowning Info </Text>
+<Text style={CoreStyle.subtitle}> Home Pool Tips: </Text>
 <Text style={CoreStyle.content}>
-    {'\t'} Drowning is often silent. Drowning most often does not look like what we expect, 
-    making it much harder to spot, especially in a crowded pool. This is why close supervision
-     of your own child is so important. Videos like the one below make clear how difficult it can be to spot someone drowning. {'\n'}
-    </Text>
-
-    <VideoPlayer videoID = "JYQ9AwsTkAw"/>
-
-<Text style={CoreStyle.content}>
-Home Pool Tips:  {'\n'}
 - Construct proper 4 sided fencing around your home pool. This should include self-closing and self-latching gates. {'\n'}
 - Do not leave toys in the pool area that may entice your kid to enter the area unsupervised. {'\n'}
 - Teach your child to never swim alone, only with adult supervision. {'\n'}

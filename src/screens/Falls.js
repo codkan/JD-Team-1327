@@ -53,6 +53,11 @@ export default function Falls({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
 
     <View style={CoreStyle.topnavbuttons}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={backToInfo}
+        ></BackButton>
         <MediaButton
               text="Back to Info"
               onPress={backToInfo}

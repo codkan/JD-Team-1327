@@ -65,7 +65,7 @@ export default function DrowningMM({ navigation }) {
         <Text style={CoreStyle.title}> Drownings </Text>
 
         <View style = {CoreStyle.imgview}>
-        <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+        <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
         </View>
 
         <VideoPlayer videoID = "L0KTqPloUiU"/>

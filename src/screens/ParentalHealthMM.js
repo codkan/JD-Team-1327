@@ -51,6 +51,8 @@ export default function ParentalHealthMM({ navigation }) {
           onPress={backToMedia}
           txtColor={"black"}
     ></MediaButton>
+
+    <View style={CoreStyle.invisible}/>
     </View>
 
     <ScrollView>
@@ -58,7 +60,7 @@ export default function ParentalHealthMM({ navigation }) {
     <Text style={CoreStyle.title}> Parental Health </Text>
 
     <View style = {CoreStyle.imgview}>
-    <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+    <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
     </View>
 
     <VideoPlayer videoID = "6kaCdrvNGZw"/>

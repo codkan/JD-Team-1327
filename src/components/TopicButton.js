@@ -1,16 +1,16 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function MediaButton({ text, onPress, txtColor }) {
+export default function TopicButton({ text, onPress, txtColor }) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text style={styles.buttonText}>Back to Topics</Text>
+        <Text style={styles.buttonText}>{text}</Text>
       </View>
     </TouchableOpacity>
   );
 }
-MediaButton.defaultProps = {
+TopicButton.defaultProps = {
   color: "black"
 }
 const styles = StyleSheet.create({

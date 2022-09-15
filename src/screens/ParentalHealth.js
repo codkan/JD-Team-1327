@@ -45,6 +45,7 @@ export default function ParentalHealth({ navigation }) {
               onPress={backToInfo}
               txtColor={"black"}
         ></MediaButton>
+        <View style={CoreStyle.invisible}/>
     </View>
 
     <ScrollView>

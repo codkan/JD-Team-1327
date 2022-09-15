@@ -44,6 +44,11 @@ export default function FallsM0({ navigation }) {
     <ImageBackground source={Background} style={styles.image}>
 
     <View style={CoreStyle.topnavbuttons}>
+        <BackButton
+            text="<"
+            txtColor={"black"}
+            onPress={backToMedia}
+        ></BackButton>
         <MediaButton
               text="Back to Media"
               onPress={backToMedia}
@@ -61,7 +66,7 @@ export default function FallsM0({ navigation }) {
 <View style={CoreStyle.mediaContainer}>
     <Text style={CoreStyle.title}> Falls </Text>
     <View style = {CoreStyle.imgview}>
-    <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+    <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
     </View>
 </View>
 

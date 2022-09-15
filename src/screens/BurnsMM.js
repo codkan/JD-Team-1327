@@ -84,7 +84,7 @@ export default function BurnsMM({ navigation }) {
     <View style={CoreStyle.mediaContainer}>
         <Text style={CoreStyle.title}> Burns </Text>
         <View style = {CoreStyle.imgview}>
-            <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+            <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
         </View>
     </View>
 

@@ -73,12 +73,11 @@ export default class FallsR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             });
-            this.b1.setState({buttonColor: "white"});
-            this.b2.setState({buttonColor: "white"});
-            this.b3.setState({buttonColor: "white"});
-            this.b4.setState({buttonColor: "white"});
+            this.b1.setState({buttonColor: "papayawhip"});
+            this.b2.setState({buttonColor: "papayawhip"});
+            this.b3.setState({buttonColor: "papayawhip"});
+            this.b4.setState({buttonColor: "papayawhip"});
         } else {
-            console.log(fallCount);
             this.props.navigation.navigate("Win", {
                 score: fallScore,
                 total: FallQs.length,
@@ -141,10 +140,10 @@ export default class FallsR extends Component{
             });
         }
       //Do we want to reset the buttons on going back? Or find a way to preserve answers?
-        this.b1.setState({buttonColor: "white"});
-        this.b2.setState({buttonColor: "white"});
-        this.b3.setState({buttonColor: "white"});
-        this.b4.setState({buttonColor: "white"});
+        this.b1.setState({buttonColor: "papayawhip"});
+        this.b2.setState({buttonColor: "papayawhip"});
+        this.b3.setState({buttonColor: "papayawhip"});
+        this.b4.setState({buttonColor: "papayawhip"});
     }
 
   render(){

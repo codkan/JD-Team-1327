@@ -91,7 +91,6 @@
          screen: Falls,
          navigationOptions: {
            headerShown: false,
-           animationEnabled: false,
          },
      },
      FallsMM: {
@@ -169,35 +168,30 @@
        screen: Burns,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Poisonings: {
        screen: Poisonings,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Drownings: {
        screen: Drownings,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Traffic: {
        screen: Traffic,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      ParentalHealth: {
        screen: ParentalHealth,
        navigationOptions: {
          headerShown: false,
-         animationEnabled: false,
        },
      },
      Review: {

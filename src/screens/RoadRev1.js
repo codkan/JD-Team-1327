@@ -44,7 +44,7 @@ export default class CarRev1 extends Component{
     };
 
     reRender = () => {
-        //console.log("reRender reached");
+
         if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
             carScore++;
             lastC = true;
@@ -74,12 +74,11 @@ export default class CarRev1 extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             });
-            this.b1.setState({buttonColor: "white"});
-            this.b2.setState({buttonColor: "white"});
-            this.b3.setState({buttonColor: "white"});
-            this.b4.setState({buttonColor: "white"});
+            this.b1.setState({buttonColor: "papayawhip"});
+            this.b2.setState({buttonColor: "papayawhip"});
+            this.b3.setState({buttonColor: "papayawhip"});
+            this.b4.setState({buttonColor: "papayawhip"});
         } else {
-            console.log(carScore);
             this.props.navigation.navigate("Win", {
                 score: carScore,
                 total: CarQs.length,
@@ -142,10 +141,10 @@ export default class CarRev1 extends Component{
             });
         }
       //Do we want to reset the buttons on going back? Or find a way to preserve answers?
-        this.b1.setState({buttonColor: "white"});
-        this.b2.setState({buttonColor: "white"});
-        this.b3.setState({buttonColor: "white"});
-        this.b4.setState({buttonColor: "white"});
+        this.b1.setState({buttonColor: "papayawhip"});
+        this.b2.setState({buttonColor: "papayawhip"});
+        this.b3.setState({buttonColor: "papayawhip"});
+        this.b4.setState({buttonColor: "papayawhip"});
     }
 
   render(){

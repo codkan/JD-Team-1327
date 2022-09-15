@@ -111,4 +111,21 @@ export const CoreStyle = StyleSheet.create({
         width: "100%",
         marginBottom: 100,
     },
+
+    // invisible back button for spacing
+    invisible: {
+        height: 50,
+        width: 50,
+        borderRadius: 100,
+        backgroundColor: "transparent",
+        borderColor: "transparent",
+        borderWidth: 0,
+        shadowColor: 'transparent',
+        shadowOpacity: 0.0,
+        shadowRadius: 4,
+        shadowOffset : { width: 0, height: 4},
+        elevation: 7.5,
+        marginTop: 10,
+        marginBottom: 10,
+      },
 });

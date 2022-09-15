@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     height: 35,
     width: 35,
     borderRadius: 100,
-    backgroundColor: "white",
+    backgroundColor: "ivory",
     shadowColor: 'black',
     shadowOpacity: 0.25,
     shadowRadius: 4,

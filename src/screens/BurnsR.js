@@ -44,7 +44,7 @@ export default class BurnR extends Component{
     };
 
     reRender = () => {
-        //console.log("reRender reached");
+
         if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
             burnScore++;
             lastC = true;
@@ -74,12 +74,11 @@ export default class BurnR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             });
-            this.b1.setState({buttonColor: "white"});
-            this.b2.setState({buttonColor: "white"});
-            this.b3.setState({buttonColor: "white"});
-            this.b4.setState({buttonColor: "white"});
+            this.b1.setState({buttonColor: "papayawhip"});
+            this.b2.setState({buttonColor: "papayawhip"});
+            this.b3.setState({buttonColor: "papayawhip"});
+            this.b4.setState({buttonColor: "papayawhip"});
         } else {
-            console.log(burnScore);
             this.props.navigation.navigate("Win", {
                 score: burnScore,
                 total: burnQs.length,
@@ -141,10 +140,10 @@ export default class BurnR extends Component{
                 ],
             });
         }
-        this.b1.setState({buttonColor: "white"});
-        this.b2.setState({buttonColor: "white"});
-        this.b3.setState({buttonColor: "white"});
-        this.b4.setState({buttonColor: "white"});
+        this.b1.setState({buttonColor: "papayawhip"});
+        this.b2.setState({buttonColor: "papayawhip"});
+        this.b3.setState({buttonColor: "papayawhip"});
+        this.b4.setState({buttonColor: "papayawhip"});
     }
 
   render(){

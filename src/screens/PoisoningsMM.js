@@ -78,7 +78,7 @@ export default function PoisoningsMM({ navigation }) {
     <View style={CoreStyle.mediaContainer}>
     <Text style={CoreStyle.title}> Poisonings </Text>
         <View style = {CoreStyle.imgview}>
-            <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+            <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
         </View>
     </View>
 
