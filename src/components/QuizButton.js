@@ -10,7 +10,7 @@ export default class QuizButton extends PureComponent{
     constructor(){
         super();
         this.state = {
-            buttonColor: "oldlace",
+            buttonColor: "papayawhip",
             pressed: false,
         };
     };
