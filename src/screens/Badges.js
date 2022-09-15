@@ -5,7 +5,7 @@ import React from "react";
 import {
     FlatList,  ScrollView,
     Image, ImageBackground, StyleSheet,
-    Text, TouchableOpacity, View
+    Text, TouchableOpacity, View, SafeAreaView
 } from "react-native";
 import { Dimensions } from "react-native";
 import Background from "../assets/badgeScreen.png";
@@ -153,15 +153,13 @@ export default class Badges extends React.Component {
   render() {
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
-      <MenuButton txtColor="black" text="GO BACK" onPress={this.handleReturnToHome}></MenuButton>
-        <ScrollView style={CoreStyle.contentArea}>
           <FlatList
-            style={{ flex: 1 }}
+            style={CoreStyle.contentArea}
             data={this.state.data}
             renderItem={({ item }) => <Item item={item} />}
             keyExtractor={(item) => item.ID}
           />
-        </ScrollView>
+        <MenuButton txtColor="black" text="GO BACK" onPress={this.handleReturnToHome}></MenuButton>
       </ImageBackground>
     );
   }

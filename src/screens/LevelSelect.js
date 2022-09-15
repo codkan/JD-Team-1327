@@ -5,7 +5,7 @@
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
 import Background from "../assets/levelSelect.png";
-import MenuButton from "../components/MenuButton";
+import LevelButton from "../components/LevelButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { CoreStyle } from "../components/CoreStyle.js";
@@ -48,66 +48,66 @@ export default function LevelSelect({ navigation }) {
   if (unlocked["lvl3"] != null) {
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
-        <View style={{marginTop: 75}}>
-        <MenuButton
+        <View style={CoreStyle.levelContainer}>
+        <LevelButton
           text="LIVING ROOM"
           onPress={launchLevelOne}
           txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
+        ></LevelButton>
+        <LevelButton
           text="KITCHEN"
           onPress={launchLevelTwo}
           txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
+        ></LevelButton>
+        <LevelButton
           text="BACKYARD"
           onPress={launchLevelThree}
           txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
+        ></LevelButton>
+        <LevelButton
           text="GO BACK"
           onPress={goHome}
           txtColor={"black"}
-        ></MenuButton>
+        ></LevelButton>
         </View>
       </ImageBackground>
     );
   } else if (unlocked["lvl2"] != null) {
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
-        <View style={{marginTop: 75}}>
-          <MenuButton
+        <View style={CoreStyle.levelContainer}>
+          <LevelButton
             text="LIVING ROOM"
             onPress={launchLevelOne}
             txtColor={"black"}
-          ></MenuButton>
-          <MenuButton
+          ></LevelButton>
+          <LevelButton
             text="KITCHEN"
             onPress={launchLevelTwo}
             txtColor={"black"}
-          ></MenuButton>
-          <MenuButton
+          ></LevelButton>
+          <LevelButton
             text="GO BACK"
             onPress={goHome}
             txtColor={"black"}
-          ></MenuButton>
+          ></LevelButton>
         </View>
       </ImageBackground>
     );
   } else {
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
-      <View style={{marginTop: 75}}>
-        <MenuButton
+      <View style={CoreStyle.levelContainer}>
+        <LevelButton
           text="LIVING ROOM"
           onPress={launchLevelOne}
           txtColor={"black"}
-        ></MenuButton>
-        <MenuButton
+        ></LevelButton>
+        <LevelButton
           text="GO BACK"
           onPress={goHome}
           txtColor={"black"}
-        ></MenuButton>
+        ></LevelButton>
       </View>
       </ImageBackground>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Modal, Button, Text, StyleSheet } from "react-native";
+import { View, Modal, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Timer from "./Timer";
 import MenuButton from "./MenuButton";
 import { Dimensions } from "react-native";
@@ -81,17 +81,13 @@ export default class GameStatusBar extends Component {
             left: x,
             top: y,
             width: Dimensions.get("screen").width,
-            height: 40,
+            height: 50,
             backgroundColor: "#111111",
           }}
         >
-          <View style={{ marginLeft: "10%", marginRight: "25%", width: "10%" , backgroundColor: "gray"}}>
-            <Button
-              title="II"
-              color="gray"
-              onPress={this.handlePauseButton}
-            ></Button>
-          </View>
+          <TouchableOpacity style={{ marginLeft: "10%", marginRight: "25%", width: "10%" , backgroundColor: "gray", height:50}} onPress={this.handlePauseButton}>
+            <Text style={{color:"white", fontSize: 35, alignSelf: "center", justifyContent: "center"}}> II </Text>
+          </TouchableOpacity>
           <Text style={{ color: "white", justifyContent: "center", fontSize: 20}}>
             Items: {this.state.inventorySize}/{this.state.inventoryCap}
           </Text>

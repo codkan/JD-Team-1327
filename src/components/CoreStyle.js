@@ -136,6 +136,16 @@ export const CoreStyle = StyleSheet.create({
         backgroundColor: "#C4C4C4",
     },
 
+    levelContainer: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: "transparent",
+    },
+
     // Container for Multimedia pages
     mediaContainer: {
         alignItems: "center",
@@ -358,6 +368,8 @@ export const CoreStyle = StyleSheet.create({
     },
     contentArea: {
       backgroundColor: "transparent",
-      height: ((Dimensions.get("screen").height) * 4) / 10,
+      height: ((Dimensions.get("screen").width / 10) * 4),
+      marginHorizontal: 10,
+      marginTop: 120,
     },
 });
