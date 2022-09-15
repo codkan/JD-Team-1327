@@ -6,7 +6,8 @@ import React from "react";
 import { ImageBackground, StyleSheet, Text, View, Image } from "react-native";
 import Background from "../assets/instructionScreen.png";
 import MenuButton from "../components/MenuButton";
-import * as ScreenOrientation from 'expo-screen-orientation'
+import * as ScreenOrientation from 'expo-screen-orientation';
+import { CoreStyle } from "../components/CoreStyle.js";
 import pc from "../assets/player.png";
 import npc from "../assets/npc.png";
 import talk from "../assets/speak.png";
@@ -23,7 +24,7 @@ export default function About({ navigation }) {
   };
 
   return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
       <View style={styles.contain}>
         <View style={styles.line}>
             <Text style={styles.instruct}> You control a young parent </Text>
@@ -52,11 +53,7 @@ export default function About({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
+
   contain: {
     marginHorizontal: 60,
     marginTop: 150,

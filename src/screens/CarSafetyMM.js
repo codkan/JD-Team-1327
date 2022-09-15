@@ -43,7 +43,7 @@ export default function CarSafetyMM({ navigation }) {
     ];
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -89,20 +89,3 @@ export default function CarSafetyMM({ navigation }) {
     </ImageBackground>
     );
 }
-
-const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-    },
-    img: {
-        height: 500,
-        width: "100%",
-        marginBottom: 20,
-    },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
-});

@@ -19,8 +19,7 @@ import Movement from "../systems/Movement";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import pan from "../assets/gameNotePics/pan.png";
 import poison from "../assets/gameNotePics/poison.png";
-
-
+import { CoreStyle } from "../components/CoreStyle.js";
 
 export default class LevelTwo extends Component {
   constructor(props) {
@@ -157,7 +156,7 @@ export default class LevelTwo extends Component {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     const { modalVisible } = this.state;
     return (
-      <ImageBackground source={background} style={styles.image}>
+      <ImageBackground source={Background} style={CoreStyle.image}>
 
       <View style={styles.container}>
         <View style={styles.centeredView}>
@@ -348,11 +347,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "transparent",
   },  
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
+
   gameContainer: {
     position: "absolute",
     top: 0,

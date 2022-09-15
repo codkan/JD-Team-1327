@@ -37,7 +37,7 @@ export default function Burns({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -61,7 +61,7 @@ export default function Burns({ navigation }) {
 
     <Text style={CoreStyle.title}> Burns </Text>
 
-    <Image style={styles.headimg} source={bhdr}/>
+    <Image style={CoreStyle.headimg} source={bhdr}/>
 
     <Text style={CoreStyle.subtitle}> How to prevent burn injuries? </Text>
 
@@ -151,7 +151,7 @@ export default function Burns({ navigation }) {
         If an electrical burn occurs, then there may be damage below the skin so seeing a doctor is also necessary [4].
     </Text>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.buttons}>
 
     <SourcesButton
         onPress={handleBurnSourcesNav}
@@ -184,11 +184,6 @@ const styles = StyleSheet.create({
         display: 'flex',
         marginLeft: 'auto',
         marginRight: 'auto',
-    },
-    
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
     },
     scaldImg: {
         height: 150,
@@ -230,15 +225,5 @@ const styles = StyleSheet.create({
         display: 'flex',
         marginLeft: 'auto',
         marginRight: 'auto',
-    },
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
-    headimg: {
-        height: 150,
-        width: 150,
-        alignSelf: "center",
     },
 });

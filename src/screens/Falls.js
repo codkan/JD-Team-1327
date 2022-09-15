@@ -50,7 +50,7 @@ export default function Falls({ navigation }) {
     }
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -74,7 +74,7 @@ export default function Falls({ navigation }) {
 
     <Text style={CoreStyle.title}> Falls </Text>
 
-    <Image style={styles.headimg} source={falls}/>
+    <Image style={CoreStyle.headimg} source={falls}/>
 
 
 <Text style={CoreStyle.subtitle}> 5 Steps to Prevent Falls </Text>
@@ -207,7 +207,7 @@ export default function Falls({ navigation }) {
 waist-level (or a bit lower) handlebars, and resist tipping backward when pressing the handles [7]
 </Text>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.buttons}>
 
     <SourcesButton
         onPress={handleFallSourcesNav}
@@ -230,16 +230,6 @@ waist-level (or a bit lower) handlebars, and resist tipping backward when pressi
 }
 
 const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
-    
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-    },
     roundpic: {
         height: 150,
         width: 150,
@@ -252,10 +242,5 @@ const styles = StyleSheet.create({
         resizeMode: "contain",
         height: 45,
         marginBottom: 20,
-    },
-    headimg: {
-        height: 150,
-        width: 150,
-        alignSelf: "center",
     },
 });

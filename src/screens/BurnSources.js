@@ -31,7 +31,7 @@ export default function Falls1({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -55,7 +55,7 @@ export default function Falls1({ navigation }) {
 
     <Text style={CoreStyle.title}> Burnings Sources: </Text>
 
-<View style={styles.container}>
+<View style={CoreStyle.center}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.childrenssafetynetwork.org/child-safety-topics/fire-burn-safety')}>
          <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Fire & Burn Safety </Text>
@@ -122,21 +122,3 @@ export default function Falls1({ navigation }) {
     </ImageBackground>
     );
 }
-
-const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
-    container: {
-        alignItems: "center",
-    },
-    
-});

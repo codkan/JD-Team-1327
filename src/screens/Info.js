@@ -36,8 +36,8 @@ export default function Info({ navigation }) {
   };
 
   return (
-    <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}>Pick a Topic</Text>
+    <ImageBackground source={Background} style={CoreStyle.image}>
+    <Text style={CoreStyle.moduleText}>Pick a Topic</Text>
     <Text style={styles.note}>[Click pictures to start and stop listening to text]</Text>
     <View style={CoreStyle.buttonContainer}>
 
@@ -68,35 +68,11 @@ export default function Info({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
-  modalText: {
-    // margin: 100,
-    height: 70,
-    fontSize: 40,
-    marginTop: 60,
-    marginBottom: 25,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  container: {
-    flex: 1,
-    paddingTop: 40,
-    marginTop: 150,
-    marginBottom: 15,
-    alignItems: "center"
-  },
-  button: {
-    color: "black",
-  },
   note: {
     textAlign: "center",
     fontWeight: "italic",
     fontSize: 15,
-    marginTop: -40,
+    marginTop: -35,
     alignSelf: "center",
   }
 });

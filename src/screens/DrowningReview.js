@@ -152,7 +152,7 @@ export default class DrowningR extends Component{
       var randomFallQs =  this.state.answers.sort(() => Math.random() - 0.5);
       
       return (
-        <ImageBackground source={Background} style={styles.image}>
+        <ImageBackground source={Background} style={CoreStyle.image}>
 
         <View style={CoreStyle.topnavbuttons}>
             <BackButton onPress={this.deRender}
@@ -170,11 +170,11 @@ export default class DrowningR extends Component{
             ></BackButton>
         </View>
 
-        <Text style={styles.title}> {this.state.qNum} </Text>
+        <Text style={CoreStyle.title}> {this.state.qNum} </Text>
         <Text> {'\n'} </Text>
-        <Text style={styles.subtitle}> {this.state.Q} </Text>
+        <Text style={CoreStyle.subtitle}> {this.state.Q} </Text>
 
-        <View style={styles.buttonContainer}>
+        <View style={CoreStyle.quizContainer}>
         <QuizButton
           id={randomFallQs[0].id}
           text={randomFallQs[0].a}
@@ -197,7 +197,7 @@ export default class DrowningR extends Component{
         ></QuizButton>
         </View>
 
-        <View style={styles.container}>
+        <View style={CoreStyle.row}>
         <MainButton
             text="Go to Drowning"
             onPress={() => this.props.navigation.navigate("Drownings")}
@@ -214,42 +214,10 @@ export default class DrowningR extends Component{
 }
 
 const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
-  title: {
-    // margin: 100,
-    //height: 70,
-    fontSize: 40,
-    marginTop: 0,
-    //marginBottom: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-    textDecorationLine: "underline"
-  },
-  subtitle: {
-    fontSize: 24,
-    textAlign: "center",
-    fontWeight: "bold",
-  },
-  container: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  container: {
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   buttonContainer: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 75,
+    marginTop: 65,
   },
 });

@@ -29,7 +29,7 @@ export default function CarSafety({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -54,7 +54,7 @@ export default function CarSafety({ navigation }) {
     <Text style={CoreStyle.title}> Car Safety Sources: </Text>
     <Text> {'\n'} </Text>
 
-<View style={styles.container}>
+<View style={CoreStyle.center}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.healthychildren.org/English/safety-prevention/on-the-go/Pages/Car-Safety-Seats-Information-for-Families.aspx')}>
          <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Car Safety </Text>
@@ -78,25 +78,3 @@ export default function CarSafety({ navigation }) {
     </ImageBackground>
     );
 }
-
-const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
-    
-    
-    
-    
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
-    container: {
-        alignItems: "center",
-    },
-    
-});

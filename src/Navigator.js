@@ -22,8 +22,7 @@
  import LevelSelect from "./screens/LevelSelect";
  import Badges from "./screens/Badges";
  import About from "./screens/About";
- import Settings from "./screens/Settings";
- 
+
  import Falls from "./screens/Falls";
  import Burns from "./screens/Burns";
  import Poisonings from "./screens/Poisonings";
@@ -238,12 +237,6 @@
      },
      Badges: {
        screen: Badges,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },
-     Settings: {
-       screen: Settings,
        navigationOptions: {
          headerShown: false,
        },

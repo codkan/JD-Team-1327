@@ -41,7 +41,7 @@ export default function FallsM0({ navigation }) {
     ];
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -91,34 +91,3 @@ export default function FallsM0({ navigation }) {
     </ImageBackground>
     );
 }
-
-const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
-    back: {
-        height: 50,
-        width: 50,
-        borderRadius: 100,
-        backgroundColor: "rgba(196,196,196,1)",
-        shadowColor: 'black',
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        shadowOffset : { width: 0, height: 4},
-        elevation: 7.5,
-        position: "absolute",
-    },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
-    link: {
-        textDecorationLine:'underline',
-        color:'blue',
-        margin: 10,
-    }
-});

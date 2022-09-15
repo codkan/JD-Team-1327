@@ -8,8 +8,8 @@ import { ImageBackground, StyleSheet, View } from "react-native";
 import Background from "../assets/homescreen.png";
 import HomeButton from "../components/HomeButton";
 import { get } from "../Db";
-import * as ScreenOrientation from 'expo-screen-orientation'
-
+import * as ScreenOrientation from 'expo-screen-orientation';
+import { CoreStyle } from "../components/CoreStyle.js";
 
 export default function Home({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });
@@ -84,7 +84,7 @@ export default function Home({ navigation }) {
   };
 
   return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
       <View style={styles.buttonContainer}>
         <HomeButton
           text="BACK"
@@ -122,19 +122,11 @@ export default function Home({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
   buttonContainer: {
     flex: 1,
     flexDirection: "row",
     top: 300,
     justifyContent: "center",
     alignSelf: "center",
-  },
-  button: {
-    color: "black",
   },
 });

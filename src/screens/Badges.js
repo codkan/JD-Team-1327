@@ -11,7 +11,8 @@ import { Dimensions } from "react-native";
 import Background from "../assets/badgeScreen.png";
 import MenuButton from "../components/MenuButton";
 import { get } from "../Db";
-import * as ScreenOrientation from 'expo-screen-orientation'
+import * as ScreenOrientation from 'expo-screen-orientation';
+import { CoreStyle } from "../components/CoreStyle.js";
 
 let MAX_WIDTH = Dimensions.get("screen").width;
 let MAX_HEIGHT = Dimensions.get("screen").height;
@@ -151,7 +152,7 @@ export default class Badges extends React.Component {
   }
   render() {
     return (
-      <ImageBackground source={Background} style={styles.image}>
+      <ImageBackground source={Background} style={CoreStyle.image}>
       <MenuButton txtColor="black" text="GO BACK" onPress={this.handleReturnToHome}></MenuButton>
         <ScrollView style={styles.contentArea}>
           <FlatList

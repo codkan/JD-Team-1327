@@ -49,7 +49,7 @@ export default function Landing({ navigation }) {
   };
 
     return (
-      <ImageBackground source={Background} style={styles.image}>
+      <ImageBackground source={Background} style={CoreStyle.image}>
 
         
       <View style = {CoreStyle.topnavbuttons}>
@@ -89,11 +89,7 @@ export default function Landing({ navigation }) {
  }
 
 const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
+
   logo: {
     height: "35%",
     resizeMode: "contain",

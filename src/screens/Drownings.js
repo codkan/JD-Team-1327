@@ -39,7 +39,7 @@ export default function Drownings({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -63,7 +63,7 @@ export default function Drownings({ navigation }) {
 
     <Text style={CoreStyle.title}> Drownings </Text>
 
-    <Image style={styles.headimg} source={Pool}/>
+    <Image style={CoreStyle.headimg} source={Pool}/>
 
     <Text style={CoreStyle.subtitle}> 5 steps to prevent drownings </Text>
 
@@ -139,7 +139,7 @@ export default function Drownings({ navigation }) {
 - Consider buying and installing a pool alarm.
 </Text>
 
-<View style={styles.buttons}>
+<View style={CoreStyle.buttons}>
 <SourcesButton
     onPress={handleDrowningSourcesNav}
 ></SourcesButton>
@@ -160,29 +160,6 @@ export default function Drownings({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-    },
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-    },
-    titleImage: {
-        height: 65,
-        width: 65,
-        flex: 1
-    },
-    titleBox: {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "flex-start",
-        paddingRight: 20
-    },
-    headimg: {
-        height: 150,
-        width: 150,
-        alignSelf: "center",
-    },
     bathpic: {
         height: 200,
         width: 200,

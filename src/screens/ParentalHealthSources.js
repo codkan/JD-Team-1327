@@ -26,7 +26,7 @@ export default function ParentalHealth({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -47,7 +47,7 @@ export default function ParentalHealth({ navigation }) {
     <Text style={CoreStyle.title}> Parental Health Sources: </Text>
     <Text> {'\n'} </Text>
 
-<View style={styles.container}>
+<View style={CoreStyle.center}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/ppd.html')}>
          <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Parental Health </Text>
@@ -76,25 +76,3 @@ export default function ParentalHealth({ navigation }) {
     </ImageBackground>
     );
 }
-
-const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
-    
-    
-    
-    
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
-    container: {
-        alignItems: "center",
-    },
-    
-});

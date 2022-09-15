@@ -87,7 +87,7 @@ export default function Search({ navigation }) {
     };
 
   return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <SafeAreaView style={{ flex: 1 }}>
         <SearchBar
@@ -116,11 +116,7 @@ export default function Search({ navigation }) {
 };
 
 const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
+
     modalText: {
         height: 70,
         fontSize: 40,

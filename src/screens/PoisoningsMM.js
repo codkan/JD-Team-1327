@@ -53,7 +53,7 @@ export default function PoisoningsMM({ navigation }) {
     ];
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -105,38 +105,3 @@ export default function PoisoningsMM({ navigation }) {
     </ImageBackground>
     );
 }
-
-const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
-    
-    img: {
-        height: 600,
-        width: "100%",
-    },
-    newimg: {
-        height: 800,
-        width: "100%",
-    },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
-    link: {
-        textDecorationLine:'underline',
-        color:'blue',
-        margin: 10,
-    },
-    backgroundVideo: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        right: 0,
-    },
-});

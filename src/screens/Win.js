@@ -23,7 +23,7 @@ export default function Win({navigation}){
     const txt = navigation.getParam('text');
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <TopicButton
@@ -42,11 +42,11 @@ export default function Win({navigation}){
 
     <View style={styles.container}>
     <Text> {'\n'} </Text>
-    <Text style={styles.title}> {txt} Quiz Completed </Text>
+    <Text style={CoreStyle.title}> {txt} Quiz Completed </Text>
     <Text> {'\n'} </Text>
-    <Text style={styles.subtitle}> Congratulations! </Text>
+    <Text style={CoreStyle.subtitle}> Congratulations! </Text>
     <Text> {'\n'} </Text>
-    <Text style={styles.subtitle2}> You answered {score} out of {total} questions correctly </Text>
+    <Text style={CoreStyle.subtitle2}> You answered {score} out of {total} questions correctly </Text>
     <Image source={basket} style={styles.image}></Image>
     </View>
 
@@ -61,11 +61,7 @@ export default function Win({navigation}){
 }
 
 const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
+
     title: { 
         fontSize: 40,
         marginBottom: 10,
@@ -88,12 +84,7 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: "#d49306",
     },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
+
     container: {
         alignItems: "center",
         marginHorizontal: 20,

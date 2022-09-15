@@ -7,8 +7,8 @@ import { ImageBackground, StyleSheet, View } from "react-native";
 import Background from "../assets/levelSelect.png";
 import MenuButton from "../components/MenuButton";
 import { get } from "../Db";
-import * as ScreenOrientation from 'expo-screen-orientation'
-
+import * as ScreenOrientation from 'expo-screen-orientation';
+import { CoreStyle } from "../components/CoreStyle.js";
 
 export default function LevelSelect({ navigation }) {
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
@@ -47,7 +47,7 @@ export default function LevelSelect({ navigation }) {
 
   if (unlocked["lvl3"] != null) {
     return (
-      <ImageBackground source={Background} style={styles.image}>
+      <ImageBackground source={Background} style={CoreStyle.image}>
         <View style={{marginTop: 75}}>
         <MenuButton
           text="LIVING ROOM"
@@ -74,7 +74,7 @@ export default function LevelSelect({ navigation }) {
     );
   } else if (unlocked["lvl2"] != null) {
     return (
-      <ImageBackground source={Background} style={styles.image}>
+      <ImageBackground source={Background} style={CoreStyle.image}>
         <View style={{marginTop: 75}}>
           <MenuButton
             text="LIVING ROOM"
@@ -96,7 +96,7 @@ export default function LevelSelect({ navigation }) {
     );
   } else {
     return (
-      <ImageBackground source={Background} style={styles.image}>
+      <ImageBackground source={Background} style={CoreStyle.image}>
       <View style={{marginTop: 75}}>
         <MenuButton
           text="LIVING ROOM"
@@ -115,11 +115,7 @@ export default function LevelSelect({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
+
   buttonContainer: {
     flex: 1,
     top: 35,

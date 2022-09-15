@@ -39,7 +39,7 @@ export default function Traffic({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -109,7 +109,7 @@ export default function Traffic({ navigation }) {
         </Text>
     </CollapsibleBox>
 
-    <Image style={styles.headimg} source={belt}/>
+    <Image style={CoreStyle.headimg} source={belt}/>
 
         <Text style={CoreStyle.subtitle}> Things to avoid when shopping for carseats </Text>
             <Text style={CoreStyle.content}>
@@ -166,9 +166,9 @@ export default function Traffic({ navigation }) {
             tips for parents on how to be good car safety role models, and things to avoid. {'\n'}
         </Text>
 
-    <Image style={styles.headimg} source={car}/>
+    <Image style={CoreStyle.headimg} source={car}/>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.buttons}>
 
     <SourcesButton
         onPress={handleTrafficSourcesNav}
@@ -191,24 +191,9 @@ export default function Traffic({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    },
-    
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-    },
     hdrimg: {
         height: 150,
         width: 175,
-        alignSelf: "center",
-    },
-    headimg: {
-        height: 150,
-        width: 150,
         alignSelf: "center",
     },
     rearimg: {
@@ -232,11 +217,4 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 10,
     },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
-    
 });

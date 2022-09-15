@@ -6,6 +6,13 @@ import { StyleSheet } from "react-native";
 
 export const CoreStyle = StyleSheet.create({
 
+    // background image formatting
+    image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center",
+    },
+
     // Main header/title text for info, media pages etc.
     title: { 
         fontSize: 40,
@@ -13,7 +20,6 @@ export const CoreStyle = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         textDecorationLine: "underline",
-        flex: 9
     },
 
     // Secondary headers for subsections
@@ -22,6 +28,7 @@ export const CoreStyle = StyleSheet.create({
         marginBottom: 20,
         textAlign: "center",
         fontWeight: "bold",
+        marginHorizontal: 10,
     },
 
     // Small text
@@ -58,6 +65,17 @@ export const CoreStyle = StyleSheet.create({
         marginTop: 30,
         marginHorizontal: 20,
         justifyContent: "space-between",
+    },
+
+    // text style for module page titles
+    moduleText: {
+      // margin: 100,
+      height: 70,
+      fontSize: 40,
+      marginTop: 60,
+      marginBottom: 25,
+      fontWeight: "bold",
+      textAlign: "center",
     },
 
     //buttonContainer for housing crayon section buttons on module pages
@@ -105,11 +123,97 @@ export const CoreStyle = StyleSheet.create({
         marginBottom: 75,
     },
 
+    // style for the sources and media buttons at the end of info sections
+    buttons: {
+        display: "flex",
+        flexDirection: "row",
+    },
+
+    // header image style for most of info sections
+    headimg: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
+    },
+
     // image viewer sizing
     imgview: {
         height: 500,
         width: "100%",
         marginBottom: 100,
+    },
+
+    // random contain style for About/Disclaim
+    contain: {
+        marginHorizontal: 25,
+    },
+
+    // other random contain style for About/Disclaim
+    container: {
+      marginTop: 50,
+      marginBottom: 25,
+      marginHorizontal: 10,
+    },
+
+    // Modal Text style for header content in About/Disclaim
+    minorText: {
+        marginTop: 150,
+        marginBottom: 15,
+        fontWeight: "bold",
+        textAlign: "center",
+    },
+
+    // text style for in-game About
+    disclaimer: {
+        fontSize: 10,
+        marginHorizontal: 35,
+        marginBottom: 10,
+    },
+
+    // text style for main menu Disclaim
+    about: {
+        fontSize: 12,
+        marginHorizontal: 10,
+    },
+
+    // contain in row
+    row: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
+    // contain and center
+    center: {
+        alignItems: "center",
+    },
+
+    // text style for settings pages
+    settingText: {
+        height: 70,
+        fontSize: 40,
+        marginTop: 150,
+        marginBottom: 15,
+        fontWeight: "bold",
+        textAlign: "center",
+    },
+
+    // container style for setting buttons
+    settingContainer: {
+        flex: 1,
+        top: -80,
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 30,
+    },
+
+    // container style for answer choices in quizzes
+    quizContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 65,
     },
 
     // invisible back button for spacing

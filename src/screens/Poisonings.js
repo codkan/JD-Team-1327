@@ -35,7 +35,7 @@ export default function Poisonings({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -59,7 +59,7 @@ export default function Poisonings({ navigation }) {
 
     <Text style={CoreStyle.title}> Poisonings  </Text>
 
-    <Image style={styles.headimg} source={poison_hdr}/>
+    <Image style={styles.hdrimg} source={poison_hdr}/>
 
     <Text style={CoreStyle.subtitle}>Tips to prevent child poisoning:</Text>
 
@@ -123,7 +123,7 @@ export default function Poisonings({ navigation }) {
             {'\n'}
             </Text>
 
-        <View style={styles.buttons}>
+        <View style={CoreStyle.buttons}>
 
         <SourcesButton
             onPress={handlePoisoningSourcesNav}
@@ -148,16 +148,16 @@ export default function Poisonings({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+    hdrimg: {
+        height: 150,
+        width: 65,
+        alignSelf: "center",
+    },
     pillImg: {
         height: 150,
         width:130,
         alignSelf: "center",
         marginTop: 20,
-    },
-    
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
     },
     houseImg: {
         height: 150,
@@ -170,30 +170,5 @@ const styles = StyleSheet.create({
         width: 250,
         alignSelf: "center",
         marginBottom: 20,
-    },
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center",
-    }, 
-    content: {
-        fontSize: 16,
-        marginBottom: 15,
-        marginLeft: 15,
-        marginRight: 15,
-    },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
-    },
-    container: {
-        alignItems: "center",
-    },
-    headimg: {
-        height: 150,
-        width: 65,
-        alignSelf: "center",
     },
 });

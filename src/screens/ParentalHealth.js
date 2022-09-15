@@ -32,7 +32,7 @@ export default function ParentalHealth({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={styles.image}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
@@ -52,7 +52,7 @@ export default function ParentalHealth({ navigation }) {
 
     <Text style={CoreStyle.title}> Parental Health </Text>
 
-    <Image style={styles.headimg} source={ppd2}/>
+    <Image style={CoreStyle.headimg} source={ppd2}/>
 
     <Text style={CoreStyle.subtitle}> Symptoms for Either Parent</Text>
 
@@ -108,7 +108,7 @@ export default function ParentalHealth({ navigation }) {
             </Text>
         </CollapsibleBox>
 
-        <Image style={styles.headimg} source={ppd3}/>
+        <Image style={CoreStyle.headimg} source={ppd3}/>
 
     <Text style={CoreStyle.subtitle}> Baby Blues or Postpartum Depression? </Text>
 
@@ -121,7 +121,7 @@ export default function ParentalHealth({ navigation }) {
         If you have postpartum depression, prompt treatment can help you manage your symptoms and help you bond with your baby. [2]
     </Text>
 
-    <Image style={styles.headimg} source={ppd4}/>
+    <Image style={CoreStyle.headimg} source={ppd4}/>
 
     <Text style={CoreStyle.subtitle}> Long-Term Effects of Untreated Postpartum Depression [2] </Text>
 
@@ -138,7 +138,7 @@ export default function ParentalHealth({ navigation }) {
 
     <Image style={styles.footimg} source={ppd5}/>
 
-    <View style={styles.buttons}>
+    <View style={CoreStyle.buttons}>
     <SourcesButton
         txtColor={"black"}
         onPress={handleParentalHealthSourcesNav}
@@ -160,31 +160,11 @@ export default function ParentalHealth({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    image: {
-        flex: 1,
-        justifyContent: "center",
-    },
-    buttons: {
-        display: "flex",
-        flexDirection: "row",
-    },
-    headimg: {
-        height: 150,
-        width: 150,
-        alignSelf: "center",
-        marginBottom: 10,
-    },
     footimg: {
         height: 150,
         width: 225,
         alignSelf: "center",
         marginBottom: 15,
         marginTop: 15,
-    },
-    page: {
-        fontSize: 18,
-        textAlign: "center",
-        marginTop: 50,
-        fontStyle: "italic",
     },
 });

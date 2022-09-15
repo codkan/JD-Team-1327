@@ -4,6 +4,7 @@ import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
+import { CoreStyle } from "../components/CoreStyle.js";
 
 export default function About({ navigation }) {
   //NAV CALLBACK
@@ -25,9 +26,9 @@ export default function About({ navigation }) {
 
 
   return (
-    <ImageBackground source={Background} style={styles.image}>
-    <Text style={styles.modalText}> Settings</Text>
-    <View style={styles.buttonContainer}>
+    <ImageBackground source={Background} style={CoreStyle.image}>
+    <Text style={CoreStyle.settingText}> Settings</Text>
+    <View style={CoreStyle.settingContainer}>
     <MainButton
       text="Accessibility Settings"
       onPress={handleSettings2Nav}
@@ -51,36 +52,3 @@ export default function About({ navigation }) {
     </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-  },
-  modalText: {
-    height: 70,
-    fontSize: 40,
-    marginTop: 150,
-    marginBottom: 15,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  container: {
-    flex: 1,
-    paddingTop: 40,
-    marginTop: 150,
-    marginBottom: 15,
-    alignItems: "center"
-  },
-  buttonContainer: {
-      flex: 1,
-      top: -80,
-      alignItems: "center",
-      justifyContent: "center",
-      marginTop: 30,
-  },
-  button: {
-    color: "black",
-  },
-});
