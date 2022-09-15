@@ -2,15 +2,13 @@ import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Background from "../assets/bg.png";
-import PMM3 from "../assets/PoisoningsMM/PMM3.png";
-import PMM4 from "../assets/PoisoningsMM/PMM5.jpg";
-import PoisoningsMM2 from "../assets/PoisoningsMM/PoisoningMM2.jpg";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
+import ImageViewer from "react-native-image-zoom-viewer";
 
 export default function PoisoningsMM({ navigation }) {
     //NAV CALLBACK
@@ -32,6 +30,27 @@ export default function PoisoningsMM({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("DrowningMM");
     }
+
+    const images = [
+        {
+        url: '',
+        props: {
+            source: require("../assets/PoisoningsMM/PoisoningMM2.jpg")
+            },
+        },
+        {
+        url: '',
+        props: {
+            source: require("../assets/PoisoningsMM/PMM3.png")
+            },
+        },
+        {
+        url: '',
+        props: {
+            source: require("../assets/PoisoningsMM/PMM5.jpg")
+            },
+        }
+    ];
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -58,18 +77,9 @@ export default function PoisoningsMM({ navigation }) {
 
     <View style={CoreStyle.mediaContainer}>
     <Text style={CoreStyle.title}> Poisonings </Text>
-    <Image style={styles.img} source={PoisoningsMM2}/>
-    <Text>
-        {'\n'}{'\n'}{'\n'}
-        </Text>
-    <Image style={styles.img} source={PMM3}/>
-    <Text>
-        {'\n'}{'\n'}{'\n'}
-        </Text>
-    <Image style={styles.newimg} source={PMM4}/>
-    <Text>
-        {'\n'}{'\n'}{'\n'}
-        </Text>
+        <View style = {CoreStyle.imgview}>
+            <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+        </View>
     </View>
 
     <VideoPlayer videoID = "JQob-pwLZJ8"/>

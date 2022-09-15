@@ -1,12 +1,13 @@
 import React from "react";
 import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Background from "../assets/bg.png";
-import silent from "../assets/Drowning_Infographic.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
+import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
+import ImageViewer from "react-native-image-zoom-viewer";
 
 export default function DrowningMM({ navigation }) {
     //NAV CALLBACK
@@ -28,6 +29,15 @@ export default function DrowningMM({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("CarSafetyMM");
     }
+
+    const images = [
+        {
+        url: '',
+        props: {
+            source: require("../assets/Drowning_Infographic.png")
+            },
+        },
+    ];
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -52,26 +62,21 @@ export default function DrowningMM({ navigation }) {
 
     <ScrollView>
 
-    <Text style={CoreStyle.title}> Drownings </Text>
+        <Text style={CoreStyle.title}> Drownings </Text>
 
-<View style={CoreStyle.mediaContainer}>
+        <View style = {CoreStyle.imgview}>
+        <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+        </View>
 
-    <Image style={styles.img} source={silent}/>
+        <VideoPlayer videoID = "L0KTqPloUiU"/>
 
-    <TouchableOpacity onPress={() => Linking.openURL('http://spotthedrowningchild.com/')}>
-         <Text style={styles.link}> See just how hard it can be to see a drowning child </Text>
-    </TouchableOpacity>
-
-    <View style={CoreStyle.mediaButtons}>
-
-    <MainButton
-          text="Go to Drowning"
-          onPress={goToDrowning}
-          txtColor={"black"}
-    ></MainButton>
-
-    </View>
-</View>
+        <View style={CoreStyle.mediaButtons}>
+            <MainButton
+                  text="Go to Drowning"
+                  onPress={goToDrowning}
+                  txtColor={"black"}
+            ></MainButton>
+        </View>
 
 </ScrollView>
 
@@ -100,12 +105,4 @@ const styles = StyleSheet.create({
         marginTop: 50,
         fontStyle: "italic",
     },
-    link: {
-        textDecorationLine:'underline',
-        color:'blue',
-        margin: 10,
-        marginBottom: 25,
-        fontSize: 25,
-        textAlign: "center",
-    }
 });

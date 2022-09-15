@@ -103,5 +103,12 @@ export const CoreStyle = StyleSheet.create({
         alignItems: "center",
         marginTop: -20,
         marginBottom: 75,
-    }
+    },
+
+    // image viewer sizing
+    imgview: {
+        height: 500,
+        width: "100%",
+        marginBottom: 100,
+    },
 });

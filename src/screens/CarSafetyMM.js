@@ -1,12 +1,13 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
-import play from "../assets/carSafetyMM/playSafe.jpg";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
+import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
+import ImageViewer from "react-native-image-zoom-viewer";
 
 export default function CarSafetyMM({ navigation }) {
     //NAV CALLBACK
@@ -31,6 +32,15 @@ export default function CarSafetyMM({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("ParentalHealthMM");
     }
+
+    const images = [
+        {
+        url: '',
+        props: {
+            source: require("../assets/carSafetyMM/playSafe.jpg")
+            },
+        },
+    ];
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -57,20 +67,19 @@ export default function CarSafetyMM({ navigation }) {
 
     <Text style={CoreStyle.title}> Car Safety </Text>
 
-<View style={CoreStyle.mediaContainer}>
+    <View style = {CoreStyle.imgview}>
+    <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+    </View>
 
-    <Image style={styles.img} source={play}/>
+    <VideoPlayer videoID = "f2GD2HTCNMI"/>
 
     <View style={CoreStyle.mediaButtons}>
-
-    <MainButton
-          text="Go to Car Safety"
-          onPress={goToCarSafety}
-          txtColor={"black"}
-    ></MainButton>
-
+        <MainButton
+              text="Go to Car Safety"
+              onPress={goToCarSafety}
+              txtColor={"black"}
+        ></MainButton>
     </View>
-</View>
 </ScrollView>
 
     <View style = {CoreStyle.pushdown}>
@@ -96,9 +105,4 @@ const styles = StyleSheet.create({
         marginTop: 50,
         fontStyle: "italic",
     },
-    link: {
-        textDecorationLine:'underline',
-        color:'blue',
-        margin: 10,
-    }
 });

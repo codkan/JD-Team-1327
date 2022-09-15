@@ -2,16 +2,13 @@ import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Background from "../assets/bg.png";
-import BMM1 from "../assets/BurnsMM/bmm1.jpeg";
-import BMM2 from "../assets/BurnsMM/bmm2.png";
-import BMM3 from "../assets/BurnsMM/bmm3.jpeg";
-import BMM4 from "../assets/BurnsMM/bmm4.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
+import ImageViewer from "react-native-image-zoom-viewer";
 
 export default function BurnsMM({ navigation }) {
     //NAV CALLBACK
@@ -33,6 +30,33 @@ export default function BurnsMM({ navigation }) {
     const handleNextNav = () => {
         navigation.navigate("PoisoningsMM");
     }
+
+    const images = [
+        {
+        url: '',
+        props: {
+            source: require("../assets/BurnsMM/bmm1.jpeg")
+            },
+        },
+        {
+        url: '',
+        props: {
+            source: require("../assets/BurnsMM/bmm2.png")
+            },
+        },
+        {
+        url: '',
+        props: {
+            source: require("../assets/BurnsMM/bmm3.jpeg")
+            },
+        },
+        {
+        url: '',
+        props: {
+            source: require("../assets/BurnsMM/bmm4.png")
+            },
+        },
+    ];
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -58,23 +82,10 @@ export default function BurnsMM({ navigation }) {
     <ScrollView> 
 
     <View style={CoreStyle.mediaContainer}>
-    <Text style={CoreStyle.title}> Burns </Text>
-    <Image style={styles.newimg1} source={BMM1}/>
-    <Text>
-        {'\n'}{'\n'}{'\n'}
-        </Text>
-    <Image style={styles.newimg2} source={BMM2}/>
-    <Text>
-        {'\n'}{'\n'}{'\n'}
-        </Text>
-    <Image style={styles.newimg3} source={BMM3}/>
-    <Text>
-        {'\n'}{'\n'}{'\n'}
-        </Text>
-    <Image style={styles.newimg4} source={BMM4}/>
-    <Text>
-        {'\n'}{'\n'}{'\n'}
-        </Text>
+        <Text style={CoreStyle.title}> Burns </Text>
+        <View style = {CoreStyle.imgview}>
+            <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+        </View>
     </View>
 
     <VideoPlayer videoID = "IZP_9VIgcnw"/>
@@ -106,22 +117,6 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: "cover",
         justifyContent: "center",
-    },
-    newimg1: {
-        height: 600,
-        width: "100%",
-    },
-    newimg2: {
-        height: 1500,
-        width: "100%",
-    },
-    newimg3: {
-        height: 550,
-        width: "100%",
-    },
-    newimg4: {
-        height: 900,
-        width: "100%",
     },
     page: {
         fontSize: 18,

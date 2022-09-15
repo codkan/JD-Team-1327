@@ -1,12 +1,13 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
-import ppd from "../assets/parentalHealthMM/ppd1.jpg";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
+import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
+import ImageViewer from "react-native-image-zoom-viewer";
 
 export default function ParentalHealthMM({ navigation }) {
     //NAV CALLBACK
@@ -25,6 +26,15 @@ export default function ParentalHealthMM({ navigation }) {
     const handleLastNav = () => {
         navigation.navigate("CarSafetyMM");
     }
+
+    const images = [
+        {
+        url: '',
+        props: {
+            source: require("../assets/parentalHealthMM/ppd1.jpg")
+            },
+        },
+    ];
 
     return (
     <ImageBackground source={Background} style={styles.image}>
@@ -47,20 +57,19 @@ export default function ParentalHealthMM({ navigation }) {
 
     <Text style={CoreStyle.title}> Parental Health </Text>
 
-<View style={CoreStyle.mediaContainer}>
+    <View style = {CoreStyle.imgview}>
+    <ImageViewer imageUrls={images} backgroundColor={"white"}/>
+    </View>
 
-    <Image style={styles.img} source={ppd}/>
+    <VideoPlayer videoID = "6kaCdrvNGZw"/>
 
     <View style={CoreStyle.mediaButtons}>
-
-    <MainButton
-          text="Go to Parental Health"
-          onPress={goToParentalHealth}
-          txtColor={"black"}
-    ></MainButton>
-
+        <MainButton
+              text="Go to Parental Health"
+              onPress={goToParentalHealth}
+              txtColor={"black"}
+        ></MainButton>
     </View>
-</View>
 </ScrollView>
 
     <View style = {CoreStyle.pushdown}>
