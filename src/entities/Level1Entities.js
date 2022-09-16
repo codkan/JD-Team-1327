@@ -24,14 +24,14 @@ const Entities = () => {
 
   let player = Matter.Bodies.rectangle(
     MAX_WIDTH / 12,
-    MAX_HEIGHT / 2,
+    MAX_HEIGHT * 0.8,
     30,
     70
   );
 
   let npc = Matter.Bodies.rectangle(
     MAX_WIDTH / 3 + 25,
-    MAX_HEIGHT / 6,
+    MAX_HEIGHT / 4,
     40,
     70,
     { isStatic: true }
@@ -53,14 +53,14 @@ const Entities = () => {
   );
   let fireplace = Matter.Bodies.rectangle(
     MAX_WIDTH * 0.3,
-    MAX_HEIGHT * 0.95,
+    MAX_HEIGHT * 0.90,
     130,
     40,
     { isStatic: true }
   );
   let chair = Matter.Bodies.rectangle(
     (x = MAX_WIDTH * 0.85),
-    (y = MAX_HEIGHT / 2 + 35),
+    (y = MAX_HEIGHT * 0.65),
     (width = 30),
     (height = 30),
     { isStatic: true }
@@ -68,14 +68,14 @@ const Entities = () => {
 
   let rug = Matter.Bodies.circle(
     (x = MAX_WIDTH * 0.8),
-    (y = MAX_HEIGHT * 0.3),
+    (y = MAX_HEIGHT * 0.4),
     (radius = 0),
     { isStatic: true }
   );
 
   let bookshelf = Matter.Bodies.rectangle(
     (x = MAX_WIDTH * 0.88),
-    (y = MAX_HEIGHT * 0.35),
+    (y = MAX_HEIGHT * 0.45),
     (width = 30),
     (height = 60),
     { isStatic: true }
@@ -83,14 +83,14 @@ const Entities = () => {
 
   let lamp = Matter.Bodies.rectangle(
     (x = MAX_WIDTH * 0.88),
-    (y = MAX_HEIGHT * 0.2),
+    (y = MAX_HEIGHT * 0.3),
     (width = 20),
     (height = 40),
     { isStatic: true }
   );
   let sideTable = Matter.Bodies.rectangle(
-    MAX_WIDTH / 4 ,
-    MAX_HEIGHT / 7 + 30,
+    MAX_WIDTH / 4.5,
+    MAX_HEIGHT / 3.5,
     15,
     10,
     { isStatic: true }
@@ -98,7 +98,7 @@ const Entities = () => {
 
   let couch = Matter.Bodies.rectangle(
     MAX_WIDTH / 8,
-    MAX_HEIGHT / 7,
+    MAX_HEIGHT / 5,
     130,
     95,
     { isStatic: true }
@@ -106,7 +106,7 @@ const Entities = () => {
 
   let coffeeTable = Matter.Bodies.rectangle(
     MAX_WIDTH / 8,
-    MAX_HEIGHT / 3,
+    MAX_HEIGHT / 3 + 25,
     100,
     35,
     { isStatic: true }
@@ -114,12 +114,11 @@ const Entities = () => {
 
   let tv = Matter.Bodies.rectangle(
     MAX_WIDTH / 8,
-    MAX_HEIGHT / 3 + 50,
+    MAX_HEIGHT / 2,
     25,
     25,
     { isStatic: true }
   );
-  
 
   let top_wall = Matter.Bodies.rectangle(
     (x = 0),
@@ -173,7 +172,6 @@ const Entities = () => {
 
   return {
     physics: { engine: engine, world: world },
-
     npc: { 
       body: npc, 
       size: [90, 90], 
@@ -197,9 +195,6 @@ const Entities = () => {
       color: "black",
       renderer: Fireplace,
     },
-
-
-
     lamp: {
       body: lamp,
       color: "black",
@@ -212,7 +207,6 @@ const Entities = () => {
       color: "black",
       renderer: SideTable,
     },
-
     coffeeTable: {
       body: coffeeTable,
       size: [120, 120],
