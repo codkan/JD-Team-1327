@@ -13,7 +13,7 @@ export default function MenuButton({ text, onPress, visible }) {
     noteContents = (
       <ImageBackground
         source={require("../assets/note.png")}
-        style={{ width: 100, height: 100, visible: !visible }}
+        style={{ width: 125, height: 125, visible: !visible }}
       >
         <Text style={styles.buttonText}>{text}</Text>
       </ImageBackground>
