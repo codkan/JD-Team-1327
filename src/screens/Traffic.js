@@ -47,7 +47,7 @@ export default function Traffic({ navigation }) {
                 if (i == 5) {
                     Speech.speak("Must Do's While Traveling");
                 }
-                Speech.speak(CarText[i].title + "." + CarText[i].body, {rate: 0.85});
+                Speech.speak(CarText[i].title + ". " + CarText[i].body, {rate: 0.85});
             }
         } else {
             Speech.stop();

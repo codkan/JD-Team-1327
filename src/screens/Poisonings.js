@@ -41,7 +41,7 @@ export default function Poisonings({ navigation }) {
         if (!reading) {
             Speech.speak("Poisonings" + ". " + "Tips to prevent child poisoning:" + ". ", {rate: 0.85});
             for (let i = 0; i < PoisonText.length; i++) {
-                Speech.speak(PoisonText[i].title + "." + PoisonText[i].body, {rate: 0.85});
+                Speech.speak(PoisonText[i].title + ". " + PoisonText[i].body, {rate: 0.85});
             }
         } else {
             Speech.stop();
