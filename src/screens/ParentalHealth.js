@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Background from "../assets/bg.png";
 import ppd2 from "../assets/parentalHealthMM/ppd2.png";
 import ppd3 from "../assets/parentalHealthMM/ppd3.png";
@@ -12,6 +12,8 @@ import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
+import * as Speech from "expo-speech";
+import { ParentText } from "../ParentText";
 
 export default function ParentalHealth({ navigation }) {
     //NAV CALLBACK
@@ -30,6 +32,27 @@ export default function ParentalHealth({ navigation }) {
     const backToInfo = () => {
         navigation.navigate("Info");
     };
+
+    async function speakAll() {
+        let speaking = await Speech.isSpeakingAsync();
+        if (!speaking) {
+            Speech.speak("Parental Health" + "Symptoms of Postpartum Depression for Either Parent" + ".");
+            for (let i = 0; i < ParentText.length; i++) {
+                Speech.speak(ParentText[text].title + "." + ParentText[text].body, {rate: 0.85});
+            }
+        } else {
+            Speech.stop();
+        }
+    }
+
+    async function speak(text) {
+        let speaking = await Speech.isSpeakingAsync();
+        if (!speaking) {
+            Speech.speak(ParentText[text].title + "." + ParentText[text].body, {rate: 0.85});
+        } else {
+            Speech.stop();
+        }
+    }
 
     return (
     <ImageBackground source={Background} style={CoreStyle.image}>
@@ -52,89 +75,41 @@ export default function ParentalHealth({ navigation }) {
 
     <Text style={CoreStyle.title}> Parental Health </Text>
 
-    <Image style={CoreStyle.headimg} source={ppd2}/>
+    <TouchableOpacity onPress={() => speakAll()}>
+        <Image style={CoreStyle.headimg} source={ppd2}/>
+    </TouchableOpacity>
 
-    <Text style={CoreStyle.subtitle}> Symptoms for Either Parent</Text>
+    <Text style={CoreStyle.subtitle}> Symptoms of Postpartum Depression for Either Parent</Text>
 
-        <CollapsibleBox header="1. Signs and Symptoms of Baby Blues for Either Parent [2]"
-        headerstyle={CoreStyle.bullet}>
-            <Text style={CoreStyle.subbullet}>- Mood swings {'\n'}
-            - Anxiety {'\n'}
-            - Sadness {'\n'}
-            - Irritability {'\n'}
-            - Feeling overwhelmed {'\n'}
-            - Crying {'\n'}
-            - Reduced concentration {'\n'}
-            - Appetite problems {'\n'}
-            - Trouble sleeping {'\n'}
-            </Text>
+        <CollapsibleBox header={ParentText[0].title} headerstyle={CoreStyle.bullet}>
+            <Text style={CoreStyle.subbullet}>{ParentText[0].body}</Text>
         </CollapsibleBox>
 
-        <CollapsibleBox header="2. Signs and Symptoms of Postpartum Depression for Mothers [1]"
-        headerstyle={CoreStyle.bullet}>
-            <Text style={CoreStyle.subbullet}>- Feeling sad, hopeless, or overwhelmed {'\n'}
-            - Feeling worried, scared, angry, or panicked {'\n'}
-            - Feelings of guilt or inadequacy {'\n'}
-            - Excessive crying {'\n'}
-            - Depressed modd or severe mood swings {'\n'}
-            - Sleeping too much or too little {'\n'}
-            - Eating too much or too little {'\n'}
-            - Trouble concentrating {'\n'}
-            - Wanting isolation from friends and family {'\n'}
-            - Not feeling attached to the baby {'\n'}
-            - Withdrawal from activities you usually find enjoyable {'\n'}
-            - Fear that you're not a good mother [2] {'\n'}
-            - Recurrent thoughts of death or suicide {'\n'}
-            </Text>
+        <CollapsibleBox header={ParentText[1].title} headerstyle={CoreStyle.bullet}>
+            <Text style={CoreStyle.subbullet}>{ParentText[1].body}</Text>
         </CollapsibleBox>
 
-        <CollapsibleBox header="3. Additional Signs and Symptoms of Postpartum Psychosis for Mothers [1]"
-        headerstyle={CoreStyle.bullet}>
-            <Text style={CoreStyle.subbullet}>- Thoughs of hurting the baby or yourself {'\n'}
-            - Hearing voices, seeing things that are not there, or feeling paranoid (very worried, suspicious, or mistrustful) {'\n'}
-            </Text>
+        <CollapsibleBox header={ParentText[2].title} headerstyle={CoreStyle.bullet}>
+            <Text style={CoreStyle.subbullet}>{ParentText[2].body}</Text>
         </CollapsibleBox>
 
-        <CollapsibleBox header="4. Postpartum Depression for Fathers [2]"
-        headerstyle={CoreStyle.bullet}>
-            <Text style={CoreStyle.subbullet}>
-            - New fathers can experience postpartum depression, too. They may feel sad or fatigued,
-            be overwhelmed, experience anxiety, or have changes in their usual eating and sleeping patterns, the same symptoms
-            mothers with postpartum depression experience. {'\n'}
-            - Fathers who are young, have a history of depression, experience relationship problems, or are struggling financially
-            are most at risk of postpartum depression. {'\n'}
-            - Paternal postpartum depression can have the same negative effect on partner
-            relationships and child development as postpartum depression in mothers can. {'\n'}
-            </Text>
+        <CollapsibleBox header={ParentText[3].title} headerstyle={CoreStyle.bullet}>
+            <Text style={CoreStyle.subbullet}>{ParentText[3].body}</Text>
         </CollapsibleBox>
 
+    <TouchableOpacity onPress={() => speak(4)}>
         <Image style={CoreStyle.headimg} source={ppd3}/>
+    </TouchableOpacity>
 
-    <Text style={CoreStyle.subtitle}> Baby Blues or Postpartum Depression? </Text>
+    <Text style={CoreStyle.subtitle}>{ParentText[4].title}</Text>
+        <Text style={CoreStyle.content}>{ParentText[4].body}</Text>
 
-    <Text style={CoreStyle.content}>
-        {'\t'} In the first few weeks of caring for a newborn, most new moms feel anxious, sad, frustrated, tired, and overwhelmed.
-        Sometimes known as the "baby blues," these feelings get better within a few weeks. But for some women, they are very strong 
-        or do not get better. Postpartum depression is when these feelings do not go away after about 2 weeks or make it hard for a
-        woman to take care of her baby. [1] Rarely, an extreme mood disorder called postpartum psychosis also may develop after 
-        childbirth. Postpartum depression is not a character flaw or a weakness. Sometimes it is simply a complication of giving birth.
-        If you have postpartum depression, prompt treatment can help you manage your symptoms and help you bond with your baby. [2]
-    </Text>
+    <TouchableOpacity onPress={() => speak(5)}>
+        <Image style={CoreStyle.headimg} source={ppd4}/>
+    </TouchableOpacity>
 
-    <Image style={CoreStyle.headimg} source={ppd4}/>
-
-    <Text style={CoreStyle.subtitle}> Long-Term Effects of Untreated Postpartum Depression [2] </Text>
-
-    <Text style={CoreStyle.content}>
-    {'\t'} For mothers, untreated postpartum depression can last for months or longer, sometimes becoming
-    a chronic depressive disorder. Even when treated, postpartum depression increases a woman's risk of future episodes
-    of major depression. Postpartum depression can also have a ripple effect, causing emotional strain for everyone
-    close to a new baby. When a new mother is depressed, the risk of depression in the baby's father also increases.
-    Though new dads are already at increased risk of depression, whether or not their partner is affected.
-    Finally, children of parents who have untreated postpartum depression are more likely to have emotional and
-    behavioral problems, such as sleeping and eating difficulties, excessive crying, and delays in
-    language development.
-    </Text>
+    <Text style={CoreStyle.subtitle}>{ParentText[5].title}</Text>
+        <Text style={CoreStyle.content}>{ParentText[5].body}</Text>
 
     <Image style={styles.footimg} source={ppd5}/>
 

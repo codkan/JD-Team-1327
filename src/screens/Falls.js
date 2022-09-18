@@ -41,11 +41,11 @@ export default function Falls({ navigation }) {
     };
 
     async function speakAll() {
-        let speaking = await Speech.isSpeakingAsync();
-        if (!speaking) {
-            Speech.speak("Falls" + "5 Steps to Prevent Falls" + ".");
+        let reading = await Speech.isSpeakingAsync();
+        if (!reading) {
+            Speech.speak("Falls" + "5 Steps to Prevent Falls" + ".", {rate: 0.85});
             for (let i = 0; i < FallText.length; i++) {
-                speak(i);
+                Speech.speak(FallText[i].title + "." + FallText[i].body, {rate: 0.85});
             }
         } else {
             Speech.stop();

@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { WebView } from "react-native-webview";
 import Background from "../assets/bg.png";
 import Pool from "../assets/Pool.png";
@@ -16,6 +16,8 @@ import cpr from "../assets/cpr.png";
 import alone from "../assets/alone.png";
 import teach from "../assets/teach.png";
 import VideoPlayer from "../components/VideoPlayer";
+import * as Speech from "expo-speech";
+import {DrownText} from "../DrownText";
 
 export default function Drownings({ navigation }) {
     //NAV CALLBACK
@@ -37,6 +39,27 @@ export default function Drownings({ navigation }) {
     const backToInfo = () => {
         navigation.navigate("Info");
     };
+
+    async function speakAll() {
+        let speaking = await Speech.isSpeakingAsync();
+        if (!speaking) {
+            Speech.speak("Drownings" + "5 Steps to Prevent Drownings" + ".");
+            for (let i = 0; i < DrownText.length; i++) {
+                Speech.speak(DrownText[text].title + "." + DrownText[text].body, {rate: 0.85});
+            }
+        } else {
+            Speech.stop();
+        }
+    }
+
+    async function speak(text) {
+        let speaking = await Speech.isSpeakingAsync();
+        if (!speaking) {
+            Speech.speak(DrownText[text].title + "." + DrownText[text].body, {rate: 0.85});
+        } else {
+            Speech.stop();
+        }
+    }
 
     return (
     <ImageBackground source={Background} style={CoreStyle.image}>
@@ -63,81 +86,57 @@ export default function Drownings({ navigation }) {
 
     <Text style={CoreStyle.title}> Drownings </Text>
 
-    <Image style={CoreStyle.headimg} source={Pool}/>
+    <TouchableOpacity onPress={() => speakAll()}>
+        <Image style={CoreStyle.headimg} source={Pool}/>
+    </TouchableOpacity>
 
     <Text style={CoreStyle.subtitle}> 5 steps to prevent drownings </Text>
 
-<CollapsibleBox header="1. Never leave an infant alone in the tub, even just for a few seconds" 
+<CollapsibleBox header={DrownText[0].title} 
     headerstyle={CoreStyle.bullet}>
-    <Image style={styles.bathpic} source={bath}/>
-    <Text style={CoreStyle.subbullet}>- The most likely place for infants to drown is right at home, in the tub.
-    Infants may not be able to lift their heads above water, even if there is only a few inches of water.{'\n'}
-    - Toddlers may stand up and then slip and fall, landing facedown. {'\n'}
-    - Children may accidentally turn on the hot water, scalding themselves. {'\n'}</Text>
+    <TouchableOpacity onPress={() => speak(0)}>
+        <Image style={styles.bathpic} source={bath}/>
+    </TouchableOpacity>
+    <Text style={CoreStyle.subbullet}>{DrownText[0].body}</Text>
 </CollapsibleBox> 
 
-<CollapsibleBox header="2. Young children should ALWAYS wear flotation devices around water" 
-    headerstyle={CoreStyle.bullet}>
-    <Image style={styles.floatpic} source={float}/>
-    <Text style={CoreStyle.subbullet}>- Despite parents’ best efforts, they may still get distracted briefly.
-    A floatation device may avert disaster.{'\n'}
-    - If a child falls into muddy, natural water they may be extremely hard to find under the surface
-    without a floatation device.{'\n'}</Text>
+<CollapsibleBox header={DrownText[1].title} headerstyle={CoreStyle.bullet}>
+    <TouchableOpacity onPress={() => speak(1)}>
+        <Image style={styles.floatpic} source={float}/>
+    </TouchableOpacity>
+    <Text style={CoreStyle.subbullet}>{DrownText[1].body}</Text>
 </CollapsibleBox> 
 
-<CollapsibleBox header="3. Get CPR Certified" 
-    headerstyle={CoreStyle.bullet}>
-    <Image style={styles.cprpic} source={cpr}/>
-    <Text style={CoreStyle.subbullet}>- CPR can turn fatal drownings into nonfatal drownings. {'\n'}
-    - It is a very good idea for anyone who is caring for a small child to be CPR certified.{'\n'}
-    - More information about learning CPR and getting certified is provided by the Red Cross:
-    https://www.redcross.org/take-a-class/cpr/cpr-training.{'\n'}</Text>
+<CollapsibleBox header={DrownText[2].title} headerstyle={CoreStyle.bullet}>
+    <TouchableOpacity onPress={() => speak(2)}>
+        <Image style={styles.cprpic} source={cpr}/>
+    </TouchableOpacity>
+    <Text style={CoreStyle.subbullet}>{DrownText[2].body}</Text>
 </CollapsibleBox> 
 
 
-<CollapsibleBox header="4. Never let your child swim alone or unsupervised" headerstyle={CoreStyle.bullet}>
-    <Image style={styles.alonepic} source={alone}/>
-    <Text style={CoreStyle.subbullet}>- Always keep a close eye on your child when they are in or near water. {'\n'}
-    - This includes pools with lifeguards, a lifeguard does not replace your responsibility to supervise your child{'\n'}
-    </Text>
+<CollapsibleBox header={DrownText[3].title} headerstyle={CoreStyle.bullet}>
+    <TouchableOpacity onPress={() => speak(3)}>
+        <Image style={styles.alonepic} source={alone}/>
+    </TouchableOpacity>
+    <Text style={CoreStyle.subbullet}>{DrownText[3].body}</Text>
 </CollapsibleBox>
 
-<CollapsibleBox header="5. Teach your child to swim" headerstyle={CoreStyle.bullet}>
-<Image style={styles.teachpic} source={teach}/>
-<Text style={CoreStyle.subbullet}>- Swimming lessons can greatly reduce your child’s risk but do not replace 
-    the need to follow the other advice listed. Children who know how to swim can and do still drown. {'\n'}
-    - Another important step can be to teach your child the 5 water survival skills according to SafeKids:{'\n'}
-    1: Jump into deep water, return to the surface. 2: Be able to float/tread water for 1 minute. 
-    3: Rotate 360 degrees and locate an exit from the pool. 4: Be able to swim 25 yards (to an exit). 
-    5: Exit a pool without the use of a ladder  {'\n'}</Text>
+<CollapsibleBox header={DrownText[4].title} headerstyle={CoreStyle.bullet}>
+    <TouchableOpacity onPress={() => speak(4)}>
+        <Image style={styles.teachpic} source={teach}/>
+    </TouchableOpacity>
+    <Text style={CoreStyle.subbullet}>{DrownText[4].body}</Text>
 </CollapsibleBox>
 
-<Text style={CoreStyle.subtitle}> {'\n'} Why are drownings important? </Text>
+<Text style={CoreStyle.subtitle}>{DrownText[5].title}</Text>
+    <Text style={CoreStyle.content}>{DrownText[5].body}</Text>
 
-    <Text style={CoreStyle.content}>
-    {'\t'} Almost 800 children in the United States drown each year [2], making it the leading cause
-    of accidental death among children ages 1-4 and the second leading cause among children 1-14.
-    [1] Even nonfatal drownings are a serious problem, with 40% of nonfatal drownings requiring
-    further care or hospitalization, compared to just 8% baseline of nonfatal accidental injuries.
-    [1] Nonfatal drownings may also lead to brain damage and/or long-term disability. {'\n'}
-    </Text>
+<Text style={CoreStyle.subtitle}>{DrownText[6].title}</Text>
+    <Text style={CoreStyle.content}>{DrownText[6].body}</Text>
 
-    <Text style={CoreStyle.subtitle}> Where do drownings occur? </Text>
-
-    <Text style={CoreStyle.content}>
-    {'\t'} Drownings can often occur right at home, especially with small children. The most common
-    place for children 1-4 to drown is a home swimming pool. The most common place for children under
-     1 to drown in the bathtub. [1] For older children, the most common locations are natural bodies
-     of water like lakes and rivers. [1] {'\n'}
-    </Text>
-
-<Text style={CoreStyle.subtitle}> Home Pool Tips: </Text>
-<Text style={CoreStyle.content}>
-- Construct proper 4 sided fencing around your home pool. This should include self-closing and self-latching gates. {'\n'}
-- Do not leave toys in the pool area that may entice your kid to enter the area unsupervised. {'\n'}
-- Teach your child to never swim alone, only with adult supervision. {'\n'}
-- Consider buying and installing a pool alarm.
-</Text>
+<Text style={CoreStyle.subtitle}>{DrownText[7].title}</Text>
+    <Text style={CoreStyle.content}>{DrownText[7].body}</Text>
 
 <View style={CoreStyle.buttons}>
 <SourcesButton
