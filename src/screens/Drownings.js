@@ -41,9 +41,9 @@ export default function Drownings({ navigation }) {
     };
 
     async function speakAll() {
-        let speaking = await Speech.isSpeakingAsync();
-        if (!speaking) {
-            Speech.speak("Drownings" + "5 Steps to Prevent Drownings" + ".");
+        let reading = await Speech.isSpeakingAsync();
+        if (!reading) {
+            Speech.speak("Drownings" + "5 Steps to Prevent Drownings" + ".", {rate: 0.85});
             for (let i = 0; i < DrownText.length; i++) {
                 Speech.speak(DrownText[text].title + "." + DrownText[text].body, {rate: 0.85});
             }

@@ -37,9 +37,9 @@ export default function Poisonings({ navigation }) {
     };
 
     async function speakAll() {
-        let speaking = await Speech.isSpeakingAsync();
-        if (!speaking) {
-            Speech.speak("Poisonings" + "Tips to prevent child poisoning:" + ".");
+        let reading = await Speech.isSpeakingAsync();
+        if (!reading) {
+            Speech.speak("Poisonings" + "Tips to prevent child poisoning:" + ".", {rate: 0.85});
             for (let i = 0; i < PoisonText.length; i++) {
                 Speech.speak(PoisonText[text].title + "." + PoisonText[text].body, {rate: 0.85});
             }

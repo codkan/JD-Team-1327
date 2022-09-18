@@ -39,9 +39,9 @@ export default function Burns({ navigation }) {
     };
 
     async function speakAll() {
-        let speaking = await Speech.isSpeakingAsync();
-        if (!speaking) {
-            Speech.speak("Burns" + "." + "How to Prevent Burn Injuries" + ".");
+        let reading = await Speech.isSpeakingAsync();
+        if (!reading) {
+            Speech.speak("Burns" + "How to Prevent Burn Injuries" + ".", {rate: 0.85});
             for (let i = 0; i < BurnText.length; i++) {
                 Speech.speak(BurnText[text].title + "." + BurnText[text].body, {rate: 0.85});
             }
