@@ -6,6 +6,10 @@ import outletIMG from "../assets/BurnsMM/outlet.png";
 import panIMG from "../assets/BurnsMM/pan.png";
 import scaldIMG from "../assets/BurnsMM/scald.jpeg";
 import smokeIMG from "../assets/BurnsMM/smoke.png";
+import cookIMG from "../assets/BurnsMM/cook.png";
+import sunscreenIMG from "../assets/BurnsMM/sunscreen.png";
+import treatmentIMG from "../assets/BurnsMM/treatment.png";
+import typeIMG from "../assets/BurnsMM/types.png";
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -44,6 +48,9 @@ export default function Burns({ navigation }) {
             Speech.speak("Burns" + ". " + "How to Prevent Burn Injuries" + ". ", {rate: 0.85});
             for (let i = 0; i < BurnText.length; i++) {
                 Speech.speak(BurnText[i].title + ". " + BurnText[i].body, {rate: 0.85});
+                if (i == 5) {
+                    Speech.speak("7. Most importantly, always supervise your child around any open flame", {rate: 0.85});
+                }
             }
         } else {
             Speech.stop();
@@ -54,6 +61,9 @@ export default function Burns({ navigation }) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
             Speech.speak(BurnText[text].title + "." + BurnText[text].body, {rate: 0.85});
+            if (text == 5) {
+                Speech.speak("7. Most importantly, always supervise your child around any open flame", {rate: 0.85});
+            }
         } else {
             Speech.stop();
         }
@@ -109,6 +119,9 @@ export default function Burns({ navigation }) {
 
 
     <CollapsibleBox header={BurnText[2].title} headerstyle={CoreStyle.bullet}>
+    <TouchableOpacity onPress={() => speak(2)}>
+        <Image style={styles.cookImg} source={cookIMG}/>
+    </TouchableOpacity>
         <Text style={CoreStyle.subbullet}>{BurnText[2].body}</Text>
     </CollapsibleBox>
 
@@ -128,21 +141,30 @@ export default function Burns({ navigation }) {
     </CollapsibleBox>
 
     <CollapsibleBox header={BurnText[5].title} headerstyle={CoreStyle.bullet}>
+    <TouchableOpacity onPress={() => speak(5)}>
+        <Image style={styles.sunscreenImg} source={sunscreenIMG}/>
+    </TouchableOpacity>
         <Text style={CoreStyle.subbullet}>{BurnText[5].body}</Text>
     </CollapsibleBox>
 
     <Text style={CoreStyle.bullet}>7. Most importantly, always supervise your child around any open flame {'\n'} </Text>
 
-    <Image style={styles.babyImg} source={babyIMG}/>
-
     <Text style={CoreStyle.subtitle}> {BurnText[6].title} </Text>
+    <TouchableOpacity onPress={() => speak(6)}>
+        <Image style={styles.babyImg} source={babyIMG}/>
+    </TouchableOpacity>
+    <Text style={CoreStyle.content}>{BurnText[6].body}</Text>
 
-        <Text style={CoreStyle.content}>{BurnText[6].body}</Text>
-
-        <Text style={CoreStyle.subtitle}> {BurnText[7].title} </Text>
-            <Text style={CoreStyle.content}>{BurnText[7].body}</Text>
+    <Text style={CoreStyle.subtitle}> {BurnText[7].title} </Text>
+    <TouchableOpacity onPress={() => speak(7)}>
+        <Image style={styles.typeImg} source={typeIMG}/>
+    </TouchableOpacity>
+    <Text style={CoreStyle.content}>{BurnText[7].body}</Text>
 
     <Text style={CoreStyle.subtitle}> {BurnText[8].title} </Text>
+    <TouchableOpacity onPress={() => speak(8)}>
+        <Image style={styles.treatmentImg} source={treatmentIMG}/>
+    </TouchableOpacity>
         <Text style={CoreStyle.content}>{BurnText[8].body}</Text>
 
     <View style={CoreStyle.buttons}>
@@ -199,6 +221,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         marginLeft: 'auto',
         marginRight: 'auto',
+        marginBottom: 20,
     },
     smokeImg: {
         height: 150,
@@ -211,6 +234,46 @@ const styles = StyleSheet.create({
         marginRight: 'auto',
     },
     outletImg: {
+        height: 150,
+        width: 200,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    cookImg: {
+        height: 150,
+        width: 200,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    sunscreenImg: {
+        height: 200,
+        width: 150,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    treatmentImg: {
+        height: 150,
+        width: 200,
+        resizeMode: 'stretch',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+    },
+    typeImg: {
         height: 150,
         width: 200,
         resizeMode: 'stretch',

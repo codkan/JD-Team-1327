@@ -4,6 +4,8 @@ import Background from "../assets/bg.png";
 import berries from "../assets/PoisoningsMM/berries.png";
 import house from "../assets/PoisoningsMM/house.png";
 import pills from "../assets/PoisoningsMM/Pill.png";
+import poison from "../assets/PoisoningsMM/poison.png";
+import prevent from "../assets/PoisoningsMM/prevent.png";
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -110,11 +112,17 @@ export default function Poisonings({ navigation }) {
          </CollapsibleBox>
 
         <Text style={CoreStyle.subtitle}>{PoisonText[3].title}</Text>
-            <Text style={CoreStyle.content}>{PoisonText[3].body}</Text>
+            <TouchableOpacity onPress={() => speak(3)}>
+            <Image style={styles.poisonImg} source={poison}/>
+            </TouchableOpacity>
+        <Text style={CoreStyle.content}>{PoisonText[3].body}</Text>
 
 
         <Text style={CoreStyle.subtitle}>{PoisonText[4].title}</Text>
-            <Text style={CoreStyle.content}>{PoisonText[4].body}</Text>
+            <TouchableOpacity onPress={() => speak(4)}>
+            <Image style={styles.preventImg} source={prevent}/>
+            </TouchableOpacity>
+        <Text style={CoreStyle.content}>{PoisonText[4].body}</Text>
 
         <View style={CoreStyle.buttons}>
 
@@ -163,5 +171,17 @@ const styles = StyleSheet.create({
         width: 250,
         alignSelf: "center",
         marginBottom: 20,
+    },
+    poisonImg: {
+        height: 150,
+        width:160,
+        alignSelf: "center",
+        marginVertical: 20,
+    },
+    preventImg: {
+        height: 200,
+        width:150,
+        alignSelf: "center",
+        marginVertical: 20,
     },
 });

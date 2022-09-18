@@ -2,7 +2,10 @@ import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { WebView } from "react-native-webview";
 import Background from "../assets/bg.png";
-import Pool from "../assets/Pool.png";
+import drown from "../assets/drown.png";
+import drowning from "../assets/drowning.png";
+import pool from "../assets/Pool.png";
+import hand from "../assets/hand.png";
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -87,7 +90,7 @@ export default function Drownings({ navigation }) {
     <Text style={CoreStyle.title}> Drownings </Text>
 
     <TouchableOpacity onPress={() => speakAll()}>
-        <Image style={CoreStyle.headimg} source={Pool}/>
+        <Image style={CoreStyle.headimg} source={drown}/>
     </TouchableOpacity>
 
     <Text style={CoreStyle.subtitle}> 5 steps to prevent drownings </Text>
@@ -130,13 +133,22 @@ export default function Drownings({ navigation }) {
 </CollapsibleBox>
 
 <Text style={CoreStyle.subtitle}>{DrownText[5].title}</Text>
-    <Text style={CoreStyle.content}>{DrownText[5].body}</Text>
+    <TouchableOpacity onPress={() => speak(5)}>
+        <Image style={styles.handpic} source={hand}/>
+    </TouchableOpacity>
+<Text style={CoreStyle.content}>{DrownText[5].body}</Text>
 
 <Text style={CoreStyle.subtitle}>{DrownText[6].title}</Text>
-    <Text style={CoreStyle.content}>{DrownText[6].body}</Text>
+    <TouchableOpacity onPress={() => speak(6)}>
+        <Image style={styles.drowningpic} source={drowning}/>
+    </TouchableOpacity>
+<Text style={CoreStyle.content}>{DrownText[6].body}</Text>
 
 <Text style={CoreStyle.subtitle}>{DrownText[7].title}</Text>
-    <Text style={CoreStyle.content}>{DrownText[7].body}</Text>
+    <TouchableOpacity onPress={() => speak(7)}>
+        <Image style={CoreStyle.headimg} source={pool}/>
+    </TouchableOpacity>
+<Text style={CoreStyle.content}>{DrownText[7].body}</Text>
 
 <View style={CoreStyle.buttons}>
 <SourcesButton
@@ -190,6 +202,20 @@ const styles = StyleSheet.create({
     teachpic: {
         height: 155,
         width: 230,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    handpic: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    drowningpic: {
+        height: 150,
+        width: 195,
         alignSelf: "center",
         marginTop: 10,
         marginBottom: 10,

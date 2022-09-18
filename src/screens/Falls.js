@@ -9,6 +9,9 @@ import stroller1 from "../assets/stroller1.png";
 import stroller2 from "../assets/stroller2.png";
 import tv from "../assets/TV.png";
 import window from "../assets/window.png";
+import playground from "../assets/playground.png";
+import fall1 from "../assets/fall1.png";
+import fall2 from "../assets/fall2.png"
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -129,13 +132,22 @@ export default function Falls({ navigation }) {
 </CollapsibleBox>
 
 <CollapsibleBox header={FallText[4].title} headerstyle={CoreStyle.bullet}>
+    <TouchableOpacity onPress={() => speak(4)}>
+        <Image style={styles.playpic} source={playground}/>
+    </TouchableOpacity>
     <Text style={CoreStyle.subbullet}>{FallText[4].body}</Text>
 </CollapsibleBox>
 
     <Text style={CoreStyle.subtitle}>{FallText[5].title}</Text>
+    <TouchableOpacity onPress={() => speak(5)}>
+        <Image style={styles.fallpic1} source={fall1}/>
+    </TouchableOpacity>
         <Text style={CoreStyle.content}>{FallText[5].body}</Text>
 
     <Text style={CoreStyle.subtitle}>{FallText[6].title}</Text>
+    <TouchableOpacity onPress={() => speak(6)}>
+        <Image style={styles.fallpic2} source={fall2}/>
+    </TouchableOpacity>
         <Text style={CoreStyle.content}>{FallText[6].body}</Text>
 
 <Image style={styles.longpic} source={end}/>
@@ -191,5 +203,26 @@ const styles = StyleSheet.create({
         resizeMode: "contain",
         height: 45,
         marginBottom: 20,
+    },
+    playpic: {
+        height: 150,
+        width: 200,
+        marginTop: 5,
+        alignSelf: "center",
+        marginBottom: 5,
+    },
+    fallpic1: {
+        height: 150,
+        width: 130,
+        marginTop: 5,
+        alignSelf: "center",
+        marginBottom: 5,
+    },
+    fallpic2: {
+        height: 150,
+        width: 160,
+        marginTop: 5,
+        alignSelf: "center",
+        marginBottom: 5,
     },
 });
