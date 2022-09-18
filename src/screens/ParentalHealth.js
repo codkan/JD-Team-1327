@@ -36,7 +36,7 @@ export default function ParentalHealth({ navigation }) {
     async function speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
-            Speech.speak("Parental Health" + "Symptoms of Postpartum Depression for Either Parent" + ".", {rate: 0.85});
+            Speech.speak("Parental Health" + ". " + "Symptoms of Postpartum Depression for Either Parent" + ". ", {rate: 0.85});
             for (let i = 0; i < ParentText.length; i++) {
                 Speech.speak(ParentText[i].title + "." + ParentText[i].body, {rate: 0.85});
             }

@@ -42,7 +42,7 @@ export default function Traffic({ navigation }) {
     async function speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
-            Speech.speak("Car Safety" + "Types of Car Seats" + ".", {rate: 0.85});
+            Speech.speak("Car Safety" + ". " + "Types of Car Seats" + ". ", {rate: 0.85});
             for (let i = 0; i < CarText.length; i++) {
                 if (i == 5) {
                     Speech.speak("Must Do's While Traveling");
