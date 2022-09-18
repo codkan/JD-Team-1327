@@ -43,7 +43,7 @@ export default function Burns({ navigation }) {
         if (!reading) {
             Speech.speak("Burns" + "How to Prevent Burn Injuries" + ".", {rate: 0.85});
             for (let i = 0; i < BurnText.length; i++) {
-                Speech.speak(BurnText[text].title + "." + BurnText[text].body, {rate: 0.85});
+                Speech.speak(BurnText[i].title + "." + BurnText[i].body, {rate: 0.85});
             }
         } else {
             Speech.stop();

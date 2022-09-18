@@ -45,7 +45,7 @@ export default function Drownings({ navigation }) {
         if (!reading) {
             Speech.speak("Drownings" + "5 Steps to Prevent Drownings" + ".", {rate: 0.85});
             for (let i = 0; i < DrownText.length; i++) {
-                Speech.speak(DrownText[text].title + "." + DrownText[text].body, {rate: 0.85});
+                Speech.speak(DrownText[i].title + "." + DrownText[i].body, {rate: 0.85});
             }
         } else {
             Speech.stop();
