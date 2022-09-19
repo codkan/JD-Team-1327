@@ -132,16 +132,16 @@ export default function Drownings({ navigation }) {
     <Text style={CoreStyle.subbullet}>{DrownText[4].body}</Text>
 </CollapsibleBox>
 
+<TouchableOpacity onPress={() => speak(5)}>
+    <Image style={styles.drowningpic} source={drowning}/>
+</TouchableOpacity>
 <Text style={CoreStyle.subtitle}>{DrownText[5].title}</Text>
-    <TouchableOpacity onPress={() => speak(5)}>
-        <Image style={styles.handpic} source={hand}/>
-    </TouchableOpacity>
 <Text style={CoreStyle.content}>{DrownText[5].body}</Text>
 
+<TouchableOpacity onPress={() => speak(6)}>
+    <Image style={styles.handpic} source={hand}/>
+</TouchableOpacity>
 <Text style={CoreStyle.subtitle}>{DrownText[6].title}</Text>
-    <TouchableOpacity onPress={() => speak(6)}>
-        <Image style={styles.drowningpic} source={drowning}/>
-    </TouchableOpacity>
 <Text style={CoreStyle.content}>{DrownText[6].body}</Text>
 
 <Text style={CoreStyle.subtitle}>{DrownText[7].title}</Text>

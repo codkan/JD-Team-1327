@@ -111,17 +111,17 @@ export default function Poisonings({ navigation }) {
             <Text style={CoreStyle.subbullet}>{PoisonText[2].body}</Text>
          </CollapsibleBox>
 
-        <Text style={CoreStyle.subtitle}>{PoisonText[3].title}</Text>
-            <TouchableOpacity onPress={() => speak(3)}>
+        <TouchableOpacity onPress={() => speak(3)}>
             <Image style={styles.poisonImg} source={poison}/>
-            </TouchableOpacity>
+        </TouchableOpacity>
+        <Text style={CoreStyle.subtitle}>{PoisonText[3].title}</Text>
         <Text style={CoreStyle.content}>{PoisonText[3].body}</Text>
 
 
+        <TouchableOpacity onPress={() => speak(4)}>
+        <Image style={styles.preventImg} source={prevent}/>
+        </TouchableOpacity>
         <Text style={CoreStyle.subtitle}>{PoisonText[4].title}</Text>
-            <TouchableOpacity onPress={() => speak(4)}>
-            <Image style={styles.preventImg} source={prevent}/>
-            </TouchableOpacity>
         <Text style={CoreStyle.content}>{PoisonText[4].body}</Text>
 
         <View style={CoreStyle.buttons}>

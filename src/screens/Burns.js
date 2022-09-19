@@ -149,16 +149,16 @@ export default function Burns({ navigation }) {
 
     <Text style={CoreStyle.bullet}>7. Most importantly, always supervise your child around any open flame {'\n'} </Text>
 
-    <Text style={CoreStyle.subtitle}> {BurnText[6].title} </Text>
     <TouchableOpacity onPress={() => speak(6)}>
         <Image style={styles.babyImg} source={babyIMG}/>
     </TouchableOpacity>
+    <Text style={CoreStyle.subtitle}> {BurnText[6].title} </Text>
     <Text style={CoreStyle.content}>{BurnText[6].body}</Text>
 
-    <Text style={CoreStyle.subtitle}> {BurnText[7].title} </Text>
     <TouchableOpacity onPress={() => speak(7)}>
         <Image style={styles.typeImg} source={typeIMG}/>
     </TouchableOpacity>
+    <Text style={CoreStyle.subtitle}> {BurnText[7].title} </Text>
     <Text style={CoreStyle.content}>{BurnText[7].body}</Text>
 
     <Text style={CoreStyle.subtitle}> {BurnText[8].title} </Text>

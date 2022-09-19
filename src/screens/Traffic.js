@@ -13,8 +13,12 @@ import rearSeat from "../assets/carSafetyMM/rearSeat.png";
 import foreSeat from "../assets/carSafetyMM/foreSeat.png";
 import boostSeat from "../assets/carSafetyMM/boostSeat.png";
 import belt from "../assets/carSafetyMM/belt.png";
+import seatbelt from "../assets/carSafetyMM/seatbelt.png";
 import carSafety from "../assets/carSafetyMM/carSafety.png";
 import safe from "../assets/carSafetyMM/safe.png";
+import kid from "../assets/carSafetyMM/kid.png";
+import heat from "../assets/carSafetyMM/heat.png";
+import clean from "../assets/carSafetyMM/clean.png";
 import * as Speech from "expo-speech";
 import {CarText} from "../CarText";
 
@@ -57,6 +61,9 @@ export default function Traffic({ navigation }) {
     async function speak(text) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
+                if (text == 5) {
+                    Speech.speak("Must Do's While Traveling");
+                }
             Speech.speak(CarText[text].title + "." + CarText[text].body, {rate: 0.85});
         } else {
             Speech.stop();
@@ -115,42 +122,53 @@ export default function Traffic({ navigation }) {
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[3].title} headerstyle={CoreStyle.bullet}>
+        <TouchableOpacity onPress={() => speak(3)}>
+            <Image style={CoreStyle.headimg} source={seatbelt}/>
+        </TouchableOpacity>
         <Text style={CoreStyle.subbullet}>{CarText[3].body}</Text>
     </CollapsibleBox>
 
     <TouchableOpacity onPress={() => speak(4)}>
-        <Image style={CoreStyle.headimg} source={belt}/>
+        <Image style={styles.safeimg} source={safe}/>
     </TouchableOpacity>
-
     <Text style={CoreStyle.subtitle}>{CarText[4].title}</Text>
         <Text style={CoreStyle.content}>{CarText[4].body}</Text>
 
     <Text style={CoreStyle.subtitle}> Must-Dos while traveling </Text>
 
     <CollapsibleBox header={CarText[5].title} headerstyle={CoreStyle.bullet}>
+        <TouchableOpacity onPress={() => speak(5)}>
+            <Image style={CoreStyle.headimg} source={belt}/>
+        </TouchableOpacity>
         <Text style={CoreStyle.subbullet}>{CarText[5].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[6].title} headerstyle={CoreStyle.bullet}>
+        <TouchableOpacity onPress={() => speak(6)}>
+            <Image style={styles.kidimg} source={kid}/>
+        </TouchableOpacity>
         <Text style={CoreStyle.subbullet}>{CarText[6].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[7].title} headerstyle={CoreStyle.bullet}>
+        <TouchableOpacity onPress={() => speak(7)}>
+            <Image style={styles.heatimg} source={heat}/>
+        </TouchableOpacity>
         <Text style={CoreStyle.subbullet}>{CarText[7].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[8].title} headerstyle={CoreStyle.bullet}>
+        <TouchableOpacity onPress={() => speak(8)}>
+            <Image style={styles.cleanimg} source={clean}/>
+        </TouchableOpacity>
         <Text style={CoreStyle.subbullet}>{CarText[8].body}</Text>
     </CollapsibleBox>
 
     <TouchableOpacity onPress={() => speak(9)}>
-        <Image style={styles.foreimg} source={safe}/>
+        <Image style={styles.carimg} source={car}/>
     </TouchableOpacity>
-
      <Text style={CoreStyle.subtitle}>{CarText[9].title}</Text>
         <Text style={CoreStyle.content}>{CarText[9].body}</Text>
-
-    <Image style={CoreStyle.headimg} source={car}/>
 
     <View style={CoreStyle.buttons}>
 
@@ -200,5 +218,34 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         marginTop: 10,
         marginBottom: 10,
+    },
+    safeimg: {
+        height: 160,
+        width: 120,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: -10,
+    },
+    carimg: {
+        height: 150,
+        width: 175,
+        alignSelf: "center",
+        marginTop: 10,
+        marginBottom: -10,
+    },
+    kidimg: {
+        height: 210,
+        width: 150,
+        alignSelf: "center",
+    },
+    heatimg: {
+        height: 150,
+        width: 150,
+        alignSelf: "center",
+    },
+    cleanimg: {
+        height: 226,
+        width: 150,
+        alignSelf: "center",
     },
 });

@@ -138,16 +138,16 @@ export default function Falls({ navigation }) {
     <Text style={CoreStyle.subbullet}>{FallText[4].body}</Text>
 </CollapsibleBox>
 
-    <Text style={CoreStyle.subtitle}>{FallText[5].title}</Text>
     <TouchableOpacity onPress={() => speak(5)}>
         <Image style={styles.fallpic1} source={fall1}/>
     </TouchableOpacity>
+    <Text style={CoreStyle.subtitle}>{FallText[5].title}</Text>
         <Text style={CoreStyle.content}>{FallText[5].body}</Text>
 
-    <Text style={CoreStyle.subtitle}>{FallText[6].title}</Text>
     <TouchableOpacity onPress={() => speak(6)}>
         <Image style={styles.fallpic2} source={fall2}/>
     </TouchableOpacity>
+    <Text style={CoreStyle.subtitle}>{FallText[6].title}</Text>
         <Text style={CoreStyle.content}>{FallText[6].body}</Text>
 
 <Image style={styles.longpic} source={end}/>
@@ -214,9 +214,9 @@ const styles = StyleSheet.create({
     fallpic1: {
         height: 150,
         width: 130,
-        marginTop: 5,
+        marginTop: 10,
         alignSelf: "center",
-        marginBottom: 5,
+        marginBottom: 0,
     },
     fallpic2: {
         height: 150,
