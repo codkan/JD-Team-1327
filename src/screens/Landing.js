@@ -8,6 +8,7 @@ import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "reac
 import disclaim from "../assets/info.png";
 import setting from "../assets/settings.png";
 import Background from "../assets/bg.png";
+import Background_alt from "../assets/bg-alt.png";
 import logo from "../assets/landinglogo.png"
 import game from "../assets/landingCrayons/game.png";
 import info from "../assets/landingCrayons/info.png";
@@ -23,6 +24,19 @@ export default function Landing({ navigation }) {
 
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
 
+    if (global.scheme == "dark") {
+        global.bg = Background_alt;
+        global.color = "darkslategrey";
+        global.color2 = "lightslategray";
+        global.color3 = "black";
+        global.text = "white";
+    } else {
+        global.bg = Background;
+        global.color = "ivory";
+        global.color2 = "papayawhip";
+        global.color3 = "lightgray";
+        global.text = "black";
+    }
 
   const handleInfoNav = () => {
     navigation.navigate("Info");

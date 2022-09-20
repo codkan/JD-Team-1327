@@ -9,6 +9,18 @@ export default function TopicButton({ text, onPress }) {
   );
 }
 
+    if (global.scheme == "dark") {
+        global.color = "darkslategrey";
+        global.color2 = "lightslategray";
+        global.color3 = "black";
+        global.text = "white";
+    } else {
+        global.color = "ivory";
+        global.color2 = "papayawhip";
+        global.color3 = "lightgray";
+        global.text = "black";
+    }
+
 const styles = StyleSheet.create({
   button: {
     height: 50,
