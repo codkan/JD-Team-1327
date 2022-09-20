@@ -43,7 +43,7 @@ export default function About({ navigation }) {
 
   return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
-    <Text style={CoreStyle.moduleText}>Sources</Text>
+    <Text allowFontScaling={true} style={CoreStyle.moduleText}>Sources</Text>
     <View style = {CoreStyle.buttonContainer}>
         <TouchableOpacity onPress={handleGoToFallSource}>
             <Image source={falls} style={CoreStyle.crayon}></Image>

@@ -35,8 +35,8 @@ export default function Landing({ navigation }) {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("Home");
   };
-  const handleSettings1Nav = () => {
-    navigation.navigate("Settings1");
+  const handleSettingsNav = () => {
+    navigation.navigate("Settings");
   };
   const handleSourcesNav = () => {
     navigation.navigate("Sources");
@@ -55,7 +55,7 @@ export default function Landing({ navigation }) {
         <TouchableOpacity onPress={handleDisclaimNav}>
             <Image source={disclaim} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleSettings1Nav} style={CoreStyle.btn}>
+        <TouchableOpacity onPress={handleSettingsNav} style={CoreStyle.btn}>
             <Image source={setting} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
       </View>

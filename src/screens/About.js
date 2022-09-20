@@ -19,12 +19,12 @@ export default function About({ navigation }) {
   return (
     <ImageBackground source={Background} style={CoreStyle.image}>
       <View style={CoreStyle.contain}>
-      <Text style={CoreStyle.minorText}>
+      <Text allowFontScaling={true} style={CoreStyle.minorText}>
         Welcome to Child Safe: The Video Game! {'\n'}
         Team Client: Dr. Ann McClellan {'\n'}
         Team: Sora Bang, Justin Deal, Jayla Demaine, Elina Ebby, Sam Thomas, David Okao
       </Text>
-      <Text style={CoreStyle.disclaimer}>
+      <Text allowFontScaling={true} style={CoreStyle.disclaimer}>
         Disclaimer: {'\n'}
         Team 1327, responsible for the rest of application, claims no ownership of this game as it was developed by Team BeDot a semester beforehand for the same client. {'\n'}
         This product is for educational and informational purposes only and is solely designed as a helpful tool for users to think about child safety and the devastating consequences of childhood injuries. {'\n'}

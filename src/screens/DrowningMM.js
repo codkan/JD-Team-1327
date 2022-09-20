@@ -62,7 +62,7 @@ export default function DrowningMM({ navigation }) {
 
     <ScrollView>
 
-        <Text style={CoreStyle.title}> Drownings </Text>
+        <Text allowFontScaling={true} style={CoreStyle.title}> Drownings </Text>
 
         <View style = {CoreStyle.imgview}>
         <ImageViewer imageUrls={images} backgroundColor={global.color}/>

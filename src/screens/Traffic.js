@@ -93,82 +93,82 @@ export default function Traffic({ navigation }) {
 
     <ScrollView>
 
-    <Text style={CoreStyle.title}> Car Safety </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Car Safety </Text>
     <TouchableOpacity onPress={() => speakAll()}>
         <Image style={styles.hdrimg} source={carSafety}/>
     </TouchableOpacity>
 
-    <Text style={CoreStyle.subtitle}> Types of Car Seats </Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> Types of Car Seats </Text>
 
     <CollapsibleBox header={CarText[0].title} headerstyle={CoreStyle.bullet}>
         <TouchableOpacity onPress={() => speak(0)}>
             <Image style={styles.rearimg} source={rearSeat}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{CarText[0].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{CarText[0].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[1].title} headerstyle={CoreStyle.bullet}>
         <TouchableOpacity onPress={() => speak(1)}>
             <Image style={styles.foreimg} source={foreSeat}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{CarText[1].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{CarText[1].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[2].title} headerstyle={CoreStyle.bullet}>
         <TouchableOpacity onPress={() => speak(2)}>
             <Image style={styles.boostimg} source={boostSeat}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{CarText[2].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{CarText[2].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[3].title} headerstyle={CoreStyle.bullet}>
         <TouchableOpacity onPress={() => speak(3)}>
             <Image style={CoreStyle.headimg} source={seatbelt}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{CarText[3].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{CarText[3].body}</Text>
     </CollapsibleBox>
 
     <TouchableOpacity onPress={() => speak(4)}>
         <Image style={styles.safeimg} source={safe}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subtitle}>{CarText[4].title}</Text>
-        <Text style={CoreStyle.content}>{CarText[4].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}>{CarText[4].title}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.content}>{CarText[4].body}</Text>
 
-    <Text style={CoreStyle.subtitle}> Must-Dos while traveling </Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> Must-Dos while traveling </Text>
 
     <CollapsibleBox header={CarText[5].title} headerstyle={CoreStyle.bullet}>
         <TouchableOpacity onPress={() => speak(5)}>
             <Image style={CoreStyle.headimg} source={belt}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{CarText[5].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{CarText[5].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[6].title} headerstyle={CoreStyle.bullet}>
         <TouchableOpacity onPress={() => speak(6)}>
             <Image style={styles.kidimg} source={kid}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{CarText[6].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{CarText[6].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[7].title} headerstyle={CoreStyle.bullet}>
         <TouchableOpacity onPress={() => speak(7)}>
             <Image style={styles.heatimg} source={heat}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{CarText[7].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{CarText[7].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={CarText[8].title} headerstyle={CoreStyle.bullet}>
         <TouchableOpacity onPress={() => speak(8)}>
             <Image style={styles.cleanimg} source={clean}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{CarText[8].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{CarText[8].body}</Text>
     </CollapsibleBox>
 
     <TouchableOpacity onPress={() => speak(9)}>
         <Image style={styles.carimg} source={car}/>
     </TouchableOpacity>
-     <Text style={CoreStyle.subtitle}>{CarText[9].title}</Text>
-        <Text style={CoreStyle.content}>{CarText[9].body}</Text>
+     <Text allowFontScaling={true} style={CoreStyle.subtitle}>{CarText[9].title}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.content}>{CarText[9].body}</Text>
 
     <View style={CoreStyle.buttons}>
 

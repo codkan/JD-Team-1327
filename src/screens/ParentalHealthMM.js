@@ -57,7 +57,7 @@ export default function ParentalHealthMM({ navigation }) {
 
     <ScrollView>
 
-    <Text style={CoreStyle.title}> Parental Health </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Parental Health </Text>
 
     <View style = {CoreStyle.imgview}>
     <ImageViewer imageUrls={images} backgroundColor={global.color}/>

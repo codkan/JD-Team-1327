@@ -1,7 +1,3 @@
-/*
- * Home Screen
- */
-
 import { Audio } from "expo-av";
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
@@ -24,10 +20,11 @@ export default function Home({ navigation }) {
       shouldDuckAndroid: true,
       staysActiveInBackground: true,
       playThroughEarpieceAndroid: true,
-      volume: 0.5,
     });
     try {
         const sound = new Audio.Sound();
+        sound.volume = global.volume,
+        sound.muted = global.muted,
         setSound(sound);
         await sound.loadAsync(require("../assets/gameMusic.mp3"));
         await sound.playAsync();

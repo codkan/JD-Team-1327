@@ -41,12 +41,12 @@ export default function Win({navigation}){
 <ScrollView>
 
     <View style={styles.container}>
-    <Text> {'\n'} </Text>
-    <Text style={CoreStyle.title}> {txt} Quiz Completed </Text>
-    <Text> {'\n'} </Text>
-    <Text style={CoreStyle.subtitle}> Congratulations! </Text>
-    <Text> {'\n'} </Text>
-    <Text style={CoreStyle.subtitle2}> You answered {score} out of {total} questions correctly </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> {txt} Quiz Completed </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> Congratulations! </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle2}> You answered {score} out of {total} questions correctly </Text>
     <Image source={basket} style={styles.image}></Image>
     </View>
 

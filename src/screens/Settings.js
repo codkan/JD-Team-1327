@@ -15,16 +15,6 @@ export default function About({ navigation }) {
     navigation.pop();
   };
 
-  const handleSettings1Nav = () => {
-    navigation.navigate("Settings1");
-  };
-  const handleSettings2Nav = () => {
-    navigation.navigate("Settings2");
-  };
-  const handleSettings3Nav = () => {
-    navigation.navigate("Settings3");
-  };
-
   const changeScheme = () => {
     if (global.scheme == "light") {
         global.scheme = "dark";
@@ -46,30 +36,41 @@ export default function About({ navigation }) {
     return;
   };
 
-  const [selectedValue, setSelectedValue] = useState("java");
+  const changeVolume = (lvl) => {
+    if (lvl > 0) {
+        global.volume = global.volume + 0.1;
+    } else if (lvl < 0) {
+        global.volume = global.volume - 0.1;
+    } else {
+        global.volume = 0.0;
+        global.isMuted = true;
+    }
+  }
 
   return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
-    <Text style={CoreStyle.settingText}> Settings</Text>
+    <Text allowFontScaling={true} style={CoreStyle.settingText}> Settings</Text>
     <View style={CoreStyle.settingContainer}>
-    <MainButton
-      text="Accessibility Settings"
-      onPress={handleSettings2Nav}
-      txtColor={"black"}
-    ></MainButton>
-    <MainButton
-          text="Sound Settings"
-          onPress={handleSettings3Nav}
-          txtColor={"black"}
-    ></MainButton>
     <MainButton
       text="Invert Colors"
       txtColor={"black"}
       onPress={() => changeScheme()}
     ></MainButton>
     <MainButton
-      text="Font Size"
+      text="Mute Sound"
       txtColor={"black"}
+      onPress={() => changeVolume(0)}
+    ></MainButton>
+    <MainButton
+      text="Decrease Volume"
+      txtColor={"black"}
+      onPress={() => changeVolume(-1)}
+    ></MainButton>
+    <MainButton
+      text="Increase Volume"
+      txtColor={"black"}
+      onPress={() => changeVolume(1)}
+
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>

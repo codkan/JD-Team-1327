@@ -76,7 +76,7 @@ export default function PoisoningsMM({ navigation }) {
     <ScrollView> 
 
     <View style={CoreStyle.mediaContainer}>
-    <Text style={CoreStyle.title}> Poisonings </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Poisonings </Text>
         <View style = {CoreStyle.imgview}>
             <ImageViewer imageUrls={images} backgroundColor={global.color}/>
         </View>

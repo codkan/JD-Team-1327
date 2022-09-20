@@ -82,7 +82,7 @@ export default function BurnsMM({ navigation }) {
     <ScrollView> 
 
     <View style={CoreStyle.mediaContainer}>
-        <Text style={CoreStyle.title}> Burns </Text>
+        <Text allowFontScaling={true} style={CoreStyle.title}> Burns </Text>
         <View style = {CoreStyle.imgview}>
             <ImageViewer imageUrls={images} backgroundColor={global.color}/>
         </View>

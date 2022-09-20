@@ -87,34 +87,34 @@ export default function Drownings({ navigation }) {
 
     <ScrollView>
 
-    <Text style={CoreStyle.title}> Drownings </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Drownings </Text>
 
     <TouchableOpacity onPress={() => speakAll()}>
         <Image style={CoreStyle.headimg} source={drown}/>
     </TouchableOpacity>
 
-    <Text style={CoreStyle.subtitle}> 5 steps to prevent drownings </Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> 5 steps to prevent drownings </Text>
 
 <CollapsibleBox header={DrownText[0].title} 
     headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => speak(0)}>
         <Image style={styles.bathpic} source={bath}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subbullet}>{DrownText[0].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subbullet}>{DrownText[0].body}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header={DrownText[1].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => speak(1)}>
         <Image style={styles.floatpic} source={float}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subbullet}>{DrownText[1].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subbullet}>{DrownText[1].body}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header={DrownText[2].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => speak(2)}>
         <Image style={styles.cprpic} source={cpr}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subbullet}>{DrownText[2].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subbullet}>{DrownText[2].body}</Text>
 </CollapsibleBox> 
 
 
@@ -122,33 +122,33 @@ export default function Drownings({ navigation }) {
     <TouchableOpacity onPress={() => speak(3)}>
         <Image style={styles.alonepic} source={alone}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subbullet}>{DrownText[3].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subbullet}>{DrownText[3].body}</Text>
 </CollapsibleBox>
 
 <CollapsibleBox header={DrownText[4].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => speak(4)}>
         <Image style={styles.teachpic} source={teach}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subbullet}>{DrownText[4].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subbullet}>{DrownText[4].body}</Text>
 </CollapsibleBox>
 
 <TouchableOpacity onPress={() => speak(5)}>
     <Image style={styles.drowningpic} source={drowning}/>
 </TouchableOpacity>
-<Text style={CoreStyle.subtitle}>{DrownText[5].title}</Text>
-<Text style={CoreStyle.content}>{DrownText[5].body}</Text>
+<Text allowFontScaling={true} style={CoreStyle.subtitle}>{DrownText[5].title}</Text>
+<Text allowFontScaling={true} style={CoreStyle.content}>{DrownText[5].body}</Text>
 
 <TouchableOpacity onPress={() => speak(6)}>
     <Image style={styles.handpic} source={hand}/>
 </TouchableOpacity>
-<Text style={CoreStyle.subtitle}>{DrownText[6].title}</Text>
-<Text style={CoreStyle.content}>{DrownText[6].body}</Text>
+<Text allowFontScaling={true} style={CoreStyle.subtitle}>{DrownText[6].title}</Text>
+<Text allowFontScaling={true} style={CoreStyle.content}>{DrownText[6].body}</Text>
 
-<Text style={CoreStyle.subtitle}>{DrownText[7].title}</Text>
+<Text allowFontScaling={true} style={CoreStyle.subtitle}>{DrownText[7].title}</Text>
     <TouchableOpacity onPress={() => speak(7)}>
         <Image style={CoreStyle.headimg} source={pool}/>
     </TouchableOpacity>
-<Text style={CoreStyle.content}>{DrownText[7].body}</Text>
+<Text allowFontScaling={true} style={CoreStyle.content}>{DrownText[7].body}</Text>
 
 <View style={CoreStyle.buttons}>
 <SourcesButton

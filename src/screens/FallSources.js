@@ -48,51 +48,51 @@ export default function FallSources({ navigation }) {
 
 <ScrollView>
 
-    <Text style={CoreStyle.title}> Fall Sources: </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Fall Sources: </Text>
 
     <View style={CoreStyle.center}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Stanford Children Accident Statistics </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [1] Stanford Children Accident Statistics </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=falls--injury-statistics-and-incidence-rates-90-P02974')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] Stanford Children Incidence Rates </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [2] Stanford Children Incidence Rates </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/safechild/images/cdc-childhoodinjury.pdf')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/tip/falls-prevention-tips')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [4] SafeKids Fall Prevention Tips </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [4] SafeKids Fall Prevention Tips </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/tv')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [5] SafeKids - Tip-Overs </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [5] SafeKids - Tip-Overs </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/playgroundsafety')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [6] SafeKids - Playground Safety </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [6] SafeKids - Playground Safety </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/products-strollers.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [7] KidsHealth - Stroller Safety </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [7] KidsHealth - Stroller Safety </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <MainButton
           text="Go to Falls"

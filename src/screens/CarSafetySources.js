@@ -22,16 +22,16 @@ export default function CarSafety({ navigation }) {
 
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
-    <Text style={CoreStyle.title}> Car Safety Sources: </Text>
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Car Safety Sources: </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
 <View style={CoreStyle.center}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.healthychildren.org/English/safety-prevention/on-the-go/Pages/Car-Safety-Seats-Information-for-Families.aspx')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Car Safety </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [1] Car Safety </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <MainButton
           text="Go to Burns"

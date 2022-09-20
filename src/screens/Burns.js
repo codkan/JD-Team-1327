@@ -92,13 +92,13 @@ export default function Burns({ navigation }) {
 
     <ScrollView>
 
-    <Text style={CoreStyle.title}> Burns </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Burns </Text>
 
     <TouchableOpacity onPress={() => speakAll()}>
         <Image style={CoreStyle.headimg} source={bhdr}/>
     </TouchableOpacity>
 
-    <Text style={CoreStyle.subtitle}> How to prevent burn injuries? </Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> How to prevent burn injuries? </Text>
 
     <CollapsibleBox header={BurnText[0].title} headerstyle={CoreStyle.bullet}>
 
@@ -106,7 +106,7 @@ export default function Burns({ navigation }) {
         <Image style={styles.scaldImg} source={scaldIMG}/>
     </TouchableOpacity>
 
-        <Text style={CoreStyle.subbullet}>{BurnText[0].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{BurnText[0].body}</Text>
     </CollapsibleBox>
 
 
@@ -114,7 +114,7 @@ export default function Burns({ navigation }) {
     <TouchableOpacity onPress={() => speak(1)}>
         <Image style={styles.outletImg} source={outletIMG}/> 
     </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{BurnText[1].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{BurnText[1].body}</Text>
     </CollapsibleBox>
 
 
@@ -122,14 +122,14 @@ export default function Burns({ navigation }) {
     <TouchableOpacity onPress={() => speak(2)}>
         <Image style={styles.cookImg} source={cookIMG}/>
     </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{BurnText[2].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{BurnText[2].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={BurnText[3].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => speak(3)}>
         <Image style={styles.panImg} source={panIMG}/>
     </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{BurnText[3].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{BurnText[3].body}</Text>
     </CollapsibleBox>
 
 
@@ -137,35 +137,35 @@ export default function Burns({ navigation }) {
     <TouchableOpacity onPress={() => speak(4)}>
         <Image style={styles.smokeImg} source={smokeIMG}/>
     </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{BurnText[4].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{BurnText[4].body}</Text>
     </CollapsibleBox>
 
     <CollapsibleBox header={BurnText[5].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => speak(5)}>
         <Image style={styles.sunscreenImg} source={sunscreenIMG}/>
     </TouchableOpacity>
-        <Text style={CoreStyle.subbullet}>{BurnText[5].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subbullet}>{BurnText[5].body}</Text>
     </CollapsibleBox>
 
-    <Text style={CoreStyle.bullet}>7. Most importantly, always supervise your child around any open flame {'\n'} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.bullet}>7. Most importantly, always supervise your child around any open flame {'\n'} </Text>
 
     <TouchableOpacity onPress={() => speak(6)}>
         <Image style={styles.babyImg} source={babyIMG}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subtitle}> {BurnText[6].title} </Text>
-    <Text style={CoreStyle.content}>{BurnText[6].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> {BurnText[6].title} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.content}>{BurnText[6].body}</Text>
 
     <TouchableOpacity onPress={() => speak(7)}>
         <Image style={styles.typeImg} source={typeIMG}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subtitle}> {BurnText[7].title} </Text>
-    <Text style={CoreStyle.content}>{BurnText[7].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> {BurnText[7].title} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.content}>{BurnText[7].body}</Text>
 
-    <Text style={CoreStyle.subtitle}> {BurnText[8].title} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> {BurnText[8].title} </Text>
     <TouchableOpacity onPress={() => speak(8)}>
         <Image style={styles.treatmentImg} source={treatmentIMG}/>
     </TouchableOpacity>
-        <Text style={CoreStyle.content}>{BurnText[8].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.content}>{BurnText[8].body}</Text>
 
     <View style={CoreStyle.buttons}>
 

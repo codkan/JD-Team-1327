@@ -27,23 +27,23 @@ export default function About({ navigation }) {
     <ImageBackground source={Background} style={CoreStyle.image}>
       <View style={CoreStyle.howContain}>
         <View style={CoreStyle.line}>
-            <Text fontSize={15}> You control a young parent </Text>
+            <Text allowFontScaling={true} fontSize={15}> You control a young parent </Text>
             <Image style={CoreStyle.pic} source={pc}/>
         </View>
         <View style={CoreStyle.line}>
-            <Text fontSize={15}> You must explore the house and find potential dangers to collect notes </Text>
+            <Text allowFontScaling={true} fontSize={15}> You must explore the house and find potential dangers to collect notes </Text>
             <Image style={CoreStyle.pic} source={table}/>
         </View>
         <View style={CoreStyle.line}>
-            <Text fontSize={15}> Simply walk up to dangerous things like stoves, lamps, etc. and click the "Collect Note" button </Text>
+            <Text allowFontScaling={true} fontSize={15}> Simply walk up to dangerous things like stoves, lamps, etc. and click the "Collect Note" button </Text>
             <Image style={CoreStyle.pic} source={note}/>
         </View>
         <View style={CoreStyle.line}>
-            <Text fontSize={15}> If you are ever confused, find the experienced old nanny </Text>
+            <Text allowFontScaling={true} fontSize={15}> If you are ever confused, find the experienced old nanny </Text>
             <Image style={CoreStyle.pic} source={npc}/>
         </View>
         <View style={CoreStyle.line}>
-            <Text fontSize={15}> Just walk up to her and click the "Speak" button for instructions </Text>
+            <Text allowFontScaling={true} fontSize={15}> Just walk up to her and click the "Speak" button for instructions </Text>
             <Image style={CoreStyle.pic} source={talk}/>
         </View>
       </View>

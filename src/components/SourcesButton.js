@@ -1,12 +1,10 @@
 import React from "react";
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity } from "react-native";
 
-export default function MMButton({ text, onPress, txtColor }) {
+export default function MMButton({ text, onPress }) {
   return (
-      <TouchableOpacity onPress={onPress}>
-        <View style={styles.button}>
-            <Image source={require("../assets/links-line-alt.png")} style={styles.icon}></Image>
-        </View>
+      <TouchableOpacity onPress={onPress} style={styles.button}>
+        <Image source={require("../assets/links-line-alt.png")} style={styles.icon}></Image>
       </TouchableOpacity>
   );
 }

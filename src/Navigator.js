@@ -14,9 +14,7 @@
  import Info from "./screens/Info";
  import Review from "./screens/Review";
  import Sources from "./screens/Sources";
- import Settings1 from "./screens/Settings1";
- import Settings2 from "./screens/Settings2";
- import Settings3 from "./screens/Settings3";
+ import Settings from "./screens/Settings";
  
  import Home from "./screens/Home";
  import LevelSelect from "./screens/LevelSelect";
@@ -211,20 +209,8 @@
          headerShown: false,
        },
      },
-     Settings1: {
-         screen: Settings1,
-         navigationOptions: {
-           headerShown: false,
-         },
-     },
-     Settings2: {
-         screen: Settings2,
-         navigationOptions: {
-           headerShown: false,
-         },
-     },
-     Settings3: {
-         screen: Settings3,
+     Settings: {
+         screen: Settings,
          navigationOptions: {
            headerShown: false,
          },

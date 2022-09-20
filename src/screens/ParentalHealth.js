@@ -77,53 +77,53 @@ export default function ParentalHealth({ navigation }) {
 
     <ScrollView>
 
-    <Text style={CoreStyle.title}> Parental Health </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Parental Health </Text>
 
     <TouchableOpacity onPress={() => speakAll()}>
         <Image style={CoreStyle.headimg} source={ppd2}/>
     </TouchableOpacity>
 
-    <Text style={CoreStyle.subtitle}> Symptoms of Postpartum Depression</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> Symptoms of Postpartum Depression</Text>
 
         <CollapsibleBox header={ParentText[0].title} headerstyle={CoreStyle.bullet}>
             <TouchableOpacity onPress={() => speak(0)}>
                 <Image style={styles.eitherimg} source={either}/>
             </TouchableOpacity>
-            <Text style={CoreStyle.subbullet}>{ParentText[0].body}</Text>
+            <Text allowFontScaling={true} style={CoreStyle.subbullet}>{ParentText[0].body}</Text>
         </CollapsibleBox>
 
         <CollapsibleBox header={ParentText[1].title} headerstyle={CoreStyle.bullet}>
             <TouchableOpacity onPress={() => speak(1)}>
                 <Image style={styles.mother1img} source={mother1}/>
             </TouchableOpacity>
-            <Text style={CoreStyle.subbullet}>{ParentText[1].body}</Text>
+            <Text allowFontScaling={true} style={CoreStyle.subbullet}>{ParentText[1].body}</Text>
         </CollapsibleBox>
 
         <CollapsibleBox header={ParentText[2].title} headerstyle={CoreStyle.bullet}>
             <TouchableOpacity onPress={() => speak(2)}>
                 <Image style={CoreStyle.headimg} source={mother2}/>
             </TouchableOpacity>
-            <Text style={CoreStyle.subbullet}>{ParentText[2].body}</Text>
+            <Text allowFontScaling={true} style={CoreStyle.subbullet}>{ParentText[2].body}</Text>
         </CollapsibleBox>
 
         <CollapsibleBox header={ParentText[3].title} headerstyle={CoreStyle.bullet}>
             <TouchableOpacity onPress={() => speak(3)}>
                 <Image style={styles.fatherimg} source={father}/>
             </TouchableOpacity>
-            <Text style={CoreStyle.subbullet}>{ParentText[3].body}</Text>
+            <Text allowFontScaling={true} style={CoreStyle.subbullet}>{ParentText[3].body}</Text>
         </CollapsibleBox>
 
     <TouchableOpacity onPress={() => speak(4)}>
         <Image style={CoreStyle.headimg} source={ppd3}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subtitle}>{ParentText[4].title}</Text>
-        <Text style={CoreStyle.content}>{ParentText[4].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}>{ParentText[4].title}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.content}>{ParentText[4].body}</Text>
 
     <TouchableOpacity onPress={() => speak(5)}>
         <Image style={CoreStyle.headimg} source={ppd4}/>
     </TouchableOpacity>
-    <Text style={CoreStyle.subtitle}>{ParentText[5].title}</Text>
-        <Text style={CoreStyle.content}>{ParentText[5].body}</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}>{ParentText[5].title}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.content}>{ParentText[5].body}</Text>
 
     <View style={CoreStyle.buttons}>
     <SourcesButton

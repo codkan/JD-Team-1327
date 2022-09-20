@@ -3,15 +3,13 @@
  */
 
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text } from "react-native";
 import { color } from "react-native-reanimated";
 
 export default function BackButton({ text, onPress}) {
   return (
-    <TouchableOpacity onPress={onPress}>
-      <View style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button}>
         <Text style={styles.buttonText}>{text}</Text>
-      </View>
     </TouchableOpacity>
   );
 }
@@ -22,7 +20,7 @@ const styles = StyleSheet.create({
     width: 50,
     borderRadius: 100,
     backgroundColor: global.color,
-    borderColor: "lightgray",
+    borderColor: global.color3,
     borderWidth: 2,
     shadowColor: 'black',
     shadowOpacity: 0.25,
@@ -32,7 +30,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-
   buttonText: {
     fontStyle: "normal",
     fontSize: 32,

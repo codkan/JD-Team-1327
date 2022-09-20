@@ -82,47 +82,47 @@ export default function Poisonings({ navigation }) {
     
     <ScrollView>
 
-    <Text style={CoreStyle.title}>Poisonings</Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}>Poisonings</Text>
 
     <TouchableOpacity onPress={() => speakAll()}>
     <Image style={styles.hdrimg} source={poison_hdr}/>
     </TouchableOpacity>
 
-    <Text style={CoreStyle.subtitle}>Tips to prevent child poisoning:</Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}>Tips to prevent child poisoning:</Text>
 
         <CollapsibleBox header={PoisonText[0].title} headerstyle={CoreStyle.bullet}>
             <TouchableOpacity onPress={() => speak(0)}>
             <Image style={styles.pillImg} source={pills}/>
             </TouchableOpacity>
-            <Text style={CoreStyle.subbullet}>{PoisonText[0].body}</Text>
+            <Text allowFontScaling={true} style={CoreStyle.subbullet}>{PoisonText[0].body}</Text>
          </CollapsibleBox>
         
          <CollapsibleBox header={PoisonText[1].title} headerstyle={CoreStyle.bullet}>
              <TouchableOpacity onPress={() => speak(1)}>
             <Image style={styles.houseImg} source={house}/>
             </TouchableOpacity>
-            <Text style={CoreStyle.subbullet}>{PoisonText[1].body}</Text>
+            <Text allowFontScaling={true} style={CoreStyle.subbullet}>{PoisonText[1].body}</Text>
         </CollapsibleBox>
         
         <CollapsibleBox header={PoisonText[2].title} headerstyle={CoreStyle.bullet}>
             <TouchableOpacity onPress={() => speak(2)}>
             <Image style={styles.berriesImg} source={berries}/>
             </TouchableOpacity>
-            <Text style={CoreStyle.subbullet}>{PoisonText[2].body}</Text>
+            <Text allowFontScaling={true} style={CoreStyle.subbullet}>{PoisonText[2].body}</Text>
          </CollapsibleBox>
 
         <TouchableOpacity onPress={() => speak(3)}>
             <Image style={styles.poisonImg} source={poison}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subtitle}>{PoisonText[3].title}</Text>
-        <Text style={CoreStyle.content}>{PoisonText[3].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subtitle}>{PoisonText[3].title}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.content}>{PoisonText[3].body}</Text>
 
 
         <TouchableOpacity onPress={() => speak(4)}>
         <Image style={styles.preventImg} source={prevent}/>
         </TouchableOpacity>
-        <Text style={CoreStyle.subtitle}>{PoisonText[4].title}</Text>
-        <Text style={CoreStyle.content}>{PoisonText[4].body}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.subtitle}>{PoisonText[4].title}</Text>
+        <Text allowFontScaling={true} style={CoreStyle.content}>{PoisonText[4].body}</Text>
 
         <View style={CoreStyle.buttons}>
 

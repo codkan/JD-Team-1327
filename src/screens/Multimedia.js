@@ -37,7 +37,7 @@ export default function Multimedia({ navigation }) {
 
   return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
-    <Text style={CoreStyle.moduleText}>Multimedia</Text>
+    <Text allowFontScaling={true} style={CoreStyle.moduleText}>Multimedia</Text>
     <View style={CoreStyle.buttonContainer}>
         <TouchableOpacity onPress={handleFallsMMNav}>
             <Image source={falls} style={CoreStyle.crayon}></Image>

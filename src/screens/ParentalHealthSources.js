@@ -44,22 +44,22 @@ export default function ParentalHealth({ navigation }) {
 
 <ScrollView>
 
-    <Text style={CoreStyle.title}> Parental Health Sources: </Text>
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Parental Health Sources: </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
 <View style={CoreStyle.center}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/ppd.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] Parental Health </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [1] Parental Health </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.mayoclinic.org/diseases-conditions/postpartum-depression/symptoms-causes/syc-20376617')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] Parental Health </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [2] Parental Health </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <MainButton
           text="Go to Parental Health"

@@ -1,12 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function TopicButton({ text, onPress, txtColor }) {
+export default function TopicButton({ text, onPress }) {
   return (
-    <TouchableOpacity onPress={onPress}>
-      <View style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button}>
         <Text style={styles.buttonText}>{text}</Text>
-      </View>
     </TouchableOpacity>
   );
 }
@@ -19,7 +17,7 @@ const styles = StyleSheet.create({
     paddingVertical: 0,
     paddingHorizontal: 10,
     backgroundColor: global.color,
-    borderColor: "lightgray",
+    borderColor: global.color3,
     borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",

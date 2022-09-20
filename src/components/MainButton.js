@@ -1,13 +1,11 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text } from "react-native";
 import { color } from "react-native-reanimated";
 
 export default function MainButton({ text, onPress}) {
   return (
-    <TouchableOpacity onPress={onPress}>
-      <View style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button}>
         <Text style={styles.buttonText}>{text}</Text>
-      </View>
     </TouchableOpacity>
   );
 }
@@ -18,7 +16,7 @@ const styles = StyleSheet.create({
     width: 345,
     borderRadius: 10,
     backgroundColor: global.color,
-    borderColor: "lightgray",
+    borderColor: global.color3,
     borderWidth: 2,
     marginVertical: 10,
     alignItems: "center",
@@ -29,7 +27,6 @@ const styles = StyleSheet.create({
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
   },
-
   buttonText: {
     fontStyle: "normal",
     fontSize: 30,

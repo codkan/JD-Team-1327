@@ -4,6 +4,20 @@ import { Dimensions } from "react-native";
 // This is meant to be a core, shared style library for styles to encourage consistency
 // and code reuse throughout the app.
 
+    if (global.scheme == "light") {
+        global.scheme = "dark";
+        global.color = "darkslategrey";
+        global.color2 = "lightslategray";
+        global.color3 = "black";
+        global.text = "white";
+    } else {
+        global.scheme = "light";
+        global.color = "ivory";
+        global.color2 = "papayawhip";
+        global.color3 = "lightgray";
+        global.text = "black";
+    }
+
 export const CoreStyle = StyleSheet.create({
 
     // background image formatting
@@ -138,9 +152,8 @@ export const CoreStyle = StyleSheet.create({
         right: 0,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: "#C4C4C4",
+        backgroundColor: global.color,
     },
-
     // special container for level select screen
     levelContainer: {
         position: 'absolute',

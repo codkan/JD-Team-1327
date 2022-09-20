@@ -147,9 +147,7 @@ export default class FallsR extends Component{
     }
 
   render(){
-      
       var randomFallQs =  this.state.answers.sort(() => Math.random() - 0.5);
-      
       return (
         <ImageBackground source={global.bg} style={CoreStyle.image}>
 
@@ -169,9 +167,9 @@ export default class FallsR extends Component{
             ></BackButton>
         </View>
 
-        <Text style={CoreStyle.title}> {this.state.qNum} </Text>
-        <Text> {'\n'} </Text>
-        <Text style={CoreStyle.subtitle}> {this.state.Q} </Text>
+        <Text allowFontScaling={true} style={CoreStyle.title}> {this.state.qNum} </Text>
+        <Text allowFontScaling={true}> {'\n'} </Text>
+        <Text allowFontScaling={true} style={CoreStyle.subtitle}> {this.state.Q} </Text>
 
         <View style={CoreStyle.quizContainer}>
         <QuizButton

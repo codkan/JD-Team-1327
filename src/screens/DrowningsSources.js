@@ -51,21 +51,21 @@ export default function Falls1({ navigation }) {
 
 <ScrollView>
 
-    <Text style={CoreStyle.title}> Drownings Sources: </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Drownings Sources: </Text>
 
 <View style={CoreStyle.center}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/drowning/facts/index.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] CDC Drownings Page </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [1] CDC Drownings Page </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.safekids.org/sites/default/files/water-safety-infographic-long-version.pdf')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] SafeKids Drowning Safety</Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [2] SafeKids Drowning Safety</Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     
     <MainButton

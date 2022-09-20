@@ -172,13 +172,13 @@ export default class LevelThree extends Component {
           >
             <View style={CoreStyle.centeredView}>
               <View style={CoreStyle.modalView}>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Collect All The Notes To Progress To The Next Level.
                   </Text>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Then go pet the nice doggo.
                 </Text>
-                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {
@@ -201,7 +201,7 @@ export default class LevelThree extends Component {
           >
             <View style={CoreStyle.centeredView}>
               <View style={CoreStyle.modalView}>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Time: {this.state.min}:{this.state.sec}:{this.state.msec}
                 </Text>
                 <MenuButton
@@ -251,7 +251,7 @@ export default class LevelThree extends Component {
         >
           <View style={CoreStyle.centeredView}>
             <View style={CoreStyle.modalView}>
-              <Text style={CoreStyle.modalText}>You Pet The Dog!</Text>
+              <Text allowFontScaling={true} style={CoreStyle.modalText}>You Pet The Dog!</Text>
               <MenuButton
                 text="OK"
                 onPress={() => {
@@ -283,8 +283,8 @@ export default class LevelThree extends Component {
           >
             <View style={CoreStyle.centeredView}>
               <View style={CoreStyle.modalView}>
-                <Text style={CoreStyle.modalTitle}>Hot Car</Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalTitle}>Hot Car</Text>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Children dying from heatstroke in cars, either because they
                   were left or became trapped, has increased in the recent
                   years. On April 25, the first vehicular heatstroke of 2020
@@ -292,17 +292,17 @@ export default class LevelThree extends Component {
                   vehicle without his family noticing. His death follows 52 car
                   deaths in 2019, and a record 53 deaths in 2018.
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   The majority of hot car deaths – 54% - happen because someone
                   forgets a child in a car. Nearly 75% of children who are
                   forgotten and die are under 2 years old.
                 </Text>
-                <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths'); }}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths'); }}>
                   Source:
                   https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths
                 </Text>
                 <Image style={styles.carimg} source={car}/>
-                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {
@@ -325,16 +325,16 @@ export default class LevelThree extends Component {
           >
             <View style={CoreStyle.centeredView}>
               <View style={CoreStyle.modalView}>
-                <Text style={CoreStyle.modalTitle}>Drowning:</Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalTitle}>Drowning:</Text>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Drowning is the leading cause of injury death in children 1 –
                   4.
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Young children can drown in as little as an inch or two of
                   water, and it can happen quickly and silently.
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   The biggest drowning threat facing families with toddlers is
                   unexpected, unsurpervised access to water: swimming pools, hot
                   tubs and spas, bathtubs, natural bodies of water such as
@@ -342,7 +342,7 @@ export default class LevelThree extends Component {
                   drownings among children 4 and younger happen during non-swim
                   times.
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Research suggests that fencing can prevent more than half of
                   all swimming pool drownings of young children. Swimming pools,
                   including large, inflatable above-ground pools and other
@@ -350,11 +350,11 @@ export default class LevelThree extends Component {
                   all 4 sides.
                 </Text>
                 <Image style={styles.poolimg} source={pool}/>
-                <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx'); }}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx'); }}>
                   Source:
                   https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx
                 </Text>
-                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {

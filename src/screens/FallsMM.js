@@ -64,7 +64,7 @@ export default function FallsM0({ navigation }) {
     <ScrollView>
 
 <View style={CoreStyle.mediaContainer}>
-    <Text style={CoreStyle.title}> Falls </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Falls </Text>
     <View style = {CoreStyle.imgview}>
     <ImageViewer imageUrls={images} backgroundColor={global.color}/>
     </View>

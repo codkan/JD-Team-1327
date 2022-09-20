@@ -65,7 +65,7 @@ export default function CarSafetyMM({ navigation }) {
 
     <ScrollView>
 
-    <Text style={CoreStyle.title}> Car Safety </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Car Safety </Text>
 
     <View style = {CoreStyle.imgview}>
     <ImageViewer imageUrls={images} backgroundColor={global.color}/>

@@ -26,8 +26,8 @@ function Item({ item }) {
         style={{ height: 100, width: 100 }}
       />
       <View style={{ alignItems: "center", flex: 1 }}>
-        <Text style={{ fontWeight: "bold", color: "black", fontSize: 22 }}>{item.name}</Text>
-        <Text style={{color: "black", paddingTop: MAX_HEIGHT*.02, fontSize:20}}>{item.position}</Text>
+        <Text allowFontScaling={true} style={{ fontWeight: "bold", color: "black", fontSize: 22 }}>{item.name}</Text>
+        <Text allowFontScaling={true} style={{color: "black", paddingTop: MAX_HEIGHT*.02, fontSize:20}}>{item.position}</Text>
       </View>
       <TouchableOpacity
         style={{

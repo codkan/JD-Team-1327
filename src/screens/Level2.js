@@ -170,11 +170,11 @@ export default class LevelTwo extends Component {
           >
             <View style={CoreStyle.centeredView}>
               <View style={CoreStyle.modalView}>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                 Collect All The Notes To Progress To The Next Level. </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                 Then grab a drink from the fridge.</Text>
-                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {
@@ -197,7 +197,7 @@ export default class LevelTwo extends Component {
           >
             <View style={CoreStyle.centeredView}>
               <View style={CoreStyle.modalView}>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Time: {this.state.min}:{this.state.sec}:{this.state.msec}
                 </Text>
                 <MenuButton
@@ -256,26 +256,26 @@ export default class LevelTwo extends Component {
           >
             <View style={CoreStyle.centeredView}>
               <View style={CoreStyle.modalView}>
-              <Text style={CoreStyle.modalTitle}>
+              <Text allowFontScaling={true} style={CoreStyle.modalTitle}>
                 Fires & Burns 
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                 Cooking is the leading cause of home fires in the United States.
                Some common ways in which fires start in the kitchen include unsupervised food on a stove, in a microwave, or in an oven, grease spills, a dish towel too close to the burner, or a coffee pot accidentally left on. 
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                 Tips for using the stove:
                 Do not leave kids unsupervised.
                 Turn all pot handles, so they cannot be knocked over. 
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                 Do not wear loose-fitted clothing that has the potential to catch fire. 
                 </Text>
-                <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://kidshealth.org/en/parents/fire.html'); }}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://kidshealth.org/en/parents/fire.html'); }}>
                 Source: https://kidshealth.org/en/parents/fire.html 
                 </Text>
                 <Image style={styles.panimg} source={pan}/>
-                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {
@@ -298,21 +298,21 @@ export default class LevelTwo extends Component {
           >
             <View style={CoreStyle.centeredView}>
               <View style={CoreStyle.modalView}>
-              <Text style={CoreStyle.modalTitle}>
+              <Text allowFontScaling={true} style={CoreStyle.modalTitle}>
                 Poisons 
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                 Every day, over 300 children in the U.S. ages 0 to 19 are treated in an emergency department, and two children die, as a result of being poisoned.
                 Common item causes in the home include: household cleaners, cosmetics, plastics left out, and medicine bottles left open.
                 </Text>
-                <Text style={CoreStyle.modalText}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText}>
                 Prevention Tips: Lock them up and keep them away. Keep medicines and other potentially toxic products, such as cleaners and detergents, in their original packaging where children cannot see or get to them. Read the label. Throw away if not needed. 
                 </Text>
-                <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.cdc.gov/safechild/poisoning/index.html'); }}>
+                <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.cdc.gov/safechild/poisoning/index.html'); }}>
                 Source: https://www.cdc.gov/safechild/poisoning/index.html  
                 </Text>
                 <Image style={styles.poisonimg} source={poison}/>
-                <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton
                   text="OK"
                   onPress={() => {

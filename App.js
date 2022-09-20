@@ -13,6 +13,8 @@ global.color3 = "lightgray";
 global.bg = bg1;
 global.logo = logo1;
 global.text = "black";
+global.volume = 0.5;
+global.isMuted = false;
 
 export default class App extends Component {
 

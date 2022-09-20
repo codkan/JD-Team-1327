@@ -34,10 +34,11 @@ export default class QuizButton extends PureComponent{
 
   celebrate = async () => {
     try {
-        const { sound } = await Audio.Sound.createAsync(
+        var { sound } = await Audio.Sound.createAsync(
            require('../assets/cheer.mp3')
         );
-        sound.volume = 0.5;
+        sound.volume = global.volume;
+        sound.isMuted = global.muted;
         await sound.playAsync();
     } catch (e) {
         //should be fine
@@ -46,10 +47,11 @@ export default class QuizButton extends PureComponent{
 
   noCelebrate = async () => {
     try {
-        const { sound } = await Audio.Sound.createAsync(
+        var { sound } = await Audio.Sound.createAsync(
            require('../assets/wrong.mp3')
         );
-        sound.volume = 0.5;
+        sound.volume = global.volume;
+        sound.isMuted = global.muted;
         await sound.playAsync();
     } catch (e) {
         //Should be fine

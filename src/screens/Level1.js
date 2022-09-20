@@ -192,11 +192,11 @@ export default class LevelOne extends Component {
             >
               <View style={CoreStyle.centeredView}>
                 <View style={CoreStyle.modalView}>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                   Collect All The Notes To Progress To The Next Level.</Text>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                     Then go the stairs to finish the level. </Text>
-                  <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                  <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                   <MenuButton
                     text="OK"
                     onPress={() => {
@@ -219,7 +219,7 @@ export default class LevelOne extends Component {
             >
               <View style={CoreStyle.centeredView}>
                 <View style={CoreStyle.modalView}>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                     Time: {this.state.min}:{this.state.sec}:{this.state.msec}
                   </Text>
                   <MenuButton
@@ -278,8 +278,8 @@ export default class LevelOne extends Component {
             >
               <View style={CoreStyle.centeredView}>
                 <View style={CoreStyle.modalView}>
-                  <Text style={CoreStyle.modalTitle}>Coins:</Text>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalTitle}>Coins:</Text>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                     Choose a toy chest without a lid. Toys should be large
                     enough — at least 1¼" (3 centimeters) in diameter and 2¼" (6
                     centimeters) in length — so that they can't be swallowed or
@@ -288,11 +288,11 @@ export default class LevelOne extends Component {
                     diameter or less because they can become lodged in the
                     throat above the windpipe and cause trouble with breathing.
                   </Text>
-                   <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://kidshealth.org/en/parents/products-toys.html') }}>
+                   <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://kidshealth.org/en/parents/products-toys.html') }}>
                     Source: https://kidshealth.org/en/parents/products-toys.html
                   </Text> 
                   <Image style={styles.img} source={train}/>
-                  <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                  <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                   <MenuButton
                     text="OK"
                     onPress={() => {
@@ -318,7 +318,7 @@ export default class LevelOne extends Component {
             >
               <View style={CoreStyle.centeredView}>
                 <View style={CoreStyle.modalView}>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                     Congrats! You found your first Note. Go to the badges page
                     to track your progress!
                   </Text>
@@ -344,8 +344,8 @@ export default class LevelOne extends Component {
             >
               <View style={CoreStyle.centeredView}>
                 <View style={CoreStyle.modalView}>
-                  <Text style={CoreStyle.modalTitle}>Outlets:</Text>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalTitle}>Outlets:</Text>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                     Outlet covers are great solutions to prevent accidental
                     electrocutions. Nearly one-third of accidents occur when a
                     child inserts common household items into receptacles, 70
@@ -354,11 +354,11 @@ export default class LevelOne extends Component {
                     commonly include: hairpins, keys, plugs, paper clips, staples, tools,
                     jewelry, belt buckles, nail files, and knives.
                   </Text>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                     Approximately 100 kids die each year by electrocution, and
                     many others are seriously hurt.
                   </Text>
-                  <Text style={CoreStyle.modalText}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
                     95 percent of injuries resulting from electrical outlets
                     will involve burns. Though they range in severity, it is
                     important to understand that burns are very serious in young
@@ -366,10 +366,10 @@ export default class LevelOne extends Component {
                     electric flow or heat.
                   </Text>
                   <Image style={styles.img} source={outlet}/>
-                  <Text style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://mrelectric.com/child-proof-outlets'); }}>
+                  <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://mrelectric.com/child-proof-outlets'); }}>
                     Source: https://mrelectric.com/child-proof-outlets
                   </Text>
-                  <Text style={CoreStyle.textStyle}>Hide Modal</Text>
+                  <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                   <MenuButton
                     text="OK"
                     onPress={() => {

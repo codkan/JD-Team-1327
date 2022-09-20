@@ -51,46 +51,46 @@ export default function Falls1({ navigation }) {
 
 <ScrollView>
 
-    <Text style={CoreStyle.title}> Poisoning Sources: </Text>
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> Poisoning Sources: </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
 <View style={CoreStyle.center}>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.poison.org/poison-statistics-national')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [1] National Poison Statistics </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [1] National Poison Statistics </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://injuryprevention.bmj.com/content/injuryprev/23/2/93.full.pdf')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [2] BMJ Injury Prevention </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [2] BMJ Injury Prevention </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.cdc.gov/homeandrecreationalsafety/poisoning/preventiontips.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [3] Center for Disease Control </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://kidshealth.org/en/parents/safety-poisoning.html')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Kids Health Poisoning Safety </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> Kids Health Poisoning Safety </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.healthychildren.org/English/safety-prevention/all-around/Pages/Poison-Prevention.aspx')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Healthy Children Poison Prevention </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> Healthy Children Poison Prevention </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <TouchableOpacity onPress={() => Linking.openURL('https://poisonhelp.hrsa.gov/what-you-can-do/prevention-tips')}>
-         <Text style={{textDecorationLine:'underline', color:'blue'}}> Poison Help Prevention Tips </Text>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> Poison Help Prevention Tips </Text>
     </TouchableOpacity>
 
-    <Text> {'\n'} </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
 
     <MainButton
           text="Go to Poisonings"
