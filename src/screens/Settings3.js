@@ -24,7 +24,7 @@ export default function About({ navigation }) {
 
 
   return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text style={CoreStyle.settingText}> Settings</Text>
     <View style={CoreStyle.settingContainer}>
     <MainButton

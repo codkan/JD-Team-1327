@@ -87,7 +87,7 @@ export default function Search({ navigation }) {
     };
 
   return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <SafeAreaView style={{ flex: 1 }}>
         <SearchBar
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
       marginBottom: 120,
     },
     itemStyle: {
-      backgroundColor: "rgba(255, 239, 213, 1)",
+      backgroundColor: global.color2,
       padding: 10,
       fontSize: 16,
       textAlign: "justify",

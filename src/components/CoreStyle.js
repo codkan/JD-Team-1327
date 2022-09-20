@@ -4,7 +4,6 @@ import { Dimensions } from "react-native";
 // This is meant to be a core, shared style library for styles to encourage consistency
 // and code reuse throughout the app.
 
-
 export const CoreStyle = StyleSheet.create({
 
     // background image formatting
@@ -29,7 +28,7 @@ export const CoreStyle = StyleSheet.create({
       height: 35,
       width: 35,
       borderRadius: 100,
-      backgroundColor: "ivory",
+      backgroundColor: global.color,
       shadowColor: 'black',
       shadowOpacity: 0.25,
       shadowRadius: 4,
@@ -37,7 +36,8 @@ export const CoreStyle = StyleSheet.create({
     },
 
     // Main header/title text for info, media pages etc.
-    title: { 
+    title: {
+        color: global.text,
         fontSize: 40,
         marginBottom: 15,
         fontWeight: "bold",
@@ -46,7 +46,8 @@ export const CoreStyle = StyleSheet.create({
     },
 
     // Secondary headers for subsections
-    subtitle: { 
+    subtitle: {
+        color: global.text,
         fontSize: 26,
         marginBottom: 20,
         textAlign: "center",
@@ -55,7 +56,8 @@ export const CoreStyle = StyleSheet.create({
     },
 
     // Small text
-    content: { 
+    content: {
+        color: global.text,
         fontSize: 18,
         marginBottom: 20,
         marginLeft: 30,
@@ -66,6 +68,7 @@ export const CoreStyle = StyleSheet.create({
 
     // Good size for big bullet points, works well as header for collapsible box
     bullet: {
+        color: global.text,
         fontSize: 22,
         fontWeight: "bold",
         marginLeft: 15,
@@ -74,6 +77,7 @@ export const CoreStyle = StyleSheet.create({
 
     //Good size for small sub-bullet points, works well as body for collapsible box
     subbullet: {
+        color: global.text,
         fontSize: 18,
         marginLeft: 35,
         marginRight: 30,
@@ -92,7 +96,7 @@ export const CoreStyle = StyleSheet.create({
 
     // text style for module page titles
     moduleText: {
-      // margin: 100,
+      color: global.text,
       height: 70,
       fontSize: 40,
       marginTop: 60,
@@ -102,6 +106,7 @@ export const CoreStyle = StyleSheet.create({
     },
 
     note: {
+        color: global.text,
         textAlign: "center",
         fontWeight: "italic",
         fontSize: 15,
@@ -136,6 +141,7 @@ export const CoreStyle = StyleSheet.create({
         backgroundColor: "#C4C4C4",
     },
 
+    // special container for level select screen
     levelContainer: {
         position: 'absolute',
         bottom: 0,
@@ -238,6 +244,7 @@ export const CoreStyle = StyleSheet.create({
 
     // text style for settings pages
     settingText: {
+        color: global.text,
         height: 70,
         fontSize: 40,
         marginTop: 150,
@@ -290,7 +297,6 @@ export const CoreStyle = StyleSheet.create({
       },
 
     // GAME STYLING COMPONENTS
-
     gameContain: {
       flex: 1,
       backgroundColor: "transparent",

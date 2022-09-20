@@ -10,7 +10,7 @@ export default class QuizButton extends PureComponent{
     constructor(){
         super();
         this.state = {
-            buttonColor: "papayawhip",
+            buttonColor: global.color2,
             pressed: false,
         };
     };
@@ -64,7 +64,7 @@ export default class QuizButton extends PureComponent{
           </View>
           <ConfettiCannon
                 count={100}
-                origin={{x: -40, y: -125}}
+                origin={{x: -50, y: -125}}
                 autoStart={false}
                 ref={ref => (this.explosion = ref)}
                 fadeOut={true}
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontStyle: "normal",
     fontSize: 24,
-    color: "black",
+    color: global.text,
     textAlign: "center",
     justifyContent: "center",
   },

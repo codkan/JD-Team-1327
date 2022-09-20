@@ -2,6 +2,9 @@
 import React, { useState } from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
 import Background from "../assets/bg.png";
+import Background_alt from "../assets/bg-alt.png";
+import logo1 from "../assets/landinglogo.png"
+import logo2 from "../assets/landinglogo-alt.png"
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle.js";
@@ -22,11 +25,31 @@ export default function About({ navigation }) {
     navigation.navigate("Settings3");
   };
 
+  const changeScheme = () => {
+    if (global.scheme == "light") {
+        global.scheme = "dark";
+        global.color = "darkslategrey";
+        global.color2 = "lightslategray";
+        global.color3 = "black";
+        global.bg = Background_alt;
+        global.logo = logo2;
+        global.text = "white";
+    } else {
+        global.scheme = "light";
+        global.color = "ivory";
+        global.color2 = "papayawhip";
+        global.color3 = "lightgray";
+        global.bg = Background;
+        global.logo = logo1;
+        global.text = "black";
+    }
+    return;
+  };
+
   const [selectedValue, setSelectedValue] = useState("java");
 
-
   return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text style={CoreStyle.settingText}> Settings</Text>
     <View style={CoreStyle.settingContainer}>
     <MainButton
@@ -40,8 +63,9 @@ export default function About({ navigation }) {
           txtColor={"black"}
     ></MainButton>
     <MainButton
-      text="Invert Color"
+      text="Invert Colors"
       txtColor={"black"}
+      onPress={() => changeScheme()}
     ></MainButton>
     <MainButton
       text="Font Size"

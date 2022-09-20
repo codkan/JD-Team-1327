@@ -53,22 +53,22 @@ export default function PoisoningsMM({ navigation }) {
     ];
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleLastNav}
         ></BackButton>
         <MediaButton
               text="Back to Media"
               onPress={backToMedia}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MediaButton>
         <BackButton
             text=">"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleNextNav}
         ></BackButton>
     </View>
@@ -78,7 +78,7 @@ export default function PoisoningsMM({ navigation }) {
     <View style={CoreStyle.mediaContainer}>
     <Text style={CoreStyle.title}> Poisonings </Text>
         <View style = {CoreStyle.imgview}>
-            <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
+            <ImageViewer imageUrls={images} backgroundColor={global.color}/>
         </View>
     </View>
 
@@ -91,7 +91,7 @@ export default function PoisoningsMM({ navigation }) {
     <MainButton
           text="Go to Poison"
           onPress={goToPoisonings}
-          txtColor={"black"}
+          txtColor={global.text}
     ></MainButton>
 
     </View>

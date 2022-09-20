@@ -29,22 +29,22 @@ export default function Falls1({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleLastNav}
         ></BackButton>
         <MediaButton
               text="Back to Sources"
               onPress={backToSources}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MediaButton>
         <BackButton
             text=">"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleNextNav}
         ></BackButton>
     </View>
@@ -71,7 +71,7 @@ export default function Falls1({ navigation }) {
     <MainButton
           text="Go to Drowning"
           onPress={goToDrowning}
-          txtColor={"black"}
+          txtColor={global.text}
     ></MainButton>
 
     </View>

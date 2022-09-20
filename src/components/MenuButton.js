@@ -10,9 +10,7 @@ export default function MenuButton({ text, onPress, txtColor }) {
     </TouchableOpacity>
   );
 }
-MenuButton.defaultProps = {
-  color: "black"
-}
+
 const styles = StyleSheet.create({
   button: {
     backgroundColor: "transparent",

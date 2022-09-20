@@ -21,7 +21,7 @@ export default function CarSafety({ navigation }) {
     }
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text style={CoreStyle.title}> Car Safety Sources: </Text>
     <Text> {'\n'} </Text>
 
@@ -36,13 +36,13 @@ export default function CarSafety({ navigation }) {
     <MainButton
           text="Go to Burns"
           onPress={goToPoisonings}
-          txtColor={"black"}
+          txtColor={global.text}
     ></MainButton>
 
     <MainButton
           text="Back to Sources"
           onPress={backToSources}
-          txtColor={"black"}
+          txtColor={global.text}
     ></MainButton>
     </View>
 

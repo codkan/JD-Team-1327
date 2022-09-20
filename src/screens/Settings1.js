@@ -23,18 +23,18 @@ export default function Settings1({ navigation }) {
 
 
   return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
-    <Text style={CoreStyle.settingText}> Settings</Text>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
+    <Text style={CoreStyle.settingText}>Settings</Text>
     <View style={CoreStyle.settingContainer}>
     <MainButton
       text="Accessibility Settings"
       onPress={handleSettings2Nav}
-      txtColor={"black"}
+      txtColor={global.text}
     ></MainButton>
     <MainButton
       text="Sound Settings"
       onPress={handleSettings3Nav}
-      txtColor={"black"}
+      txtColor={global.text}
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>

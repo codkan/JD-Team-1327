@@ -49,9 +49,8 @@ export default function Landing({ navigation }) {
   };
 
     return (
-      <ImageBackground source={Background} style={CoreStyle.image}>
+      <ImageBackground source={global.bg} style={CoreStyle.image}>
 
-        
       <View style = {CoreStyle.topnavbuttons}>
         <TouchableOpacity onPress={handleDisclaimNav}>
             <Image source={disclaim} style={CoreStyle.btn}></Image>
@@ -63,8 +62,7 @@ export default function Landing({ navigation }) {
 
         <View style={CoreStyle.buttonContainer}>
 
-        <Image source={logo} style={CoreStyle.logo}></Image>
-
+        <Image source={global.logo} style={CoreStyle.logo}></Image>
 
         <TouchableOpacity onPress={handleInfoNav}>
             <Image source={info} style={CoreStyle.landingCrayon}></Image>
@@ -81,7 +79,9 @@ export default function Landing({ navigation }) {
         <TouchableOpacity onPress={handleGameNav}>
             <Image source={game} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
+
         </View>
+
         <Navbar navigation={navigation}/>
       </ImageBackground>
       

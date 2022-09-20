@@ -3,23 +3,21 @@ import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
 
 export default function SourcesButton({ text, onPress, txtColor }) {
   return (
-    <View style={styles.button}>
       <TouchableOpacity onPress={onPress}>
-        <Image source={require("../assets/media.png")} style={styles.icon}></Image>
+        <View style={styles.button}>
+            <Image source={require("../assets/media.png")} style={styles.icon}></Image>
+        </View>
       </TouchableOpacity>
-    </View>
   );
 }
-SourcesButton.defaultProps = {
-  color: "black"
-}
+
 const styles = StyleSheet.create({
   button: {
     height: 50,
     width: 50,
     borderRadius: 100,
-    backgroundColor: "ivory",
-    borderColor: "lightgray",
+    backgroundColor: global.color,
+    borderColor: global.color3,
     borderWidth: 2,
     alignItems: "center",
     justifyContent: "center",
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontStyle: "normal",
     fontSize: 32,
-    color: "black",
+    color: global.text,
     textAlign: "center",
     justifyContent: "center",
   },

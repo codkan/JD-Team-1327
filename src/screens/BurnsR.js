@@ -74,10 +74,10 @@ export default class BurnR extends Component{
                     {a: question.answers[3].a, id: question.answers[3].id },
                 ],
             });
-            this.b1.setState({buttonColor: "papayawhip"});
-            this.b2.setState({buttonColor: "papayawhip"});
-            this.b3.setState({buttonColor: "papayawhip"});
-            this.b4.setState({buttonColor: "papayawhip"});
+            this.b1.setState({buttonColor: global.color2});
+            this.b2.setState({buttonColor: global.color2});
+            this.b3.setState({buttonColor: global.color2});
+            this.b4.setState({buttonColor: global.color2});
         } else {
             this.props.navigation.navigate("Win", {
                 score: burnScore,
@@ -140,10 +140,10 @@ export default class BurnR extends Component{
                 ],
             });
         }
-        this.b1.setState({buttonColor: "papayawhip"});
-        this.b2.setState({buttonColor: "papayawhip"});
-        this.b3.setState({buttonColor: "papayawhip"});
-        this.b4.setState({buttonColor: "papayawhip"});
+        this.b1.setState({buttonColor: global.color2});
+        this.b2.setState({buttonColor: global.color2});
+        this.b3.setState({buttonColor: global.color2});
+        this.b4.setState({buttonColor: global.color2});
     }
 
   render(){
@@ -151,21 +151,21 @@ export default class BurnR extends Component{
       var randomburnQs =  this.state.answers.sort(() => Math.random() - 0.5);
 
       return (
-        <ImageBackground source={Background} style={CoreStyle.image}>
+        <ImageBackground source={global.bg} style={CoreStyle.image}>
 
         <View style={CoreStyle.topnavbuttons}>
             <BackButton onPress={this.deRender}
                   text="<"
-                  txtColor={"black"}
+                  txtColor={global.text}
             ></BackButton>
             <MediaButton
                   text="Back to Review"
                   onPress={() => this.props.navigation.navigate("Review")}
-                  txtColor={"black"}
+                  txtColor={global.text}
             ></MediaButton>
             <BackButton onPress={this.reRender}
                   text=">"
-                  txtColor={"black"}
+                  txtColor={global.text}
             ></BackButton>
         </View>
 

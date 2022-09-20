@@ -43,22 +43,22 @@ export default function CarSafetyMM({ navigation }) {
     ];
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleLastNav}
         ></BackButton>
         <MediaButton
               text="Back to Media"
               onPress={backToMedia}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MediaButton>
         <BackButton
             text=">"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleNextNav}
         ></BackButton>
     </View>
@@ -68,7 +68,7 @@ export default function CarSafetyMM({ navigation }) {
     <Text style={CoreStyle.title}> Car Safety </Text>
 
     <View style = {CoreStyle.imgview}>
-    <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
+    <ImageViewer imageUrls={images} backgroundColor={global.color}/>
     </View>
 
     <VideoPlayer videoID = "f2GD2HTCNMI"/>
@@ -77,7 +77,7 @@ export default function CarSafetyMM({ navigation }) {
         <MainButton
               text="Go to Car Safety"
               onPress={goToCarSafety}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MainButton>
     </View>
 </ScrollView>

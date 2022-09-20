@@ -36,7 +36,7 @@ export default function Info({ navigation }) {
   };
 
   return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text style={CoreStyle.moduleText}>Pick a Topic</Text>
     <Text style={CoreStyle.note}>[Click pictures to start and stop listening to text]</Text>
     <View style={CoreStyle.buttonContainer}>

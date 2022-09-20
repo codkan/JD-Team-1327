@@ -71,7 +71,7 @@ export default function Traffic({ navigation }) {
     }
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton

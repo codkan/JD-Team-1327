@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function MediaButton({ text, onPress, txtColor }) {
+export default function MediaButton({ text, onPress}) {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
@@ -10,9 +10,7 @@ export default function MediaButton({ text, onPress, txtColor }) {
     </TouchableOpacity>
   );
 }
-MediaButton.defaultProps = {
-  color: "black"
-}
+
 const styles = StyleSheet.create({
   button: {
     height: 50,
@@ -20,7 +18,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingVertical: 0,
     paddingHorizontal: 10,
-    backgroundColor: "ivory",
+    backgroundColor: global.color,
     borderColor: "lightgray",
     borderWidth: 2,
     alignItems: "center",
@@ -36,7 +34,7 @@ const styles = StyleSheet.create({
   buttonText: {
     fontStyle: "normal",
     fontSize: 14,
-    color: "black",
+    color: global.text,
     textAlign: "center",
     justifyContent: "center",
   },

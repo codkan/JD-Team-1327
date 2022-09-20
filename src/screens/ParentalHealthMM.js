@@ -37,19 +37,19 @@ export default function ParentalHealthMM({ navigation }) {
     ];
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
     <BackButton
         text="<"
-        txtColor={"black"}
+        txtColor={global.text}
         onPress={handleLastNav}
     ></BackButton>
 
     <MediaButton
           text="Back to Media"
           onPress={backToMedia}
-          txtColor={"black"}
+          txtColor={global.text}
     ></MediaButton>
 
     <View style={CoreStyle.invisible}/>
@@ -60,7 +60,7 @@ export default function ParentalHealthMM({ navigation }) {
     <Text style={CoreStyle.title}> Parental Health </Text>
 
     <View style = {CoreStyle.imgview}>
-    <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
+    <ImageViewer imageUrls={images} backgroundColor={global.color}/>
     </View>
 
     <VideoPlayer videoID = "6kaCdrvNGZw"/>
@@ -69,7 +69,7 @@ export default function ParentalHealthMM({ navigation }) {
         <MainButton
               text="Go to Parental Health"
               onPress={goToParentalHealth}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MainButton>
     </View>
 </ScrollView>

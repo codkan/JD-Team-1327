@@ -23,17 +23,17 @@ export default function Win({navigation}){
     const txt = navigation.getParam('text');
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <TopicButton
               text="Back to Quizzes"
               onPress={backToReview}
-              txtColor={"black"}
+              txtColor={global.text}
         ></TopicButton>
         <TopicButton
             text="Go to Topics"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={goToInfo}
         ></TopicButton>
     </View>

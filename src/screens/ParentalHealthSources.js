@@ -26,18 +26,18 @@ export default function ParentalHealth({ navigation }) {
     };
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleLastNav}
         ></BackButton>
         <MediaButton
               text="Back to Sources"
               onPress={backToSources}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MediaButton>
     <View style={CoreStyle.invisible}/>
     </View>
@@ -64,7 +64,7 @@ export default function ParentalHealth({ navigation }) {
     <MainButton
           text="Go to Parental Health"
           onPress={goToParentalHealth}
-          txtColor={"black"}
+          txtColor={global.text}
     ></MainButton>
     </View>
 </ScrollView>

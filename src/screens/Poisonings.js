@@ -60,22 +60,22 @@ export default function Poisonings({ navigation }) {
     }
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleLastNav}
         ></BackButton>
         <MediaButton
               text="Back to Info"
               onPress={backToInfo}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MediaButton>
         <BackButton
             text=">"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleNextNav}
         ></BackButton>
     </View>

@@ -41,22 +41,22 @@ export default function FallsM0({ navigation }) {
     ];
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={backToMedia}
         ></BackButton>
         <MediaButton
               text="Back to Media"
               onPress={backToMedia}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MediaButton>
         <BackButton
             text=">"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleNextNav}
         ></BackButton>
     </View>
@@ -66,7 +66,7 @@ export default function FallsM0({ navigation }) {
 <View style={CoreStyle.mediaContainer}>
     <Text style={CoreStyle.title}> Falls </Text>
     <View style = {CoreStyle.imgview}>
-    <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
+    <ImageViewer imageUrls={images} backgroundColor={global.color}/>
     </View>
 </View>
 
@@ -78,7 +78,7 @@ export default function FallsM0({ navigation }) {
         <MainButton
               text="Go to Falls"
               onPress={goToFalls}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MainButton>
     </View>
 </ScrollView>

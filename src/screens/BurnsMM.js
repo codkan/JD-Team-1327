@@ -59,22 +59,22 @@ export default function BurnsMM({ navigation }) {
     ];
 
     return (
-    <ImageBackground source={Background} style={CoreStyle.image}>
+    <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
         <BackButton
             text="<"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleLastNav}
         ></BackButton>
         <MediaButton
               text="Back to Media"
               onPress={backToMedia}
-              txtColor={"black"}
+              txtColor={global.text}
         ></MediaButton>
         <BackButton
             text=">"
-            txtColor={"black"}
+            txtColor={global.text}
             onPress={handleNextNav}
         ></BackButton>
     </View>
@@ -84,7 +84,7 @@ export default function BurnsMM({ navigation }) {
     <View style={CoreStyle.mediaContainer}>
         <Text style={CoreStyle.title}> Burns </Text>
         <View style = {CoreStyle.imgview}>
-            <ImageViewer imageUrls={images} backgroundColor={"ivory"}/>
+            <ImageViewer imageUrls={images} backgroundColor={global.color}/>
         </View>
     </View>
 
@@ -97,7 +97,7 @@ export default function BurnsMM({ navigation }) {
     <MainButton
           text="Go to Burns"
           onPress={goToBurns}
-          txtColor={"black"}
+          txtColor={global.text}
     ></MainButton>
     </View>
 
