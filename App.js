@@ -3,8 +3,8 @@ import Navigator from "./src/Navigator";
 import { StatusBar } from "react-native";
 import bg1 from "./src/assets/bg.png";
 import bg2 from "./src/assets/bg-alt.png";
-import logo1 from "./src/assets/landinglogo.png"
-import logo2 from "./src/assets/landinglogo-alt.png"
+import logo1 from "./src/assets/landinglogo.png";
+import logo2 from "./src/assets/landinglogo-alt.png";
 
 global.scheme = "light";
 global.color = "ivory";
@@ -20,11 +20,15 @@ export default class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {scheme: global.scheme};
   }
 
   componentDidMount() {
     StatusBar.setHidden(true);
+  }
+
+  changeScheme = () => {
+    this.setState({scheme: global.scheme});
   }
 
   render() {

@@ -19,10 +19,10 @@ export default class CollapsibleBox extends Component{
 
     renderArrow = () => {
         if (this.state.collapsed == true) {
-            return <Entypo name="chevron-left" size={24} color={global.text} />;
+            return <Entypo name="chevron-down" size={24} color={global.text} />;
         }
         else {
-            return <Entypo name="chevron-down" size={24} color={global.text} />;
+            return <Entypo name="chevron-up" size={24} color={global.text} />;
         }
     }
 

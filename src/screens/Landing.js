@@ -66,11 +66,10 @@ export default function Landing({ navigation }) {
       <ImageBackground source={global.bg} style={CoreStyle.image}>
 
       <View style = {CoreStyle.topnavbuttons}>
+        <TouchableOpacity style={CoreStyle.invisible}>
+        </TouchableOpacity>
         <TouchableOpacity onPress={handleDisclaimNav}>
             <Image source={disclaim} style={CoreStyle.btn}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={handleSettingsNav} style={CoreStyle.btn}>
-            <Image source={setting} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
       </View>
 

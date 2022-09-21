@@ -40,9 +40,9 @@ export default function ParentalHealth({ navigation }) {
     async function speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
-            Speech.speak("Parental Health" + ". " + "Symptoms of Postpartum Depression for Either Parent" + ". ", {rate: 0.85});
+            Speech.speak("Parental Health" + ". " + "Symptoms of Postpartum Depression for Either Parent" + ". ", {rate: 0.90});
             for (let i = 0; i < ParentText.length; i++) {
-                Speech.speak(ParentText[i].title + ". " + ParentText[i].body, {rate: 0.85});
+                Speech.speak(ParentText[i].title + ". " + ParentText[i].body, {rate: 0.90});
             }
         } else {
             Speech.stop();
@@ -52,7 +52,7 @@ export default function ParentalHealth({ navigation }) {
     async function speak(text) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
-            Speech.speak(ParentText[text].title + "." + ParentText[text].body, {rate: 0.85});
+            Speech.speak(ParentText[text].title + "." + ParentText[text].body, {rate: 0.90});
         } else {
             Speech.stop();
         }

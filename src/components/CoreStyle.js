@@ -46,6 +46,25 @@ export const CoreStyle = StyleSheet.create({
       shadowRadius: 4,
       shadowOffset : { width: 0, height: 4},
     },
+    mute_view: {
+      height: 35,
+      width: 35,
+      borderRadius: 100,
+      backgroundColor: global.color,
+      shadowColor: 'black',
+      shadowOpacity: 0.25,
+      shadowRadius: 4,
+      shadowOffset : { width: 0, height: 4},
+      borderColor: "black",
+      borderWidth: 3,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    mute_btn: {
+      height: 20,
+      width: 20,
+      borderRadius: 100,
+    },
 
     // Main header/title text for info, media pages etc.
     title: {
@@ -109,10 +128,10 @@ export const CoreStyle = StyleSheet.create({
     // text style for module page titles
     moduleText: {
       color: global.text,
-      height: 70,
       fontSize: 40,
-      marginTop: 60,
-      marginBottom: 25,
+      marginTop: 30,
+      marginBottom: 30,
+      marginHorizontal: 10,
       fontWeight: "bold",
       textAlign: "center",
     },
@@ -285,7 +304,7 @@ export const CoreStyle = StyleSheet.create({
     homeContainer: {
         flex: 1,
         flexDirection: "row",
-        top: 300,
+        top: 225,
         justifyContent: "center",
         alignSelf: "center",
     },
@@ -326,10 +345,10 @@ export const CoreStyle = StyleSheet.create({
       marginTop: 22,
     },
     modalView: {
-      margin: 20,
+      margin: 10,
       backgroundColor: "white",
       borderRadius: 5,
-      padding: 35,
+      padding: 20,
       alignItems: "center",
       shadowColor: "#000",
       shadowOffset: {
@@ -345,17 +364,18 @@ export const CoreStyle = StyleSheet.create({
       fontWeight: "bold",
       textAlign: "center",
     },
-    gameText: {
+    modalText: {
       marginBottom: 15,
       fontWeight: "normal",
-      textAlign: "center",
-      color: "purple",
-      fontSize: 11,
+      textAlign: "justify",
+      color: "black",
+      fontSize: 16,
     },
     modalTitle: {
       marginBottom: 15,
       fontWeight: "bold",
       textAlign: "center",
+      fontSize: 20,
     },
     pic: {
       height: 50,

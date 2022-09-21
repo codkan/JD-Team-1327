@@ -1,15 +1,18 @@
 import { Audio } from "expo-av";
 import React, { useEffect, useState } from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import { ImageBackground, StyleSheet, View, TouchableOpacity, Image } from "react-native";
 import Background from "../assets/homescreen.png";
 import HomeButton from "../components/HomeButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { CoreStyle } from "../components/CoreStyle.js";
+import disclaim from "../assets/info.png";
+import mute from "../assets/mute.png";
 
 export default function Home({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });
   const [sound, setSound] = React.useState();
+  var muted = false;
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   async function playSound() {
     Audio.setAudioModeAsync({
@@ -28,10 +31,24 @@ export default function Home({ navigation }) {
         setSound(sound);
         await sound.loadAsync(require("../assets/gameMusic.mp3"));
         await sound.playAsync();
+
     } catch (e) {
         //should be fine
     }
   }
+
+  async function pauseMusic() {
+    if (!muted) {
+        sound.stopAsync();
+        sound.unloadAsync();
+        muted = true
+    } else {
+        await sound.loadAsync(require("../assets/gameMusic.mp3"));
+        await sound.playAsync();
+        muted = false;
+    }
+  }
+
   useEffect(() => {
     async function unlockedLevels() {
       const lvl2 = await get("lvl2");
@@ -59,8 +76,10 @@ export default function Home({ navigation }) {
   const handleBackNav = () => {
     ScreenOrientation.unlockAsync();
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
-    sound.stopAsync();
-    sound.unloadAsync();
+    if (!muted) {
+        sound.stopAsync();
+        sound.unloadAsync();
+    }
     navigation.navigate("Landing");
   };
   const handleLevelSelect = () => {
@@ -82,15 +101,20 @@ export default function Home({ navigation }) {
 
   return (
     <ImageBackground source={Background} style={CoreStyle.image}>
+
+    <View style = {CoreStyle.topnavbuttons}>
+        <TouchableOpacity onPress={handleAboutNav}>
+            <Image source={disclaim} style={CoreStyle.btn}></Image>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={pauseMusic} style={CoreStyle.mute_view}>
+            <Image source={mute} style={CoreStyle.mute_btn}></Image>
+        </TouchableOpacity>
+    </View>
+
       <View style={CoreStyle.homeContainer}>
         <HomeButton
           text="BACK"
           onPress={handleBackNav}
-          txtColor={"black"}
-        ></HomeButton>
-        <HomeButton
-          text="ABOUT"
-          onPress={handleAboutNav}
           txtColor={"black"}
         ></HomeButton>
         <HomeButton

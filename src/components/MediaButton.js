@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 export default function MediaButton({ text, onPress}) {
+
   return (
     <TouchableOpacity onPress={onPress} style={styles.button}>
         <Text style={styles.buttonText}>Back to Topics</Text>
