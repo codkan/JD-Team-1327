@@ -41,13 +41,8 @@
  import ParentalHealthMM from "./screens/ParentalHealthMM";
  import PoisoningsMM from "./screens/PoisoningsMM";
  import BurnsMM from "./screens/BurnsMM";
- 
- import FallsR from "./screens/FallsR";
- import DrowningReview from "./screens/DrowningReview";
- import PoisonR from "./screens/PoisonR";
- import BurnR from "./screens/BurnsR";
- import RoadRev1 from "./screens/RoadRev1";
- import ParRev1 from "./screens/ParRev1";
+
+ import Quiz from "./screens/Quiz.js";
  import Win from "./screens/Win";
  
  import LevelOne from "./screens/Level1";
@@ -97,33 +92,8 @@
            animationEnabled: false,
          },
      },
-     FallsR: {
-         screen: FallsR,
-         navigationOptions: {
-           headerShown: false,
-           animationEnabled: false,
-         },
-     },
      Win: {
          screen: Win,
-         navigationOptions: {
-           headerShown: false,
-         },
-     },
-     PoisonR: {
-         screen: PoisonR,
-         navigationOptions: {
-           headerShown: false,
-         },
-     },
-     BurnR: {
-         screen: BurnR,
-         navigationOptions: {
-           headerShown: false,
-         },
-     },
-     DrowningReview: {
-         screen: DrowningReview,
          navigationOptions: {
            headerShown: false,
          },
@@ -142,24 +112,12 @@
            animationEnabled: false,
          },
      },
-     RoadRev1: {
-       screen: RoadRev1,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },
      ParentalHealthMM: {
          screen: ParentalHealthMM,
          navigationOptions: {
            headerShown: false,
            animationEnabled: false,
          },
-     },
-     ParRev1: {
-       screen: ParRev1,
-       navigationOptions: {
-         headerShown: false,
-       },
      },
      Burns: {
        screen: Burns,
@@ -314,6 +272,12 @@
              headerShown: false,
            },
        },
+     Quiz: {
+       screen: Quiz,
+       navigationOptions: {
+         headerShown: false,
+       },
+     },
  };
  
 

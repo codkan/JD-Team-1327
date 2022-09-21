@@ -117,7 +117,7 @@
         }
       }
     ],
-    "burnQs": [
+    "BurnQs": [
       {
         "Q": {
           "q": "What type of burn injury is the most common?",
@@ -234,7 +234,7 @@
         }
       }
     ],
-    "poisonQs": [
+    "PoisonQs": [
       {
         "Q": {
           "q": "Which of the following would be a useful place to store important emergency numbers, including the poison help number?",

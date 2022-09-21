@@ -16,54 +16,40 @@ export default function About({ navigation }) {
   const goHome = () => {
     navigation.pop();
   };
-  const reviewFalls = () => {
-    navigation.navigate("FallsR");
-  };
-  const reviewBurn = () => {
-    navigation.navigate("BurnR");
-  };
-  const reviewPoison = () => {
-    navigation.navigate("PoisonR");
-  };
-  const reviewDrowning = () => {
-    navigation.navigate("DrowningReview");
-  };
 
-  const reviewCarSafety = () => {
-    navigation.navigate("RoadRev1");
-  }
-
-  const reviewParentalHealth = () => {
-    navigation.navigate("ParRev1");
+  const goQuiz = (_topic) => {
+    navigation.navigate("Quiz", {topic: _topic});
   }
 
   return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>
     <View style={CoreStyle.buttonContainer}>
-        <TouchableOpacity onPress={reviewFalls}>
+
+        <TouchableOpacity onPress={() => goQuiz("Falls")}>
             <Image source={falls} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={reviewBurn}>
+        <TouchableOpacity onPress={() => goQuiz("Burns")}>
             <Image source={burns} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={reviewPoison}>
+        <TouchableOpacity onPress={() => goQuiz("Poisonings")}>
             <Image source={poisonings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={reviewDrowning}>
+        <TouchableOpacity onPress={() => goQuiz("Drownings")}>
             <Image source={drownings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={reviewCarSafety}>
+        <TouchableOpacity onPress={() => goQuiz("Car Safety")}>
             <Image source={carSafety} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={reviewParentalHealth}>
+        <TouchableOpacity onPress={() => goQuiz("Parental Health")}>
             <Image source={parentHealth} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
+
     </View>
     <Navbar navigation={navigation}/>
     </ImageBackground>
