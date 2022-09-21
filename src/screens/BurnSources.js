@@ -73,8 +73,6 @@ export default function Falls1({ navigation }) {
          <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> [3] Overview of Burns </Text>
     </TouchableOpacity>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> Further Readings </Text>
-
     <TouchableOpacity onPress={() => Linking.openURL('https://www.uofmhealth.org/health-library/ue5140')}>
          <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> Child Safety: Preventing Burns </Text>
     </TouchableOpacity>
@@ -92,7 +90,6 @@ export default function Falls1({ navigation }) {
     </TouchableOpacity>
 
     <Text allowFontScaling={true}> {'\n'} </Text>
-
 
     <TouchableOpacity onPress={() => Linking.openURL('https://www.stanfordchildrens.org/en/topic/default?id=preventing-burn-injuries-90-P01750')}>
          <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> Preventing Burn Injuries </Text>

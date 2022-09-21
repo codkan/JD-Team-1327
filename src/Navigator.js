@@ -44,6 +44,7 @@
 
  import Quiz from "./screens/Quiz.js";
  import Win from "./screens/Win";
+ import SourceList from "./screens/SourceList.js";
  
  import LevelOne from "./screens/Level1";
  import LevelTwo from "./screens/Level2";
@@ -274,6 +275,11 @@
        },
      Quiz: {
        screen: Quiz,
+       navigationOptions: {
+         headerShown: false,
+       },
+     SourceList: {
+       screen: SourceList,
        navigationOptions: {
          headerShown: false,
        },

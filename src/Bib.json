@@ -1,0 +1,34 @@
+{
+  "Sources": {
+    "FallSrcs": [
+      {
+        "src": "https://www.stanfordchildrens.org/en/topic/default?id=accident-statistics-90-P02853#:~:text=Injury%20is%20the%20leading%20cause,of%20nonfatal%20injury%20for%20children",
+        "text": "[1] Stanford Children Accident Statistics"
+      },
+      {
+        "src": "https://www.stanfordchildrens.org/en/topic/default?id=falls--injury-statistics-and-incidence-rates-90-P02974",
+        "text": "[2] Stanford Children Incidence Rates"
+      },
+      {
+        "src": "https://www.cdc.gov/safechild/images/cdc-childhoodinjury.pdf",
+        "text": "[3] Center for Disease Control"
+      },
+      {
+        "src": "https://www.safekids.org/tip/falls-prevention-tips",
+        "text": "[4] SafeKids Fall Prevention Tips"
+      },
+      {
+        "src": "https://www.safekids.org/tv",
+        "text": "[5] SafeKids - Tip-Overs"
+      },
+      {
+        "src": "https://www.safekids.org/playgroundsafety",
+        "text": "[6] SafeKids - Playground Safety"
+      },
+      {
+        "src": "https://kidshealth.org/en/parents/products-strollers.html",
+        "text": "[7] KidsHealth - Stroller Safety"
+      }
+    ]
+  }
+}

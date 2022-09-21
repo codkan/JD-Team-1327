@@ -92,6 +92,10 @@ export default function Falls1({ navigation }) {
 
     <Text allowFontScaling={true}> {'\n'} </Text>
 
+    <TouchableOpacity onPress={() => Linking.openURL('https://www.ucsfbenioffchildrens.org/education/preventing-poisoning-in-children')}>
+         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}> UCSF Benioff Childrens Hospitals Recommendations </Text>
+    </TouchableOpacity>
+
     <MainButton
           text="Go to Poisonings"
           onPress={goToPoisonings}

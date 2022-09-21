@@ -17,17 +17,9 @@ export default function About({ navigation }) {
     navigation.pop();
   };
 
-  const handleGoToPoisoningSource = () => {
-    navigation.navigate("PoisoningSources");
-  };
-
-  const handleGoToBurnSource = () => {
-    navigation.navigate("BurningSources");
-  };
-
-  const handleGoToFallSource = () => {
-      navigation.navigate("FallSources");
-    };
+  const goSourceList = (_topic) => {
+    navigation.navigate("SourceList", {topic: _topic});
+  }
 
   const handleGoToDrowningSource = () => {
     navigation.navigate("DrowningSources");
@@ -45,15 +37,15 @@ export default function About({ navigation }) {
     <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>
     <View style = {CoreStyle.buttonContainer}>
-        <TouchableOpacity onPress={handleGoToFallSource}>
+        <TouchableOpacity onPress={() => goSourceList("Falls")}>
             <Image source={falls} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleGoToBurnSource}>
+        <TouchableOpacity onPress={() => goSourceList("Burns")}>
             <Image source={burns} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleGoToPoisoningSource}>
+        <TouchableOpacity onPress={() => goSourceList("Poisonings")}>
             <Image source={poisonings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
