@@ -64,7 +64,10 @@ export default function Home({ navigation }) {
   //Nav Callbacks
   const handlePlayNow = () => {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
-    sound.pauseAsync();
+    if (!muted) {
+        sound.stopAsync();
+        sound.unloadAsync();
+    }
     if (unlocked["lvl3"] != null) {
       navigation.navigate("LevelThree");
     } else if (unlocked["lvl2"] != null) {

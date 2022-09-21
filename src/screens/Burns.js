@@ -161,10 +161,10 @@ export default function Burns({ navigation }) {
     <Text allowFontScaling={true} style={CoreStyle.subtitle}> {BurnText[7].title} </Text>
     <Text allowFontScaling={true} style={CoreStyle.content}>{BurnText[7].body}</Text>
 
-    <Text allowFontScaling={true} style={CoreStyle.subtitle}> {BurnText[8].title} </Text>
     <TouchableOpacity onPress={() => speak(8)}>
         <Image style={styles.treatmentImg} source={treatmentIMG}/>
     </TouchableOpacity>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}> {BurnText[8].title} </Text>
         <Text allowFontScaling={true} style={CoreStyle.content}>{BurnText[8].body}</Text>
 
     <View style={CoreStyle.buttons}>

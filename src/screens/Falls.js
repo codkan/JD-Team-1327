@@ -151,20 +151,17 @@ export default function Falls({ navigation }) {
 
 <Image style={styles.longpic} source={end}/>
 
-<Text allowFontScaling={true} style={CoreStyle.subtitle}>{FallText[7].title}</Text>
-
     <TouchableOpacity onPress={() => speak(7)}>
          <Image style={styles.roundpic} source={stroller2}/>
     </TouchableOpacity>
 
+<Text allowFontScaling={true} style={CoreStyle.subtitle}>{FallText[7].title}</Text>
     <Text allowFontScaling={true} style={CoreStyle.content}>{FallText[7].body}</Text>
-
-<Text allowFontScaling={true} style={CoreStyle.subtitle}>{FallText[8].title}</Text>
 
     <TouchableOpacity onPress={() => speak(8)}>
          <Image style={styles.roundpic} source={stroller1}/>
     </TouchableOpacity>
-
+<Text allowFontScaling={true} style={CoreStyle.subtitle}>{FallText[8].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{FallText[8].body}</Text>
 
     <View style={CoreStyle.buttons}>
@@ -213,9 +210,9 @@ const styles = StyleSheet.create({
     fallpic1: {
         height: 150,
         width: 130,
-        marginTop: 10,
+        marginTop: 20,
         alignSelf: "center",
-        marginBottom: 0,
+        marginBottom: -10,
     },
     fallpic2: {
         height: 150,

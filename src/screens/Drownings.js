@@ -144,10 +144,10 @@ export default function Drownings({ navigation }) {
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{DrownText[6].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{DrownText[6].body}</Text>
 
-<Text allowFontScaling={true} style={CoreStyle.subtitle}>{DrownText[7].title}</Text>
     <TouchableOpacity onPress={() => speak(7)}>
         <Image style={CoreStyle.headimg} source={pool}/>
     </TouchableOpacity>
+<Text allowFontScaling={true} style={CoreStyle.subtitle}>{DrownText[7].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{DrownText[7].body}</Text>
 
 <View style={CoreStyle.buttons}>
