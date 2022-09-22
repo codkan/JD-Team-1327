@@ -16,9 +16,12 @@ export default function Multimedia({ navigation }) {
   const goHome = () => {
     navigation.pop();
   };
-  const handleFallsMMNav = () => {
-    navigation.navigate("FallsMM");
-  };
+
+  const goMedia = (_topic) => {
+    navigation.navigate("Media", {topic: _topic});
+  }
+
+
   const handleBurnsNav = () => {
     navigation.navigate("BurnsMM");
   };
@@ -39,7 +42,8 @@ export default function Multimedia({ navigation }) {
     <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>
     <View style={CoreStyle.buttonContainer}>
-        <TouchableOpacity onPress={handleFallsMMNav}>
+
+        <TouchableOpacity onPress={goMedia("Falls")}>
             <Image source={falls} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
@@ -62,6 +66,7 @@ export default function Multimedia({ navigation }) {
         <TouchableOpacity onPress={handleParentalHealthMMNav}>
             <Image source={parentHealth} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
+
     </View>
     <Navbar navigation={navigation}/>
     </ImageBackground>

@@ -1,7 +1,28 @@
 {
   "MM": {
-    "FallMM": [
-      
-    ]
+    "FallMM": {
+      "images": [
+        {
+          "url": "",
+          "props": {
+            "source": "require('../assets/fallsM/window_infographic.jpg')"
+          }
+        },
+        {
+          "url": "",
+          "props": {
+            "source": "require('../assets/fallsM/tv_infographic.jpg')"
+          }
+        }
+      ],
+      "videos": [
+        {
+          "VID": "i8oifZ7HXaA"
+        },
+        {
+          "VID": "XyCHsr9NKqY"
+        }
+      ]
+    }
   }
 }

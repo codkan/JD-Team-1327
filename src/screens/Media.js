@@ -9,6 +9,9 @@ import Navbar from "../components/NavBar";
 import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
 import ImageViewer from "react-native-image-zoom-viewer";
+import { MM } from "../MM.json";
+
+var images;
 
 export default class Media extends Component {
     constructor(props) {
@@ -31,52 +34,43 @@ export default class Media extends Component {
     }
   }
 
-    const images = [
-        {
-        url: '',
-        props: {
-            source: require("../assets/fallsM/window_infographic.jpg")
-            },
-        },
-        {
-        url: '',
-        props: {
-            source: require("../assets/fallsM/tv_infographic.jpg")
-            },
-        },
-    ];
-
   render (){
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
             last = "Sources";
             next = "Burns";
-            srcs = Sources.FallSrcs;
+            images = MM.FallMM.images;
+            vids = MM.FallMM.videos;
             break;
         case "Burns":
             last = "Falls";
             next = "Poisonings";
-            srcs = Sources.BurnSrcs;
+            images = MM.BurnMM.images;
+            vids = MM.BurnMM.videos;
             break;
         case "Poisonings":
             last = "Burns";
             next = "Drownings";
-            srcs = Sources.PoisonSrcs;
+            images = MM.PoisonMM.images;
+            vids = MM.PoisonMM.videos;
             break;
         case "Drownings":
             last =  "Poisonings";
             next = "Car Safety";
-            srcs = Sources.DrownSrcs;
+            images = MM.DrownMM.images;
+            vids = MM.DrownMM.videos;
             break;
         case "Car Safety":
             last = "Drownings";
             next = "Parental Health";
-            srcs = Sources.CarSrcs;
+            images = MM.CarMM.images;
+            vids = MM.CarMM.videos;
             break;
         case "Parental Health":
             last = "Car Safety";
             next = "Parental Health";
-            srcs = Sources.ParSrcs;
+            images = MM.ParMM.images;
+            vids = MM.ParMM.videos;
             break;
         default:
             break
@@ -105,15 +99,15 @@ export default class Media extends Component {
     <ScrollView>
 
 <View style={CoreStyle.mediaContainer}>
-    <Text allowFontScaling={true} style={CoreStyle.title}> Falls </Text>
-    <View style = {CoreStyle.imgview}>
-    <ImageViewer imageUrls={images} backgroundColor={global.color}/>
+    <Text allowFontScaling={true} style={CoreStyle.title}>{this.props.navigation.getParam('topic') + "Media"}</Text>
+    <View style={CoreStyle.imgview}>
+        <ImageViewer imageUrls={images} backgroundColor={global.color}/>
     </View>
 </View>
 
-    <VideoPlayer videoID = "i8oifZ7HXaA"/>
+    <VideoPlayer videoID={vids[0].VID}/>
 
-    <VideoPlayer videoID = "XyCHsr9NKqY"/>
+    <VideoPlayer videoID={vids[1].VID}/>
 
     <View style={CoreStyle.mediaButtons}>
         <MainButton
