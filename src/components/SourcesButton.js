@@ -4,7 +4,7 @@ import { Image, StyleSheet, TouchableOpacity } from "react-native";
 export default function MMButton({ text, onPress }) {
   return (
       <TouchableOpacity onPress={onPress} style={styles.button}>
-        <Image source={require("../assets/links-line-alt.png")} style={styles.icon}></Image>
+        <Image source={require("../assets/buttons/links-line-alt.png")} style={styles.icon}></Image>
       </TouchableOpacity>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
@@ -34,7 +34,7 @@ export default function DrowningMM({ navigation }) {
         {
         url: '',
         props: {
-            source: require("../assets/Drowning_Infographic.png")
+            source: require("../assets/drownMM/Drowning_Infographic.png")
             },
         },
     ];

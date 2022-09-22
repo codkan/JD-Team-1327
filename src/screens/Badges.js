@@ -8,7 +8,7 @@ import {
     Text, TouchableOpacity, View, SafeAreaView
 } from "react-native";
 import { Dimensions } from "react-native";
-import Background from "../assets/badgeScreen.png";
+import Background from "../assets/gameScreens/badgeScreen.png";
 import MenuButton from "../components/MenuButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation';

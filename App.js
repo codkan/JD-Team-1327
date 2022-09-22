@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Navigator from "./src/Navigator";
 import { StatusBar } from "react-native";
-import bg1 from "./src/assets/bg.png";
-import bg2 from "./src/assets/bg-alt.png";
-import logo1 from "./src/assets/landinglogo.png";
-import logo2 from "./src/assets/landinglogo-alt.png";
+import bg1 from "./src/assets/app/bg.png";
+import bg2 from "./src/assets/app/bg-alt.png";
+import logo1 from "./src/assets/app/landinglogo.png";
+import logo2 from "./src/assets/app/landinglogo-alt.png";
 
 global.scheme = "light";
 global.color = "ivory";

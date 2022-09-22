@@ -4,14 +4,14 @@
 
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View, Image } from "react-native";
-import Background from "../assets/instructionScreen.png";
+import Background from "../assets/gameScreens/instructionScreen.png";
 import MenuButton from "../components/MenuButton";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { CoreStyle } from "../components/CoreStyle.js";
-import pc from "../assets/player.png";
-import npc from "../assets/npc.png";
-import talk from "../assets/speak.png";
-import note from "../assets/note.png";
+import pc from "../assets/gameItems/player.png";
+import npc from "../assets/gameItems/npc.png";
+import talk from "../assets/gameItems/speak.png";
+import note from "../assets/gameItems/note.png";
 import table from "../assets/living-room/side-table.png";
 
 

@@ -4,7 +4,7 @@
 
 import React from "react";
 import { ImageBackground, StyleSheet, Text, View } from "react-native";
-import Background from "../assets/aboutScreen.png";
+import Background from "../assets/gameScreens/aboutScreen.png";
 import MenuButton from "../components/MenuButton";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { CoreStyle } from "../components/CoreStyle.js";

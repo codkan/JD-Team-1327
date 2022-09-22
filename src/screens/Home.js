@@ -1,13 +1,13 @@
 import { Audio } from "expo-av";
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View, TouchableOpacity, Image } from "react-native";
-import Background from "../assets/homescreen.png";
+import Background from "../assets/gameScreens/homescreen.png";
 import HomeButton from "../components/HomeButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { CoreStyle } from "../components/CoreStyle.js";
-import disclaim from "../assets/info.png";
-import mute from "../assets/mute.png";
+import disclaim from "../assets/buttons/info.png";
+import mute from "../assets/buttons/mute.png";
 
 export default function Home({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });
@@ -29,7 +29,7 @@ export default function Home({ navigation }) {
         sound.volume = global.volume,
         sound.muted = global.muted,
         setSound(sound);
-        await sound.loadAsync(require("../assets/gameMusic.mp3"));
+        await sound.loadAsync(require("../assets/sounds/gameMusic.mp3"));
         await sound.playAsync();
 
     } catch (e) {

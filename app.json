@@ -5,9 +5,9 @@
     "owner": "childsafe_org",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/icon.png",
+    "icon": "./src/assets/app/icon.png",
     "splash": {
-      "image": "./src/assets/splash.png",
+      "image": "./src/assets/app/splash.png",
       "resizeMode": "cover",
       "backgroundColor": "#9AD2A9"
     },
@@ -22,12 +22,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/app/icon-alt.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./src/assets/favicon.png"
+      "favicon": "./src/assets/app/favicon.png"
     }
   }
 }

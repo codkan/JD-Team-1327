@@ -22,7 +22,7 @@ export default class Npc extends Component {
           backgroundColor: this.props.backgroundColor,
           resizeMode: "stretch",
         }}
-        source={require("../../assets/npc.png")}
+        source={require("../../assets/gameItems/npc.png")}
       />
     );
   }

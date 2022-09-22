@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
@@ -29,13 +29,13 @@ export default function FallsM0({ navigation }) {
         {
         url: '',
         props: {
-            source: require("../assets/fallsM/window_infographic.jpg")
+            source: require("../assets/fallsMM/window_infographic.jpg")
             },
         },
         {
         url: '',
         props: {
-            source: require("../assets/fallsM/tv_infographic.jpg")
+            source: require("../assets/fallsMM/tv_infographic.jpg")
             },
         },
     ];

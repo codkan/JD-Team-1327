@@ -1,13 +1,13 @@
 import React, {Component} from "react";
 import { ImageBackground, StyleSheet, Text, View, Button, ButtonGroup } from "react-native";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
-import { Quizzes } from "../QAbank";
+import { Quizzes } from "../json/QAbank.json";
 
 var count = 0;
 var score = 0;

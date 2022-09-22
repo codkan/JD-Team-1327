@@ -1,11 +1,13 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
+import poison_hdr from "../assets/PoisoningsMM/poison_hdr.png";
 import berries from "../assets/PoisoningsMM/berries.png";
 import house from "../assets/PoisoningsMM/house.png";
 import pills from "../assets/PoisoningsMM/Pill.png";
 import poison from "../assets/PoisoningsMM/poison.png";
 import prevent from "../assets/PoisoningsMM/prevent.png";
+
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -13,9 +15,8 @@ import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
-import poison_hdr from "../assets/poison_hdr.png";
 import * as Speech from "expo-speech";
-import {PoisonText} from "../PoisonText";
+import {PoisonText} from "../json/PoisonText.json";
 
 export default function Poisonings({ navigation }) {
     //NAV CALLBACK

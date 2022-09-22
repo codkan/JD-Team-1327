@@ -1,6 +1,7 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
+import bhdr from "../assets/BurnsMM/burn_hdr.png";
 import babyIMG from "../assets/BurnsMM/baby.jpeg";
 import outletIMG from "../assets/BurnsMM/outlet.png";
 import panIMG from "../assets/BurnsMM/pan.png";
@@ -10,6 +11,7 @@ import cookIMG from "../assets/BurnsMM/cook.png";
 import sunscreenIMG from "../assets/BurnsMM/sunscreen.png";
 import treatmentIMG from "../assets/BurnsMM/treatment.png";
 import typeIMG from "../assets/BurnsMM/types.png";
+
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -17,9 +19,8 @@ import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
-import bhdr from "../assets/burn_hdr.png";
 import * as Speech from "expo-speech";
-import {BurnText} from "../BurnText";
+import {BurnText} from "../json/BurnText.json";
 
 export default function Burns({ navigation }) {
     //NAV CALLBACK

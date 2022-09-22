@@ -4,7 +4,7 @@
 
 import React from "react";
 import { ImageBackground, CoreStyleheet, Text, View } from "react-native";
-import Background from "../assets/disclaimScreen.png";
+import Background from "../assets/gameScreens/disclaimScreen.png";
 import MenuButton from "../components/MenuButton";
 import { CoreStyle } from "../components/CoreStyle.js";
 

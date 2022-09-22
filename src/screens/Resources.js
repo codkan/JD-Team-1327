@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
-import { Sources } from "../Bib";
+import { Sources } from "../json/Bib.json";
 
 var last;
 var next;

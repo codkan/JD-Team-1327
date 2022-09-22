@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, TouchableOpacity, ImageBackground, StyleSheet, Text, View } from "react-native";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
 import MainButton from "../components/MainButton";
 import Navbar from "../components/NavBar";
 import falls from "../assets/reviewCrayons/falls.png";

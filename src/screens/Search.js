@@ -4,8 +4,8 @@ import { ImageBackground, StyleSheet, Text, View, SafeAreaView, FlatList, Alert 
 import { SearchBar } from 'react-native-elements';
 import { CoreStyle } from "../components/CoreStyle";
 import Navbar from "../components/NavBar";
-import Background from "../assets/bg.png";
-import { Content } from "../Content";
+import Background from "../assets/app/bg.png";
+import { Content } from "../json/Content.json";
 import Highlighter from "@sanar/react-native-highlight-text";
 
 export default function Search({ navigation }) {

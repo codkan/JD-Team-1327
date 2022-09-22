@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
 import ppd2 from "../assets/parentalHealthMM/ppd2.png";
 import ppd3 from "../assets/parentalHealthMM/ppd3.png";
 import ppd4 from "../assets/parentalHealthMM/ppd4.png";
@@ -17,7 +17,7 @@ import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
 import * as Speech from "expo-speech";
-import { ParentText } from "../ParentText";
+import { ParentText } from "../json/ParentText.json";
 
 export default function ParentalHealth({ navigation }) {
     //NAV CALLBACK

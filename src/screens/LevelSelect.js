@@ -4,7 +4,7 @@
 
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
-import Background from "../assets/levelSelect.png";
+import Background from "../assets/gameScreens/levelSelect.png";
 import LevelButton from "../components/LevelButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation';

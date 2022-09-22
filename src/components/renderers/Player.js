@@ -22,7 +22,7 @@ export default class Player extends Component {
           backgroundColor: this.props.backgroundColor,
           resizeMode: "stretch",
         }}
-        source={require("../../assets/player.png")}
+        source={require("../../assets/gameItems/player.png")}
       />
     );
   }

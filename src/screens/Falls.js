@@ -1,17 +1,18 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Background from "../assets/bg.png";
-import end from "../assets/end.png";
-import falls from "../assets/falls.png";
-import secure from "../assets/secure.png";
-import stairs from "../assets/stairs.png";
-import stroller1 from "../assets/stroller1.png";
-import stroller2 from "../assets/stroller2.png";
-import tv from "../assets/TV.png";
-import window from "../assets/window.png";
-import playground from "../assets/playground.png";
-import fall1 from "../assets/fall1.png";
-import fall2 from "../assets/fall2.png"
+import Background from "../assets/app/bg.png";
+import end from "../assets/fallsMM/end.png";
+import falls from "../assets/fallsMM/falls.png";
+import secure from "../assets/fallsMM/secure.png";
+import stairs from "../assets/fallsMM/stairs.png";
+import stroller1 from "../assets/fallsMM/stroller1.png";
+import stroller2 from "../assets/fallsMM/stroller2.png";
+import tv from "../assets/fallsMM/TV.png";
+import window from "../assets/fallsMM/window.png";
+import playground from "../assets/fallsMM/playground.png";
+import fall1 from "../assets/fallsMM/fall1.png";
+import fall2 from "../assets/fallsMM/fall2.png"
+
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -20,7 +21,7 @@ import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
 import * as Speech from "expo-speech";
-import { FallText } from "../FallText";
+import { FallText } from "../json/FallText.json";
 
 var i = 0;
 

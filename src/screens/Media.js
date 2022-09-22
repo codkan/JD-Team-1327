@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
 import BackButton from "../components/BackButton";
 import MainButton from "../components/MainButton";
 import MediaButton from "../components/MediaButton";
@@ -9,7 +9,7 @@ import Navbar from "../components/NavBar";
 import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
 import ImageViewer from "react-native-image-zoom-viewer";
-import { MM } from "../MM.json";
+import { MM } from "../json/MM.json.json";
 
 var images;
 

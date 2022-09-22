@@ -1,11 +1,17 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { WebView } from "react-native-webview";
-import Background from "../assets/bg.png";
-import drown from "../assets/drown.png";
-import drowning from "../assets/drowning.png";
-import pool from "../assets/Pool.png";
-import hand from "../assets/hand.png";
+import Background from "../assets/app/bg.png";
+import drown from "../assets/drownMM/drown.png";
+import drowning from "../assets/drownMM/drowning.png";
+import pool from "../assets/drownMM/Pool.png";
+import hand from "../assets/drownMM/hand.png";
+import bath from "../assets/drownMM/bath.png";
+import float from "../assets/drownMM/float.png";
+import cpr from "../assets/drownMM/cpr.png";
+import alone from "../assets/drownMM/alone.png";
+import teach from "../assets/drownMM/teach.png";
+
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
@@ -13,14 +19,9 @@ import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
-import bath from "../assets/bath.png";
-import float from "../assets/float.png";
-import cpr from "../assets/cpr.png";
-import alone from "../assets/alone.png";
-import teach from "../assets/teach.png";
 import VideoPlayer from "../components/VideoPlayer";
 import * as Speech from "expo-speech";
-import {DrownText} from "../DrownText";
+import {DrownText} from "../json/DrownText.json";
 
 export default function Drownings({ navigation }) {
     //NAV CALLBACK

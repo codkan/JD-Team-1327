@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Background from "../assets/bg.png";
+import Background from "../assets/app/bg.png";
 import car from "../assets/carSafetyMM/car.png";
 import BackButton from "../components/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
@@ -20,7 +20,7 @@ import kid from "../assets/carSafetyMM/kid.png";
 import heat from "../assets/carSafetyMM/heat.png";
 import clean from "../assets/carSafetyMM/clean.png";
 import * as Speech from "expo-speech";
-import {CarText} from "../CarText";
+import {CarText} from "../json/CarText.json";
 
 export default function Traffic({ navigation }) {
     //NAV CALLBACK
