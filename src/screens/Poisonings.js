@@ -10,7 +10,7 @@ import prevent from "../assets/PoisoningsMM/prevent.png";
 
 import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
-import MediaButton from "../components/MediaButton";
+import MediaButton from "../components/buttons//MediaButton";
 import MMButton from "../components/buttons/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/buttons/SourcesButton";

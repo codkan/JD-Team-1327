@@ -1,15 +1,15 @@
-import React from "react";
+import React, {Component} from "react";
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import Background from "../assets/app/bg.png";
-import BackButton from "../components/BackButton";
+import BackButton from "../components/buttons//BackButton";
 import MainButton from "../components/buttons/MainButton";
-import MediaButton from "../components/MediaButton";
+import MediaButton from "../components/buttons//MediaButton";
 import Navbar from "../components/NavBar";
 import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
 import ImageViewer from "react-native-image-zoom-viewer";
-import { MM } from "../json/MM.json.json";
+import { MM } from "../json/MM.json";
 
 var images;
 
@@ -111,15 +111,15 @@ export default class Media extends Component {
 
     <View style={CoreStyle.mediaButtons}>
         <MainButton
-              text="Go to Falls"
-              onPress={goToFalls}
+              text={"Go to " + this.props.navigation.getParam('topic')}
+              onPress={() => this.props.navigation.navigate(this.props.navigation.getParam('topic'))}
               txtColor={global.text}
         ></MainButton>
     </View>
 </ScrollView>
 
     <View style = {CoreStyle.pushdown}>
-    <Navbar navigation={navigation}/>
+    <Navbar navigation={this.props.navigation}/>
     </View>
 
 

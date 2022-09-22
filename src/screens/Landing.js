@@ -11,7 +11,7 @@ import Background from "../assets/app/bg.png";
 import Background_alt from "../assets/app/bg-alt.png";
 import logo from "../assets/app/landinglogo.png"
 import game from "../assets/landingCrayons/game.png";
-import info from "../assets/landingCrayons/buttons/info.png";
+import info from "../assets/landingCrayons/info.png";
 import review from "../assets/landingCrayons/review1.png";
 import sources from "../assets/landingCrayons/sources.png";
 import videos from "../assets/landingCrayons/videos.png";

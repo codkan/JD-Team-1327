@@ -43,7 +43,7 @@ export default function Multimedia({ navigation }) {
     <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>
     <View style={CoreStyle.buttonContainer}>
 
-        <TouchableOpacity onPress={goMedia("Falls")}>
+        <TouchableOpacity onPress={() => goMedia("Falls")}>
             <Image source={falls} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 

@@ -13,7 +13,7 @@ export default function MenuButton({ text, onPress, visible }) {
     noteContents = (
       <View style={{ marginRight: 20, justifyContent: "center" }}>
         <ImageBackground
-          source={require("../assets/gameItems/speak.png")}
+          source={require("../../assets/gameItems/speak.png")}
           style={{ width: 100, height: 100, visible: !visible }}
         >
           <Text style={styles.buttonText}>{text}</Text>

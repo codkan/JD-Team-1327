@@ -2,13 +2,6 @@ import React from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Background from "../assets/app/bg.png";
 import car from "../assets/carSafetyMM/car.png";
-import BackButton from "../components/BackButton";
-import CollapsibleBox from "../components/CollapsibleBox";
-import MediaButton from "../components/MediaButton";
-import MMButton from "../components/MMButton";
-import Navbar from "../components/NavBar";
-import SourcesButton from "../components/SourcesButton";
-import { CoreStyle } from "../components/CoreStyle";
 import rearSeat from "../assets/carSafetyMM/rearSeat.png";
 import foreSeat from "../assets/carSafetyMM/foreSeat.png";
 import boostSeat from "../assets/carSafetyMM/boostSeat.png";
@@ -19,6 +12,14 @@ import safe from "../assets/carSafetyMM/safe.png";
 import kid from "../assets/carSafetyMM/kid.png";
 import heat from "../assets/carSafetyMM/heat.png";
 import clean from "../assets/carSafetyMM/clean.png";
+
+import BackButton from "../components/buttons/BackButton";
+import CollapsibleBox from "../components/CollapsibleBox";
+import MediaButton from "../components/buttons/MediaButton";
+import MMButton from "../components/buttons/MMButton";
+import Navbar from "../components/NavBar";
+import SourcesButton from "../components/buttons/SourcesButton";
+import { CoreStyle } from "../components/CoreStyle";
 import * as Speech from "expo-speech";
 import {CarText} from "../json/CarText.json";
 

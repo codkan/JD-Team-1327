@@ -3,7 +3,7 @@ import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacit
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
-import MediaButton from "../components/MediaButton";
+import MediaButton from "../components/buttons//MediaButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 

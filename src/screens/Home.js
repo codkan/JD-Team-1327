@@ -43,7 +43,7 @@ export default function Home({ navigation }) {
         sound.unloadAsync();
         muted = true
     } else {
-        await sound.loadAsync(require("../assets/gameMusic.mp3"));
+        await sound.loadAsync(require("../assets/sounds/gameMusic.mp3"));
         await sound.playAsync();
         muted = false;
     }

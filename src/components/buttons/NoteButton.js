@@ -12,7 +12,7 @@ export default function MenuButton({ text, onPress, visible }) {
   if (visible) {
     noteContents = (
       <ImageBackground
-        source={require("../assets/gameItems/note.png")}
+        source={require("../../assets/gameItems/note.png")}
         style={{ width: 125, height: 125, visible: !visible }}
       >
         <Text style={styles.buttonText}>{text}</Text>

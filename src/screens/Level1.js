@@ -11,7 +11,7 @@ import Background from "../assets/living-room/level-1-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
 import MenuButton from "../components/buttons/MenuButton";
 import NoteButton from "../components/buttons/NoteButton";
-import SpeakButton from "../components/SpeakButton";
+import SpeakButton from "../components/buttons//SpeakButton";
 import { get, insert } from "../Db";
 import Entities from "../entities/Level1Entities";
 import Dispatches from "../systems/Level1Dispatches";

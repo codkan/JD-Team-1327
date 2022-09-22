@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Modal, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Timer from "./Timer";
-import MenuButton from "./MenuButton";
+import MenuButton from "./buttons/MenuButton";
 import { Dimensions } from "react-native";
 
 
