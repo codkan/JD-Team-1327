@@ -3,16 +3,10 @@
     "FallMM": {
       "images": [
         {
-          "url": "",
-          "props": {
-            "source": "require('../assets/fallsM/window_infographic.jpg')"
-          }
+          "path": "assets/fallsMM/window_infographic.jpg"
         },
         {
-          "url": "",
-          "props": {
-            "source": "require('../assets/fallsM/tv_infographic.jpg')"
-          }
+          "path": "assets/fallsMM/tv_infographic.jpg"
         }
       ],
       "videos": [

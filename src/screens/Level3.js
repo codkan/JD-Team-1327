@@ -298,8 +298,7 @@ export default class LevelThree extends Component {
                   forgotten and die are under 2 years old.
                 </Text>
                 <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths'); }}>
-                  Source:
-                  https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths
+                  Source:https://www.nhtsa.gov/child-safety/help-prevent-hot-car-deaths
                 </Text>
                 <Image style={styles.carimg} source={car}/>
                 <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
@@ -351,8 +350,7 @@ export default class LevelThree extends Component {
                 </Text>
                 <Image style={styles.poolimg} source={pool}/>
                 <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx'); }}>
-                  Source:
-                  https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx
+                  Source: https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx
                 </Text>
                 <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                 <MenuButton

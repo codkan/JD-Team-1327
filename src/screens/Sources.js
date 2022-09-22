@@ -21,18 +21,6 @@ export default function About({ navigation }) {
     navigation.navigate("Resources", {topic: _topic});
   }
 
-  const handleGoToDrowningSource = () => {
-    navigation.navigate("DrowningSources");
-  };
-
-  const handleGoToTrafficSource = () => {
-    navigation.navigate("TrafficSources");
-  };
-
-  const handleGoToParentalHealthSource = () => {
-      navigation.navigate("ParentalHealthSources");
-    };
-
   return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>

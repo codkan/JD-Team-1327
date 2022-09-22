@@ -11,7 +11,33 @@ import { CoreStyle } from "../components/CoreStyle";
 import ImageViewer from "react-native-image-zoom-viewer";
 import { MM } from "../json/MM.json";
 
-var images;
+import fall1 from "../assets/fallsMM/window_infographic.jpg";
+import fall2 from "../assets/fallsMM/tv_infographic.jpg";
+//import fall3 from "../assets/BurnsMM/bmm3.jpeg";
+
+import burn1 from "../assets/BurnsMM/bmm1.jpeg";
+import burn2 from "../assets/BurnsMM/bmm3.jpeg";
+import burn3 from "../assets/BurnsMM/bmm4.png";
+
+import poison1 from "../assets/PoisoningsMM/PoisoningMM2.jpg";
+import poison2 from "../assets/PoisoningsMM/PMM3.png";
+import poison3 from "../assets/PoisoningsMM/PMM5.jpg";
+
+import drown1 from "../assets/drownMM/Drowning_Infographic.png";
+//import drown2 from "../assets/BurnsMM/bmm2.png";
+//import drown3 from "../assets/BurnsMM/bmm3.jpeg";
+
+import car1 from "../assets/carSafetyMM/playSafe.jpg";
+//import car2 from "../assets/BurnsMM/bmm2.png";
+//import car3 from "../assets/BurnsMM/bmm3.jpeg";
+
+import par1 from "../assets/parentalHealthMM/ppd1.jpg";
+//import par2 from "../assets/BurnsMM/bmm2.png";
+//import par3 from "../assets/BurnsMM/bmm3.jpeg";
+
+var img1;
+var img2;
+var img3;
 
 export default class Media extends Component {
     constructor(props) {
@@ -37,44 +63,72 @@ export default class Media extends Component {
   render (){
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
-            last = "Sources";
+            last = "";
             next = "Burns";
-            images = MM.FallMM.images;
+            img1 = fall1;
+            img2 = fall2;
+            //img3 = fall3;
             vids = MM.FallMM.videos;
             break;
         case "Burns":
             last = "Falls";
             next = "Poisonings";
-            images = MM.BurnMM.images;
+            img1 = burn1;
+            img2 = burn2;
+            img3 = burn3;
             vids = MM.BurnMM.videos;
             break;
         case "Poisonings":
             last = "Burns";
             next = "Drownings";
-            images = MM.PoisonMM.images;
+            img1 = poison1;
+            img2 = poison2;
+            img3 = poison3;
             vids = MM.PoisonMM.videos;
             break;
         case "Drownings":
             last =  "Poisonings";
             next = "Car Safety";
-            images = MM.DrownMM.images;
+            img1 = drown1;
+            //img2 = drown2;
+            //img3 = drown3;
             vids = MM.DrownMM.videos;
             break;
         case "Car Safety":
             last = "Drownings";
             next = "Parental Health";
-            images = MM.CarMM.images;
+            img1 = car1;
+            //img2 = car2;
+            //img3 = car3;
             vids = MM.CarMM.videos;
             break;
         case "Parental Health":
             last = "Car Safety";
             next = "Parental Health";
-            images = MM.ParMM.images;
+            img1 = par1;
+            //img2 = par2;
+            //img3 = par3;
             vids = MM.ParMM.videos;
             break;
         default:
             break
     };
+
+    const images = [
+        {
+        url: '',
+        props: {
+            source: img1
+            },
+        },
+        {
+        url: '',
+        props: {
+            source: img2
+            },
+        },
+    ];
+
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
