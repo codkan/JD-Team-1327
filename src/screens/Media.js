@@ -11,9 +11,9 @@ import { CoreStyle } from "../components/CoreStyle";
 import ImageViewer from "react-native-image-zoom-viewer";
 import { MM } from "../json/MM.json";
 
-import fall1 from "../assets/fallsMM/window_infographic.jpg";
-import fall2 from "../assets/fallsMM/tv_infographic.jpg";
-//import fall3 from "../assets/BurnsMM/bmm3.jpeg";
+import fall1 from "../assets/fallsMM/falls_infographic.jpeg";
+import fall2 from "../assets/fallsMM/window_infographic.jpg";
+import fall3 from "../assets/fallsMM/tv_infographic.jpg";
 
 import burn1 from "../assets/BurnsMM/bmm1.jpeg";
 import burn2 from "../assets/BurnsMM/bmm3.jpeg";
@@ -24,12 +24,12 @@ import poison2 from "../assets/PoisoningsMM/PMM3.png";
 import poison3 from "../assets/PoisoningsMM/PMM5.jpg";
 
 import drown1 from "../assets/drownMM/Drowning_Infographic.png";
-//import drown2 from "../assets/BurnsMM/bmm2.png";
-//import drown3 from "../assets/BurnsMM/bmm3.jpeg";
+import drown2 from "../assets/drownMM/swim_infographic.png";
+import drown3 from "../assets/BurnsMM/water_infographic.jpg";
 
 import car1 from "../assets/carSafetyMM/playSafe.jpg";
-//import car2 from "../assets/BurnsMM/bmm2.png";
-//import car3 from "../assets/BurnsMM/bmm3.jpeg";
+import car2 from "../assets/carSafetyMM/seatbeltPlacement.jpg";
+import car3 from "../assets/carSafetyMM/recalled.jpg";
 
 import par1 from "../assets/parentalHealthMM/ppd1.jpg";
 //import par2 from "../assets/BurnsMM/bmm2.png";
@@ -67,7 +67,7 @@ export default class Media extends Component {
             next = "Burns";
             img1 = fall1;
             img2 = fall2;
-            //img3 = fall3;
+            img3 = fall3;
             vids = MM.FallMM.videos;
             break;
         case "Burns":
