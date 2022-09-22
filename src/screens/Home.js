@@ -2,7 +2,7 @@ import { Audio } from "expo-av";
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View, TouchableOpacity, Image } from "react-native";
 import Background from "../assets/gameScreens/homescreen.png";
-import HomeButton from "../components/HomeButton";
+import HomeButton from "../components/buttons/HomeButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { CoreStyle } from "../components/CoreStyle.js";

@@ -9,9 +9,9 @@ import {Image, ImageBackground, Linking, Modal, StyleSheet, Text, View } from "r
 import { GameEngine } from "react-native-game-engine";
 import Background from "../assets/kitchen/level-2-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
-import MenuButton from "../components/MenuButton";
-import NoteButton from "../components/NoteButton";
-import SpeakButton from "../components/SpeakButton";
+import MenuButton from "../components/buttons/MenuButton";
+import NoteButton from "../components/buttons/NoteButton";
+import SpeakButton from "../components/buttons/SpeakButton";
 import { get, insert } from "../Db";
 import Entities from "../entities/Level2Entities";
 import Dispatches from "../systems/Level2Dispatches";

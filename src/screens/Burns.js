@@ -12,12 +12,12 @@ import sunscreenIMG from "../assets/BurnsMM/sunscreen.png";
 import treatmentIMG from "../assets/BurnsMM/treatment.png";
 import typeIMG from "../assets/BurnsMM/types.png";
 
-import BackButton from "../components/BackButton";
+import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
-import MediaButton from "../components/MediaButton";
-import MMButton from "../components/MMButton";
+import MediaButton from "../components/buttons/MediaButton";
+import MMButton from "../components/buttons/MMButton";
 import Navbar from "../components/NavBar";
-import SourcesButton from "../components/SourcesButton";
+import SourcesButton from "../components/buttons/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
 import * as Speech from "expo-speech";
 import {BurnText} from "../json/BurnText.json";

@@ -5,7 +5,7 @@
 import React from "react";
 import { ImageBackground, CoreStyleheet, Text, View } from "react-native";
 import Background from "../assets/gameScreens/disclaimScreen.png";
-import MenuButton from "../components/MenuButton";
+import MenuButton from "../components/buttons/MenuButton";
 import { CoreStyle } from "../components/CoreStyle.js";
 
 export default function Disclaim({ navigation }) {

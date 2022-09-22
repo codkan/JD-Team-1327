@@ -5,7 +5,7 @@ import Background from "../assets/app/bg.png";
 import Background_alt from "../assets/app/bg-alt.png";
 import logo1 from "../assets/app/landinglogo.png"
 import logo2 from "../assets/app/landinglogo-alt.png"
-import MainButton from "../components/MainButton";
+import MainButton from "../components/buttons/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle.js";
 

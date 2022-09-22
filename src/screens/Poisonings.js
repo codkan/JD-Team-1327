@@ -8,12 +8,12 @@ import pills from "../assets/PoisoningsMM/Pill.png";
 import poison from "../assets/PoisoningsMM/poison.png";
 import prevent from "../assets/PoisoningsMM/prevent.png";
 
-import BackButton from "../components/BackButton";
+import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import MediaButton from "../components/MediaButton";
-import MMButton from "../components/MMButton";
+import MMButton from "../components/buttons/MMButton";
 import Navbar from "../components/NavBar";
-import SourcesButton from "../components/SourcesButton";
+import SourcesButton from "../components/buttons/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
 import * as Speech from "expo-speech";
 import {PoisonText} from "../json/PoisonText.json";

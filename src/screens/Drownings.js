@@ -12,9 +12,9 @@ import cpr from "../assets/drownMM/cpr.png";
 import alone from "../assets/drownMM/alone.png";
 import teach from "../assets/drownMM/teach.png";
 
-import BackButton from "../components/BackButton";
+import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
-import MediaButton from "../components/MediaButton";
+import MediaButton from "../components/buttons/MediaButton";
 import MMButton from "../components/MMButton";
 import Navbar from "../components/NavBar";
 import SourcesButton from "../components/SourcesButton";

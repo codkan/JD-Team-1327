@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { Dimensions } from "react-native";
 import Background from "../assets/gameScreens/badgeScreen.png";
-import MenuButton from "../components/MenuButton";
+import MenuButton from "../components/buttons/MenuButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { CoreStyle } from "../components/CoreStyle.js";
