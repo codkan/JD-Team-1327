@@ -21,23 +21,6 @@ export default function Multimedia({ navigation }) {
     navigation.navigate("Media", {topic: _topic});
   }
 
-
-  const handleBurnsNav = () => {
-    navigation.navigate("BurnsMM");
-  };
-  const handlePoisoningsNav = () => {
-    navigation.navigate("PoisoningsMM");
-  };
-  const handleDrowningsNav = () => {
-    navigation.navigate("DrowningMM");
-  };
-  const handleCarSafetyMMNav = () => {
-    navigation.navigate("CarSafetyMM");
-  };
-  const handleParentalHealthMMNav = () => {
-    navigation.navigate("ParentalHealthMM");
-  };
-
   return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>
@@ -47,23 +30,23 @@ export default function Multimedia({ navigation }) {
             <Image source={falls} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleBurnsNav}>
+        <TouchableOpacity onPress={() => goMedia("Burns")}>
             <Image source={burns} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handlePoisoningsNav}>
+        <TouchableOpacity onPress={() => goMedia("Poisonings")}>
             <Image source={poisonings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleDrowningsNav}>
+        <TouchableOpacity onPress={() => goMedia("Drownings")}>
             <Image source={drownings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleCarSafetyMMNav}>
+        <TouchableOpacity onPress={() => goMedia("Car Safety")}>
             <Image source={carSafety} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleParentalHealthMMNav}>
+        <TouchableOpacity onPress={() => goMedia("Parental Health")}>
             <Image source={parentHealth} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 

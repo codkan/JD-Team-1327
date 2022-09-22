@@ -32,8 +32,8 @@ import car2 from "../assets/carSafetyMM/seatbeltPlacement.jpg";
 import car3 from "../assets/carSafetyMM/recalled.jpg";
 
 import par1 from "../assets/parentalHealthMM/ppd1.jpg";
-//import par2 from "../assets/BurnsMM/bmm2.png";
-//import par3 from "../assets/BurnsMM/bmm3.jpeg";
+import par2 from "../assets/parentalHealthMM/pppd_infographic.png";
+import par3 from "../assets/parentalHealthMM/pmad_infographic.png";
 
 var img1;
 var img2;
@@ -90,24 +90,24 @@ export default class Media extends Component {
             last =  "Poisonings";
             next = "Car Safety";
             img1 = drown1;
-            //img2 = drown2;
-            //img3 = drown3;
+            img2 = drown2;
+            img3 = drown3;
             vids = MM.DrownMM.videos;
             break;
         case "Car Safety":
             last = "Drownings";
             next = "Parental Health";
             img1 = car1;
-            //img2 = car2;
-            //img3 = car3;
+            img2 = car2;
+            img3 = car3;
             vids = MM.CarMM.videos;
             break;
         case "Parental Health":
             last = "Car Safety";
             next = "Parental Health";
             img1 = par1;
-            //img2 = par2;
-            //img3 = par3;
+            img2 = par2;
+            img3 = par3;
             vids = MM.ParMM.videos;
             break;
         default:
@@ -125,6 +125,11 @@ export default class Media extends Component {
         url: '',
         props: {
             source: img2
+            },
+        },
+        url: '',
+        props: {
+            source: img3
             },
         },
     ];
