@@ -17,8 +17,8 @@ export default function About({ navigation }) {
     navigation.pop();
   };
 
-  const goSourceList = (_topic) => {
-    navigation.navigate("SourceList", {topic: _topic});
+  const goResources = (_topic) => {
+    navigation.navigate("Resources", {topic: _topic});
   }
 
   const handleGoToDrowningSource = () => {
@@ -37,27 +37,27 @@ export default function About({ navigation }) {
     <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>
     <View style = {CoreStyle.buttonContainer}>
-        <TouchableOpacity onPress={() => goSourceList("Falls")}>
+        <TouchableOpacity onPress={() => goResources("Falls")}>
             <Image source={falls} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => goSourceList("Burns")}>
+        <TouchableOpacity onPress={() => goResources("Burns")}>
             <Image source={burns} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => goSourceList("Poisonings")}>
+        <TouchableOpacity onPress={() => goResources("Poisonings")}>
             <Image source={poisonings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleGoToDrowningSource}>
+        <TouchableOpacity onPress={() => goResources("Drownings")}>
             <Image source={drownings} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleGoToTrafficSource}>
+        <TouchableOpacity onPress={() => goResources("Car Safety")}>
             <Image source={carSafety} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleGoToParentalHealthSource}>
+        <TouchableOpacity onPress={() => goResources("Parental Health")}>
             <Image source={parentHealth} style={CoreStyle.crayon}></Image>
         </TouchableOpacity>
     </View>

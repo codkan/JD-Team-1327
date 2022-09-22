@@ -29,6 +29,156 @@
         "src": "https://kidshealth.org/en/parents/products-strollers.html",
         "text": "[7] KidsHealth - Stroller Safety"
       }
+    ],
+    "BurnSrcs": [
+      {
+        "src": "https://www.childrenssafetynetwork.org/child-safety-topics/fire-burn-safety",
+        "text": "[1] Fire & Burn Safety"
+      },
+      {
+        "src": "https://ameriburn.org/wp-content/uploads/2018/12/nbaw2019_statsdataresources_120618-1.pdf",
+        "text": "[2] Scald Statistics and Data"
+      },
+      {
+        "src": "https://www.stanfordchildrens.org/en/topic/default?id=burns-overview-90-P01737",
+        "text": "[3] Overview of Burns"
+      },
+      {
+        "src": "https://www.uofmhealth.org/health-library/ue5140",
+        "text": "Child Safety: Preventing Burns"
+      },
+      {
+        "src": "https://kidshealth.org/en/parents/safety-burns.html",
+        "text": "Household Safety: Preventing Burns, Shocks, and Fires"
+      },
+      {
+        "src": "https://raisingchildren.net.au/newborns/safety/burns-scalds-fire/burns-prevention",
+        "text": "Burns prevention in your home"
+      },
+      {
+        "src": "https://www.stanfordchildrens.org/en/topic/default?id=preventing-burn-injuries-90-P01750",
+        "text": "Preventing Burn Injuries"
+      }
+    ],
+    "PoisonSrcs": [
+      {
+        "src": "https://www.poison.org/poison-statistics-national",
+        "text": "[1] National Poison Statistics"
+      },
+      {
+        "src": "https://injuryprevention.bmj.com/content/injuryprev/23/2/93.full.pdf",
+        "text": "[2] BMJ Injury Prevention"
+      },
+      {
+        "src": "https://www.cdc.gov/homeandrecreationalsafety/poisoning/preventiontips.html",
+        "text": "[3] Center for Disease Control"
+      },
+      {
+        "src": "https://kidshealth.org/en/parents/safety-poisoning.html",
+        "text": "Kids Health Poisoning Safety"
+      },
+      {
+        "src": "https://www.healthychildren.org/English/safety-prevention/all-around/Pages/Poison-Prevention.aspx",
+        "text": "Healthy Children Poison Prevention"
+      },
+      {
+        "src": "https://poisonhelp.hrsa.gov/what-you-can-do/prevention-tips",
+        "text": "Poison Help Prevention Tips"
+      },
+      {
+        "src": "https://www.ucsfbenioffchildrens.org/education/preventing-poisoning-in-children",
+        "text": "UCSF Benioff Childrens Hospitals Recommendations"
+      }
+    ],
+    "DrownSrcs": [
+      {
+        "src": "https://www.cdc.gov/drowning/facts/index.html",
+        "text": "[1] CDC Drownings Page"
+      },
+      {
+        "src": "https://www.safekids.org/sites/default/files/water-safety-infographic-long-version.pdf",
+        "text": "[2] SafeKids Drowning Safety"
+      },
+      {
+        "src": "https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx",
+        "text": "Healthy Children - Water Safety"
+      },
+      {
+        "src": "https://www.contemporarypediatrics.com/view/how-one-child-s-tragedy-is-making-us-reconsider-our-approach-to-drowning-prevention",
+        "text": "Contemporary Pediatrics Article"
+      },
+      {
+        "src": "https://ndpa.org/",
+        "text": "National Drowning Prevention Alliance"
+      },
+      {
+        "src": "https://www.npr.org/sections/health-shots/2021/07/03/1012270779/you-could-save-a-child-from-drowning-this-summer-heres-how",
+        "text": "NPR Rescue Advice"
+      },
+      {
+        "src": "https://www.parents.com/kids/safety/outdoor/the-sad-truth-about-drowning/",
+        "text": "Parents.com Drowning Prevention Guide"
+      }
+    ],
+    "CarSrcs": [
+      {
+        "src": "https://www.healthychildren.org/English/safety-prevention/on-the-go/Pages/Car-Safety-Seats-Information-for-Families.aspx",
+        "text": "[1] Healthy Children - Car Safety"
+      },
+      {
+        "src": "https://www.nhtsa.gov/equipment/car-seats-and-booster-seats",
+        "text": "NHTSA Ratings and Guidelines"
+      },
+      {
+        "src": "https://www.cdc.gov/transportationsafety/child_passenger_safety/index.html",
+        "text": "CDC Child Passenger Safety"
+      },
+      {
+        "src": "https://www.safekids.org/car-seat",
+        "text": "Safe Kids - Car Seat Safety Guide"
+      },
+      {
+        "src": "https://www.ghsa.org/state-laws/issues/child%20passenger%20safety",
+        "text": "Child Passenger Laws by State"
+      },
+      {
+        "src": "https://www.nsc.org/road/safety-topics/child-passenger-safety/child-passenger-safety-home",
+        "text": "National Safety Council - Child Passenger Safety"
+      },
+      {
+        "src": "https://kidshealth.org/en/parents/auto.html",
+        "text": "Kids Health - Automobile Safety"
+      }
+    ],
+    "ParSrcs": [
+      {
+        "src": "https://kidshealth.org/en/parents/ppd.html",
+        "text": "[1] Kids Health - Parental Health"
+      },
+      {
+        "src": "https://www.mayoclinic.org/diseases-conditions/postpartum-depression/symptoms-causes/syc-20376617",
+        "text": "[2] Mayo Clinic - PPD Symptoms and Causes"
+      },
+      {
+        "src": "https://my.clevelandclinic.org/health/diseases/9312-postpartum-depression",
+        "text": "Cleveland Clinic - PPD Info"
+      },
+      {
+        "src": "https://www.marchofdimes.org/pregnancy/postpartum-depression.aspx",
+        "text": "March of Dimes - PPD Info"
+      },
+      {
+        "src": "https://www.womenshealth.gov/mental-health/mental-health-conditions/postpartum-depression",
+        "text": "Women's Health - PPD Info"
+      },
+      {
+        "src": "https://www.webmd.com/depression/guide/postpartum-depression",
+        "text": "WebMD - Symptoms, Causes, and Risks"
+      },
+      {
+        "src": "https://www.apa.org/pi/women/resources/reports/postpartum-depression",
+        "text": "American Psychological Association"
+      }
     ]
   }
 }
