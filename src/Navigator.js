@@ -25,12 +25,6 @@ import ParentalHealth from "./screens/ParentalHealth";
 
 import Multimedia from "./screens/Multimedia.js";
 import Media from "./screens/Media.js";
-import FallsMM from "./screens/FallsMM";
-import DrowningMM from "./screens/DrowningMM";
-import CarSafetyMM from "./screens/CarSafetyMM";
-import ParentalHealthMM from "./screens/ParentalHealthMM";
-import PoisoningsMM from "./screens/PoisoningsMM";
-import BurnsMM from "./screens/BurnsMM";
 
 import Review from "./screens/Review.js";
 import Quiz from "./screens/Quiz.js";
@@ -157,48 +151,6 @@ import LevelThree from "./screens/Level3";
        navigationOptions: {
          headerShown: false,
        },
-     },
-     FallsMM: {
-         screen: FallsMM,
-         navigationOptions: {
-           headerShown: false,
-           animationEnabled: false,
-         },
-     },
-     BurnsMM: {
-       screen: BurnsMM,
-       navigationOptions: {
-         headerShown: false,
-         animationEnabled: false,
-       },
-     },
-     PoisoningsMM: {
-       screen: PoisoningsMM,
-       navigationOptions: {
-         headerShown: false,
-         animationEnabled: false,
-       },
-     },
-     DrowningMM: {
-       screen: DrowningMM,
-       navigationOptions: {
-         headerShown: false,
-         animationEnabled: false,
-       },
-     },
-     CarSafetyMM: {
-         screen: CarSafetyMM,
-         navigationOptions: {
-           headerShown: false,
-           animationEnabled: false,
-         },
-     },
-     ParentalHealthMM: {
-         screen: ParentalHealthMM,
-         navigationOptions: {
-           headerShown: false,
-           animationEnabled: false,
-         },
      },
 /////GAME SCREENS
      Home: {

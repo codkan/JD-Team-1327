@@ -11,7 +11,7 @@ import { CoreStyle } from "../components/CoreStyle";
 import ImageViewer from "react-native-image-zoom-viewer";
 import { MM } from "../json/MM.json";
 
-import fall1 from "../assets/fallsMM/falls_infographic.jpeg";
+import fall1 from "../assets/fallsMM/falls_infographic.jpg";
 import fall2 from "../assets/fallsMM/window_infographic.jpg";
 import fall3 from "../assets/fallsMM/tv_infographic.jpg";
 
@@ -24,8 +24,8 @@ import poison2 from "../assets/PoisoningsMM/PMM3.png";
 import poison3 from "../assets/PoisoningsMM/PMM5.jpg";
 
 import drown1 from "../assets/drownMM/Drowning_Infographic.png";
-import drown2 from "../assets/drownMM/swim_infographic.png";
-import drown3 from "../assets/BurnsMM/water_infographic.jpg";
+import drown2 from "../assets/drownMM/swim_infographic.jpg";
+import drown3 from "../assets/drownMM/water_infographic.jpg";
 
 import car1 from "../assets/carSafetyMM/playSafe.jpg";
 import car2 from "../assets/carSafetyMM/seatbeltPlacement.jpg";
@@ -35,9 +35,12 @@ import par1 from "../assets/parentalHealthMM/ppd1.jpg";
 import par2 from "../assets/parentalHealthMM/pppd_infographic.png";
 import par3 from "../assets/parentalHealthMM/pmad_infographic.png";
 
+var next;
+var last;
 var img1;
 var img2;
 var img3;
+var vids;
 
 export default class Media extends Component {
     constructor(props) {
@@ -127,6 +130,7 @@ export default class Media extends Component {
             source: img2
             },
         },
+        {
         url: '',
         props: {
             source: img3
@@ -165,8 +169,8 @@ export default class Media extends Component {
 </View>
 
     <VideoPlayer videoID={vids[0].VID}/>
-
     <VideoPlayer videoID={vids[1].VID}/>
+    <VideoPlayer videoID={vids[2].VID}/>
 
     <View style={CoreStyle.mediaButtons}>
         <MainButton

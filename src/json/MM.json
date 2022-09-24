@@ -1,20 +1,80 @@
 {
   "MM": {
     "FallMM": {
-      "images": [
-        {
-          "path": "assets/fallsMM/window_infographic.jpg"
-        },
-        {
-          "path": "assets/fallsMM/tv_infographic.jpg"
-        }
-      ],
       "videos": [
         {
           "VID": "i8oifZ7HXaA"
         },
         {
           "VID": "XyCHsr9NKqY"
+        },
+        {
+          "VID": "3MDJBdGuySU"
+        }
+      ]
+    },
+    "BurnMM": {
+      "videos": [
+        {
+          "VID": "IZP_9VIgcnw"
+        },
+        {
+          "VID": "ZNWjfe-84Ig"
+        },
+        {
+          "VID": "gMalF0GMLEM"
+        }
+      ]
+    },
+    "PoisonMM": {
+      "videos": [
+        {
+          "VID": "JQob-pwLZJ8"
+        },
+        {
+          "VID": "Hu1NEWaOISo"
+        },
+        {
+          "VID": "7Et7lrqVy04"
+        }
+      ]
+    },
+    "DrownMM": {
+      "videos": [
+        {
+          "VID": "L0KTqPloUiU"
+        },
+        {
+          "VID": "2CW9xBlG9gc"
+        },
+        {
+          "VID": "ObFyrrnGC7w"
+        }
+      ]
+    },
+    "CarMM": {
+      "videos": [
+        {
+          "VID": "u7HV8TnG6wI"
+        },
+        {
+          "VID": "f2GD2HTCNMI"
+        },
+        {
+          "VID": "UNk63T8jk0Y"
+        }
+      ]
+    },
+    "ParMM": {
+      "videos": [
+        {
+          "VID": "6kaCdrvNGZw"
+        },
+        {
+          "VID": "K_3NlTtybIA"
+        },
+        {
+          "VID": "R-apYFtjt2Y"
         }
       ]
     }
