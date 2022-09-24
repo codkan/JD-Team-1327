@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontStyle: "normal",
-    fontSize: 24,
+    fontSize: MAX_HEIGHT/35.46,
     color: global.text,
     textAlign: "center",
     justifyContent: "center",

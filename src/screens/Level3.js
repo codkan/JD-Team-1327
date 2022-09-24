@@ -326,7 +326,7 @@ export default class LevelThree extends Component {
               <View style={CoreStyle.modalView}>
                 <Text allowFontScaling={true} style={CoreStyle.modalTitle}>Drowning:</Text>
                 <Text allowFontScaling={true} style={CoreStyle.modalText}>
-                  Drowning is the leading cause of injury death in children 1–4.{'\n'}{'\n'}
+                  Drowning is the leading cause of injury death in children 1–4.
                   Young children can drown in as little as an inch or two of
                   water, and it can happen quickly and silently.{'\n'}{'\n'}
                   The biggest drowning threat facing families with toddlers is
@@ -373,7 +373,7 @@ const styles = StyleSheet.create({
     width: 170,
   },
   carimg: {
-    height: 120,
-    width: 210,
+    height: 85.7,
+    width: 150,
   },
 });

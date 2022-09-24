@@ -30,15 +30,15 @@ export default function Disclaim({ navigation }) {
       </Text>
 
       <View style={CoreStyle.contain}>
-      <Text allowFontScaling={true} style={CoreStyle.about}>Disclaimer: </Text>
-      <Text allowFontScaling={true} style={CoreStyle.about}>This product and the game therein is for educational and informational purposes only
+      <Text allowFontScaling={true} style={CoreStyle.about}>Disclaimer:{'\n'}{'\n'}
+      This product and the game therein is for educational and informational purposes only
       and is solely designed as a helpful tool for users to think about child safety and the devastating
-      consequences of childhood injuries. {'\n'}</Text>
-      <Text allowFontScaling={true} style={CoreStyle.about}>It is not intended to be a substitute for professional healthcare
+      consequences of childhood injuries. {'\n'}{'\n'}
+      It is not intended to be a substitute for professional healthcare
       advice from the user’s service provider. Safety recommendations can change over time. Further,
       this application does not cover all areas of child safety necessary to prevent injuries and
-      death of infants and toddlers. {'\n'}</Text>
-      <Text allowFontScaling={true} style={CoreStyle.about}>Users are strongly encouraged to seek more comprehensive safety
+      death of infants and toddlers. {'\n'}{'\n'}
+      Users are strongly encouraged to seek more comprehensive safety
       information and advice from their healthcare service provider. Information presented in this
       application is provided in good faith and reflects current childcare practices as expressed by
       experts in the field. {'\n'}</Text>

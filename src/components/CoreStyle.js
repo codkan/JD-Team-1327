@@ -259,6 +259,7 @@ export const CoreStyle = StyleSheet.create({
         marginBottom: 15,
         fontWeight: "bold",
         textAlign: "center",
+        marginHorizontal: 10,
     },
 
     // text style for in-game About
