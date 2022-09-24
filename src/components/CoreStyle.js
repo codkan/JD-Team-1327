@@ -255,7 +255,7 @@ export const CoreStyle = StyleSheet.create({
 
     // Modal Text style for header content in About/Disclaim
     minorText: {
-        marginTop: MAX_HEIGHT/5.67,
+        marginTop: MAX_HEIGHT/5,
         marginBottom: 15,
         fontWeight: "bold",
         textAlign: "center",

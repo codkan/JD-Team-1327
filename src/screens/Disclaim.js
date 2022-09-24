@@ -22,11 +22,10 @@ export default function Disclaim({ navigation }) {
       Team: Cody Kantor, Aayush Dixit, William Wynne, Erin Falejczyk, and Akash Vemulapalli
       </Text>
 
-      <Text allowFontScaling={true} style={CoreStyle.about}>{'\t'}This application was developed in 2022 for Dr. Ann McClellan
-      by a team of five students studying Computer Science at the Georgia Institute of Technology.
-      Initially, it was built around the standalone game created by the original team, Team BeDot.
-      But we have worked incredibly hard on expanding this application and we all hope that the valuable information presented
-      can help new parents and other caregivers prevent some of the unnecessary injuries and deaths caused by child accidents. {'\n'}
+      <Text allowFontScaling={true} style={CoreStyle.about}>{'\t'}This application was initially
+      built around the game created by Team BeDot.
+      But we have worked hard on expanding it and we hope that the valuable information presented
+      can help new parents and other caregivers unnecessary injuries and deaths caused by child accidents. {'\n'}
       </Text>
 
       <View style={CoreStyle.contain}>
