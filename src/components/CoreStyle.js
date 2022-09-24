@@ -98,7 +98,7 @@ export const CoreStyle = StyleSheet.create({
     // Main header/title text for info, media pages etc.
     qNum: {
         color: global.text,
-        fontSize: 40,
+        fontSize: MAX_HEIGHT/21.275,
         marginBottom: 5,
         fontWeight: "bold",
         textAlign: "center",
@@ -108,7 +108,7 @@ export const CoreStyle = StyleSheet.create({
     // Secondary headers for subsections
     question: {
         color: global.text,
-        fontSize: 26,
+        fontSize: MAX_HEIGHT/32.73,
         marginBottom: 10,
         textAlign: "center",
         fontWeight: "bold",

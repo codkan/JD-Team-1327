@@ -20,8 +20,7 @@ export default function About({ navigation }) {
     <ImageBackground source={Background} style={CoreStyle.image}>
       <View style={CoreStyle.contain}>
       <Text allowFontScaling={true} style={CoreStyle.minorText}>
-        Welcome to Child Safe: The Video Game! {'\n'}
-        Team Client: Dr. Ann McClellan {'\n'}
+        Client: Dr. Ann McClellan {'\n'}
         Team: Sora Bang, Justin Deal, Jayla Demaine, Elina Ebby, Sam Thomas, David Okao
       </Text>
       <Text allowFontScaling={true} style={CoreStyle.disclaimer}>

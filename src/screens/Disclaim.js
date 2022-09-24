@@ -17,9 +17,9 @@ export default function Disclaim({ navigation }) {
   return (
     <ImageBackground source={Background} style={CoreStyle.image}>
       <View style={CoreStyle.container}>
-      <Text allowFontScaling={true} style={CoreStyle.minorText}> Welcome to Child Safe! {'\n'}
-      Team Client: Dr. Ann McClellan {'\n'}
-      Team: Cody Kantor, Aayush Dixit, William Wynne, {'\n'} Erin Falejczyk, and Akash Vemulapalli
+      <Text allowFontScaling={true} style={CoreStyle.minorText}>
+      Client: Dr. Ann McClellan {'\n'}
+      Team: Cody Kantor, Aayush Dixit, William Wynne, Erin Falejczyk, and Akash Vemulapalli
       </Text>
 
       <Text allowFontScaling={true} style={CoreStyle.about}>{'\t'}This application was developed in 2022 for Dr. Ann McClellan
