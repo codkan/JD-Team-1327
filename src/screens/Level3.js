@@ -326,29 +326,21 @@ export default class LevelThree extends Component {
               <View style={CoreStyle.modalView}>
                 <Text allowFontScaling={true} style={CoreStyle.modalTitle}>Drowning:</Text>
                 <Text allowFontScaling={true} style={CoreStyle.modalText}>
-                  Drowning is the leading cause of injury death in children 1 –
-                  4.
-                </Text>
-                <Text allowFontScaling={true} style={CoreStyle.modalText}>
+                  Drowning is the leading cause of injury death in children 1–4.{'\n'}{'\n'}
                   Young children can drown in as little as an inch or two of
-                  water, and it can happen quickly and silently.
-                </Text>
-                <Text allowFontScaling={true} style={CoreStyle.modalText}>
+                  water, and it can happen quickly and silently.{'\n'}{'\n'}
                   The biggest drowning threat facing families with toddlers is
                   unexpected, unsurpervised access to water: swimming pools, hot
                   tubs and spas, bathtubs, natural bodies of water such as
                   ponds, and standing water in homes. For example, 69% of all
                   drownings among children 4 and younger happen during non-swim
-                  times.
-                </Text>
-                <Text allowFontScaling={true} style={CoreStyle.modalText}>
+                  times.{'\n'}{'\n'}
                   Research suggests that fencing can prevent more than half of
                   all swimming pool drownings of young children. Swimming pools,
                   including large, inflatable above-ground pools and other
                   temporary pools, should be completely surrounded by a fence on
                   all 4 sides.
                 </Text>
-                <Image style={styles.poolimg} source={pool}/>
                 <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx'); }}>
                   Source: https://www.healthychildren.org/English/safety-prevention/at-play/Pages/Water-Safety-And-Young-Children.aspx
                 </Text>

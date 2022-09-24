@@ -1,5 +1,8 @@
 import React from "react";
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View, Dimensions } from "react-native";
+
+var MAX_HEIGHT = Dimensions.get("screen").height;
+var MAX_WIDTH = Dimensions.get("screen").width;
 
 export default function SourcesButton({ text, onPress, txtColor }) {
   return (
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
-    marginLeft: 175,
+    marginLeft: MAX_WIDTH*0.44,
   },
   buttonText: {
     fontStyle: "normal",

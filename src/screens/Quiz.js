@@ -192,9 +192,9 @@ export default class Quiz extends Component{
             ></BackButton>
         </View>
 
-        <Text allowFontScaling={true} style={CoreStyle.title}> {this.state.qNum} </Text>
+        <Text allowFontScaling={true} style={CoreStyle.qNum}> {this.state.qNum} </Text>
         <Text allowFontScaling={true}> {'\n'} </Text>
-        <Text allowFontScaling={true} style={CoreStyle.subtitle}> {this.state.Q} </Text>
+        <Text allowFontScaling={true} style={CoreStyle.question}> {this.state.Q} </Text>
 
         <View style={CoreStyle.quizContainer}>
         <QuizButton

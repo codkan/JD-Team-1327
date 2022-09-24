@@ -349,26 +349,21 @@ export default class LevelOne extends Component {
                     Outlet covers are great solutions to prevent accidental
                     electrocutions. Nearly one-third of accidents occur when a
                     child inserts common household items into receptacles, 70
-                    percent of them occurring when adults are present.  Items
+                    percent of them occurring when adults are present. Items
                     that children insert into outlets can be found anywhere, and
                     commonly include: hairpins, keys, plugs, paper clips, staples, tools,
-                    jewelry, belt buckles, nail files, and knives.
-                  </Text>
-                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
-                    Approximately 100 kids die each year by electrocution, and
-                    many others are seriously hurt.
-                  </Text>
-                  <Text allowFontScaling={true} style={CoreStyle.modalText}>
+                    jewelry, belt buckles, nail files, and knives. {'\n'}{'\n'}
+                    Approximately 100 kids die each year by electrocution, and
+                    many others are seriously hurt. {'\n'}{'\n'}
                     95 percent of injuries resulting from electrical outlets
                     will involve burns. Though they range in severity, it is
                     important to understand that burns are very serious in young
                     children whose skin is thin and offers little resistance to
                     electric flow or heat.
                   </Text>
-                  <Image style={styles.img} source={outlet}/>
                   <Text allowFontScaling={true} style={CoreStyle.modalText} onPress={() => { Linking.openURL('https://mrelectric.com/child-proof-outlets'); }}>
-                    Source: https://mrelectric.com/child-proof-outlets
-                  </Text>
+                      Source: https://mrelectric.com/child-proof-outlets
+                    </Text>
                   <Text allowFontScaling={true} style={CoreStyle.textStyle}>Hide Modal</Text>
                   <MenuButton
                     text="OK"

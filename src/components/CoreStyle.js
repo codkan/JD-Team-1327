@@ -4,17 +4,20 @@ import { Dimensions } from "react-native";
 // This is meant to be a core, shared style library for styles to encourage consistency
 // and code reuse throughout the app.
 
-    if (global.scheme == "dark") {
-        global.color = "darkslategrey";
-        global.color2 = "lightslategray";
-        global.color3 = "black";
-        global.text = "white";
-    } else {
-        global.color = "ivory";
-        global.color2 = "papayawhip";
-        global.color3 = "lightgray";
-        global.text = "black";
-    }
+var MAX_HEIGHT = Dimensions.get("screen").height;
+var MAX_WIDTH = Dimensions.get("screen").width;
+
+if (global.scheme == "dark") {
+    global.color = "darkslategrey";
+    global.color2 = "lightslategray";
+    global.color3 = "black";
+    global.text = "white";
+} else {
+    global.color = "ivory";
+    global.color2 = "papayawhip";
+    global.color3 = "lightgray";
+    global.text = "black";
+}
 
 export const CoreStyle = StyleSheet.create({
 
@@ -32,9 +35,15 @@ export const CoreStyle = StyleSheet.create({
       marginBottom: 35,
     },
     landingCrayon: {
-      height:50,
-      width:355,
-      marginBottom: 30,
+      height: MAX_HEIGHT/17,
+      width:MAX_WIDTH*0.9,
+      marginBottom: MAX_HEIGHT/28.3,
+    },
+    //crayon styling only for buttons on initial module pages
+    crayon: {
+        height: MAX_HEIGHT/17,
+        width: MAX_WIDTH*0.9,
+        marginBottom: MAX_HEIGHT/17,
     },
     btn: {
       height: 35,
@@ -81,6 +90,26 @@ export const CoreStyle = StyleSheet.create({
         color: global.text,
         fontSize: 26,
         marginBottom: 20,
+        textAlign: "center",
+        fontWeight: "bold",
+        marginHorizontal: 10,
+    },
+
+    // Main header/title text for info, media pages etc.
+    qNum: {
+        color: global.text,
+        fontSize: 40,
+        marginBottom: 5,
+        fontWeight: "bold",
+        textAlign: "center",
+        textDecorationLine: "underline",
+    },
+
+    // Secondary headers for subsections
+    question: {
+        color: global.text,
+        fontSize: 26,
+        marginBottom: 10,
         textAlign: "center",
         fontWeight: "bold",
         marginHorizontal: 10,
@@ -151,13 +180,6 @@ export const CoreStyle = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-    },
-
-    //crayon styling only for buttons on initial module pages
-    crayon: {
-        height: 50,
-        width: 355,
-        marginBottom: 50,
     },
 
     // pushdown style to keep navigation bar at bottom of screen
@@ -233,7 +255,7 @@ export const CoreStyle = StyleSheet.create({
 
     // Modal Text style for header content in About/Disclaim
     minorText: {
-        marginTop: 150,
+        marginTop: MAX_HEIGHT/5.67,
         marginBottom: 15,
         fontWeight: "bold",
         textAlign: "center",
@@ -248,8 +270,8 @@ export const CoreStyle = StyleSheet.create({
 
     // text style for main menu Disclaim
     about: {
-        fontSize: 12,
-        marginHorizontal: 10,
+        fontSize: MAX_HEIGHT/71,
+        marginHorizontal: 20,
     },
 
     // contain in a centered row
@@ -369,13 +391,13 @@ export const CoreStyle = StyleSheet.create({
       fontWeight: "normal",
       textAlign: "justify",
       color: "black",
-      fontSize: 16,
+      fontSize: 14,
     },
     modalTitle: {
       marginBottom: 15,
       fontWeight: "bold",
       textAlign: "center",
-      fontSize: 20,
+      fontSize: 16,
     },
     pic: {
       height: 50,

@@ -1,9 +1,11 @@
 import React, {useState, PureComponent} from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View, Dimensions } from "react-native";
 import { color } from "react-native-reanimated";
 import {Audio} from "expo-av";
 import ConfettiCannon from "react-native-confetti-cannon";
 
+var MAX_HEIGHT = Dimensions.get("screen").height;
+var MAX_WIDTH = Dimensions.get("screen").width;
 
 export default class QuizButton extends PureComponent{
     explosion;
@@ -91,8 +93,8 @@ export default class QuizButton extends PureComponent{
 
 const styles = StyleSheet.create({
   button: {
-    height: 70,
-    width: 345,
+    height: MAX_HEIGHT/12.1,
+    width: MAX_WIDTH*0.878,
     borderRadius: 10,
     paddingTop: 0,
     alignItems: "center",
