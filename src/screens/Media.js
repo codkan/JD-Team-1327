@@ -161,12 +161,8 @@ export default class Media extends Component {
 
     <ScrollView>
 
-<View style={CoreStyle.mediaContainer}>
-    <Text allowFontScaling={true} style={CoreStyle.title}>{this.props.navigation.getParam('topic') + "Media"}</Text>
-    <View style={CoreStyle.imgview}>
-        <ImageViewer imageUrls={images} backgroundColor={global.color}/>
-    </View>
-</View>
+    <Text allowFontScaling={true} style={CoreStyle.title}>{this.props.navigation.getParam('topic') + " Media"}</Text>
+    <ImageViewer style={CoreStyle.imgview} imageUrls={images} backgroundColor={global.color}/>
 
     <VideoPlayer videoID={vids[0].VID}/>
     <VideoPlayer videoID={vids[1].VID}/>
