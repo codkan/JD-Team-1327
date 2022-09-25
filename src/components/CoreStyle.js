@@ -236,9 +236,10 @@ export const CoreStyle = StyleSheet.create({
 
     // image viewer sizing
     imgview: {
-        height: 500,
-        width: "100%",
+        height: 400,
+        width: "95%",
         marginBottom: 100,
+        alignSelf: "center",
     },
 
     // random contain style for About/Disclaim
