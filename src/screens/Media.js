@@ -15,13 +15,13 @@ import fall1 from "../assets/fallsMM/falls_infographic.jpg";
 import fall2 from "../assets/fallsMM/window_infographic.jpg";
 import fall3 from "../assets/fallsMM/tv_infographic.jpg";
 
-import burn1 from "../assets/BurnsMM/bmm1.jpeg";
-import burn2 from "../assets/BurnsMM/bmm3.jpeg";
-import burn3 from "../assets/BurnsMM/bmm4.png";
+import burn1 from "../assets/BurnsMM/bmm1.jpg";
+import burn2 from "../assets/BurnsMM/bmm2.png";
+import burn3 from "../assets/BurnsMM/bmm3.jpg";
 
 import poison1 from "../assets/PoisoningsMM/PoisoningMM2.jpg";
 import poison2 from "../assets/PoisoningsMM/PMM3.png";
-import poison3 from "../assets/PoisoningsMM/PMM5.jpg";
+import poison3 from "../assets/PoisoningsMM/PMM4.jpg";
 
 import drown1 from "../assets/drownMM/Drowning_Infographic.png";
 import drown2 from "../assets/drownMM/swim_infographic.jpg";
@@ -37,9 +37,6 @@ import par3 from "../assets/parentalHealthMM/pmad_infographic.png";
 
 var next;
 var last;
-var img1;
-var img2;
-var img3;
 var vids;
 
 export default class Media extends Component {
@@ -50,6 +47,7 @@ export default class Media extends Component {
   handleBackNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("Media", {topic: last});
+        this.render();
     } else {
         this.props.navigation.navigate("Multimedia");
     }
@@ -58,6 +56,7 @@ export default class Media extends Component {
   handleNextNav = () => {
     if (this.props.navigation.getParam("topic") != "Parental Health") {
         this.props.navigation.navigate("Media", {topic: next});
+        this.render();
     } else {
         () => this.props.navigation.navigate("Media", {topic: "Parental Health"})
     }
@@ -68,72 +67,84 @@ export default class Media extends Component {
         case "Falls":
             last = "";
             next = "Burns";
-            img1 = fall1;
-            img2 = fall2;
-            img3 = fall3;
+            var img1 = fall1;
+            var img2 = fall2;
+            var img3 = fall3;
             vids = MM.FallMM.videos;
             break;
         case "Burns":
             last = "Falls";
             next = "Poisonings";
-            img1 = burn1;
-            img2 = burn2;
-            img3 = burn3;
+            var img1 = burn1;
+            var img2 = burn2;
+            var img3 = burn3;
             vids = MM.BurnMM.videos;
             break;
         case "Poisonings":
             last = "Burns";
             next = "Drownings";
-            img1 = poison1;
-            img2 = poison2;
-            img3 = poison3;
+            var img1 = poison1;
+            var img2 = poison2;
+            var img3 = poison3;
             vids = MM.PoisonMM.videos;
             break;
         case "Drownings":
             last =  "Poisonings";
             next = "Car Safety";
-            img1 = drown1;
-            img2 = drown2;
-            img3 = drown3;
+            var img1 = drown1;
+            var img2 = drown2;
+            var img3 = drown3;
             vids = MM.DrownMM.videos;
             break;
         case "Car Safety":
             last = "Drownings";
             next = "Parental Health";
-            img1 = car1;
-            img2 = car2;
-            img3 = car3;
+            var img1 = car1;
+            var img2 = car2;
+            var img3 = car3;
             vids = MM.CarMM.videos;
             break;
         case "Parental Health":
             last = "Car Safety";
             next = "Parental Health";
-            img1 = par1;
-            img2 = par2;
-            img3 = par3;
+            var img1 = par1;
+            var img2 = par2;
+            var img3 = par3;
             vids = MM.ParMM.videos;
             break;
         default:
             break
     };
 
-    const images = [
+    var images = [
         {
         url: '',
+        width: img1.width,
+        height: img1.height,
         props: {
-            source: img1
+            source: img1,
+            width: img1.width,
+            height: img1.height,
             },
         },
         {
         url: '',
+        width: img2.width,
+        height: img2.height,
         props: {
-            source: img2
+            source: img2,
+            width: img1.width,
+            height: img1.height,
             },
         },
         {
         url: '',
+        width: img3.width,
+        height: img3.height,
         props: {
-            source: img3
+            source: img3,
+            width: img3.width,
+            height: img3.height,
             },
         },
     ];
