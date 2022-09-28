@@ -24,15 +24,15 @@ import poison2 from "../assets/PoisoningsMM/PMM3.png";
 import poison3 from "../assets/PoisoningsMM/PMM4.jpg";
 
 import drown1 from "../assets/drownMM/Drowning_Infographic.png";
-import drown2 from "../assets/drownMM/swim_infographic.jpg";
+import drown2 from "../assets/drownMM/swim_infographic.png";
 import drown3 from "../assets/drownMM/water_infographic.jpg";
 
-import car1 from "../assets/carSafetyMM/playSafe.jpg";
-import car2 from "../assets/carSafetyMM/seatbeltPlacement.jpg";
+import car1 from "../assets/carSafetyMM/playSafe.png";
+import car2 from "../assets/carSafetyMM/seatbeltPlacement.png";
 import car3 from "../assets/carSafetyMM/recalled.jpg";
 
-import par1 from "../assets/parentalHealthMM/ppd1.jpg";
-import par2 from "../assets/parentalHealthMM/pppd_infographic.png";
+import par1 from "../assets/parentalHealthMM/ppd1.png";
+import par2 from "../assets/parentalHealthMM/pppd_infographic.jpg";
 import par3 from "../assets/parentalHealthMM/pmad_infographic.png";
 
 var next;

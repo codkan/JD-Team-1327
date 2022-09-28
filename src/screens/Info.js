@@ -21,7 +21,7 @@ export default function Info({ navigation }) {
         'How to Use Text-to-Speech',
         "Press the first image to read the entire page aloud\n\nPress any section's image to read just the section aloud\n\nPress any image to stop reading aloud at any time",
         [
-            {text: 'BACK', style: 'destructive'},
+            {text: 'CLOSE', style: 'destructive'},
             {text: 'CONTINUE     ', style: 'default'},
         ],
         {cancelable: true}
