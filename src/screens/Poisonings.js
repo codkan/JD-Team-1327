@@ -42,9 +42,9 @@ export default function Poisonings({ navigation }) {
     async function speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
-            Speech.speak("Poisonings" + ". " + "Tips to prevent child poisoning:" + ". ", {rate: 0.90});
+            Speech.speak("Poisonings" + ". " + "Tips to prevent child poisoning:" + ". ", {rate: 1.0});
             for (let i = 0; i < PoisonText.length; i++) {
-                Speech.speak(PoisonText[i].title + ". " + PoisonText[i].body, {rate: 0.90});
+                Speech.speak(PoisonText[i].title + ". " + PoisonText[i].body, {rate: 1.0});
             }
         } else {
             Speech.stop();
@@ -54,7 +54,7 @@ export default function Poisonings({ navigation }) {
     async function speak(text) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
-            Speech.speak(PoisonText[text].title + "." + PoisonText[text].body, {rate: 0.90});
+            Speech.speak(PoisonText[text].title + "." + PoisonText[text].body, {rate: 1.0});
         } else {
             Speech.stop();
         }

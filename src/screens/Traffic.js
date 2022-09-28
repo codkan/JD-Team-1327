@@ -47,12 +47,12 @@ export default function Traffic({ navigation }) {
     async function speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
-            Speech.speak("Car Safety" + ". " + "Types of Car Seats" + ". ", {rate: 0.90});
+            Speech.speak("Car Safety" + ". " + "Types of Car Seats" + ". ", {rate: 1.0});
             for (let i = 0; i < CarText.length; i++) {
                 if (i == 5) {
                     Speech.speak("Must Do's While Traveling");
                 }
-                Speech.speak(CarText[i].title + ". " + CarText[i].body, {rate: 0.90});
+                Speech.speak(CarText[i].title + ". " + CarText[i].body, {rate: 1.0});
             }
         } else {
             Speech.stop();
@@ -65,7 +65,7 @@ export default function Traffic({ navigation }) {
                 if (text == 5) {
                     Speech.speak("Must Do's While Traveling");
                 }
-            Speech.speak(CarText[text].title + "." + CarText[text].body, {rate: 0.90});
+            Speech.speak(CarText[text].title + "." + CarText[text].body, {rate: 1.0});
         } else {
             Speech.stop();
         }

@@ -29,27 +29,27 @@ export default function Info({ navigation }) {
   }
 
   const handleFallsNav = () => {
-    TTSalert();
+    //TTSalert();
     navigation.navigate("Falls");
   };
   const handleBurnsNav = () => {
-    TTSalert();
+    //TTSalert();
     navigation.navigate("Burns");
   };
   const handlePoisoningsNav = () => {
-    TTSalert();
+    //TTSalert();
     navigation.navigate("Poisonings");
   };
   const handleDrowningsNav = () => {
-    TTSalert();
+    //TTSalert();
     navigation.navigate("Drownings");
   };
   const handleTrafficNav = () => {
-    TTSalert();
+    //TTSalert();
     navigation.navigate("Traffic");
   };
   const handleParentalHealthNav = () => {
-    TTSalert();
+    //TTSalert();
     navigation.navigate("ParentalHealth");
   };
 

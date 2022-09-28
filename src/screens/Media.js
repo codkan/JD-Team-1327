@@ -23,7 +23,7 @@ import poison1 from "../assets/PoisoningsMM/PoisoningMM2.jpg";
 import poison2 from "../assets/PoisoningsMM/PMM3.png";
 import poison3 from "../assets/PoisoningsMM/PMM4.jpg";
 
-import drown1 from "../assets/drownMM/Drowning_Infographic.png";
+import drown1 from "../assets/drownMM/Drowning_Infographic.jpg";
 import drown2 from "../assets/drownMM/swim_infographic.png";
 import drown3 from "../assets/drownMM/water_infographic.jpg";
 

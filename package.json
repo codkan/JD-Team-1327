@@ -13,13 +13,13 @@
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
     "@sanar/react-native-highlight-text": "^1.0.2",
-    "expo": "^46.0.10",
+    "expo": "^46.0.13",
     "expo-av": "~12.0.4",
     "expo-screen-orientation": "~4.3.0",
     "expo-secure-store": "~11.3.0",
     "expo-speech": "~10.3.0",
     "expo-status-bar": "~1.4.0",
-    "expo-updates": "~0.14.5",
+    "expo-updates": "^0.14.6",
     "matter-js": "^0.16.1",
     "poly-decomp": "^0.3.0",
     "react": "18.0.0",
@@ -37,18 +37,18 @@
     "react-native-screens": "~3.15.0",
     "react-native-sound": "^0.11.2",
     "react-native-svg": "12.3.0",
-    "react-native-video": "^5.2.0",
+    "react-native-video": "^5.2.1",
     "react-native-web": "~0.18.7",
     "react-native-webview": "11.23.0",
     "react-native-youtube-iframe": "^2.2.2",
     "react-navigation": "^4.4.4",
     "react-navigation-stack": "^2.10.3",
-    "react-player": "^2.10.1",
+    "react-player": "^2.11.0",
     "react-youtube": "^7.14.0",
     "scss-tokenizer": "^0.4.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.6"
+    "@babel/core": "^7.19.3"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"

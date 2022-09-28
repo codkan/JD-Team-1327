@@ -46,11 +46,11 @@ export default function Burns({ navigation }) {
     async function speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
-            Speech.speak("Burns" + ". " + "How to Prevent Burn Injuries" + ". ", {rate: 0.90});
+            Speech.speak("Burns" + ". " + "How to Prevent Burn Injuries" + ". ", {rate: 1.0});
             for (let i = 0; i < BurnText.length; i++) {
-                Speech.speak(BurnText[i].title + ". " + BurnText[i].body, {rate: 0.90});
+                Speech.speak(BurnText[i].title + ". " + BurnText[i].body, {rate: 1.0});
                 if (i == 5) {
-                    Speech.speak("7. Most importantly, always supervise your child around any open flame", {rate: 0.90});
+                    Speech.speak("7. Most importantly, always supervise your child around any open flame", {rate: 1.0});
                 }
             }
         } else {
@@ -61,9 +61,9 @@ export default function Burns({ navigation }) {
     async function speak(text) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
-            Speech.speak(BurnText[text].title + "." + BurnText[text].body, {rate: 0.90});
+            Speech.speak(BurnText[text].title + "." + BurnText[text].body, {rate: 1.0});
             if (text == 5) {
-                Speech.speak("7. Most importantly, always supervise your child around any open flame", {rate: 0.90});
+                Speech.speak("7. Most importantly, always supervise your child around any open flame", {rate: 1.0});
             }
         } else {
             Speech.stop();

@@ -47,9 +47,9 @@ export default function Drownings({ navigation }) {
     async function speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
-            Speech.speak("Drownings" + ". " + "5 Steps to Prevent Drownings" + ". ", {rate: 0.90});
+            Speech.speak("Drownings" + ". " + "5 Steps to Prevent Drownings" + ". ", {rate: 1.0});
             for (let i = 0; i < DrownText.length; i++) {
-                Speech.speak(DrownText[i].title + ". " + DrownText[i].body, {rate: 0.90});
+                Speech.speak(DrownText[i].title + ". " + DrownText[i].body, {rate: 1.0});
             }
         } else {
             Speech.stop();
@@ -59,7 +59,7 @@ export default function Drownings({ navigation }) {
     async function speak(text) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
-            Speech.speak(DrownText[text].title + "." + DrownText[text].body, {rate: 0.90});
+            Speech.speak(DrownText[text].title + "." + DrownText[text].body, {rate: 1.0});
         } else {
             Speech.stop();
         }

@@ -236,7 +236,7 @@ export const CoreStyle = StyleSheet.create({
 
     // image viewer sizing
     imgview: {
-        height: 400,
+        height: 475,
         width: "95%",
         marginBottom: 100,
         alignSelf: "center",
