@@ -5,7 +5,7 @@ import { SearchBar } from 'react-native-elements';
 import { CoreStyle } from "../components/CoreStyle";
 import Navbar from "../components/NavBar";
 import Background from "../assets/app/bg.png";
-import { Content } from "../json/Content.json";
+import { Index } from "../json/Index.json";
 import Highlighter from "@sanar/react-native-highlight-text";
 
 export default function Search({ navigation }) {
@@ -19,8 +19,8 @@ export default function Search({ navigation }) {
     const [masterDataSource, setMasterDataSource] = useState([]);
 
     useEffect(() => {
-      setFilteredDataSource(Content);
-      setMasterDataSource(Content);
+      setFilteredDataSource(Index);
+      setMasterDataSource(Index);
     }, []);
 
     const searchFilterFunction = (text) => {

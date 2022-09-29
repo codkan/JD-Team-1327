@@ -195,12 +195,6 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         marginBottom: 5,
     },
-    longpic:{
-        width: null,
-        resizeMode: "contain",
-        height: 45,
-        marginBottom: 20,
-    },
     playpic: {
         height: 150,
         width: 200,

@@ -49,9 +49,6 @@ export default function Burns({ navigation }) {
             Speech.speak("Burns" + ". " + "How to Prevent Burn Injuries" + ". ", {rate: 1.0});
             for (let i = 0; i < BurnText.length; i++) {
                 Speech.speak(BurnText[i].title + ". " + BurnText[i].body, {rate: 1.0});
-                if (i == 5) {
-                    Speech.speak("7. Most importantly, always supervise your child around any open flame", {rate: 1.0});
-                }
             }
         } else {
             Speech.stop();
@@ -62,9 +59,6 @@ export default function Burns({ navigation }) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
             Speech.speak(BurnText[text].title + "." + BurnText[text].body, {rate: 1.0});
-            if (text == 5) {
-                Speech.speak("7. Most importantly, always supervise your child around any open flame", {rate: 1.0});
-            }
         } else {
             Speech.stop();
         }
@@ -147,8 +141,6 @@ export default function Burns({ navigation }) {
     </TouchableOpacity>
         <Text allowFontScaling={true} style={CoreStyle.subbullet}>{BurnText[5].body}</Text>
     </CollapsibleBox>
-
-    <Text allowFontScaling={true} style={CoreStyle.bullet}>7. Most importantly, always supervise your child around any open flame {'\n'} </Text>
 
     <TouchableOpacity onPress={() => speak(6)}>
         <Image style={styles.babyImg} source={babyIMG}/>

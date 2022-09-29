@@ -28,52 +28,32 @@ export default function Info({ navigation }) {
     );
   }
 
-  const handleFallsNav = () => {
-    //TTSalert();
-    navigation.navigate("Falls");
-  };
-  const handleBurnsNav = () => {
-    //TTSalert();
-    navigation.navigate("Burns");
-  };
-  const handlePoisoningsNav = () => {
-    //TTSalert();
-    navigation.navigate("Poisonings");
-  };
-  const handleDrowningsNav = () => {
-    //TTSalert();
-    navigation.navigate("Drownings");
-  };
-  const handleTrafficNav = () => {
-    //TTSalert();
-    navigation.navigate("Traffic");
-  };
-  const handleParentalHealthNav = () => {
-    //TTSalert();
-    navigation.navigate("ParentalHealth");
-  };
+    const goInformation = (_topic) => {
+        TTSalert();
+        navigation.navigate("Information", {topic: _topic});
+    }
 
   return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>
     <View style={CoreStyle.buttonContainer}>
 
-    <TouchableOpacity onPress={handleFallsNav}>
+    <TouchableOpacity onPress={() => goInformation("Falls")}>
         <Image source={falls} style={CoreStyle.crayon}></Image>
     </TouchableOpacity>
-    <TouchableOpacity onPress={handleBurnsNav}>
+    <TouchableOpacity onPress={() => goInformation("Burns")}>
         <Image source={burns} style={CoreStyle.crayon}></Image>
     </TouchableOpacity>
-    <TouchableOpacity onPress={handlePoisoningsNav}>
+    <TouchableOpacity onPress={() => goInformation("Poisonings")}>
         <Image source={poisonings} style={CoreStyle.crayon}></Image>
     </TouchableOpacity>
-    <TouchableOpacity onPress={handleDrowningsNav}>
+    <TouchableOpacity onPress={() => goInformation("Drownings")}>
         <Image source={drownings} style={CoreStyle.crayon}></Image>
     </TouchableOpacity>
-    <TouchableOpacity onPress={handleTrafficNav}>
+    <TouchableOpacity onPress={() => goInformation("Car Safety")}>
         <Image source={carSafety} style={CoreStyle.crayon}></Image>
     </TouchableOpacity>
-    <TouchableOpacity onPress={handleParentalHealthNav}>
+    <TouchableOpacity onPress={() => goInformation("Parental Health")}>
         <Image source={parentHealth} style={CoreStyle.crayon}></Image>
     </TouchableOpacity>
     </View>

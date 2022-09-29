@@ -9,8 +9,16 @@
       "body": "- Put away all potential hazardous materials right after use to ensure a child does not have time to take themselves. A large portion of poisonings occur due to parents or caretakers being careless and unaware of the dangerous things left around their children. Being more careful about putting things such as cosmetics, plastics, and cleaning supplies could help prevent children from consuming potent items."
     },
     {
-      "title": "3. Ensure that you are familiar with all potential dangers both inside and outside the home",
-      "body": "- Make sure all natural gas based appliances are functioning correctly. As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the chance of poisonings for both children and adults. \n- Ensure that you have functioning carbon monoxide and smoke detectors. These are critical because both of these can detect hazards that occur silently. \n- Memorize the poison help number (1-800-222-1222). This 24/7 line can connect you to an expert in the case that you suspect a child has been poisoned. \n- Familiarize yourself with the plants in and outside of your home, especially if you live near plants that produce bright or noticeable berries that could be poisonous. Children will be attracted to plants that look appealing, such as holly and juniper berries. Canvas the outside of your home or ask a professional to make sure that you are familiar with all the plant species in the vicinity of your home. Remove or relocate any poisonous plants to ensure your child does not consume its berries. \n- Check your home for lead paint that can chip off. Lead poisoning can be difficult to detect, and so either get an expert of check yourself to see if your home contains this kind of paint. Lead paint and dust is more common among older buildings, so be sure to check if your home fits this criteria."
+      "title": "3. Ensure that you are familiar with all potential dangers in the home",
+      "body": "- Make sure all natural gas based appliances are functioning correctly. As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the chance of poisonings for both children and adults. \n- Ensure that you have functioning carbon monoxide and smoke detectors. These are critical because both of these can detect hazards that occur silently."
+    },
+    {
+      "title": "4. Be aware of potential lead exposure",
+      "body": "- Check your home for lead paint that can chip off. Lead poisoning can be difficult to detect, and so either get an expert of check yourself to see if your home contains this kind of paint. Lead paint and dust is more common among older buildings, so be sure to check if your home fits this criteria."
+    },
+    {
+      "title": "5. Be prepared",
+      "body": "- Memorize the poison help number (1-800-222-1222). This 24/7 line can connect you to an expert in the case that you suspect a child has been poisoned."
     },
     {
       "title": "\nWhy is preventing poisonings important?",
@@ -18,7 +26,11 @@
     },
     {
       "title": "How can we prevent poisonings?",
-      "body": "\tFindings show that doing seemingly small things, such as ensuring that medicines are stored out of reach or putting them away immediately after use, could reduce the amount of poisonings per year between 11% and 20%. Overall, the majority of practices to prevent poisonings come down to caretakers having more awareness and being more attentive since poisonings due to other sources are very low. Here are some tips to prevent the most common forms of child poisoning:"
+      "body": "\tFindings show that doing seemingly small things, such as ensuring that medicines are stored out of reach or putting them away immediately after use, could reduce the amount of poisonings per year between 11% and 20%. Overall, the majority of practices to prevent poisonings come down to caretakers having more awareness and being more attentive since poisonings due to other sources are very low."
+    },
+    {
+      "title": "Poisoning Outside the Home",
+      "body": "\tFamiliarize yourself with the plants in and outside of your home, especially if you live near plants that produce bright or noticeable berries that could be poisonous. Children will be attracted to plants that look appealing, such as holly and juniper berries. Canvas the outside of your home or ask a professional to make sure that you are familiar with all the plant species in the vicinity of your home. Remove or relocate any poisonous plants to ensure your child does not consume its berries."
     }
   ]
 }
