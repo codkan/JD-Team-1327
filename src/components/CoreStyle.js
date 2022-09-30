@@ -225,6 +225,8 @@ export const CoreStyle = StyleSheet.create({
     buttons: {
         display: "flex",
         flexDirection: "row",
+        justifyContent: "space-between",
+        marginHorizontal: MAX_WIDTH*0.44,
     },
 
     // header image style for most of info sections

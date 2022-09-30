@@ -4,11 +4,11 @@ import { Image, StyleSheet, TouchableOpacity, View, Dimensions } from "react-nat
 var MAX_HEIGHT = Dimensions.get("screen").height;
 var MAX_WIDTH = Dimensions.get("screen").width;
 
-export default function SourcesButton({ text, onPress, txtColor }) {
+export default function SourcesButton({ text, onPress, txtColor, img }) {
   return (
       <TouchableOpacity onPress={onPress}>
         <View style={styles.button}>
-            <Image source={require("../../assets/buttons/media.png")} style={styles.icon}></Image>
+            <Image source={img} style={styles.icon}></Image>
         </View>
       </TouchableOpacity>
   );
@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
-    marginLeft: MAX_WIDTH*0.44,
   },
   buttonText: {
     fontStyle: "normal",
@@ -53,6 +52,5 @@ const styles = StyleSheet.create({
   icon: {
     height: 30,
     width: 33,
-    marginBottom: 2,
   }
 });

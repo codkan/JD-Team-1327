@@ -12,6 +12,8 @@ import VideoPlayer from "../components/VideoPlayer";
 import * as Speech from "expo-speech";
 import Background from "../assets/app/bg.png";
 import {Content} from "../json/Content.json";
+import src from "../../assets/buttons/links-line-alt.png";
+import mm from "../../assets/buttons/media.png";
 
 //Fall images
 import falls from "../assets/fallsMM/falls.png";
@@ -265,11 +267,10 @@ export default class Information extends Component {
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[8].body}</Text>
 
 <View style={CoreStyle.buttons}>
-<SourcesButton
+<MMButton img = {src}
     onPress={() => this.goResources(this.props.navigation.getParam('topic'))}
-></SourcesButton>
-
-<MMButton
+></MMButton>
+<MMButton img = {mm}
     onPress={() => this.goMedia(this.props.navigation.getParam('topic'))}
 ></MMButton>
 </View>
