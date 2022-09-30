@@ -14,25 +14,15 @@ import Landing from "./screens/Landing.js";
 import Settings from "./screens/Settings.js";
 import Disclaim from "./screens/Disclaim.js";
 import Search from "./screens/Search.js";
+import Menu from "./screens/Menu.js";
 
-import Info from "./screens/Info.js";
-import Falls from "./screens/Falls";
-import Burns from "./screens/Burns";
-import Poisonings from "./screens/Poisonings";
-import Drownings from "./screens/Drownings";
-import Traffic from "./screens/Traffic";
-import ParentalHealth from "./screens/ParentalHealth";
-
-import Multimedia from "./screens/Multimedia.js";
+import Information from "./screens/Information.js";
 import Media from "./screens/Media.js";
-
-import Review from "./screens/Review.js";
 import Quiz from "./screens/Quiz.js";
 import Win from "./screens/Win.js";
-
-import Sources from "./screens/Sources.js";
 import Resources from "./screens/Resources.js";
-//GAME SCREENS
+
+////GAME SCREENS
 import Home from "./screens/Home";
 import About from "./screens/About";
 import HowTo from "./screens/HowTo";
@@ -67,29 +57,23 @@ import LevelThree from "./screens/Level3";
            headerShown: false,
          },
      },
-     Info: {
-       screen: Info,
+     Menu: {
+       screen: Menu,
        navigationOptions: {
          headerShown: false,
        },
      },
-     Multimedia: {
-       screen: Multimedia,
-       navigationOptions: {
-         headerShown: false,
-       },
+     Information: {
+        screen: Information,
+        navigationOptions: {
+            headerShown: false,
+        },
      },
      Media: {
        screen: Media,
        navigationOptions: {
          headerShown: false,
          animationEnabled: false,
-       },
-     },
-     Review: {
-       screen: Review,
-       navigationOptions: {
-         headerShown: false,
        },
      },
      Quiz: {
@@ -104,55 +88,13 @@ import LevelThree from "./screens/Level3";
            headerShown: false,
          },
      },
-     Sources: {
-       screen: Sources,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },
      Resources: {
        screen: Resources,
        navigationOptions: {
          headerShown: false,
        },
      },
-     Falls: {
-         screen: Falls,
-         navigationOptions: {
-           headerShown: false,
-         },
-     },
-     Burns: {
-       screen: Burns,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },
-     Poisonings: {
-       screen: Poisonings,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },
-     Drownings: {
-       screen: Drownings,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },
-     Traffic: {
-       screen: Traffic,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },
-     ParentalHealth: {
-       screen: ParentalHealth,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },
-/////GAME SCREENS
+     ////GAME SCREENS
      Home: {
          screen: Home,
          navigationOptions: {

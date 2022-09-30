@@ -5,7 +5,7 @@
 import React, { useEffect, useState } from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
 import Background from "../assets/gameScreens/levelSelect.png";
-import LevelButton from "../components/buttons/LevelButton";
+import MenuButton from "../components/buttons/MenuButton";
 import { get } from "../Db";
 import * as ScreenOrientation from 'expo-screen-orientation';
 import { CoreStyle } from "../components/CoreStyle.js";
@@ -49,26 +49,26 @@ export default function LevelSelect({ navigation }) {
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
         <View style={CoreStyle.levelContainer}>
-        <LevelButton
+        <MenuButton
           text="LIVING ROOM"
           onPress={launchLevelOne}
           txtColor={"black"}
-        ></LevelButton>
-        <LevelButton
+        ></MenuButton>
+        <MenuButton
           text="KITCHEN"
           onPress={launchLevelTwo}
           txtColor={"black"}
-        ></LevelButton>
-        <LevelButton
+        ></MenuButton>
+        <MenuButton
           text="BACKYARD"
           onPress={launchLevelThree}
           txtColor={"black"}
-        ></LevelButton>
-        <LevelButton
+        ></MenuButton>
+        <MenuButton
           text="GO BACK"
           onPress={goHome}
           txtColor={"black"}
-        ></LevelButton>
+        ></MenuButton>
         </View>
       </ImageBackground>
     );
@@ -76,21 +76,21 @@ export default function LevelSelect({ navigation }) {
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
         <View style={CoreStyle.levelContainer}>
-          <LevelButton
+          <MenuButton
             text="LIVING ROOM"
             onPress={launchLevelOne}
             txtColor={"black"}
-          ></LevelButton>
-          <LevelButton
+          ></MenuButton>
+          <MenuButton
             text="KITCHEN"
             onPress={launchLevelTwo}
             txtColor={"black"}
-          ></LevelButton>
-          <LevelButton
+          ></MenuButton>
+          <MenuButton
             text="GO BACK"
             onPress={goHome}
             txtColor={"black"}
-          ></LevelButton>
+          ></MenuButton>
         </View>
       </ImageBackground>
     );
@@ -98,16 +98,16 @@ export default function LevelSelect({ navigation }) {
     return (
       <ImageBackground source={Background} style={CoreStyle.image}>
       <View style={CoreStyle.levelContainer}>
-        <LevelButton
+        <MenuButton
           text="LIVING ROOM"
           onPress={launchLevelOne}
           txtColor={"black"}
-        ></LevelButton>
-        <LevelButton
+        ></MenuButton>
+        <MenuButton
           text="GO BACK"
           onPress={goHome}
           txtColor={"black"}
-        ></LevelButton>
+        ></MenuButton>
       </View>
       </ImageBackground>
     );

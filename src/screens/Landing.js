@@ -19,7 +19,6 @@ import Navbar from "../components/NavBar";
 import * as ScreenOrientation from 'expo-screen-orientation'
 import { CoreStyle } from "../components/CoreStyle";
 
-
 export default function Landing({ navigation }) {
 
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
@@ -38,28 +37,20 @@ export default function Landing({ navigation }) {
         global.text = "black";
     }
 
-  const handleInfoNav = () => {
-    navigation.navigate("Info");
+  const goMenu = (_module) => {
+    navigation.navigate("Menu", {module: _module});
+  }
+
+  const handleSettingsNav = () => {
+    navigation.navigate("Settings");
   };
-  const handleReviewNav = () => {
-    navigation.navigate("Review");
+  const handleDisclaimNav = () => {
+    navigation.navigate("Disclaim");
   };
   const handleGameNav = () => {
     ScreenOrientation.unlockAsync();
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
     navigation.navigate("Home");
-  };
-  const handleSettingsNav = () => {
-    navigation.navigate("Settings");
-  };
-  const handleSourcesNav = () => {
-    navigation.navigate("Sources");
-  };
-  const handleMultimediaNav = () => {
-      navigation.navigate("Multimedia");
-  };
-  const handleDisclaimNav = () => {
-    navigation.navigate("Disclaim");
   };
 
     return (
@@ -77,16 +68,16 @@ export default function Landing({ navigation }) {
 
         <Image source={global.logo} style={CoreStyle.logo}></Image>
 
-        <TouchableOpacity onPress={handleInfoNav}>
+        <TouchableOpacity onPress={() => goMenu("Information")}>
             <Image source={info} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleMultimediaNav}>
+        <TouchableOpacity onPress={() => goMenu("Media")}>
             <Image source={videos} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleReviewNav}>
+        <TouchableOpacity onPress={() => goMenu("Quiz")}>
             <Image source={review} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
-        <TouchableOpacity onPress={handleSourcesNav}>
+        <TouchableOpacity onPress={() => goMenu("Resources")}>
             <Image source={sources} style={CoreStyle.landingCrayon}></Image>
         </TouchableOpacity>
         <TouchableOpacity onPress={handleGameNav}>

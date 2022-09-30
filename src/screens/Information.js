@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { WebView } from "react-native-webview";
 import BackButton from "../components/buttons/BackButton";
@@ -41,7 +41,7 @@ import pills from "../assets/PoisoningsMM/Pill.png";
 import house from "../assets/PoisoningsMM/house.png";
 import gas from "../assets/PoisoningsMM/nat_gas.png";
 import paint from "../assets/PoisoningsMM/paint.png";
-import help from "../assets/PoisoningsMM/help.png";
+import help from "../assets/PoisoningsMM/help.jpg";
 import poison from "../assets/PoisoningsMM/poison.png";
 import prevent from "../assets/PoisoningsMM/prevent.png";
 import berries from "../assets/PoisoningsMM/berries.png";
@@ -89,32 +89,35 @@ export default class Information extends Component {
         super(props);
     };
 
-  handleBackNav = () => {
+  handleLastNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("Information", {topic: last});
-        this.render();
     } else {
         this.props.navigation.navigate("Info");
     }
-  }
+  };
 
   handleNextNav = () => {
     if (this.props.navigation.getParam("topic") != "Parental Health") {
         this.props.navigation.navigate("Information", {topic: next});
-        this.render();
     } else {
-        () => this.props.navigation.navigate("Information", {topic: "Parental Health"})
+        this.props.navigation.navigate("Information", {topic: "Parental Health"});
     }
-  }
+  };
 
-  const goResources = (_topic) => {
-    navigation.navigate("Resources", {topic: _topic});
-  }
-  const goMedia = (_topic) => {
-    navigation.navigate("Media", {topic: _topic});
-  }
+  goMenu = () => {
+    this.props.navigation.navigate("Menu", {module: "Information"});
+  };
 
-    async function speakAll() {
+  goResources = (_topic) => {
+    this.props.navigation.navigate("Resources", {topic: _topic});
+  };
+
+  goMedia = (_topic) => {
+    this.props.navigation.navigate("Media", {topic: _topic});
+  };
+
+    async speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
             for (let i = 0; i < txt.length; i++) {
@@ -125,7 +128,7 @@ export default class Information extends Component {
         }
     }
 
-    async function speak(text) {
+    async speak(text) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
             Speech.speak(txt[text].title + ". " + txt[text].body, {rate: 1.0});
@@ -157,7 +160,7 @@ export default class Information extends Component {
         case "Drownings":
             last =  "Poisonings";
             next = "Car Safety";
-            txt = Content.txt;
+            txt = Content.DrownText;
             img = [drown, bath, float, cpr, alone, teach, drowning, hand, pool];
             break;
         case "Car Safety":
@@ -182,99 +185,99 @@ export default class Information extends Component {
         <BackButton
             text="<"
             txtColor={global.text}
-            onPress={handleLastNav}
+            onPress={this.handleLastNav}
         ></BackButton>
         <MediaButton
               text="Back to Info"
-              onPress={() => this.props.navigation.navigate("Info")}
+              onPress={this.goMenu}
               txtColor={global.text}
         ></MediaButton>
         <BackButton
             text=">"
             txtColor={global.text}
-            onPress={handleNextNav}
+            onPress={this.handleNextNav}
         ></BackButton>
     </View>
 
     <ScrollView>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> txt[0].title </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}>{txt[0].title}</Text>
 
-    <TouchableOpacity onPress={() => speakAll()}>
+    <TouchableOpacity onPress={() => this.speakAll()}>
         <Image style={CoreStyle.headimg} source={img[0]}/>
     </TouchableOpacity>
 
-    <Text allowFontScaling={true} style={CoreStyle.subtitle}> txt[0].body </Text>
+    <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[0].body}</Text>
 
 <CollapsibleBox header={txt[1].title}
     headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => speak(1)}>
-        <Image style={styles.bathpic} source={img[1]}/>
+    <TouchableOpacity onPress={() => this.speak(1)}>
+        <Image style={styles.pic} source={img[1]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[1].body}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header={txt[2].title} headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => speak(2)}>
-        <Image style={styles.floatpic} source={img[2]}/>
+    <TouchableOpacity onPress={() => this.speak(2)}>
+        <Image style={styles.pic} source={img[2]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[2].body}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header={txt[3].title} headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => speak(3)}>
-        <Image style={styles.cprpic} source={img[3]}/>
+    <TouchableOpacity onPress={() => this.speak(3)}>
+        <Image style={styles.pic} source={img[3]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[3].body}</Text>
 </CollapsibleBox> 
 
 
 <CollapsibleBox header={txt[4].title} headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => speak(4)}>
-        <Image style={styles.alonepic} source={img[4]}/>
+    <TouchableOpacity onPress={() => this.speak(4)}>
+        <Image style={styles.pic} source={img[4]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[4].body}</Text>
 </CollapsibleBox>
 
 <CollapsibleBox header={txt[5].title} headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => speak(5)}>
-        <Image style={styles.teachpic} source={img[5]}/>
+    <TouchableOpacity onPress={() => this.speak(5)}>
+        <Image style={styles.pic} source={img[5]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[5].body}</Text>
 </CollapsibleBox>
 
-<TouchableOpacity onPress={() => speak(6)}>
-    <Image style={styles.drowningpic} source={img[6]}/>
+<TouchableOpacity onPress={() => this.speak(6)}>
+    <Image style={styles.pic} source={img[6]}/>
 </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[6].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[6].body}</Text>
 
-<TouchableOpacity onPress={() => speak(7)}>
-    <Image style={styles.handpic} source={img[7]}/>
+<TouchableOpacity onPress={() => this.speak(7)}>
+    <Image style={styles.pic} source={img[7]}/>
 </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[7].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[7].body}</Text>
 
-    <TouchableOpacity onPress={() => speak(8)}>
-        <Image style={CoreStyle.headimg} source={img[8]}/>
+    <TouchableOpacity onPress={() => this.speak(8)}>
+        <Image style={styles.pic} source={img[8]}/>
     </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[8].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[8].body}</Text>
 
 <View style={CoreStyle.buttons}>
 <SourcesButton
-    onPress={goResources(this.props.navigation.getParam('topic'))}
+    onPress={() => this.goResources(this.props.navigation.getParam('topic'))}
 ></SourcesButton>
 
 <MMButton
-    onPress={goMedia(this.props.navigation.getParam('topic'))}
+    onPress={() => this.goMedia(this.props.navigation.getParam('topic'))}
 ></MMButton>
 </View>
 
     </ScrollView>
 
     <View style = {CoreStyle.pushdown}>
-    <Navbar navigation={navigation}/>
+    <Navbar navigation={this.props.navigation}/>
     </View>
 
     </ImageBackground>
@@ -283,7 +286,14 @@ export default class Information extends Component {
 }
 
 const styles = StyleSheet.create({
-    bathpic: {
+    pic: {
+        height: 150,
+        width: 150,
+        marginTop: 5,
+        alignSelf: "center",
+        marginBottom: 5,
+    },
+    pic_alt: {
         height: 200,
         width: 200,
         alignSelf: "center",

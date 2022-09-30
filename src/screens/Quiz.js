@@ -67,6 +67,14 @@ export default class Quiz extends Component{
         };
     };
 
+    goMenu = () => {
+        this.props.navigation.navigate("Menu", {module: "Quiz"});
+    };
+
+    goInformation = (_topic) => {
+      this.props.navigation.navigate("Information", {topic: _topic});
+    };
+
     reRender = () => {
 
         if (this.b1.state.buttonColor == "green" || this.b2.state.buttonColor == "green" || this.b3.state.buttonColor == "green" || this.b4.state.buttonColor == "green") {
@@ -183,7 +191,7 @@ export default class Quiz extends Component{
             ></BackButton>
             <MediaButton
                   text="Back to Review"
-                  onPress={() => this.props.navigation.navigate("Review")}
+                  onPress={this.goMenu}
                   txtColor={global.text}
             ></MediaButton>
             <BackButton onPress={this.reRender}
@@ -222,7 +230,7 @@ export default class Quiz extends Component{
         <View style={CoreStyle.row}>
         <MainButton
             text={"Go to " + this.props.navigation.getParam('topic')}
-            onPress={() => this.props.navigation.navigate(this.props.navigation.getParam('topic'))}
+            onPress={() => this.goInformation(this.props.navigation.getParam('topic'))}
         ></MainButton>
         </View>
 

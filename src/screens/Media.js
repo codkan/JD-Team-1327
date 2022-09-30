@@ -62,6 +62,14 @@ export default class Media extends Component {
     }
   }
 
+  goMenu = () => {
+    this.props.navigation.navigate("Menu", {module: "Media"});
+  };
+
+    goInformation = (_topic) => {
+      this.props.navigation.navigate("Information", {topic: _topic});
+    };
+
   render (){
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
@@ -160,7 +168,7 @@ export default class Media extends Component {
         ></BackButton>
         <MediaButton
               text="Back to Media"
-              onPress={() => this.props.navigation.navigate("Multimedia")}
+              onPress={this.goMenu}
               txtColor={global.text}
         ></MediaButton>
         <BackButton
@@ -182,7 +190,7 @@ export default class Media extends Component {
     <View style={CoreStyle.mediaButtons}>
         <MainButton
               text={"Go to " + this.props.navigation.getParam('topic')}
-              onPress={() => this.props.navigation.navigate(this.props.navigation.getParam('topic'))}
+              onPress={() => this.goInformation(this.props.navigation.getParam('topic'))}
               txtColor={global.text}
         ></MainButton>
     </View>

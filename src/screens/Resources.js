@@ -33,6 +33,14 @@ export default class Resources extends Component{
     }
   }
 
+  goMenu = () => {
+    this.props.navigation.navigate("Menu", {module: "Resources"});
+  };
+
+    goInformation = (_topic) => {
+      this.props.navigation.navigate("Information", {topic: _topic});
+    };
+
   render (){
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
@@ -79,7 +87,7 @@ export default class Resources extends Component{
         ></BackButton>
         <MediaButton
               text="Back to Sources"
-              onPress={() => this.props.navigation.navigate("Sources")}
+              onPress={this.goMenu}
               txtColor={global.text}
         ></MediaButton>
         <BackButton
@@ -139,7 +147,7 @@ export default class Resources extends Component{
 
     <MainButton
           text={"Go to " + this.props.navigation.getParam('topic')}
-          onPress={() => this.props.navigation.navigate(this.props.navigation.getParam('topic'))}
+          onPress={() => this.goInformation(this.props.navigation.getParam('topic'))}
           txtColor={global.text}
     ></MainButton>
     </View>
