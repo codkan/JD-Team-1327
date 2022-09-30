@@ -4,7 +4,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons//BackButton";
 import MainButton from "../components/buttons/MainButton";
-import MediaButton from "../components/buttons//MediaButton";
+import TopicButton from "../components/buttons//TopicButton";
 import Navbar from "../components/NavBar";
 import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
@@ -19,7 +19,7 @@ import burn1 from "../assets/BurnsMM/bmm1.jpg";
 import burn2 from "../assets/BurnsMM/bmm2.png";
 import burn3 from "../assets/BurnsMM/bmm3.jpg";
 
-import poison1 from "../assets/PoisoningsMM/PoisoningMM2.jpg";
+import poison1 from "../assets/PoisoningsMM/PMM2.jpg";
 import poison2 from "../assets/PoisoningsMM/PMM3.png";
 import poison3 from "../assets/PoisoningsMM/PMM4.jpg";
 
@@ -166,11 +166,11 @@ export default class Media extends Component {
             txtColor={global.text}
             onPress={this.handleBackNav}
         ></BackButton>
-        <MediaButton
-              text="Back to Media"
+        <TopicButton
+              text="Back to Topics"
               onPress={this.goMenu}
               txtColor={global.text}
-        ></MediaButton>
+        ></TopicButton>
         <BackButton
             text=">"
             txtColor={global.text}
@@ -187,7 +187,7 @@ export default class Media extends Component {
     <VideoPlayer videoID={vids[1].VID}/>
     <VideoPlayer videoID={vids[2].VID}/>
 
-    <View style={CoreStyle.mediaButtons}>
+    <View style={CoreStyle.TopicButtons}>
         <MainButton
               text={"Go to " + this.props.navigation.getParam('topic')}
               onPress={() => this.goInformation(this.props.navigation.getParam('topic'))}

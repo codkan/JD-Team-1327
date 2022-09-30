@@ -10,8 +10,9 @@ import { GameEngine } from "react-native-game-engine";
 import Background from "../assets/kitchen/level-2-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
 import MenuButton from "../components/buttons/MenuButton";
-import NoteButton from "../components/buttons/NoteButton";
-import SpeakButton from "../components/buttons/SpeakButton";
+import GameButton from "../components/buttons/GameButton";
+import note from "../assets/gameItems/note.png";
+import speak from "../assets/gameItems/speak.png";
 import { get, insert } from "../Db";
 import Entities from "../entities/Level2Entities";
 import Dispatches from "../systems/Level2Dispatches";
@@ -237,13 +238,15 @@ export default class LevelTwo extends Component {
           ref={(cd) => this.timerRef = cd}
         />
         <View style={{ alignItems: "flex-end" }}>
-          <NoteButton
+          <GameButton
             visible={this.state.collectNote1Visible}
             onPress={this.handleCollectNote1}
+            img = {note}
           />
-          <NoteButton
+          <GameButton
             visible={this.state.collectNote2Visible}
             onPress={this.handleCollectNote2}
+            img = {note}
           />
           <Modal
             animationType="slide"
@@ -324,9 +327,10 @@ export default class LevelTwo extends Component {
               </View>
             </View>
           </Modal>
-          <SpeakButton
+          <GameButton
             visible={this.state.interactionIconVisible}
             onPress={this.handleNPCInteraction}
+            img = {speak}
           />
         </View>
       </View>

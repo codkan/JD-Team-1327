@@ -3,7 +3,7 @@ import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacit
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
-import MediaButton from "../components/buttons/MediaButton";
+import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 import { Sources } from "../json/Bib.json";
@@ -85,11 +85,11 @@ export default class Resources extends Component{
             txtColor={global.text}
             onPress={this.handleBackNav}
         ></BackButton>
-        <MediaButton
-              text="Back to Sources"
+        <TopicButton
+              text="Back to Topics"
               onPress={this.goMenu}
               txtColor={global.text}
-        ></MediaButton>
+        ></TopicButton>
         <BackButton
             text=">"
             txtColor={global.text}

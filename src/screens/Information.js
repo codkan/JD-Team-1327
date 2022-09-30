@@ -3,17 +3,16 @@ import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOp
 import { WebView } from "react-native-webview";
 import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
-import MediaButton from "../components/buttons/MediaButton";
+import TopicButton from "../components/buttons/TopicButton";
 import MMButton from "../components/buttons/MMButton";
 import Navbar from "../components/NavBar";
-import SourcesButton from "../components/buttons/SourcesButton";
 import { CoreStyle } from "../components/CoreStyle";
 import VideoPlayer from "../components/VideoPlayer";
 import * as Speech from "expo-speech";
 import Background from "../assets/app/bg.png";
 import {Content} from "../json/Content.json";
-import src from "../../assets/buttons/links-line-alt.png";
-import mm from "../../assets/buttons/media.png";
+import src from "../assets/buttons/links-line-alt.png";
+import mm from "../assets/buttons/media.png";
 
 //Fall images
 import falls from "../assets/fallsMM/falls.png";
@@ -189,11 +188,11 @@ export default class Information extends Component {
             txtColor={global.text}
             onPress={this.handleLastNav}
         ></BackButton>
-        <MediaButton
-              text="Back to Info"
+        <TopicButton
+              text="Back to Topics"
               onPress={this.goMenu}
               txtColor={global.text}
-        ></MediaButton>
+        ></TopicButton>
         <BackButton
             text=">"
             txtColor={global.text}

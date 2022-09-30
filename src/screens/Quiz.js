@@ -3,7 +3,7 @@ import { ImageBackground, StyleSheet, Text, View, Button, ButtonGroup } from "re
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
-import MediaButton from "../components/buttons/MediaButton";
+import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/buttons/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
@@ -189,11 +189,11 @@ export default class Quiz extends Component{
                   text="<"
                   txtColor={global.text}
             ></BackButton>
-            <MediaButton
-                  text="Back to Review"
+            <TopicButton
+                  text="Back to Topics"
                   onPress={this.goMenu}
                   txtColor={global.text}
-            ></MediaButton>
+            ></TopicButton>
             <BackButton onPress={this.reRender}
                   text=">"
                   txtColor={global.text}

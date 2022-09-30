@@ -3,7 +3,6 @@ import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, Touchabl
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
-import MediaButton from "../components/buttons/MediaButton";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
@@ -11,11 +10,11 @@ import basket from "../assets/gift_basket.png";
 
 export default function Win({navigation}){
 
-    const goToInfo = () => {
-        navigation.navigate("Info");
+    const goMenu = () => {
+        navigation.navigate("Menu", {module: "Quiz"});
     };
-    const backToReview = () => {
-        navigation.navigate("Review");
+    const goInformation = (_topic) => {
+        navigation.navigate("Information", {topic: _topic});
     };
 
     const score = navigation.getParam('score');
@@ -28,13 +27,13 @@ export default function Win({navigation}){
     <View style={CoreStyle.topnavbuttons}>
         <TopicButton
               text="Back to Quizzes"
-              onPress={backToReview}
+              onPress={() => goMenu()}
               txtColor={global.text}
         ></TopicButton>
         <TopicButton
-            text="Go to Topics"
+            text="Go to Topic"
             txtColor={global.text}
-            onPress={goToInfo}
+            onPress={() => goInformation(txt)}
         ></TopicButton>
     </View>
 

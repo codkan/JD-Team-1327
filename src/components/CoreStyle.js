@@ -212,7 +212,7 @@ export const CoreStyle = StyleSheet.create({
     },
 
     // style for "Go to Topic" button views in Multimedia
-    mediaButtons: {
+    TopicButtons: {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
@@ -226,7 +226,9 @@ export const CoreStyle = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        marginHorizontal: MAX_WIDTH*0.44,
+        marginHorizontal: MAX_WIDTH*0.05,
+        marginTop: 10,
+        marginBottom: 75,
     },
 
     // header image style for most of info sections

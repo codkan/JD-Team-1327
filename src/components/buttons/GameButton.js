@@ -7,16 +7,18 @@ import {
   ImageBackground,
 } from "react-native";
 
-export default function MenuButton({ text, onPress, visible }) {
+export default function GameButton({ text, onPress, visible, img }) {
   let noteContents;
   if (visible) {
     noteContents = (
-      <ImageBackground
-        source={require("../../assets/gameItems/note.png")}
-        style={{ width: 125, height: 125, visible: !visible }}
-      >
-        <Text style={styles.buttonText}>{text}</Text>
-      </ImageBackground>
+      <View style={{ marginRight: 20, justifyContent: "center" }}>
+        <ImageBackground
+          source={img}
+          style={{ width: 120, height: 120, visible: !visible }}
+        >
+          <Text style={styles.buttonText}>{text}</Text>
+        </ImageBackground>
+      </View>
     );
   } else {
     noteContents = <View></View>;

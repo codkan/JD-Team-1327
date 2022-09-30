@@ -10,8 +10,9 @@ import { GameEngine } from "react-native-game-engine";
 import Background from "../assets/yard/level-3-floor.png";
 import GameStatusBar from "../components/GameStatusBar";
 import MenuButton from "../components/buttons//MenuButton";
-import NoteButton from "../components/buttons//NoteButton";
-import SpeakButton from "../components/buttons//SpeakButton";
+import GameButton from "../components/buttons//GameButton";
+import note from "../assets/gameItems/note.png";
+import speak from "../assets/gameItems/speak.png";
 import { get, insert } from "../Db";
 import Entities from "../entities/Level3Entities";
 import DogMove from "../systems/DogMove";
@@ -264,13 +265,15 @@ export default class LevelThree extends Component {
           </View>
         </Modal>
         <View style={{ alignItems: "flex-end" }}>
-          <NoteButton
+          <GameButton
             visible={this.state.collectNote1Visible}
             onPress={this.handleCollectNote1}
+            img = {note}
           />
-          <NoteButton
+          <GameButton
             visible={this.state.collectNote2Visible}
             onPress={this.handleCollectNote2}
+            img = {note}
           />
           <Modal
             animationType="slide"
@@ -356,9 +359,10 @@ export default class LevelThree extends Component {
               </View>
             </View>
           </Modal>
-          <SpeakButton
+          <GameButton
             visible={this.state.interactionIconVisible}
             onPress={this.handleNPCInteraction}
+            img = {speak}
           />
         </View>
       </View>
