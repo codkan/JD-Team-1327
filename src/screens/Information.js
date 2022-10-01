@@ -122,7 +122,7 @@ export default class Information extends Component {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
             for (let i = 0; i < txt.length; i++) {
-                Speech.speak(txt[i].title + ". " + txt[i].body, {rate: 1.0});
+                Speech.speak(txt[i].title + ". " + txt[i].body, {rate: 1.1});
             }
         } else {
             Speech.stop();
@@ -132,7 +132,7 @@ export default class Information extends Component {
     async speak(text) {
         let speaking = await Speech.isSpeakingAsync();
         if (!speaking) {
-            Speech.speak(txt[text].title + ". " + txt[text].body, {rate: 1.0});
+            Speech.speak(txt[text].title + ". " + txt[text].body, {rate: 1.1});
         } else {
             Speech.stop();
         }
