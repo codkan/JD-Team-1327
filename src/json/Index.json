@@ -58,22 +58,17 @@
     {
       "topic": "Burns",
       "title": "3. Always know where your child is when cooking or handling hot food and liquids",
-      "body": "- Keep toys out of the kitchen \n - Never hold your baby while handling drinks like coffee or tea because of the injury risk"
+      "body": "- Keep toys out of the kitchen \n- Never hold your baby while handling drinks like coffee or tea because of the injury risk \n- Turn pot handles away from the front of the stove and use the back burners of the stove first \n- Avoid tablecloths or large placemats. If a child pulls on one, hot drinks or food can fall. \n- Test food temperatures, especially when heated by the microwave, before feeding your child. \n- Most importantly, always supervise your child around any open flame"
     },
     {
       "topic": "Burns",
-      "title": "4. Turn pot handles away from the front of the stove and use the back burners of the stove first",
-      "body": "- Avoid tablecloths or large placemats. If a child pulls on one, hot drinks or food can fall. \n - Test food temperatures, especially when heated by the microwave, before feeding your child."
+      "title": "4. Have smoke detectors spread throughout your home and remember to replace the batteries often",
+      "body": "- Keep a fire extinguisher handy in case of emergencies \n- Never leave rooms with candles, fireplaces, or active stoves unattended \n- Put potentially dangerous devices like irons or lighters in out-of-reach places"
     },
     {
       "topic": "Burns",
-      "title": "5. Have smoke detectors spread throughout your home and remember to replace the batteries often",
-      "body": "- Keep a fire extinguisher handy in case of emergencies \n - Never leave rooms with candles, fireplaces, or active stoves unattended \n - Put potentially dangerous devices like irons or lighters in out-of-reach places"
-    },
-    {
-      "topic": "Burns",
-      "title": "6. Make sure to apply sunscreen to your child and to reapply it if they’re playing in the water",
-      "body": "- Don’t store your childs stroller or safety seat in direct view of the hot sun \n - Check metal playground equipment before letting your child play on it \n - Encourage your child to wear shoes since it will prevent them from walking barefoot on hot asphalt"
+      "title": "5. Make sure to apply sunscreen to your child and to reapply it if they’re playing in the water",
+      "body": "- Don’t store your childs stroller or safety seat in direct view of the hot sun \n- Check metal playground equipment before letting your child play on it \n- Encourage your child to wear shoes since it will prevent them from walking barefoot on hot asphalt"
     },
     {
       "topic": "Burns",
@@ -102,8 +97,18 @@
     },
     {
       "topic": "Poisonings",
-      "title": "3. Ensure that you are familiar with all potential dangers both inside and outside the home",
-      "body": "- Make sure all natural gas based appliances are functioning correctly. As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the chance of poisonings for both children and adults. \n - Ensure that you have functioning carbon monoxide and smoke detectors. These are critical because both of these can detect hazards that occur silently. \n - Memorize the poison help number (1-800-222-1222). This 24/7 line can connect you to an expert in the case that you suspect a child has been poisoned. \n - Familiarize yourself with the plants in and outside of your home, especially if you live near plants that produce bright or noticeable berries that could be poisonous. Children will be attracted to plants that look appealing, such as holly and juniper berries. Canvas the outside of your home or ask a professional to make sure that you are familiar with all the plant species in the vicinity of your home. Remove or relocate any poisonous plants to ensure your child does not consume its berries. \n - Check your home for lead paint that can chip off. Lead poisoning can be difficult to detect, and so either get an expert of check yourself to see if your home contains this kind of paint. Lead paint and dust is more common among older buildings, so be sure to check if your home fits this criteria."
+      "title": "3. Ensure that you are familiar with all potential dangers in the home",
+      "body": "- Make sure all natural gas based appliances are functioning correctly. As more of a general safety tip, ensuring that these appliances are functioning correctly will reduce the chance of poisonings for both children and adults. \n- Ensure that you have functioning carbon monoxide and smoke detectors. These are critical because both of these can detect hazards that occur silently."
+    },
+    {
+      "topic": "Poisonings",
+      "title": "4. Be aware of potential lead exposure",
+      "body": "- Check your home for lead paint that can chip off. Lead poisoning can be difficult to detect, and so either get an expert of check yourself to see if your home contains this kind of paint. Lead paint and dust is more common among older buildings, so be sure to check if your home fits this criteria."
+    },
+    {
+      "topic": "Poisonings",
+      "title": "5. Be prepared",
+      "body": "- Memorize the poison help number (1-800-222-1222). This 24/7 line can connect you to an expert in the case that you suspect a child has been poisoned."
     },
     {
       "topic": "Poisonings",
@@ -114,6 +119,11 @@
       "topic": "Poisonings",
       "title": "How can we prevent poisonings?",
       "body": "Findings show that doing seemingly small things, such as ensuring that medicines are stored out of reach or putting them away immediately after use, could reduce the amount of poisonings per year between 11% and 20%. Overall, the majority of practices to prevent poisonings come down to caretakers having more awareness and being more attentive since poisonings due to other sources are very low. Here are some tips to prevent the most common forms of child poisoning:"
+    },
+    {
+      "topic": "Poisonings",
+      "title": "Poisoning Outside the Home",
+      "body": "\tFamiliarize yourself with the plants in and outside of your home, especially if you live near plants that produce bright or noticeable berries that could be poisonous. Children will be attracted to plants that look appealing, such as holly and juniper berries. Canvas the outside of your home or ask a professional to make sure that you are familiar with all the plant species in the vicinity of your home. Remove or relocate any poisonous plants to ensure your child does not consume its berries."
     },
     {
       "topic": "Drownings",
@@ -156,84 +166,87 @@
       "body": "- Construct proper 4 sided fencing around your home pool. This should include self-closing and self-latching gates. \n - Do not leave toys in the pool area that may entice your kid to enter the area unsupervised. \n - Teach your child to never swim alone, only with adult supervision. \n - Consider buying and installing a pool alarm."
     },
     {
-      "topic": "Traffic",
+      "topic": "Car Safety",
       "title": "1. Rear-facing carseats",
       "body": "- Used for infants and toddlers \n - All infants and toddlers should ride in these until they reach the highest weight or height limit of the seat \n - Most convertible rear-facing seats are built to allow children to ride rear-facing for 2 years or more \n - Usually comes with a base that stays in the car in place. The seat clicks into and out of the base for easy installation \n - Has a carrying handle for easy child-carry \n - Ensure that the harness is snug and the chest clip is placed at the center of the chest, even with the armpits \n - Never place a rear-facing carseat in the front seat where a passenger airbag is activated \n - Make sure the seat is angled correctly so that the head and neck are supported and not able to flop around \n - Should only be used for travel; never use for sleeping, feeding, etc outside of the vehicle"
     },
     {
-      "topic": "Traffic",
+      "topic": "Car Safety",
       "title": "2. Forward-facing carseats",
       "body": "- Used for toddlers and preschoolers. This is the next seat up from a rear-facing carseat \n - Should always be worn with the attached harness for proper effectiveness \n - Many forward-facing carseats can accommodate children up to 65 pounds or more \n - All toddlers and preschoolers should ride in a forward-facing carseat until they outgrow the weight or height limit of the seat \n - Does not come with a carrying handle. These seats are intended to stay in the car at all times \n - Should only be used for travel; never use for sleeping, feeding, etc outside of the vehicle"
     },
     {
-      "topic": "Traffic",
+      "topic": "Car Safety",
       "title": "3. Booster seat",
       "body": "- Used for school-aged children \n - Children within this category should use a booster seat with the seat belt until the seat belt fits properly without the need of the booster seat \n - Vehicle seat belts usually fit properly without a booster seat when the child has reached 4ft 9in and is between the ages of 8 to 12 \n - All children under the age of 13 should ride in the back seat regardless of height or weight"
     },
     {
-      "topic": "Traffic",
+      "topic": "Car Safety",
       "title": "4. Seat belts",
       "body": "- Once a seat belt fits properly without the use of a booster seat, children should wear both the lap and shoulder belt at all times \n - Fits correctly when the should belt lies across the middle of the chest and shoulder, not the neck or throat \n - Fits correctly when the lap belt is low and snug across the upper thighs, not the belly \n - Never allow anyone to share seat belts. All passengers must have their own car safety seats or seat belts"
     },
     {
-      "topic": "Traffic",
+      "topic": "Car Safety",
+      "title": "5. Driver Seat",
+      "body": "- Be a good role model and make sure you always wear your seat belt. This will help your child form a lifelong habit of buckling up."
+    },
+    {
+      "topic": "Car Safety",
       "title": "Things to avoid when shopping for carseats",
       "body": "Never use a carseat that is too old. The manufacturer will make a note of how long the carseat can be used and when it was made. If a carseat has any visible cracks on it, it is unuseable and can cause more harm than good to your child. Carseats should also be replaced after any moderate or severe crash. Even minor crashes can cause unseen damage to the carseat and may need replacing. Carseats can also be recalled; make sure that you hold on to the manufacturer label for the carseat so that you know the age of the seat and if it has been recalled. If in doubt, you can call the manufacturer or contact the National Highway Traffic Safety Administration (NHTSA) Vehicle Safety Hotline at (888)-327-4236 or their website."
     },
     {
-      "topic": "Traffic",
-      "title": "1. Be a good role model",
-      "body": "- Make sure you always wear your seat belt. This will help your child form a lifelong habit of buckling up."
-    },
-    {
-      "topic": "Traffic",
-      "title": "2. Make sure that everyone who transports your child uses the correct car safety seat or seat belt on every trip, every time",
-      "body": "- Being consistent with car safety seat use is good parenting, reduces fussing and complaints, and is safest for your child"
-    },
-    {
-      "topic": "Traffic",
-      "title": "3. Never leave your child alone in or around cars, and lock your vehicle when it is not in use",
-      "body": "- A child can die of heatstroke because temperatures can reach deadly levels in minutes \n - A child can be strangled by power windows, retracting seat belts, sunroofs, or accessories \n- A child can knock the vehicle into gear, setting it into motion \n - A child can be backed over when the vehicle backs up \n - A child can be trapped in the trunk of the vehicle"
-    },
-    {
-      "topic": "Traffic",
-      "title": "4. Follow manufacturer directions for cleaning car seats",
-      "body": "- Cleaning but not disinfecting is usually permitted. That's because disinfectant products may decrease the protection provided by the seat and harness"
-    },
-    {
-      "topic": "Traffic",
+      "topic": "Car Safety",
       "title": "Why is Car Safety So Important?",
       "body": "Driving a car can already be a scary task for some people; you are manuevering a thousand-pound hunk of metal and responsible for the lives of drivers and passengers around you. Now you are adding the life of your child. Car safety, however, is there to ensure that you and your child stay as safe as possible and hopefully give for a less daunting experience. The following tips outline basic car seat rules, tips for parents on how to be good car safety role models, and things to avoid."
     },
     {
-      "topic": "ParentalHealth",
+      "topic": "Car Safety",
+      "title": "What is Good Car Safety?",
+      "body": "\tMake sure that everyone who transports your child uses the correct car safety seat or seat belt on every trip, every time. Being consistent with car safety seat use is good parenting, reduces fussing and complaints, and is safest for your child. Never leave your child alone in or around cars, and lock your vehicle when it is not in use. A child can die of heatstroke because temperatures can reach deadly levels in minutes. A child can be strangled by power windows, retracting seat belts, sunroofs, or accessories. A child can knock the vehicle into gear, setting it into motion. A child can be backed over when the vehicle backs up. A child can be trapped in the trunk of the vehicle."
+    },
+    {
+      "title": "Parental Health",
+      "body": "Symptoms of Postpartum Depression"
+    },
+    {
       "title": "1. Signs and Symptoms of Baby Blues for Either Parent [2]",
-      "body": "- Mood swings \n - Anxiety \n - Sadness \n - Irritability \n - Feeling overwhelmed \n - Crying \n - Reduced concentration \n - Appetite problems \n - Trouble sleeping"
+      "body": "- Mood swings \n- Anxiety \n- Sadness \n- Irritability \n- Feeling overwhelmed \n- Crying \n- Reduced concentration \n- Appetite problems \n- Trouble sleeping"
     },
     {
-      "topic": "ParentalHealth",
+      "topic": "Parental Health",
       "title": "2. Signs and Symptoms of Postpartum Depression for Mothers [1]",
-      "body": "- Feeling sad, hopeless, or overwhelmed \n - Feeling worried, scared, angry, or panicked \n - Feelings of guilt or inadequacy \n - Excessive crying \n - Depressed modd or severe mood swings \n - Sleeping too much or too little \n - Eating too much or too little \n - Trouble concentrating \n - Wanting isolation from friends and family \n - Not feeling attached to the baby \n - Withdrawal from activities you usually find enjoyable \n - Fear that you're not a good mother [2] \n - Recurrent thoughts of death or suicide"
+      "body": "- Feeling sad, hopeless, or overwhelmed \n- Feeling worried, scared, angry, or panicked \n- Feelings of guilt or inadequacy \n- Excessive crying \n- Depressed modd or severe mood swings \n- Sleeping too much or too little \n- Eating too much or too little \n- Trouble concentrating \n- Wanting isolation from friends and family \n- Not feeling attached to the baby \n- Withdrawal from activities you usually find enjoyable \n- Fear that you're not a good mother [2] \n- Recurrent thoughts of death or suicide"
     },
     {
-      "topic": "ParentalHealth",
-      "title": "3. Additional Signs and Symptoms of Postpartum Psychosis for Mothers [1]",
-      "body": "- Thoughs of hurting the baby or yourself \n - Hearing voices, seeing things that are not there, or feeling paranoid (very worried, suspicious, or mistrustful)"
+      "topic": "Parental Health",
+      "title": "3. Symptoms and Signs of Postpartum Depression for Fathers [1]",
+      "body": "- Feeling overwhelmed, hopeless, or sad \n- Feeling panicked, scared, angry, or worried \n- Feelings of inadequacy or guilt \n- Crying excessively \n- Severe mood swings \n- Sleeping too little or too much \n- Eating too little or too much \n- Concentration problems \n- Wanting isolation from family and friends \n- Feeling not attached to the child \n- Usually enjoyable activities are uninteresting \n- Fear that you're a bad father [2] \n- Recurrent thoughts of suicide or death"
     },
     {
-      "topic": "ParentalHealth",
-      "title": "4. Postpartum Depression for Fathers [2]",
-      "body": "- New fathers can experience postpartum depression, too. They may feel sad or fatigued, be overwhelmed, experience anxiety, or have changes in their usual eating and sleeping patterns, the same symptoms mothers with postpartum depression experience. \n - Fathers who are young, have a history of depression, experience relationship problems, or are struggling financially are most at risk of postpartum depression. \n - Paternal postpartum depression can have the same negative effect on partner relationships and child development as postpartum depression in mothers can."
+      "topic": "Parental Health",
+      "title": "4. Additional Signs and Symptoms of Postpartum Psychosis for Parents [1]",
+      "body": "- Thoughts of hurting the baby or yourself \n- Hearing voices, seeing things that are not there, or feeling paranoid (very worried, suspicious, or mistrustful)"
     },
     {
-      "topic": "ParentalHealth",
-      "title": "Why is Postpartum Depression information important?",
-      "body": "In the first few weeks of caring for a newborn, most new moms feel anxious, sad, frustrated, tired, and overwhelmed. Sometimes known as the 'baby blues,' these feelings get better within a few weeks. But for some women, they are very strong or do not get better. Postpartum depression is when these feelings do not go away after about 2 weeks or make it hard for a woman to take care of her baby. [1] Rarely, an extreme mood disorder called postpartum psychosis also may develop after childbirth. Postpartum depression is not a character flaw or a weakness. Sometimes it is simply a complication of giving birth. If you have postpartum depression, prompt treatment can help you manage your symptoms and help you bond with your baby."
+      "topic": "Parental Health",
+      "title": "5. PPD, Depression, Suicide, and Mental Health Hotlines",
+      "body": "- Postpartum Support International Warmline: 1-800-944-4773 \n- National Maternal Mental Health Hotline: 1-800-943-5746 \n- National Suicide Prevention Lifeline: 1-800-273-8255 \n- Substance Abuse and Mental Health Services Administration National Helpline: 1-800-662-4357 \n- PPD Moms Hotline: 1-800-773-6667 \n- National Hopeline Network: 1-800-743-2433"
     },
     {
-      "topic": "ParentalHealth",
+      "topic": "Parental Health",
+      "title": "\nWhy is Postpartum Depression information important?",
+      "body": "\tIn the first few weeks of caring for a newborn, most new moms feel anxious, sad, frustrated, tired, and overwhelmed. Sometimes known as the 'baby blues,' these feelings get better within a few weeks. But for some women, they are very strong or do not get better. Postpartum depression is when these feelings do not go away after about 2 weeks or make it hard for a woman to take care of her baby. [1] Rarely, an extreme mood disorder called postpartum psychosis also may develop after childbirth. Postpartum depression is not a character flaw or a weakness. Sometimes it is simply a complication of giving birth. If you have postpartum depression, prompt treatment can help you manage your symptoms and help you bond with your baby."
+    },
+    {
+      "topic": "Parental Health",
       "title": "Long-Term Effects of Untreated Postpartum Depression [2]",
-      "body": "For mothers, untreated postpartum depression can last for months or longer, sometimes becoming a chronic depressive disorder. Even when treated, postpartum depression increases a woman's risk of future episodes of major depression. Postpartum depression can also have a ripple effect, causing emotional strain for everyone close to a new baby. When a new mother is depressed, the risk of depression in the baby's father also increases. Though new dads are already at increased risk of depression, whether or not their partner is affected. Finally, children of parents who have untreated postpartum depression are more likely to have emotional and behavioral problems, such as sleeping and eating difficulties, excessive crying, and delays in language development."
+      "body": "\tFor mothers, untreated postpartum depression can last for months or longer, sometimes becoming a chronic depressive disorder. Even when treated, postpartum depression increases a woman's risk of future episodes of major depression. Postpartum depression can also have a ripple effect, causing emotional strain for everyone close to a new baby. When a new mother is depressed, the risk of depression in the baby's father also increases. Though new dads are already at increased risk of depression, whether or not their partner is affected. Finally, children of parents who have untreated postpartum depression are more likely to have emotional and behavioral problems, such as sleeping and eating difficulties, excessive crying, and delays in language development."
+    },
+    {
+      "topic": "Parental Health",
+      "title": "Paternal Postpartum Depression [2]",
+      "body": "New fathers can experience postpartum depression, too. They may feel sad or fatigued, be overwhelmed, experience anxiety, or have changes in their usual eating and sleeping patterns, the same symptoms mothers with postpartum depression experience. Fathers who are young, have a history of depression, experience relationship problems, or are struggling financially are most at risk of postpartum depression. Paternal postpartum depression can have the same negative effect on partner relationships and child development as postpartum depression in mothers can."
     }
   ]
 }

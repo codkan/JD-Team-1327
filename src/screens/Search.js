@@ -80,7 +80,7 @@ export default function Search({ navigation }) {
             [
                 {text: 'BACK', style: 'destructive'},
                 {text: 'CONTINUE     ', style: 'default'},
-                {text: 'Visit Page', onPress: () => navigation.navigate(item.topic), style: 'cancel'}
+                {text: 'Visit Page', onPress: () => navigation.navigate("Information", {topic: item.topic}), style: 'cancel'}
             ],
             {cancelable: true}
         );
