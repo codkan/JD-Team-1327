@@ -233,9 +233,19 @@ export const CoreStyle = StyleSheet.create({
 
     // header image style for most of info sections
     headimg: {
+        height: 175,
+        width: 175,
+        resizeMode: "contain",
+        alignSelf: "center",
+    },
+
+    // styling for Information module image
+   img: {
         height: 150,
         width: 150,
+        resizeMode: "contain",
         alignSelf: "center",
+        marginVertical: 5,
     },
 
     // image viewer sizing

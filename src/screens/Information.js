@@ -63,8 +63,8 @@ import carSafety from "../assets/carSafetyMM/carSafety.png";
 import rearSeat from "../assets/carSafetyMM/rearSeat.png";
 import foreSeat from "../assets/carSafetyMM/foreSeat.png";
 import boostSeat from "../assets/carSafetyMM/boostSeat.png";
-import belt from "../assets/carSafetyMM/belt.png";
 import seatbelt from "../assets/carSafetyMM/seatbelt.png";
+import belt from "../assets/carSafetyMM/belt.png";
 import safe from "../assets/carSafetyMM/safe.png";
 import heat from "../assets/carSafetyMM/heat.png";
 import car from "../assets/carSafetyMM/car.png";
@@ -168,7 +168,7 @@ export default class Information extends Component {
             last = "Drownings";
             next = "Parental Health";
             txt = Content.CarText;
-            img = [carSafety, rearSeat, foreSeat, boostSeat, belt, seatbelt, safe, heat, car];
+            img = [carSafety, rearSeat, foreSeat, boostSeat, seatbelt, belt, safe, heat, car];
             break;
         case "Parental Health":
             last = "Car Safety";
@@ -213,21 +213,21 @@ export default class Information extends Component {
 <CollapsibleBox header={txt[1].title}
     headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => this.speak(1)}>
-        <Image style={styles.pic} source={img[1]}/>
+        <Image style={CoreStyle.img} source={img[1]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[1].body}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header={txt[2].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => this.speak(2)}>
-        <Image style={styles.pic} source={img[2]}/>
+        <Image style={CoreStyle.img} source={img[2]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[2].body}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header={txt[3].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => this.speak(3)}>
-        <Image style={styles.pic} source={img[3]}/>
+        <Image style={CoreStyle.img} source={img[3]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[3].body}</Text>
 </CollapsibleBox> 
@@ -235,32 +235,32 @@ export default class Information extends Component {
 
 <CollapsibleBox header={txt[4].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => this.speak(4)}>
-        <Image style={styles.pic} source={img[4]}/>
+        <Image style={CoreStyle.img} source={img[4]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[4].body}</Text>
 </CollapsibleBox>
 
 <CollapsibleBox header={txt[5].title} headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => this.speak(5)}>
-        <Image style={styles.pic} source={img[5]}/>
+        <Image style={CoreStyle.img} source={img[5]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[5].body}</Text>
 </CollapsibleBox>
 
 <TouchableOpacity onPress={() => this.speak(6)}>
-    <Image style={styles.pic} source={img[6]}/>
+    <Image style={CoreStyle.img} source={img[6]}/>
 </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[6].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[6].body}</Text>
 
 <TouchableOpacity onPress={() => this.speak(7)}>
-    <Image style={styles.pic} source={img[7]}/>
+    <Image style={CoreStyle.img} source={img[7]}/>
 </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[7].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[7].body}</Text>
 
     <TouchableOpacity onPress={() => this.speak(8)}>
-        <Image style={styles.pic} source={img[8]}/>
+        <Image style={CoreStyle.img} source={img[8]}/>
     </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[8].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[8].body}</Text>
@@ -284,62 +284,3 @@ export default class Information extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-    pic: {
-        height: 150,
-        width: 150,
-        marginTop: 5,
-        alignSelf: "center",
-        marginBottom: 5,
-    },
-    pic_alt: {
-        height: 200,
-        width: 200,
-        alignSelf: "center",
-        marginTop: 10,
-        marginBottom: 10,
-    },
-    floatpic: {
-        height: 150,
-        width: 300,
-        alignSelf: "center",
-        marginTop: 10,
-        marginBottom: 10,
-    },
-    cprpic: {
-        height: 185,
-        width: 205,
-        alignSelf: "center",
-        marginTop: 10,
-        marginBottom: 10,
-    },
-    alonepic: {
-        height: 150,
-        width: 250,
-        alignSelf: "center",
-        marginTop: 10,
-        marginBottom: 10,
-    },
-    teachpic: {
-        height: 155,
-        width: 230,
-        alignSelf: "center",
-        marginTop: 10,
-        marginBottom: 10,
-    },
-    handpic: {
-        height: 150,
-        width: 150,
-        alignSelf: "center",
-        marginTop: 10,
-        marginBottom: 10,
-    },
-    drowningpic: {
-        height: 150,
-        width: 195,
-        alignSelf: "center",
-        marginTop: 10,
-        marginBottom: 10,
-    },
-});
