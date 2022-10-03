@@ -19,6 +19,8 @@ import Navbar from "../components/NavBar";
 import * as ScreenOrientation from 'expo-screen-orientation'
 import { CoreStyle } from "../components/CoreStyle";
 
+import { Login } from "./Login.js";
+
 export default function Landing({ navigation }) {
 
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
@@ -36,6 +38,8 @@ export default function Landing({ navigation }) {
         global.color3 = "lightgray";
         global.text = "black";
     }
+
+
 
   const goMenu = (_module) => {
     navigation.navigate("Menu", {module: _module});
@@ -57,7 +61,9 @@ export default function Landing({ navigation }) {
       <ImageBackground source={global.bg} style={CoreStyle.image}>
 
       <View style = {CoreStyle.topnavbuttons}>
-        <TouchableOpacity style={CoreStyle.invisible}>
+        <TouchableOpacity style={CoreStyle.btn}
+        //onPress = {() => Login._loginWithAuth0}
+        >
         </TouchableOpacity>
         <TouchableOpacity onPress={handleDisclaimNav}>
             <Image source={disclaim} style={CoreStyle.btn}></Image>

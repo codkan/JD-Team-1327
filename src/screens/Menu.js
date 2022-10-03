@@ -42,10 +42,28 @@ var crayons;
 export default class Menu extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            showAlert: "true",
+        };
     };
 
+  TTSalert = () => {
+    Alert.alert(
+        'How to Use Text-to-Speech',
+        "Press the first image to read the entire page aloud\n\nPress any section's image to read just the section aloud\n\nPress any image to stop reading aloud at any time",
+        [
+            {text: 'DO NOT SHOW AGAIN', style: 'destructive', onPress: this.setState({showAlert: "false"})},
+            {text: 'CLOSE', style: 'cancel'},
+            {text: 'CONTINUE     ', style: 'default'},
+        ],
+        {cancelable: true}
+    );
+  }
+
     goTopic = (_topic) => {
-        //TTSalert();
+        if (_topic == "Information" && this.state.showAlert == "true") {
+            TTSalert();
+        }
         this.props.navigation.navigate(this.props.navigation.getParam('module'), {topic: _topic});
     }
 
