@@ -15,6 +15,7 @@ global.logo = logo1;
 global.text = "black";
 global.volume = 0.5;
 global.isMuted = false;
+global.showAlert = true;
 
 export default class App extends Component {
 

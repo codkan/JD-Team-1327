@@ -42,9 +42,6 @@ var crayons;
 export default class Menu extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            showAlert: "true",
-        };
     };
 
   TTSalert = () => {
@@ -52,17 +49,16 @@ export default class Menu extends Component {
         'How to Use Text-to-Speech',
         "Press the first image to read the entire page aloud\n\nPress any section's image to read just the section aloud\n\nPress any image to stop reading aloud at any time",
         [
-            {text: 'DO NOT SHOW AGAIN', style: 'destructive', onPress: this.setState({showAlert: "false"})},
+            {text: 'DO NOT SHOW AGAIN', style: 'destructive', onPress: () => global.showAlert = false},
             {text: 'CLOSE', style: 'cancel'},
-            {text: 'CONTINUE     ', style: 'default'},
+            {text: 'CONTINUE', style: 'default'},
         ],
-        {cancelable: true}
     );
   }
 
     goTopic = (_topic) => {
-        if (_topic == "Information" && this.state.showAlert == "true") {
-            TTSalert();
+        if (this.props.navigation.getParam('module') == "Information" && global.showAlert) {
+            this.TTSalert();
         }
         this.props.navigation.navigate(this.props.navigation.getParam('module'), {topic: _topic});
     }
