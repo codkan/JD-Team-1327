@@ -78,6 +78,7 @@ export default class Menu extends Component {
             crayons = [fallSource, burnSource, poisonSource, drownSource, carSource, parentSource];
             break;
         default:
+            crayons = [fallInfo, burnInfo, poisonInfo, drownInfo, carInfo, parentInfo];
             break
     };
       return (

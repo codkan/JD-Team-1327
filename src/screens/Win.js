@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput, Button } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
@@ -17,9 +18,22 @@ export default function Win({navigation}){
         navigation.navigate("Information", {topic: _topic});
     };
 
+    const [text, onChangeText] = React.useState("");
+
     const score = navigation.getParam('score');
     const total = navigation.getParam('total');
     const txt = navigation.getParam('text');
+
+    const addScore = async (name) => {
+        try {
+            await AsyncStorage.setItem(name, score+'');
+        } catch (e) {
+            //ERROR
+        }
+        console.log(name);
+        var keys = await AsyncStorage.getAllKeys();
+        console.log(keys);
+    };
 
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
@@ -40,13 +54,22 @@ export default function Win({navigation}){
 <ScrollView>
 
     <View style={styles.container}>
-    <Text allowFontScaling={true}> {'\n'} </Text>
+
     <Text allowFontScaling={true} style={CoreStyle.title}> {txt} Quiz Completed </Text>
-    <Text allowFontScaling={true}> {'\n'} </Text>
     <Text allowFontScaling={true} style={CoreStyle.subtitle}> Congratulations! </Text>
-    <Text allowFontScaling={true}> {'\n'} </Text>
     <Text allowFontScaling={true} style={CoreStyle.subtitle2}> You answered {score} out of {total} questions correctly </Text>
+    <Text allowFontScaling={true}> {'\n'} </Text>
     <Image source={basket} style={styles.image}></Image>
+    <Text allowFontScaling={true}> {'\n'} </Text>
+
+    <View style={styles.textbox}>
+    <TextInput
+        onChangeText={onChangeText}
+        value={text}
+        width={"90%"}
+    />
+    <Button title={">"} onPress={() => addScore(text+'')}/>
+    </View>
     </View>
 
 </ScrollView>
@@ -83,9 +106,15 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: "#d49306",
     },
-
     container: {
         alignItems: "center",
         marginHorizontal: 20,
     },
+    textbox: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+    }
 });

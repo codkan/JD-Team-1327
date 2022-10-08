@@ -22,6 +22,8 @@ import Quiz from "./screens/Quiz.js";
 import Win from "./screens/Win.js";
 import Resources from "./screens/Resources.js";
 
+import LocalBoard from "./screens/LocalBoard.js";
+
 ////GAME SCREENS
 import Home from "./screens/Home";
 import About from "./screens/About";
@@ -90,6 +92,12 @@ import LevelThree from "./screens/Level3";
      },
      Resources: {
        screen: Resources,
+       navigationOptions: {
+         headerShown: false,
+       },
+     },
+     LocalBoard: {
+       screen: LocalBoard,
        navigationOptions: {
          headerShown: false,
        },

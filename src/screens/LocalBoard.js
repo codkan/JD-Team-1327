@@ -1,27 +1,29 @@
 import React, {Component} from "react";
 import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
-import { Sources } from "../json/Bib.json";
 
 var last;
 var next;
-var srcs;
+var names = [];
+var name0;
+var scores = [];
 
-export default class Resources extends Component{
+export default class LocalBoard extends Component{
     constructor(props) {
         super(props);
     };
 
   handleBackNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
-        this.props.navigation.navigate("Resources", {topic: last});
+        this.props.navigation.navigate("LocalBoard", {topic: last});
     } else {
-        this.props.navigation.navigate("Menu", {module:"Resources"});
+        this.props.navigation.navigate("Menu", {module:"LocalBoard"});
     }
   }
 
@@ -41,41 +43,47 @@ export default class Resources extends Component{
       this.props.navigation.navigate("Information", {topic: _topic});
     };
 
+  getScores = async () => {
+    names = await AsyncStorage.getAllKeys();
+    console.log(names[0]);
+    for (var i = 0; i < names.length; i++) {
+        scores.push(await AsyncStorage.getItem(names[i]));
+    };
+    console.log(scores);
+  }
+
   render (){
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
-            last = "Sources";
+            last = "LocalBoard";
             next = "Burns";
-            srcs = Sources.FallSrcs;
             break;
         case "Burns":
             last = "Falls";
             next = "Poisonings";
-            srcs = Sources.BurnSrcs;
             break;
         case "Poisonings":
             last = "Burns";
             next = "Drownings";
-            srcs = Sources.PoisonSrcs;
             break;
         case "Drownings":
             last =  "Poisonings";
             next = "Car Safety";
-            srcs = Sources.DrownSrcs;
             break;
         case "Car Safety":
             last = "Drownings";
             next = "Parental Health";
-            srcs = Sources.CarSrcs;
             break;
         case "Parental Health":
             last = "Car Safety";
             next = "Parental Health";
-            srcs = Sources.ParSrcs;
             break;
         default:
             break
     };
+
+    this.getScores();
+
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
@@ -97,61 +105,19 @@ export default class Resources extends Component{
         ></BackButton>
     </View>
 
+<Text allowFontScaling={true} style={CoreStyle.title}> {this.props.navigation.getParam('topic') + " Resources"}: </Text>
+
 <ScrollView>
+    <Text allowFontScaling={true} style={CoreStyle.content}>{names[0]}</Text>
+</ScrollView>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> {this.props.navigation.getParam('topic') + " Resources"}: </Text>
-
-    <View style={CoreStyle.center}>
-
-    <TouchableOpacity onPress={() => Linking.openURL(srcs[0].src)}>
-         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}>{srcs[0].text}</Text>
-    </TouchableOpacity>
-
-    <Text allowFontScaling={true}> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL(srcs[1].src)}>
-         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}>{srcs[1].text}</Text>
-    </TouchableOpacity>
-
-    <Text allowFontScaling={true}> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL(srcs[2].src)}>
-         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}>{srcs[2].text}</Text>
-    </TouchableOpacity>
-
-    <Text allowFontScaling={true}> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL(srcs[3].src)}>
-         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}>{srcs[3].text}</Text>
-    </TouchableOpacity>
-
-    <Text allowFontScaling={true}> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL(srcs[4].src)}>
-         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}>{srcs[4].text}</Text>
-    </TouchableOpacity>
-
-    <Text allowFontScaling={true}> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL(srcs[5].src)}>
-         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}>{srcs[5].text}</Text>
-    </TouchableOpacity>
-
-    <Text allowFontScaling={true}> {'\n'} </Text>
-
-    <TouchableOpacity onPress={() => Linking.openURL(srcs[6].src)}>
-         <Text allowFontScaling={true} style={{textDecorationLine:'underline', color:'blue'}}>{srcs[6].text}</Text>
-    </TouchableOpacity>
-
-    <Text allowFontScaling={true}> {'\n'} </Text>
-
+<View style={CoreStyle.center}>
     <MainButton
           text={"Go to " + this.props.navigation.getParam('topic')}
           onPress={() => this.goInformation(this.props.navigation.getParam('topic'))}
           txtColor={global.text}
     ></MainButton>
-    </View>
-</ScrollView>
+</View>
 
     <View style = {CoreStyle.pushdown}>
     <Navbar navigation={this.props.navigation}/>
