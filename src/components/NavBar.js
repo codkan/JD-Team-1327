@@ -21,7 +21,7 @@ export default function Navbar({ navigation }){
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate("LocalBoard")} style={styles.icons}>
-            <Image source={require("../assets/nav/modules.png")} style={styles.icon}></Image>
+            <Image source={require("../assets/nav/leaderboard.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => handleHomeNav()} style={styles.icons}>
