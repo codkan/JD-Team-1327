@@ -26,13 +26,16 @@ export default function Win({navigation}){
 
     const addScore = async (name) => {
         try {
-            await AsyncStorage.setItem(name, score+'');
+            var keys = await AsyncStorage.getAllKeys();
+            for (var i = 0; i < keys.length; i++) {
+                if (keys[i] == name) {
+                    await AsyncStorage.removeItem(keys[i], (err) => console.log(err));
+                }
+            }
+            await AsyncStorage.setItem("("+txt+") "+name, score+'');
         } catch (e) {
-            //ERROR
+            console.log(e);
         }
-        console.log(name);
-        var keys = await AsyncStorage.getAllKeys();
-        console.log(keys);
     };
 
     return (

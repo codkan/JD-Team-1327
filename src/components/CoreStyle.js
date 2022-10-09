@@ -298,6 +298,25 @@ export const CoreStyle = StyleSheet.create({
         justifyContent: "center",
     },
 
+    // leaderboard entry container
+    board: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        backgroundColor: "papayawhip",
+        paddingVertical: 0,
+
+    },
+    entry: {
+        color: global.text,
+        fontSize: 26,
+        marginVertical: 10,
+        textAlign: "center",
+        fontWeight: "bold",
+        marginHorizontal: 20,
+    },
+
     // contain in an uncentered row aka line
     line: {
           flex: 1,

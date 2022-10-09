@@ -20,7 +20,7 @@ export default function Navbar({ navigation }){
             <Image source={require("../assets/nav/links.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => goMenu("LocalBoard")} style={styles.icons}>
+        <TouchableOpacity onPress={() => navigation.navigate("LocalBoard")} style={styles.icons}>
             <Image source={require("../assets/nav/modules.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
