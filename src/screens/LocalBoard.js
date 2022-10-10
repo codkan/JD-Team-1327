@@ -114,8 +114,8 @@ export default class LocalBoard extends Component{
 
     <Text allowFontScaling={true} style={CoreStyle.title}> {"Quiz Scores"}: </Text>
 
-    <SafeAreaView style={CoreStyle.container}>
-        <FlatList
+    <SafeAreaView>
+        <FlatList style={CoreStyle.leaderboard}
             data={this.state.scores}
             renderItem={this.ItemView}
             ItemSeparatorComponent={this.ItemSeparatorView}

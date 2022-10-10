@@ -2,8 +2,7 @@ import React from "react";
 import {useState} from 'react'
 import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native";
 import Background from "../assets/app/bg.png";
-
-//import * as AuthSession from "expo-auth-session";
+import { AuthSession } from 'expo';
 const auth0Domain = "https://childsafe.us.auth0.com";
 const auth0ClientId = "buXJbiJx322WquQTdYUGUc6SNhpweqaT";
 

@@ -268,6 +268,13 @@ export const CoreStyle = StyleSheet.create({
       marginHorizontal: 10,
     },
 
+    leaderboard: {
+      marginTop: 0,
+      marginBottom: 0,
+      height: MAX_HEIGHT*0.6,
+      marginHorizontal: 10,
+    },
+
     // Modal Text style for header content in About/Disclaim
     minorText: {
         marginTop: MAX_HEIGHT/5,
