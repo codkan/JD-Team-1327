@@ -22,7 +22,6 @@ import Quiz from "./screens/Quiz.js";
 import Win from "./screens/Win.js";
 import Resources from "./screens/Resources.js";
 
-import Login from "./screens/Login.js";
 import LocalBoard from "./screens/LocalBoard.js";
 
 ////GAME SCREENS
@@ -36,12 +35,6 @@ import LevelTwo from "./screens/Level2";
 import LevelThree from "./screens/Level3";
  
  const screens = {
-/*     Login: {
-       screen: Login,
-       navigationOptions: {
-         headerShown: false,
-       },
-     },*/
      Landing: {
        screen: Landing,
        navigationOptions: {

@@ -1,41 +1,38 @@
 import React from "react";
 import {useState} from 'react'
-import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Alert, Button, Platform, Layout, Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native";
 import Background from "../assets/app/bg.png";
-import { AuthSession } from 'expo';
-const auth0Domain = "https://childsafe.us.auth0.com";
+import { CoreStyle } from "../components/CoreStyle.js";
+
+import * as AuthSession from 'expo-auth-session';
 const auth0ClientId = "buXJbiJx322WquQTdYUGUc6SNhpweqaT";
+const auth0DiscoveryUrl = "https://childsafe.us.auth0.com";
+const useProxy = Platform.select({ web: false, default: true });
+const redirectUri = AuthSession.makeRedirectUri({ useProxy });
 
-export default class Login extends React.Component<Props, State> {
+export async function handleLogin() {
 
-    _loginWithAuth0 = async () => {
-        const redirectUrl = AuthSession.getRedirectUrl();
-        let authUrl = `${auth0Domain}/authorize` + toQueryString({
-            client_id: auth0ClientId,
-            response_type: 'token',
-            scope: 'openid profile email',
-            redirect_uri: redirectUrl,
-        });
-        console.log(`Redirect URL (add this to Auth0): ${redirectUrl}`);
-        console.log(`AuthURL is:  ${authUrl}`);
-        const result = await AuthSession.startAsync({
-            authUrl: authUrl
-        });
+  const discovery = await AuthSession.fetchDiscoveryAsync(auth0DiscoveryUrl);
 
-        if (result.type === 'success') {
-            console.log(result);
-            let token = result.params.access_token;
-            this.props.setToken(token);
-            this.props.navigation.navigate("Next Screen");
-        }
-    };
+  const request = new AuthSession.AuthRequest({
+    usePKCE: true,
+    responseType: AuthSession.ResponseType.Code,
+    codeChallengeMethod: AuthSession.CodeChallengeMethod.S256,
+    clientId: auth0ClientId,
+    redirectUri,
+    scopes: ['offline_access'],
+  })
 
-    render() {
-        return (
-            <Login
-                navigation={this.props.navigation}
-                onLogin={() => this._loginWithAuth0()}
-            />
-        );
-    }
+  const result = await request.promptAsync(discovery, { useProxy })
+  if (result.type === "success") {
+    const result2 = await AuthSession.exchangeCodeAsync({
+      clientId: auth0ClientId,
+      code: result.params.code,
+      redirectUri,
+      extraParams: {
+        code_verifier: request.codeVerifier,
+      },
+    }, discovery)
+    console.log(result2)
+  }
 }
