@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./src/assets/app/favicon.png"
-    }
+    },
+    "scheme": "app.scheme.for.example",
+    "description": ""
   }
 }
