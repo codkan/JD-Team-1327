@@ -43,7 +43,13 @@ export const CoreStyle = StyleSheet.create({
     crayon: {
         height: MAX_HEIGHT/17,
         width: MAX_WIDTH*0.9,
-        marginBottom: MAX_HEIGHT/17,
+        marginVertical: MAX_HEIGHT/25,
+    },
+    //buttonContainer for housing crayon section buttons on module pages
+    buttonContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
     },
     btn: {
       height: 35,
@@ -173,13 +179,6 @@ export const CoreStyle = StyleSheet.create({
         marginTop: -45,
         marginBottom: 25,
         alignSelf: "center",
-    },
-
-    //buttonContainer for housing crayon section buttons on module pages
-    buttonContainer: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
     },
 
     // pushdown style to keep navigation bar at bottom of screen

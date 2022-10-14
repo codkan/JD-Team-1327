@@ -83,29 +83,30 @@ export default class Menu extends Component {
     };
       return (
         <ImageBackground source={global.bg} style={CoreStyle.image}>
-        <Text allowFontScaling={true} style={CoreStyle.moduleText}>Pick a Color to{'\n'}Choose a Topic</Text>
-        <View style={CoreStyle.buttonContainer}>
 
-        <TouchableOpacity onPress={() => this.goTopic("Falls")}>
-            <Image source={crayons[0]} style={CoreStyle.crayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => this.goTopic("Burns")}>
-            <Image source={crayons[1]} style={CoreStyle.crayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => this.goTopic("Poisonings")}>
-            <Image source={crayons[2]} style={CoreStyle.crayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => this.goTopic("Drownings")}>
-            <Image source={crayons[3]} style={CoreStyle.crayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => this.goTopic("Car Safety")}>
-            <Image source={crayons[4]} style={CoreStyle.crayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => this.goTopic("Parental Health")}>
-            <Image source={crayons[5]} style={CoreStyle.crayon}></Image>
-        </TouchableOpacity>
+        <View style={CoreStyle.buttonContainer}>
+            <TouchableOpacity onPress={() => this.goTopic("Burns")}>
+                <Image source={crayons[1]} style={CoreStyle.crayon}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.goTopic("Drownings")}>
+                <Image source={crayons[3]} style={CoreStyle.crayon}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.goTopic("Falls")}>
+                <Image source={crayons[0]} style={CoreStyle.crayon}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.goTopic("Poisonings")}>
+                <Image source={crayons[2]} style={CoreStyle.crayon}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.goTopic("Parental Health")}>
+                <Image source={crayons[5]} style={CoreStyle.crayon}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.goTopic("Car Safety")}>
+                <Image source={crayons[4]} style={CoreStyle.crayon}></Image>
+            </TouchableOpacity>
         </View>
+
         <Navbar navigation={this.props.navigation}/>
+
       </ImageBackground>
       );
   }
