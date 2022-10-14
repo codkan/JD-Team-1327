@@ -26,8 +26,8 @@ export default class LocalBoard extends Component{
     var s = [];
     n = await AsyncStorage.getAllKeys();
     for (var i = 0; i < n.length; i++) {
-        if (await AsyncStorage.getItem(n[i]).split(" ")[0] == topic) {
-            s.push([n[i], await AsyncStorage.getItem(n[i])]);
+        if (n[i].split(" ")[0] == topic) {
+            s.push([n[i].split(" ")[1], await AsyncStorage.getItem(n[i])]);
         }
     };
     this.setState({
@@ -39,7 +39,7 @@ export default class LocalBoard extends Component{
         return (
           // Flat List Item
           <View style={CoreStyle.board}>
-            <Text style={CoreStyle.entry}>{item[0].split(" ")[1]}</Text>
+            <Text style={CoreStyle.entry}>{item[0]}</Text>
             <Text style={CoreStyle.entry}>{item[1]}</Text>
           </View>
         );

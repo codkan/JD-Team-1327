@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput, Button } from "react-native";
+import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput, Button, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
@@ -33,6 +33,14 @@ export default function Win({navigation}){
                 }
             }
             await AsyncStorage.setItem(txt + " " + name, score+'');
+            Alert.alert(
+                "Score Submitted",
+                name + ", your score of " + score + " has been submitted to the local leaderboard",
+                [
+                    {text: 'CLOSE', style: 'cancel'},
+                    {text: 'CONTINUE', style: 'default'},
+                ],
+            );
         } catch (e) {
             console.log(e);
         }
@@ -119,5 +127,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
+        height: 50,
+        borderColor: "gray",
+        borderWidth: 1,
+        borderRadius: 10,
     }
 });
