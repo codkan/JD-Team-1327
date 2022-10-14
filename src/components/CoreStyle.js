@@ -269,8 +269,8 @@ export const CoreStyle = StyleSheet.create({
 
     leaderboard: {
       marginTop: 0,
-      marginBottom: 0,
-      height: MAX_HEIGHT*0.6,
+      marginBottom: 10,
+      height: MAX_HEIGHT*0.55,
       marginHorizontal: 10,
     },
 
@@ -333,6 +333,10 @@ export const CoreStyle = StyleSheet.create({
     // contain and center
     center: {
         alignItems: "center",
+    },
+    center2: {
+        alignItems: "center",
+        marginBottom: 100,
     },
 
     // text style for settings pages

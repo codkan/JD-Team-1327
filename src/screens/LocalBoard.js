@@ -8,6 +8,7 @@ import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 
+var topic;
 var last;
 var next;
 
@@ -25,7 +26,9 @@ export default class LocalBoard extends Component{
     var s = [];
     n = await AsyncStorage.getAllKeys();
     for (var i = 0; i < n.length; i++) {
-        s.push([n[i], await AsyncStorage.getItem(n[i])]);
+        if (await AsyncStorage.getItem(n[i]).split(" ")[0] == topic) {
+            s.push([n[i], await AsyncStorage.getItem(n[i])]);
+        }
     };
     this.setState({
         scores: s.sort((a,b)=> b[1] - a[1])
@@ -36,7 +39,7 @@ export default class LocalBoard extends Component{
         return (
           // Flat List Item
           <View style={CoreStyle.board}>
-            <Text style={CoreStyle.entry}>{item[0]}</Text>
+            <Text style={CoreStyle.entry}>{item[0].split(" ")[1]}</Text>
             <Text style={CoreStyle.entry}>{item[1]}</Text>
           </View>
         );
@@ -82,26 +85,32 @@ export default class LocalBoard extends Component{
   render (){
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
+            topic = "Falls";
             last = "LocalBoard";
             next = "Burns";
             break;
         case "Burns":
+            topic = "Burns";
             last = "Falls";
             next = "Poisonings";
             break;
         case "Poisonings":
+            topic = "Poisonings";
             last = "Burns";
             next = "Drownings";
             break;
         case "Drownings":
+            topic = "Drownings";
             last =  "Poisonings";
             next = "Car Safety";
             break;
         case "Car Safety":
+            topic = "Car Safety";
             last = "Drownings";
             next = "Parental Health";
             break;
         case "Parental Health":
+            topic = "Parental Health";
             last = "Car Safety";
             next = "Parental Health";
             break;
@@ -111,6 +120,24 @@ export default class LocalBoard extends Component{
 
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
+
+    <View style={CoreStyle.topnavbuttons}>
+        <BackButton
+            text="<"
+            txtColor={global.text}
+            onPress={this.handleLastNav}
+        ></BackButton>
+        <TopicButton
+              text="Back to Topics"
+              onPress={this.goMenu}
+              txtColor={global.text}
+        ></TopicButton>
+        <BackButton
+            text=">"
+            txtColor={global.text}
+            onPress={this.handleNextNav}
+        ></BackButton>
+    </View>
 
     <Text allowFontScaling={true} style={CoreStyle.title}> {"Quiz Scores"}: </Text>
 
@@ -123,7 +150,7 @@ export default class LocalBoard extends Component{
         />
     </SafeAreaView>
 
-    <View style={CoreStyle.center}>
+    <View style={CoreStyle.center2}>
         <MainButton
               text={"Go to Quizzes"}
               onPress={() => this.props.navigation.navigate("Menu", {module:"Quiz"})}

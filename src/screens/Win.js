@@ -32,7 +32,7 @@ export default function Win({navigation}){
                     await AsyncStorage.removeItem(keys[i], (err) => console.log(err));
                 }
             }
-            await AsyncStorage.setItem("("+txt+") "+name, score+'');
+            await AsyncStorage.setItem(txt + " " + name, score+'');
         } catch (e) {
             console.log(e);
         }

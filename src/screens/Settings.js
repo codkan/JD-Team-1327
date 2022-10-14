@@ -8,6 +8,7 @@ import logo2 from "../assets/app/landinglogo-alt.png"
 import MainButton from "../components/buttons/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle.js";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function About({ navigation }) {
   //NAV CALLBACK
@@ -47,10 +48,22 @@ export default function About({ navigation }) {
     }
   }
 
+  const clearBoard = async () => {
+    var n = await AsyncStorage.getAllKeys();
+    for (var i = 0; i < n.length; i++) {
+        await AsyncStorage.removeItem(n[i]);
+    }
+  }
+
   return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
     <Text allowFontScaling={true} style={CoreStyle.settingText}> Settings</Text>
     <View style={CoreStyle.settingContainer}>
+    <MainButton
+      text="Clear Local Leaderboard"
+      txtColor={"black"}
+      onPress={() => clearBoard()}
+    ></MainButton>
     <MainButton
       text="Invert Colors"
       txtColor={"black"}
@@ -70,7 +83,6 @@ export default function About({ navigation }) {
       text="Increase Volume"
       txtColor={"black"}
       onPress={() => changeVolume(1)}
-
     ></MainButton>
     </View>
     <Navbar navigation={navigation}/>
