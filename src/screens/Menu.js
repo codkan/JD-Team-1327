@@ -37,6 +37,14 @@ import drownSource from "../assets/sourcesCrayons/drownings.png";
 import carSource from "../assets/sourcesCrayons/carSafety.png";
 import parentSource from "../assets/sourcesCrayons/parentHealth.png";
 
+//Board Crayons
+import fallBoard from "../assets/boardCrayons/falls.png";
+import burnBoard from "../assets/boardCrayons/burns.png";
+import poisonBoard from "../assets/boardCrayons/poisonings.png";
+import drownBoard from "../assets/boardCrayons/drownings.png";
+import carBoard from "../assets/boardCrayons/carSafety.png";
+import parentBoard from "../assets/boardCrayons/parentHealth.png";
+
 var crayons;
 
 export default class Menu extends Component {
@@ -63,7 +71,7 @@ export default class Menu extends Component {
             crayons = [fallSource, burnSource, poisonSource, drownSource, carSource, parentSource];
             break;
         default:
-            crayons = [fallInfo, burnInfo, poisonInfo, drownInfo, carInfo, parentInfo];
+            crayons = [fallBoard, burnBoard, poisonBoard, drownBoard, carBoard, parentBoard];
             break
     };
       return (

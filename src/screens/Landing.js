@@ -55,7 +55,6 @@ async function handleLogin() {
         code_verifier: request.codeVerifier,
       },
     }, discovery)
-    console.log(result2);
   }
 
     var axios = require("axios").default;
