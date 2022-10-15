@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
 import { WebView } from "react-native-webview";
 import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
@@ -90,11 +90,23 @@ export default class Information extends Component {
         super(props);
     };
 
+  TTSalert = () => {
+    Alert.alert(
+        'How to Use Text-to-Speech',
+        "Press the first image to read the entire page aloud\n\nPress any subsection's image to read just that section aloud\n\nPress any image to stop reading aloud at any time",
+        [
+            {text: 'DO NOT SHOW AGAIN', style: 'destructive', onPress: () => global.showAlert = false},
+            {text: 'CLOSE', style: 'cancel'},
+            {text: 'CONTINUE', style: 'default'},
+        ],
+    );
+  }
+
   handleLastNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("Information", {topic: last});
     } else {
-        this.props.navigation.navigate("Info");
+        this.goMenu("Information");
     }
   };
 
@@ -179,6 +191,11 @@ export default class Information extends Component {
         default:
             break
     };
+
+    if (global.showAlert) {
+        this.TTSalert();
+    }
+
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 

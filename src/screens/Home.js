@@ -116,7 +116,7 @@ export default function Home({ navigation }) {
 
       <View style={CoreStyle.homeContainer}>
         <HomeButton
-          text="BACK"
+          text="QUIT"
           onPress={handleBackNav}
           txtColor={"black"}
         ></HomeButton>

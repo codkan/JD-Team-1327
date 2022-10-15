@@ -49,7 +49,7 @@ export default class Media extends Component {
         this.props.navigation.navigate("Media", {topic: last});
         this.render();
     } else {
-        this.props.navigation.navigate("Multimedia");
+        this.goMenu();
     }
   }
 

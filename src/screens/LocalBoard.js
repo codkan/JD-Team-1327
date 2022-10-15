@@ -62,7 +62,7 @@ export default class LocalBoard extends Component{
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("LocalBoard", {topic: last});
     } else {
-        this.props.navigation.navigate("Menu", {module:"LocalBoard"});
+        this.goMenu();
     }
   }
 
@@ -70,7 +70,7 @@ export default class LocalBoard extends Component{
     if (this.props.navigation.getParam("topic") != "Parental Health") {
         this.props.navigation.navigate("LocalBoard", {topic: next});
     } else {
-        () => this.props.navigation.navigate("LocalBoard", {topic: "Parental Health"})
+        this.props.navigation.navigate("LocalBoard", {topic: "Parental Health"})
     }
   }
 
@@ -125,7 +125,7 @@ export default class LocalBoard extends Component{
         <BackButton
             text="<"
             txtColor={global.text}
-            onPress={this.handleLastNav}
+            onPress={this.handleBackNav}
         ></BackButton>
         <TopicButton
               text="Back to Topics"
@@ -139,7 +139,7 @@ export default class LocalBoard extends Component{
         ></BackButton>
     </View>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> {"Quiz Scores"}: </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> {topic+" Scores"}: </Text>
 
     <SafeAreaView>
         <FlatList style={CoreStyle.leaderboard}
@@ -152,8 +152,8 @@ export default class LocalBoard extends Component{
 
     <View style={CoreStyle.center2}>
         <MainButton
-              text={"Go to Quizzes"}
-              onPress={() => this.props.navigation.navigate("Menu", {module:"Quiz"})}
+              text={"Go to " + topic + " Quiz"}
+              onPress={() => this.props.navigation.navigate("Quiz", {topic: topic})}
               txtColor={global.text}
         ></MainButton>
     </View>
