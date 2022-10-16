@@ -23,6 +23,8 @@ import Win from "./screens/Win.js";
 import Resources from "./screens/Resources.js";
 
 import LocalBoard from "./screens/LocalBoard.js";
+import GlobalBoard from "./screens/GlobalBoard.js";
+import TMenu from "./screens/TMenu.js";
 
 ////GAME SCREENS
 import Home from "./screens/Home";
@@ -98,6 +100,18 @@ import LevelThree from "./screens/Level3";
      },
      LocalBoard: {
        screen: LocalBoard,
+       navigationOptions: {
+         headerShown: false,
+       },
+     },
+     GlobalBoard: {
+       screen: GlobalBoard,
+       navigationOptions: {
+         headerShown: false,
+       },
+     },
+     TMenu: {
+       screen: TMenu,
        navigationOptions: {
          headerShown: false,
        },

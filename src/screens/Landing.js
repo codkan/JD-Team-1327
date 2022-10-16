@@ -43,7 +43,10 @@ async function handleLogin() {
     clientId: auth0ClientId,
     redirectUri,
     scopes: ['offline_access'],
+    audience: "https://childsafe.us.auth0.com/api/v2/"
   })
+
+  //console.log(request);
 
   const result = await request.promptAsync(discovery, { useProxy })
   if (result.type === "success") {
@@ -55,7 +58,9 @@ async function handleLogin() {
         code_verifier: request.codeVerifier,
       },
     }, discovery)
+    //console.log(result2);
   }
+  //console.log(result);
 
     var axios = require("axios").default;
 
@@ -67,11 +72,13 @@ async function handleLogin() {
     };
 
     axios.request(options).then(function (response) {
+      const data = response.data.sort((a,b)=> b.last_login < a.last_login);
       global.user_id = response.data[0].user_id;
       global.user = response.data[0].nickname;
       global.times = response.data[0].user_metadata;
-      //console.log("Login User: [" + global.user + "] success!");
-      //console.log("Times: " + global.times);
+      console.log(data);
+      console.log("Login User: [" + global.user + "] success!");
+      console.log("Times: " + global.times);
     }).catch(function (error) {
       console.error(error);
     });

@@ -12,6 +12,9 @@ export default function Navbar({ navigation }){
   const handleSearchNav = () => {
     navigation.navigate("Search");
   };
+  const handleGlobalNav = () => {
+    navigation.navigate("TMenu");
+  };
 
   return (
       <View style={styles.navBar}>
@@ -21,15 +24,15 @@ export default function Navbar({ navigation }){
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => goMenu("LocalBoard")} style={styles.icons}>
-            <Image source={require("../assets/nav/leaderboard.png")} style={styles.icon}></Image>
+            <Image source={require("../assets/nav/local.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => handleHomeNav()} style={styles.icons}>
             <Image source={require("../assets/nav/home-fill.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => goMenu("Quiz")} style={styles.icons}>
-            <Image source={require("../assets/nav/rev.png")} style={styles.icon}></Image>
+        <TouchableOpacity onPress={() => handleGlobalNav()} style={styles.icons}>
+            <Image source={require("../assets/nav/global.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => handleSearchNav()} style={styles.icons}>
