@@ -13,6 +13,7 @@ var last;
 var next;
 var data;
 var s = [];
+global.data;
 
 export default class GlobalBoard extends Component{
     constructor(props) {
@@ -75,7 +76,9 @@ export default class GlobalBoard extends Component{
             break;
     };
     var sorted = s.sort((a,b)=> b[1] < a[1]);
+    console.log(sorted);
     this.setState({scores: sorted});
+    console.log(this.state.scores);
   }
 
     ItemView = ({ item }) => {
@@ -104,17 +107,15 @@ export default class GlobalBoard extends Component{
   handleBackNav = () => {
     if (this.props.navigation.getParam("level") != "Level 1") {
         this.props.navigation.navigate("GlobalBoard", {level: last});
+        this.getScores();
     } else {
         this.props.navigation.navigate("TMenu");
     }
   }
 
   handleNextNav = () => {
-    if (this.props.navigation.getParam("level") != "Level 3") {
-        this.props.navigation.navigate("GlobalBoard", {level: next});
-    } else {
-        this.props.navigation.navigate("GlobalBoard", {level: "Level 3"})
-    }
+    this.props.navigation.navigate("GlobalBoard", {level: next});
+    this.getScores();
   }
 
   goMenu = () => {
@@ -148,7 +149,7 @@ export default class GlobalBoard extends Component{
         ></BackButton>
     </View>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> {"Quiz Scores"}: </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> {this.props.navigation.getParam("level") + " Times"}: </Text>
 
     <SafeAreaView>
         <FlatList style={CoreStyle.leaderboard}
