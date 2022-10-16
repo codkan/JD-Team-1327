@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity, Alert, Modal, Pressable } from "react-native";
 import { WebView } from "react-native-webview";
 import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
@@ -88,21 +88,22 @@ var img;
 export default class Information extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            modalVisible: global.showAlert,
+        };
     };
 
-  TTSalert = () => {
-    Alert.alert(
-        'How to Use Text-to-Speech',
-        "Press the first image to read the entire page aloud\n\nPress any subsection's image to read just that section aloud\n\nPress any image to stop reading aloud at any time",
-        [
-            {text: 'DO NOT SHOW AGAIN', style: 'destructive', onPress: () => global.showAlert = false},
-            {text: 'CLOSE', style: 'cancel'},
-            {text: 'CONTINUE', style: 'default'},
-        ],
-    );
+  setModalVisible = (visible) => {
+    this.setState({ modalVisible: visible });
+  }
+
+  setModalInvisible = (visible) => {
+    global.showAlert = visible;
+    this.setState({ modalVisible: global.showAlert });
   }
 
   handleLastNav = () => {
+    this.setState({modalVisible: global.showAlert});
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("Information", {topic: last});
     } else {
@@ -111,6 +112,7 @@ export default class Information extends Component {
   };
 
   handleNextNav = () => {
+    this.setState({modalVisible: global.showAlert});
     if (this.props.navigation.getParam("topic") != "Parental Health") {
         this.props.navigation.navigate("Information", {topic: next});
     } else {
@@ -192,9 +194,7 @@ export default class Information extends Component {
             break
     };
 
-    if (global.showAlert) {
-        this.TTSalert();
-    }
+    const { modalVisible } = this.state;
 
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
@@ -224,6 +224,41 @@ export default class Information extends Component {
     <TouchableOpacity onPress={() => this.speakAll()}>
         <Image style={CoreStyle.headimg} source={img[0]}/>
     </TouchableOpacity>
+
+<View style={styles.centeredView}>
+    <Modal
+      animationType="slide"
+      transparent={true}
+      visible={modalVisible}
+      onRequestClose={() => {
+        Alert.alert("Modal has been closed.");
+        this.setModalVisible(!modalVisible);
+      }}
+    >
+      <View style={styles.centeredView}>
+        <View style={styles.modalView}>
+          <Text style={styles.modalTitle}>How to Use Text-to-Speech</Text>
+          <Text style={styles.modalText}>Press the first image to read the entire page aloud</Text>
+          <Image style={styles.alertimg} source={img[0]}/>
+          <Text style={styles.modalText}>Press any subsection image to read just that section aloud</Text>
+          <Image style={styles.alertimg} source={img[6]}/>
+          <Text style={styles.modalText}>Press any image to stop reading aloud at any time</Text>
+          <Pressable
+            style={[styles.button, styles.buttonClose]}
+            onPress={() => this.setModalVisible(!modalVisible)}
+          >
+            <Text style={styles.textStyle}>OK</Text>
+          </Pressable>
+          <Pressable
+            style={[styles.button, styles.buttonOpen]}
+            onPress={() => this.setModalInvisible(!modalVisible)}
+          >
+            <Text style={styles.textStyle}>Do Not Show Again</Text>
+          </Pressable>
+        </View>
+      </View>
+    </Modal>
+</View>
 
     <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[0].body}</Text>
 
@@ -301,3 +336,62 @@ export default class Information extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+    width: 150,
+  },
+  buttonOpen: {
+    backgroundColor: "#F194FF",
+  },
+  buttonClose: {
+    backgroundColor: "#2196F3",
+    marginBottom: 15,
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center"
+  },
+  modalTitle: {
+    marginBottom: 16,
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  alertimg: {
+    height: 50,
+    width: 50,
+    resizeMode: "contain",
+    alignSelf: "center",
+    marginBottom: 10,
+  },
+});
