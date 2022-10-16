@@ -96,7 +96,6 @@ export default class LevelOne extends Component {
     };
 
     axios.request(options).then(function (response) {
-      console.log(response.data.user_metadata);
     }).catch(function (error) {
       console.error(error);
     });
