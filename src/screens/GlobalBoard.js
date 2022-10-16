@@ -12,6 +12,7 @@ import { CoreStyle } from "../components/CoreStyle";
 var last;
 var next;
 var data;
+var lvl = 1;
 var s = [];
 global.data;
 
@@ -20,7 +21,8 @@ export default class GlobalBoard extends Component{
         super(props);
         this.state = {
             scores: []
-        }
+        };
+        this.getScores();
     };
 
   getScores = () => {
@@ -76,9 +78,9 @@ export default class GlobalBoard extends Component{
             break;
     };
     var sorted = s.sort((a,b)=> b[1] < a[1]);
-    console.log(sorted);
-    this.setState({scores: sorted});
-    console.log(this.state.scores);
+    this.state = {
+        scores: sorted
+    };
   }
 
     ItemView = ({ item }) => {
@@ -107,15 +109,17 @@ export default class GlobalBoard extends Component{
   handleBackNav = () => {
     if (this.props.navigation.getParam("level") != "Level 1") {
         this.props.navigation.navigate("GlobalBoard", {level: last});
-        this.getScores();
     } else {
-        this.props.navigation.navigate("TMenu");
+        this.goMenu();
     }
   }
 
   handleNextNav = () => {
-    this.props.navigation.navigate("GlobalBoard", {level: next});
-    this.getScores();
+    if (this.props.navigation.getParam("level") != "Level 3") {
+        this.props.navigation.navigate("GlobalBoard", {level: next});
+    } else {
+        this.props.navigation.navigate("GlobalBoard", {level: "Level 3"})
+    }
   }
 
   goMenu = () => {
@@ -123,10 +127,23 @@ export default class GlobalBoard extends Component{
   };
 
   render (){
-
-    if (this.state.scores.length == 0) {
-        this.getScores();
-    }
+    this.getScores();
+    switch(this.props.navigation.getParam('level')) {
+        case "Level 1":
+            last = "TMenu";
+            next = "Level 2";
+            break;
+        case "Level 2":
+            last = "Level 1";
+            next = "Level 3";
+            break;
+        case "Level 3":
+            last = "Level 2";
+            next = "Level 3";
+            break;
+        default:
+            break;
+    };
 
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
@@ -149,7 +166,7 @@ export default class GlobalBoard extends Component{
         ></BackButton>
     </View>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> {this.props.navigation.getParam("level") + " Times"}: </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}>{this.props.navigation.getParam("level") + " Times"}: </Text>
 
     <SafeAreaView>
         <FlatList style={CoreStyle.leaderboard}
