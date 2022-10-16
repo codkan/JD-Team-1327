@@ -28,6 +28,8 @@ const useProxy = Platform.select({ web: false, default: true });
 const redirectUri = AuthSession.makeRedirectUri({ useProxy });
 import jwt_decode from "jwt-decode";
 
+import Crayon from "../components/Crayon";
+
 global.user_id;
 global.user;
 global.times;
@@ -126,27 +128,17 @@ export default function Landing({ navigation }) {
         </TouchableOpacity>
       </View>
 
-        <View style={CoreStyle.buttonContainer}>
+      <Image source={global.logo} style={CoreStyle.logo}></Image>
 
-        <Image source={global.logo} style={CoreStyle.logo}></Image>
+      <View style={CoreStyle.buttonContainer}>
 
-        <TouchableOpacity onPress={() => goMenu("Information")}>
-            <Image source={info} style={CoreStyle.landingCrayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => goMenu("Media")}>
-            <Image source={videos} style={CoreStyle.landingCrayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => goMenu("Quiz")}>
-            <Image source={review} style={CoreStyle.landingCrayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => goMenu("Resources")}>
-            <Image source={sources} style={CoreStyle.landingCrayon}></Image>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={handleGameNav}>
-            <Image source={game} style={CoreStyle.landingCrayon}></Image>
-        </TouchableOpacity>
+        <Crayon text={"Info"} onPress={() => goMenu("Information")} color1={"darkred"} color2={"red"}/>
+        <Crayon text={"Media"} onPress={() => goMenu("Media")} color1={"darkorange"} color2={"orange"}/>
+        <Crayon text={"Quiz"} onPress={() => goMenu("Quiz")} color1={"darkgreen"} color2={"green"}/>
+        <Crayon text={"Sources"} onPress={() => goMenu("Resources")} color1={"darkblue"} color2={"blue"}/>
+        <Crayon text={"Game"} onPress={() => handleGameNav()} color1={"darkviolet"} color2={"purple"}/>
 
-        </View>
+      </View>
 
         <Navbar navigation={navigation}/>
       </ImageBackground>

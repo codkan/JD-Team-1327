@@ -30,9 +30,11 @@ export const CoreStyle = StyleSheet.create({
 
     //Landing Page Styling Components
     logo: {
-      height: "35%",
+      height: "30%",
       resizeMode: "contain",
-      marginBottom: 35,
+      marginBottom: 0,
+      alignItems: "center",
+      alignSelf: "center",
     },
     landingCrayon: {
       height: MAX_HEIGHT/17,
@@ -49,7 +51,9 @@ export const CoreStyle = StyleSheet.create({
     buttonContainer: {
         flex: 1,
         alignItems: "center",
-        justifyContent: "center",
+        alignSelf: "center",
+        justifyContent: "space-between",
+        paddingVertical: 30,
     },
     btn: {
       height: 35,
