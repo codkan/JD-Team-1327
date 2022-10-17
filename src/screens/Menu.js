@@ -94,7 +94,7 @@ export default class Menu extends Component {
             <Crayons fontSize={4} text={"Poisons"} onPress={() => this.goTopic("Poisonings")} color1={colors[6]} color2={colors[7]}/>
             <Crayons fontSize={4} text={"Drownings"} onPress={() => this.goTopic("Drownings")} color1={colors[4]} color2={colors[5]}/>
             <Crayons fontSize={4} text={"Car Safety"} onPress={() => this.goTopic("Car Safety")} color1={colors[2]} color2={colors[3]}/>
-            <Crayons fontSize={4} text={"Parent Health"} onPress={() => this.goTopic("Parent Health")} color1={colors[0]} color2={colors[1]}/>
+            <Crayons fontSize={4} text={"Parent Health"} onPress={() => this.goTopic("Parental Health")} color1={colors[0]} color2={colors[1]}/>
 
         </View>
 

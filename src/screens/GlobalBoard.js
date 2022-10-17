@@ -14,7 +14,7 @@ var next;
 var data;
 var lvl = 1;
 var s = [];
-global.data;
+global.data = [];
 
 export default class GlobalBoard extends Component{
     constructor(props) {

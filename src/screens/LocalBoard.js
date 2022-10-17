@@ -26,12 +26,19 @@ export default class LocalBoard extends Component{
     var s = [];
     n = await AsyncStorage.getAllKeys();
     for (var i = 0; i < n.length; i++) {
-        if (n[i].split(" ")[0] == topic) {
-            s.push([n[i].split(" ")[1], await AsyncStorage.getItem(n[i])]);
+        if (topic == "Parental Health" || topic == "Car Safety") {
+            if (n[i].split(" ")[0] + " " + n[i].split(" ")[1] == topic) {
+                s.push([n[i].split(" ")[2], await AsyncStorage.getItem(n[i])]);
+            }
+        } else {
+            if (n[i].split(" ")[0] == topic) {
+                s.push([n[i].split(" ")[1], await AsyncStorage.getItem(n[i])]);
+            }
         }
     };
+    var sorted = s.sort((a,b)=> b[1] < a[1]);
     this.setState({
-        scores: s.sort((a,b)=> b[1] - a[1])
+        scores: sorted
     });
   }
 
@@ -61,6 +68,7 @@ export default class LocalBoard extends Component{
   handleBackNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("LocalBoard", {topic: last});
+        this.getScores();
     } else {
         this.goMenu();
     }
@@ -69,6 +77,7 @@ export default class LocalBoard extends Component{
   handleNextNav = () => {
     if (this.props.navigation.getParam("topic") != "Parental Health") {
         this.props.navigation.navigate("LocalBoard", {topic: next});
+        this.getScores();
     } else {
         this.props.navigation.navigate("LocalBoard", {topic: "Parental Health"})
     }
