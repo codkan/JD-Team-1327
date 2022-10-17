@@ -3,19 +3,17 @@ import { Image, StyleSheet, TouchableOpacity, View, Text, Triangle } from "react
 
 var color_1;
 var color_2;
-var font_Size = 6;
 
-export default function Crayon({ fontSize, text, onPress, color1, color2 }){
+export default function Crayon({ text, onPress, color1, color2 }){
   color_1 = color1;
   color_2 = color2;
-  font_Size = fontSize;
   return (
       <TouchableOpacity onPress={onPress} style={styles.navBar}>
         <View style={styles.rect1} backgroundColor={color1}>
             <View style={styles.rect2} backgroundColor={color2}>
                 <View style={styles.line1}/>
                 <View style={styles.oval}>
-                    <Text fontSize={fontSize} style={styles.text}>{text}</Text>
+                    <Text style={styles.text}>{text}</Text>
                 </View>
                 <View style={styles.line2}/>
             </View>
@@ -82,7 +80,7 @@ const styles = StyleSheet.create({
         backgroundColor: "black",
     },
     text: {
-        fontSize: font_Size,
+        fontSize: 5,
         color: "white",
         alignItems: "center",
         alignSelf: "center",

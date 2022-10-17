@@ -4,7 +4,7 @@ import Background from "../assets/app/bg.png";
 import MainButton from "../components/buttons/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle.js";
-import Crayons from "../components/Crayons";
+import Crayon from "../components/Crayon";
 
 var colors = [];
 var r = 0;
@@ -18,6 +18,10 @@ export default class Menu extends Component {
 
     goTopic = (_topic) => {
         this.props.navigation.navigate(this.props.navigation.getParam('module'), {topic: _topic});
+    }
+
+    goBoard = (_level) => {
+        this.props.navigation.navigate("GlobalBoard", {level: _level});
     }
 
   render () {
@@ -71,7 +75,7 @@ export default class Menu extends Component {
                 colors.push("rgb("+_r+","+_g+","+_b+")");
             }
             break;
-        default:
+        case "LocalBoard":
             r = 147;
             g = 0;
             b = 255;
@@ -82,19 +86,45 @@ export default class Menu extends Component {
                 colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
                 colors.push("rgb("+_r+","+_g+","+_b+")");
             }
-            break
+            break;
+        default:
+            r = 255;
+            g = 242;
+            b = 0;
+            for (let i = 0; i < 3; i++) {
+                var _r = 255;
+                var _g = 242+(i*3);
+                var _b = (152/3)*i;
+                colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
+                colors.push("rgb("+_r+","+_g+","+_b+")");
+            }
+              return (
+                <ImageBackground source={global.bg} style={CoreStyle.image}>
+
+                <View style={CoreStyle.tmenuContainer}>
+
+                    <Crayon text={"Level 1"} onPress={() => this.goBoard("Level 1")} color1={colors[4]} color2={colors[5]}/>
+                    <Crayon text={"Level 2"} onPress={() => this.goBoard("Level 2")} color1={colors[2]} color2={colors[3]}/>
+                    <Crayon text={"Level 3"} onPress={() => this.goBoard("Level 3")} color1={colors[0]} color2={colors[1]}/>
+
+                </View>
+
+                <Navbar navigation={this.props.navigation}/>
+
+              </ImageBackground>
+              );
     };
       return (
         <ImageBackground source={global.bg} style={CoreStyle.image}>
 
-        <View style={CoreStyle.buttonContainer}>
+        <View style={CoreStyle.menuContainer}>
 
-            <Crayons fontSize={4} text={"Falls"} onPress={() => this.goTopic("Falls")} color1={colors[10]} color2={colors[11]}/>
-            <Crayons fontSize={4} text={"Burns"} onPress={() => this.goTopic("Burns")} color1={colors[8]} color2={colors[9]}/>
-            <Crayons fontSize={4} text={"Poisons"} onPress={() => this.goTopic("Poisonings")} color1={colors[6]} color2={colors[7]}/>
-            <Crayons fontSize={4} text={"Drownings"} onPress={() => this.goTopic("Drownings")} color1={colors[4]} color2={colors[5]}/>
-            <Crayons fontSize={4} text={"Car Safety"} onPress={() => this.goTopic("Car Safety")} color1={colors[2]} color2={colors[3]}/>
-            <Crayons fontSize={4} text={"Parent Health"} onPress={() => this.goTopic("Parental Health")} color1={colors[0]} color2={colors[1]}/>
+            <Crayon text={"Falls"} onPress={() => this.goTopic("Falls")} color1={colors[10]} color2={colors[11]}/>
+            <Crayon text={"Burns"} onPress={() => this.goTopic("Burns")} color1={colors[8]} color2={colors[9]}/>
+            <Crayon text={"Poisons"} onPress={() => this.goTopic("Poisonings")} color1={colors[6]} color2={colors[7]}/>
+            <Crayon text={"Drownings"} onPress={() => this.goTopic("Drownings")} color1={colors[4]} color2={colors[5]}/>
+            <Crayon text={"Vehicles"} onPress={() => this.goTopic("Car Safety")} color1={colors[2]} color2={colors[3]}/>
+            <Crayon text={"Parents"} onPress={() => this.goTopic("Parental Health")} color1={colors[0]} color2={colors[1]}/>
 
         </View>
 

@@ -15,6 +15,7 @@ var data;
 var lvl = 1;
 var s = [];
 global.data = [];
+var sorted;
 
 export default class GlobalBoard extends Component{
     constructor(props) {
@@ -25,7 +26,7 @@ export default class GlobalBoard extends Component{
         this.getScores();
     };
 
-  getScores = () => {
+  async getScores() {
 
     var axios = require("axios").default;
 
@@ -44,8 +45,7 @@ export default class GlobalBoard extends Component{
     });
 
     s = [];
-    //console.log(global.data[0].nickname);
-    //console.log(global.data[0].user_metadata.score1);
+
     switch(this.props.navigation.getParam('level')) {
         case "Level 1":
             last = "TMenu";
@@ -77,7 +77,7 @@ export default class GlobalBoard extends Component{
         default:
             break;
     };
-    var sorted = s.sort((a,b)=> b[1] < a[1]);
+    sorted = s.sort((a,b)=> b[1] < a[1]);
     this.state = {
         scores: sorted
     };
@@ -123,7 +123,7 @@ export default class GlobalBoard extends Component{
   }
 
   goMenu = () => {
-    this.props.navigation.navigate("TMenu");
+    this.props.navigation.navigate("Menu", {module: "GlobalBoard"});
   };
 
   render (){

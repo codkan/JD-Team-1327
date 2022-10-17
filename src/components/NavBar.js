@@ -1,5 +1,6 @@
 import React from "react";
-import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, TouchableOpacity, View, Alert } from "react-native";
+import {handleLogin} from "./Login.js";
 
 
 export default function Navbar({ navigation }){
@@ -13,7 +14,19 @@ export default function Navbar({ navigation }){
     navigation.navigate("Search");
   };
   const handleGlobalNav = () => {
-    navigation.navigate("TMenu");
+    if (global.user_id != null) {
+        navigation.navigate("Menu", {module: "GlobalBoard"});
+    } else {
+        Alert.alert(
+            'You Are Not Logged In',
+            "You are trying to access Global Leaderboard rankings without logging in\n\nYou must login to view Global Leaderboard rankings\n\nWould you like to log in?",
+            [
+                {text: 'NO', style: 'destructive'},
+                {text: 'CLOSE', style: 'cancel'},
+                {text: 'YES', style: 'default', onPress: () => handleLogin()},
+            ],
+        );
+    }
   };
 
   return (

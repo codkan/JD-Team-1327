@@ -55,6 +55,20 @@ export const CoreStyle = StyleSheet.create({
         justifyContent: "space-between",
         paddingVertical: 30,
     },
+    menuContainer: {
+        flex: 1,
+        alignItems: "center",
+        alignSelf: "center",
+        justifyContent: "space-between",
+        paddingVertical: 75,
+    },
+    tmenuContainer: {
+        flex: 1,
+        alignItems: "center",
+        alignSelf: "center",
+        justifyContent: "space-between",
+        paddingVertical: 250,
+    },
     btn: {
       height: 35,
       width: 35,
