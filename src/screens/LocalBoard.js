@@ -37,9 +37,7 @@ export default class LocalBoard extends Component{
         }
     };
     var sorted = s.sort((a,b)=> b[1] < a[1]);
-    this.state = {
-        scores: sorted
-    };
+
     this.setState({
         scores: sorted
     });

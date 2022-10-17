@@ -11,11 +11,7 @@ import { CoreStyle } from "../components/CoreStyle";
 
 var last;
 var next;
-var data;
-var lvl = 1;
-var s = [];
-global.data = [];
-var sorted;
+var data = [];
 
 export default class GlobalBoard extends Component{
     constructor(props) {
@@ -39,48 +35,50 @@ export default class GlobalBoard extends Component{
 
     axios.request(options).then(function (response) {
       data = response.data.sort((a,b)=> b.last_login < a.last_login);
-      global.data = data;
     }).catch(function (error) {
       console.error(error);
     });
 
-    s = [];
+    var s = [];
 
     switch(this.props.navigation.getParam('level')) {
         case "Level 1":
             last = "TMenu";
             next = "Level 2";
-            for (var i = 0; i < global.data.length; i++) {
-                if (global.data[i].user_metadata.score1 != "0") {
-                    s.push([global.data[i].nickname, global.data[i].user_metadata.score1]);
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].user_metadata.score1 != "0") {
+                    s.push([data[i].nickname, data[i].user_metadata.score1]);
                 }
             }
             break;
         case "Level 2":
             last = "Level 1";
             next = "Level 3";
-            for (var i = 0; i < global.data.length; i++) {
-                if (global.data[i].user_metadata.score2 != "0") {
-                    s.push([global.data[i].nickname, global.data[i].user_metadata.score2]);
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].user_metadata.score2 != "0") {
+                    s.push([data[i].nickname, data[i].user_metadata.score2]);
                 }
             }
             break;
         case "Level 3":
             last = "Level 2";
             next = "Level 3";
-            for (var i = 0; i < global.data.length; i++) {
-                if (global.data[i].user_metadata.score3 != "0") {
-                    s.push([global.data[i].nickname, global.data[i].user_metadata.score3]);
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].user_metadata.score3 != "0") {
+                    s.push([data[i].nickname, data[i].user_metadata.score3]);
                 }
             }
             break;
         default:
             break;
     };
-    sorted = s.sort((a,b)=> b[1] < a[1]);
+    var sorted = s.sort((a,b)=> b[1] < a[1]);
     this.state = {
         scores: sorted
     };
+    this.setState = ({
+        scores: sorted
+    });
   }
 
     ItemView = ({ item }) => {
@@ -109,6 +107,7 @@ export default class GlobalBoard extends Component{
   handleBackNav = () => {
     if (this.props.navigation.getParam("level") != "Level 1") {
         this.props.navigation.navigate("GlobalBoard", {level: last});
+        this.getScores();
     } else {
         this.goMenu();
     }
@@ -117,6 +116,7 @@ export default class GlobalBoard extends Component{
   handleNextNav = () => {
     if (this.props.navigation.getParam("level") != "Level 3") {
         this.props.navigation.navigate("GlobalBoard", {level: next});
+        this.getScores();
     } else {
         this.props.navigation.navigate("GlobalBoard", {level: "Level 3"})
     }
