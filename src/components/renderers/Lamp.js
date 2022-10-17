@@ -12,7 +12,7 @@ export default class lamp extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"lamp"}
         style={{
           position: "absolute",
           left: x,

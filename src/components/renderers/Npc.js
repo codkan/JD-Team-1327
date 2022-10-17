@@ -12,7 +12,7 @@ export default class Npc extends Component {
     const y = this.props.body.position.y - height / 4;
 
     return (
-      <Image
+      <Image accessibilityLabel={"NPC"}
         style={{
           position: "absolute",
           left: x,

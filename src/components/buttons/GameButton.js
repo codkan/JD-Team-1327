@@ -28,6 +28,9 @@ export default function GameButton({ text, onPress, visible, img }) {
       onPress={onPress}
       styles={styles.container}
       disabled={!visible}
+      accessibilityLabel={"note/speak"}
+      accessibilityRole={"button"}
+      accessibilityHint={"interacts in game"}
     >
       {noteContents}
     </TouchableOpacity>

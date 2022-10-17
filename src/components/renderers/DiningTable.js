@@ -12,7 +12,7 @@ export default class DiningTable extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"dining table"}
         style={{
           position: "absolute",
           left: x,

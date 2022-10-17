@@ -12,7 +12,7 @@ export default class Bookshelf extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"bookshelf"}
         style={{
           position: "absolute",
           left: x,

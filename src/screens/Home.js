@@ -12,7 +12,7 @@ import mute from "../assets/buttons/mute.png";
 export default function Home({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });
   const [sound, setSound] = React.useState();
-  var muted = false;
+  var muted = global.muted;
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   async function playSound() {
     Audio.setAudioModeAsync({
@@ -106,10 +106,10 @@ export default function Home({ navigation }) {
     <ImageBackground source={Background} style={CoreStyle.image}>
 
     <View style = {CoreStyle.topnavbuttons}>
-        <TouchableOpacity onPress={handleAboutNav}>
+        <TouchableOpacity onPress={handleAboutNav} accessibilityLabel={"Info"} accessibilityRole={"button"} accessibilityHint={"View information and disclaimer about the game"}>
             <Image source={disclaim} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
-        <TouchableOpacity onPress={pauseMusic} style={CoreStyle.mute_view}>
+        <TouchableOpacity onPress={pauseMusic} style={CoreStyle.mute_view} accessibilityLabel={"Mute"} accessibilityRole={"button"} accessibilityHint={"Disables music"}>
             <Image source={mute} style={CoreStyle.mute_btn}></Image>
         </TouchableOpacity>
     </View>

@@ -32,23 +32,28 @@ export default function Navbar({ navigation }){
   return (
       <View style={styles.navBar}>
 
-        <TouchableOpacity onPress={() => goMenu("Resources")} style={styles.icons}>
+        <TouchableOpacity onPress={() => goMenu("Resources")} style={styles.icons}
+                          accessibilityLabel={"Sources"} accessibilityRole={"button"} accessibilityHint={"view references"}>
             <Image source={require("../assets/nav/links.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => goMenu("LocalBoard")} style={styles.icons}>
+        <TouchableOpacity onPress={() => goMenu("LocalBoard")} style={styles.icons}
+                          accessibilityLabel={"Local Leaderboard"} accessibilityRole={"button"} accessibilityHint={"view your quiz scores"}>
             <Image source={require("../assets/nav/local.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handleHomeNav()} style={styles.icons}>
+        <TouchableOpacity onPress={() => handleHomeNav()} style={styles.icons}
+                          accessibilityLabel={"Home"} accessibilityRole={"button"} accessibilityHint={"return to landing page"}>
             <Image source={require("../assets/nav/home-fill.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handleGlobalNav()} style={styles.icons}>
+        <TouchableOpacity onPress={() => handleGlobalNav()} style={styles.icons}
+                          accessibilityLabel={"Global Leaderboard"} accessibilityRole={"button"} accessibilityHint={"view all users' level completion times"}>
             <Image source={require("../assets/nav/global.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handleSearchNav()} style={styles.icons}>
+        <TouchableOpacity onPress={() => handleSearchNav()} style={styles.icons}
+                          accessibilityLabel={"Search"} accessibilityRole={"button"} accessibilityHint={"Go to search screen"}>
             <Image source={require("../assets/nav/search.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 

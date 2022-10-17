@@ -3,7 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function HomeButton({ text, onPress, txtColor }) {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress}
+                      accessibilityLabel={"game"} accessibilityRole={"button"} accessibilityHint={"choose game section"}>
       <View style={styles.button}>
         <Text style={styles.buttonText}>{text}</Text>
       </View>

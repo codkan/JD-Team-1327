@@ -3,7 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function MenuButton({ text, onPress, txtColor }) {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress}
+                      accessibilityLabel={"Back"} accessibilityRole={"button"} accessibilityHint={"Go Back"}>
       <View style={styles.button}>
         <Text style={styles.buttonText}>{text}</Text>
       </View>

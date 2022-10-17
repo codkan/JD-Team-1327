@@ -6,7 +6,8 @@ var MAX_WIDTH = Dimensions.get("screen").width;
 
 export default function MMButton({ text, onPress, txtColor, img }) {
   return (
-      <TouchableOpacity onPress={onPress}>
+      <TouchableOpacity onPress={onPress}
+                        accessibilityLabel={"multimedia"} accessibilityRole={"button"} accessibilityHint={"go to sources or media for this topic"}>
         <View style={styles.button}>
             <Image source={img} style={styles.icon}></Image>
         </View>

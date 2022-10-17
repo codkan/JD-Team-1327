@@ -12,7 +12,7 @@ export default class Refrigerator extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"fridge"}
         style={{
           position: "absolute",
           left: x,

@@ -9,7 +9,7 @@ export default class Wall extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <View
+      <View accessibilityLabel={"wall"} accessibilityRole={"none"} accessibilityHint={""}
         style={{
           position: "absolute",
           left: x,

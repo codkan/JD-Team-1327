@@ -12,7 +12,7 @@ export default class SofaChair extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"sofa chair"}
         style={{
           position: "absolute",
           left: x,

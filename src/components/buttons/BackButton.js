@@ -8,7 +8,8 @@ import { color } from "react-native-reanimated";
 
 export default function BackButton({ text, onPress}) {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button} accessible={true}
+                      accessibilityLabel={"Page"} accessibilityRole={"button"} accessibilityHint={"moves pages"}>
         <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );

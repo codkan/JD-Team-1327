@@ -12,7 +12,7 @@ export default class Stairs extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"stairs"}
         style={{
           position: "absolute",
           left: x,

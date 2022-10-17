@@ -12,7 +12,7 @@ export default class Corner extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"corner"}
         style={{
           position: "absolute",
           left: x,

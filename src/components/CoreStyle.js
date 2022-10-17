@@ -32,7 +32,7 @@ export const CoreStyle = StyleSheet.create({
     logo: {
       height: "30%",
       resizeMode: "contain",
-      marginBottom: 0,
+      marginTop: 10,
       alignItems: "center",
       alignSelf: "center",
     },

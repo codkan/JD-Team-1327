@@ -62,7 +62,8 @@ export default class QuizButton extends PureComponent{
 
     render(){
     return (
-        <TouchableOpacity onPress={this.changeButtonColor}>
+        <TouchableOpacity onPress={this.changeButtonColor}
+                          accessibilityLabel={"quiz"} accessibilityRole={"button"} accessibilityHint={"select answer"}>
           <View style={styles.button} backgroundColor={this.state.buttonColor}>
             <Text style={styles.buttonText}>{this.props.text}</Text>
           </View>

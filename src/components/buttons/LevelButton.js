@@ -3,7 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function LevelButton({ text, onPress, txtColor }) {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress}
+                      accessibilityLabel={"level"} accessibilityRole={"button"} accessibilityHint={"choose level"}>
       <View style={styles.button}>
         <Text style={styles.buttonText}>{text}</Text>
       </View>

@@ -29,7 +29,8 @@ export default class CollapsibleBox extends Component{
     render() {
     return (
         <View>
-            <TouchableOpacity onPress={this.toggleExpanded}>
+            <TouchableOpacity onPress={this.toggleExpanded}
+                accessibilityLabel={"Dropdown"} accessibilityRole={"text"} accessibilityHint={"Collapsible Box"}>
                 <View style={styles.mainbox}>
                     <View style={styles.headerbox}>
                         <Text style={this.props.headerstyle}>{this.props.header}</Text>

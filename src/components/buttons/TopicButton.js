@@ -3,7 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 export default function TopicButton({ text, onPress }) {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button}
+                      accessibilityLabel={"Topics"} accessibilityRole={"button"} accessibilityHint={"returns to topics"}>
         <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );

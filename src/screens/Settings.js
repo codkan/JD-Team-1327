@@ -44,7 +44,7 @@ export default function About({ navigation }) {
         global.volume = global.volume - 0.1;
     } else {
         global.volume = 0.0;
-        global.isMuted = true;
+        global.muted = true;
     }
   }
 

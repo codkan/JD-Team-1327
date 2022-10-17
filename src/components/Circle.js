@@ -8,7 +8,7 @@ export default class Circle extends Component {
     const y = this.props.body.position.y - radius / 2;
 
     return (
-      <View
+      <View accessibilityLabel={"circle"} accessibilityRole={"none"} accessibilityHint={""}
         style={{
           position: "absolute",
           left: x,

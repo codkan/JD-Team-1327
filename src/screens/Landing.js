@@ -59,13 +59,22 @@ export default function Landing({ navigation }) {
       <ImageBackground source={global.bg} style={CoreStyle.image}>
 
       <View style = {CoreStyle.topnavbuttons}>
-        <TouchableOpacity onPress={() => handleLogin()}>
+
+        <TouchableOpacity onPress={() => handleSettingsNav()}
+                          accessibilityLabel={"Settings"} accessibilityRole={"button"} accessibilityHint={"view settings"}>
+            <Image source={setting} style={CoreStyle.btn}></Image>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => handleLogin()}
+                          accessibilityLabel={"Login"} accessibilityRole={"button"} accessibilityHint={"Sign in to profile"}>
             <Image source={login} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleDisclaimNav}>
+        <TouchableOpacity onPress={handleDisclaimNav}
+                          accessibilityLabel={"Info"} accessibilityRole={"button"} accessibilityHint={"View information and disclaimer about the application"}>
             <Image source={disclaim} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
+
       </View>
 
       <Image source={global.logo} style={CoreStyle.logo}></Image>

@@ -12,7 +12,7 @@ export default class Counter4 extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"counter 4"}
         style={{
           position: "absolute",
           left: x,

@@ -4,7 +4,8 @@ import { color } from "react-native-reanimated";
 
 export default function MainButton({ text, onPress}) {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.button}>
+    <TouchableOpacity onPress={onPress} style={styles.button}
+                      accessibilityLabel={"main"} accessibilityRole={"button"} accessibilityHint={"tap me"}>
         <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );

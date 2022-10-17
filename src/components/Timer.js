@@ -79,7 +79,8 @@ export default class Timer extends Component {
 
   render() {
     return (
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: "row" }}
+            accessibilityLabel={"Game"} accessibilityRole={"timer"} accessibilityHint={"time to level completion"}>
         <Text style={{ color: "white", fontSize: 20}}>
             {this.state.min}:{this.state.sec}:{this.state.msec}
         </Text>

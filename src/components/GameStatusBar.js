@@ -85,7 +85,8 @@ export default class GameStatusBar extends Component {
             backgroundColor: "#111111",
           }}
         >
-          <TouchableOpacity style={{ marginLeft: "10%", marginRight: "25%", width: "10%" , backgroundColor: "gray", height:50}} onPress={this.handlePauseButton}>
+          <TouchableOpacity style={{ marginLeft: "10%", marginRight: "25%", width: "10%" , backgroundColor: "gray", height:50}} onPress={this.handlePauseButton}
+                            accessibilityLabel={"Pause"} accessibilityRole={"button"} accessibilityHint={"open pause menu"}>
             <Text style={{color:"white", fontSize: 35, alignSelf: "center", justifyContent: "center"}}> II </Text>
           </TouchableOpacity>
           <Text style={{ color: "white", justifyContent: "center", fontSize: 20}}>

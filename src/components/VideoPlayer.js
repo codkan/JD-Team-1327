@@ -5,7 +5,7 @@ import YoutubePlayer from 'react-native-youtube-iframe';
 export default class VideoPlayer extends Component {
   render() {
    return (
-          <View>
+          <View accessibilityLabel={"Video"} accessibilityRole={"image"} accessibilityHint={"Youtube Player"}>
             <YoutubePlayer
               videoId={this.props.videoID}
               height={300}

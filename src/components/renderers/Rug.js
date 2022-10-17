@@ -12,7 +12,7 @@ export default class Rug extends Component {
     const y = this.props.body.position.y - radius/ 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"rug"}
         style={{
           position: "absolute",
           left: x,

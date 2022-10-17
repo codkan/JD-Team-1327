@@ -13,7 +13,7 @@ export default class SideTable extends Component {
     const y = this.props.body.position.y - height / 2;
 
     return (
-      <Image
+      <Image accessibilityLabel={"side table"}
         style={{
           position: "absolute",
           left: x,

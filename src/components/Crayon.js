@@ -8,7 +8,8 @@ export default function Crayon({ text, onPress, color1, color2 }){
   color_1 = color1;
   color_2 = color2;
   return (
-      <TouchableOpacity onPress={onPress} style={styles.navBar}>
+      <TouchableOpacity onPress={onPress} style={styles.navBar}
+                        accessibilityLabel={"crayon"} accessibilityRole={"button"} accessibilityHint={"choose module or topic"}>
         <View style={styles.rect1} backgroundColor={color1}>
             <View style={styles.rect2} backgroundColor={color2}>
                 <View style={styles.line1}/>
