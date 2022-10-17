@@ -21,13 +21,13 @@ export default class TMenu extends Component {
     }
 
   render () {
-    r = 0;
-    g = 16;
-    b = 255;
+    r = 255;
+    g = 242;
+    b = 0;
     for (let i = 0; i < 3; i++) {
-        var _r = (255/3)*i;
-        var _g = 16+((239/3)*i);
-        var _b = b;
+        var _r = 255;
+        var _g = 242+(i*2);
+        var _b = (127/3)*i;
         colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
         colors.push("rgb("+_r+","+_g+","+_b+")");
     }
