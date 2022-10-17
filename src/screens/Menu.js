@@ -4,48 +4,12 @@ import Background from "../assets/app/bg.png";
 import MainButton from "../components/buttons/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle.js";
+import Crayons from "../components/Crayons";
 
-//Info Crayons
-import fallInfo from "../assets/infoCrayons/falls.png";
-import burnInfo from "../assets/infoCrayons/burns.png";
-import poisonInfo from "../assets/infoCrayons/poisonings.png";
-import drownInfo from "../assets/infoCrayons/drownings.png";
-import carInfo from "../assets/infoCrayons/carSafety.png";
-import parentInfo from "../assets/infoCrayons/parentHealth.png";
-
-//Media Crayons
-import fallMedia from "../assets/mediaCrayons/falls.png";
-import burnMedia from "../assets/mediaCrayons/burns.png";
-import poisonMedia from "../assets/mediaCrayons/poisonings.png";
-import drownMedia from "../assets/mediaCrayons/drownings.png";
-import carMedia from "../assets/mediaCrayons/carSafety.png";
-import parentMedia from "../assets/mediaCrayons/parentHealth.png";
-
-//Review Crayons
-import fallReview from "../assets/reviewCrayons/falls.png";
-import burnReview from "../assets/reviewCrayons/burns.png";
-import poisonReview from "../assets/reviewCrayons/poisonings.png";
-import drownReview from "../assets/reviewCrayons/drownings.png";
-import carReview from "../assets/reviewCrayons/carSafety.png";
-import parentReview from "../assets/reviewCrayons/parentHealth.png";
-
-//Source Crayons
-import fallSource from "../assets/sourcesCrayons/falls.png";
-import burnSource from "../assets/sourcesCrayons/burns.png";
-import poisonSource from "../assets/sourcesCrayons/poisonings.png";
-import drownSource from "../assets/sourcesCrayons/drownings.png";
-import carSource from "../assets/sourcesCrayons/carSafety.png";
-import parentSource from "../assets/sourcesCrayons/parentHealth.png";
-
-//Board Crayons
-import fallBoard from "../assets/boardCrayons/falls.png";
-import burnBoard from "../assets/boardCrayons/burns.png";
-import poisonBoard from "../assets/boardCrayons/poisonings.png";
-import drownBoard from "../assets/boardCrayons/drownings.png";
-import carBoard from "../assets/boardCrayons/carSafety.png";
-import parentBoard from "../assets/boardCrayons/parentHealth.png";
-
-var crayons;
+var colors = [];
+var r = 0;
+var g = 0;
+var b = 0;
 
 export default class Menu extends Component {
     constructor(props) {
@@ -57,45 +21,81 @@ export default class Menu extends Component {
     }
 
   render () {
+    colors = [];
     switch(this.props.navigation.getParam('module')) {
         case "Information":
-            crayons = [fallInfo, burnInfo, poisonInfo, drownInfo, carInfo, parentInfo];
+            r = 255;
+            g = 0;
+            b = 10;
+            for (let i = 0; i < 6; i++) {
+                var _r = r;
+                var _g = (255/6)*i;
+                var _b = (245/6)*i;
+                colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
+                colors.push("rgb("+_r+","+_g+","+_b+")");
+            }
             break;
         case "Media":
-            crayons = [fallMedia, burnMedia, poisonMedia, drownMedia, carMedia, parentMedia];
+            r = 255;
+            g = 104;
+            b = 0;
+            for (let i = 0; i < 6; i++) {
+                var _r = r;
+                var _g = 104+((151/6)*i);
+                var _b = (255/6)*i;
+                colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
+                colors.push("rgb("+_r+","+_g+","+_b+")");
+            }
             break;
         case "Quiz":
-            crayons = [fallReview, burnReview, poisonReview, drownReview, carReview, parentReview];
+            r = 0;
+            g = 255;
+            b = 72;
+            for (let i = 0; i < 6; i++) {
+                var _r = (255/6)*i;
+                var _g = g;
+                var _b = (183/6)*i;
+                colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
+                colors.push("rgb("+_r+","+_g+","+_b+")");
+            }
             break;
         case "Resources":
-            crayons = [fallSource, burnSource, poisonSource, drownSource, carSource, parentSource];
+            r = 0;
+            g = 176;
+            b = 255;
+            for (let i = 0; i < 6; i++) {
+                var _r = (108/6)*i;
+                var _g = (255/6)*i;
+                var _b = b;
+                colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
+                colors.push("rgb("+_r+","+_g+","+_b+")");
+            }
             break;
         default:
-            crayons = [fallBoard, burnBoard, poisonBoard, drownBoard, carBoard, parentBoard];
+            r = 147;
+            g = 0;
+            b = 255;
+            for (let i = 0; i < 6; i++) {
+                var _r = 147+((108/6)*i);
+                var _g = (255/6)*i;
+                var _b = b;
+                colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
+                colors.push("rgb("+_r+","+_g+","+_b+")");
+            }
             break
     };
       return (
         <ImageBackground source={global.bg} style={CoreStyle.image}>
 
         <View style={CoreStyle.buttonContainer}>
-            <TouchableOpacity onPress={() => this.goTopic("Falls")}>
-                <Image source={crayons[0]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.goTopic("Burns")}>
-                <Image source={crayons[1]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.goTopic("Poisonings")}>
-                <Image source={crayons[2]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.goTopic("Drownings")}>
-                <Image source={crayons[3]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.goTopic("Car Safety")}>
-                <Image source={crayons[4]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.goTopic("Parental Health")}>
-                <Image source={crayons[5]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
+
+            <Crayons fontSize={4} text={"Falls"} onPress={() => this.goTopic("Falls")} color1={colors[10]} color2={colors[11]}/>
+            <Crayons fontSize={4} text={"Burns"} onPress={() => this.goTopic("Burns")} color1={colors[8]} color2={colors[9]}/>
+            <Crayons fontSize={4} text={"Poisons"} onPress={() => this.goTopic("Poisonings")} color1={colors[6]} color2={colors[7]}/>
+            <Crayons fontSize={4} text={"Drownings"} onPress={() => this.goTopic("Drownings")} color1={colors[4]} color2={colors[5]}/>
+            <Crayons fontSize={4} text={"Car Safety"} onPress={() => this.goTopic("Car Safety")} color1={colors[2]} color2={colors[3]}/>
+            <Crayons fontSize={4} text={"Parent Health"} onPress={() => this.goTopic("Parent Health")} color1={colors[0]} color2={colors[1]}/>
+
         </View>
 
         <Navbar navigation={this.props.navigation}/>

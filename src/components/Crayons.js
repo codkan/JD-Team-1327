@@ -3,7 +3,7 @@ import { Image, StyleSheet, TouchableOpacity, View, Text, Triangle } from "react
 
 var color_1;
 var color_2;
-var font_Size = 6;
+var font_Size = 5;
 
 export default function Crayon({ fontSize, text, onPress, color1, color2 }){
   color_1 = color1;
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
       flexDirection: "row",
       backgroundColor: "transparent",
       elevation: 2,
+      marginVertical: 30,
     },
     rect1: {
         display: "flex",

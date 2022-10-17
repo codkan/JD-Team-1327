@@ -4,16 +4,12 @@ import Background from "../assets/app/bg.png";
 import MainButton from "../components/buttons/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle.js";
+import Crayons from "../components/Crayons";
 
-//Board Crayons
-import fallBoard from "../assets/boardCrayons/falls.png";
-import burnBoard from "../assets/boardCrayons/burns.png";
-import poisonBoard from "../assets/boardCrayons/poisonings.png";
-import drownBoard from "../assets/boardCrayons/drownings.png";
-import carBoard from "../assets/boardCrayons/carSafety.png";
-import parentBoard from "../assets/boardCrayons/parentHealth.png";
-
-var crayons = [fallBoard, burnBoard, poisonBoard, drownBoard, carBoard, parentBoard];
+var colors = [];
+var r = 0;
+var g = 0;
+var b = 0;
 
 export default class TMenu extends Component {
     constructor(props) {
@@ -25,19 +21,25 @@ export default class TMenu extends Component {
     }
 
   render () {
+    r = 0;
+    g = 16;
+    b = 255;
+    for (let i = 0; i < 3; i++) {
+        var _r = (255/3)*i;
+        var _g = 16+((239/3)*i);
+        var _b = b;
+        colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
+        colors.push("rgb("+_r+","+_g+","+_b+")");
+    }
       return (
         <ImageBackground source={global.bg} style={CoreStyle.image}>
 
-        <View style={CoreStyle.buttonContainer}>
-            <TouchableOpacity onPress={() => this.goBoard("Level 1")}>
-                <Image source={crayons[0]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.goBoard("Level 2")}>
-                <Image source={crayons[1]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => this.goBoard("Level 3")}>
-                <Image source={crayons[2]} style={CoreStyle.crayon}></Image>
-            </TouchableOpacity>
+        <View style={styles.buttonContainer}>
+
+            <Crayons fontSize={4} text={"Level 1"} onPress={() => this.goBoard("Level 1")} color1={colors[4]} color2={colors[5]}/>
+            <Crayons fontSize={4} text={"Level 2"} onPress={() => this.goBoard("Level 2")} color1={colors[2]} color2={colors[3]}/>
+            <Crayons fontSize={4} text={"Level 3"} onPress={() => this.goBoard("Level 3")} color1={colors[0]} color2={colors[1]}/>
+
         </View>
 
         <Navbar navigation={this.props.navigation}/>
@@ -47,4 +49,11 @@ export default class TMenu extends Component {
   }
 }
 
-
+const styles = StyleSheet.create({
+    buttonContainer: {
+        flex: 1,
+        alignItems: "center",
+        alignSelf: "center",
+        justifyContent: "center",
+    },
+});

@@ -132,11 +132,11 @@ export default function Landing({ navigation }) {
 
       <View style={CoreStyle.buttonContainer}>
 
-        <Crayon text={"Info"} onPress={() => goMenu("Information")} color1={"darkred"} color2={"red"}/>
-        <Crayon text={"Media"} onPress={() => goMenu("Media")} color1={"darkorange"} color2={"orange"}/>
-        <Crayon text={"Quiz"} onPress={() => goMenu("Quiz")} color1={"darkgreen"} color2={"green"}/>
-        <Crayon text={"Sources"} onPress={() => goMenu("Resources")} color1={"darkblue"} color2={"blue"}/>
-        <Crayon text={"Game"} onPress={() => handleGameNav()} color1={"darkviolet"} color2={"purple"}/>
+        <Crayon fontSize={6} text={"Info"} onPress={() => goMenu("Information")} color1={"darkred"} color2={"red"}/>
+        <Crayon fontSize={6} text={"Media"} onPress={() => goMenu("Media")} color1={"darkorange"} color2={"orange"}/>
+        <Crayon fontSize={6} text={"Quiz"} onPress={() => goMenu("Quiz")} color1={"darkgreen"} color2={"green"}/>
+        <Crayon fontSize={6} text={"Sources"} onPress={() => goMenu("Resources")} color1={"darkblue"} color2={"blue"}/>
+        <Crayon fontSize={6} text={"Game"} onPress={() => handleGameNav()} color1={"darkviolet"} color2={"purple"}/>
 
       </View>
 
