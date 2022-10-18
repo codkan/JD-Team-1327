@@ -44,7 +44,7 @@ export async function handleLogin() {
     };
 
     axios.request(options).then(function (response) {
-      const data = response.data.sort((a,b)=> b.last_login < a.last_login);
+      const data = response.data.sort((a,b)=> b.last_login > a.last_login);
       global.user_id = response.data[0].user_id;
       global.user = response.data[0].nickname;
       global.times = response.data[0].user_metadata;
