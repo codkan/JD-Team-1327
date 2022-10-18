@@ -8,8 +8,6 @@ import MainButton from "../components/buttons/MainButton";
 import Background from "../assets/app/bg.png";
 import Highlighter from "@sanar/react-native-highlight-text";
 
-var Index = global.saved;
-
 export default function Saved({ navigation }) {
     //NAV CALLBACK
     const goHome = () => {
@@ -21,8 +19,8 @@ export default function Saved({ navigation }) {
     const [masterDataSource, setMasterDataSource] = useState([]);
 
     useEffect(() => {
-      setFilteredDataSource(Index);
-      setMasterDataSource(Index);
+      setFilteredDataSource(global.saved);
+      setMasterDataSource(global.saved);
     }, []);
 
     const searchFilterFunction = (text) => {
@@ -91,13 +89,13 @@ export default function Saved({ navigation }) {
     const removeBookmark = (item) => {
         global.savedTopics.splice(global.saved.indexOf(item), 1);
         global.saved.splice(global.saved.indexOf(item), 1);
-        setSearch(global.saved);
+        setMasterDataSource(global.saved);
     }
 
     const clearSaved = () => {
         global.saved = [];
         global.savedTopics = [];
-        setSearch(global.saved);
+        setMasterDataSource(global.saved);
     }
 
   return (
