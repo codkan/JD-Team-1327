@@ -166,7 +166,7 @@ export default class LevelThree extends Component {
     }
     if (
       e.type === "at-objective" &&
-      this.state.inventoryCap == this.state.inventorySize &&
+      this.state.inventorySize >= this.state.inventoryCap &&
       this.state.levelComplete != true
     ) {
       this.handleLevelComplete();

@@ -5,6 +5,7 @@ import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import TopicButton from "../components/buttons/TopicButton";
 import MMButton from "../components/buttons/MMButton";
+import MainButton from "../components/buttons/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 import VideoPlayer from "../components/VideoPlayer";
@@ -138,16 +139,21 @@ export default class Information extends Component {
     global.savedTopics.push(this.props.navigation.getParam("topic"));
   }
 
-  interactAlert = (text) => {
-    Alert.alert(
-        'Save or Read Text',
-        "Would you like to add this section to your bookmarks or read it aloud?",
-        [
-            {text: 'CLOSE', style: 'destructive'},
-            {text: 'READ', style: 'cancel', onPress: () => this.speak(text)},
-            {text: 'SAVE', style: 'default', onPress: () => this.saveSection(text)},
-        ],
-    );
+  interactAlert = async (text) => {
+    let reading = await Speech.isSpeakingAsync();
+    if (!reading) {
+        Alert.alert(
+            'Save or Read Text',
+            "Would you like to add this section to your bookmarks or read it aloud?",
+            [
+                {text: 'CLOSE', style: 'destructive'},
+                {text: 'READ', style: 'cancel', onPress: () => this.speak(text)},
+                {text: 'SAVE', style: 'default', onPress: () => this.saveSection(text)},
+            ],
+        );
+    } else {
+        Speech.stop();
+    }
   }
 
     async speakAll() {
@@ -339,6 +345,10 @@ export default class Information extends Component {
 <MMButton img = {src}
     onPress={() => this.goResources(this.props.navigation.getParam('topic'))}
 ></MMButton>
+<TopicButton
+    text={"Review Quiz"}
+    onPress={() => this.props.navigation.navigate("Quiz", {topic: this.props.navigation.getParam('topic')})}>
+</TopicButton>
 <MMButton img = {mm}
     onPress={() => this.goMedia(this.props.navigation.getParam('topic'))}
 ></MMButton>
