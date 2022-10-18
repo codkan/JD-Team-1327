@@ -17,10 +17,6 @@ import { CoreStyle } from "../components/CoreStyle";
 import Crayon from "../components/Crayon";
 import {handleLogin} from "../components/Login.js";
 
-global.user_id = null;
-global.user;
-global.times;
-
 export default function Landing({ navigation }) {
 
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);

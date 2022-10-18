@@ -132,6 +132,24 @@ export default class Information extends Component {
     this.props.navigation.navigate("Media", {topic: _topic});
   };
 
+  saveSection = (text) => {
+    var save = txt[text];
+    global.saved.push(save);
+    global.savedTopics.push(this.props.navigation.getParam("topic"));
+  }
+
+  interactAlert = (text) => {
+    Alert.alert(
+        'Save or Read Text',
+        "Would you like to add this section to your bookmarks or read it aloud?",
+        [
+            {text: 'CLOSE', style: 'destructive'},
+            {text: 'READ', style: 'cancel', onPress: () => this.speak(text)},
+            {text: 'SAVE', style: 'default', onPress: () => this.saveSection(text)},
+        ],
+    );
+  }
+
     async speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
@@ -240,7 +258,7 @@ export default class Information extends Component {
           <Text style={styles.modalTitle}>How to Use Text-to-Speech</Text>
           <Text style={styles.modalText}>Press the first image to read the entire page aloud</Text>
           <Image style={styles.alertimg} source={img[0]}/>
-          <Text style={styles.modalText}>Press any subsection image to read just that section aloud</Text>
+          <Text style={styles.modalText}>Press any subsection image to read just that section aloud or add it to your bookmarks</Text>
           <Image style={styles.alertimg} source={img[6]}/>
           <Text style={styles.modalText}>Press any image to stop reading aloud at any time</Text>
           <Pressable
@@ -264,21 +282,21 @@ export default class Information extends Component {
 
 <CollapsibleBox header={txt[1].title}
     headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => this.speak(1)}>
+    <TouchableOpacity onPress={() => this.interactAlert(1)}>
         <Image style={CoreStyle.img} source={img[1]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[1].body}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header={txt[2].title} headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => this.speak(2)}>
+    <TouchableOpacity onPress={() => this.interactAlert(2)}>
         <Image style={CoreStyle.img} source={img[2]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[2].body}</Text>
 </CollapsibleBox> 
 
 <CollapsibleBox header={txt[3].title} headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => this.speak(3)}>
+    <TouchableOpacity onPress={() => this.interactAlert(3)}>
         <Image style={CoreStyle.img} source={img[3]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[3].body}</Text>
@@ -286,32 +304,32 @@ export default class Information extends Component {
 
 
 <CollapsibleBox header={txt[4].title} headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => this.speak(4)}>
+    <TouchableOpacity onPress={() => this.interactAlert(4)}>
         <Image style={CoreStyle.img} source={img[4]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[4].body}</Text>
 </CollapsibleBox>
 
 <CollapsibleBox header={txt[5].title} headerstyle={CoreStyle.bullet}>
-    <TouchableOpacity onPress={() => this.speak(5)}>
+    <TouchableOpacity onPress={() => this.interactAlert(5)}>
         <Image style={CoreStyle.img} source={img[5]}/>
     </TouchableOpacity>
     <Text allowFontScaling={true} style={CoreStyle.subbullet}>{txt[5].body}</Text>
 </CollapsibleBox>
 
-<TouchableOpacity onPress={() => this.speak(6)}>
+<TouchableOpacity onPress={() => this.interactAlert(6)}>
     <Image style={CoreStyle.img} source={img[6]}/>
 </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[6].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[6].body}</Text>
 
-<TouchableOpacity onPress={() => this.speak(7)}>
+<TouchableOpacity onPress={() => this.interactAlert(7)}>
     <Image style={CoreStyle.img} source={img[7]}/>
 </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[7].title}</Text>
 <Text allowFontScaling={true} style={CoreStyle.content}>{txt[7].body}</Text>
 
-    <TouchableOpacity onPress={() => this.speak(8)}>
+    <TouchableOpacity onPress={() => this.interactAlert(8)}>
         <Image style={CoreStyle.img} source={img[8]}/>
     </TouchableOpacity>
 <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[8].title}</Text>

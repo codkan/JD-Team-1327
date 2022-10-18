@@ -10,6 +10,9 @@ export default function Navbar({ navigation }){
   const handleHomeNav = () => {
     navigation.navigate("Landing");
   }
+  const handleSavedNav = () => {
+    navigation.navigate("Saved");
+  };
   const handleSearchNav = () => {
     navigation.navigate("Search");
   };
@@ -32,9 +35,9 @@ export default function Navbar({ navigation }){
   return (
       <View style={styles.navBar}>
 
-        <TouchableOpacity onPress={() => goMenu("Resources")} style={styles.icons}
-                          accessibilityLabel={"Sources"} accessibilityRole={"button"} accessibilityHint={"view references"}>
-            <Image source={require("../assets/nav/links.png")} style={styles.icon}></Image>
+        <TouchableOpacity onPress={() => handleSavedNav()} style={styles.icons}
+                          accessibilityLabel={"Bookmarks"} accessibilityRole={"button"} accessibilityHint={"view saved sections"}>
+            <Image source={require("../assets/nav/bookmark.png")} style={styles.icon}></Image>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => goMenu("LocalBoard")} style={styles.icons}

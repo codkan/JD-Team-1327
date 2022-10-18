@@ -17,6 +17,13 @@ global.volume = 0.5;
 global.isMuted = false;
 global.showAlert = true;
 
+global.user_id = null;
+global.user;
+global.times;
+
+global.saved = [];
+global.savedTopics = [];
+
 export default class App extends Component {
 
   constructor(props) {

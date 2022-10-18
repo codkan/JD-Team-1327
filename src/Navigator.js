@@ -13,6 +13,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import Landing from "./screens/Landing.js";
 import Settings from "./screens/Settings.js";
 import Disclaim from "./screens/Disclaim.js";
+import Saved from "./screens/Saved.js";
 import Search from "./screens/Search.js";
 import Menu from "./screens/Menu.js";
 
@@ -53,6 +54,12 @@ import LevelThree from "./screens/Level3";
        navigationOptions: {
          headerShown: false,
        },
+     },
+     Saved: {
+         screen: Saved,
+         navigationOptions: {
+           headerShown: false,
+         },
      },
      Search: {
          screen: Search,
