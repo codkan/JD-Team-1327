@@ -1,65 +1,44 @@
 
-import React, { useState, useEffect } from "react";
-import { ImageBackground, StyleSheet, Text, View, SafeAreaView, FlatList, Alert } from "react-native";
-import { SearchBar } from 'react-native-elements';
+import React, { useState, useEffect, Component } from "react";
+import { ImageBackground, StyleSheet, Text, View, SafeAreaView, FlatList, Alert, TouchableOpacity } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CoreStyle } from "../components/CoreStyle";
 import Navbar from "../components/NavBar";
 import MainButton from "../components/buttons/MainButton";
 import Background from "../assets/app/bg.png";
-import Highlighter from "@sanar/react-native-highlight-text";
 
-export default function Saved({ navigation }) {
-    //NAV CALLBACK
-    const goHome = () => {
-        navigation.pop();
+export default class Saved extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            saved: [],
+            savedTopics: []
+        };
+        this.getSaves();
     };
 
-    const [search, setSearch] = useState('');
-    const [filteredDataSource, setFilteredDataSource] = useState([]);
-    const [masterDataSource, setMasterDataSource] = useState([]);
 
-    useEffect(() => {
-      setFilteredDataSource(global.saved);
-      setMasterDataSource(global.saved);
-    }, []);
-
-    const searchFilterFunction = (text) => {
-      // Check if searched text is not blank
-      if (text) {
-        // Inserted text is not blank
-        // Filter the masterDataSource
-        // Update FilteredDataSource
-        const newData = masterDataSource.filter(function(item){
-          const itemData = item.body
-            ? item.body.toUpperCase()
-            : ''.toUpperCase();
-          const textData = text.toUpperCase();
-          return itemData.indexOf(textData) > -1;
+    async getSaves() {
+        var a = await AsyncStorage.getItem("saved");
+        var b = JSON.parse(a);
+        var c = await AsyncStorage.getItem("savedTopics");
+        var d = JSON.parse(c);
+        this.setState({
+            saved: b,
+            savedTopics: d
         });
-        setFilteredDataSource(newData);
-        setSearch(text);
-      } else {
-        // Inserted text is blank
-        // Update FilteredDataSource with masterDataSource
-        setFilteredDataSource(masterDataSource);
-        setSearch(text);
-      }
-    };
+    }
 
-    const ItemView = ({ item }) => {
+    ItemView = ( item ) => {
         return (
           // Flat List Item
-          <Highlighter
-            style={styles.itemStyle}
-            highlightStyle={{backgroundColor: "yellow"}}
-            onPress={() => getItem(item)}
-            searchWords={[search]}
-            textToHighlight={global.savedTopics[global.saved.indexOf(item)] + "\n" + item.title + '\n' + item.body}
-            />
+          <TouchableOpacity onPress={() => this.getItem(item)}>
+            <Text style={styles.itemStyle}>{this.state.savedTopics[item.index] + "\n" + item.item.title + "\n" + item.item.body}</Text>
+          </TouchableOpacity>
         );
     };
 
-    const ItemSeparatorView = () => {
+    ItemSeparatorView = () => {
         return (
           // Flat List Item Separator
           <View
@@ -72,67 +51,76 @@ export default function Saved({ navigation }) {
         );
     };
 
-    const getItem = (item) => {
+    getItem = (item) => {
         // Function for click on an item
         Alert.alert(
-            'Topic : ' + global.savedTopics[global.saved.indexOf(item)],
-            'Section : ' + item.title + '\nText :\n' + item.body,
+            'Topic : ' + this.state.savedTopics[item.index],
+            'Section : ' + item.item.title + '\nText :\n' + item.item.body,
             [
-                {text: 'REMOVE', style: 'destructive', onPress: () => removeBookmark(item)},
+                {text: 'REMOVE', style: 'destructive', onPress: () => this.removeBookmark(item)},
                 {text: 'CLOSE', style: 'default'},
-                {text: 'Visit Page', onPress: () => navigation.navigate("Information", {topic: global.savedTopics[global.saved.indexOf(item)]}), style: 'cancel'}
+                {text: 'Visit Page', onPress: () => this.props.navigation.navigate("Information", {topic: this.state.savedTopics[item.index]}), style: 'cancel'}
             ],
             {cancelable: true}
         );
     };
 
-    const removeBookmark = (item) => {
-        global.savedTopics.splice(global.saved.indexOf(item), 1);
-        global.saved.splice(global.saved.indexOf(item), 1);
-        setMasterDataSource(global.saved);
+    removeBookmark = async (item) => {
+        var _savedTopics = this.state.savedTopics;
+        var _saved = this.state.saved;
+        console.log(_saved.indexOf(item));
+        _savedTopics.splice(_saved.indexOf(item), 1);
+        _saved.splice(_saved.indexOf(item), 1);
+        await AsyncStorage.setItem("saved", JSON.stringify(_saved));
+        await AsyncStorage.setItem("savedTopics", JSON.stringify(_savedTopics));
+        this.setState({
+            saved: _saved,
+            savedTopics: _savedTopics
+        });
     }
 
-    const clearSaved = () => {
-        global.saved = [];
-        global.savedTopics = [];
-        setMasterDataSource(global.saved);
+    clearSaved = async () => {
+        this.setState({
+            saved: [],
+            savedTopics: []
+        });
+        var clear = [];
+        await AsyncStorage.setItem("saved", JSON.stringify(clear));
+        await AsyncStorage.setItem("savedTopics", JSON.stringify(clear));
     }
 
-  return (
-    <ImageBackground source={global.bg} style={CoreStyle.image}>
+  render (){
 
-    <SafeAreaView style={{ flex: 1, marginBottom: -50}}>
-        <SearchBar
-          round
-          searchIcon={{ size: 24 }}
-          onChangeText={(text) => searchFilterFunction(text)}
-          onClear={(text) => searchFilterFunction('')}
-          placeholder="Search Here..."
-          value={search}
-        />
-      <View style={styles.container}>
-        <FlatList
-          data={filteredDataSource}
-          keyExtractor={(item, index) => index.toString()}
-          ItemSeparatorComponent={ItemSeparatorView}
-          renderItem={ItemView}
-        />
-      </View>
-    </SafeAreaView>
+      return (
+        <ImageBackground source={global.bg} style={CoreStyle.image}>
 
-    <View style={styles.btncontainer}>
-    <MainButton
-      text="Clear Bookmarks"
-      txtColor={"black"}
-      onPress={() => clearSaved()}
-    ></MainButton>
-    </View>
+        <Text allowFontScaling={true} style={styles.title}>Saved Bookmarks:</Text>
 
-    <View style = {CoreStyle.pushdown}>
-    <Navbar navigation={navigation}/>
-    </View>
-    </ImageBackground>
-  );
+        <SafeAreaView style={{ flex: 1, marginBottom: -50}}>
+          <View style={styles.container}>
+            <FlatList
+              data={this.state.saved}
+              renderItem={this.ItemView}
+              keyExtractor={(item, index) => index.toString()}
+              ItemSeparatorComponent={this.ItemSeparatorView}
+            />
+          </View>
+        </SafeAreaView>
+
+        <View style={styles.btncontainer}>
+        <MainButton
+          text="Clear Bookmarks"
+          txtColor={"black"}
+          onPress={() => this.clearSaved()}
+        ></MainButton>
+        </View>
+
+        <View style = {CoreStyle.pushdown}>
+        <Navbar navigation={this.props.navigation}/>
+        </View>
+        </ImageBackground>
+      );
+  };
 };
 
 const styles = StyleSheet.create({
@@ -154,7 +142,7 @@ const styles = StyleSheet.create({
       width: '100%',
       alignItems: "center",
       alignSelf: "center",
-      marginBottom: 120,
+      marginBottom: 50,
     },
     itemStyle: {
       backgroundColor: global.color2,
@@ -166,5 +154,14 @@ const styles = StyleSheet.create({
       marginLeft: 10,
       marginTop: 10,
       borderRadius: 20,
+    },
+    title: {
+        color: global.text,
+        fontSize: 40,
+        marginTop: 40,
+        marginBottom: 15,
+        fontWeight: "bold",
+        textAlign: "center",
+        textDecorationLine: "underline",
     },
 });

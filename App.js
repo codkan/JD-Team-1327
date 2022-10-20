@@ -21,9 +21,6 @@ global.user_id = null;
 global.user;
 global.times;
 
-global.saved = [];
-global.savedTopics = [];
-
 export default class App extends Component {
 
   constructor(props) {

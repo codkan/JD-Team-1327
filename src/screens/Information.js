@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity, Alert, Modal, Pressable } from "react-native";
 import { WebView } from "react-native-webview";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import TopicButton from "../components/buttons/TopicButton";
@@ -133,10 +134,16 @@ export default class Information extends Component {
     this.props.navigation.navigate("Media", {topic: _topic});
   };
 
-  saveSection = (text) => {
+  saveSection = async (text) => {
     var save = txt[text];
-    global.saved.push(save);
-    global.savedTopics.push(this.props.navigation.getParam("topic"));
+    var saved = JSON.parse(await AsyncStorage.getItem("saved"));
+    //console.log(saved);
+    saved.push(save);
+    //console.log(saved);
+    var savedTopics = JSON.parse(await AsyncStorage.getItem("savedTopics"));
+    savedTopics.push(this.props.navigation.getParam("topic"));
+    await AsyncStorage.setItem("saved", JSON.stringify(saved));
+    await AsyncStorage.setItem("savedTopics", JSON.stringify(savedTopics));
   }
 
   interactAlert = async (text) => {

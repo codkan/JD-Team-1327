@@ -26,13 +26,15 @@ export default class LocalBoard extends Component{
     var s = [];
     n = await AsyncStorage.getAllKeys();
     for (var i = 0; i < n.length; i++) {
-        if (topic == "Parental Health" || topic == "Car Safety") {
-            if (n[i].split(" ")[0] + " " + n[i].split(" ")[1] == topic) {
-                s.push([n[i].split(" ")[2], await AsyncStorage.getItem(n[i])]);
-            }
-        } else {
-            if (n[i].split(" ")[0] == topic) {
-                s.push([n[i].split(" ")[1], await AsyncStorage.getItem(n[i])]);
+        if (n[i] != "saved" && n[i] != "savedTopics") {
+            if (topic == "Parental Health" || topic == "Car Safety") {
+                if (n[i].split(" ")[0] + " " + n[i].split(" ")[1] == topic) {
+                    s.push([n[i].split(" ")[2], await AsyncStorage.getItem(n[i])]);
+                }
+            } else {
+                if (n[i].split(" ")[0] == topic) {
+                    s.push([n[i].split(" ")[1], await AsyncStorage.getItem(n[i])]);
+                }
             }
         }
     };

@@ -52,7 +52,8 @@
     "react-navigation-stack": "^2.10.3",
     "react-player": "^2.11.0",
     "react-youtube": "^7.14.0",
-    "scss-tokenizer": "^0.4.3"
+    "scss-tokenizer": "^0.4.3",
+    "sync-storage": "^0.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3"
