@@ -68,9 +68,8 @@ export default class Saved extends Component {
     removeBookmark = async (item) => {
         var _savedTopics = this.state.savedTopics;
         var _saved = this.state.saved;
-        console.log(_saved.indexOf(item));
-        _savedTopics.splice(_saved.indexOf(item), 1);
-        _saved.splice(_saved.indexOf(item), 1);
+        _savedTopics.splice(item.index, 1);
+        _saved.splice(item.index, 1);
         await AsyncStorage.setItem("saved", JSON.stringify(_saved));
         await AsyncStorage.setItem("savedTopics", JSON.stringify(_savedTopics));
         this.setState({
