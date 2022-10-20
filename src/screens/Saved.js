@@ -23,6 +23,10 @@ export default class Saved extends Component {
         var b = JSON.parse(a);
         var c = await AsyncStorage.getItem("savedTopics");
         var d = JSON.parse(c);
+        this.state = {
+            saved: b,
+            savedTopics: d
+        };
         this.setState({
             saved: b,
             savedTopics: d
@@ -72,6 +76,10 @@ export default class Saved extends Component {
         _saved.splice(item.index, 1);
         await AsyncStorage.setItem("saved", JSON.stringify(_saved));
         await AsyncStorage.setItem("savedTopics", JSON.stringify(_savedTopics));
+        this.state = {
+            saved: _saved,
+            savedTopics: _savedTopics
+        };
         this.setState({
             saved: _saved,
             savedTopics: _savedTopics
@@ -79,6 +87,10 @@ export default class Saved extends Component {
     }
 
     clearSaved = async () => {
+        this.state = {
+            saved: [],
+            savedTopics: []
+        };
         this.setState({
             saved: [],
             savedTopics: []
