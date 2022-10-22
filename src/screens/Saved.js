@@ -37,7 +37,7 @@ export default class Saved extends Component {
         return (
           // Flat List Item
           <TouchableOpacity onPress={() => this.getItem(item)}>
-            <Text style={styles.itemStyle}>{this.state.savedTopics[item.index] + "\n" + item.item.title + "\n" + item.item.body}</Text>
+            <Text style={styles.itemStyle}>{this.state.savedTopics[item.index] + "\n\n" + item.item.title + "\n\n" + item.item.body}</Text>
           </TouchableOpacity>
         );
     };
@@ -47,7 +47,7 @@ export default class Saved extends Component {
           // Flat List Item Separator
           <View
             style={{
-              height: 2,
+              height: 15,
               width: '100%',
               backgroundColor: 'rgba(52, 52, 52, 0.0)',
             }}
@@ -59,7 +59,7 @@ export default class Saved extends Component {
         // Function for click on an item
         Alert.alert(
             'Topic : ' + this.state.savedTopics[item.index],
-            'Section : ' + item.item.title + '\nText :\n' + item.item.body,
+            'Section : ' + item.item.title + '\n\nText :\n' + item.item.body,
             [
                 {text: 'REMOVE', style: 'destructive', onPress: () => this.removeBookmark(item)},
                 {text: 'CLOSE', style: 'default'},
@@ -150,14 +150,14 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     container: {
-      width: '100%',
+      width: '95%',
       alignItems: "center",
       alignSelf: "center",
       marginBottom: 50,
     },
     itemStyle: {
       backgroundColor: global.color2,
-      padding: 10,
+      padding: 20,
       fontSize: 16,
       textAlign: "justify",
       lineHeight: 20,

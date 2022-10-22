@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, FlatList } from "react-native";
+import { ImageBackground, Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, FlatList } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
@@ -8,7 +8,17 @@ import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 
+//images
+import fall_hdr from "../assets/fallsMM/falls.png";
+import burn_hdr from "../assets/BurnsMM/burn_hdr.png";
+import poison_hdr from "../assets/PoisoningsMM/poison_hdr.png";
+import drown_hdr from "../assets/drownMM/drown.png";
+import car_hdr from "../assets/carSafetyMM/carSafety.png";
+import par_hdr from "../assets/parentalHealthMM/ppd2.png";
+
+
 var topic;
+var hdr;
 var last;
 var next;
 
@@ -38,7 +48,7 @@ export default class LocalBoard extends Component{
             }
         }
     };
-    var sorted = s.sort((a,b)=> b[1] < a[1]);
+    var sorted = s.sort((a,b)=> b[1] > a[1]);
 
     this.setState({
         scores: sorted
@@ -98,31 +108,37 @@ export default class LocalBoard extends Component{
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
             topic = "Falls";
+            hdr = fall_hdr;
             last = "LocalBoard";
             next = "Burns";
             break;
         case "Burns":
             topic = "Burns";
+            hdr = burn_hdr;
             last = "Falls";
             next = "Poisonings";
             break;
         case "Poisonings":
             topic = "Poisonings";
+            hdr = poison_hdr;
             last = "Burns";
             next = "Drownings";
             break;
         case "Drownings":
             topic = "Drownings";
+            hdr = drown_hdr;
             last =  "Poisonings";
             next = "Car Safety";
             break;
         case "Car Safety":
             topic = "Car Safety";
+            hdr = car_hdr;
             last = "Drownings";
             next = "Parental Health";
             break;
         case "Parental Health":
-            topic = "Parental Health";
+            topic = "Parent Health";
+            hdr = par_hdr;
             last = "Car Safety";
             next = "Parental Health";
             break;
@@ -151,7 +167,7 @@ export default class LocalBoard extends Component{
         ></BackButton>
     </View>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> {topic+" Scores"}: </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title}> {topic + " Scores"}: </Text>
 
     <SafeAreaView>
         <FlatList style={CoreStyle.leaderboard}
@@ -162,10 +178,12 @@ export default class LocalBoard extends Component{
         />
     </SafeAreaView>
 
+    <Image style={CoreStyle.headimg} source={hdr}/>
+
     <View style={CoreStyle.center2}>
         <MainButton
               text={"Go to " + topic + " Quiz"}
-              onPress={() => this.props.navigation.navigate("Quiz", {topic: topic})}
+              onPress={() => this.props.navigation.navigate("Quiz", {topic: this.props.navigation.getParam('topic')})}
               txtColor={global.text}
         ></MainButton>
     </View>

@@ -60,14 +60,14 @@ export const CoreStyle = StyleSheet.create({
         alignItems: "center",
         alignSelf: "center",
         justifyContent: "space-between",
-        paddingVertical: 75,
+        paddingVertical: 50,
     },
     tmenuContainer: {
         flex: 1,
         alignItems: "center",
         alignSelf: "center",
         justifyContent: "space-between",
-        paddingVertical: 250,
+        paddingVertical: 25,
     },
     btn: {
       height: 35,
@@ -107,6 +107,25 @@ export const CoreStyle = StyleSheet.create({
         fontWeight: "bold",
         textAlign: "center",
         textDecorationLine: "underline",
+        marginHorizontal: 0,
+    },
+    title2: {
+        color: global.text,
+        fontSize: 30,
+        marginBottom: 15,
+        fontWeight: "bold",
+        textAlign: "center",
+        textDecorationLine: "underline",
+        marginHorizontal: 0,
+    },
+    title3: {
+        color: global.text,
+        fontSize: 40,
+        marginTop: 25,
+        fontWeight: "bold",
+        textAlign: "center",
+        textDecorationLine: "underline",
+        marginHorizontal: 0,
     },
 
     // Secondary headers for subsections
@@ -287,8 +306,8 @@ export const CoreStyle = StyleSheet.create({
 
     leaderboard: {
       marginTop: 0,
-      marginBottom: 10,
-      height: MAX_HEIGHT*0.55,
+      marginBottom: 0,
+      height: MAX_HEIGHT*0.4,
       marginHorizontal: 10,
     },
 

@@ -52,8 +52,8 @@ export default class CollapsibleBox extends Component{
   const styles = StyleSheet.create({
     mainbox: {
         display: "flex",
-        flexDirection: "row"
-        
+        flexDirection: "row",
+        marginBottom: 15,
     },
     headerbox: {
         flex: 6

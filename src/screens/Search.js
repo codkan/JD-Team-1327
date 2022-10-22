@@ -54,7 +54,7 @@ export default function Search({ navigation }) {
             highlightStyle={{backgroundColor: "yellow"}}
             onPress={() => getItem(item)}
             searchWords={[search]}
-            textToHighlight={item.topic + "\n" + item.title + '\n' + item.body}
+            textToHighlight={item.topic + "\n\n" + item.title + '\n\n' + item.body}
             />
         );
     };
@@ -64,7 +64,7 @@ export default function Search({ navigation }) {
           // Flat List Item Separator
           <View
             style={{
-              height: 2,
+              height: 15,
               width: '100%',
               backgroundColor: 'rgba(52, 52, 52, 0.0)',
             }}
@@ -76,7 +76,7 @@ export default function Search({ navigation }) {
         // Function for click on an item
         Alert.alert(
             'Topic : ' + item.topic,
-            'Section : ' + item.title + '\nText :\n' + item.body,
+            'Section : ' + item.title + '\n\nText :\n' + item.body,
             [
                 {text: 'BACK', style: 'destructive'},
                 {text: 'CONTINUE     ', style: 'default'},
@@ -120,20 +120,19 @@ const styles = StyleSheet.create({
     modalText: {
         height: 70,
         fontSize: 40,
-        marginTop: 10,
-        marginBottom: 0,
+        marginVertical: 10,
         fontWeight: "bold",
         textAlign: "center",
     },
     container: {
-      width: '100%',
+      width: '95%',
       alignItems: "center",
       alignSelf: "center",
       marginBottom: 120,
     },
     itemStyle: {
       backgroundColor: global.color2,
-      padding: 10,
+      padding: 20,
       fontSize: 16,
       textAlign: "justify",
       lineHeight: 20,

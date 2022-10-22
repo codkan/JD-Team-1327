@@ -5,11 +5,13 @@ import MainButton from "../components/buttons/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle.js";
 import Crayon from "../components/Crayon";
+import check from "../assets/badges/checkmarkBadge.png";
 
 var colors = [];
 var r = 0;
 var g = 0;
 var b = 0;
+var hdr = "";
 
 export default class Menu extends Component {
     constructor(props) {
@@ -28,6 +30,7 @@ export default class Menu extends Component {
     colors = [];
     switch(this.props.navigation.getParam('module')) {
         case "Information":
+            hdr = "Informative Content";
             r = 255;
             g = 0;
             b = 10;
@@ -40,6 +43,7 @@ export default class Menu extends Component {
             }
             break;
         case "Media":
+            hdr = "Multimedia Module";
             r = 255;
             g = 104;
             b = 0;
@@ -52,6 +56,7 @@ export default class Menu extends Component {
             }
             break;
         case "Quiz":
+            hdr = "Review Quizzes";
             r = 0;
             g = 255;
             b = 72;
@@ -64,6 +69,7 @@ export default class Menu extends Component {
             }
             break;
         case "Resources":
+            hdr = "Referenced Sources";
             r = 0;
             g = 176;
             b = 255;
@@ -76,6 +82,7 @@ export default class Menu extends Component {
             }
             break;
         case "LocalBoard":
+            hdr = "Local Quiz Scores";
             r = 147;
             g = 0;
             b = 255;
@@ -102,11 +109,13 @@ export default class Menu extends Component {
                 <ImageBackground source={global.bg} style={CoreStyle.image}>
 
                 <View style={CoreStyle.tmenuContainer}>
+                <Text style={CoreStyle.title}>Global Game Leaderboard</Text>
 
-                    <Crayon text={"Level 1"} onPress={() => this.goBoard("Level 1")} color1={colors[4]} color2={colors[5]}/>
-                    <Crayon text={"Level 2"} onPress={() => this.goBoard("Level 2")} color1={colors[2]} color2={colors[3]}/>
-                    <Crayon text={"Level 3"} onPress={() => this.goBoard("Level 3")} color1={colors[0]} color2={colors[1]}/>
+                    <Crayon text={"Living Room"} onPress={() => this.goBoard("Level 1")} color1={colors[4]} color2={colors[5]}/>
+                    <Crayon text={"Kitchen"} onPress={() => this.goBoard("Level 2")} color1={colors[2]} color2={colors[3]}/>
+                    <Crayon text={"Backyard"} onPress={() => this.goBoard("Level 3")} color1={colors[0]} color2={colors[1]}/>
 
+                <Image style={CoreStyle.headimg} source={check}/>
                 </View>
 
                 <Navbar navigation={this.props.navigation}/>
@@ -116,6 +125,8 @@ export default class Menu extends Component {
     };
       return (
         <ImageBackground source={global.bg} style={CoreStyle.image}>
+
+        <Text style={CoreStyle.title3}>{hdr}</Text>
 
         <View style={CoreStyle.menuContainer}>
 

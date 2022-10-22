@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import axios from "axios";
-import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, FlatList } from "react-native";
+import { ImageBackground, Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, FlatList } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
@@ -8,10 +8,15 @@ import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
+import clock from "../assets/badges/clockBadge.png";
+import coffee from "../assets/badges/coffeecupBadge.png";
+import heart from "../assets/badges/heartBadge.png";
 
 var last;
 var next;
 var data = [];
+var hdr;
+var lvl;
 
 export default class GlobalBoard extends Component{
     constructor(props) {
@@ -45,6 +50,8 @@ export default class GlobalBoard extends Component{
         case "Level 1":
             last = "TMenu";
             next = "Level 2";
+            hdr = clock;
+            lvl = "Living Room";
             for (var i = 0; i < data.length; i++) {
                 if (data[i].user_metadata.score1 != "0") {
                     s.push([data[i].nickname, data[i].user_metadata.score1]);
@@ -54,6 +61,8 @@ export default class GlobalBoard extends Component{
         case "Level 2":
             last = "Level 1";
             next = "Level 3";
+            hdr = coffee;
+            lvl = "Kitchen";
             for (var i = 0; i < data.length; i++) {
                 if (data[i].user_metadata.score2 != "0") {
                     s.push([data[i].nickname, data[i].user_metadata.score2]);
@@ -63,6 +72,8 @@ export default class GlobalBoard extends Component{
         case "Level 3":
             last = "Level 2";
             next = "Level 3";
+            hdr = heart;
+            lvl = "Yard"
             for (var i = 0; i < data.length; i++) {
                 if (data[i].user_metadata.score3 != "0") {
                     s.push([data[i].nickname, data[i].user_metadata.score3]);
@@ -166,7 +177,7 @@ export default class GlobalBoard extends Component{
         ></BackButton>
     </View>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}>{this.props.navigation.getParam("level") + " Times"}: </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title2}>{this.props.navigation.getParam("level") + " (" + lvl + ") Times"}: </Text>
 
     <SafeAreaView>
         <FlatList style={CoreStyle.leaderboard}
@@ -177,7 +188,9 @@ export default class GlobalBoard extends Component{
         />
     </SafeAreaView>
 
-    <View style={CoreStyle.center}>
+    <Image style={CoreStyle.headimg} source={hdr}/>
+
+    <View style={CoreStyle.center2}>
         <MainButton
               text={"Go to Game"}
               onPress={() => this.props.navigation.navigate("Home")}
