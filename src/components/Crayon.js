@@ -1,8 +1,8 @@
 import React from "react";
-import { Image, StyleSheet, TouchableOpacity, View, Text, Triangle } from "react-native";
+import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
 
-var color_1;
-var color_2;
+let color_1;
+let color_2;
 
 export default function Crayon({ text, onPress, color1, color2 }){
   color_1 = color1;

@@ -1,11 +1,10 @@
-import { StyleSheet } from "react-native";
-import { Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 // This is meant to be a core, shared style library for styles to encourage consistency
 // and code reuse throughout the app.
 
-var MAX_HEIGHT = Dimensions.get("screen").height;
-var MAX_WIDTH = Dimensions.get("screen").width;
+const MAX_HEIGHT = Dimensions.get("screen").height;
+const MAX_WIDTH = Dimensions.get("screen").width;
 
 if (global.scheme == "dark") {
     global.color = "darkslategrey";

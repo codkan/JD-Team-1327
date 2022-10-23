@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity, Text } from "react-native";
-import { color } from "react-native-reanimated";
 
 export default function MainButton({ text, onPress}) {
   return (

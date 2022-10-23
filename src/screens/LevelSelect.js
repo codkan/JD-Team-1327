@@ -3,7 +3,7 @@
  */
 
 import React, { useEffect, useState } from "react";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import { ImageBackground, View } from "react-native";
 import Background from "../assets/gameScreens/levelSelect.png";
 import LevelButton from "../components/buttons/LevelButton";
 import { get } from "../Db";

@@ -1,6 +1,6 @@
 import { Audio } from "expo-av";
 import React, { useEffect, useState } from "react";
-import { ImageBackground, StyleSheet, View, TouchableOpacity, Image } from "react-native";
+import { ImageBackground, View, TouchableOpacity, Image } from "react-native";
 import Background from "../assets/gameScreens/homescreen.png";
 import HomeButton from "../components/buttons/HomeButton";
 import { get } from "../Db";
@@ -12,7 +12,7 @@ import mute from "../assets/buttons/mute.png";
 export default function Home({ navigation }) {
   const [unlocked, setLvls] = useState({ lvl2: null, lvl3: null });
   const [sound, setSound] = React.useState();
-  var muted = global.muted;
+  let muted = global.muted;
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);
   async function playSound() {
     Audio.setAudioModeAsync({
@@ -26,8 +26,8 @@ export default function Home({ navigation }) {
     });
     try {
         const sound = new Audio.Sound();
-        sound.volume = global.volume,
-        sound.muted = global.muted,
+        sound.volume = global.volume;
+        sound.muted = global.muted;
         setSound(sound);
         await sound.loadAsync(require("../assets/sounds/gameMusic.mp3"));
         await sound.playAsync();

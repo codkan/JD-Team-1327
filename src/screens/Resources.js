@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import { ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import Background from "../assets/app/bg.png";
+import { ImageBackground, Linking, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
@@ -8,14 +7,14 @@ import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 import { Sources } from "../json/Bib.json";
 
-var last;
-var next;
-var srcs;
+let last;
+let next;
+let srcs;
 
 export default class Resources extends Component{
     constructor(props) {
         super(props);
-    };
+    }
 
   handleBackNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
@@ -29,7 +28,7 @@ export default class Resources extends Component{
     if (this.props.navigation.getParam("topic") != "Parental Health") {
         this.props.navigation.navigate("Resources", {topic: next});
     } else {
-        () => this.props.navigation.navigate("Resources", {topic: "Parental Health"})
+        this.props.navigation.navigate("Resources", {topic: "Parental Health"})
     }
   }
 
@@ -75,7 +74,7 @@ export default class Resources extends Component{
             break;
         default:
             break
-    };
+    }
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
@@ -159,5 +158,5 @@ export default class Resources extends Component{
 
     </ImageBackground>
     );
-  };
+  }
 }

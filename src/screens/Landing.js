@@ -3,8 +3,7 @@
  */
 
 import React from "react";
-import {useState} from 'react'
-import { Image, ImageBackground, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Image, ImageBackground, TouchableOpacity, View } from "react-native";
 import disclaim from "../assets/buttons/info.png";
 import setting from "../assets/buttons/settings.png";
 import login from "../assets/buttons/login.png";

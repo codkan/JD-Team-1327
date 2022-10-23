@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import { View, Modal, Button, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Modal, Text, StyleSheet, TouchableOpacity, Dimensions } from "react-native";
 import Timer from "./Timer";
 import MenuButton from "./buttons/MenuButton";
-import { Dimensions } from "react-native";
 
-
-let MAX_WIDTH = Dimensions.get("screen").height;
-let MAX_HEIGHT = Dimensions.get("screen").width;
+const MAX_WIDTH = Dimensions.get("screen").height;
+const MAX_HEIGHT = Dimensions.get("screen").width;
 
 export default class GameStatusBar extends Component {
   constructor(props) {
@@ -26,7 +24,7 @@ export default class GameStatusBar extends Component {
     ) {
       this.setState({ inventorySize: this.props.inventorySize });
     }
-    if (this.props.levelComplete == true && this.state.paused == false) {
+    if (this.props.levelComplete && !this.state.paused) {
       this.setState({ paused: true });
       this.props.pauseUpdater(false);
       this.props.getTime;
@@ -64,8 +62,7 @@ export default class GameStatusBar extends Component {
     this.props.timeToLevel(time);
   };
   render() {
-    const width = MAX_WIDTH;
-    const height = MAX_HEIGHT * 0.03;
+
     const x = 0;
     const y = 0;
 

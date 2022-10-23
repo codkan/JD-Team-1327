@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import { ImageBackground, Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, FlatList } from "react-native";
+import { ImageBackground, Image, Text, View, SafeAreaView, FlatList } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
@@ -16,11 +15,10 @@ import drown_hdr from "../assets/drownMM/drown.png";
 import car_hdr from "../assets/carSafetyMM/carSafety.png";
 import par_hdr from "../assets/parentalHealthMM/ppd2.png";
 
-
-var topic;
-var hdr;
-var last;
-var next;
+let topic;
+let hdr;
+let last;
+let next;
 
 export default class LocalBoard extends Component{
     constructor(props) {
@@ -29,26 +27,26 @@ export default class LocalBoard extends Component{
             scores: []
         }
         this.getScores();
-    };
+    }
 
   async getScores() {
-    var n = [];
-    var s = [];
+    let n = [];
+    let s = [];
     n = await AsyncStorage.getAllKeys();
-    for (var i = 0; i < n.length; i++) {
-        if (n[i] != "saved" && n[i] != "savedTopics") {
-            if (topic == "Parental Health" || topic == "Car Safety") {
-                if (n[i].split(" ")[0] + " " + n[i].split(" ")[1] == topic) {
-                    s.push([n[i].split(" ")[2], await AsyncStorage.getItem(n[i])]);
+    for (let value of n) {
+        if (!value.includes("saved")) {
+            if (topic.includes(" ")) {
+                if (value.split(" ")[0] + " " + value.split(" ")[1] == topic) {
+                    s.push([value.split(" ")[2], await AsyncStorage.getItem(value)]);
                 }
             } else {
-                if (n[i].split(" ")[0] == topic) {
-                    s.push([n[i].split(" ")[1], await AsyncStorage.getItem(n[i])]);
+                if (value.split(" ")[0] == topic) {
+                    s.push([value.split(" ")[1], await AsyncStorage.getItem(value)]);
                 }
             }
         }
-    };
-    var sorted = s.sort((a,b)=> b[1] > a[1]);
+    }
+    let sorted = s.sort((a,b)=> b[1] > a[1]);
 
     this.setState({
         scores: sorted
@@ -100,10 +98,6 @@ export default class LocalBoard extends Component{
     this.props.navigation.navigate("Menu", {module: "LocalBoard"});
   };
 
-    goInformation = (_topic) => {
-      this.props.navigation.navigate("Information", {topic: _topic});
-    };
-
   render (){
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
@@ -144,7 +138,7 @@ export default class LocalBoard extends Component{
             break;
         default:
             break
-    };
+    }
 
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
@@ -194,5 +188,5 @@ export default class LocalBoard extends Component{
 
     </ImageBackground>
     );
-  };
+  }
 }

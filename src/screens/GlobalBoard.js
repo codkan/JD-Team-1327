@@ -1,8 +1,5 @@
 import React, {Component} from "react";
-import axios from "axios";
-import { ImageBackground, Image, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, SafeAreaView, FlatList } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import Background from "../assets/app/bg.png";
+import { ImageBackground, Image, Text, View, SafeAreaView, FlatList } from "react-native";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
@@ -12,11 +9,11 @@ import clock from "../assets/badges/clockBadge.png";
 import coffee from "../assets/badges/coffeecupBadge.png";
 import heart from "../assets/badges/heartBadge.png";
 
-var last;
-var next;
-var data = [];
-var hdr;
-var lvl;
+let last;
+let next;
+let data = [];
+let hdr;
+let lvl;
 
 export default class GlobalBoard extends Component{
     constructor(props) {
@@ -25,13 +22,13 @@ export default class GlobalBoard extends Component{
             scores: []
         };
         this.getScores();
-    };
+    }
 
   async getScores() {
 
-    var axios = require("axios").default;
+    let axios = require("axios").default;
 
-    var options = {
+    let options = {
       method: 'GET',
       url: 'https://childsafe.us.auth0.com/api/v2/users',
       params: {q: 'email:*', search_engine: 'v3'},
@@ -44,7 +41,22 @@ export default class GlobalBoard extends Component{
       console.error(error);
     });
 
-    var s = [];
+    let s = [];
+    let s1 = [];
+    let s2 = [];
+    let s3 = [];
+
+    for (let value of data) {
+        if (value.user_metadata.score1 != "0") {
+            s1.push([value.nickname, value.user_metadata.score1]);
+        }
+        if (value.user_metadata.score2 != "0") {
+            s2.push([value.nickname, value.user_metadata.score2]);
+        }
+        if (value.user_metadata.score3 != "0") {
+            s3.push([value.nickname, value.user_metadata.score3]);
+        }
+    }
 
     switch(this.props.navigation.getParam('level')) {
         case "Level 1":
@@ -52,44 +64,29 @@ export default class GlobalBoard extends Component{
             next = "Level 2";
             hdr = clock;
             lvl = "Living Room";
-            for (var i = 0; i < data.length; i++) {
-                if (data[i].user_metadata.score1 != "0") {
-                    s.push([data[i].nickname, data[i].user_metadata.score1]);
-                }
-            }
+            s = s1;
             break;
         case "Level 2":
             last = "Level 1";
             next = "Level 3";
             hdr = coffee;
             lvl = "Kitchen";
-            for (var i = 0; i < data.length; i++) {
-                if (data[i].user_metadata.score2 != "0") {
-                    s.push([data[i].nickname, data[i].user_metadata.score2]);
-                }
-            }
+            s = s2;
             break;
         case "Level 3":
             last = "Level 2";
             next = "Level 3";
             hdr = heart;
             lvl = "Yard"
-            for (var i = 0; i < data.length; i++) {
-                if (data[i].user_metadata.score3 != "0") {
-                    s.push([data[i].nickname, data[i].user_metadata.score3]);
-                }
-            }
+            s = s3;
             break;
         default:
             break;
-    };
-    var sorted = s.sort((a,b)=> b[1] < a[1]);
+    }
+    let sorted = s.sort((a,b)=> b[1] < a[1]);
     this.state = {
         scores: sorted
     };
-    this.setState = ({
-        scores: sorted
-    });
   }
 
     ItemView = ({ item }) => {
@@ -154,7 +151,7 @@ export default class GlobalBoard extends Component{
             break;
         default:
             break;
-    };
+    }
 
     return (
     <ImageBackground source={global.bg} style={CoreStyle.image}>
@@ -204,5 +201,5 @@ export default class GlobalBoard extends Component{
 
     </ImageBackground>
     );
-  };
+  }
 }

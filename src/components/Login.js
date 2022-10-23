@@ -1,12 +1,9 @@
 import React from "react";
-import axios from "axios";
-import {useState} from 'react'
 import * as AuthSession from 'expo-auth-session';
 const auth0ClientId = "buXJbiJx322WquQTdYUGUc6SNhpweqaT";
 const auth0DiscoveryUrl = "https://childsafe.us.auth0.com";
 const useProxy = Platform.select({ web: false, default: true });
 const redirectUri = AuthSession.makeRedirectUri({ useProxy });
-import jwt_decode from "jwt-decode";
 
 export async function handleLogin() {
 
@@ -24,19 +21,19 @@ export async function handleLogin() {
 
   const result = await request.promptAsync(discovery, { useProxy })
   if (result.type === "success") {
-    const result2 = await AuthSession.exchangeCodeAsync({
+    await AuthSession.exchangeCodeAsync({
       clientId: auth0ClientId,
       code: result.params.code,
       redirectUri,
       extraParams: {
         code_verifier: request.codeVerifier,
       },
-    }, discovery)
+    }, discovery);
   }
 
-    var axios = require("axios").default;
+    let axios = require("axios").default;
 
-    var options = {
+    let options = {
       method: 'GET',
       url: 'https://childsafe.us.auth0.com/api/v2/users',
       params: {q: 'email:*', search_engine: 'v3'},
@@ -45,9 +42,9 @@ export async function handleLogin() {
 
     axios.request(options).then(function (response) {
       const data = response.data.sort((a,b)=> b.last_login > a.last_login);
-      global.user_id = response.data[0].user_id;
-      global.user = response.data[0].nickname;
-      global.times = response.data[0].user_metadata;
+      global.user_id = data[0].user_id;
+      global.user = data[0].nickname;
+      global.times = data[0].user_metadata;
     }).catch(function (error) {
       console.error(error);
     });

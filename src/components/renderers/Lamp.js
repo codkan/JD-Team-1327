@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Image } from "react-native";
 
-export default class lamp extends Component {
+export default class Lamp extends Component {
   constructor(props) {
     super(props);
   }

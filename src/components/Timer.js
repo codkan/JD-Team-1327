@@ -14,14 +14,14 @@ export default class Timer extends Component {
 
   // starts and stops the timer when needed
   handleTimer = () => {
-    if (this.props.final == true && this.state.isOn == true) {
+    if (this.props.final && this.state.isOn) {
       this.props.timeToStatusBar(this.state);
     }
-    if (this.props.paused == true && this.state.isOn == true) {
+    if (this.props.paused && this.state.isOn) {
       this.pauseTimer();
       this.setState({ isOn: false });
     }
-    if (this.props.paused == false && this.state.isOn == false) {
+    if (!this.props.paused && !this.state.isOn) {
       this.startTimer();
       this.setState({ isOn: true });
     }
@@ -32,11 +32,11 @@ export default class Timer extends Component {
   //when needed
   startTimer = () => {
     this.interval = setInterval(() => {
-      if (this.state.msec !== 99) {
+      if (this.state.msec != 99) {
         this.setState({
           msec: this.state.msec + 1,
         });
-      } else if (this.state.sec !== 59) {
+      } else if (this.state.sec != 59) {
         this.setState({
           msec: 0,
           sec: ++this.state.sec,

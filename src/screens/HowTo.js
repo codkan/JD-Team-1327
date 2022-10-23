@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View, Image, Dimensions } from "react-native";
+import { ImageBackground, Text, View, Image, Dimensions } from "react-native";
 import Background from "../assets/gameScreens/instructionScreen.png";
 import MenuButton from "../components/buttons/MenuButton";
 import * as ScreenOrientation from 'expo-screen-orientation';
@@ -14,8 +14,8 @@ import talk from "../assets/gameItems/speak.png";
 import note from "../assets/gameItems/note.png";
 import table from "../assets/living-room/side-table.png";
 
-var MAX_HEIGHT = Dimensions.get("screen").height;
-var MAX_WIDTH = Dimensions.get("screen").width;
+const MAX_HEIGHT = Dimensions.get("screen").height;
+const MAX_WIDTH = Dimensions.get("screen").width;
 
 export default function About({ navigation }) {
   ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE_LEFT);

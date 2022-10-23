@@ -18,18 +18,25 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "c.s"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/app/icon-alt.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "c.s"
     },
     "web": {
       "favicon": "./src/assets/app/favicon.png"
     },
     "scheme": "app.scheme.for.example",
-    "description": ""
+    "description": "",
+    "extra": {
+      "eas": {
+        "projectId": "24b7ec69-d06b-44b5-b793-1c7f557d8cd4"
+      }
+    }
   }
 }

@@ -1,18 +1,13 @@
 
 import React, { useState, useEffect } from "react";
-import { ImageBackground, StyleSheet, Text, View, SafeAreaView, FlatList, Alert } from "react-native";
+import { ImageBackground, StyleSheet, View, SafeAreaView, FlatList, Alert } from "react-native";
 import { SearchBar } from 'react-native-elements';
 import { CoreStyle } from "../components/CoreStyle";
 import Navbar from "../components/NavBar";
-import Background from "../assets/app/bg.png";
 import { Index } from "../json/Index.json";
 import Highlighter from "@sanar/react-native-highlight-text";
 
 export default function Search({ navigation }) {
-    //NAV CALLBACK
-    const goHome = () => {
-        navigation.pop();
-    };
 
     const [search, setSearch] = useState('');
     const [filteredDataSource, setFilteredDataSource] = useState([]);
@@ -113,7 +108,7 @@ export default function Search({ navigation }) {
     </View>
     </ImageBackground>
   );
-};
+}
 
 const styles = StyleSheet.create({
 

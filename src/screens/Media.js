@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import Background from "../assets/app/bg.png";
 import BackButton from "../components/buttons//BackButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons//TopicButton";
@@ -35,14 +34,14 @@ import par1 from "../assets/parentalHealthMM/ppd1.png";
 import par2 from "../assets/parentalHealthMM/pppd_infographic.jpg";
 import par3 from "../assets/parentalHealthMM/pmad_infographic.png";
 
-var next;
-var last;
-var vids;
+let next;
+let last;
+let vids;
 
 export default class Media extends Component {
     constructor(props) {
         super(props);
-    };
+    }
 
   handleBackNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
@@ -58,7 +57,7 @@ export default class Media extends Component {
         this.props.navigation.navigate("Media", {topic: next});
         this.render();
     } else {
-        () => this.props.navigation.navigate("Media", {topic: "Parental Health"})
+        this.props.navigation.navigate("Media", {topic: "Parental Health"})
     }
   }
 
@@ -71,60 +70,63 @@ export default class Media extends Component {
     };
 
   render (){
+    let img1;
+    let img2;
+    let img3;
     switch(this.props.navigation.getParam('topic')) {
         case "Falls":
             last = "";
             next = "Burns";
-            var img1 = fall1;
-            var img2 = fall2;
-            var img3 = fall3;
+            img1 = fall1;
+            img2 = fall2;
+            img3 = fall3;
             vids = MM.FallMM.videos;
             break;
         case "Burns":
             last = "Falls";
             next = "Poisonings";
-            var img1 = burn1;
-            var img2 = burn2;
-            var img3 = burn3;
+            img1 = burn1;
+            img2 = burn2;
+            img3 = burn3;
             vids = MM.BurnMM.videos;
             break;
         case "Poisonings":
             last = "Burns";
             next = "Drownings";
-            var img1 = poison1;
-            var img2 = poison2;
-            var img3 = poison3;
+            img1 = poison1;
+            img2 = poison2;
+            img3 = poison3;
             vids = MM.PoisonMM.videos;
             break;
         case "Drownings":
             last =  "Poisonings";
             next = "Car Safety";
-            var img1 = drown1;
-            var img2 = drown2;
-            var img3 = drown3;
+            img1 = drown1;
+            img2 = drown2;
+            img3 = drown3;
             vids = MM.DrownMM.videos;
             break;
         case "Car Safety":
             last = "Drownings";
             next = "Parental Health";
-            var img1 = car1;
-            var img2 = car2;
-            var img3 = car3;
+            img1 = car1;
+            img2 = car2;
+            img3 = car3;
             vids = MM.CarMM.videos;
             break;
         case "Parental Health":
             last = "Car Safety";
             next = "Parental Health";
-            var img1 = par1;
-            var img2 = par2;
-            var img3 = par3;
+            img1 = par1;
+            img2 = par2;
+            img3 = par3;
             vids = MM.ParMM.videos;
             break;
         default:
             break
-    };
+    }
 
-    var images = [
+    let images = [
         {
         url: '',
         width: img1.width,

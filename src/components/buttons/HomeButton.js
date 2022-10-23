@@ -16,7 +16,6 @@ HomeButton.defaultProps = {
 }
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "transparent",
     alignItems: "center",
     marginHorizontal: 20,
     backgroundColor: "white",

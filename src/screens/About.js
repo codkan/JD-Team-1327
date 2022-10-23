@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import { ImageBackground, Text, View } from "react-native";
 import Background from "../assets/gameScreens/aboutScreen.png";
 import MenuButton from "../components/buttons/MenuButton";
 import * as ScreenOrientation from 'expo-screen-orientation';

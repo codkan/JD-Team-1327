@@ -1,11 +1,10 @@
-import React, {useState, PureComponent} from "react";
+import React, { PureComponent} from "react";
 import { StyleSheet, TouchableOpacity, Text, View, Dimensions } from "react-native";
-import { color } from "react-native-reanimated";
 import {Audio} from "expo-av";
 import ConfettiCannon from "react-native-confetti-cannon";
 
-var MAX_HEIGHT = Dimensions.get("screen").height;
-var MAX_WIDTH = Dimensions.get("screen").width;
+const MAX_HEIGHT = Dimensions.get("screen").height;
+const MAX_WIDTH = Dimensions.get("screen").width;
 
 export default class QuizButton extends PureComponent{
     explosion;
@@ -15,7 +14,7 @@ export default class QuizButton extends PureComponent{
             buttonColor: global.color2,
             pressed: false,
         };
-    };
+    }
 
     changeButtonColor = () => {
       if (this.props.id === "correct") {
@@ -36,7 +35,7 @@ export default class QuizButton extends PureComponent{
 
   celebrate = async () => {
     try {
-        var { sound } = await Audio.Sound.createAsync(
+        let { sound } = await Audio.Sound.createAsync(
            require('../../assets/sounds/cheer.mp3')
         );
         sound.volume = global.volume;
@@ -49,7 +48,7 @@ export default class QuizButton extends PureComponent{
 
   noCelebrate = async () => {
     try {
-        var { sound } = await Audio.Sound.createAsync(
+        let { sound } = await Audio.Sound.createAsync(
            require('../../assets/sounds/wrong.mp3')
         );
         sound.volume = global.volume;

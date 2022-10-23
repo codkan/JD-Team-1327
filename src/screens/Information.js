@@ -1,17 +1,13 @@
 import React, {Component} from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity, Alert, Modal, Pressable } from "react-native";
-import { WebView } from "react-native-webview";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import TopicButton from "../components/buttons/TopicButton";
 import MMButton from "../components/buttons/MMButton";
-import MainButton from "../components/buttons/MainButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
-import VideoPlayer from "../components/VideoPlayer";
 import * as Speech from "expo-speech";
-import Background from "../assets/app/bg.png";
 import {Content} from "../json/Content.json";
 import src from "../assets/buttons/links-line-alt.png";
 import mm from "../assets/buttons/media.png";
@@ -82,10 +78,10 @@ import ppd3 from "../assets/parentalHealthMM/ppd3.png";
 import ppd4 from "../assets/parentalHealthMM/ppd4.png";
 import ppd6 from "../assets/parentalHealthMM/ppd6.png";
 
-var last;
-var next;
-var txt;
-var img;
+let last;
+let next;
+let txt;
+let img;
 
 export default class Information extends Component {
     constructor(props) {
@@ -93,7 +89,7 @@ export default class Information extends Component {
         this.state = {
             modalVisible: global.showAlert,
         };
-    };
+    }
 
   setModalVisible = (visible) => {
     this.setState({ modalVisible: visible });
@@ -135,12 +131,10 @@ export default class Information extends Component {
   };
 
   saveSection = async (text) => {
-    var save = txt[text];
-    var saved = JSON.parse(await AsyncStorage.getItem("saved"));
-    //console.log(saved);
+    let save = txt[text];
+    let saved = JSON.parse(await AsyncStorage.getItem("saved"));
     saved.push(save);
-    //console.log(saved);
-    var savedTopics = JSON.parse(await AsyncStorage.getItem("savedTopics"));
+    let savedTopics = JSON.parse(await AsyncStorage.getItem("savedTopics"));
     savedTopics.push(this.props.navigation.getParam("topic"));
     await AsyncStorage.setItem("saved", JSON.stringify(saved));
     await AsyncStorage.setItem("savedTopics", JSON.stringify(savedTopics));
@@ -166,8 +160,8 @@ export default class Information extends Component {
     async speakAll() {
         let reading = await Speech.isSpeakingAsync();
         if (!reading) {
-            for (let i = 0; i < txt.length; i++) {
-                Speech.speak(txt[i].title + ". " + txt[i].body, {rate: 1.1});
+            for (let value of txt) {
+                Speech.speak(value.title + ". " + value.body, {rate: 1.1});
             }
         } else {
             Speech.stop();
@@ -223,7 +217,7 @@ export default class Information extends Component {
             break;
         default:
             break
-    };
+    }
 
     const { modalVisible } = this.state;
 

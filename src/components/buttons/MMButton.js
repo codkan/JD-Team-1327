@@ -1,8 +1,8 @@
 import React from "react";
 import { Image, StyleSheet, TouchableOpacity, View, Dimensions } from "react-native";
 
-var MAX_HEIGHT = Dimensions.get("screen").height;
-var MAX_WIDTH = Dimensions.get("screen").width;
+const MAX_HEIGHT = Dimensions.get("screen").height;
+const MAX_WIDTH = Dimensions.get("screen").width;
 
 export default function MMButton({ text, onPress, txtColor, img }) {
   return (

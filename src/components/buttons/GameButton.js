@@ -14,7 +14,7 @@ export default function GameButton({ text, onPress, visible, img }) {
       <View style={{ marginRight: 20, justifyContent: "center" }}>
         <ImageBackground
           source={img}
-          style={{ width: 120, height: 120, visible: !visible }}
+          style={{ width: 120, height: 120, visible: false }}
         >
           <Text style={styles.buttonText}>{text}</Text>
         </ImageBackground>

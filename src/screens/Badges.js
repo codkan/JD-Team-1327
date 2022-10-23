@@ -3,11 +3,10 @@
  */
 import React from "react";
 import {
-    FlatList,  ScrollView,
-    Image, ImageBackground, StyleSheet,
-    Text, TouchableOpacity, View, SafeAreaView
+    FlatList, Dimensions,
+    Image, ImageBackground,
+    Text, TouchableOpacity, View
 } from "react-native";
-import { Dimensions } from "react-native";
 import Background from "../assets/gameScreens/badgeScreen.png";
 import MenuButton from "../components/buttons/MenuButton";
 import { get } from "../Db";

@@ -1,11 +1,10 @@
 
-import React, { useState, useEffect, Component } from "react";
+import React, { Component } from "react";
 import { ImageBackground, StyleSheet, Text, View, SafeAreaView, FlatList, Alert, TouchableOpacity } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CoreStyle } from "../components/CoreStyle";
 import Navbar from "../components/NavBar";
 import MainButton from "../components/buttons/MainButton";
-import Background from "../assets/app/bg.png";
 
 export default class Saved extends Component {
     constructor(props) {
@@ -15,14 +14,14 @@ export default class Saved extends Component {
             savedTopics: []
         };
         this.getSaves();
-    };
+    }
 
 
     async getSaves() {
-        var a = await AsyncStorage.getItem("saved");
-        var b = JSON.parse(a);
-        var c = await AsyncStorage.getItem("savedTopics");
-        var d = JSON.parse(c);
+        let a = await AsyncStorage.getItem("saved");
+        let b = JSON.parse(a);
+        let c = await AsyncStorage.getItem("savedTopics");
+        let d = JSON.parse(c);
         this.state = {
             saved: b,
             savedTopics: d
@@ -70,8 +69,8 @@ export default class Saved extends Component {
     };
 
     removeBookmark = async (item) => {
-        var _savedTopics = this.state.savedTopics;
-        var _saved = this.state.saved;
+        let _savedTopics = this.state.savedTopics;
+        let _saved = this.state.saved;
         _savedTopics.splice(item.index, 1);
         _saved.splice(item.index, 1);
         await AsyncStorage.setItem("saved", JSON.stringify(_saved));
@@ -95,7 +94,7 @@ export default class Saved extends Component {
             saved: [],
             savedTopics: []
         });
-        var clear = [];
+        let clear = [];
         await AsyncStorage.setItem("saved", JSON.stringify(clear));
         await AsyncStorage.setItem("savedTopics", JSON.stringify(clear));
     }
@@ -131,8 +130,8 @@ export default class Saved extends Component {
         </View>
         </ImageBackground>
       );
-  };
-};
+  }
+}
 
 const styles = StyleSheet.create({
     btncontainer: {

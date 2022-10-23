@@ -2,7 +2,6 @@ import React from "react";
 import { Image, StyleSheet, TouchableOpacity, View, Alert } from "react-native";
 import {handleLogin} from "./Login.js";
 
-
 export default function Navbar({ navigation }){
   const goMenu = (_module) => {
     navigation.navigate("Menu", {module: _module});

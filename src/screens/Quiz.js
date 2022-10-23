@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import { ImageBackground, StyleSheet, Text, View, Button, ButtonGroup } from "react-native";
-import Background from "../assets/app/bg.png";
+import { ImageBackground, Text, View } from "react-native";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
@@ -9,10 +8,10 @@ import QuizButton from "../components/buttons/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 import { Quizzes } from "../json/QAbank.json";
 
-var count = 0;
-var score = 0;
-var lastC = false;
-var Qs;
+let count = 0;
+let score = 0;
+let lastC = false;
+let Qs;
 
 export default class Quiz extends Component{
     constructor(props){
@@ -43,7 +42,7 @@ export default class Quiz extends Component{
         }
         
         Qs = Qs.sort(() => Math.random() - 0.5);
-        var question = Qs[count].Q;
+        let question = Qs[count].Q;
 
         this.state = {
             prevState: {
@@ -65,7 +64,7 @@ export default class Quiz extends Component{
                 {a: question.answers[3].a, id: question.answers[3].id },
             ],
         };
-    };
+    }
 
     goMenu = () => {
         this.props.navigation.navigate("Menu", {module: "Quiz"});
@@ -85,7 +84,7 @@ export default class Quiz extends Component{
         }
         if (count < Qs.length-1) {
             count++;
-            var question = Qs[count].Q;
+            let question = Qs[count].Q;
             this.setState({
                 prevState: {
                     qNum: this.state.qNum,
@@ -125,8 +124,8 @@ export default class Quiz extends Component{
             return;
         }
         count--;
-        var question = Qs[count].Q;
-        if (score > 0 && lastC == true) {
+        let question = Qs[count].Q;
+        if (score > 0 && lastC) {
             score--;
         }
         if (count > 0) {
@@ -180,7 +179,7 @@ export default class Quiz extends Component{
     }
 
   render(){
-      var randomQs =  this.state.answers.sort(() => Math.random() - 0.5);
+      let randomQs =  this.state.answers.sort(() => Math.random() - 0.5);
       return (
         <ImageBackground source={global.bg} style={CoreStyle.image}>
 

@@ -59,33 +59,33 @@ const Entities = () => {
     { isStatic: true }
   );
   let chair = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH * 0.85),
-    (y = MAX_HEIGHT * 0.65),
-    (width = 30),
-    (height = 30),
+    MAX_WIDTH * 0.85,
+    MAX_HEIGHT * 0.65,
+    30,
+    30,
     { isStatic: true }
   );
 
   let rug = Matter.Bodies.circle(
-    (x = MAX_WIDTH * 0.8),
-    (y = MAX_HEIGHT * 0.4),
-    (radius = 0),
+    MAX_WIDTH * 0.8,
+    MAX_HEIGHT * 0.4,
+    0,
     { isStatic: true }
   );
 
   let bookshelf = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH * 0.88),
-    (y = MAX_HEIGHT * 0.45),
-    (width = 30),
-    (height = 60),
+    MAX_WIDTH * 0.88,
+    MAX_HEIGHT * 0.45,
+    30,
+    60,
     { isStatic: true }
   );
 
   let lamp = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH * 0.88),
-    (y = MAX_HEIGHT * 0.3),
-    (width = 20),
-    (height = 40),
+    MAX_WIDTH * 0.88,
+    MAX_HEIGHT * 0.3,
+    20,
+    40,
     { isStatic: true }
   );
   let sideTable = Matter.Bodies.rectangle(
@@ -121,31 +121,31 @@ const Entities = () => {
   );
 
   let top_wall = Matter.Bodies.rectangle(
-    (x = 0),
-    (y = 0),
-    (width = MAX_WIDTH * 2),
-    (height = MAX_HEIGHT / 6),
+    0,
+    0,
+    MAX_WIDTH * 2,
+    MAX_HEIGHT / 6,
     { isStatic: true }
   );
   let left_wall = Matter.Bodies.rectangle(
-    (x = 0),
-    (y = 0),
-    (width = 10),
-    (height = MAX_HEIGHT * 2),
+    0,
+    0,
+    10,
+    MAX_HEIGHT * 2,
     { isStatic: true }
   );
   let right_wall = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH),
-    (y = 0),
-    (width = 10),
-    (height = MAX_HEIGHT * 2),
+    MAX_WIDTH,
+    0,
+    10,
+    MAX_HEIGHT * 2,
     { isStatic: true }
   );
   let bottom_wall = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH / 2),
-    (y = MAX_HEIGHT),
-    (width = MAX_WIDTH),
-    (height = 10),
+    MAX_WIDTH / 2,
+    MAX_HEIGHT,
+    MAX_WIDTH,
+    10,
     { isStatic: true }
   );
 

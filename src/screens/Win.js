@@ -1,9 +1,6 @@
-import React, {Component} from "react";
-import { Image, ImageBackground, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput, Button, Alert } from "react-native";
+import React from "react";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import Background from "../assets/app/bg.png";
-import BackButton from "../components/buttons/BackButton";
-import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
@@ -26,10 +23,10 @@ export default function Win({navigation}){
 
     const addScore = async (name) => {
         try {
-            var keys = await AsyncStorage.getAllKeys();
-            for (var i = 0; i < keys.length; i++) {
-                if (keys[i] == name) {
-                    await AsyncStorage.removeItem(keys[i], (err) => console.log(err));
+            let keys = await AsyncStorage.getAllKeys();
+            for (let value of keys) {
+                if (value == name) {
+                    await AsyncStorage.removeItem(value, (err) => console.log(err));
                 }
             }
             await AsyncStorage.setItem(txt + " " + name, score+'');

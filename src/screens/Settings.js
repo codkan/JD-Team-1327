@@ -1,6 +1,6 @@
 
-import React, { useState } from "react";
-import { ImageBackground, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { ImageBackground, Text, View } from "react-native";
 import Background from "../assets/app/bg.png";
 import Background_alt from "../assets/app/bg-alt.png";
 import logo1 from "../assets/app/landinglogo.png"
@@ -11,10 +11,6 @@ import { CoreStyle } from "../components/CoreStyle.js";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function About({ navigation }) {
-  //NAV CALLBACK
-  const goHome = () => {
-    navigation.pop();
-  };
 
   const changeScheme = () => {
     if (global.scheme == "light") {
@@ -34,7 +30,6 @@ export default function About({ navigation }) {
         global.logo = logo1;
         global.text = "black";
     }
-    return;
   };
 
   const changeVolume = (lvl) => {
@@ -49,9 +44,9 @@ export default function About({ navigation }) {
   }
 
   const clearBoard = async () => {
-    var n = await AsyncStorage.getAllKeys();
-    for (var i = 0; i < n.length; i++) {
-        await AsyncStorage.removeItem(n[i]);
+    let n = await AsyncStorage.getAllKeys();
+    for (let value of n) {
+        await AsyncStorage.removeItem(value);
     }
   }
 

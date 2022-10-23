@@ -1,6 +1,5 @@
 import Matter from "matter-js";
 import Wall from "../components/Wall";
-import Circle from "../components/Circle";
 import Player from "../components/renderers/Player";
 import Npc from "../components/renderers/Npc";
 import DiningTable from "../components/renderers/DiningTable"
@@ -131,31 +130,31 @@ const Entities = () => {
     { isStatic: true }
   );
   let top_wall = Matter.Bodies.rectangle(
-    (x = 0),
-    (y = 0),
-    (width = MAX_WIDTH * 2),
-    (height = MAX_HEIGHT / 6),
+    0,
+    0,
+    MAX_WIDTH * 2,
+    MAX_HEIGHT / 6,
     { isStatic: true }
   );
   let left_wall = Matter.Bodies.rectangle(
-    (x = 0),
-    (y = 0),
-    (width = 10),
-    (height = MAX_HEIGHT * 2),
+    0,
+    0,
+    10,
+    MAX_HEIGHT * 2,
     { isStatic: true }
   );
   let right_wall = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH),
-    (y = 0),
-    (width = 10),
-    (height = MAX_HEIGHT * 2),
+    MAX_WIDTH,
+    0,
+    10,
+    MAX_HEIGHT * 2,
     { isStatic: true }
   );
   let bottom_wall = Matter.Bodies.rectangle(
-    (x = MAX_WIDTH / 2),
-    (y = MAX_HEIGHT),
-    (width = MAX_WIDTH),
-    (height = 10),
+    MAX_WIDTH / 2,
+    MAX_HEIGHT,
+    MAX_WIDTH,
+    10,
     { isStatic: true }
   );
 
