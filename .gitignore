@@ -7,3 +7,4 @@ ios/.expo/*
 jdApp1/
 .idea/
 **/.DS_Store
+.gradle/
