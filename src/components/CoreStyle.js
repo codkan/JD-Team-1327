@@ -181,8 +181,8 @@ export const CoreStyle = StyleSheet.create({
     subbullet: {
         color: global.text,
         fontSize: 18,
-        marginLeft: 35,
-        marginRight: 30,
+        marginHorizontal: 30,
+        marginVertical: 15,
         textAlign: "justify",
         lineHeight: 23,
     },
@@ -191,7 +191,7 @@ export const CoreStyle = StyleSheet.create({
     topnavbuttons: { 
         display: "flex",
         flexDirection: "row",
-        marginTop: 30,
+        marginTop: 20,
         marginHorizontal: 20,
         justifyContent: "space-between",
     },
@@ -372,7 +372,7 @@ export const CoreStyle = StyleSheet.create({
     },
     center2: {
         alignItems: "center",
-        marginBottom: 100,
+        marginBottom: 75,
     },
 
     // text style for settings pages
@@ -380,7 +380,7 @@ export const CoreStyle = StyleSheet.create({
         color: global.text,
         height: 70,
         fontSize: 40,
-        marginTop: 150,
+        marginTop: 100,
         marginBottom: 15,
         fontWeight: "bold",
         textAlign: "center",

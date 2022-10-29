@@ -176,14 +176,12 @@ export default class GlobalBoard extends Component{
 
     <Text allowFontScaling={true} style={CoreStyle.title2}>{this.props.navigation.getParam("level") + " (" + lvl + ") Times"}: </Text>
 
-    <SafeAreaView>
         <FlatList style={CoreStyle.leaderboard}
             data={this.state.scores}
             renderItem={this.ItemView}
             ItemSeparatorComponent={this.ItemSeparatorView}
             keyExtractor={(item) => item}
         />
-    </SafeAreaView>
 
     <Image style={CoreStyle.headimg} source={hdr}/>
 

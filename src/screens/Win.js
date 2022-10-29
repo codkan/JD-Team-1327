@@ -63,27 +63,27 @@ export default function Win({navigation}){
 
     <View style={styles.container}>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> {txt} Quiz Completed </Text>
-    <Text allowFontScaling={true} style={CoreStyle.subtitle}> Congratulations! </Text>
-    <Text allowFontScaling={true} style={CoreStyle.subtitle2}> You answered {score} out of {total} questions correctly </Text>
-    <Text allowFontScaling={true}> {'\n'} </Text>
-    <Image source={basket} style={styles.image}></Image>
-    <Text allowFontScaling={true}> {'\n'} </Text>
+        <Text allowFontScaling={true} style={CoreStyle.title}> {txt} Quiz Completed </Text>
+        <Text allowFontScaling={true} style={CoreStyle.subtitle}> Congratulations! </Text>
+        <Text allowFontScaling={true} style={CoreStyle.subtitle2}> You answered {score} out of {total} questions correctly </Text>
+        <Text allowFontScaling={true}> {'\n'} </Text>
+        <Image source={basket} style={CoreStyle.img}></Image>
+        <Text allowFontScaling={true}> {'\n'} </Text>
 
-    <View style={styles.textbox}>
-    <TextInput
-        onChangeText={onChangeText}
-        value={text}
-        width={"90%"}
-    />
-    <Button title={">"} onPress={() => addScore(text+'')}/>
-    </View>
+        <View style={styles.textbox}>
+        <TextInput
+            onChangeText={onChangeText}
+            value={text}
+            width={"90%"}
+        />
+        <Button title={">"} onPress={() => addScore(text+'')}/>
+        </View>
     </View>
 
 </ScrollView>
 
     <View style = {CoreStyle.pushdown}>
-    <Navbar navigation={navigation}/>
+        <Navbar navigation={navigation}/>
     </View>
 
     </ImageBackground>

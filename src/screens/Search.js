@@ -61,6 +61,7 @@ export default function Search({ navigation }) {
             style={{
               height: 15,
               width: '100%',
+              borderRadius: 20,
               backgroundColor: 'rgba(52, 52, 52, 0.0)',
             }}
           />
@@ -135,5 +136,7 @@ const styles = StyleSheet.create({
       marginLeft: 10,
       marginTop: 10,
       borderRadius: 20,
+      cornerRadius: 20,
+      overflow: "hidden",
     },
 });

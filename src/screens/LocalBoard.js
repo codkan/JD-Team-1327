@@ -163,14 +163,12 @@ export default class LocalBoard extends Component{
 
     <Text allowFontScaling={true} style={CoreStyle.title}> {topic + " Scores"}: </Text>
 
-    <SafeAreaView>
         <FlatList style={CoreStyle.leaderboard}
             data={this.state.scores}
             renderItem={this.ItemView}
             ItemSeparatorComponent={this.ItemSeparatorView}
             keyExtractor={(item) => item}
         />
-    </SafeAreaView>
 
     <Image style={CoreStyle.headimg} source={hdr}/>
 

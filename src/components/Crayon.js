@@ -1,10 +1,14 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
+import { StyleSheet, TouchableOpacity, View, Text, Dimensions } from "react-native";
+
+const MAX_HEIGHT = Dimensions.get("screen").height;
+const MAX_WIDTH = Dimensions.get("screen").width;
 
 let color_1;
 let color_2;
 
 export default function Crayon({ text, onPress, color1, color2 }){
+  //console.log("\n Height = " + MAX_HEIGHT + "\n Width = " + MAX_WIDTH);
   color_1 = color1;
   color_2 = color2;
   return (
@@ -24,8 +28,6 @@ export default function Crayon({ text, onPress, color1, color2 }){
   );
 }
 
-
-
 const styles = StyleSheet.create({
     navBar: {
       display: "flex",
@@ -39,8 +41,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         alignSelf: "center",
-        width: 330,
-        height: 55,
+        width: MAX_WIDTH*0.80,
+        height: MAX_HEIGHT/16.62,
         shadowColor: 'black',
         shadowOpacity: 1,
         shadowRadius: 10,
@@ -54,19 +56,19 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         alignItems: "center",
         justifyContent: "space-between",
-        height: 55,
+        height: MAX_HEIGHT/16.62,
         backgroundColor: color_2,
         //marginHorizontal: 15,
     },
     line1: {
         width: 5,
-        height: 55,
+        height: MAX_HEIGHT/16.62,
         backgroundColor: "black",
         marginLeft: 10,
     },
     line2: {
         width: 5,
-        height: 55,
+        height: MAX_HEIGHT/16.62,
         backgroundColor: "black",
         marginRight: 10,
     },
@@ -75,17 +77,17 @@ const styles = StyleSheet.create({
         alignSelf: "center",
         justifyContent: "center",
         borderRadius: 50,
-        width: 40,
-        height: 40,
-        transform: [{scaleX: 5}],
+        width: MAX_WIDTH/10.275,
+        height: MAX_WIDTH/10.275,
+        transform: [{scaleX: MAX_WIDTH/82}],
         backgroundColor: "black",
     },
     text: {
-        fontSize: 5,
+        fontSize: MAX_WIDTH/82,
         color: "white",
         alignItems: "center",
         alignSelf: "center",
-        transform: [{scaleY: 5}],
+        transform: [{scaleY: MAX_WIDTH/82}],
         verticalAlign: "middle",
         horizontalAlign: "middle",
         marginBottom: 2.5,
@@ -95,16 +97,16 @@ const styles = StyleSheet.create({
         height: 0,
         backgroundColor: "transparent",
         borderStyle: "solid",
-        borderLeftWidth: 23,
-        borderRightWidth: 23,
-        borderBottomWidth: 46,
+        borderLeftWidth: MAX_WIDTH/22,
+        borderRightWidth: MAX_WIDTH/22,
+        borderBottomWidth: 2*(MAX_WIDTH/22),
         borderLeftColor: "transparent",
         borderRightColor: "transparent",
         transform: [{rotate: "90deg"}],
         alignSelf: "center",
-        shadowColor: 'black',
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        shadowOffset : { width: 0, height: 4},
+        //shadowColor: 'black',
+        //shadowOpacity: 0.25,
+        //shadowRadius: 4,
+        //shadowOffset : { width: 0, height: 4},
     }
   });
