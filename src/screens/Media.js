@@ -183,25 +183,28 @@ export default class Media extends Component {
     <ScrollView>
 
     <Text allowFontScaling={true} style={CoreStyle.title}>{this.props.navigation.getParam('topic') + " Media"}</Text>
-    <ImageViewer style={CoreStyle.imgview} imageUrls={images} backgroundColor={global.color}/>
 
-    <VideoPlayer videoID={vids[0].VID}/>
-    <VideoPlayer videoID={vids[1].VID}/>
-    <VideoPlayer videoID={vids[2].VID}/>
-
-    <View style={CoreStyle.TopicButtons}>
+    <View style={CoreStyle.topicButton}>
         <MainButton
               text={"Go to " + this.props.navigation.getParam('topic')}
               onPress={() => this.goInformation(this.props.navigation.getParam('topic'))}
               txtColor={global.text}
         ></MainButton>
     </View>
+
+    <ImageViewer style={CoreStyle.imgview} imageUrls={images} backgroundColor={global.color}/>
+
+    <VideoPlayer videoID={vids[0].VID}/>
+    <VideoPlayer videoID={vids[1].VID}/>
+    <VideoPlayer videoID={vids[2].VID}/>
+
+    <Text>{'\n'}</Text>
+
 </ScrollView>
 
     <View style = {CoreStyle.pushdown}>
     <Navbar navigation={this.props.navigation}/>
     </View>
-
 
     </ImageBackground>
     );

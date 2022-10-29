@@ -80,7 +80,7 @@ export default function Landing({ navigation }) {
         <Crayon fontSize={6} text={"Media"} onPress={() => goMenu("Media")} color1={"darkorange"} color2={"orange"}/>
         <Crayon fontSize={6} text={"Quiz"} onPress={() => goMenu("Quiz")} color1={"darkgreen"} color2={"green"}/>
         <Crayon fontSize={6} text={"Sources"} onPress={() => goMenu("Resources")} color1={"darkblue"} color2={"blue"}/>
-        <Crayon fontSize={6} text={"Game"} onPress={() => handleGameNav()} color1={"darkviolet"} color2={"purple"}/>
+        <Crayon fontSize={6} text={"Game"} onPress={() => handleGameNav()} color1={"rgb(74,0,127)"} color2={"rgb(147,0,255)"}/>
 
       </View>
 

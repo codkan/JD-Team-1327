@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     alignItems: "center",
     marginHorizontal: 25,
-    marginBottom: 10,
+    marginBottom: 30,
   },
   buttonText: {
     fontSize: 18,

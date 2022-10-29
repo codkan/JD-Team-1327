@@ -94,7 +94,10 @@ export default class GlobalBoard extends Component{
           // Flat List Item
           <View style={CoreStyle.board}>
             <Text style={CoreStyle.entry}>{item[0]}</Text>
-            <Text style={CoreStyle.entry}>{item[1]}</Text>
+            <View style={{flexDirection: "row"}}>
+                <View style={{width: 5, height: 60, backgroundColor: global.color}}/>
+                <Text style={CoreStyle.entry}>{item[1]}</Text>
+            </View>
           </View>
         );
     };

@@ -54,14 +54,12 @@ export default class CollapsibleBox extends Component{
         display: "flex",
         flexDirection: "row",
         marginBottom: 15,
+        marginRight: 10,
     },
     headerbox: {
-        flex: 6
+        flex: 6,
     },
     arrow: {
-        flex: 1
+        flex: 1,
     },
-    content: {
-        
-    }
   });

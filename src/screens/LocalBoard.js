@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { ImageBackground, Image, Text, View, SafeAreaView, FlatList } from "react-native";
+import { ImageBackground, Image, Text, View, SafeAreaView, FlatList, Dimensions } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import BackButton from "../components/buttons/BackButton";
 import MainButton from "../components/buttons/MainButton";
@@ -58,7 +58,10 @@ export default class LocalBoard extends Component{
           // Flat List Item
           <View style={CoreStyle.board}>
             <Text style={CoreStyle.entry}>{item[0]}</Text>
-            <Text style={CoreStyle.entry}>{item[1]}</Text>
+            <View style={{flexDirection: "row"}}>
+                <View style={{width: 5, height: 60, backgroundColor: global.color}}/>
+                <Text style={CoreStyle.entry}>{item[1]}</Text>
+            </View>
           </View>
         );
     };
@@ -161,7 +164,7 @@ export default class LocalBoard extends Component{
         ></BackButton>
     </View>
 
-    <Text allowFontScaling={true} style={CoreStyle.title}> {topic + " Scores"}: </Text>
+    <Text allowFontScaling={true} style={CoreStyle.title2}> {topic + " Scores"}: </Text>
 
         <FlatList style={CoreStyle.leaderboard}
             data={this.state.scores}

@@ -134,6 +134,7 @@ export const CoreStyle = StyleSheet.create({
         marginBottom: 20,
         textAlign: "center",
         fontWeight: "bold",
+        fontStyle: "italic",
         marginHorizontal: 10,
     },
 
@@ -256,6 +257,16 @@ export const CoreStyle = StyleSheet.create({
         marginBottom: 75,
     },
 
+    // style for "Go to Topic" button views in Multimedia
+    topicButton: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 0,
+        marginBottom: 25,
+    },
+
     // style for the sources and media buttons at the end of info sections
     buttons: {
         display: "flex",
@@ -356,7 +367,7 @@ export const CoreStyle = StyleSheet.create({
         marginVertical: 10,
         textAlign: "center",
         fontWeight: "bold",
-        marginHorizontal: 20,
+        marginHorizontal: 25,
     },
 
     // contain in an uncentered row aka line
