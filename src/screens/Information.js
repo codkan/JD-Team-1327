@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TouchableOpacity, Alert, Modal, Pressable } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import BackButton from "../components/buttons/BackButton";
 import CollapsibleBox from "../components/CollapsibleBox";
 import TopicButton from "../components/buttons/TopicButton";
 import MMButton from "../components/buttons/MMButton";
@@ -11,6 +10,8 @@ import * as Speech from "expo-speech";
 import {Content} from "../json/Content.json";
 import src from "../assets/buttons/links-line-alt.png";
 import mm from "../assets/buttons/media.png";
+import right from "../assets/buttons/right.png";
+import left from "../assets/buttons/left.png";
 
 //Fall images
 import falls from "../assets/fallsMM/falls.png";
@@ -225,21 +226,21 @@ export default class Information extends Component {
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
-        <BackButton
-            text="<"
+        <MMButton
+            img={left}
             txtColor={global.text}
             onPress={this.handleLastNav}
-        ></BackButton>
+        ></MMButton>
         <TopicButton
               text="Back to Topics"
               onPress={this.goMenu}
               txtColor={global.text}
         ></TopicButton>
-        <BackButton
-            text=">"
+        <MMButton
+            img={right}
             txtColor={global.text}
             onPress={this.handleNextNav}
-        ></BackButton>
+        ></MMButton>
     </View>
 
     <ScrollView>

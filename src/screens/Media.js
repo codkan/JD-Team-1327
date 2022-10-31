@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { ImageBackground, Text, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import BackButton from "../components/buttons//BackButton";
+import MMButton from "../components/buttons/MMButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons//TopicButton";
 import Navbar from "../components/NavBar";
@@ -9,6 +9,8 @@ import VideoPlayer from "../components/VideoPlayer";
 import { CoreStyle } from "../components/CoreStyle";
 import ImageViewer from "react-native-image-zoom-viewer";
 import { MM } from "../json/MM.json";
+import right from "../assets/buttons/right.png";
+import left from "../assets/buttons/left.png";
 
 import fall1 from "../assets/fallsMM/falls_infographic.jpg";
 import fall2 from "../assets/fallsMM/window_infographic.jpg";
@@ -43,7 +45,7 @@ export default class Media extends Component {
         super(props);
     }
 
-  handleBackNav = () => {
+  handleLastNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("Media", {topic: last});
         this.render();
@@ -163,21 +165,21 @@ export default class Media extends Component {
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
-        <BackButton
-            text="<"
+        <MMButton
+            img={left}
             txtColor={global.text}
-            onPress={this.handleBackNav}
-        ></BackButton>
+            onPress={this.handleLastNav}
+        ></MMButton>
         <TopicButton
               text="Back to Topics"
               onPress={this.goMenu}
               txtColor={global.text}
         ></TopicButton>
-        <BackButton
-            text=">"
+        <MMButton
+            img={right}
             txtColor={global.text}
             onPress={this.handleNextNav}
-        ></BackButton>
+        ></MMButton>
     </View>
 
     <ScrollView>

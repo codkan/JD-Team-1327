@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
     shadowOffset : { width: 0, height: 4},
     elevation: 7.5,
     padding: 10,
+    borderColor: "black",
+    borderWidth: 1
   },
   buttonText: {
     fontSize: 24,

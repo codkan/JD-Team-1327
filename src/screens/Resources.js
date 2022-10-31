@@ -1,11 +1,13 @@
 import React, {Component} from "react";
 import { ImageBackground, Linking, ScrollView, Text, TouchableOpacity, View } from "react-native";
-import BackButton from "../components/buttons/BackButton";
+import MMButton from "../components/buttons/MMButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
 import { Sources } from "../json/Bib.json";
+import right from "../assets/buttons/right.png";
+import left from "../assets/buttons/left.png";
 
 let last;
 let next;
@@ -16,7 +18,7 @@ export default class Resources extends Component{
         super(props);
     }
 
-  handleBackNav = () => {
+  handleLastNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("Resources", {topic: last});
     } else {
@@ -79,21 +81,21 @@ export default class Resources extends Component{
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
-        <BackButton
-            text="<"
+        <MMButton
+            img={left}
             txtColor={global.text}
-            onPress={this.handleBackNav}
-        ></BackButton>
+            onPress={this.handleLastNav}
+        ></MMButton>
         <TopicButton
               text="Back to Topics"
               onPress={this.goMenu}
               txtColor={global.text}
         ></TopicButton>
-        <BackButton
-            text=">"
+        <MMButton
+            img={right}
             txtColor={global.text}
             onPress={this.handleNextNav}
-        ></BackButton>
+        ></MMButton>
     </View>
 
 <ScrollView>

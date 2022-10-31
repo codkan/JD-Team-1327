@@ -1,12 +1,14 @@
 import React, {Component} from "react";
 import { ImageBackground, Text, View } from "react-native";
-import BackButton from "../components/buttons/BackButton";
+import MMButton from "../components/buttons/MMButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import QuizButton from "../components/buttons/QuizButton";
 import { CoreStyle } from "../components/CoreStyle";
 import { Quizzes } from "../json/QAbank.json";
+import right from "../assets/buttons/right.png";
+import left from "../assets/buttons/left.png";
 
 let count = 0;
 let score = 0;
@@ -184,19 +186,19 @@ export default class Quiz extends Component{
         <ImageBackground source={global.bg} style={CoreStyle.image}>
 
         <View style={CoreStyle.topnavbuttons}>
-            <BackButton onPress={this.deRender}
-                  text="<"
+            <MMButton onPress={this.deRender}
+                  img={left}
                   txtColor={global.text}
-            ></BackButton>
+            ></MMButton>
             <TopicButton
                   text="Back to Topics"
                   onPress={this.goMenu}
                   txtColor={global.text}
             ></TopicButton>
-            <BackButton onPress={this.reRender}
-                  text=">"
+            <MMButton onPress={this.reRender}
+                  img={right}
                   txtColor={global.text}
-            ></BackButton>
+            ></MMButton>
         </View>
 
         <Text allowFontScaling={true} style={CoreStyle.qNum}> {this.state.qNum} </Text>

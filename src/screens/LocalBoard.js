@@ -1,11 +1,13 @@
 import React, {Component} from "react";
 import { ImageBackground, Image, Text, View, SafeAreaView, FlatList, Dimensions } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import BackButton from "../components/buttons/BackButton";
+import MMButton from "../components/buttons/MMButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
 import { CoreStyle } from "../components/CoreStyle";
+import right from "../assets/buttons/right.png";
+import left from "../assets/buttons/left.png";
 
 //images
 import fall_hdr from "../assets/fallsMM/falls.png";
@@ -79,7 +81,7 @@ export default class LocalBoard extends Component{
         );
     };
 
-  handleBackNav = () => {
+  handleLastNav = () => {
     if (this.props.navigation.getParam("topic") != "Falls") {
         this.props.navigation.navigate("LocalBoard", {topic: last});
         this.getScores();
@@ -147,21 +149,21 @@ export default class LocalBoard extends Component{
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
-        <BackButton
-            text="<"
+        <MMButton
+            img={left}
             txtColor={global.text}
-            onPress={this.handleBackNav}
-        ></BackButton>
+            onPress={this.handleLastNav}
+        ></MMButton>
         <TopicButton
               text="Back to Topics"
               onPress={this.goMenu}
               txtColor={global.text}
         ></TopicButton>
-        <BackButton
-            text=">"
+        <MMButton
+            img={right}
             txtColor={global.text}
             onPress={this.handleNextNav}
-        ></BackButton>
+        ></MMButton>
     </View>
 
     <Text allowFontScaling={true} style={CoreStyle.title2}> {topic + " Scores"}: </Text>

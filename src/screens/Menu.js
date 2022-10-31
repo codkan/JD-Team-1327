@@ -101,8 +101,8 @@ export default class Menu extends Component {
             b = 0;
             for (let i = 0; i < 3; i++) {
                 _r = 255;
-                _g = 242+(i*3);
-                _b = (152/3)*i;
+                _g = 242+(i*4);
+                _b = (255/3)*i;
                 colors.push("rgb("+_r/2+","+_g/2+","+_b/2+")");
                 colors.push("rgb("+_r+","+_g+","+_b+")");
             }

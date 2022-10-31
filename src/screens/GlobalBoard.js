@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { ImageBackground, Image, Text, View, SafeAreaView, FlatList } from "react-native";
-import BackButton from "../components/buttons/BackButton";
+import MMButton from "../components/buttons/MMButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
@@ -8,6 +8,8 @@ import { CoreStyle } from "../components/CoreStyle";
 import clock from "../assets/badges/clockBadge.png";
 import coffee from "../assets/badges/coffeecupBadge.png";
 import heart from "../assets/badges/heartBadge.png";
+import right from "../assets/buttons/right.png";
+import left from "../assets/buttons/left.png";
 
 let last;
 let next;
@@ -115,7 +117,7 @@ export default class GlobalBoard extends Component{
         );
     };
 
-  handleBackNav = () => {
+  handleLastNav = () => {
     if (this.props.navigation.getParam("level") != "Level 1") {
         this.props.navigation.navigate("GlobalBoard", {level: last});
         this.getScores();
@@ -160,21 +162,21 @@ export default class GlobalBoard extends Component{
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>
-        <BackButton
-            text="<"
+        <MMButton
+            img={left}
             txtColor={global.text}
-            onPress={this.handleBackNav}
-        ></BackButton>
+            onPress={this.handleLastNav}
+        ></MMButton>
         <TopicButton
               text="Back to Topics"
               onPress={this.goMenu}
               txtColor={global.text}
         ></TopicButton>
-        <BackButton
-            text=">"
+        <MMButton
+            img={right}
             txtColor={global.text}
             onPress={this.handleNextNav}
-        ></BackButton>
+        ></MMButton>
     </View>
 
     <Text allowFontScaling={true} style={CoreStyle.title2}>{this.props.navigation.getParam("level") + " (" + lvl + ") Times"}: </Text>
