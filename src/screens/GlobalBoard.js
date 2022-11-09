@@ -20,13 +20,9 @@ let lvl;
 export default class GlobalBoard extends Component{
     constructor(props) {
         super(props);
-        this.state = {
-            scores: []
-        };
-        this.getScores();
     }
 
-  async getScores() {
+  getScores() {
 
     let axios = require("axios").default;
 
@@ -120,16 +116,14 @@ export default class GlobalBoard extends Component{
   handleLastNav = () => {
     if (this.props.navigation.getParam("level") != "Level 1") {
         this.props.navigation.navigate("GlobalBoard", {level: last});
-        this.getScores();
     } else {
         this.goMenu();
     }
   }
 
-  handleNextNav = () => {
+  handleNextNav = async () => {
     if (this.props.navigation.getParam("level") != "Level 3") {
         this.props.navigation.navigate("GlobalBoard", {level: next});
-        this.getScores();
     } else {
         this.props.navigation.navigate("GlobalBoard", {level: "Level 3"})
     }
@@ -159,6 +153,7 @@ export default class GlobalBoard extends Component{
     }
 
     return (
+
     <ImageBackground source={global.bg} style={CoreStyle.image}>
 
     <View style={CoreStyle.topnavbuttons}>

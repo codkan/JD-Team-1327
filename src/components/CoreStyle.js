@@ -366,7 +366,7 @@ export const CoreStyle = StyleSheet.create({
         marginVertical: 10,
         textAlign: "center",
         fontWeight: "bold",
-        marginHorizontal: 25,
+        marginHorizontal: 10,
     },
 
     // contain in an uncentered row aka line
