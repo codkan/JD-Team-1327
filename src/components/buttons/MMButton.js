@@ -22,7 +22,7 @@ export default function MMButton({ text, onPress, txtColor, img }) {
         global.text = "white";
     } else {
         global.color = "ivory";
-        global.color2 = "papayawhip";
+        global.color2 = "powderblue";
         global.color3 = "lightgray";
         global.text = "black";
     }

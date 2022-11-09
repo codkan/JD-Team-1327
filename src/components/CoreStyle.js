@@ -13,7 +13,7 @@ if (global.scheme == "dark") {
     global.text = "white";
 } else {
     global.color = "ivory";
-    global.color2 = "papayawhip";
+    global.color2 = "powderblue";
     global.color3 = "lightgray";
     global.text = "black";
 }
@@ -103,7 +103,7 @@ export const CoreStyle = StyleSheet.create({
         color: global.text,
         fontSize: 40,
         marginBottom: 15,
-        fontWeight: "bold",
+        fontWeight: "900",
         textAlign: "center",
         textDecorationLine: "underline",
         marginHorizontal: 0,
@@ -133,7 +133,7 @@ export const CoreStyle = StyleSheet.create({
         fontSize: 26,
         marginBottom: 20,
         textAlign: "center",
-        fontWeight: "bold",
+        fontWeight: "800",
         fontStyle: "italic",
         marginHorizontal: 10,
     },
@@ -173,9 +173,8 @@ export const CoreStyle = StyleSheet.create({
     bullet: {
         color: global.text,
         fontSize: 22,
-        fontWeight: "bold",
-        marginLeft: 15,
-        marginRight: 15
+        fontWeight: "600",
+        marginHorizontal: 20
     },
 
     //Good size for small sub-bullet points, works well as body for collapsible box
@@ -357,7 +356,7 @@ export const CoreStyle = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "papayawhip",
+        backgroundColor: "powderblue",
         paddingVertical: 0,
 
     },
@@ -367,7 +366,7 @@ export const CoreStyle = StyleSheet.create({
         marginVertical: 10,
         textAlign: "center",
         fontWeight: "bold",
-        marginHorizontal: 25,
+        marginHorizontal: 10,
     },
 
     // contain in an uncentered row aka line

@@ -72,7 +72,7 @@ export default class Menu extends Component {
         case "Resources":
             hdr = "Referenced Sources";
             r = 0;
-            g = 176;
+            g = 27;
             b = 255;
             for (let i = 0; i < 6; i++) {
                 _r = (108/6)*i;
