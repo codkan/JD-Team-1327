@@ -29,7 +29,7 @@ export default function Landing({ navigation }) {
     } else {
         global.bg = Background;
         global.color = "ivory";
-        global.color2 = "papayawhip";
+        global.color2 = "powderblue";
         global.color3 = "lightgray";
         global.text = "black";
     }

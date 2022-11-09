@@ -24,7 +24,7 @@ export default function About({ navigation }) {
     } else {
         global.scheme = "light";
         global.color = "ivory";
-        global.color2 = "papayawhip";
+        global.color2 = "powderblue";
         global.color3 = "lightgray";
         global.bg = Background;
         global.logo = logo1;

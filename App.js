@@ -8,7 +8,7 @@ import logo2 from "./src/assets/app/landinglogo-alt.png";
 
 global.scheme = "light";
 global.color = "ivory";
-global.color2 = "papayawhip";
+global.color2 = "powderblue";
 global.color3 = "lightgray";
 global.bg = bg1;
 global.logo = logo1;

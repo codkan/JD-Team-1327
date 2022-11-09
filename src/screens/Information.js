@@ -288,6 +288,8 @@ export default class Information extends Component {
 
     <Text allowFontScaling={true} style={CoreStyle.subtitle}>{txt[0].body}</Text>
 
+    <Text>{'\n'}</Text>
+
 <CollapsibleBox header={txt[1].title}
     headerstyle={CoreStyle.bullet}>
     <TouchableOpacity onPress={() => this.interactAlert(1)}>
