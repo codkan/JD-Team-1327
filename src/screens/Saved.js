@@ -1,6 +1,6 @@
 
 import React, { Component } from "react";
-import { ImageBackground, StyleSheet, Text, View, SafeAreaView, FlatList, Alert, TouchableOpacity } from "react-native";
+import { ImageBackground, Text, View, SafeAreaView, FlatList, Alert, TouchableOpacity } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { CoreStyle } from "../components/CoreStyle";
 import Navbar from "../components/NavBar";
@@ -36,7 +36,7 @@ export default class Saved extends Component {
         return (
           // Flat List Item
           <TouchableOpacity onPress={() => this.getItem(item)}>
-            <Text style={styles.itemStyle}>{this.state.savedTopics[item.index] + "\n\n" + item.item.title + "\n\n" + item.item.body}</Text>
+            <Text style={CoreStyle.itemStyle}>{this.state.savedTopics[item.index] + "\n\n" + item.item.title + "\n\n" + item.item.body}</Text>
           </TouchableOpacity>
         );
     };
@@ -104,10 +104,10 @@ export default class Saved extends Component {
       return (
         <ImageBackground source={global.bg} style={CoreStyle.image}>
 
-        <Text allowFontScaling={true} style={styles.title}>Saved Bookmarks:</Text>
+        <Text allowFontScaling={true} style={CoreStyle.title}>Saved Bookmarks:</Text>
 
         <SafeAreaView style={{ flex: 1, marginBottom: -50}}>
-          <View style={styles.container}>
+          <View style={CoreStyle.itemContainer}>
             <FlatList
               data={this.state.saved}
               renderItem={this.ItemView}
@@ -117,7 +117,13 @@ export default class Saved extends Component {
           </View>
         </SafeAreaView>
 
-        <View style={styles.btncontainer}>
+        <View style={{
+                     marginBottom: 60,
+                     marginTop: -65,
+                     alignSelf: "center",
+                     alignItems: "center",
+                     justifyContent: "center",
+                    }}>
         <MainButton
           text="Clear Bookmarks"
           txtColor={"black"}
@@ -132,47 +138,3 @@ export default class Saved extends Component {
       );
   }
 }
-
-const styles = StyleSheet.create({
-    btncontainer: {
-        marginBottom: 60,
-        alignSelf: "center",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-    modalText: {
-        height: 70,
-        fontSize: 40,
-        marginTop: 10,
-        marginBottom: 0,
-        fontWeight: "bold",
-        textAlign: "center",
-    },
-    container: {
-      width: '95%',
-      alignItems: "center",
-      alignSelf: "center",
-      marginBottom: 50,
-    },
-    itemStyle: {
-      backgroundColor: global.color2,
-      padding: 20,
-      fontSize: 16,
-      textAlign: "justify",
-      lineHeight: 20,
-      marginRight: 10,
-      marginLeft: 10,
-      marginTop: 10,
-      borderRadius: 20,
-      overflow: "hidden",
-    },
-    title: {
-        color: global.text,
-        fontSize: 40,
-        marginTop: 40,
-        marginBottom: 15,
-        fontWeight: "bold",
-        textAlign: "center",
-        textDecorationLine: "underline",
-    },
-});

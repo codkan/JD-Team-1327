@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { ImageBackground, Image, Text, View, SafeAreaView, FlatList } from "react-native";
+import { ImageBackground, Image, Text, View, FlatList } from "react-native";
 import MMButton from "../components/buttons/MMButton";
 import MainButton from "../components/buttons/MainButton";
 import TopicButton from "../components/buttons/TopicButton";

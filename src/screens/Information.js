@@ -251,7 +251,7 @@ export default class Information extends Component {
         <Image style={CoreStyle.headimg} source={img[0]}/>
     </TouchableOpacity>
 
-<View style={styles.centeredView}>
+<View style={ModalStyles.centeredView}>
     <Modal
       animationType="slide"
       transparent={true}
@@ -261,25 +261,25 @@ export default class Information extends Component {
         this.setModalVisible(!modalVisible);
       }}
     >
-      <View style={styles.centeredView}>
-        <View style={styles.modalView}>
-          <Text style={styles.modalTitle}>How to Use Text-to-Speech</Text>
-          <Text style={styles.modalText}>Press the first image to read the entire page aloud</Text>
-          <Image style={styles.alertimg} source={img[0]}/>
-          <Text style={styles.modalText}>Press any subsection image to read just that section aloud or add it to your bookmarks</Text>
-          <Image style={styles.alertimg} source={img[6]}/>
-          <Text style={styles.modalText}>Press any image to stop reading aloud at any time</Text>
+      <View style={ModalStyles.centeredView}>
+        <View style={ModalStyles.modalView}>
+          <Text style={ModalStyles.modalTitle}>How to Use Text-to-Speech</Text>
+          <Text style={ModalStyles.modalText}>Press the first image to read the entire page aloud</Text>
+          <Image style={ModalStyles.alertimg} source={img[0]}/>
+          <Text style={ModalStyles.modalText}>Press any subsection image to read just that section aloud or add it to your bookmarks</Text>
+          <Image style={ModalStyles.alertimg} source={img[6]}/>
+          <Text style={ModalStyles.modalText}>Press any image to stop reading aloud at any time</Text>
           <Pressable
-            style={[styles.button, styles.buttonClose]}
+            style={[ModalStyles.button, ModalStyles.buttonClose]}
             onPress={() => this.setModalVisible(!modalVisible)}
           >
-            <Text style={styles.textStyle}>OK</Text>
+            <Text style={ModalStyles.textStyle}>OK</Text>
           </Pressable>
           <Pressable
-            style={[styles.button, styles.buttonOpen]}
+            style={[ModalStyles.button, ModalStyles.buttonOpen]}
             onPress={() => this.setModalInvisible(!modalVisible)}
           >
-            <Text style={styles.textStyle}>Do Not Show Again</Text>
+            <Text style={ModalStyles.textStyle}>Do Not Show Again</Text>
           </Pressable>
         </View>
       </View>
@@ -369,7 +369,7 @@ export default class Information extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const ModalStyles = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: "center",

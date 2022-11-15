@@ -8,7 +8,6 @@ let color_1;
 let color_2;
 
 export default function Crayon({ text, onPress, color1, color2 }){
-  //console.log("\n Height = " + MAX_HEIGHT + "\n Width = " + MAX_WIDTH);
   color_1 = color1;
   color_2 = color2;
   return (

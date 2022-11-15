@@ -106,7 +106,6 @@ export const CoreStyle = StyleSheet.create({
         fontWeight: "900",
         textAlign: "center",
         textDecorationLine: "underline",
-        marginHorizontal: 0,
     },
     title2: {
         color: global.text,
@@ -413,6 +412,19 @@ export const CoreStyle = StyleSheet.create({
         marginTop: 65,
     },
 
+    // style for textbox to submit score on quiz win screen
+    textbox: {
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+        height: 50,
+        borderColor: "gray",
+        borderWidth: 1,
+        borderRadius: 10,
+    },
+
     // container style for buttons on Game home screen
     homeContainer: {
         flex: 1,
@@ -420,6 +432,24 @@ export const CoreStyle = StyleSheet.create({
         top: 225,
         justifyContent: "center",
         alignSelf: "center",
+    },
+
+    //styling components for Saved and Search screens
+    itemContainer: {
+      width: '95%',
+      alignItems: "center",
+      alignSelf: "center",
+      marginBottom: 120,
+    },
+    itemStyle: {
+      backgroundColor: global.color2,
+      padding: 20,
+      fontSize: 16,
+      textAlign: "justify",
+      lineHeight: 20,
+      margin: 10,
+      borderRadius: 20,
+      overflow: "hidden",
     },
 
     // invisible back button for spacing

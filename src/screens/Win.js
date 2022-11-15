@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View, TextInput, Button, Alert } from "react-native";
+import { Image, ImageBackground, ScrollView, Text, View, TextInput, Button, Alert } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import TopicButton from "../components/buttons/TopicButton";
 import Navbar from "../components/NavBar";
@@ -61,7 +61,10 @@ export default function Win({navigation}){
 
 <ScrollView>
 
-    <View style={styles.container}>
+    <View style={{
+                 alignItems: "center",
+                 marginHorizontal: 20,
+                }}>
 
         <Text allowFontScaling={true} style={CoreStyle.title}> {txt} Quiz Completed </Text>
         <Text allowFontScaling={true} style={CoreStyle.subtitle}> Congratulations! </Text>
@@ -70,7 +73,7 @@ export default function Win({navigation}){
         <Image source={basket} style={CoreStyle.img}></Image>
         <Text allowFontScaling={true}> {'\n'} </Text>
 
-        <View style={styles.textbox}>
+        <View style={CoreStyle.textbox}>
         <TextInput
             onChangeText={onChangeText}
             value={text}
@@ -89,44 +92,3 @@ export default function Win({navigation}){
     </ImageBackground>
     );
 }
-
-const styles = StyleSheet.create({
-
-    title: { 
-        fontSize: 40,
-        marginBottom: 10,
-        fontWeight: "bold",
-        textAlign: "center",
-        flex: 10,
-        color: "#cd22e0",
-    },
-    subtitle: { 
-        fontSize: 30,
-        marginBottom: 15,
-        textAlign: "center",
-        fontWeight: "bold",
-        color: "#de1258",
-    },
-    subtitle2: { 
-        fontSize: 30,
-        marginBottom: 15,
-        textAlign: "center",
-        fontWeight: "bold",
-        color: "#d49306",
-    },
-    container: {
-        alignItems: "center",
-        marginHorizontal: 20,
-    },
-    textbox: {
-        flex: 1,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-        height: 50,
-        borderColor: "gray",
-        borderWidth: 1,
-        borderRadius: 10,
-    }
-});

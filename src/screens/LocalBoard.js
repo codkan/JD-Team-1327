@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { ImageBackground, Image, Text, View, SafeAreaView, FlatList, Dimensions } from "react-native";
+import { ImageBackground, Image, Text, View, FlatList } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import MMButton from "../components/buttons/MMButton";
 import MainButton from "../components/buttons/MainButton";

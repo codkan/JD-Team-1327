@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react";
-import { ImageBackground, StyleSheet, View, SafeAreaView, FlatList, Alert } from "react-native";
+import { ImageBackground, View, SafeAreaView, FlatList, Alert } from "react-native";
 import { SearchBar } from 'react-native-elements';
 import { CoreStyle } from "../components/CoreStyle";
 import Navbar from "../components/NavBar";
@@ -45,7 +45,7 @@ export default function Search({ navigation }) {
         return (
           // Flat List Item
           <Highlighter
-            style={styles.itemStyle}
+            style={CoreStyle.itemStyle}
             highlightStyle={{backgroundColor: "yellow"}}
             onPress={() => getItem(item)}
             searchWords={[search]}
@@ -94,7 +94,7 @@ export default function Search({ navigation }) {
           placeholder="Search Here..."
           value={search}
         />
-      <View style={styles.container}>
+      <View style={CoreStyle.itemContainer}>
         <FlatList
           data={filteredDataSource}
           keyExtractor={(item, index) => index.toString()}
@@ -110,33 +110,3 @@ export default function Search({ navigation }) {
     </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-
-    modalText: {
-        height: 70,
-        fontSize: 40,
-        marginVertical: 10,
-        fontWeight: "bold",
-        textAlign: "center",
-    },
-    container: {
-      width: '95%',
-      alignItems: "center",
-      alignSelf: "center",
-      marginBottom: 120,
-    },
-    itemStyle: {
-      backgroundColor: global.color2,
-      padding: 20,
-      fontSize: 16,
-      textAlign: "justify",
-      lineHeight: 20,
-      marginRight: 10,
-      marginLeft: 10,
-      marginTop: 10,
-      borderRadius: 20,
-      cornerRadius: 20,
-      overflow: "hidden",
-    },
-});

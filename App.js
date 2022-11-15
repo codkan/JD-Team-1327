@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import Navigator from "./src/Navigator";
 import { StatusBar } from "react-native";
 import bg1 from "./src/assets/app/bg.png";
-import bg2 from "./src/assets/app/bg-alt.png";
 import logo1 from "./src/assets/app/landinglogo.png";
-import logo2 from "./src/assets/app/landinglogo-alt.png";
 
 global.scheme = "light";
 global.color = "ivory";
@@ -18,8 +16,8 @@ global.isMuted = false;
 global.showAlert = true;
 
 global.user_id = null;
-global.user;
-global.times;
+global.user = null;
+global.times = null;
 
 export default class App extends Component {
 
