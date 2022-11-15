@@ -15,7 +15,7 @@ export default function Navbar({ navigation }){
   const handleSearchNav = () => {
     navigation.navigate("Search");
   };
-  const handleGlobalNav = async () => {
+  const handleGlobalNav = () => {
     if (global.user_id != null) {
         navigation.navigate("Menu", {module: "GlobalBoard"});
     } else {
@@ -24,7 +24,7 @@ export default function Navbar({ navigation }){
             "You are trying to access Global Leaderboard rankings without logging in\n\nYou must login to view Global Leaderboard rankings\n\nWould you like to log in?",
             [
                 {text: 'NO', style: 'destructive'},
-                {text: 'YES', style: 'cancel', onPress: await handleLogin()},
+                {text: 'YES', style: 'cancel', onPress: () => handleLogin()},
                 {text: 'CLOSE', style: 'default'},
             ],
         );
