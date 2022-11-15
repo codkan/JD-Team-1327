@@ -1,5 +1,6 @@
 node_modules
 .expo/
+.expo-shared/
 .expo/*
 .expo/settings.json
 .expo/packager-info.json
@@ -8,3 +9,5 @@ jdApp1/
 .idea/
 **/.DS_Store
 .gradle/
+pc-api-7557968827121695312-471-ef89f5aaac8b.json
+application-4d88f1c6-ba66-4d26-933c-5dd84d8562e1.aab
