@@ -122,6 +122,11 @@ export default class Menu extends Component {
 
             axios.request(options).then(function (response) {
               data = response.data.sort((a,b)=> b.last_login < a.last_login);
+
+              _s1 = [];
+              _s2 = [];
+              _s3 = [];
+
               for (let value of data) {
                   if (value.user_metadata.score1 != "0") {
                       _s1.push([value.nickname, value.user_metadata.score1]);
