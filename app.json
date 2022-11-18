@@ -5,7 +5,7 @@
     "owner": "childsafe_org",
     "version": "1.1.1",
     "orientation": "portrait",
-    "icon": "./src/assets/app/icon.png",
+    "icon": "./src/assets/app/icon-alt.png",
     "splash": {
       "image": "./src/assets/app/splash.png",
       "resizeMode": "cover",
@@ -24,7 +24,6 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/app/icon-alt.png",
-        "backgroundColor": "#FFFFFF"
       },
       "package": "c.s"
     },
