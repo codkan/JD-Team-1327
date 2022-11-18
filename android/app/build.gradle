@@ -146,8 +146,8 @@ android {
         applicationId 'c.s'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.1.0"
+        versionCode 2
+        versionName "1.1.1"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
         manifestPlaceholders = [auth0Domain: "childsafe.us.auth0.com", auth0Scheme: "demo"]
         if (isNewArchitectureEnabled()) {
