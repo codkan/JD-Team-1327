@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { Image, ImageBackground, TouchableOpacity, View } from "react-native";
+import { Image, ImageBackground, TouchableOpacity, View, Alert } from "react-native";
 import disclaim from "../assets/buttons/info.png";
 import setting from "../assets/buttons/settings.png";
 import login from "../assets/buttons/login.png";
@@ -15,6 +15,7 @@ import * as ScreenOrientation from 'expo-screen-orientation'
 import { CoreStyle } from "../components/CoreStyle";
 import Crayon from "../components/Crayon";
 import {handleLogin} from "../components/Login.js";
+import {handleDelete} from "../components/Login.js";
 
 export default function Landing({ navigation }) {
 
@@ -38,6 +39,21 @@ export default function Landing({ navigation }) {
     navigation.navigate("Menu", {module: _module});
   }
 
+  const handleLoginNav = () => {
+    if (global.user_id == null) {
+        handleLogin();
+    } else {
+        Alert.alert(
+            'You Are Already Logged In',
+            "You have already signed in. Would you like to delete your account or go back?",
+            [
+                {text: 'DELETE ACCOUNT', style: 'destructive', onPress: () => handleDelete()},
+                {text: 'CANCEL', style: 'default'},
+            ],
+        );
+    }
+  };
+
   const handleSettingsNav = () => {
     navigation.navigate("Settings");
   };
@@ -60,7 +76,7 @@ export default function Landing({ navigation }) {
             <Image source={setting} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handleLogin()}
+        <TouchableOpacity onPress={() => handleLoginNav()}
                           accessibilityLabel={"Login"} accessibilityRole={"button"} accessibilityHint={"Sign in to profile"}>
             <Image source={login} style={CoreStyle.btn}></Image>
         </TouchableOpacity>
