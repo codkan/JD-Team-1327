@@ -47,12 +47,23 @@ export default function Landing({ navigation }) {
             'You Are Already Logged In',
             "You have already signed in. Would you like to delete your account or go back?",
             [
-                {text: 'DELETE ACCOUNT', style: 'destructive', onPress: () => handleDelete()},
+                {text: 'DELETE ACCOUNT', style: 'destructive', onPress: () => handleDeleteNav()},
                 {text: 'CANCEL', style: 'default'},
             ],
         );
     }
   };
+
+  const handleDeleteNav = () => {
+    Alert.alert(
+        'ARE YOU SURE?',
+        "Are you certain that you wish to delete your account? If so, press YES, DELETE ACCOUNT. Otherwise, press NO, CANCEL DELETION",
+        [
+            {text: 'YES, DELETE ACCOUNT', style: 'destructive', onPress: () => handleDelete()},
+            {text: 'NO, CANCEL DELETION', style: 'default'},
+        ],
+    );
+  }
 
   const handleSettingsNav = () => {
     navigation.navigate("Settings");
